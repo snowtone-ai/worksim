@@ -1,8 +1,10 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useState } from 'react'
 import Link from 'next/link'
 import { saveProfile } from '@/app/profile/actions'
+import { UniversityCombobox } from './university-combobox'
+import type { University } from '@/data/universities'
 
 const INDUSTRIES = [
   'IT・情報通信',
@@ -25,47 +27,71 @@ export function ProfileForm() {
     saveProfile,
     undefined
   )
+  const [selectedUniversity, setSelectedUniversity] = useState<University | null>(null)
+
+  function handleUniversitySelect(univ: University | null) {
+    setSelectedUniversity(univ)
+  }
 
   return (
     <form action={formAction} className="flex flex-col gap-5 w-full max-w-sm">
+      {/* 大学名（hidden input で送信） */}
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="university" className="text-sm font-medium text-gray-700">
+        <label className="text-sm font-medium text-gray-700">
           大学名
+          <span className="ml-1 text-xs text-gray-400">（任意）</span>
         </label>
+        <UniversityCombobox onSelect={handleUniversitySelect} />
         <input
-          id="university"
+          type="hidden"
           name="university"
-          type="text"
-          placeholder="例：○○大学"
-          maxLength={100}
-          className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          value={selectedUniversity?.name ?? ''}
         />
       </div>
 
+      {/* 学部・学科 */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="faculty" className="text-sm font-medium text-gray-700">
           学部・学科
+          <span className="ml-1 text-xs text-gray-400">（任意）</span>
         </label>
-        <input
-          id="faculty"
-          name="faculty"
-          type="text"
-          placeholder="例：経済学部"
-          maxLength={100}
-          className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-        />
+        {selectedUniversity ? (
+          <select
+            id="faculty"
+            name="faculty"
+            className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          >
+            <option value="">選択してください</option>
+            {selectedUniversity.faculties.map((f) => (
+              <option key={f} value={f}>
+                {f}
+              </option>
+            ))}
+          </select>
+        ) : (
+          <input
+            id="faculty"
+            name="faculty"
+            type="text"
+            placeholder="大学名を先に選択してください"
+            disabled
+            className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-400 cursor-not-allowed"
+          />
+        )}
       </div>
 
+      {/* 志望業界 */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="target_industry" className="text-sm font-medium text-gray-700">
           志望業界
+          <span className="ml-1 text-xs text-gray-400">（任意）</span>
         </label>
         <select
           id="target_industry"
           name="target_industry"
           className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
         >
-          <option value="">選択してください（任意）</option>
+          <option value="">選択してください</option>
           {INDUSTRIES.map((industry) => (
             <option key={industry} value={industry}>
               {industry}
