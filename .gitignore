@@ -1,0 +1,48 @@
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+.pnpm-store/
+npm-debug.log*
+pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+build/
+
+# Vercel
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/*
+!.vscode/settings.json.example
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# Claude Code session data
+.claude/transcripts/
+.claude/cache/
+
+# Logs
+logs/
+*.log
+
+# Local development databases
+*.sqlite
+*.db

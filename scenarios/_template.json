@@ -1,0 +1,35 @@
+{
+  "id": "<industry>/<role-slug>",
+  "version": 1,
+  "industry": "<業界名>",
+  "role": "<職種名>",
+  "role_seniority": "新卒3年目",
+  "duration_minutes": 20,
+  "company_size_assumption": "<企業規模の前提>",
+  "summary": "<1〜2文の体験概要>",
+  "sources": [
+    {
+      "title": "<出典タイトル>",
+      "url": "<URL>",
+      "accessed_at": "YYYY-MM-DD"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-001",
+      "order": 1,
+      "time_label": "9:00",
+      "title": "<タスク名>",
+      "scene": "office-desk",
+      "instructions": "<ユーザーへの作業案内>",
+      "ui_component": "EmailInbox",
+      "ui_props": {},
+      "completion_condition": "all_decisions_made"
+    }
+  ],
+  "scoring": {
+    "max_score_per_role": 100,
+    "primary_role": "<職種スラグ>",
+    "trait_aggregation": "frequency_top_3"
+  }
+}
