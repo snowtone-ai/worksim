@@ -1,0 +1,144 @@
+{
+  "id": "it/web-engineer",
+  "version": "1.0.0",
+  "meta": {
+    "title": "Webエンジニア",
+    "industry": "IT・情報通信",
+    "role": "Webエンジニア（バックエンド）",
+    "duration_minutes": 15,
+    "description": "ECサイトのバックエンドを担当するエンジニアとして、リアルな1日の業務を体験。バグ対応・コードレビュー・設計議論を通じてあなたのエンジニア適性を診断します。",
+    "sources": [
+      "厚生労働省 職業情報提供サイト jobtag「システムエンジニア（Webサービス）」https://shigoto.mhlw.go.jp/",
+      "IPA「DX白書2023 - ITエンジニアの業務実態」https://www.ipa.go.jp/publish/wp-dx/dx-2023.html"
+    ]
+  },
+  "dimensions": [
+    { "key": "technical", "label": "技術力", "description": "技術的な問題を分析・解決する力" },
+    { "key": "logical", "label": "論理的思考", "description": "情報を整理して判断する力" },
+    { "key": "communication", "label": "発信力", "description": "チームや関係者に伝える力" },
+    { "key": "ownership", "label": "当事者意識", "description": "責任を持って行動する姿勢" },
+    { "key": "agility", "label": "適応力", "description": "変化や問題に素早く対応する力" }
+  ],
+  "scenes": [
+    {
+      "id": "standup",
+      "type": "meeting",
+      "title": "朝会（スタンドアップ）",
+      "context": "毎朝15分のスタンドアップミーティング。PM・デザイナー・先輩エンジニアが参加。あなたは昨日、先輩からAPIのコードレビューでフィードバックをもらい、修正を続けている。",
+      "content": "PM 田中：「おはようございます。では各自、昨日の進捗と今日の予定をお願いします」\n\nデザイナー 佐藤：「LPの最終修正が完了しました。今日はヘッダーの改善対応です」\n\n先輩エンジニア 鈴木：「決済APIのテストが終わりました。今日はドキュメント整備です。── あなたさん、昨日のコードレビューのフィードバックは確認できた？」\n\n（あなたの番です）",
+      "choices": [
+        {
+          "id": "a",
+          "label": "「フィードバックはすべて確認して修正しました。今日の午前中にPRを再提出します」",
+          "scores": { "technical": 1, "logical": 2, "communication": 2, "ownership": 3, "agility": 1 }
+        },
+        {
+          "id": "b",
+          "label": "「一部修正しました。エラーハンドリングの書き方について鈴木さんに午後相談させてください。今日中には対応します」",
+          "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 2, "agility": 2 }
+        },
+        {
+          "id": "c",
+          "label": "「確認したところ設計レベルの変更が必要で、自分だけでは判断できません。今日ミーティングを設定してもいいですか？」",
+          "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 1 }
+        }
+      ]
+    },
+    {
+      "id": "bug-email",
+      "type": "email",
+      "title": "緊急バグ報告メール",
+      "context": "朝会が終わった直後、カスタマーサポートから転送メールが届いた。",
+      "content": "From: support@example-ec.co.jp\nTo: engineer-team@example-ec.co.jp\nSubject: 【緊急】ログインできないユーザーが多数報告されています\n\n昨夜23時頃から「ログインできない」という問い合わせが急増しています。\n現在の報告件数：47件\nエラーメッセージ：「認証に失敗しました（code: AUTH_503）」\n影響ユーザー：全体の約12%と推定\n\nサポートチームは受電対応でパンク寸前です。\n原因と復旧見込みを教えていただけますか？",
+      "choices": [
+        {
+          "id": "a",
+          "label": "まず自分でエラーログとモニタリングツールを確認し、原因を特定してから報告する",
+          "scores": { "technical": 3, "logical": 3, "communication": 1, "ownership": 2, "agility": 2 }
+        },
+        {
+          "id": "b",
+          "label": "すぐにPMと先輩エンジニアをSlackで招集し、状況を共有しながら並行して調査を始める",
+          "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 3, "agility": 3 }
+        },
+        {
+          "id": "c",
+          "label": "昨夜23時頃のデプロイ履歴とDB接続数ログをまず確認する（障害が起きる直前の変更が怪しい）",
+          "scores": { "technical": 3, "logical": 3, "communication": 1, "ownership": 2, "agility": 2 }
+        }
+      ]
+    },
+    {
+      "id": "code-review",
+      "type": "review",
+      "title": "コードレビュー依頼",
+      "context": "午後、後輩の田島さんからPRレビューの依頼が来た。インシデントは落ち着いている。",
+      "content": "PR #234：ユーザー検索APIの高速化\nレビュー依頼者：田島（入社6ヶ月）\n\nコメント：\n「検索が遅いという指摘を受けたので、SQLにインデックスを追加しました。ローカルでは速くなりましたが、本番投入してみないとわからない部分もあって…レビューよろしくお願いします！」\n\n差分を確認すると：\n・WHERE句に使われるカラムへのインデックス追加（方向性は良い）\n・既存の複合インデックスと重複している可能性あり\n・テストコードの追加なし\n・マイグレーションのロールバックが書かれていない",
+      "choices": [
+        {
+          "id": "a",
+          "label": "問題点を箇条書きで丁寧にコメントし、「テストとロールバックを追加してから再レビューします」と返す",
+          "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 1, "agility": 1 }
+        },
+        {
+          "id": "b",
+          "label": "田島さんに「何に詰まっているか」を確認し、本人の理解を深めながらレビューコメントを書く",
+          "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 2, "agility": 2 }
+        },
+        {
+          "id": "c",
+          "label": "インデックス設計の問題を自分で修正したコードを提案し、「なぜこうするか」の説明を添える",
+          "scores": { "technical": 3, "logical": 2, "communication": 3, "ownership": 3, "agility": 2 }
+        }
+      ]
+    },
+    {
+      "id": "feature-design",
+      "type": "meeting",
+      "title": "新機能の設計会議",
+      "context": "PMから「来週のスプリント計画に向けて新機能の技術的な検討をしたい」と30分のミーティングに招集された。",
+      "content": "PM 田中：「ユーザーが商品をお気に入り登録できる機能を2週間で出したいです。技術的にどう実装しますか？」\n\nあなたはすぐに3つのアプローチが思い浮かんだ：\n・案A：既存DBにwishlistsテーブルを追加（シンプルだが将来の拡張が限られる）\n・案B：マイクロサービスとして分離（スケーラブルだが2週間では難しい）\n・案C：既存のcartテーブルをフラグで流用（早いが技術的負債になりうる）\n\n（あなたはどう答えますか？）",
+      "choices": [
+        {
+          "id": "a",
+          "label": "「案Aが2週間の制約と保守性のバランスが最もよいと思います。スキーマ設計は将来の拡張を念頭に置きます」",
+          "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 2 }
+        },
+        {
+          "id": "b",
+          "label": "「まず要件を確認させてください。同時接続数や、将来的に機能追加の予定はありますか？」",
+          "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 3 }
+        },
+        {
+          "id": "c",
+          "label": "「案Aで進めます。今日の夕方までにER図と実装見積もりを送るので、内容を確認して判断してください」",
+          "scores": { "technical": 3, "logical": 2, "communication": 2, "ownership": 3, "agility": 2 }
+        }
+      ]
+    },
+    {
+      "id": "incident-debug",
+      "type": "debug",
+      "title": "本番エラー対応",
+      "context": "17時、退社30分前。Slackのアラートチャンネルに通知が来た。",
+      "content": "🚨 ERROR RATE HIGH — payment-service\n時刻：16:58\nエラー率：通常の8倍に急増\n\nエラーログ（抜粋）：\n  [ERROR] Timeout connecting to payment-gateway (5000ms)\n  [ERROR] Transaction ID: TXN-XXXX failed\n  [WARN]  Retry attempt 3/3 exhausted\n\nSlack #incident チャンネル：\n先輩鈴木：「誰か確認できる？自分は今日外出中です」\nPM田中：「ユーザーから決済できないって問い合わせ来てます！」\n\n（定時まであと30分。あなたはどうする？）",
+      "choices": [
+        {
+          "id": "a",
+          "label": "「確認します」とSlackに投稿し、すぐにログとモニタリングを確認。payment-gatewayの外部ステータスページもチェックする",
+          "scores": { "technical": 3, "logical": 2, "communication": 2, "ownership": 3, "agility": 3 }
+        },
+        {
+          "id": "b",
+          "label": "「対応します」と宣言後、15分で「外部決済サービス側の障害と判明。ユーザー向けメッセージの掲示を提案」と状況整理して報告する",
+          "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 }
+        },
+        {
+          "id": "c",
+          "label": "影響範囲を先に調査し、「新規決済のみ失敗、処理済みトランザクションへの影響なし」と正確な情報を報告してから対応策を検討する",
+          "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 2, "agility": 2 }
+        }
+      ]
+    }
+  ]
+}
