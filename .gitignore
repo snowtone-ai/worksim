@@ -24,6 +24,9 @@ next-env.d.ts
 # Testing
 coverage/
 .nyc_output/
+playwright-report/
+test-results/
+e2e/.auth/
 
 # IDE
 .vscode/*
