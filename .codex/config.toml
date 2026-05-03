@@ -1,0 +1,9 @@
+# WorkSim — Codex CLI 設定
+# model は指定しない（Codex のデフォルトを使う）
+
+[sandbox]
+mode = "workspace-write"
+
+# hooks は hooks.json で定義する（このファイルに書かない）
+# 理由: repo-local config.toml のインライン hooks が interactive セッションで
+# 発火しないバグが確認されているため（GitHub openai/codex #17532）
