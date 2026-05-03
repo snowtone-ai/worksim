@@ -8,6 +8,7 @@ import { TaskEmail } from './task-email'
 import { TaskMeeting } from './task-meeting'
 import { TaskReview } from './task-review'
 import { TaskDebug } from './task-debug'
+import { GlossaryPanel } from './glossary-panel'
 
 type Props = {
   scenario: Scenario
@@ -76,6 +77,11 @@ export function SceneManager({ scenario, industry, role }: Props) {
 
       {/* Task content */}
       <SceneContent scene={currentScene} answered={answered} onAnswer={handleAnswer} />
+
+      {/* Glossary */}
+      {scenario.glossary && scenario.glossary.length > 0 && (
+        <GlossaryPanel glossary={scenario.glossary} />
+      )}
 
       {/* Next button */}
       {answered && (

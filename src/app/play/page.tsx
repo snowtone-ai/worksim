@@ -23,10 +23,9 @@ export default async function PlayPage() {
           {scenarios.map((scenario) => {
             const [industry, role] = scenario.id.split('/')
             return (
-              <Link
+              <div
                 key={scenario.id}
-                href={`/play/${industry}/${role}`}
-                className="rounded-xl border border-gray-200 bg-white px-5 py-4 hover:border-indigo-300 hover:shadow-sm transition-all flex flex-col gap-2"
+                className="rounded-xl border border-gray-200 bg-white px-5 py-4 flex flex-col gap-3"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-indigo-600">{scenario.meta.industry}</span>
@@ -34,7 +33,21 @@ export default async function PlayPage() {
                 </div>
                 <p className="font-semibold text-gray-900">{scenario.meta.role}</p>
                 <p className="text-sm text-gray-500 line-clamp-2">{scenario.meta.description}</p>
-              </Link>
+                <div className="flex gap-2 pt-1">
+                  <Link
+                    href={`/play/${industry}/${role}`}
+                    className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-700 hover:border-indigo-300 hover:bg-indigo-50 transition-colors"
+                  >
+                    通常モード
+                  </Link>
+                  <Link
+                    href={`/play/${industry}/${role}/immersive`}
+                    className="flex-1 rounded-lg bg-indigo-600 px-3 py-2 text-center text-sm font-medium text-white hover:bg-indigo-700 transition-colors"
+                  >
+                    没入モード ✨
+                  </Link>
+                </div>
+              </div>
             )
           })}
         </div>

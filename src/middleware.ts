@@ -29,7 +29,9 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   // 未ログインユーザーが保護ルートにアクセスした場合はトップへリダイレクト
-  if (!user && (request.nextUrl.pathname.startsWith('/profile') || request.nextUrl.pathname.startsWith('/play'))) {
+  // 結果ページはURLにデータが含まれるため認証不要
+  const isResultPage = /^\/play\/[^/]+\/[^/]+\/result/.test(request.nextUrl.pathname)
+  if (!user && !isResultPage && (request.nextUrl.pathname.startsWith('/profile') || request.nextUrl.pathname.startsWith('/play'))) {
     const url = request.nextUrl.clone()
     url.pathname = '/'
     return NextResponse.redirect(url)

@@ -1,4 +1,5 @@
-import type { Scene, Choice } from '@/lib/scenario/loader'
+import type { Scene } from '@/lib/scenario/loader'
+import { ChoiceList } from './choice-list'
 
 type Props = {
   scene: Scene
@@ -21,7 +22,12 @@ export function TaskDebug({ scene, onAnswer, answered }: Props) {
             if (line === '') return <div key={i} className="h-2" />
             const isError = line.includes('[ERROR]')
             const isWarn = line.includes('[WARN]')
-            const isSlack = !line.startsWith('[') && !line.startsWith('🚨') && !line.startsWith('時刻') && !line.startsWith('エラー率') && !line.startsWith('Slack')
+            const isSlack =
+              !line.startsWith('[') &&
+              !line.startsWith('🚨') &&
+              !line.startsWith('時刻') &&
+              !line.startsWith('エラー率') &&
+              !line.startsWith('Slack')
             return (
               <p
                 key={i}
@@ -44,35 +50,12 @@ export function TaskDebug({ scene, onAnswer, answered }: Props) {
         </div>
       </div>
 
-      <ChoiceList choices={scene.choices} answered={answered} onAnswer={onAnswer} />
-    </div>
-  )
-}
-
-function ChoiceList({ choices, answered, onAnswer }: {
-  choices: Choice[]
-  answered: string | null
-  onAnswer: (id: string) => void
-}) {
-  return (
-    <div className="flex flex-col gap-3">
-      <p className="text-sm font-medium text-gray-700">あなたはどうする？</p>
-      {choices.map((choice) => (
-        <button
-          key={choice.id}
-          onClick={() => !answered && onAnswer(choice.id)}
-          disabled={!!answered}
-          className={`w-full rounded-lg border px-4 py-3 text-left text-sm transition-colors ${
-            answered === choice.id
-              ? 'border-indigo-500 bg-indigo-50 text-indigo-800'
-              : answered
-              ? 'border-gray-200 bg-gray-50 text-gray-400 cursor-not-allowed'
-              : 'border-gray-200 bg-white text-gray-700 hover:border-indigo-300 hover:bg-indigo-50'
-          }`}
-        >
-          {choice.label}
-        </button>
-      ))}
+      <ChoiceList
+        choices={scene.choices}
+        answered={answered}
+        onAnswer={onAnswer}
+        prompt="あなたはどうする？"
+      />
     </div>
   )
 }

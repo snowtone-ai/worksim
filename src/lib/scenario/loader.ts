@@ -15,6 +15,34 @@ export const SceneSchema = z.object({
   choices: z.array(ChoiceSchema).min(2).max(4),
 })
 
+export const ImmersiveSceneSchema = z.object({
+  id: z.string(),
+  time: z.string().regex(/^\d{2}:\d{2}$/),
+  interactable: z.enum([
+    'monitor_mail', 'monitor_slack', 'monitor_code', 'monitor_terminal',
+    'monitor_calendar', 'monitor_browser',
+    'sticky_notes', 'phone', 'coworker_visit',
+    'npc_dialogue', 'meeting_speaker',
+  ]),
+  presenter: z.string().optional(),
+  title: z.string(),
+  context: z.string(),
+  content: z.string(),
+  choices: z.array(ChoiceSchema).min(2).max(4),
+})
+
+export const PhaseSchema = z.enum(['morning', 'lunch', 'meeting', 'afternoon'])
+
+export const BlockSchema = z.object({
+  id: PhaseSchema,
+  label: z.string(),
+  time_start: z.string().regex(/^\d{2}:\d{2}$/),
+  time_end: z.string().regex(/^\d{2}:\d{2}$/),
+  location: z.enum(['desk', 'cafeteria', 'conference_room']),
+  intro: z.string(),
+  scenes: z.array(ImmersiveSceneSchema).length(5),
+})
+
 export const ScenarioSchema = z.object({
   id: z.string(),
   version: z.string(),
@@ -25,6 +53,7 @@ export const ScenarioSchema = z.object({
     duration_minutes: z.number().int().positive(),
     description: z.string(),
     sources: z.array(z.string()),
+    company_model: z.string().optional(),
   }),
   dimensions: z.array(
     z.object({
@@ -34,11 +63,16 @@ export const ScenarioSchema = z.object({
     })
   ).min(2).max(6),
   scenes: z.array(SceneSchema).min(1).max(10),
+  glossary: z.array(z.object({ term: z.string(), description: z.string() })).optional(),
+  blocks: z.array(BlockSchema).length(4).optional(),
 })
 
 export type Scenario = z.infer<typeof ScenarioSchema>
 export type Scene = z.infer<typeof SceneSchema>
 export type Choice = z.infer<typeof ChoiceSchema>
+export type ImmersiveScene = z.infer<typeof ImmersiveSceneSchema>
+export type Block = z.infer<typeof BlockSchema>
+export type Phase = z.infer<typeof PhaseSchema>
 
 const ID_PATTERN = /^[a-z0-9-]+\/[a-z0-9-]+$/
 

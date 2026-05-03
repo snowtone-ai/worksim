@@ -1,16 +1,16 @@
 import { test, expect } from '@playwright/test'
 
+// 結果ページは認証不要（データはURLに含まれる）
+test.use({ storageState: { cookies: [], origins: [] } })
+
+const BASE_ANSWERS = { standup: 'a', 'bug-email': 'a', 'code-review': 'a', 'feature-design': 'a', 'incident-debug': 'a' }
+
+function resultUrl(answers = BASE_ANSWERS) {
+  return `/play/it/web-engineer/result?a=${encodeURIComponent(JSON.stringify(answers))}`
+}
+
 test('US-6: 結果ページに診断タイプとスコアが表示される', async ({ page }) => {
-  // 全選択肢Aで回答したスコアをエンコードして直接アクセス
-  const answers = {
-    standup: 'a',
-    'bug-email': 'a',
-    'code-review': 'a',
-    'feature-design': 'a',
-    'incident-debug': 'a',
-  }
-  const encoded = encodeURIComponent(JSON.stringify(answers))
-  await page.goto(`/play/it/web-engineer/result?a=${encoded}`)
+  await page.goto(resultUrl())
 
   await expect(page.getByText('診断結果')).toBeVisible()
   await expect(page.getByText('あなたのタイプ')).toBeVisible()
@@ -21,20 +21,18 @@ test('US-6: 結果ページに診断タイプとスコアが表示される', as
   await expect(page.getByText('技術力')).toBeVisible()
 })
 
-test('US-7: 「もう一度やり直す」でプレイ画面に戻れる', async ({ page }) => {
-  const answers = { standup: 'a', 'bug-email': 'a', 'code-review': 'a', 'feature-design': 'a', 'incident-debug': 'a' }
-  const encoded = encodeURIComponent(JSON.stringify(answers))
-  await page.goto(`/play/it/web-engineer/result?a=${encoded}`)
+test('US-7: 「もう一度やり直す」リンクがプレイ画面を指している', async ({ page }) => {
+  await page.goto(resultUrl())
 
-  await page.getByRole('link', { name: 'もう一度やり直す' }).click()
-  await expect(page).toHaveURL('/play/it/web-engineer')
+  const link = page.getByRole('link', { name: 'もう一度やり直す' })
+  await expect(link).toBeVisible()
+  await expect(link).toHaveAttribute('href', '/play/it/web-engineer')
 })
 
-test('US-8: 「他の職種を体験する」でシナリオ一覧に戻れる', async ({ page }) => {
-  const answers = { standup: 'a', 'bug-email': 'a', 'code-review': 'a', 'feature-design': 'a', 'incident-debug': 'a' }
-  const encoded = encodeURIComponent(JSON.stringify(answers))
-  await page.goto(`/play/it/web-engineer/result?a=${encoded}`)
+test('US-8: 「他の職種を体験する」リンクがシナリオ一覧を指している', async ({ page }) => {
+  await page.goto(resultUrl())
 
-  await page.getByRole('link', { name: '他の職種を体験する' }).click()
-  await expect(page).toHaveURL('/play')
+  const link = page.getByRole('link', { name: '他の職種を体験する' })
+  await expect(link).toBeVisible()
+  await expect(link).toHaveAttribute('href', '/play')
 })

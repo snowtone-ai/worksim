@@ -27,6 +27,7 @@
 - Supabase の RLS（Row Level Security）を全テーブルに必ず設定
 - profiles テーブルに個人名・メールアドレスを保存しない（auth.users にのみ存在）
 - シナリオJSON は scenarios/_schema.md のスキーマに準拠
+- シナリオJSONに実在する企業名・サービス名・人名を使用しない。実在企業をモデルにする場合も固有名詞は架空の名前（例：Mercari→架空スタートアップ、Kevin Park→Alex Kim、Mercafe→BrewHub）に置き換えること。画面左上にも実在企業名を表示しない（scenario.meta.industry / scenario.meta.role を使用）
 - 1職種完成 → ワークフロー検証 → 残職種に展開、の順を厳守
 - 大学・学部・志望業界は任意入力。未入力でもプレイ可能
 - ASCII 以外を含むパスにファイル作成しない

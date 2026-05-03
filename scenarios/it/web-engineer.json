@@ -1,12 +1,13 @@
 {
   "id": "it/web-engineer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "meta": {
     "title": "Webエンジニア",
     "industry": "IT・情報通信",
     "role": "Webエンジニア（バックエンド）",
-    "duration_minutes": 15,
-    "description": "ECサイトのバックエンドを担当するエンジニアとして、リアルな1日の業務を体験。バグ対応・コードレビュー・設計議論を通じてあなたのエンジニア適性を診断します。",
+    "duration_minutes": 7,
+    "description": "ECプラットフォームの販売者向けバックエンドを担当するエンジニアとして、リアルな1日の業務を体験。バグ対応・コードレビュー・設計議論を通じてあなたのエンジニア適性を診断します。没入モードでは、出社から退社までの完全な1日を体験できます（約20分）。",
+    "company_model": "架空のITスタートアップをモデルに構成",
     "sources": [
       "厚生労働省 職業情報提供サイト jobtag「システムエンジニア（Webサービス）」https://shigoto.mhlw.go.jp/",
       "IPA「DX白書2023 - ITエンジニアの業務実態」https://www.ipa.go.jp/publish/wp-dx/dx-2023.html"
@@ -19,6 +20,26 @@
     { "key": "ownership", "label": "当事者意識", "description": "責任を持って行動する姿勢" },
     { "key": "agility", "label": "適応力", "description": "変化や問題に素早く対応する力" }
   ],
+  "glossary": [
+    { "term": "スタンドアップ（朝会）", "description": "毎朝行う短い進捗共有ミーティング（通常15分以内）。昨日やったこと・今日やること・困っていることを順番に報告する。" },
+    { "term": "コードレビュー", "description": "他のメンバーが書いたコードを確認し、バグ・品質・設計の問題を指摘・改善するプロセス。マージ（本番反映）前の品質チェック。" },
+    { "term": "PR（プルリクエスト）", "description": "自分の書いたコードを本番コードに取り込んでもらうための申請。レビューを経て承認されると「マージ」（合流）される。" },
+    { "term": "API", "description": "Application Programming Interface。異なるシステムがデータをやり取りするための「つなぎ口」のルール。" },
+    { "term": "マイクロサービス", "description": "1つの大きなアプリを、小さな独立したサービスに分割するアーキテクチャ。大規模サービスでは数百のマイクロサービスで構成されることもある。" },
+    { "term": "デプロイ", "description": "開発したコードをユーザーが使う本番環境に反映させること。「リリース」と同義で使われることも多い。" },
+    { "term": "マイグレーション", "description": "データベースの構造変更や、システム移行のための手順書。変更の記録と巻き戻しのセットで管理する。" },
+    { "term": "インシデント", "description": "本番環境で発生した障害や重大な問題。迅速な原因特定・影響範囲把握・復旧・報告が求められる。" },
+    { "term": "ロールバック", "description": "デプロイ後に問題が発覚した時、直前の安定バージョンに戻す操作。インシデント対応の基本手段。" },
+    { "term": "p95 / p99レイテンシ", "description": "リクエストの95%（または99%）が応答完了する時間。平均値より、ユーザー体感に近い性能指標。" },
+    { "term": "Datadog / モニタリング", "description": "サーバーやアプリの稼働状況をリアルタイムに監視し、異常を検知してアラートを出すツール。" },
+    { "term": "1on1", "description": "上司と部下が1対1で行う定期面談（週次・月次など）。業務相談やキャリア相談の場。" },
+    { "term": "Sprint Planning", "description": "アジャイル開発で、次の1〜2週間（スプリント）に何を作るかをチームで決める会議。" },
+    { "term": "A/Bテスト", "description": "新機能を全ユーザーではなく一部に出して、効果を測る手法。リスクを抑えながら効果検証ができる。" },
+    { "term": "BigQuery", "description": "Googleが提供する大規模データ分析サービス。膨大なデータを高速に集計できる。" },
+    { "term": "Redis", "description": "メモリ上で動く高速データストア。よく使うデータをキャッシュしてDB負荷を減らすために使う。" },
+    { "term": "技術的負債", "description": "「今は動くが将来問題になりやすい」コードや設計の蓄積。短期解決策を取り続けると膨らむ。" },
+    { "term": "ハンドオフ", "description": "業務やタスクを別の人や別の時間帯のチームに引き継ぐこと。グローバル企業では地球の裏側のチームと毎日ハンドオフする。" }
+  ],
   "scenes": [
     {
       "id": "standup",
@@ -27,21 +48,9 @@
       "context": "毎朝15分のスタンドアップミーティング。PM・デザイナー・先輩エンジニアが参加。あなたは昨日、先輩からAPIのコードレビューでフィードバックをもらい、修正を続けている。",
       "content": "PM 田中：「おはようございます。では各自、昨日の進捗と今日の予定をお願いします」\n\nデザイナー 佐藤：「LPの最終修正が完了しました。今日はヘッダーの改善対応です」\n\n先輩エンジニア 鈴木：「決済APIのテストが終わりました。今日はドキュメント整備です。── あなたさん、昨日のコードレビューのフィードバックは確認できた？」\n\n（あなたの番です）",
       "choices": [
-        {
-          "id": "a",
-          "label": "「フィードバックはすべて確認して修正しました。今日の午前中にPRを再提出します」",
-          "scores": { "technical": 1, "logical": 2, "communication": 2, "ownership": 3, "agility": 1 }
-        },
-        {
-          "id": "b",
-          "label": "「一部修正しました。エラーハンドリングの書き方について鈴木さんに午後相談させてください。今日中には対応します」",
-          "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 2, "agility": 2 }
-        },
-        {
-          "id": "c",
-          "label": "「確認したところ設計レベルの変更が必要で、自分だけでは判断できません。今日ミーティングを設定してもいいですか？」",
-          "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 1 }
-        }
+        { "id": "a", "label": "「フィードバックはすべて確認して修正しました。今日の午前中にPRを再提出します」", "scores": { "technical": 1, "logical": 2, "communication": 2, "ownership": 3, "agility": 1 } },
+        { "id": "b", "label": "「一部修正しました。エラーハンドリングの書き方について鈴木さんに午後相談させてください。今日中には対応します」", "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 2, "agility": 2 } },
+        { "id": "c", "label": "「確認したところ設計レベルの変更が必要で、自分だけでは判断できません。今日ミーティングを設定してもいいですか？」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 1 } }
       ]
     },
     {
@@ -51,21 +60,9 @@
       "context": "朝会が終わった直後、カスタマーサポートから転送メールが届いた。",
       "content": "From: support@example-ec.co.jp\nTo: engineer-team@example-ec.co.jp\nSubject: 【緊急】ログインできないユーザーが多数報告されています\n\n昨夜23時頃から「ログインできない」という問い合わせが急増しています。\n現在の報告件数：47件\nエラーメッセージ：「認証に失敗しました（code: AUTH_503）」\n影響ユーザー：全体の約12%と推定\n\nサポートチームは受電対応でパンク寸前です。\n原因と復旧見込みを教えていただけますか？",
       "choices": [
-        {
-          "id": "a",
-          "label": "まず自分でエラーログとモニタリングツールを確認し、原因を特定してから報告する",
-          "scores": { "technical": 3, "logical": 3, "communication": 1, "ownership": 2, "agility": 2 }
-        },
-        {
-          "id": "b",
-          "label": "すぐにPMと先輩エンジニアをSlackで招集し、状況を共有しながら並行して調査を始める",
-          "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 3, "agility": 3 }
-        },
-        {
-          "id": "c",
-          "label": "昨夜23時頃のデプロイ履歴とDB接続数ログをまず確認する（障害が起きる直前の変更が怪しい）",
-          "scores": { "technical": 3, "logical": 3, "communication": 1, "ownership": 2, "agility": 2 }
-        }
+        { "id": "a", "label": "まず自分でエラーログとモニタリングツールを確認し、原因を特定してから報告する", "scores": { "technical": 3, "logical": 3, "communication": 1, "ownership": 2, "agility": 2 } },
+        { "id": "b", "label": "すぐにPMと先輩エンジニアをSlackで招集し、状況を共有しながら並行して調査を始める", "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 3, "agility": 3 } },
+        { "id": "c", "label": "昨夜23時頃のデプロイ履歴とDB接続数ログをまず確認する（障害が起きる直前の変更が怪しい）", "scores": { "technical": 3, "logical": 3, "communication": 1, "ownership": 2, "agility": 2 } }
       ]
     },
     {
@@ -75,21 +72,9 @@
       "context": "午後、後輩の田島さんからPRレビューの依頼が来た。インシデントは落ち着いている。",
       "content": "PR #234：ユーザー検索APIの高速化\nレビュー依頼者：田島（入社6ヶ月）\n\nコメント：\n「検索が遅いという指摘を受けたので、SQLにインデックスを追加しました。ローカルでは速くなりましたが、本番投入してみないとわからない部分もあって…レビューよろしくお願いします！」\n\n差分を確認すると：\n・WHERE句に使われるカラムへのインデックス追加（方向性は良い）\n・既存の複合インデックスと重複している可能性あり\n・テストコードの追加なし\n・マイグレーションのロールバックが書かれていない",
       "choices": [
-        {
-          "id": "a",
-          "label": "問題点を箇条書きで丁寧にコメントし、「テストとロールバックを追加してから再レビューします」と返す",
-          "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 1, "agility": 1 }
-        },
-        {
-          "id": "b",
-          "label": "田島さんに「何に詰まっているか」を確認し、本人の理解を深めながらレビューコメントを書く",
-          "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 2, "agility": 2 }
-        },
-        {
-          "id": "c",
-          "label": "インデックス設計の問題を自分で修正したコードを提案し、「なぜこうするか」の説明を添える",
-          "scores": { "technical": 3, "logical": 2, "communication": 3, "ownership": 3, "agility": 2 }
-        }
+        { "id": "a", "label": "問題点を箇条書きで丁寧にコメントし、「テストとロールバックを追加してから再レビューします」と返す", "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 1, "agility": 1 } },
+        { "id": "b", "label": "田島さんに「何に詰まっているか」を確認し、本人の理解を深めながらレビューコメントを書く", "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 2, "agility": 2 } },
+        { "id": "c", "label": "インデックス設計の問題を自分で修正したコードを提案し、「なぜこうするか」の説明を添える", "scores": { "technical": 3, "logical": 2, "communication": 3, "ownership": 3, "agility": 2 } }
       ]
     },
     {
@@ -99,21 +84,9 @@
       "context": "PMから「来週のスプリント計画に向けて新機能の技術的な検討をしたい」と30分のミーティングに招集された。",
       "content": "PM 田中：「ユーザーが商品をお気に入り登録できる機能を2週間で出したいです。技術的にどう実装しますか？」\n\nあなたはすぐに3つのアプローチが思い浮かんだ：\n・案A：既存DBにwishlistsテーブルを追加（シンプルだが将来の拡張が限られる）\n・案B：マイクロサービスとして分離（スケーラブルだが2週間では難しい）\n・案C：既存のcartテーブルをフラグで流用（早いが技術的負債になりうる）\n\n（あなたはどう答えますか？）",
       "choices": [
-        {
-          "id": "a",
-          "label": "「案Aが2週間の制約と保守性のバランスが最もよいと思います。スキーマ設計は将来の拡張を念頭に置きます」",
-          "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 2 }
-        },
-        {
-          "id": "b",
-          "label": "「まず要件を確認させてください。同時接続数や、将来的に機能追加の予定はありますか？」",
-          "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 3 }
-        },
-        {
-          "id": "c",
-          "label": "「案Aで進めます。今日の夕方までにER図と実装見積もりを送るので、内容を確認して判断してください」",
-          "scores": { "technical": 3, "logical": 2, "communication": 2, "ownership": 3, "agility": 2 }
-        }
+        { "id": "a", "label": "「案Aが2週間の制約と保守性のバランスが最もよいと思います。スキーマ設計は将来の拡張を念頭に置きます」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 2 } },
+        { "id": "b", "label": "「まず要件を確認させてください。同時接続数や、将来的に機能追加の予定はありますか？」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 3 } },
+        { "id": "c", "label": "「案Aで進めます。今日の夕方までにER図と実装見積もりを送るので、内容を確認して判断してください」", "scores": { "technical": 3, "logical": 2, "communication": 2, "ownership": 3, "agility": 2 } }
       ]
     },
     {
@@ -123,20 +96,326 @@
       "context": "17時、退社30分前。Slackのアラートチャンネルに通知が来た。",
       "content": "🚨 ERROR RATE HIGH — payment-service\n時刻：16:58\nエラー率：通常の8倍に急増\n\nエラーログ（抜粋）：\n  [ERROR] Timeout connecting to payment-gateway (5000ms)\n  [ERROR] Transaction ID: TXN-XXXX failed\n  [WARN]  Retry attempt 3/3 exhausted\n\nSlack #incident チャンネル：\n先輩鈴木：「誰か確認できる？自分は今日外出中です」\nPM田中：「ユーザーから決済できないって問い合わせ来てます！」\n\n（定時まであと30分。あなたはどうする？）",
       "choices": [
+        { "id": "a", "label": "「確認します」とSlackに投稿し、すぐにログとモニタリングを確認。payment-gatewayの外部ステータスページもチェックする", "scores": { "technical": 3, "logical": 2, "communication": 2, "ownership": 3, "agility": 3 } },
+        { "id": "b", "label": "「対応します」と宣言後、15分で「外部決済サービス側の障害と判明。ユーザー向けメッセージの掲示を提案」と状況整理して報告する", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 } },
+        { "id": "c", "label": "影響範囲を先に調査し、「新規決済のみ失敗、処理済みトランザクションへの影響なし」と正確な情報を報告してから対応策を検討する", "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 2, "agility": 2 } }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前のタスク",
+      "time_start": "09:00",
+      "time_end": "12:00",
+      "location": "desk",
+      "intro": "渋谷の高層ビル・ITスタートアップのオフィス。あなたは販売者向けプロダクトチームのバックエンドエンジニア（入社2年目）。デスクに着いて、今日の1日が始まる。",
+      "scenes": [
         {
-          "id": "a",
-          "label": "「確認します」とSlackに投稿し、すぐにログとモニタリングを確認。payment-gatewayの外部ステータスページもチェックする",
-          "scores": { "technical": 3, "logical": 2, "communication": 2, "ownership": 3, "agility": 3 }
+          "id": "m1",
+          "time": "09:05",
+          "interactable": "monitor_slack",
+          "presenter": "Alex Kim（海外拠点・Backend）",
+          "title": "深夜のSlack DM",
+          "context": "出社して着席。Slackを開くと未読DMが7件、トップに海外拠点エンジニアAlex Kimからのメッセージ。",
+          "content": "Alex Kim (Backend - US Office) 22:47\n\nHey, deploy of the new categorization-service v2.4 went out 30min ago.\nAll staging tests pass but Datadog shows p99 latency on listings-api spiked from 80ms → 140ms.\nCould be related, could be coincidence with our 23:00 batch job.\nI'm signing off (it's midnight here). Could you take a look in the morning?\n\nPR: github.internal/categorization-service/pull/4521\nDashboard: datadog.internal/listings-api",
+          "choices": [
+            { "id": "a", "label": "朝会前にダッシュボードを開いてp99を確認、根本原因を特定する", "scores": { "technical": 3, "logical": 3, "communication": 1, "ownership": 2, "agility": 2 } },
+            { "id": "b", "label": "Alexに「調査開始する」と即返信、#alerts-listingsチャンネルにも共有してから着手", "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "c", "label": "朝会で議題に上げ、チームで分担を決めてから動く", "scores": { "technical": 1, "logical": 3, "communication": 2, "ownership": 1, "agility": 1 } }
+          ]
         },
         {
-          "id": "b",
-          "label": "「対応します」と宣言後、15分で「外部決済サービス側の障害と判明。ユーザー向けメッセージの掲示を提案」と状況整理して報告する",
-          "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 }
+          "id": "m2",
+          "time": "09:30",
+          "interactable": "sticky_notes",
+          "title": "今日のタスク見直し",
+          "context": "デスクの付箋に昨日書き残した『今日やること』。3つ書いてある。",
+          "content": "今日やること（自分用メモ）\n□ Alex PR #4521 のlatency調査\n□ 後輩・田島のPR #4530 レビュー（昨日依頼来てた）\n□ 決済連携APIのスキーマ移行 設計ドキュメント執筆\n+ 13時から Sprint Planning（重要）",
+          "choices": [
+            { "id": "a", "label": "緊急度順：latency調査 → PRレビュー → ドキュメントの順で着手", "scores": { "technical": 2, "logical": 3, "communication": 1, "ownership": 3, "agility": 2 } },
+            { "id": "b", "label": "軽いものから：PRレビュー先に終わらせて田島の手を空ける → latency調査", "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 2, "agility": 2 } },
+            { "id": "c", "label": "Sprint Planning準備優先：ドキュメント1時間進めてからlatency調査、レビューは午後", "scores": { "technical": 2, "logical": 3, "communication": 1, "ownership": 2, "agility": 1 } }
+          ]
         },
         {
-          "id": "c",
-          "label": "影響範囲を先に調査し、「新規決済のみ失敗、処理済みトランザクションへの影響なし」と正確な情報を報告してから対応策を検討する",
-          "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 2, "agility": 2 }
+          "id": "m3",
+          "time": "10:00",
+          "interactable": "monitor_code",
+          "presenter": "田島 翔（新卒1年目）",
+          "title": "後輩のPRレビュー",
+          "context": "GitHubで田島さんのPR #4530を開く。新規API実装、+312行 -45行。",
+          "content": "PR #4530: feat(seller-api): seller dashboard analytics endpoint\nAuthor: @tajima (新卒1年目)\n\n差分要約:\n+ GET /v1/sellers/{id}/analytics 新規エンドポイント\n+ 過去30日の売上・閲覧数を集計\n+ Redis キャッシュ実装 (TTL: 5分)\n\nあなたが気になった点:\n・Redisキャッシュのキー設計が seller_id だけ → 期間パラメータが含まれていない\n・テストはhappy pathのみ、エラー系のテストなし\n・SQL クエリがN+1になる箇所あり",
+          "choices": [
+            { "id": "a", "label": "全部の問題を箇条書きでコメント、修正後の再レビューを依頼", "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 1, "agility": 1 } },
+            { "id": "b", "label": "Slackで5分時間もらって、ホワイトボードでキャッシュキー設計を一緒に考える", "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "c", "label": "1番クリティカルなキャッシュ衝突だけ指摘、N+1とテストは「次のPRで」と提案", "scores": { "technical": 2, "logical": 2, "communication": 2, "ownership": 2, "agility": 3 } }
+          ]
+        },
+        {
+          "id": "m4",
+          "time": "10:45",
+          "interactable": "phone",
+          "presenter": "山田（マネージャー）",
+          "title": "マネージャーから内線",
+          "context": "デスクの電話が鳴る。マネージャー山田さんから1on1の議題確認。",
+          "content": "山田: 「今日の11時から1on1だけど、議題なにか持ってきてる？\n        特に話したいことなければ、最近の市場リサーチで気になった\n        『Goのジェネリクス活用事例』について話そうかと思ってるんだけど」",
+          "choices": [
+            { "id": "a", "label": "「決済連携APIのスキーマ移行で技術的に詰まっています、その相談をさせてください」", "scores": { "technical": 3, "logical": 2, "communication": 3, "ownership": 3, "agility": 1 } },
+            { "id": "b", "label": "「キャリアのことを話したいです、来期どんな役割を任されたいか整理したくて」", "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 2, "agility": 2 } },
+            { "id": "c", "label": "「ジェネリクスの話で大丈夫です、自分も最近触り始めたところなので学びたい」", "scores": { "technical": 2, "logical": 1, "communication": 2, "ownership": 1, "agility": 2 } }
+          ]
+        },
+        {
+          "id": "m5",
+          "time": "11:30",
+          "interactable": "monitor_slack",
+          "presenter": "高橋（決済チーム・テックリード）",
+          "title": "別チームからの突発依頼",
+          "context": "決済チームのテックリード 高橋さんから #channel-payments-design でメンション。",
+          "content": "@you こんにちは、決済チームのテックリード・高橋です。\n新しい後払い決済機能の設計ドキュメント、明日の決定会議までに\nレビューもらいたくて。販売者側の影響範囲を一番把握してるのが\nあなたのチームと聞いて。\n\nドキュメント: notion.internal/payments-design-bnpl-v3\n（30分くらいで読めます）\n\n明日朝までに重大な懸念点だけでも教えてもらえると助かります。\n今日の午後は会議で潰れてしまうので、できれば午前中に...🙏",
+          "choices": [
+            { "id": "a", "label": "「ランチ前にざっと目を通して、午後の会議終わりに本格レビューします」と返信", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 } },
+            { "id": "b", "label": "自チームのSprint Planningに集中したいので「明日の朝イチに必ず」と返信", "scores": { "technical": 1, "logical": 2, "communication": 2, "ownership": 2, "agility": 1 } },
+            { "id": "c", "label": "「販売者側の影響箇所を5分で洗い出してリスト化、それを基に話しましょう」と提案", "scores": { "technical": 3, "logical": 3, "communication": 3, "ownership": 2, "agility": 2 } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "ランチ休憩",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "12:00。社内カフェ「BrewHub」へ移動。シニアエンジニアの鈴木さん（5年目）と同じテーブルに着く。",
+      "scenes": [
+        {
+          "id": "l1",
+          "time": "12:00",
+          "interactable": "npc_dialogue",
+          "presenter": "鈴木 健（シニアエンジニア・5年目）",
+          "title": "席についてランチ開始",
+          "context": "BrewHubでランチを取って、鈴木さんと同じテーブルへ。鈴木さんは既にハンバーグランチを食べ始めている。",
+          "content": "鈴木: 「お、お疲れさま。座って座って」\n鈴木: 「今朝のlatencyの件、見たよ。Alex早めに気付いてくれて助かったね」\n鈴木: 「ところで、最近どう？仕事とかキャリアとか、なんでもいいけど」",
+          "choices": [
+            { "id": "a", "label": "「実は決済連携の設計で行き詰まってて。鈴木さんに15分相談したいです」", "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "b", "label": "「Alexとの非同期コラボ、もっとうまくやる方法ないかなって思ってます」", "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 2, "agility": 3 } },
+            { "id": "c", "label": "「最近、自分の市場価値ってどれくらいなのか考えてて。鈴木さんはどう思います？」", "scores": { "technical": 1, "logical": 1, "communication": 2, "ownership": 1, "agility": 1 } }
+          ]
+        },
+        {
+          "id": "l2",
+          "time": "12:15",
+          "interactable": "npc_dialogue",
+          "presenter": "鈴木",
+          "title": "5年後どうしてる？",
+          "context": "話題が一段落した頃、鈴木さんがコーヒーを一口飲んで切り出す。",
+          "content": "鈴木: 「俺、入社5年目になるんだけどさ、最近よく後輩から\n       『鈴木さんは5年後どうなってたいですか？』って聞かれるのよ」\n鈴木: 「答えに詰まる時がある。あなたは、5年後どうなってたい？\n       具体的でも抽象的でもいいから」",
+          "choices": [
+            { "id": "a", "label": "「特定領域のスペシャリストになりたいです。決済とか、深く一個極めたい」", "scores": { "technical": 3, "logical": 2, "communication": 2, "ownership": 3, "agility": 1 } },
+            { "id": "b", "label": "「テックリードとして、複数チームをまたぐ設計を任される立場になりたい」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "c", "label": "「正直まだ決まってません。だからこそ今、いろんな領域に首を突っ込んでます」", "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 2, "agility": 3 } }
+          ]
+        },
+        {
+          "id": "l3",
+          "time": "12:30",
+          "interactable": "npc_dialogue",
+          "presenter": "鈴木",
+          "title": "Rust試してる話",
+          "context": "デザートを取りに行って戻ると、鈴木さんが MacBook を開いていた。",
+          "content": "鈴木: 「あ、見て。最近土日にRust触ってるんだ。\n       決済処理の一部、レイテンシシビアなところはRustに置き換えられないかなって」\n鈴木: 「うちはほぼ全部Goじゃん？でもGoだと限界感じる場面って、ない？」",
+          "choices": [
+            { "id": "a", "label": "「ありますね。GCのspike問題とか。Rust試してみたいです、教材教えてもらえます？」", "scores": { "technical": 3, "logical": 2, "communication": 3, "ownership": 2, "agility": 3 } },
+            { "id": "b", "label": "「Goでまだ伸びしろあると思ってます。プロファイリングや並行処理の設計次第かなと」", "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 2, "agility": 1 } },
+            { "id": "c", "label": "「言語より、どこにマイクロサービス境界を引くかの方が効くと思います」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 2 } }
+          ]
+        },
+        {
+          "id": "l4",
+          "time": "12:45",
+          "interactable": "npc_dialogue",
+          "presenter": "鈴木",
+          "title": "US事業どう思う？",
+          "context": "ランチも終盤。テーブルの皿を片付けながら鈴木さんが切り出す。",
+          "content": "鈴木: 「Alexとやり取りして思うんだけど、US事業ってどう思う？\n       俺らのコードがUSのユーザーにも届いてるって、ピンと来ない時あるじゃん」\n鈴木: 「個人的には、もっとUSの現場に行ってみたいんだけどね」",
+          "choices": [
+            { "id": "a", "label": "「コードベースが分離されてて、バックエンド共通化の余地はもっとあると思います」", "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 2, "agility": 2 } },
+            { "id": "b", "label": "「Alexとの非同期コラボ、テストカバレッジで信頼を作る方が現実的かも」", "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 3, "agility": 3 } },
+            { "id": "c", "label": "「自分もUSオフィスに短期で行ってみたいです。鈴木さんと一緒にどうですか」", "scores": { "technical": 1, "logical": 1, "communication": 3, "ownership": 2, "agility": 2 } }
+          ]
+        },
+        {
+          "id": "l5",
+          "time": "12:55",
+          "interactable": "npc_dialogue",
+          "presenter": "鈴木",
+          "title": "午後の会議への準備",
+          "context": "コーヒーを飲み干して立ち上がる時。鈴木さんが思い出したように。",
+          "content": "鈴木: 「あ、そうだ。午後の Sprint Planning で、\n       カテゴリ別おすすめレコメンドの設計議論するよね。\n       PMの田中さん、結構タイトなスケジュール提案してくると思う」\n鈴木: 「俺はあなたの設計案、楽しみにしてる。会議前、何か準備する？」",
+          "choices": [
+            { "id": "a", "label": "「3つのアーキ案を整理して、トレードオフ表をホワイトボードに事前に書いておきます」", "scores": { "technical": 3, "logical": 3, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "b", "label": "「鈴木さんの過去の同種の機能設計を、5分で聞かせてもらえると参考になります」", "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 1, "agility": 2 } },
+            { "id": "c", "label": "「会議の中でフラットに議論しましょう。事前に固めすぎると議論が硬くなる」", "scores": { "technical": 1, "logical": 2, "communication": 2, "ownership": 1, "agility": 3 } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "Sprint Planning",
+      "time_start": "13:00",
+      "time_end": "15:00",
+      "location": "conference_room",
+      "intro": "13:00。会議室「Horizon」に移動。PM田中、デザイナー佐藤、シニア鈴木、あなたの4人。議題は新機能「カテゴリ別おすすめ商品レコメンド」設計。",
+      "scenes": [
+        {
+          "id": "mt1",
+          "time": "13:00",
+          "interactable": "meeting_speaker",
+          "presenter": "PM 田中",
+          "title": "Sprint Planning 開始",
+          "context": "13:00 ちょうど。会議室「Horizon」に集合。PMの田中さんが議題を投影する。",
+          "content": "田中: 「今日はカテゴリ別おすすめ商品レコメンドの設計を決めたいです。\n       要件はこのSlideにまとめました。来週の月曜から2スプリント、\n       4週間でローンチしたい」\n田中: 「まずは要件、ユーザー体験、技術設計の順で。\n       ──エンジニアサイドから何かあれば、最初に聞いておきます」",
+          "choices": [
+            { "id": "a", "label": "「4週間という制約、現状の検索基盤に乗せるか別サービス化するかで全然違います。先に決めたい」", "scores": { "technical": 3, "logical": 3, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "b", "label": "「成功指標は何ですか？CTR？購入率？それで設計の落とし所が変わります」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 2 } },
+            { "id": "c", "label": "「まず要件を全部聞かせてください。設計の話はその後で」", "scores": { "technical": 1, "logical": 2, "communication": 1, "ownership": 1, "agility": 1 } }
+          ]
+        },
+        {
+          "id": "mt2",
+          "time": "13:30",
+          "interactable": "meeting_speaker",
+          "presenter": "あなたの番",
+          "title": "アーキテクチャの3案",
+          "context": "要件議論が一段落。ホワイトボードに3つの案を書いて説明することに。",
+          "content": "案A: 既存の検索サービス(Solr)に新インデックス追加\n     コスト小、4週間OK。レコメンドロジック拡張余地は限定的\n\n案B: 新規レコメンドサービス(Go)を立ち上げ\n     ML基盤と連携可、将来性◎。だが2スプリントは厳しい、6週間欲しい\n\n案C: BigQueryバッチ + Redis キャッシュのハイブリッド\n     2スプリントOK、リアルタイム性は捨てる\n\n鈴木: 「どれを推す？」",
+          "choices": [
+            { "id": "a", "label": "「案A推し。検索基盤の拡張で既存インフラの理解を活かせる、技術的負債も小さい」", "scores": { "technical": 3, "logical": 3, "communication": 3, "ownership": 2, "agility": 1 } },
+            { "id": "b", "label": "「案Bを推したい。短期で間に合わなくても、長期の事業価値が圧倒的」", "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 3, "agility": 1 } },
+            { "id": "c", "label": "「案Cで4週間に収めて、次スプリントで案Bにマイグレーションする2段構え」", "scores": { "technical": 3, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 } }
+          ]
+        },
+        {
+          "id": "mt3",
+          "time": "14:00",
+          "interactable": "meeting_speaker",
+          "presenter": "PM 田中",
+          "title": "スコープ交渉",
+          "context": "案Cで進める方向に。だがPMがさらに踏み込んでくる。",
+          "content": "田中: 「案Cで4週間ね。OK。──ところで、初週で『AndroidとiOSの両方』\n       にA/Bテストかけたいんだけど、可能？」\n田中: 「同時リリースの方がデータ取れる量が2倍になるから」\n\n鈴木: (チラッとあなたを見て、判断を委ねる表情)",
+          "choices": [
+            { "id": "a", "label": "「両OS同時は厳しい。iOSを先行、Androidは1週遅れ。データ精度より初週学習を優先しましょう」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 } },
+            { "id": "b", "label": "「両OSいけます。代わりにレコメンドロジックの初期版は単純化させてください」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 } },
+            { "id": "c", "label": "「持ち帰って明日返答します。クライアントチームと相談したい」", "scores": { "technical": 1, "logical": 2, "communication": 2, "ownership": 1, "agility": 1 } }
+          ]
+        },
+        {
+          "id": "mt4",
+          "time": "14:30",
+          "interactable": "meeting_speaker",
+          "presenter": "デザイナー 佐藤",
+          "title": "パフォーマンス要件",
+          "context": "技術設計が固まりかけた所で、デザイナーの佐藤さんが手を挙げる。",
+          "content": "佐藤: 「おすすめ表示、商品詳細画面に出すんですよね？\n       詳細画面の表示が今でも遅いって、CSから報告来てるんです」\n佐藤: 「レコメンド込みで、p95は150ms以内に収めたいんですけど、\n       それって技術的に可能ですか？」",
+          "choices": [
+            { "id": "a", "label": "「150ms以内でコミット可。Redis キャッシュヒット率を90%以上に保てば達成できます」", "scores": { "technical": 3, "logical": 3, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "b", "label": "「初期は200msで合意させてください。150msは2スプリント目に最適化で詰めます」", "scores": { "technical": 3, "logical": 3, "communication": 3, "ownership": 2, "agility": 2 } },
+            { "id": "c", "label": "「数値は今出せないです。プロトタイプを作って計測してから約束させてください」", "scores": { "technical": 2, "logical": 3, "communication": 2, "ownership": 2, "agility": 1 } }
+          ]
+        },
+        {
+          "id": "mt5",
+          "time": "14:55",
+          "interactable": "meeting_speaker",
+          "presenter": "PM 田中",
+          "title": "アクションアイテム確認",
+          "context": "会議終了5分前。PMがまとめに入る。",
+          "content": "田中: 「OK、まとめます。案C(BigQuery + Redis)で4週間、\n       iOS先行Android1週遅れ、p95 200ms目標で150msストレッチ」\n田中: 「次のスプリントレビューまでにエンジニアサイドのアクションは何？」",
+          "choices": [
+            { "id": "a", "label": "「私が今日中に技術設計ドキュメントv1書いて明日朝までに鈴木さんレビュー、明後日からコーディング」", "scores": { "technical": 3, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 } },
+            { "id": "b", "label": "「鈴木さんと役割分担してから明日朝Slackに投稿、いつでも質問できる体制を作ります」", "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "c", "label": "「チケット切るのを今日終わらせます、明日からエンジニア各自で着手」", "scores": { "technical": 2, "logical": 2, "communication": 2, "ownership": 2, "agility": 3 } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "午後のタスク",
+      "time_start": "15:00",
+      "time_end": "18:00",
+      "location": "desk",
+      "intro": "15:00。会議室を出てデスクに戻る。窓の外は陽の傾きが変わり始めている。残り3時間。",
+      "scenes": [
+        {
+          "id": "a1",
+          "time": "15:05",
+          "interactable": "monitor_slack",
+          "title": "会議サマリーをSlackへ",
+          "context": "デスクに戻る。Sprint Planningの内容を #seller-team に共有することに。",
+          "content": "#seller-team\nあなたが投稿しようとしているドラフト:\n\n『Sprint Planning結果共有』\n\n案: ...どう書く？",
+          "choices": [
+            { "id": "a", "label": "詳細版：決定内容・選定理由・トレードオフ・リスク・次の一手まで全部書く（10分）", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 1 } },
+            { "id": "b", "label": "要点版：決定3行・期限・担当だけ書いて、詳細はNotionリンク(明日書く)に飛ばす（3分）", "scores": { "technical": 2, "logical": 3, "communication": 2, "ownership": 2, "agility": 3 } },
+            { "id": "c", "label": "即報版：「Sprint Planning終了、案C採用、4週間、後で詳細書きます」だけ（30秒）", "scores": { "technical": 1, "logical": 1, "communication": 2, "ownership": 1, "agility": 3 } }
+          ]
+        },
+        {
+          "id": "a2",
+          "time": "15:45",
+          "interactable": "monitor_terminal",
+          "title": "本番アラート",
+          "context": "ターミナルに #alerts-prod のSlack通知が表示される。Datadog発火。",
+          "content": "🚨 [P2] seller-api: error_rate > 2% (現在 3.4%)\n発生時刻: 15:43\nエンドポイント: POST /v1/listings (出品)\nエラー: validation failed: field 'category_id' missing\n\n直近のデプロイ: 15:30 (configmap更新, master のみ)\n影響推定: 出品の約3%が失敗中\n\n#oncall: 鈴木 (現在: 別の打ち合わせ中)",
+          "choices": [
+            { "id": "a", "label": "即時ロールバック実行 → Slack #incident に状況報告 → 原因調査は事後", "scores": { "technical": 3, "logical": 2, "communication": 3, "ownership": 3, "agility": 3 } },
+            { "id": "b", "label": "ログ確認10秒で原因特定 → 該当configmap fix → 5分で復旧", "scores": { "technical": 3, "logical": 3, "communication": 1, "ownership": 3, "agility": 2 } },
+            { "id": "c", "label": "#incident を立てて鈴木さんを引き戻し、合意の上でロールバック", "scores": { "technical": 1, "logical": 2, "communication": 3, "ownership": 2, "agility": 1 } }
+          ]
+        },
+        {
+          "id": "a3",
+          "time": "16:30",
+          "interactable": "monitor_slack",
+          "presenter": "田島",
+          "title": "田島さんからのDM",
+          "context": "インシデント対応が落ち着いた頃、後輩・田島さんからSlackのDM。",
+          "content": "田島: 「すみません、PR #4530のキャッシュキー設計、\n       朝のレビューコメント読みました。期間パラメータ含める方向でやってます」\n田島: 「で、今やってて気付いたんですが、もしseller_idのデータが\n       将来パーティション分割されたらキャッシュ戦略どうするんですかね…\n       根本的に考え方を変えるべき気がしてきて、混乱してます」",
+          "choices": [
+            { "id": "a", "label": "「いったんMVPは現在のスキーマ前提でOK、パーティション分割の時は再設計と割り切ろう」", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 3 } },
+            { "id": "b", "label": "「いい問いだね。15分時間取れる？ホワイトボードで一緒に考えよう」", "scores": { "technical": 2, "logical": 2, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "c", "label": "「過去に同じ議論した社内ドキュメント送るよ。読んだ後で論点整理して連絡して」", "scores": { "technical": 3, "logical": 3, "communication": 2, "ownership": 1, "agility": 2 } }
+          ]
+        },
+        {
+          "id": "a4",
+          "time": "17:15",
+          "interactable": "sticky_notes",
+          "title": "明日の付箋を書く",
+          "context": "新しい付箋を貼ろうとしている。今日のうちにやるか、明日に回すか。",
+          "content": "残タスク（17:15時点）:\n□ Alex PR #4521のlatency調査 → 結局午前中に手付けてない\n□ 決済連携 設計ドキュメント執筆 → 着手ゼロ\n□ 高橋さん（決済チームTL）の設計レビュー → 「会議終わりに本格レビュー」と返した約束\n□ Sprint Planning 設計ドキュメントv1 → 会議で「今日中」と宣言したばかり\n\n定時まであと45分。",
+          "choices": [
+            { "id": "a", "label": "Sprint設計v1だけ完成させ、他はSlackで「明日朝」と再調整、定時で帰る", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 3, "agility": 3 } },
+            { "id": "b", "label": "Sprint設計v1 + 高橋さんレビュー、Alexと決済連携設計は明日に持ち越し", "scores": { "technical": 2, "logical": 3, "communication": 3, "ownership": 2, "agility": 2 } },
+            { "id": "c", "label": "全部触る：30分でSprint骨子、15分で高橋さんレビュー、Alexは朝確認、決済連携設計は週末も使う", "scores": { "technical": 1, "logical": 1, "communication": 1, "ownership": 3, "agility": 1 } }
+          ]
+        },
+        {
+          "id": "a5",
+          "time": "17:55",
+          "interactable": "coworker_visit",
+          "presenter": "鈴木",
+          "title": "退社前の振り返り",
+          "context": "リュックを背負った鈴木さんがデスクに寄ってくる。",
+          "content": "鈴木: 「お疲れさま。今日、結構濃かったね」\n鈴木: 「インシデントの初動も良かったし、設計議論でも踏み込んでた。\n       自己評価としては、今日どうだった？1分でいいから言語化してみて」",
+          "choices": [
+            { "id": "a", "label": "「インシデント対応は手応えあった。設計は鈴木さんの後ろ盾あったから踏み込めた、自分1人ならもっと弱気だった」", "scores": { "technical": 1, "logical": 3, "communication": 3, "ownership": 3, "agility": 2 } },
+            { "id": "b", "label": "「Alexの調査を朝に着手できなかったのが反省点。明日の朝イチに必ず」", "scores": { "technical": 1, "logical": 2, "communication": 2, "ownership": 3, "agility": 3 } },
+            { "id": "c", "label": "「全体的にうまく回せた。明日も同じ調子で行きます」", "scores": { "technical": 1, "logical": 1, "communication": 1, "ownership": 1, "agility": 1 } }
+          ]
         }
       ]
     }
