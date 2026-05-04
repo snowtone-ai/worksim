@@ -152,6 +152,7 @@ export function ImmersiveGame({ scenario, industry, role, initialBlockId, initia
             onConfirm={handleConfirm}
             nextLabel={nextLabel}
             phase={currentBlock.id}
+            blockLabel={currentBlock.label}
           />
         )}
 

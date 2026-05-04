@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { closeSync, mkdirSync, openSync } from 'node:fs'
 import { createServer } from 'node:net'
 import { join } from 'node:path'
 import { spawn, spawnSync } from 'node:child_process'
@@ -8,6 +8,7 @@ const root = process.cwd()
 const pnpmBin = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm'
 const e2ePort = String(await getFreePort())
 const steps = [
+  ['claude-import', ['node', ['scripts/sync-claude-md.mjs']]],
   ['lint', [pnpmBin, ['lint']]],
   ['typecheck', [pnpmBin, ['typecheck']]],
   ['build', [pnpmBin, ['build']]],
@@ -51,15 +52,17 @@ async function waitForServer(url, timeoutMs) {
 function startAppServer(port) {
   mkdirSync(join(root, 'logs'), { recursive: true })
   const logPath = join(root, 'logs', 'verify-app-server.log')
-  writeFileSync(logPath, '', 'utf8')
+  const logFd = openSync(logPath, 'w')
   const processSpec = createProcessSpec(pnpmBin, ['start', '--port', String(port)])
-  return spawn(processSpec.command, processSpec.args, {
+  const child = spawn(processSpec.command, processSpec.args, {
     cwd: root,
     detached: false,
-    stdio: 'ignore',
+    stdio: ['ignore', logFd, logFd],
     shell: false,
     windowsHide: true,
   })
+  child.on('close', () => closeSync(logFd))
+  return child
 }
 
 async function runBrowserSmoke() {
@@ -71,7 +74,7 @@ async function runBrowserSmoke() {
     const ready = await waitForServer(url, 30_000)
 
     if (!ready) {
-      return { name: 'browser', code: 1, details: 'dev server did not become ready' }
+      return { name: 'browser', code: 1, details: 'app server did not become ready' }
     }
 
     const browser = await chromium.launch()

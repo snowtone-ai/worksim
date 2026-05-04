@@ -9,9 +9,10 @@ type Props = {
   onConfirm: () => void
   nextLabel: string
   phase: Phase
+  blockLabel: string
 }
 
-export function DialogueScene({ scene, selectedChoice, onChoice, onConfirm, nextLabel, phase }: Props) {
+export function DialogueScene({ scene, selectedChoice, onChoice, onConfirm, nextLabel, phase, blockLabel }: Props) {
   const isLunch = phase === 'lunch'
   const bg = isLunch
     ? 'bg-gradient-to-br from-amber-50 via-white to-orange-100'
@@ -26,7 +27,7 @@ export function DialogueScene({ scene, selectedChoice, onChoice, onConfirm, next
         <section className="border border-slate-200 bg-white/95 shadow-xl">
           <div className="border-b border-slate-200 bg-slate-50 px-5 py-3">
             <p className="text-xs font-semibold text-slate-500">
-              {isLunch ? 'ランチ中の会話' : 'Sprint Planning'}
+              {blockLabel}
             </p>
             <h2 className="mt-1 text-base font-semibold text-slate-900">{scene.title}</h2>
           </div>

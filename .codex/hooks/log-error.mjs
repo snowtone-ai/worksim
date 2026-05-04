@@ -16,8 +16,13 @@ process.stdin.on('end', () => {
     '',
   ].join('\n')
 
-  mkdirSync(join(process.cwd(), 'docs'), { recursive: true })
-  appendFileSync(join(process.cwd(), 'docs', 'issues.md'), entry, 'utf8')
+  try {
+    mkdirSync(join(process.cwd(), 'docs'), { recursive: true })
+    appendFileSync(join(process.cwd(), 'docs', 'issues.md'), entry, 'utf8')
+  } catch (error) {
+    const message = error instanceof Error ? error.message : 'unknown error'
+    console.error(`[codex-hook] failed to write issues.md: ${message}`)
+  }
 })
 
 function parseHookPayload(rawInput) {
@@ -34,7 +39,9 @@ function parseHookPayload(rawInput) {
 
 function redact(value) {
   return value
+    .replace(/(\bauthorization\b["']?\s*[:=]\s*["'])[^"'\r\n]+(["'])/gi, '$1[REDACTED]$2')
+    .replace(/(\bauthorization\b\s*[:=]\s*)[^\r\n,}]+/gi, '$1[REDACTED]')
     .replace(/[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}/g, '[REDACTED_JWT]')
-    .replace(/(token|secret|password|key|authorization)(["'=:\s]+)([^"',\s}]+)/gi, '$1$2[REDACTED]')
+    .replace(/(token|secret|password|key)(["'=:\s]+)([^"',\s}]+)/gi, '$1$2[REDACTED]')
     .slice(0, 300)
 }
