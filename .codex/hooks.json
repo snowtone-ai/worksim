@@ -35,6 +35,17 @@
         ]
       }
     ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .codex/hooks/log-error.mjs"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "",

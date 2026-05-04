@@ -10,7 +10,7 @@
 
 ## 技術スタック
 
-- **Framework**: Next.js 15 系 (App Router)
+- **Framework**: Next.js 16.2.4 (App Router)
 - **Language**: TypeScript (strict)
 - **Styling**: Tailwind CSS v4
 - **Auth & DB**: Supabase (Google OAuth)
@@ -25,6 +25,17 @@ cp .env.example .env.local  # 値を埋める
 pnpm dev
 ```
 
+## 検証
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm build
+pnpm test -- --run
+pnpm test:e2e
+pnpm verify
+```
+
 ## ライセンス
 
 未定（MVP段階）
@@ -33,7 +44,7 @@ pnpm dev
 
 ## Dual-CLI 対応
 
-このプロジェクトは Claude Code CLI と Codex CLI の両方で編集できます。
+このプロジェクトは pm-zero v9.0 の Repository OS に従い、Codex CLI を第一想定、Claude Code CLI を fallback として編集できます。
 
 ### Claude Code CLI で起動
 
@@ -60,7 +71,8 @@ codex
 
 | ファイル / ディレクトリ | 対象 CLI |
 |----------------------|---------|
-| CLAUDE.md | Claude Code CLI |
+| AGENTS.md | 一次ソース（両 CLI 共通） |
+| CLAUDE.md | Claude Code Adapter |
 | .claude/ | Claude Code CLI |
-| AGENTS.md | Codex CLI |
+| CODEX.md | Codex CLI Adapter |
 | .codex/ | Codex CLI |

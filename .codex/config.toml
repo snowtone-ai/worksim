@@ -1,9 +1,16 @@
-# WorkSim — Codex CLI 設定
-# model は指定しない（Codex のデフォルトを使う）
+# WorkSim — Codex CLI config (pm-zero v9.0)
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
 
-[sandbox]
-mode = "workspace-write"
+[profiles.medium]
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
 
-# hooks は hooks.json で定義する（このファイルに書かない）
-# 理由: repo-local config.toml のインライン hooks が interactive セッションで
-# 発火しないバグが確認されているため（GitHub openai/codex #17532）
+[profiles.light]
+model = "gpt-5.4-mini"
+model_reasoning_effort = "low"
+
+# Hook definitions stay in .codex/hooks.json for this repository.
+# Keep only locally verified Codex config keys here.

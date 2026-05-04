@@ -1,5 +1,11 @@
 import { defineConfig, devices } from '@playwright/test'
 
+const port = process.env.PLAYWRIGHT_PORT ?? '3000'
+const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? `http://localhost:${port}`
+const serverCommand = process.env.PLAYWRIGHT_SERVER_COMMAND === 'start' ? 'start' : 'dev'
+const hasExternalBaseURL = Boolean(process.env.PLAYWRIGHT_BASE_URL)
+const hasManagedServer = !hasExternalBaseURL && Boolean(process.env.PLAYWRIGHT_PORT || process.env.PLAYWRIGHT_SERVER_COMMAND)
+
 export default defineConfig({
   testDir: './e2e',
   fullyParallel: false,
@@ -8,7 +14,7 @@ export default defineConfig({
   workers: 1,
   reporter: 'html',
   use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL ?? 'http://localhost:3000',
+    baseURL,
     trace: 'on-first-retry',
   },
   projects: [
@@ -25,12 +31,12 @@ export default defineConfig({
       dependencies: ['setup'],
     },
   ],
-  webServer: process.env.CI
+  webServer: hasExternalBaseURL || (process.env.CI && !hasManagedServer)
     ? undefined
     : {
-        command: 'pnpm dev',
-        url: 'http://localhost:3000',
-        reuseExistingServer: true,
+        command: hasManagedServer ? `pnpm ${serverCommand} --port ${port}` : 'pnpm dev',
+        url: baseURL,
+        reuseExistingServer: !hasManagedServer,
         timeout: 30_000,
       },
 })

@@ -107,11 +107,11 @@ export function decodeAnswers(encoded: string): Record<string, string> {
   try {
     const parsed: unknown = JSON.parse(decodeURIComponent(encoded))
     if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) return {}
-    const result: Record<string, string> = {}
-    for (const [k, v] of Object.entries(parsed)) {
-      if (typeof v === 'string') result[k] = v
+    const decodedAnswers: Record<string, string> = {}
+    for (const [sceneId, choiceId] of Object.entries(parsed)) {
+      if (typeof choiceId === 'string') decodedAnswers[sceneId] = choiceId
     }
-    return result
+    return decodedAnswers
   } catch {
     return {}
   }

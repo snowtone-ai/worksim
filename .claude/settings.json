@@ -25,34 +25,19 @@
     "SessionStart": [
       {
         "matcher": "startup|resume|clear|compact",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .claude/hooks/inject-state.mjs"
-          }
-        ]
+        "hooks": [{ "type": "command", "command": "node .claude/hooks/inject-state.mjs" }]
       }
     ],
     "PostToolUseFailure": [
       {
         "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .claude/hooks/log-error.mjs"
-          }
-        ]
+        "hooks": [{ "type": "command", "command": "node .claude/hooks/log-error.mjs" }]
       }
     ],
     "UserPromptSubmit": [
       {
         "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .claude/hooks/check-state.mjs"
-          }
-        ]
+        "hooks": [{ "type": "command", "command": "node .claude/hooks/check-state.mjs" }]
       }
     ]
   }

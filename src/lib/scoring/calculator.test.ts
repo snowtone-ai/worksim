@@ -10,6 +10,12 @@ describe('calculator', () => {
     expect(decodeAnswers('not-json')).toEqual({})
   })
 
+  it('drops malformed answer payloads without throwing', () => {
+    expect(decodeAnswers(encodeURIComponent(JSON.stringify(['a', 'b'])))).toEqual({})
+    expect(decodeAnswers(encodeURIComponent(JSON.stringify(null)))).toEqual({})
+    expect(decodeAnswers(encodeURIComponent(JSON.stringify({ s1: 1, s2: 'a' })))).toEqual({ s2: 'a' })
+  })
+
   it('calculates dimension percentages and aptitude deterministically', () => {
     const scenario: Scenario = {
       id: 'test/sample',
