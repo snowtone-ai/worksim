@@ -1,7 +1,5 @@
 // PreToolUse hook — Codex 用
 // 危険な Bash コマンドをブロックする
-import { readFileSync } from 'fs';
-
 // stdin から JSON を読む（タイムアウト 3 秒）
 const input = await Promise.race([
   new Promise(resolve => {

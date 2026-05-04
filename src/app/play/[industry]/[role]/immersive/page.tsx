@@ -5,10 +5,12 @@ import { createClient } from '@/lib/supabase/server'
 
 type Props = {
   params: Promise<{ industry: string; role: string }>
+  searchParams: Promise<{ block?: string; scene?: string }>
 }
 
-export default async function ImmersivePage({ params }: Props) {
+export default async function ImmersivePage({ params, searchParams }: Props) {
   const { industry, role } = await params
+  const query = await searchParams
 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -21,5 +23,13 @@ export default async function ImmersivePage({ params }: Props) {
     notFound()
   }
 
-  return <ImmersiveGame scenario={scenario} industry={industry} role={role} />
+  return (
+    <ImmersiveGame
+      scenario={scenario}
+      industry={industry}
+      role={role}
+      initialBlockId={query.block}
+      initialSceneIndex={query.scene}
+    />
+  )
 }

@@ -1,7 +1,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request })
 
   const supabase = createServerClient(
@@ -31,7 +31,11 @@ export async function middleware(request: NextRequest) {
   // 未ログインユーザーが保護ルートにアクセスした場合はトップへリダイレクト
   // 結果ページはURLにデータが含まれるため認証不要
   const isResultPage = /^\/play\/[^/]+\/[^/]+\/result/.test(request.nextUrl.pathname)
-  if (!user && !isResultPage && (request.nextUrl.pathname.startsWith('/profile') || request.nextUrl.pathname.startsWith('/play'))) {
+  if (
+    !user &&
+    !isResultPage &&
+    (request.nextUrl.pathname.startsWith('/profile') || request.nextUrl.pathname.startsWith('/play'))
+  ) {
     const url = request.nextUrl.clone()
     url.pathname = '/'
     return NextResponse.redirect(url)

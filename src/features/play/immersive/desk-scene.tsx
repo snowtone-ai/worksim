@@ -67,9 +67,9 @@ export function DeskScene({ scene, modalOpen, selectedChoice, onObjectClick, onC
         <div className="relative">
           <div className={`w-36 h-36 bg-yellow-300 shadow-xl rotate-[-4deg] rounded-sm p-3 text-xs text-amber-900 ${isSticky ? 'animate-pulse ring-4 ring-yellow-400' : ''}`}>
             <p className="border-b border-amber-700/30 pb-1 mb-1.5 font-bold">📝 TODO</p>
-            <p className="leading-relaxed">□ Kevin PR latency</p>
+            <p className="leading-relaxed">□ Alex PR latency</p>
             <p className="leading-relaxed">□ 田島 PR レビュー</p>
-            <p className="leading-relaxed">□ メルペイ設計ドキュ</p>
+            <p className="leading-relaxed">□ BreezePay設計ドキュ</p>
             <p className="leading-relaxed mt-1 text-rose-700">+ 13:00 Sprint Planning</p>
           </div>
           <div className="absolute -top-1 right-6 w-3 h-3 bg-red-500 rounded-full shadow" />

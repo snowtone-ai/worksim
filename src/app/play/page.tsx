@@ -31,7 +31,12 @@ export default async function PlayPage() {
                   <span className="text-xs font-medium text-indigo-600">{scenario.meta.industry}</span>
                   <span className="text-xs text-gray-400">約{scenario.meta.duration_minutes}分</span>
                 </div>
-                <p className="font-semibold text-gray-900">{scenario.meta.role}</p>
+                <Link
+                  href={`/play/${industry}/${role}`}
+                  className="font-semibold text-gray-900 hover:text-indigo-600 transition-colors"
+                >
+                  {scenario.meta.role}
+                </Link>
                 <p className="text-sm text-gray-500 line-clamp-2">{scenario.meta.description}</p>
                 <div className="flex gap-2 pt-1">
                   <Link

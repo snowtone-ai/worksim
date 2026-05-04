@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import type { Scenario } from '@/lib/scenario/loader'
+import type { Block, Scenario } from '@/lib/scenario/loader'
 import { encodeAnswers } from '@/lib/scoring/calculator'
 import { DeskScene } from './desk-scene'
 import { DialogueScene } from './dialogue-scene'
@@ -13,19 +13,24 @@ type Props = {
   scenario: Scenario
   industry: string
   role: string
+  initialBlockId?: string
+  initialSceneIndex?: string
 }
 
-export function ImmersiveGame({ scenario, industry, role }: Props) {
+export function ImmersiveGame({ scenario, industry, role, initialBlockId, initialSceneIndex }: Props) {
   const router = useRouter()
-  const [blockIndex, setBlockIndex] = useState(0)
-  const [sceneIndex, setSceneIndex] = useState(0)
+  const blocks = scenario.blocks ?? []
+  const resolvedBlockIndex = getInitialBlockIndex(blocks, initialBlockId)
+  const resolvedSceneIndex = getInitialSceneIndex(blocks, resolvedBlockIndex, initialSceneIndex)
+
+  const [blockIndex, setBlockIndex] = useState(resolvedBlockIndex)
+  const [sceneIndex, setSceneIndex] = useState(resolvedSceneIndex)
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [showTransition, setShowTransition] = useState(true)
   const [modalOpen, setModalOpen] = useState(false)
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null)
 
-  const blocks = scenario.blocks
-  if (!blocks || blocks.length === 0) {
+  if (blocks.length === 0) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-slate-900 text-white p-8">
         <div className="text-center max-w-md">
@@ -160,4 +165,21 @@ export function ImmersiveGame({ scenario, industry, role }: Props) {
       </div>
     </div>
   )
+}
+
+function getInitialBlockIndex(blocks: Block[], initialBlockId?: string): number {
+  if (!initialBlockId) return 0
+  const index = blocks.findIndex((block) => block.id === initialBlockId)
+  return index >= 0 ? index : 0
+}
+
+function getInitialSceneIndex(blocks: Block[], blockIndex: number, initialSceneIndex?: string): number {
+  const block = blocks[blockIndex]
+  if (!block || !initialSceneIndex) return 0
+
+  const parsed = Number.parseInt(initialSceneIndex, 10)
+  if (Number.isNaN(parsed)) return 0
+  if (parsed < 0) return 0
+  if (parsed >= block.scenes.length) return block.scenes.length - 1
+  return parsed
 }
