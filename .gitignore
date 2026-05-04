@@ -49,3 +49,6 @@ logs/
 # Local development databases
 *.sqlite
 *.db
+
+# Supabase CLI local state
+supabase/.temp/
