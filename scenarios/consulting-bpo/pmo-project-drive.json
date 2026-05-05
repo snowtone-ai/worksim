@@ -1,0 +1,2190 @@
+{
+  "id": "consulting-bpo/pmo-project-drive",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "コンサル/BPO/業務支援",
+  "industrySlug": "consulting-bpo",
+  "role": "PMO/プロジェクト推進",
+  "roleSlug": "pmo-project-drive",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for コンサル/BPO/業務支援 PMO/プロジェクト推進.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "consulting-bpo",
+      "pmo-project-drive"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "進捗表"
+    },
+    {
+      "time": "10:40",
+      "label": "課題管理表"
+    },
+    {
+      "time": "12:20",
+      "label": "依存関係図"
+    },
+    {
+      "time": "14:15",
+      "label": "会議アジェンダ"
+    },
+    {
+      "time": "16:35",
+      "label": "リカバリ計画"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "進捗表"
+    },
+    {
+      "time": "10:40",
+      "label": "課題管理表"
+    },
+    {
+      "time": "12:20",
+      "label": "依存関係図"
+    },
+    {
+      "time": "14:15",
+      "label": "会議アジェンダ"
+    },
+    {
+      "time": "16:35",
+      "label": "リカバリ計画"
+    }
+  ],
+  "sceneList": [
+    "pmo-project-drive-01",
+    "pmo-project-drive-02",
+    "pmo-project-drive-03",
+    "pmo-project-drive-04",
+    "pmo-project-drive-05"
+  ],
+  "meta": {
+    "title": "PMO/プロジェクト推進",
+    "industry": "コンサル/BPO/業務支援",
+    "role": "PMO/プロジェクト推進",
+    "duration_minutes": 18,
+    "description": "進捗・課題・依存関係をプロジェクト管理判断へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "pmo-project-drive-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "進捗表",
+      "openingHook": "09:10。進捗表に遅延 12日と完了率 58%が並んでいる。",
+      "context": "PMO/プロジェクト推進として進捗表を確認する。遅延 12日、完了率 58%が今日の判断材料になる。",
+      "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、進捗表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+      "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は進捗表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "遅延 12日の背景と完了率 58%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "遅延 12日を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "pmo-project-drive-進捗表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は未解決 23件で副作用を確認する。",
+      "npcDialogue": "先輩:「進捗表を読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+      "workMaterial": "進捗表\n- 遅延 12日\n- 完了率 58%\n- 判断対象: 進捗表",
+      "decisionPrompt": "pmo-project-drive-進捗表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "遅延 12日を重く見て、当日中に前へ進める",
+          "text": "遅延 12日を重く見て、当日中に前へ進める。材料は進捗表、遅延 12日、完了率 58%。",
+          "immediateFeedback": "進捗表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 2,
+            "pmo_project_drive_risk": -1,
+            "pmo_project_drive_speed": 2,
+            "pmo_project_drive_value": -1,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、進捗表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "進捗表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は遅延 12日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "進捗表の遅延 12日と完了率 58%を突き合わせ、条件付きで進める",
+          "text": "進捗表の遅延 12日と完了率 58%を突き合わせ、条件付きで進める。材料は進捗表、遅延 12日、完了率 58%。",
+          "immediateFeedback": "進捗表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": 1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、進捗表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "進捗表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は遅延 12日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "完了率 58%の不確実性を理由に、判断範囲を絞る",
+          "text": "完了率 58%の不確実性を理由に、判断範囲を絞る。材料は進捗表、遅延 12日、完了率 58%。",
+          "immediateFeedback": "進捗表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": -1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": -1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": -1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、進捗表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "進捗表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は遅延 12日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "pmo-project-drive-進捗表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "pmo-project-drive-進捗表判断",
+        "roleSpecificMaterials": [
+          "進捗表",
+          "判断対象: 進捗表"
+        ],
+        "roleSpecificMetrics": [
+          "遅延 12日",
+          "完了率 58%"
+        ],
+        "roleSpecificFailureRisk": "進捗表を読まず、遅延 12日か完了率 58%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "遅延 12日と完了率 58%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "進捗表、遅延 12日、完了率 58%を判断の主役にしている。",
+        "kernelConnection": "進捗表をpmo-project-drive-進捗表判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "pmo-project-drive-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "課題管理表",
+      "openingHook": "10:40。課題管理表に未解決 23件と高優先 5件が並んでいる。",
+      "context": "PMO/プロジェクト推進として課題管理表を確認する。未解決 23件、高優先 5件が今日の判断材料になる。",
+      "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、課題管理表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+      "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は課題管理表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "未解決 23件の背景と高優先 5件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "未解決 23件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "pmo-project-drive-課題管理表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次はブロッカー 3本で副作用を確認する。",
+      "npcDialogue": "先輩:「課題管理表を読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+      "workMaterial": "課題管理表\n- 未解決 23件\n- 高優先 5件\n- 判断対象: 課題管理表",
+      "decisionPrompt": "pmo-project-drive-課題管理表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "未解決 23件を重く見て、当日中に前へ進める",
+          "text": "未解決 23件を重く見て、当日中に前へ進める。材料は課題管理表、未解決 23件、高優先 5件。",
+          "immediateFeedback": "課題管理表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 2,
+            "pmo_project_drive_risk": -1,
+            "pmo_project_drive_speed": 2,
+            "pmo_project_drive_value": -1,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、課題管理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "課題管理表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は未解決 23件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "課題管理表の未解決 23件と高優先 5件を突き合わせ、条件付きで進める",
+          "text": "課題管理表の未解決 23件と高優先 5件を突き合わせ、条件付きで進める。材料は課題管理表、未解決 23件、高優先 5件。",
+          "immediateFeedback": "課題管理表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": 1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、課題管理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "課題管理表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は未解決 23件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "高優先 5件の不確実性を理由に、判断範囲を絞る",
+          "text": "高優先 5件の不確実性を理由に、判断範囲を絞る。材料は課題管理表、未解決 23件、高優先 5件。",
+          "immediateFeedback": "課題管理表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": -1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": -1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": -1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、課題管理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "課題管理表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は未解決 23件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "pmo-project-drive-課題管理表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "pmo-project-drive-課題管理表判断",
+        "roleSpecificMaterials": [
+          "課題管理表",
+          "判断対象: 課題管理表"
+        ],
+        "roleSpecificMetrics": [
+          "未解決 23件",
+          "高優先 5件"
+        ],
+        "roleSpecificFailureRisk": "課題管理表を読まず、未解決 23件か高優先 5件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "未解決 23件と高優先 5件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "課題管理表、未解決 23件、高優先 5件を判断の主役にしている。",
+        "kernelConnection": "課題管理表をpmo-project-drive-課題管理表判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "pmo-project-drive-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "依存関係図",
+      "openingHook": "12:20。依存関係図にブロッカー 3本と担当 4部署が並んでいる。",
+      "context": "PMO/プロジェクト推進として依存関係図を確認する。ブロッカー 3本、担当 4部署が今日の判断材料になる。",
+      "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、依存関係図を読んで次の作業判断を残す。",
+      "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+      "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は依存関係図である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "ブロッカー 3本の背景と担当 4部署の確度が完全にはそろっていない。",
+      "decisionTradeoff": "ブロッカー 3本を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "pmo-project-drive-依存関係図判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は決裁事項 6件で副作用を確認する。",
+      "npcDialogue": "先輩:「依存関係図を読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+      "workMaterial": "依存関係図\n- ブロッカー 3本\n- 担当 4部署\n- 判断対象: 依存関係図",
+      "decisionPrompt": "pmo-project-drive-依存関係図判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "ブロッカー 3本を重く見て、当日中に前へ進める",
+          "text": "ブロッカー 3本を重く見て、当日中に前へ進める。材料は依存関係図、ブロッカー 3本、担当 4部署。",
+          "immediateFeedback": "依存関係図に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 2,
+            "pmo_project_drive_risk": -1,
+            "pmo_project_drive_speed": 2,
+            "pmo_project_drive_value": -1,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、依存関係図と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "依存関係図の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はブロッカー 3本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "依存関係図のブロッカー 3本と担当 4部署を突き合わせ、条件付きで進める",
+          "text": "依存関係図のブロッカー 3本と担当 4部署を突き合わせ、条件付きで進める。材料は依存関係図、ブロッカー 3本、担当 4部署。",
+          "immediateFeedback": "依存関係図に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": 1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、依存関係図と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "依存関係図の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はブロッカー 3本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "担当 4部署の不確実性を理由に、判断範囲を絞る",
+          "text": "担当 4部署の不確実性を理由に、判断範囲を絞る。材料は依存関係図、ブロッカー 3本、担当 4部署。",
+          "immediateFeedback": "依存関係図に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": -1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": -1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": -1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、依存関係図と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "依存関係図の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次はブロッカー 3本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "pmo-project-drive-依存関係図判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "pmo-project-drive-依存関係図判断",
+        "roleSpecificMaterials": [
+          "依存関係図",
+          "判断対象: 依存関係図"
+        ],
+        "roleSpecificMetrics": [
+          "ブロッカー 3本",
+          "担当 4部署"
+        ],
+        "roleSpecificFailureRisk": "依存関係図を読まず、ブロッカー 3本か担当 4部署のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "ブロッカー 3本と担当 4部署を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "依存関係図、ブロッカー 3本、担当 4部署を判断の主役にしている。",
+        "kernelConnection": "依存関係図をpmo-project-drive-依存関係図判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "pmo-project-drive-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "会議アジェンダ",
+      "openingHook": "14:15。会議アジェンダに決裁事項 6件と残時間 40分が並んでいる。",
+      "context": "PMO/プロジェクト推進として会議アジェンダを確認する。決裁事項 6件、残時間 40分が今日の判断材料になる。",
+      "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、会議アジェンダを読んで次の作業判断を残す。",
+      "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+      "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は会議アジェンダである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "決裁事項 6件の背景と残時間 40分の確度が完全にはそろっていない。",
+      "decisionTradeoff": "決裁事項 6件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "pmo-project-drive-会議アジェンダ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は追加要員 2名で副作用を確認する。",
+      "npcDialogue": "先輩:「会議アジェンダを読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+      "workMaterial": "会議アジェンダ\n- 決裁事項 6件\n- 残時間 40分\n- 判断対象: 会議アジェンダ",
+      "decisionPrompt": "pmo-project-drive-会議アジェンダ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "決裁事項 6件を重く見て、当日中に前へ進める",
+          "text": "決裁事項 6件を重く見て、当日中に前へ進める。材料は会議アジェンダ、決裁事項 6件、残時間 40分。",
+          "immediateFeedback": "会議アジェンダに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 2,
+            "pmo_project_drive_risk": -1,
+            "pmo_project_drive_speed": 2,
+            "pmo_project_drive_value": -1,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、会議アジェンダと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "会議アジェンダの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は決裁事項 6件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "会議アジェンダの決裁事項 6件と残時間 40分を突き合わせ、条件付きで進める",
+          "text": "会議アジェンダの決裁事項 6件と残時間 40分を突き合わせ、条件付きで進める。材料は会議アジェンダ、決裁事項 6件、残時間 40分。",
+          "immediateFeedback": "会議アジェンダに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": 1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、会議アジェンダと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "会議アジェンダの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は決裁事項 6件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "残時間 40分の不確実性を理由に、判断範囲を絞る",
+          "text": "残時間 40分の不確実性を理由に、判断範囲を絞る。材料は会議アジェンダ、決裁事項 6件、残時間 40分。",
+          "immediateFeedback": "会議アジェンダに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": -1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": -1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": -1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、会議アジェンダと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "会議アジェンダの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は決裁事項 6件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "pmo-project-drive-会議アジェンダ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "pmo-project-drive-会議アジェンダ判断",
+        "roleSpecificMaterials": [
+          "会議アジェンダ",
+          "判断対象: 会議アジェンダ"
+        ],
+        "roleSpecificMetrics": [
+          "決裁事項 6件",
+          "残時間 40分"
+        ],
+        "roleSpecificFailureRisk": "会議アジェンダを読まず、決裁事項 6件か残時間 40分のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "決裁事項 6件と残時間 40分を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "会議アジェンダ、決裁事項 6件、残時間 40分を判断の主役にしている。",
+        "kernelConnection": "会議アジェンダをpmo-project-drive-会議アジェンダ判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "pmo-project-drive-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "リカバリ計画",
+      "openingHook": "16:35。リカバリ計画に追加要員 2名と短縮 8日が並んでいる。",
+      "context": "PMO/プロジェクト推進としてリカバリ計画を確認する。追加要員 2名、短縮 8日が今日の判断材料になる。",
+      "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、リカバリ計画を読んで次の作業判断を残す。",
+      "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+      "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はリカバリ計画である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "追加要員 2名の背景と短縮 8日の確度が完全にはそろっていない。",
+      "decisionTradeoff": "追加要員 2名を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "pmo-project-drive-リカバリ計画判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「リカバリ計画を読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+      "workMaterial": "リカバリ計画\n- 追加要員 2名\n- 短縮 8日\n- 判断対象: リカバリ計画",
+      "decisionPrompt": "pmo-project-drive-リカバリ計画判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "追加要員 2名を重く見て、当日中に前へ進める",
+          "text": "追加要員 2名を重く見て、当日中に前へ進める。材料はリカバリ計画、追加要員 2名、短縮 8日。",
+          "immediateFeedback": "リカバリ計画に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 2,
+            "pmo_project_drive_risk": -1,
+            "pmo_project_drive_speed": 2,
+            "pmo_project_drive_value": -1,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、リカバリ計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リカバリ計画の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は追加要員 2名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "リカバリ計画の追加要員 2名と短縮 8日を突き合わせ、条件付きで進める",
+          "text": "リカバリ計画の追加要員 2名と短縮 8日を突き合わせ、条件付きで進める。材料はリカバリ計画、追加要員 2名、短縮 8日。",
+          "immediateFeedback": "リカバリ計画に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": 1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": 1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": 1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、リカバリ計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リカバリ計画の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は追加要員 2名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "短縮 8日の不確実性を理由に、判断範囲を絞る",
+          "text": "短縮 8日の不確実性を理由に、判断範囲を絞る。材料はリカバリ計画、追加要員 2名、短縮 8日。",
+          "immediateFeedback": "リカバリ計画に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "pmo_project_drive_evidence": -1,
+            "pmo_project_drive_risk": 2,
+            "pmo_project_drive_speed": -1,
+            "pmo_project_drive_value": 2,
+            "pmo_project_drive_feasibility": -1
+          },
+          "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、リカバリ計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リカバリ計画の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は追加要員 2名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "pmo-project-drive-リカバリ計画判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "pmo-project-drive-リカバリ計画判断",
+        "roleSpecificMaterials": [
+          "リカバリ計画",
+          "判断対象: リカバリ計画"
+        ],
+        "roleSpecificMetrics": [
+          "追加要員 2名",
+          "短縮 8日"
+        ],
+        "roleSpecificFailureRisk": "リカバリ計画を読まず、追加要員 2名か短縮 8日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "追加要員 2名と短縮 8日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "リカバリ計画、追加要員 2名、短縮 8日を判断の主役にしている。",
+        "kernelConnection": "リカバリ計画をpmo-project-drive-リカバリ計画判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "pmo-project-drive-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "進捗表",
+          "openingHook": "09:10。進捗表に遅延 12日と完了率 58%が並んでいる。",
+          "context": "PMO/プロジェクト推進として進捗表を確認する。遅延 12日、完了率 58%が今日の判断材料になる。",
+          "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、進捗表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+          "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は進捗表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "遅延 12日の背景と完了率 58%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "遅延 12日を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "pmo-project-drive-進捗表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は未解決 23件で副作用を確認する。",
+          "npcDialogue": "先輩:「進捗表を読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+          "workMaterial": "進捗表\n- 遅延 12日\n- 完了率 58%\n- 判断対象: 進捗表",
+          "decisionPrompt": "pmo-project-drive-進捗表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "遅延 12日を重く見て、当日中に前へ進める",
+              "text": "遅延 12日を重く見て、当日中に前へ進める。材料は進捗表、遅延 12日、完了率 58%。",
+              "immediateFeedback": "進捗表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 2,
+                "pmo_project_drive_risk": -1,
+                "pmo_project_drive_speed": 2,
+                "pmo_project_drive_value": -1,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、進捗表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "進捗表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は遅延 12日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "進捗表の遅延 12日と完了率 58%を突き合わせ、条件付きで進める",
+              "text": "進捗表の遅延 12日と完了率 58%を突き合わせ、条件付きで進める。材料は進捗表、遅延 12日、完了率 58%。",
+              "immediateFeedback": "進捗表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": 1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、進捗表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "進捗表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は遅延 12日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "完了率 58%の不確実性を理由に、判断範囲を絞る",
+              "text": "完了率 58%の不確実性を理由に、判断範囲を絞る。材料は進捗表、遅延 12日、完了率 58%。",
+              "immediateFeedback": "進捗表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": -1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": -1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": -1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、進捗表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "進捗表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は遅延 12日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "pmo-project-drive-進捗表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "pmo-project-drive-進捗表判断",
+            "roleSpecificMaterials": [
+              "進捗表",
+              "判断対象: 進捗表"
+            ],
+            "roleSpecificMetrics": [
+              "遅延 12日",
+              "完了率 58%"
+            ],
+            "roleSpecificFailureRisk": "進捗表を読まず、遅延 12日か完了率 58%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "遅延 12日と完了率 58%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "進捗表、遅延 12日、完了率 58%を判断の主役にしている。",
+            "kernelConnection": "進捗表をpmo-project-drive-進捗表判断へ接続する。"
+          }
+        },
+        {
+          "id": "pmo-project-drive-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "課題管理表",
+          "openingHook": "10:40。課題管理表に未解決 23件と高優先 5件が並んでいる。",
+          "context": "PMO/プロジェクト推進として課題管理表を確認する。未解決 23件、高優先 5件が今日の判断材料になる。",
+          "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、課題管理表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+          "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は課題管理表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "未解決 23件の背景と高優先 5件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "未解決 23件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "pmo-project-drive-課題管理表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次はブロッカー 3本で副作用を確認する。",
+          "npcDialogue": "先輩:「課題管理表を読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+          "workMaterial": "課題管理表\n- 未解決 23件\n- 高優先 5件\n- 判断対象: 課題管理表",
+          "decisionPrompt": "pmo-project-drive-課題管理表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "未解決 23件を重く見て、当日中に前へ進める",
+              "text": "未解決 23件を重く見て、当日中に前へ進める。材料は課題管理表、未解決 23件、高優先 5件。",
+              "immediateFeedback": "課題管理表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 2,
+                "pmo_project_drive_risk": -1,
+                "pmo_project_drive_speed": 2,
+                "pmo_project_drive_value": -1,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、課題管理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "課題管理表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は未解決 23件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "課題管理表の未解決 23件と高優先 5件を突き合わせ、条件付きで進める",
+              "text": "課題管理表の未解決 23件と高優先 5件を突き合わせ、条件付きで進める。材料は課題管理表、未解決 23件、高優先 5件。",
+              "immediateFeedback": "課題管理表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": 1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、課題管理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "課題管理表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は未解決 23件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "高優先 5件の不確実性を理由に、判断範囲を絞る",
+              "text": "高優先 5件の不確実性を理由に、判断範囲を絞る。材料は課題管理表、未解決 23件、高優先 5件。",
+              "immediateFeedback": "課題管理表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": -1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": -1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": -1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、課題管理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "課題管理表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は未解決 23件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "pmo-project-drive-課題管理表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "pmo-project-drive-課題管理表判断",
+            "roleSpecificMaterials": [
+              "課題管理表",
+              "判断対象: 課題管理表"
+            ],
+            "roleSpecificMetrics": [
+              "未解決 23件",
+              "高優先 5件"
+            ],
+            "roleSpecificFailureRisk": "課題管理表を読まず、未解決 23件か高優先 5件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "未解決 23件と高優先 5件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "課題管理表、未解決 23件、高優先 5件を判断の主役にしている。",
+            "kernelConnection": "課題管理表をpmo-project-drive-課題管理表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "pmo-project-drive-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "依存関係図",
+          "openingHook": "12:20。依存関係図にブロッカー 3本と担当 4部署が並んでいる。",
+          "context": "PMO/プロジェクト推進として依存関係図を確認する。ブロッカー 3本、担当 4部署が今日の判断材料になる。",
+          "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、依存関係図を読んで次の作業判断を残す。",
+          "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+          "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は依存関係図である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "ブロッカー 3本の背景と担当 4部署の確度が完全にはそろっていない。",
+          "decisionTradeoff": "ブロッカー 3本を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "pmo-project-drive-依存関係図判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は決裁事項 6件で副作用を確認する。",
+          "npcDialogue": "先輩:「依存関係図を読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+          "workMaterial": "依存関係図\n- ブロッカー 3本\n- 担当 4部署\n- 判断対象: 依存関係図",
+          "decisionPrompt": "pmo-project-drive-依存関係図判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "ブロッカー 3本を重く見て、当日中に前へ進める",
+              "text": "ブロッカー 3本を重く見て、当日中に前へ進める。材料は依存関係図、ブロッカー 3本、担当 4部署。",
+              "immediateFeedback": "依存関係図に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 2,
+                "pmo_project_drive_risk": -1,
+                "pmo_project_drive_speed": 2,
+                "pmo_project_drive_value": -1,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、依存関係図と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "依存関係図の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はブロッカー 3本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "依存関係図のブロッカー 3本と担当 4部署を突き合わせ、条件付きで進める",
+              "text": "依存関係図のブロッカー 3本と担当 4部署を突き合わせ、条件付きで進める。材料は依存関係図、ブロッカー 3本、担当 4部署。",
+              "immediateFeedback": "依存関係図に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": 1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、依存関係図と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "依存関係図の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はブロッカー 3本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "担当 4部署の不確実性を理由に、判断範囲を絞る",
+              "text": "担当 4部署の不確実性を理由に、判断範囲を絞る。材料は依存関係図、ブロッカー 3本、担当 4部署。",
+              "immediateFeedback": "依存関係図に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": -1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": -1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": -1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、依存関係図と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "依存関係図の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次はブロッカー 3本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "pmo-project-drive-依存関係図判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "pmo-project-drive-依存関係図判断",
+            "roleSpecificMaterials": [
+              "依存関係図",
+              "判断対象: 依存関係図"
+            ],
+            "roleSpecificMetrics": [
+              "ブロッカー 3本",
+              "担当 4部署"
+            ],
+            "roleSpecificFailureRisk": "依存関係図を読まず、ブロッカー 3本か担当 4部署のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "ブロッカー 3本と担当 4部署を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "依存関係図、ブロッカー 3本、担当 4部署を判断の主役にしている。",
+            "kernelConnection": "依存関係図をpmo-project-drive-依存関係図判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "pmo-project-drive-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "会議アジェンダ",
+          "openingHook": "14:15。会議アジェンダに決裁事項 6件と残時間 40分が並んでいる。",
+          "context": "PMO/プロジェクト推進として会議アジェンダを確認する。決裁事項 6件、残時間 40分が今日の判断材料になる。",
+          "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、会議アジェンダを読んで次の作業判断を残す。",
+          "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+          "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は会議アジェンダである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "決裁事項 6件の背景と残時間 40分の確度が完全にはそろっていない。",
+          "decisionTradeoff": "決裁事項 6件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "pmo-project-drive-会議アジェンダ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は追加要員 2名で副作用を確認する。",
+          "npcDialogue": "先輩:「会議アジェンダを読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+          "workMaterial": "会議アジェンダ\n- 決裁事項 6件\n- 残時間 40分\n- 判断対象: 会議アジェンダ",
+          "decisionPrompt": "pmo-project-drive-会議アジェンダ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "決裁事項 6件を重く見て、当日中に前へ進める",
+              "text": "決裁事項 6件を重く見て、当日中に前へ進める。材料は会議アジェンダ、決裁事項 6件、残時間 40分。",
+              "immediateFeedback": "会議アジェンダに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 2,
+                "pmo_project_drive_risk": -1,
+                "pmo_project_drive_speed": 2,
+                "pmo_project_drive_value": -1,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、会議アジェンダと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "会議アジェンダの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は決裁事項 6件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "会議アジェンダの決裁事項 6件と残時間 40分を突き合わせ、条件付きで進める",
+              "text": "会議アジェンダの決裁事項 6件と残時間 40分を突き合わせ、条件付きで進める。材料は会議アジェンダ、決裁事項 6件、残時間 40分。",
+              "immediateFeedback": "会議アジェンダに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": 1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、会議アジェンダと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "会議アジェンダの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は決裁事項 6件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "残時間 40分の不確実性を理由に、判断範囲を絞る",
+              "text": "残時間 40分の不確実性を理由に、判断範囲を絞る。材料は会議アジェンダ、決裁事項 6件、残時間 40分。",
+              "immediateFeedback": "会議アジェンダに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": -1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": -1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": -1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、会議アジェンダと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "会議アジェンダの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は決裁事項 6件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "pmo-project-drive-会議アジェンダ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "pmo-project-drive-会議アジェンダ判断",
+            "roleSpecificMaterials": [
+              "会議アジェンダ",
+              "判断対象: 会議アジェンダ"
+            ],
+            "roleSpecificMetrics": [
+              "決裁事項 6件",
+              "残時間 40分"
+            ],
+            "roleSpecificFailureRisk": "会議アジェンダを読まず、決裁事項 6件か残時間 40分のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "決裁事項 6件と残時間 40分を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "会議アジェンダ、決裁事項 6件、残時間 40分を判断の主役にしている。",
+            "kernelConnection": "会議アジェンダをpmo-project-drive-会議アジェンダ判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "pmo-project-drive-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "リカバリ計画",
+          "openingHook": "16:35。リカバリ計画に追加要員 2名と短縮 8日が並んでいる。",
+          "context": "PMO/プロジェクト推進としてリカバリ計画を確認する。追加要員 2名、短縮 8日が今日の判断材料になる。",
+          "content": "進捗・課題・依存関係をプロジェクト管理判断へ変換するため、リカバリ計画を読んで次の作業判断を残す。",
+          "roleSpecificContext": "PMO/プロジェクト推進は進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+          "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はリカバリ計画である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "追加要員 2名の背景と短縮 8日の確度が完全にはそろっていない。",
+          "decisionTradeoff": "追加要員 2名を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "pmo-project-drive-リカバリ計画判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「リカバリ計画を読まずに進めると、PMO/プロジェクト推進の判断ではなくなる」",
+          "workMaterial": "リカバリ計画\n- 追加要員 2名\n- 短縮 8日\n- 判断対象: リカバリ計画",
+          "decisionPrompt": "pmo-project-drive-リカバリ計画判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "追加要員 2名を重く見て、当日中に前へ進める",
+              "text": "追加要員 2名を重く見て、当日中に前へ進める。材料はリカバリ計画、追加要員 2名、短縮 8日。",
+              "immediateFeedback": "リカバリ計画に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 2,
+                "pmo_project_drive_risk": -1,
+                "pmo_project_drive_speed": 2,
+                "pmo_project_drive_value": -1,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、リカバリ計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リカバリ計画の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は追加要員 2名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "リカバリ計画の追加要員 2名と短縮 8日を突き合わせ、条件付きで進める",
+              "text": "リカバリ計画の追加要員 2名と短縮 8日を突き合わせ、条件付きで進める。材料はリカバリ計画、追加要員 2名、短縮 8日。",
+              "immediateFeedback": "リカバリ計画に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": 1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": 1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": 1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、リカバリ計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リカバリ計画の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は追加要員 2名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "短縮 8日の不確実性を理由に、判断範囲を絞る",
+              "text": "短縮 8日の不確実性を理由に、判断範囲を絞る。材料はリカバリ計画、追加要員 2名、短縮 8日。",
+              "immediateFeedback": "リカバリ計画に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PMO/プロジェクト推進で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "pmo_project_drive_evidence": -1,
+                "pmo_project_drive_risk": 2,
+                "pmo_project_drive_speed": -1,
+                "pmo_project_drive_value": 2,
+                "pmo_project_drive_feasibility": -1
+              },
+              "misconceptionEffect": "PMO/プロジェクト推進は印象ではなく、リカバリ計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リカバリ計画の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は追加要員 2名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "pmo-project-drive-リカバリ計画判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "pmo-project-drive-リカバリ計画判断",
+            "roleSpecificMaterials": [
+              "リカバリ計画",
+              "判断対象: リカバリ計画"
+            ],
+            "roleSpecificMetrics": [
+              "追加要員 2名",
+              "短縮 8日"
+            ],
+            "roleSpecificFailureRisk": "リカバリ計画を読まず、追加要員 2名か短縮 8日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "追加要員 2名と短縮 8日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "リカバリ計画、追加要員 2名、短縮 8日を判断の主役にしている。",
+            "kernelConnection": "リカバリ計画をpmo-project-drive-リカバリ計画判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "PMO/プロジェクト推進の材料翻訳型",
+      "strengths": [
+        "PMO/プロジェクト推進の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "pmo_project_drive_evidence",
+        "pmo_project_drive_risk"
+      ],
+      "valuedMeters": [
+        "pmo_project_drive_evidence"
+      ],
+      "sacrificedMeters": [
+        "pmo_project_drive_speed"
+      ],
+      "roleRealityReveal": "PMO/プロジェクト推進は、進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "PMO/プロジェクト推進の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "PMO/プロジェクト推進の推進型",
+      "strengths": [
+        "PMO/プロジェクト推進の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "pmo_project_drive_risk",
+        "pmo_project_drive_speed"
+      ],
+      "valuedMeters": [
+        "pmo_project_drive_risk"
+      ],
+      "sacrificedMeters": [
+        "pmo_project_drive_value"
+      ],
+      "roleRealityReveal": "PMO/プロジェクト推進は、進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "PMO/プロジェクト推進の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "PMO/プロジェクト推進の安全設計型",
+      "strengths": [
+        "PMO/プロジェクト推進の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "pmo_project_drive_speed",
+        "pmo_project_drive_value"
+      ],
+      "valuedMeters": [
+        "pmo_project_drive_speed"
+      ],
+      "sacrificedMeters": [
+        "pmo_project_drive_feasibility"
+      ],
+      "roleRealityReveal": "PMO/プロジェクト推進は、進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "PMO/プロジェクト推進の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "PMO/プロジェクト推進は、進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "PMO/プロジェクト推進として、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "pmo-project-drive_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "pmo_project_drive_evidence_vs_pmo_project_drive_risk",
+      "pmo_project_drive_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "pmo_project_drive_evidence",
+      "label": "evidence",
+      "description": "PMO/プロジェクト推進のevidence判断"
+    },
+    {
+      "key": "pmo_project_drive_risk",
+      "label": "risk",
+      "description": "PMO/プロジェクト推進のrisk判断"
+    },
+    {
+      "key": "pmo_project_drive_speed",
+      "label": "speed",
+      "description": "PMO/プロジェクト推進のspeed判断"
+    },
+    {
+      "key": "pmo_project_drive_value",
+      "label": "value",
+      "description": "PMO/プロジェクト推進のvalue判断"
+    },
+    {
+      "key": "pmo_project_drive_feasibility",
+      "label": "feasibility",
+      "description": "PMO/プロジェクト推進のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "PMO/プロジェクト推進の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "pmo_project_drive_evidence",
+      "pmo_project_drive_risk",
+      "pmo_project_drive_speed",
+      "pmo_project_drive_value",
+      "pmo_project_drive_feasibility"
+    ]
+  },
+  "roleCoreFriction": "進捗・課題・依存関係をプロジェクト管理判断へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "PMO/プロジェクト推進は会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "PMO/プロジェクト推進は、進捗・課題・依存関係をプロジェクト管理判断へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "遅延 12日、未解決 23件、ブロッカー 3本、決裁事項 6件、追加要員 2名、関係者制約、期限",
+    "output": "PMO/プロジェクト推進としての判断案、次回確認項目、リスクメモ",
+    "transformation": "進捗・課題・依存関係をプロジェクト管理判断へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "遅延 12日",
+      "未解決 23件",
+      "ブロッカー 3本",
+      "決裁事項 6件",
+      "追加要員 2名"
+    ],
+    "metrics": [
+      "遅延 12日",
+      "完了率 58%",
+      "未解決 23件",
+      "高優先 5件",
+      "ブロッカー 3本",
+      "担当 4部署",
+      "決裁事項 6件",
+      "残時間 40分",
+      "追加要員 2名",
+      "短縮 8日"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "遅延 12日、未解決 23件、ブロッカー 3本と完了率 58%、、高優先 5件を読まなければ成立しないため。"
+  }
+}

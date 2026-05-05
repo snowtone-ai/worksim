@@ -1,0 +1,2192 @@
+{
+  "id": "hr/job-media-planning",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "人材/HR",
+  "industrySlug": "hr",
+  "role": "求人メディア企画",
+  "roleSlug": "job-media-planning",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "企画系",
+    "分析系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 人材/HR 求人メディア企画.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "hr",
+      "job-media-planning"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "求人閲覧ログ"
+    },
+    {
+      "time": "10:35",
+      "label": "掲載商品表"
+    },
+    {
+      "time": "12:20",
+      "label": "検索条件分析"
+    },
+    {
+      "time": "14:05",
+      "label": "企業掲載原稿"
+    },
+    {
+      "time": "16:25",
+      "label": "企画効果試算"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "求人閲覧ログ"
+    },
+    {
+      "time": "10:35",
+      "label": "掲載商品表"
+    },
+    {
+      "time": "12:20",
+      "label": "検索条件分析"
+    },
+    {
+      "time": "14:05",
+      "label": "企業掲載原稿"
+    },
+    {
+      "time": "16:25",
+      "label": "企画効果試算"
+    }
+  ],
+  "sceneList": [
+    "job-media-planning-01",
+    "job-media-planning-02",
+    "job-media-planning-03",
+    "job-media-planning-04",
+    "job-media-planning-05"
+  ],
+  "meta": {
+    "title": "求人メディア企画",
+    "industry": "人材/HR",
+    "role": "求人メディア企画",
+    "duration_minutes": 18,
+    "description": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "job-media-planning-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "求人閲覧ログ",
+      "openingHook": "09:10。求人閲覧ログに閲覧 18,400件と応募率 2.8%が並んでいる。",
+      "context": "求人メディア企画として求人閲覧ログを確認する。閲覧 18,400件、応募率 2.8%が今日の判断材料になる。",
+      "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、求人閲覧ログを読んで改善ページを選ぶ。",
+      "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+      "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は求人閲覧ログである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "閲覧 18,400件の背景と応募率 2.8%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "閲覧 18,400件を重く見るほど、応募率 2.8%や別の制約を犠牲にする。",
+      "consequenceHook": "job-media-planning-閲覧 18,400件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は掲載商品表で副作用を確認する。",
+      "npcDialogue": "先輩:「求人閲覧ログを読まずに進めると、求人メディア企画の判断ではなくなる」",
+      "workMaterial": "求人閲覧ログ\n- 閲覧 18,400件\n- 応募率 2.8%\n- 判断対象: 求人閲覧ログ",
+      "decisionPrompt": "job-media-planning-閲覧 18,400件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "閲覧 18,400件を優先し、当日中に求人閲覧ログの結論を出す",
+          "text": "閲覧 18,400件を優先し、当日中に求人閲覧ログの結論を出す。材料は閲覧 18,400件、応募率 2.8%。",
+          "immediateFeedback": "閲覧 18,400件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 2,
+            "job_media_planning_risk": -1,
+            "job_media_planning_speed": 2,
+            "job_media_planning_value": -1,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は印象ではなく、閲覧 18,400件と応募率 2.8%を読んで判断する。",
+          "studentFeedback": {
+            "good": "閲覧 18,400件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は応募率 2.8%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "閲覧 18,400件と応募率 2.8%を突き合わせ、条件付きで進める",
+          "text": "閲覧 18,400件と応募率 2.8%を突き合わせ、条件付きで進める。材料は閲覧 18,400件、応募率 2.8%。",
+          "immediateFeedback": "求人閲覧ログに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": 1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "閲覧 18,400件と応募率 2.8%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は求人閲覧ログの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "応募率 2.8%の制約を重く見て、判断範囲を絞る",
+          "text": "応募率 2.8%の制約を重く見て、判断範囲を絞る。材料は閲覧 18,400件、応募率 2.8%。",
+          "immediateFeedback": "応募率 2.8%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": -1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": -1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": -1
+          },
+          "misconceptionEffect": "求人メディア企画は慎重さだけでなく、閲覧 18,400件と応募率 2.8%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "応募率 2.8%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は閲覧 18,400件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "job-media-planning-閲覧 18,400件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "job-media-planning-閲覧 18,400件判断",
+        "roleSpecificMaterials": [
+          "求人閲覧ログ",
+          "判断対象: 求人閲覧ログ"
+        ],
+        "roleSpecificMetrics": [
+          "閲覧 18,400件",
+          "応募率 2.8%"
+        ],
+        "roleSpecificFailureRisk": "求人閲覧ログを読まず、閲覧 18,400件か応募率 2.8%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "閲覧 18,400件と応募率 2.8%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "求人閲覧ログ、閲覧 18,400件、応募率 2.8%を判断の主役にしている。",
+        "kernelConnection": "求人閲覧ログをjob-media-planning-閲覧 18,400件判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "job-media-planning-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "掲載商品表",
+      "openingHook": "10:35。掲載商品表に掲載単価 12万円と継続率 64%が並んでいる。",
+      "context": "求人メディア企画として掲載商品表を確認する。掲載単価 12万円、継続率 64%が今日の判断材料になる。",
+      "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、掲載商品表を読んで商品条件を見直す。",
+      "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+      "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は掲載商品表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "掲載単価 12万円の背景と継続率 64%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "掲載単価 12万円を重く見るほど、継続率 64%や別の制約を犠牲にする。",
+      "consequenceHook": "job-media-planning-掲載単価 12万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は検索条件分析で副作用を確認する。",
+      "npcDialogue": "先輩:「掲載商品表を読まずに進めると、求人メディア企画の判断ではなくなる」",
+      "workMaterial": "掲載商品表\n- 掲載単価 12万円\n- 継続率 64%\n- 判断対象: 掲載商品表",
+      "decisionPrompt": "job-media-planning-掲載単価 12万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "掲載単価 12万円を優先し、当日中に掲載商品表の結論を出す",
+          "text": "掲載単価 12万円を優先し、当日中に掲載商品表の結論を出す。材料は掲載単価 12万円、継続率 64%。",
+          "immediateFeedback": "掲載単価 12万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 2,
+            "job_media_planning_risk": -1,
+            "job_media_planning_speed": 2,
+            "job_media_planning_value": -1,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は印象ではなく、掲載単価 12万円と継続率 64%を読んで判断する。",
+          "studentFeedback": {
+            "good": "掲載単価 12万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は継続率 64%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "掲載単価 12万円と継続率 64%を突き合わせ、条件付きで進める",
+          "text": "掲載単価 12万円と継続率 64%を突き合わせ、条件付きで進める。材料は掲載単価 12万円、継続率 64%。",
+          "immediateFeedback": "掲載商品表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": 1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "掲載単価 12万円と継続率 64%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は掲載商品表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "継続率 64%の制約を重く見て、判断範囲を絞る",
+          "text": "継続率 64%の制約を重く見て、判断範囲を絞る。材料は掲載単価 12万円、継続率 64%。",
+          "immediateFeedback": "継続率 64%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": -1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": -1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": -1
+          },
+          "misconceptionEffect": "求人メディア企画は慎重さだけでなく、掲載単価 12万円と継続率 64%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "継続率 64%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は掲載単価 12万円を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "job-media-planning-掲載単価 12万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "job-media-planning-掲載単価 12万円判断",
+        "roleSpecificMaterials": [
+          "掲載商品表",
+          "判断対象: 掲載商品表"
+        ],
+        "roleSpecificMetrics": [
+          "掲載単価 12万円",
+          "継続率 64%"
+        ],
+        "roleSpecificFailureRisk": "掲載商品表を読まず、掲載単価 12万円か継続率 64%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "掲載単価 12万円と継続率 64%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "掲載商品表、掲載単価 12万円、継続率 64%を判断の主役にしている。",
+        "kernelConnection": "掲載商品表をjob-media-planning-掲載単価 12万円判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "job-media-planning-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "検索条件分析",
+      "openingHook": "12:20。検索条件分析に絞込利用 41%と離脱率 37%が並んでいる。",
+      "context": "求人メディア企画として検索条件分析を確認する。絞込利用 41%、離脱率 37%が今日の判断材料になる。",
+      "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、検索条件分析を読んで検索導線を変える。",
+      "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+      "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は検索条件分析である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "絞込利用 41%の背景と離脱率 37%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "絞込利用 41%を重く見るほど、離脱率 37%や別の制約を犠牲にする。",
+      "consequenceHook": "job-media-planning-絞込利用 41%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は企業掲載原稿で副作用を確認する。",
+      "npcDialogue": "先輩:「検索条件分析を読まずに進めると、求人メディア企画の判断ではなくなる」",
+      "workMaterial": "検索条件分析\n- 絞込利用 41%\n- 離脱率 37%\n- 判断対象: 検索条件分析",
+      "decisionPrompt": "job-media-planning-絞込利用 41%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "絞込利用 41%を優先し、当日中に検索条件分析の結論を出す",
+          "text": "絞込利用 41%を優先し、当日中に検索条件分析の結論を出す。材料は絞込利用 41%、離脱率 37%。",
+          "immediateFeedback": "絞込利用 41%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 2,
+            "job_media_planning_risk": -1,
+            "job_media_planning_speed": 2,
+            "job_media_planning_value": -1,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は印象ではなく、絞込利用 41%と離脱率 37%を読んで判断する。",
+          "studentFeedback": {
+            "good": "絞込利用 41%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は離脱率 37%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "絞込利用 41%と離脱率 37%を突き合わせ、条件付きで進める",
+          "text": "絞込利用 41%と離脱率 37%を突き合わせ、条件付きで進める。材料は絞込利用 41%、離脱率 37%。",
+          "immediateFeedback": "検索条件分析に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": 1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "絞込利用 41%と離脱率 37%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は検索条件分析の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "離脱率 37%の制約を重く見て、判断範囲を絞る",
+          "text": "離脱率 37%の制約を重く見て、判断範囲を絞る。材料は絞込利用 41%、離脱率 37%。",
+          "immediateFeedback": "離脱率 37%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": -1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": -1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": -1
+          },
+          "misconceptionEffect": "求人メディア企画は慎重さだけでなく、絞込利用 41%と離脱率 37%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "離脱率 37%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は絞込利用 41%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "job-media-planning-絞込利用 41%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "job-media-planning-絞込利用 41%判断",
+        "roleSpecificMaterials": [
+          "検索条件分析",
+          "判断対象: 検索条件分析"
+        ],
+        "roleSpecificMetrics": [
+          "絞込利用 41%",
+          "離脱率 37%"
+        ],
+        "roleSpecificFailureRisk": "検索条件分析を読まず、絞込利用 41%か離脱率 37%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "絞込利用 41%と離脱率 37%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "検索条件分析、絞込利用 41%、離脱率 37%を判断の主役にしている。",
+        "kernelConnection": "検索条件分析をjob-media-planning-絞込利用 41%判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "job-media-planning-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "企業掲載原稿",
+      "openingHook": "14:05。企業掲載原稿に必須語句 5個と写真不足 3枚が並んでいる。",
+      "context": "求人メディア企画として企業掲載原稿を確認する。必須語句 5個、写真不足 3枚が今日の判断材料になる。",
+      "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、企業掲載原稿を読んで原稿改善軸を決める。",
+      "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+      "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は企業掲載原稿である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "必須語句 5個の背景と写真不足 3枚の確度が完全にはそろっていない。",
+      "decisionTradeoff": "必須語句 5個を重く見るほど、写真不足 3枚や別の制約を犠牲にする。",
+      "consequenceHook": "job-media-planning-必須語句 5個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は企画効果試算で副作用を確認する。",
+      "npcDialogue": "先輩:「企業掲載原稿を読まずに進めると、求人メディア企画の判断ではなくなる」",
+      "workMaterial": "企業掲載原稿\n- 必須語句 5個\n- 写真不足 3枚\n- 判断対象: 企業掲載原稿",
+      "decisionPrompt": "job-media-planning-必須語句 5個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "必須語句 5個を優先し、当日中に企業掲載原稿の結論を出す",
+          "text": "必須語句 5個を優先し、当日中に企業掲載原稿の結論を出す。材料は必須語句 5個、写真不足 3枚。",
+          "immediateFeedback": "必須語句 5個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 2,
+            "job_media_planning_risk": -1,
+            "job_media_planning_speed": 2,
+            "job_media_planning_value": -1,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は印象ではなく、必須語句 5個と写真不足 3枚を読んで判断する。",
+          "studentFeedback": {
+            "good": "必須語句 5個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は写真不足 3枚の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "必須語句 5個と写真不足 3枚を突き合わせ、条件付きで進める",
+          "text": "必須語句 5個と写真不足 3枚を突き合わせ、条件付きで進める。材料は必須語句 5個、写真不足 3枚。",
+          "immediateFeedback": "企業掲載原稿に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": 1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "必須語句 5個と写真不足 3枚を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は企業掲載原稿の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "写真不足 3枚の制約を重く見て、判断範囲を絞る",
+          "text": "写真不足 3枚の制約を重く見て、判断範囲を絞る。材料は必須語句 5個、写真不足 3枚。",
+          "immediateFeedback": "写真不足 3枚に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": -1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": -1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": -1
+          },
+          "misconceptionEffect": "求人メディア企画は慎重さだけでなく、必須語句 5個と写真不足 3枚の副作用まで読む。",
+          "studentFeedback": {
+            "good": "写真不足 3枚の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は必須語句 5個を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "job-media-planning-必須語句 5個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "job-media-planning-必須語句 5個判断",
+        "roleSpecificMaterials": [
+          "企業掲載原稿",
+          "判断対象: 企業掲載原稿"
+        ],
+        "roleSpecificMetrics": [
+          "必須語句 5個",
+          "写真不足 3枚"
+        ],
+        "roleSpecificFailureRisk": "企業掲載原稿を読まず、必須語句 5個か写真不足 3枚のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "必須語句 5個と写真不足 3枚を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "企業掲載原稿、必須語句 5個、写真不足 3枚を判断の主役にしている。",
+        "kernelConnection": "企業掲載原稿をjob-media-planning-必須語句 5個判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "job-media-planning-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "企画効果試算",
+      "openingHook": "16:25。企画効果試算に追加応募 260件と売上 380万円が並んでいる。",
+      "context": "求人メディア企画として企画効果試算を確認する。追加応募 260件、売上 380万円が今日の判断材料になる。",
+      "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、企画効果試算を読んで実施範囲を切る。",
+      "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+      "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は企画効果試算である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "追加応募 260件の背景と売上 380万円の確度が完全にはそろっていない。",
+      "decisionTradeoff": "追加応募 260件を重く見るほど、売上 380万円や別の制約を犠牲にする。",
+      "consequenceHook": "job-media-planning-追加応募 260件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「企画効果試算を読まずに進めると、求人メディア企画の判断ではなくなる」",
+      "workMaterial": "企画効果試算\n- 追加応募 260件\n- 売上 380万円\n- 判断対象: 企画効果試算",
+      "decisionPrompt": "job-media-planning-追加応募 260件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "追加応募 260件を優先し、当日中に企画効果試算の結論を出す",
+          "text": "追加応募 260件を優先し、当日中に企画効果試算の結論を出す。材料は追加応募 260件、売上 380万円。",
+          "immediateFeedback": "追加応募 260件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 2,
+            "job_media_planning_risk": -1,
+            "job_media_planning_speed": 2,
+            "job_media_planning_value": -1,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は印象ではなく、追加応募 260件と売上 380万円を読んで判断する。",
+          "studentFeedback": {
+            "good": "追加応募 260件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は売上 380万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "追加応募 260件と売上 380万円を突き合わせ、条件付きで進める",
+          "text": "追加応募 260件と売上 380万円を突き合わせ、条件付きで進める。材料は追加応募 260件、売上 380万円。",
+          "immediateFeedback": "企画効果試算に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": 1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": 1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": 1
+          },
+          "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "追加応募 260件と売上 380万円を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は企画効果試算の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "売上 380万円の制約を重く見て、判断範囲を絞る",
+          "text": "売上 380万円の制約を重く見て、判断範囲を絞る。材料は追加応募 260件、売上 380万円。",
+          "immediateFeedback": "売上 380万円に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "job_media_planning_evidence": -1,
+            "job_media_planning_risk": 2,
+            "job_media_planning_speed": -1,
+            "job_media_planning_value": 2,
+            "job_media_planning_feasibility": -1
+          },
+          "misconceptionEffect": "求人メディア企画は慎重さだけでなく、追加応募 260件と売上 380万円の副作用まで読む。",
+          "studentFeedback": {
+            "good": "売上 380万円の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は追加応募 260件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "job-media-planning-追加応募 260件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "job-media-planning-追加応募 260件判断",
+        "roleSpecificMaterials": [
+          "企画効果試算",
+          "判断対象: 企画効果試算"
+        ],
+        "roleSpecificMetrics": [
+          "追加応募 260件",
+          "売上 380万円"
+        ],
+        "roleSpecificFailureRisk": "企画効果試算を読まず、追加応募 260件か売上 380万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "追加応募 260件と売上 380万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "企画効果試算、追加応募 260件、売上 380万円を判断の主役にしている。",
+        "kernelConnection": "企画効果試算をjob-media-planning-追加応募 260件判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。求人メディア企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "job-media-planning-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "求人閲覧ログ",
+          "openingHook": "09:10。求人閲覧ログに閲覧 18,400件と応募率 2.8%が並んでいる。",
+          "context": "求人メディア企画として求人閲覧ログを確認する。閲覧 18,400件、応募率 2.8%が今日の判断材料になる。",
+          "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、求人閲覧ログを読んで改善ページを選ぶ。",
+          "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+          "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は求人閲覧ログである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "閲覧 18,400件の背景と応募率 2.8%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "閲覧 18,400件を重く見るほど、応募率 2.8%や別の制約を犠牲にする。",
+          "consequenceHook": "job-media-planning-閲覧 18,400件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は掲載商品表で副作用を確認する。",
+          "npcDialogue": "先輩:「求人閲覧ログを読まずに進めると、求人メディア企画の判断ではなくなる」",
+          "workMaterial": "求人閲覧ログ\n- 閲覧 18,400件\n- 応募率 2.8%\n- 判断対象: 求人閲覧ログ",
+          "decisionPrompt": "job-media-planning-閲覧 18,400件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "閲覧 18,400件を優先し、当日中に求人閲覧ログの結論を出す",
+              "text": "閲覧 18,400件を優先し、当日中に求人閲覧ログの結論を出す。材料は閲覧 18,400件、応募率 2.8%。",
+              "immediateFeedback": "閲覧 18,400件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 2,
+                "job_media_planning_risk": -1,
+                "job_media_planning_speed": 2,
+                "job_media_planning_value": -1,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は印象ではなく、閲覧 18,400件と応募率 2.8%を読んで判断する。",
+              "studentFeedback": {
+                "good": "閲覧 18,400件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は応募率 2.8%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "閲覧 18,400件と応募率 2.8%を突き合わせ、条件付きで進める",
+              "text": "閲覧 18,400件と応募率 2.8%を突き合わせ、条件付きで進める。材料は閲覧 18,400件、応募率 2.8%。",
+              "immediateFeedback": "求人閲覧ログに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": 1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "閲覧 18,400件と応募率 2.8%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は求人閲覧ログの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "応募率 2.8%の制約を重く見て、判断範囲を絞る",
+              "text": "応募率 2.8%の制約を重く見て、判断範囲を絞る。材料は閲覧 18,400件、応募率 2.8%。",
+              "immediateFeedback": "応募率 2.8%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": -1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": -1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": -1
+              },
+              "misconceptionEffect": "求人メディア企画は慎重さだけでなく、閲覧 18,400件と応募率 2.8%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "応募率 2.8%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は閲覧 18,400件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "job-media-planning-閲覧 18,400件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "job-media-planning-閲覧 18,400件判断",
+            "roleSpecificMaterials": [
+              "求人閲覧ログ",
+              "判断対象: 求人閲覧ログ"
+            ],
+            "roleSpecificMetrics": [
+              "閲覧 18,400件",
+              "応募率 2.8%"
+            ],
+            "roleSpecificFailureRisk": "求人閲覧ログを読まず、閲覧 18,400件か応募率 2.8%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "閲覧 18,400件と応募率 2.8%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "求人閲覧ログ、閲覧 18,400件、応募率 2.8%を判断の主役にしている。",
+            "kernelConnection": "求人閲覧ログをjob-media-planning-閲覧 18,400件判断へ接続する。"
+          }
+        },
+        {
+          "id": "job-media-planning-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "掲載商品表",
+          "openingHook": "10:35。掲載商品表に掲載単価 12万円と継続率 64%が並んでいる。",
+          "context": "求人メディア企画として掲載商品表を確認する。掲載単価 12万円、継続率 64%が今日の判断材料になる。",
+          "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、掲載商品表を読んで商品条件を見直す。",
+          "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+          "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は掲載商品表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "掲載単価 12万円の背景と継続率 64%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "掲載単価 12万円を重く見るほど、継続率 64%や別の制約を犠牲にする。",
+          "consequenceHook": "job-media-planning-掲載単価 12万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は検索条件分析で副作用を確認する。",
+          "npcDialogue": "先輩:「掲載商品表を読まずに進めると、求人メディア企画の判断ではなくなる」",
+          "workMaterial": "掲載商品表\n- 掲載単価 12万円\n- 継続率 64%\n- 判断対象: 掲載商品表",
+          "decisionPrompt": "job-media-planning-掲載単価 12万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "掲載単価 12万円を優先し、当日中に掲載商品表の結論を出す",
+              "text": "掲載単価 12万円を優先し、当日中に掲載商品表の結論を出す。材料は掲載単価 12万円、継続率 64%。",
+              "immediateFeedback": "掲載単価 12万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 2,
+                "job_media_planning_risk": -1,
+                "job_media_planning_speed": 2,
+                "job_media_planning_value": -1,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は印象ではなく、掲載単価 12万円と継続率 64%を読んで判断する。",
+              "studentFeedback": {
+                "good": "掲載単価 12万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は継続率 64%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "掲載単価 12万円と継続率 64%を突き合わせ、条件付きで進める",
+              "text": "掲載単価 12万円と継続率 64%を突き合わせ、条件付きで進める。材料は掲載単価 12万円、継続率 64%。",
+              "immediateFeedback": "掲載商品表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": 1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "掲載単価 12万円と継続率 64%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は掲載商品表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "継続率 64%の制約を重く見て、判断範囲を絞る",
+              "text": "継続率 64%の制約を重く見て、判断範囲を絞る。材料は掲載単価 12万円、継続率 64%。",
+              "immediateFeedback": "継続率 64%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": -1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": -1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": -1
+              },
+              "misconceptionEffect": "求人メディア企画は慎重さだけでなく、掲載単価 12万円と継続率 64%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "継続率 64%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は掲載単価 12万円を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "job-media-planning-掲載単価 12万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "job-media-planning-掲載単価 12万円判断",
+            "roleSpecificMaterials": [
+              "掲載商品表",
+              "判断対象: 掲載商品表"
+            ],
+            "roleSpecificMetrics": [
+              "掲載単価 12万円",
+              "継続率 64%"
+            ],
+            "roleSpecificFailureRisk": "掲載商品表を読まず、掲載単価 12万円か継続率 64%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "掲載単価 12万円と継続率 64%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "掲載商品表、掲載単価 12万円、継続率 64%を判断の主役にしている。",
+            "kernelConnection": "掲載商品表をjob-media-planning-掲載単価 12万円判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。求人メディア企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "job-media-planning-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "検索条件分析",
+          "openingHook": "12:20。検索条件分析に絞込利用 41%と離脱率 37%が並んでいる。",
+          "context": "求人メディア企画として検索条件分析を確認する。絞込利用 41%、離脱率 37%が今日の判断材料になる。",
+          "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、検索条件分析を読んで検索導線を変える。",
+          "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+          "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は検索条件分析である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "絞込利用 41%の背景と離脱率 37%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "絞込利用 41%を重く見るほど、離脱率 37%や別の制約を犠牲にする。",
+          "consequenceHook": "job-media-planning-絞込利用 41%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は企業掲載原稿で副作用を確認する。",
+          "npcDialogue": "先輩:「検索条件分析を読まずに進めると、求人メディア企画の判断ではなくなる」",
+          "workMaterial": "検索条件分析\n- 絞込利用 41%\n- 離脱率 37%\n- 判断対象: 検索条件分析",
+          "decisionPrompt": "job-media-planning-絞込利用 41%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "絞込利用 41%を優先し、当日中に検索条件分析の結論を出す",
+              "text": "絞込利用 41%を優先し、当日中に検索条件分析の結論を出す。材料は絞込利用 41%、離脱率 37%。",
+              "immediateFeedback": "絞込利用 41%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 2,
+                "job_media_planning_risk": -1,
+                "job_media_planning_speed": 2,
+                "job_media_planning_value": -1,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は印象ではなく、絞込利用 41%と離脱率 37%を読んで判断する。",
+              "studentFeedback": {
+                "good": "絞込利用 41%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は離脱率 37%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "絞込利用 41%と離脱率 37%を突き合わせ、条件付きで進める",
+              "text": "絞込利用 41%と離脱率 37%を突き合わせ、条件付きで進める。材料は絞込利用 41%、離脱率 37%。",
+              "immediateFeedback": "検索条件分析に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": 1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "絞込利用 41%と離脱率 37%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は検索条件分析の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "離脱率 37%の制約を重く見て、判断範囲を絞る",
+              "text": "離脱率 37%の制約を重く見て、判断範囲を絞る。材料は絞込利用 41%、離脱率 37%。",
+              "immediateFeedback": "離脱率 37%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": -1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": -1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": -1
+              },
+              "misconceptionEffect": "求人メディア企画は慎重さだけでなく、絞込利用 41%と離脱率 37%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "離脱率 37%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は絞込利用 41%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "job-media-planning-絞込利用 41%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "job-media-planning-絞込利用 41%判断",
+            "roleSpecificMaterials": [
+              "検索条件分析",
+              "判断対象: 検索条件分析"
+            ],
+            "roleSpecificMetrics": [
+              "絞込利用 41%",
+              "離脱率 37%"
+            ],
+            "roleSpecificFailureRisk": "検索条件分析を読まず、絞込利用 41%か離脱率 37%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "絞込利用 41%と離脱率 37%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "検索条件分析、絞込利用 41%、離脱率 37%を判断の主役にしている。",
+            "kernelConnection": "検索条件分析をjob-media-planning-絞込利用 41%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。求人メディア企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "job-media-planning-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "企業掲載原稿",
+          "openingHook": "14:05。企業掲載原稿に必須語句 5個と写真不足 3枚が並んでいる。",
+          "context": "求人メディア企画として企業掲載原稿を確認する。必須語句 5個、写真不足 3枚が今日の判断材料になる。",
+          "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、企業掲載原稿を読んで原稿改善軸を決める。",
+          "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+          "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は企業掲載原稿である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "必須語句 5個の背景と写真不足 3枚の確度が完全にはそろっていない。",
+          "decisionTradeoff": "必須語句 5個を重く見るほど、写真不足 3枚や別の制約を犠牲にする。",
+          "consequenceHook": "job-media-planning-必須語句 5個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は企画効果試算で副作用を確認する。",
+          "npcDialogue": "先輩:「企業掲載原稿を読まずに進めると、求人メディア企画の判断ではなくなる」",
+          "workMaterial": "企業掲載原稿\n- 必須語句 5個\n- 写真不足 3枚\n- 判断対象: 企業掲載原稿",
+          "decisionPrompt": "job-media-planning-必須語句 5個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "必須語句 5個を優先し、当日中に企業掲載原稿の結論を出す",
+              "text": "必須語句 5個を優先し、当日中に企業掲載原稿の結論を出す。材料は必須語句 5個、写真不足 3枚。",
+              "immediateFeedback": "必須語句 5個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 2,
+                "job_media_planning_risk": -1,
+                "job_media_planning_speed": 2,
+                "job_media_planning_value": -1,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は印象ではなく、必須語句 5個と写真不足 3枚を読んで判断する。",
+              "studentFeedback": {
+                "good": "必須語句 5個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は写真不足 3枚の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "必須語句 5個と写真不足 3枚を突き合わせ、条件付きで進める",
+              "text": "必須語句 5個と写真不足 3枚を突き合わせ、条件付きで進める。材料は必須語句 5個、写真不足 3枚。",
+              "immediateFeedback": "企業掲載原稿に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": 1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "必須語句 5個と写真不足 3枚を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は企業掲載原稿の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "写真不足 3枚の制約を重く見て、判断範囲を絞る",
+              "text": "写真不足 3枚の制約を重く見て、判断範囲を絞る。材料は必須語句 5個、写真不足 3枚。",
+              "immediateFeedback": "写真不足 3枚に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": -1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": -1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": -1
+              },
+              "misconceptionEffect": "求人メディア企画は慎重さだけでなく、必須語句 5個と写真不足 3枚の副作用まで読む。",
+              "studentFeedback": {
+                "good": "写真不足 3枚の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は必須語句 5個を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "job-media-planning-必須語句 5個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "job-media-planning-必須語句 5個判断",
+            "roleSpecificMaterials": [
+              "企業掲載原稿",
+              "判断対象: 企業掲載原稿"
+            ],
+            "roleSpecificMetrics": [
+              "必須語句 5個",
+              "写真不足 3枚"
+            ],
+            "roleSpecificFailureRisk": "企業掲載原稿を読まず、必須語句 5個か写真不足 3枚のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "必須語句 5個と写真不足 3枚を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "企業掲載原稿、必須語句 5個、写真不足 3枚を判断の主役にしている。",
+            "kernelConnection": "企業掲載原稿をjob-media-planning-必須語句 5個判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。求人メディア企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "job-media-planning-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "企画効果試算",
+          "openingHook": "16:25。企画効果試算に追加応募 260件と売上 380万円が並んでいる。",
+          "context": "求人メディア企画として企画効果試算を確認する。追加応募 260件、売上 380万円が今日の判断材料になる。",
+          "content": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換するため、企画効果試算を読んで実施範囲を切る。",
+          "roleSpecificContext": "求人メディア企画は求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する仕事。",
+          "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は企画効果試算である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "追加応募 260件の背景と売上 380万円の確度が完全にはそろっていない。",
+          "decisionTradeoff": "追加応募 260件を重く見るほど、売上 380万円や別の制約を犠牲にする。",
+          "consequenceHook": "job-media-planning-追加応募 260件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「企画効果試算を読まずに進めると、求人メディア企画の判断ではなくなる」",
+          "workMaterial": "企画効果試算\n- 追加応募 260件\n- 売上 380万円\n- 判断対象: 企画効果試算",
+          "decisionPrompt": "job-media-planning-追加応募 260件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "追加応募 260件を優先し、当日中に企画効果試算の結論を出す",
+              "text": "追加応募 260件を優先し、当日中に企画効果試算の結論を出す。材料は追加応募 260件、売上 380万円。",
+              "immediateFeedback": "追加応募 260件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 2,
+                "job_media_planning_risk": -1,
+                "job_media_planning_speed": 2,
+                "job_media_planning_value": -1,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は印象ではなく、追加応募 260件と売上 380万円を読んで判断する。",
+              "studentFeedback": {
+                "good": "追加応募 260件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は売上 380万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "追加応募 260件と売上 380万円を突き合わせ、条件付きで進める",
+              "text": "追加応募 260件と売上 380万円を突き合わせ、条件付きで進める。材料は追加応募 260件、売上 380万円。",
+              "immediateFeedback": "企画効果試算に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": 1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": 1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": 1
+              },
+              "misconceptionEffect": "求人メディア企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "追加応募 260件と売上 380万円を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は企画効果試算の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "売上 380万円の制約を重く見て、判断範囲を絞る",
+              "text": "売上 380万円の制約を重く見て、判断範囲を絞る。材料は追加応募 260件、売上 380万円。",
+              "immediateFeedback": "売上 380万円に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "求人メディア企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "job_media_planning_evidence": -1,
+                "job_media_planning_risk": 2,
+                "job_media_planning_speed": -1,
+                "job_media_planning_value": 2,
+                "job_media_planning_feasibility": -1
+              },
+              "misconceptionEffect": "求人メディア企画は慎重さだけでなく、追加応募 260件と売上 380万円の副作用まで読む。",
+              "studentFeedback": {
+                "good": "売上 380万円の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は追加応募 260件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "job-media-planning-追加応募 260件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "job-media-planning-追加応募 260件判断",
+            "roleSpecificMaterials": [
+              "企画効果試算",
+              "判断対象: 企画効果試算"
+            ],
+            "roleSpecificMetrics": [
+              "追加応募 260件",
+              "売上 380万円"
+            ],
+            "roleSpecificFailureRisk": "企画効果試算を読まず、追加応募 260件か売上 380万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "追加応募 260件と売上 380万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "企画効果試算、追加応募 260件、売上 380万円を判断の主役にしている。",
+            "kernelConnection": "企画効果試算をjob-media-planning-追加応募 260件判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "job-media-planning-material-reader",
+      "title": "求人メディア企画の材料読解型",
+      "strengths": [
+        "求人メディア企画の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "job_media_planning_evidence",
+        "job_media_planning_risk"
+      ],
+      "valuedMeters": [
+        "job_media_planning_evidence"
+      ],
+      "sacrificedMeters": [
+        "job_media_planning_speed"
+      ],
+      "roleRealityReveal": "求人メディア企画は、求人閲覧と応募転換の数字を読み、掲載商品と導線を改善する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "求人メディア企画の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "job-media-planning-constraint-designer",
+      "title": "求人メディア企画の制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "job_media_planning_risk",
+        "job_media_planning_speed"
+      ],
+      "valuedMeters": [
+        "job_media_planning_risk"
+      ],
+      "sacrificedMeters": [
+        "job_media_planning_value"
+      ],
+      "roleRealityReveal": "求人メディア企画は、求人閲覧と応募転換の数字を読み、掲載商品と導線を改善する仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "求人メディア企画として制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "job-media-planning-execution-planner",
+      "title": "求人メディア企画の実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "job_media_planning_speed",
+        "job_media_planning_value"
+      ],
+      "valuedMeters": [
+        "job_media_planning_speed"
+      ],
+      "sacrificedMeters": [
+        "job_media_planning_feasibility"
+      ],
+      "roleRealityReveal": "求人メディア企画は、求人閲覧と応募転換の数字を読み、掲載商品と導線を改善する仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "求人メディア企画として実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "求人メディア企画は、求人閲覧と応募転換の数字を読み、掲載商品と導線を改善する仕事。",
+    "misconceptionCorrection": "求人メディア企画は印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "求人メディア企画として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "job-media-planning_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "job_media_planning_conversion_vs_job_media_planning_product",
+      "job_media_planning_user_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "job_media_planning_conversion",
+      "label": "conversion",
+      "description": "求人メディア企画のconversion判断"
+    },
+    {
+      "key": "job_media_planning_product",
+      "label": "product",
+      "description": "求人メディア企画のproduct判断"
+    },
+    {
+      "key": "job_media_planning_user",
+      "label": "user",
+      "description": "求人メディア企画のuser判断"
+    },
+    {
+      "key": "job_media_planning_revenue",
+      "label": "revenue",
+      "description": "求人メディア企画のrevenue判断"
+    },
+    {
+      "key": "job_media_planning_quality",
+      "label": "quality",
+      "description": "求人メディア企画のquality判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "求人メディア企画の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "job_media_planning_conversion",
+      "job_media_planning_product",
+      "job_media_planning_user",
+      "job_media_planning_revenue",
+      "job_media_planning_quality"
+    ]
+  },
+  "roleCoreFriction": "掲載数を増やすほど売上は作れるが、応募転換が低い商品は学生と企業の双方に価値を残しにくい葛藤。",
+  "roleMisconception": "求人メディア企画は掲載枠やキャンペーンを考える仕事で、閲覧から応募までのデータ設計は補助的だと思われやすい。",
+  "roleRealityReveal": "求人メディア企画は、求人閲覧と応募転換の数字を読み、掲載商品と導線を改善する仕事。",
+  "roleWorkKernel": {
+    "input": "閲覧 18,400件、応募率 2.8%、掲載単価 12万円、継続率 64%、絞込利用 41%、離脱率 37%、必須語句 5個、写真不足 3枚、追加応募 260件、売上 380万円",
+    "output": "求人メディア企画としての判断案、次回確認項目、リスクメモ",
+    "transformation": "求人閲覧データ、掲載商品、応募転換率を求人メディアの企画改善へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "求人閲覧ログ",
+      "掲載商品表",
+      "検索条件分析",
+      "企業掲載原稿",
+      "企画効果試算"
+    ],
+    "metrics": [
+      "閲覧 18,400件",
+      "応募率 2.8%",
+      "掲載単価 12万円",
+      "継続率 64%",
+      "絞込利用 41%",
+      "離脱率 37%",
+      "必須語句 5個",
+      "写真不足 3枚",
+      "追加応募 260件",
+      "売上 380万円"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "求人閲覧ログ、掲載商品表、検索条件分析と閲覧 18,400件、掲載単価 12万円を読まなければ成立しないため。"
+  }
+}

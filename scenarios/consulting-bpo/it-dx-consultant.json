@@ -1,0 +1,2190 @@
+{
+  "id": "consulting-bpo/it-dx-consultant",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "コンサル/BPO/業務支援",
+  "industrySlug": "consulting-bpo",
+  "role": "IT/DXコンサル",
+  "roleSlug": "it-dx-consultant",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for コンサル/BPO/業務支援 IT/DXコンサル.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "consulting-bpo",
+      "it-dx-consultant"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "現状業務表"
+    },
+    {
+      "time": "10:40",
+      "label": "システム一覧"
+    },
+    {
+      "time": "12:20",
+      "label": "課題仮説"
+    },
+    {
+      "time": "14:15",
+      "label": "投資対効果表"
+    },
+    {
+      "time": "16:35",
+      "label": "ロードマップ"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "現状業務表"
+    },
+    {
+      "time": "10:40",
+      "label": "システム一覧"
+    },
+    {
+      "time": "12:20",
+      "label": "課題仮説"
+    },
+    {
+      "time": "14:15",
+      "label": "投資対効果表"
+    },
+    {
+      "time": "16:35",
+      "label": "ロードマップ"
+    }
+  ],
+  "sceneList": [
+    "it-dx-consultant-01",
+    "it-dx-consultant-02",
+    "it-dx-consultant-03",
+    "it-dx-consultant-04",
+    "it-dx-consultant-05"
+  ],
+  "meta": {
+    "title": "IT/DXコンサル",
+    "industry": "コンサル/BPO/業務支援",
+    "role": "IT/DXコンサル",
+    "duration_minutes": 18,
+    "description": "業務課題・システム制約・投資効果をDX計画へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "it-dx-consultant-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "現状業務表",
+      "openingHook": "09:10。現状業務表に手作業 42時間/月と部署 5が並んでいる。",
+      "context": "IT/DXコンサルとして現状業務表を確認する。手作業 42時間/月、部署 5が今日の判断材料になる。",
+      "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、現状業務表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+      "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は現状業務表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "手作業 42時間/月の背景と部署 5の確度が完全にはそろっていない。",
+      "decisionTradeoff": "手作業 42時間/月を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "it-dx-consultant-現状業務表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は老朽 2件で副作用を確認する。",
+      "npcDialogue": "先輩:「現状業務表を読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+      "workMaterial": "現状業務表\n- 手作業 42時間/月\n- 部署 5\n- 判断対象: 現状業務表",
+      "decisionPrompt": "it-dx-consultant-現状業務表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "手作業 42時間/月を重く見て、当日中に前へ進める",
+          "text": "手作業 42時間/月を重く見て、当日中に前へ進める。材料は現状業務表、手作業 42時間/月、部署 5。",
+          "immediateFeedback": "現状業務表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 2,
+            "it_dx_consultant_risk": -1,
+            "it_dx_consultant_speed": 2,
+            "it_dx_consultant_value": -1,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、現状業務表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "現状業務表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は手作業 42時間/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "現状業務表の手作業 42時間/月と部署 5を突き合わせ、条件付きで進める",
+          "text": "現状業務表の手作業 42時間/月と部署 5を突き合わせ、条件付きで進める。材料は現状業務表、手作業 42時間/月、部署 5。",
+          "immediateFeedback": "現状業務表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": 1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、現状業務表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "現状業務表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は手作業 42時間/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "部署 5の不確実性を理由に、判断範囲を絞る",
+          "text": "部署 5の不確実性を理由に、判断範囲を絞る。材料は現状業務表、手作業 42時間/月、部署 5。",
+          "immediateFeedback": "現状業務表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": -1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": -1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、現状業務表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "現状業務表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は手作業 42時間/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "it-dx-consultant-現状業務表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "it-dx-consultant-現状業務表判断",
+        "roleSpecificMaterials": [
+          "現状業務表",
+          "判断対象: 現状業務表"
+        ],
+        "roleSpecificMetrics": [
+          "手作業 42時間/月",
+          "部署 5"
+        ],
+        "roleSpecificFailureRisk": "現状業務表を読まず、手作業 42時間/月か部署 5のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "手作業 42時間/月と部署 5を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "現状業務表、手作業 42時間/月、部署 5を判断の主役にしている。",
+        "kernelConnection": "現状業務表をit-dx-consultant-現状業務表判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "it-dx-consultant-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "システム一覧",
+      "openingHook": "10:40。システム一覧に老朽 2件と連携 3本が並んでいる。",
+      "context": "IT/DXコンサルとしてシステム一覧を確認する。老朽 2件、連携 3本が今日の判断材料になる。",
+      "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、システム一覧を読んで次の作業判断を残す。",
+      "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+      "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はシステム一覧である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "老朽 2件の背景と連携 3本の確度が完全にはそろっていない。",
+      "decisionTradeoff": "老朽 2件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "it-dx-consultant-システム一覧判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は手戻り 18%で副作用を確認する。",
+      "npcDialogue": "先輩:「システム一覧を読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+      "workMaterial": "システム一覧\n- 老朽 2件\n- 連携 3本\n- 判断対象: システム一覧",
+      "decisionPrompt": "it-dx-consultant-システム一覧判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "老朽 2件を重く見て、当日中に前へ進める",
+          "text": "老朽 2件を重く見て、当日中に前へ進める。材料はシステム一覧、老朽 2件、連携 3本。",
+          "immediateFeedback": "システム一覧に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 2,
+            "it_dx_consultant_risk": -1,
+            "it_dx_consultant_speed": 2,
+            "it_dx_consultant_value": -1,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、システム一覧と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "システム一覧の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は老朽 2件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "システム一覧の老朽 2件と連携 3本を突き合わせ、条件付きで進める",
+          "text": "システム一覧の老朽 2件と連携 3本を突き合わせ、条件付きで進める。材料はシステム一覧、老朽 2件、連携 3本。",
+          "immediateFeedback": "システム一覧に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": 1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、システム一覧と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "システム一覧の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は老朽 2件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "連携 3本の不確実性を理由に、判断範囲を絞る",
+          "text": "連携 3本の不確実性を理由に、判断範囲を絞る。材料はシステム一覧、老朽 2件、連携 3本。",
+          "immediateFeedback": "システム一覧に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": -1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": -1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、システム一覧と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "システム一覧の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は老朽 2件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "it-dx-consultant-システム一覧判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "it-dx-consultant-システム一覧判断",
+        "roleSpecificMaterials": [
+          "システム一覧",
+          "判断対象: システム一覧"
+        ],
+        "roleSpecificMetrics": [
+          "老朽 2件",
+          "連携 3本"
+        ],
+        "roleSpecificFailureRisk": "システム一覧を読まず、老朽 2件か連携 3本のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "老朽 2件と連携 3本を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "システム一覧、老朽 2件、連携 3本を判断の主役にしている。",
+        "kernelConnection": "システム一覧をit-dx-consultant-システム一覧判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "it-dx-consultant-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "課題仮説",
+      "openingHook": "12:20。課題仮説に手戻り 18%と承認 4段階が並んでいる。",
+      "context": "IT/DXコンサルとして課題仮説を確認する。手戻り 18%、承認 4段階が今日の判断材料になる。",
+      "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、課題仮説を読んで次の作業判断を残す。",
+      "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+      "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は課題仮説である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "手戻り 18%の背景と承認 4段階の確度が完全にはそろっていない。",
+      "decisionTradeoff": "手戻り 18%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "it-dx-consultant-課題仮説判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は初期費 1,200万円で副作用を確認する。",
+      "npcDialogue": "先輩:「課題仮説を読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+      "workMaterial": "課題仮説\n- 手戻り 18%\n- 承認 4段階\n- 判断対象: 課題仮説",
+      "decisionPrompt": "it-dx-consultant-課題仮説判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "手戻り 18%を重く見て、当日中に前へ進める",
+          "text": "手戻り 18%を重く見て、当日中に前へ進める。材料は課題仮説、手戻り 18%、承認 4段階。",
+          "immediateFeedback": "課題仮説に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 2,
+            "it_dx_consultant_risk": -1,
+            "it_dx_consultant_speed": 2,
+            "it_dx_consultant_value": -1,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、課題仮説と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "課題仮説の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は手戻り 18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "課題仮説の手戻り 18%と承認 4段階を突き合わせ、条件付きで進める",
+          "text": "課題仮説の手戻り 18%と承認 4段階を突き合わせ、条件付きで進める。材料は課題仮説、手戻り 18%、承認 4段階。",
+          "immediateFeedback": "課題仮説に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": 1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、課題仮説と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "課題仮説の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は手戻り 18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "承認 4段階の不確実性を理由に、判断範囲を絞る",
+          "text": "承認 4段階の不確実性を理由に、判断範囲を絞る。材料は課題仮説、手戻り 18%、承認 4段階。",
+          "immediateFeedback": "課題仮説に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": -1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": -1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、課題仮説と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "課題仮説の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は手戻り 18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "it-dx-consultant-課題仮説判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "it-dx-consultant-課題仮説判断",
+        "roleSpecificMaterials": [
+          "課題仮説",
+          "判断対象: 課題仮説"
+        ],
+        "roleSpecificMetrics": [
+          "手戻り 18%",
+          "承認 4段階"
+        ],
+        "roleSpecificFailureRisk": "課題仮説を読まず、手戻り 18%か承認 4段階のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "手戻り 18%と承認 4段階を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "課題仮説、手戻り 18%、承認 4段階を判断の主役にしている。",
+        "kernelConnection": "課題仮説をit-dx-consultant-課題仮説判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "it-dx-consultant-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "投資対効果表",
+      "openingHook": "14:15。投資対効果表に初期費 1,200万円と回収 24か月が並んでいる。",
+      "context": "IT/DXコンサルとして投資対効果表を確認する。初期費 1,200万円、回収 24か月が今日の判断材料になる。",
+      "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、投資対効果表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+      "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は投資対効果表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "初期費 1,200万円の背景と回収 24か月の確度が完全にはそろっていない。",
+      "decisionTradeoff": "初期費 1,200万円を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "it-dx-consultant-投資対効果表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次はPhase 3本で副作用を確認する。",
+      "npcDialogue": "先輩:「投資対効果表を読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+      "workMaterial": "投資対効果表\n- 初期費 1,200万円\n- 回収 24か月\n- 判断対象: 投資対効果表",
+      "decisionPrompt": "it-dx-consultant-投資対効果表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "初期費 1,200万円を重く見て、当日中に前へ進める",
+          "text": "初期費 1,200万円を重く見て、当日中に前へ進める。材料は投資対効果表、初期費 1,200万円、回収 24か月。",
+          "immediateFeedback": "投資対効果表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 2,
+            "it_dx_consultant_risk": -1,
+            "it_dx_consultant_speed": 2,
+            "it_dx_consultant_value": -1,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、投資対効果表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "投資対効果表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は初期費 1,200万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "投資対効果表の初期費 1,200万円と回収 24か月を突き合わせ、条件付きで進める",
+          "text": "投資対効果表の初期費 1,200万円と回収 24か月を突き合わせ、条件付きで進める。材料は投資対効果表、初期費 1,200万円、回収 24か月。",
+          "immediateFeedback": "投資対効果表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": 1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、投資対効果表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "投資対効果表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は初期費 1,200万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "回収 24か月の不確実性を理由に、判断範囲を絞る",
+          "text": "回収 24か月の不確実性を理由に、判断範囲を絞る。材料は投資対効果表、初期費 1,200万円、回収 24か月。",
+          "immediateFeedback": "投資対効果表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": -1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": -1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、投資対効果表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "投資対効果表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は初期費 1,200万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "it-dx-consultant-投資対効果表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "it-dx-consultant-投資対効果表判断",
+        "roleSpecificMaterials": [
+          "投資対効果表",
+          "判断対象: 投資対効果表"
+        ],
+        "roleSpecificMetrics": [
+          "初期費 1,200万円",
+          "回収 24か月"
+        ],
+        "roleSpecificFailureRisk": "投資対効果表を読まず、初期費 1,200万円か回収 24か月のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "初期費 1,200万円と回収 24か月を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "投資対効果表、初期費 1,200万円、回収 24か月を判断の主役にしている。",
+        "kernelConnection": "投資対効果表をit-dx-consultant-投資対効果表判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "it-dx-consultant-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "ロードマップ",
+      "openingHook": "16:35。ロードマップにPhase 3本と期間 9か月が並んでいる。",
+      "context": "IT/DXコンサルとしてロードマップを確認する。Phase 3本、期間 9か月が今日の判断材料になる。",
+      "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、ロードマップを読んで次の作業判断を残す。",
+      "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+      "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はロードマップである。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "Phase 3本の背景と期間 9か月の確度が完全にはそろっていない。",
+      "decisionTradeoff": "Phase 3本を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "it-dx-consultant-ロードマップ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「ロードマップを読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+      "workMaterial": "ロードマップ\n- Phase 3本\n- 期間 9か月\n- 判断対象: ロードマップ",
+      "decisionPrompt": "it-dx-consultant-ロードマップ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "Phase 3本を重く見て、当日中に前へ進める",
+          "text": "Phase 3本を重く見て、当日中に前へ進める。材料はロードマップ、Phase 3本、期間 9か月。",
+          "immediateFeedback": "ロードマップに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 2,
+            "it_dx_consultant_risk": -1,
+            "it_dx_consultant_speed": 2,
+            "it_dx_consultant_value": -1,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、ロードマップと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "ロードマップの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はPhase 3本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "ロードマップのPhase 3本と期間 9か月を突き合わせ、条件付きで進める",
+          "text": "ロードマップのPhase 3本と期間 9か月を突き合わせ、条件付きで進める。材料はロードマップ、Phase 3本、期間 9か月。",
+          "immediateFeedback": "ロードマップに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": 1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": 1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、ロードマップと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "ロードマップの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はPhase 3本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "期間 9か月の不確実性を理由に、判断範囲を絞る",
+          "text": "期間 9か月の不確実性を理由に、判断範囲を絞る。材料はロードマップ、Phase 3本、期間 9か月。",
+          "immediateFeedback": "ロードマップに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "it_dx_consultant_evidence": -1,
+            "it_dx_consultant_risk": 2,
+            "it_dx_consultant_speed": -1,
+            "it_dx_consultant_value": 2,
+            "it_dx_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "IT/DXコンサルは印象ではなく、ロードマップと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "ロードマップの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次はPhase 3本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "it-dx-consultant-ロードマップ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "it-dx-consultant-ロードマップ判断",
+        "roleSpecificMaterials": [
+          "ロードマップ",
+          "判断対象: ロードマップ"
+        ],
+        "roleSpecificMetrics": [
+          "Phase 3本",
+          "期間 9か月"
+        ],
+        "roleSpecificFailureRisk": "ロードマップを読まず、Phase 3本か期間 9か月のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "Phase 3本と期間 9か月を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "ロードマップ、Phase 3本、期間 9か月を判断の主役にしている。",
+        "kernelConnection": "ロードマップをit-dx-consultant-ロードマップ判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "it-dx-consultant-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "現状業務表",
+          "openingHook": "09:10。現状業務表に手作業 42時間/月と部署 5が並んでいる。",
+          "context": "IT/DXコンサルとして現状業務表を確認する。手作業 42時間/月、部署 5が今日の判断材料になる。",
+          "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、現状業務表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+          "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は現状業務表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "手作業 42時間/月の背景と部署 5の確度が完全にはそろっていない。",
+          "decisionTradeoff": "手作業 42時間/月を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "it-dx-consultant-現状業務表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は老朽 2件で副作用を確認する。",
+          "npcDialogue": "先輩:「現状業務表を読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+          "workMaterial": "現状業務表\n- 手作業 42時間/月\n- 部署 5\n- 判断対象: 現状業務表",
+          "decisionPrompt": "it-dx-consultant-現状業務表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "手作業 42時間/月を重く見て、当日中に前へ進める",
+              "text": "手作業 42時間/月を重く見て、当日中に前へ進める。材料は現状業務表、手作業 42時間/月、部署 5。",
+              "immediateFeedback": "現状業務表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 2,
+                "it_dx_consultant_risk": -1,
+                "it_dx_consultant_speed": 2,
+                "it_dx_consultant_value": -1,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、現状業務表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "現状業務表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は手作業 42時間/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "現状業務表の手作業 42時間/月と部署 5を突き合わせ、条件付きで進める",
+              "text": "現状業務表の手作業 42時間/月と部署 5を突き合わせ、条件付きで進める。材料は現状業務表、手作業 42時間/月、部署 5。",
+              "immediateFeedback": "現状業務表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": 1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、現状業務表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "現状業務表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は手作業 42時間/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "部署 5の不確実性を理由に、判断範囲を絞る",
+              "text": "部署 5の不確実性を理由に、判断範囲を絞る。材料は現状業務表、手作業 42時間/月、部署 5。",
+              "immediateFeedback": "現状業務表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": -1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": -1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、現状業務表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "現状業務表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は手作業 42時間/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "it-dx-consultant-現状業務表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "it-dx-consultant-現状業務表判断",
+            "roleSpecificMaterials": [
+              "現状業務表",
+              "判断対象: 現状業務表"
+            ],
+            "roleSpecificMetrics": [
+              "手作業 42時間/月",
+              "部署 5"
+            ],
+            "roleSpecificFailureRisk": "現状業務表を読まず、手作業 42時間/月か部署 5のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "手作業 42時間/月と部署 5を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "現状業務表、手作業 42時間/月、部署 5を判断の主役にしている。",
+            "kernelConnection": "現状業務表をit-dx-consultant-現状業務表判断へ接続する。"
+          }
+        },
+        {
+          "id": "it-dx-consultant-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "システム一覧",
+          "openingHook": "10:40。システム一覧に老朽 2件と連携 3本が並んでいる。",
+          "context": "IT/DXコンサルとしてシステム一覧を確認する。老朽 2件、連携 3本が今日の判断材料になる。",
+          "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、システム一覧を読んで次の作業判断を残す。",
+          "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+          "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はシステム一覧である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "老朽 2件の背景と連携 3本の確度が完全にはそろっていない。",
+          "decisionTradeoff": "老朽 2件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "it-dx-consultant-システム一覧判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は手戻り 18%で副作用を確認する。",
+          "npcDialogue": "先輩:「システム一覧を読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+          "workMaterial": "システム一覧\n- 老朽 2件\n- 連携 3本\n- 判断対象: システム一覧",
+          "decisionPrompt": "it-dx-consultant-システム一覧判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "老朽 2件を重く見て、当日中に前へ進める",
+              "text": "老朽 2件を重く見て、当日中に前へ進める。材料はシステム一覧、老朽 2件、連携 3本。",
+              "immediateFeedback": "システム一覧に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 2,
+                "it_dx_consultant_risk": -1,
+                "it_dx_consultant_speed": 2,
+                "it_dx_consultant_value": -1,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、システム一覧と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "システム一覧の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は老朽 2件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "システム一覧の老朽 2件と連携 3本を突き合わせ、条件付きで進める",
+              "text": "システム一覧の老朽 2件と連携 3本を突き合わせ、条件付きで進める。材料はシステム一覧、老朽 2件、連携 3本。",
+              "immediateFeedback": "システム一覧に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": 1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、システム一覧と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "システム一覧の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は老朽 2件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "連携 3本の不確実性を理由に、判断範囲を絞る",
+              "text": "連携 3本の不確実性を理由に、判断範囲を絞る。材料はシステム一覧、老朽 2件、連携 3本。",
+              "immediateFeedback": "システム一覧に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": -1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": -1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、システム一覧と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "システム一覧の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は老朽 2件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "it-dx-consultant-システム一覧判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "it-dx-consultant-システム一覧判断",
+            "roleSpecificMaterials": [
+              "システム一覧",
+              "判断対象: システム一覧"
+            ],
+            "roleSpecificMetrics": [
+              "老朽 2件",
+              "連携 3本"
+            ],
+            "roleSpecificFailureRisk": "システム一覧を読まず、老朽 2件か連携 3本のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "老朽 2件と連携 3本を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "システム一覧、老朽 2件、連携 3本を判断の主役にしている。",
+            "kernelConnection": "システム一覧をit-dx-consultant-システム一覧判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "it-dx-consultant-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "課題仮説",
+          "openingHook": "12:20。課題仮説に手戻り 18%と承認 4段階が並んでいる。",
+          "context": "IT/DXコンサルとして課題仮説を確認する。手戻り 18%、承認 4段階が今日の判断材料になる。",
+          "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、課題仮説を読んで次の作業判断を残す。",
+          "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+          "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は課題仮説である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "手戻り 18%の背景と承認 4段階の確度が完全にはそろっていない。",
+          "decisionTradeoff": "手戻り 18%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "it-dx-consultant-課題仮説判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は初期費 1,200万円で副作用を確認する。",
+          "npcDialogue": "先輩:「課題仮説を読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+          "workMaterial": "課題仮説\n- 手戻り 18%\n- 承認 4段階\n- 判断対象: 課題仮説",
+          "decisionPrompt": "it-dx-consultant-課題仮説判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "手戻り 18%を重く見て、当日中に前へ進める",
+              "text": "手戻り 18%を重く見て、当日中に前へ進める。材料は課題仮説、手戻り 18%、承認 4段階。",
+              "immediateFeedback": "課題仮説に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 2,
+                "it_dx_consultant_risk": -1,
+                "it_dx_consultant_speed": 2,
+                "it_dx_consultant_value": -1,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、課題仮説と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "課題仮説の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は手戻り 18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "課題仮説の手戻り 18%と承認 4段階を突き合わせ、条件付きで進める",
+              "text": "課題仮説の手戻り 18%と承認 4段階を突き合わせ、条件付きで進める。材料は課題仮説、手戻り 18%、承認 4段階。",
+              "immediateFeedback": "課題仮説に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": 1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、課題仮説と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "課題仮説の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は手戻り 18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "承認 4段階の不確実性を理由に、判断範囲を絞る",
+              "text": "承認 4段階の不確実性を理由に、判断範囲を絞る。材料は課題仮説、手戻り 18%、承認 4段階。",
+              "immediateFeedback": "課題仮説に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": -1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": -1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、課題仮説と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "課題仮説の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は手戻り 18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "it-dx-consultant-課題仮説判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "it-dx-consultant-課題仮説判断",
+            "roleSpecificMaterials": [
+              "課題仮説",
+              "判断対象: 課題仮説"
+            ],
+            "roleSpecificMetrics": [
+              "手戻り 18%",
+              "承認 4段階"
+            ],
+            "roleSpecificFailureRisk": "課題仮説を読まず、手戻り 18%か承認 4段階のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "手戻り 18%と承認 4段階を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "課題仮説、手戻り 18%、承認 4段階を判断の主役にしている。",
+            "kernelConnection": "課題仮説をit-dx-consultant-課題仮説判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "it-dx-consultant-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "投資対効果表",
+          "openingHook": "14:15。投資対効果表に初期費 1,200万円と回収 24か月が並んでいる。",
+          "context": "IT/DXコンサルとして投資対効果表を確認する。初期費 1,200万円、回収 24か月が今日の判断材料になる。",
+          "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、投資対効果表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+          "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は投資対効果表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "初期費 1,200万円の背景と回収 24か月の確度が完全にはそろっていない。",
+          "decisionTradeoff": "初期費 1,200万円を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "it-dx-consultant-投資対効果表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次はPhase 3本で副作用を確認する。",
+          "npcDialogue": "先輩:「投資対効果表を読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+          "workMaterial": "投資対効果表\n- 初期費 1,200万円\n- 回収 24か月\n- 判断対象: 投資対効果表",
+          "decisionPrompt": "it-dx-consultant-投資対効果表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "初期費 1,200万円を重く見て、当日中に前へ進める",
+              "text": "初期費 1,200万円を重く見て、当日中に前へ進める。材料は投資対効果表、初期費 1,200万円、回収 24か月。",
+              "immediateFeedback": "投資対効果表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 2,
+                "it_dx_consultant_risk": -1,
+                "it_dx_consultant_speed": 2,
+                "it_dx_consultant_value": -1,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、投資対効果表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "投資対効果表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は初期費 1,200万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "投資対効果表の初期費 1,200万円と回収 24か月を突き合わせ、条件付きで進める",
+              "text": "投資対効果表の初期費 1,200万円と回収 24か月を突き合わせ、条件付きで進める。材料は投資対効果表、初期費 1,200万円、回収 24か月。",
+              "immediateFeedback": "投資対効果表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": 1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、投資対効果表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "投資対効果表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は初期費 1,200万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "回収 24か月の不確実性を理由に、判断範囲を絞る",
+              "text": "回収 24か月の不確実性を理由に、判断範囲を絞る。材料は投資対効果表、初期費 1,200万円、回収 24か月。",
+              "immediateFeedback": "投資対効果表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": -1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": -1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、投資対効果表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "投資対効果表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は初期費 1,200万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "it-dx-consultant-投資対効果表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "it-dx-consultant-投資対効果表判断",
+            "roleSpecificMaterials": [
+              "投資対効果表",
+              "判断対象: 投資対効果表"
+            ],
+            "roleSpecificMetrics": [
+              "初期費 1,200万円",
+              "回収 24か月"
+            ],
+            "roleSpecificFailureRisk": "投資対効果表を読まず、初期費 1,200万円か回収 24か月のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "初期費 1,200万円と回収 24か月を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "投資対効果表、初期費 1,200万円、回収 24か月を判断の主役にしている。",
+            "kernelConnection": "投資対効果表をit-dx-consultant-投資対効果表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "it-dx-consultant-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "ロードマップ",
+          "openingHook": "16:35。ロードマップにPhase 3本と期間 9か月が並んでいる。",
+          "context": "IT/DXコンサルとしてロードマップを確認する。Phase 3本、期間 9か月が今日の判断材料になる。",
+          "content": "業務課題・システム制約・投資効果をDX計画へ変換するため、ロードマップを読んで次の作業判断を残す。",
+          "roleSpecificContext": "IT/DXコンサルは業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+          "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はロードマップである。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "Phase 3本の背景と期間 9か月の確度が完全にはそろっていない。",
+          "decisionTradeoff": "Phase 3本を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "it-dx-consultant-ロードマップ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「ロードマップを読まずに進めると、IT/DXコンサルの判断ではなくなる」",
+          "workMaterial": "ロードマップ\n- Phase 3本\n- 期間 9か月\n- 判断対象: ロードマップ",
+          "decisionPrompt": "it-dx-consultant-ロードマップ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "Phase 3本を重く見て、当日中に前へ進める",
+              "text": "Phase 3本を重く見て、当日中に前へ進める。材料はロードマップ、Phase 3本、期間 9か月。",
+              "immediateFeedback": "ロードマップに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 2,
+                "it_dx_consultant_risk": -1,
+                "it_dx_consultant_speed": 2,
+                "it_dx_consultant_value": -1,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、ロードマップと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "ロードマップの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はPhase 3本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "ロードマップのPhase 3本と期間 9か月を突き合わせ、条件付きで進める",
+              "text": "ロードマップのPhase 3本と期間 9か月を突き合わせ、条件付きで進める。材料はロードマップ、Phase 3本、期間 9か月。",
+              "immediateFeedback": "ロードマップに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": 1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": 1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、ロードマップと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "ロードマップの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はPhase 3本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "期間 9か月の不確実性を理由に、判断範囲を絞る",
+              "text": "期間 9か月の不確実性を理由に、判断範囲を絞る。材料はロードマップ、Phase 3本、期間 9か月。",
+              "immediateFeedback": "ロードマップに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "IT/DXコンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "it_dx_consultant_evidence": -1,
+                "it_dx_consultant_risk": 2,
+                "it_dx_consultant_speed": -1,
+                "it_dx_consultant_value": 2,
+                "it_dx_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "IT/DXコンサルは印象ではなく、ロードマップと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "ロードマップの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次はPhase 3本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "it-dx-consultant-ロードマップ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "it-dx-consultant-ロードマップ判断",
+            "roleSpecificMaterials": [
+              "ロードマップ",
+              "判断対象: ロードマップ"
+            ],
+            "roleSpecificMetrics": [
+              "Phase 3本",
+              "期間 9か月"
+            ],
+            "roleSpecificFailureRisk": "ロードマップを読まず、Phase 3本か期間 9か月のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "Phase 3本と期間 9か月を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "ロードマップ、Phase 3本、期間 9か月を判断の主役にしている。",
+            "kernelConnection": "ロードマップをit-dx-consultant-ロードマップ判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "IT/DXコンサルの材料翻訳型",
+      "strengths": [
+        "IT/DXコンサルの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "it_dx_consultant_evidence",
+        "it_dx_consultant_risk"
+      ],
+      "valuedMeters": [
+        "it_dx_consultant_evidence"
+      ],
+      "sacrificedMeters": [
+        "it_dx_consultant_speed"
+      ],
+      "roleRealityReveal": "IT/DXコンサルは、業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "IT/DXコンサルの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "IT/DXコンサルの推進型",
+      "strengths": [
+        "IT/DXコンサルの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "it_dx_consultant_risk",
+        "it_dx_consultant_speed"
+      ],
+      "valuedMeters": [
+        "it_dx_consultant_risk"
+      ],
+      "sacrificedMeters": [
+        "it_dx_consultant_value"
+      ],
+      "roleRealityReveal": "IT/DXコンサルは、業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "IT/DXコンサルの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "IT/DXコンサルの安全設計型",
+      "strengths": [
+        "IT/DXコンサルの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "it_dx_consultant_speed",
+        "it_dx_consultant_value"
+      ],
+      "valuedMeters": [
+        "it_dx_consultant_speed"
+      ],
+      "sacrificedMeters": [
+        "it_dx_consultant_feasibility"
+      ],
+      "roleRealityReveal": "IT/DXコンサルは、業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "IT/DXコンサルの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "IT/DXコンサルは、業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "IT/DXコンサルとして、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "it-dx-consultant_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "it_dx_consultant_evidence_vs_it_dx_consultant_risk",
+      "it_dx_consultant_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "業務課題・システム制約・投資効果をDX計画へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "it_dx_consultant_evidence",
+      "label": "evidence",
+      "description": "IT/DXコンサルのevidence判断"
+    },
+    {
+      "key": "it_dx_consultant_risk",
+      "label": "risk",
+      "description": "IT/DXコンサルのrisk判断"
+    },
+    {
+      "key": "it_dx_consultant_speed",
+      "label": "speed",
+      "description": "IT/DXコンサルのspeed判断"
+    },
+    {
+      "key": "it_dx_consultant_value",
+      "label": "value",
+      "description": "IT/DXコンサルのvalue判断"
+    },
+    {
+      "key": "it_dx_consultant_feasibility",
+      "label": "feasibility",
+      "description": "IT/DXコンサルのfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "IT/DXコンサルの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "it_dx_consultant_evidence",
+      "it_dx_consultant_risk",
+      "it_dx_consultant_speed",
+      "it_dx_consultant_value",
+      "it_dx_consultant_feasibility"
+    ]
+  },
+  "roleCoreFriction": "業務課題・システム制約・投資効果をDX計画へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "IT/DXコンサルは会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "IT/DXコンサルは、業務課題・システム制約・投資効果をDX計画へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "手作業 42時間/月、老朽 2件、手戻り 18%、初期費 1,200万円、Phase 3本、関係者制約、期限",
+    "output": "IT/DXコンサルとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "業務課題・システム制約・投資効果をDX計画へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "手作業 42時間/月",
+      "老朽 2件",
+      "手戻り 18%",
+      "初期費 1,200万円",
+      "Phase 3本"
+    ],
+    "metrics": [
+      "手作業 42時間/月",
+      "部署 5",
+      "老朽 2件",
+      "連携 3本",
+      "手戻り 18%",
+      "承認 4段階",
+      "初期費 1,200万円",
+      "回収 24か月",
+      "Phase 3本",
+      "期間 9か月"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "手作業 42時間/月、老朽 2件、手戻り 18%と部署 5、、連携 3本を読まなければ成立しないため。"
+  }
+}

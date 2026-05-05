@@ -1,0 +1,2192 @@
+{
+  "id": "retail-ec/crm-promotion",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "小売/流通/EC",
+  "industrySlug": "retail-ec",
+  "role": "販売促進/CRM",
+  "roleSlug": "crm-promotion",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "企画系",
+    "分析系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 小売/流通/EC 販売促進/CRM.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "retail-ec",
+      "crm-promotion"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "顧客セグメント表"
+    },
+    {
+      "time": "10:35",
+      "label": "購買履歴分析"
+    },
+    {
+      "time": "12:20",
+      "label": "販促原資表"
+    },
+    {
+      "time": "14:05",
+      "label": "配信案比較"
+    },
+    {
+      "time": "16:25",
+      "label": "効果検証表"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "顧客セグメント表"
+    },
+    {
+      "time": "10:35",
+      "label": "購買履歴分析"
+    },
+    {
+      "time": "12:20",
+      "label": "販促原資表"
+    },
+    {
+      "time": "14:05",
+      "label": "配信案比較"
+    },
+    {
+      "time": "16:25",
+      "label": "効果検証表"
+    }
+  ],
+  "sceneList": [
+    "crm-promotion-01",
+    "crm-promotion-02",
+    "crm-promotion-03",
+    "crm-promotion-04",
+    "crm-promotion-05"
+  ],
+  "meta": {
+    "title": "販売促進/CRM",
+    "industry": "小売/流通/EC",
+    "role": "販売促進/CRM",
+    "duration_minutes": 18,
+    "description": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "crm-promotion-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "顧客セグメント表",
+      "openingHook": "09:10。顧客セグメント表に休眠 18,000人とLTV 2.1万円が並んでいる。",
+      "context": "販売促進/CRMとして顧客セグメント表を確認する。休眠 18,000人、LTV 2.1万円が今日の判断材料になる。",
+      "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、顧客セグメント表を読んで対象を選ぶ。",
+      "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+      "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は顧客セグメント表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "休眠 18,000人の背景とLTV 2.1万円の確度が完全にはそろっていない。",
+      "decisionTradeoff": "休眠 18,000人を重く見るほど、LTV 2.1万円や別の制約を犠牲にする。",
+      "consequenceHook": "crm-promotion-休眠 18,000人判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は購買履歴分析で副作用を確認する。",
+      "npcDialogue": "先輩:「顧客セグメント表を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+      "workMaterial": "顧客セグメント表\n- 休眠 18,000人\n- LTV 2.1万円\n- 判断対象: 顧客セグメント表",
+      "decisionPrompt": "crm-promotion-休眠 18,000人判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "休眠 18,000人を優先し、当日中に顧客セグメント表の結論を出す",
+          "text": "休眠 18,000人を優先し、当日中に顧客セグメント表の結論を出す。材料は休眠 18,000人、LTV 2.1万円。",
+          "immediateFeedback": "休眠 18,000人に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 2,
+            "crm_promotion_risk": -1,
+            "crm_promotion_speed": 2,
+            "crm_promotion_value": -1,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは印象ではなく、休眠 18,000人とLTV 2.1万円を読んで判断する。",
+          "studentFeedback": {
+            "good": "休眠 18,000人の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はLTV 2.1万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "休眠 18,000人とLTV 2.1万円を突き合わせ、条件付きで進める",
+          "text": "休眠 18,000人とLTV 2.1万円を突き合わせ、条件付きで進める。材料は休眠 18,000人、LTV 2.1万円。",
+          "immediateFeedback": "顧客セグメント表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": 1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "休眠 18,000人とLTV 2.1万円を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は顧客セグメント表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "LTV 2.1万円の制約を重く見て、判断範囲を絞る",
+          "text": "LTV 2.1万円の制約を重く見て、判断範囲を絞る。材料は休眠 18,000人、LTV 2.1万円。",
+          "immediateFeedback": "LTV 2.1万円に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": -1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": -1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、休眠 18,000人とLTV 2.1万円の副作用まで読む。",
+          "studentFeedback": {
+            "good": "LTV 2.1万円の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は休眠 18,000人を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "crm-promotion-休眠 18,000人判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "crm-promotion-休眠 18,000人判断",
+        "roleSpecificMaterials": [
+          "顧客セグメント表",
+          "判断対象: 顧客セグメント表"
+        ],
+        "roleSpecificMetrics": [
+          "休眠 18,000人",
+          "LTV 2.1万円"
+        ],
+        "roleSpecificFailureRisk": "顧客セグメント表を読まず、休眠 18,000人かLTV 2.1万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "休眠 18,000人とLTV 2.1万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "顧客セグメント表、休眠 18,000人、LTV 2.1万円を判断の主役にしている。",
+        "kernelConnection": "顧客セグメント表をcrm-promotion-休眠 18,000人判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "crm-promotion-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "購買履歴分析",
+      "openingHook": "10:35。購買履歴分析に再購入率 24%と平均間隔 46日が並んでいる。",
+      "context": "販売促進/CRMとして購買履歴分析を確認する。再購入率 24%、平均間隔 46日が今日の判断材料になる。",
+      "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、購買履歴分析を読んで接触時期を決める。",
+      "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+      "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は購買履歴分析である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "再購入率 24%の背景と平均間隔 46日の確度が完全にはそろっていない。",
+      "decisionTradeoff": "再購入率 24%を重く見るほど、平均間隔 46日や別の制約を犠牲にする。",
+      "consequenceHook": "crm-promotion-再購入率 24%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は販促原資表で副作用を確認する。",
+      "npcDialogue": "先輩:「購買履歴分析を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+      "workMaterial": "購買履歴分析\n- 再購入率 24%\n- 平均間隔 46日\n- 判断対象: 購買履歴分析",
+      "decisionPrompt": "crm-promotion-再購入率 24%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "再購入率 24%を優先し、当日中に購買履歴分析の結論を出す",
+          "text": "再購入率 24%を優先し、当日中に購買履歴分析の結論を出す。材料は再購入率 24%、平均間隔 46日。",
+          "immediateFeedback": "再購入率 24%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 2,
+            "crm_promotion_risk": -1,
+            "crm_promotion_speed": 2,
+            "crm_promotion_value": -1,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは印象ではなく、再購入率 24%と平均間隔 46日を読んで判断する。",
+          "studentFeedback": {
+            "good": "再購入率 24%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は平均間隔 46日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "再購入率 24%と平均間隔 46日を突き合わせ、条件付きで進める",
+          "text": "再購入率 24%と平均間隔 46日を突き合わせ、条件付きで進める。材料は再購入率 24%、平均間隔 46日。",
+          "immediateFeedback": "購買履歴分析に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": 1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "再購入率 24%と平均間隔 46日を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は購買履歴分析の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "平均間隔 46日の制約を重く見て、判断範囲を絞る",
+          "text": "平均間隔 46日の制約を重く見て、判断範囲を絞る。材料は再購入率 24%、平均間隔 46日。",
+          "immediateFeedback": "平均間隔 46日に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": -1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": -1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、再購入率 24%と平均間隔 46日の副作用まで読む。",
+          "studentFeedback": {
+            "good": "平均間隔 46日の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は再購入率 24%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "crm-promotion-再購入率 24%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "crm-promotion-再購入率 24%判断",
+        "roleSpecificMaterials": [
+          "購買履歴分析",
+          "判断対象: 購買履歴分析"
+        ],
+        "roleSpecificMetrics": [
+          "再購入率 24%",
+          "平均間隔 46日"
+        ],
+        "roleSpecificFailureRisk": "購買履歴分析を読まず、再購入率 24%か平均間隔 46日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "再購入率 24%と平均間隔 46日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "購買履歴分析、再購入率 24%、平均間隔 46日を判断の主役にしている。",
+        "kernelConnection": "購買履歴分析をcrm-promotion-再購入率 24%判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "crm-promotion-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "販促原資表",
+      "openingHook": "12:20。販促原資表に原資 320万円と上限割引 12%が並んでいる。",
+      "context": "販売促進/CRMとして販促原資表を確認する。原資 320万円、上限割引 12%が今日の判断材料になる。",
+      "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、販促原資表を読んで特典設計を切る。",
+      "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+      "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は販促原資表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "原資 320万円の背景と上限割引 12%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "原資 320万円を重く見るほど、上限割引 12%や別の制約を犠牲にする。",
+      "consequenceHook": "crm-promotion-原資 320万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は配信案比較で副作用を確認する。",
+      "npcDialogue": "先輩:「販促原資表を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+      "workMaterial": "販促原資表\n- 原資 320万円\n- 上限割引 12%\n- 判断対象: 販促原資表",
+      "decisionPrompt": "crm-promotion-原資 320万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "原資 320万円を優先し、当日中に販促原資表の結論を出す",
+          "text": "原資 320万円を優先し、当日中に販促原資表の結論を出す。材料は原資 320万円、上限割引 12%。",
+          "immediateFeedback": "原資 320万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 2,
+            "crm_promotion_risk": -1,
+            "crm_promotion_speed": 2,
+            "crm_promotion_value": -1,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは印象ではなく、原資 320万円と上限割引 12%を読んで判断する。",
+          "studentFeedback": {
+            "good": "原資 320万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は上限割引 12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "原資 320万円と上限割引 12%を突き合わせ、条件付きで進める",
+          "text": "原資 320万円と上限割引 12%を突き合わせ、条件付きで進める。材料は原資 320万円、上限割引 12%。",
+          "immediateFeedback": "販促原資表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": 1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "原資 320万円と上限割引 12%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は販促原資表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "上限割引 12%の制約を重く見て、判断範囲を絞る",
+          "text": "上限割引 12%の制約を重く見て、判断範囲を絞る。材料は原資 320万円、上限割引 12%。",
+          "immediateFeedback": "上限割引 12%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": -1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": -1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、原資 320万円と上限割引 12%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "上限割引 12%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は原資 320万円を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "crm-promotion-原資 320万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "crm-promotion-原資 320万円判断",
+        "roleSpecificMaterials": [
+          "販促原資表",
+          "判断対象: 販促原資表"
+        ],
+        "roleSpecificMetrics": [
+          "原資 320万円",
+          "上限割引 12%"
+        ],
+        "roleSpecificFailureRisk": "販促原資表を読まず、原資 320万円か上限割引 12%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "原資 320万円と上限割引 12%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "販促原資表、原資 320万円、上限割引 12%を判断の主役にしている。",
+        "kernelConnection": "販促原資表をcrm-promotion-原資 320万円判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "crm-promotion-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "配信案比較",
+      "openingHook": "14:05。配信案比較に開封率 31%とクリック 6.4%が並んでいる。",
+      "context": "販売促進/CRMとして配信案比較を確認する。開封率 31%、クリック 6.4%が今日の判断材料になる。",
+      "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、配信案比較を読んで文面軸を選ぶ。",
+      "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+      "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は配信案比較である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "開封率 31%の背景とクリック 6.4%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "開封率 31%を重く見るほど、クリック 6.4%や別の制約を犠牲にする。",
+      "consequenceHook": "crm-promotion-開封率 31%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は効果検証表で副作用を確認する。",
+      "npcDialogue": "先輩:「配信案比較を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+      "workMaterial": "配信案比較\n- 開封率 31%\n- クリック 6.4%\n- 判断対象: 配信案比較",
+      "decisionPrompt": "crm-promotion-開封率 31%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "開封率 31%を優先し、当日中に配信案比較の結論を出す",
+          "text": "開封率 31%を優先し、当日中に配信案比較の結論を出す。材料は開封率 31%、クリック 6.4%。",
+          "immediateFeedback": "開封率 31%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 2,
+            "crm_promotion_risk": -1,
+            "crm_promotion_speed": 2,
+            "crm_promotion_value": -1,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは印象ではなく、開封率 31%とクリック 6.4%を読んで判断する。",
+          "studentFeedback": {
+            "good": "開封率 31%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はクリック 6.4%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "開封率 31%とクリック 6.4%を突き合わせ、条件付きで進める",
+          "text": "開封率 31%とクリック 6.4%を突き合わせ、条件付きで進める。材料は開封率 31%、クリック 6.4%。",
+          "immediateFeedback": "配信案比較に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": 1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "開封率 31%とクリック 6.4%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は配信案比較の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "クリック 6.4%の制約を重く見て、判断範囲を絞る",
+          "text": "クリック 6.4%の制約を重く見て、判断範囲を絞る。材料は開封率 31%、クリック 6.4%。",
+          "immediateFeedback": "クリック 6.4%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": -1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": -1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、開封率 31%とクリック 6.4%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "クリック 6.4%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は開封率 31%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "crm-promotion-開封率 31%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "crm-promotion-開封率 31%判断",
+        "roleSpecificMaterials": [
+          "配信案比較",
+          "判断対象: 配信案比較"
+        ],
+        "roleSpecificMetrics": [
+          "開封率 31%",
+          "クリック 6.4%"
+        ],
+        "roleSpecificFailureRisk": "配信案比較を読まず、開封率 31%かクリック 6.4%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "開封率 31%とクリック 6.4%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "配信案比較、開封率 31%、クリック 6.4%を判断の主役にしている。",
+        "kernelConnection": "配信案比較をcrm-promotion-開封率 31%判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "crm-promotion-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "効果検証表",
+      "openingHook": "16:25。効果検証表に増分売上 680万円と粗利 27%が並んでいる。",
+      "context": "販売促進/CRMとして効果検証表を確認する。増分売上 680万円、粗利 27%が今日の判断材料になる。",
+      "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、効果検証表を読んで継続判断を残す。",
+      "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+      "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は効果検証表である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "増分売上 680万円の背景と粗利 27%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "増分売上 680万円を重く見るほど、粗利 27%や別の制約を犠牲にする。",
+      "consequenceHook": "crm-promotion-増分売上 680万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「効果検証表を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+      "workMaterial": "効果検証表\n- 増分売上 680万円\n- 粗利 27%\n- 判断対象: 効果検証表",
+      "decisionPrompt": "crm-promotion-増分売上 680万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "増分売上 680万円を優先し、当日中に効果検証表の結論を出す",
+          "text": "増分売上 680万円を優先し、当日中に効果検証表の結論を出す。材料は増分売上 680万円、粗利 27%。",
+          "immediateFeedback": "増分売上 680万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 2,
+            "crm_promotion_risk": -1,
+            "crm_promotion_speed": 2,
+            "crm_promotion_value": -1,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは印象ではなく、増分売上 680万円と粗利 27%を読んで判断する。",
+          "studentFeedback": {
+            "good": "増分売上 680万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は粗利 27%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "増分売上 680万円と粗利 27%を突き合わせ、条件付きで進める",
+          "text": "増分売上 680万円と粗利 27%を突き合わせ、条件付きで進める。材料は増分売上 680万円、粗利 27%。",
+          "immediateFeedback": "効果検証表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": 1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": 1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "増分売上 680万円と粗利 27%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は効果検証表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "粗利 27%の制約を重く見て、判断範囲を絞る",
+          "text": "粗利 27%の制約を重く見て、判断範囲を絞る。材料は増分売上 680万円、粗利 27%。",
+          "immediateFeedback": "粗利 27%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "crm_promotion_evidence": -1,
+            "crm_promotion_risk": 2,
+            "crm_promotion_speed": -1,
+            "crm_promotion_value": 2,
+            "crm_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、増分売上 680万円と粗利 27%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "粗利 27%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は増分売上 680万円を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "crm-promotion-増分売上 680万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "crm-promotion-増分売上 680万円判断",
+        "roleSpecificMaterials": [
+          "効果検証表",
+          "判断対象: 効果検証表"
+        ],
+        "roleSpecificMetrics": [
+          "増分売上 680万円",
+          "粗利 27%"
+        ],
+        "roleSpecificFailureRisk": "効果検証表を読まず、増分売上 680万円か粗利 27%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "増分売上 680万円と粗利 27%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "効果検証表、増分売上 680万円、粗利 27%を判断の主役にしている。",
+        "kernelConnection": "効果検証表をcrm-promotion-増分売上 680万円判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。販売促進/CRMとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "crm-promotion-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "顧客セグメント表",
+          "openingHook": "09:10。顧客セグメント表に休眠 18,000人とLTV 2.1万円が並んでいる。",
+          "context": "販売促進/CRMとして顧客セグメント表を確認する。休眠 18,000人、LTV 2.1万円が今日の判断材料になる。",
+          "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、顧客セグメント表を読んで対象を選ぶ。",
+          "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+          "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は顧客セグメント表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "休眠 18,000人の背景とLTV 2.1万円の確度が完全にはそろっていない。",
+          "decisionTradeoff": "休眠 18,000人を重く見るほど、LTV 2.1万円や別の制約を犠牲にする。",
+          "consequenceHook": "crm-promotion-休眠 18,000人判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は購買履歴分析で副作用を確認する。",
+          "npcDialogue": "先輩:「顧客セグメント表を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+          "workMaterial": "顧客セグメント表\n- 休眠 18,000人\n- LTV 2.1万円\n- 判断対象: 顧客セグメント表",
+          "decisionPrompt": "crm-promotion-休眠 18,000人判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "休眠 18,000人を優先し、当日中に顧客セグメント表の結論を出す",
+              "text": "休眠 18,000人を優先し、当日中に顧客セグメント表の結論を出す。材料は休眠 18,000人、LTV 2.1万円。",
+              "immediateFeedback": "休眠 18,000人に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 2,
+                "crm_promotion_risk": -1,
+                "crm_promotion_speed": 2,
+                "crm_promotion_value": -1,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは印象ではなく、休眠 18,000人とLTV 2.1万円を読んで判断する。",
+              "studentFeedback": {
+                "good": "休眠 18,000人の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はLTV 2.1万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "休眠 18,000人とLTV 2.1万円を突き合わせ、条件付きで進める",
+              "text": "休眠 18,000人とLTV 2.1万円を突き合わせ、条件付きで進める。材料は休眠 18,000人、LTV 2.1万円。",
+              "immediateFeedback": "顧客セグメント表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": 1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "休眠 18,000人とLTV 2.1万円を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は顧客セグメント表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "LTV 2.1万円の制約を重く見て、判断範囲を絞る",
+              "text": "LTV 2.1万円の制約を重く見て、判断範囲を絞る。材料は休眠 18,000人、LTV 2.1万円。",
+              "immediateFeedback": "LTV 2.1万円に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": -1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": -1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、休眠 18,000人とLTV 2.1万円の副作用まで読む。",
+              "studentFeedback": {
+                "good": "LTV 2.1万円の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は休眠 18,000人を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "crm-promotion-休眠 18,000人判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "crm-promotion-休眠 18,000人判断",
+            "roleSpecificMaterials": [
+              "顧客セグメント表",
+              "判断対象: 顧客セグメント表"
+            ],
+            "roleSpecificMetrics": [
+              "休眠 18,000人",
+              "LTV 2.1万円"
+            ],
+            "roleSpecificFailureRisk": "顧客セグメント表を読まず、休眠 18,000人かLTV 2.1万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "休眠 18,000人とLTV 2.1万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "顧客セグメント表、休眠 18,000人、LTV 2.1万円を判断の主役にしている。",
+            "kernelConnection": "顧客セグメント表をcrm-promotion-休眠 18,000人判断へ接続する。"
+          }
+        },
+        {
+          "id": "crm-promotion-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "購買履歴分析",
+          "openingHook": "10:35。購買履歴分析に再購入率 24%と平均間隔 46日が並んでいる。",
+          "context": "販売促進/CRMとして購買履歴分析を確認する。再購入率 24%、平均間隔 46日が今日の判断材料になる。",
+          "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、購買履歴分析を読んで接触時期を決める。",
+          "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+          "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は購買履歴分析である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "再購入率 24%の背景と平均間隔 46日の確度が完全にはそろっていない。",
+          "decisionTradeoff": "再購入率 24%を重く見るほど、平均間隔 46日や別の制約を犠牲にする。",
+          "consequenceHook": "crm-promotion-再購入率 24%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は販促原資表で副作用を確認する。",
+          "npcDialogue": "先輩:「購買履歴分析を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+          "workMaterial": "購買履歴分析\n- 再購入率 24%\n- 平均間隔 46日\n- 判断対象: 購買履歴分析",
+          "decisionPrompt": "crm-promotion-再購入率 24%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "再購入率 24%を優先し、当日中に購買履歴分析の結論を出す",
+              "text": "再購入率 24%を優先し、当日中に購買履歴分析の結論を出す。材料は再購入率 24%、平均間隔 46日。",
+              "immediateFeedback": "再購入率 24%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 2,
+                "crm_promotion_risk": -1,
+                "crm_promotion_speed": 2,
+                "crm_promotion_value": -1,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは印象ではなく、再購入率 24%と平均間隔 46日を読んで判断する。",
+              "studentFeedback": {
+                "good": "再購入率 24%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は平均間隔 46日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "再購入率 24%と平均間隔 46日を突き合わせ、条件付きで進める",
+              "text": "再購入率 24%と平均間隔 46日を突き合わせ、条件付きで進める。材料は再購入率 24%、平均間隔 46日。",
+              "immediateFeedback": "購買履歴分析に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": 1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "再購入率 24%と平均間隔 46日を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は購買履歴分析の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "平均間隔 46日の制約を重く見て、判断範囲を絞る",
+              "text": "平均間隔 46日の制約を重く見て、判断範囲を絞る。材料は再購入率 24%、平均間隔 46日。",
+              "immediateFeedback": "平均間隔 46日に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": -1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": -1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、再購入率 24%と平均間隔 46日の副作用まで読む。",
+              "studentFeedback": {
+                "good": "平均間隔 46日の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は再購入率 24%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "crm-promotion-再購入率 24%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "crm-promotion-再購入率 24%判断",
+            "roleSpecificMaterials": [
+              "購買履歴分析",
+              "判断対象: 購買履歴分析"
+            ],
+            "roleSpecificMetrics": [
+              "再購入率 24%",
+              "平均間隔 46日"
+            ],
+            "roleSpecificFailureRisk": "購買履歴分析を読まず、再購入率 24%か平均間隔 46日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "再購入率 24%と平均間隔 46日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "購買履歴分析、再購入率 24%、平均間隔 46日を判断の主役にしている。",
+            "kernelConnection": "購買履歴分析をcrm-promotion-再購入率 24%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。販売促進/CRMとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "crm-promotion-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "販促原資表",
+          "openingHook": "12:20。販促原資表に原資 320万円と上限割引 12%が並んでいる。",
+          "context": "販売促進/CRMとして販促原資表を確認する。原資 320万円、上限割引 12%が今日の判断材料になる。",
+          "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、販促原資表を読んで特典設計を切る。",
+          "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+          "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は販促原資表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "原資 320万円の背景と上限割引 12%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "原資 320万円を重く見るほど、上限割引 12%や別の制約を犠牲にする。",
+          "consequenceHook": "crm-promotion-原資 320万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は配信案比較で副作用を確認する。",
+          "npcDialogue": "先輩:「販促原資表を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+          "workMaterial": "販促原資表\n- 原資 320万円\n- 上限割引 12%\n- 判断対象: 販促原資表",
+          "decisionPrompt": "crm-promotion-原資 320万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "原資 320万円を優先し、当日中に販促原資表の結論を出す",
+              "text": "原資 320万円を優先し、当日中に販促原資表の結論を出す。材料は原資 320万円、上限割引 12%。",
+              "immediateFeedback": "原資 320万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 2,
+                "crm_promotion_risk": -1,
+                "crm_promotion_speed": 2,
+                "crm_promotion_value": -1,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは印象ではなく、原資 320万円と上限割引 12%を読んで判断する。",
+              "studentFeedback": {
+                "good": "原資 320万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は上限割引 12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "原資 320万円と上限割引 12%を突き合わせ、条件付きで進める",
+              "text": "原資 320万円と上限割引 12%を突き合わせ、条件付きで進める。材料は原資 320万円、上限割引 12%。",
+              "immediateFeedback": "販促原資表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": 1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "原資 320万円と上限割引 12%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は販促原資表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "上限割引 12%の制約を重く見て、判断範囲を絞る",
+              "text": "上限割引 12%の制約を重く見て、判断範囲を絞る。材料は原資 320万円、上限割引 12%。",
+              "immediateFeedback": "上限割引 12%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": -1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": -1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、原資 320万円と上限割引 12%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "上限割引 12%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は原資 320万円を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "crm-promotion-原資 320万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "crm-promotion-原資 320万円判断",
+            "roleSpecificMaterials": [
+              "販促原資表",
+              "判断対象: 販促原資表"
+            ],
+            "roleSpecificMetrics": [
+              "原資 320万円",
+              "上限割引 12%"
+            ],
+            "roleSpecificFailureRisk": "販促原資表を読まず、原資 320万円か上限割引 12%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "原資 320万円と上限割引 12%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "販促原資表、原資 320万円、上限割引 12%を判断の主役にしている。",
+            "kernelConnection": "販促原資表をcrm-promotion-原資 320万円判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。販売促進/CRMとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "crm-promotion-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "配信案比較",
+          "openingHook": "14:05。配信案比較に開封率 31%とクリック 6.4%が並んでいる。",
+          "context": "販売促進/CRMとして配信案比較を確認する。開封率 31%、クリック 6.4%が今日の判断材料になる。",
+          "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、配信案比較を読んで文面軸を選ぶ。",
+          "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+          "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は配信案比較である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "開封率 31%の背景とクリック 6.4%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "開封率 31%を重く見るほど、クリック 6.4%や別の制約を犠牲にする。",
+          "consequenceHook": "crm-promotion-開封率 31%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は効果検証表で副作用を確認する。",
+          "npcDialogue": "先輩:「配信案比較を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+          "workMaterial": "配信案比較\n- 開封率 31%\n- クリック 6.4%\n- 判断対象: 配信案比較",
+          "decisionPrompt": "crm-promotion-開封率 31%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "開封率 31%を優先し、当日中に配信案比較の結論を出す",
+              "text": "開封率 31%を優先し、当日中に配信案比較の結論を出す。材料は開封率 31%、クリック 6.4%。",
+              "immediateFeedback": "開封率 31%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 2,
+                "crm_promotion_risk": -1,
+                "crm_promotion_speed": 2,
+                "crm_promotion_value": -1,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは印象ではなく、開封率 31%とクリック 6.4%を読んで判断する。",
+              "studentFeedback": {
+                "good": "開封率 31%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はクリック 6.4%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "開封率 31%とクリック 6.4%を突き合わせ、条件付きで進める",
+              "text": "開封率 31%とクリック 6.4%を突き合わせ、条件付きで進める。材料は開封率 31%、クリック 6.4%。",
+              "immediateFeedback": "配信案比較に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": 1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "開封率 31%とクリック 6.4%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は配信案比較の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "クリック 6.4%の制約を重く見て、判断範囲を絞る",
+              "text": "クリック 6.4%の制約を重く見て、判断範囲を絞る。材料は開封率 31%、クリック 6.4%。",
+              "immediateFeedback": "クリック 6.4%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": -1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": -1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、開封率 31%とクリック 6.4%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "クリック 6.4%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は開封率 31%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "crm-promotion-開封率 31%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "crm-promotion-開封率 31%判断",
+            "roleSpecificMaterials": [
+              "配信案比較",
+              "判断対象: 配信案比較"
+            ],
+            "roleSpecificMetrics": [
+              "開封率 31%",
+              "クリック 6.4%"
+            ],
+            "roleSpecificFailureRisk": "配信案比較を読まず、開封率 31%かクリック 6.4%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "開封率 31%とクリック 6.4%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "配信案比較、開封率 31%、クリック 6.4%を判断の主役にしている。",
+            "kernelConnection": "配信案比較をcrm-promotion-開封率 31%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。販売促進/CRMとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "crm-promotion-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "効果検証表",
+          "openingHook": "16:25。効果検証表に増分売上 680万円と粗利 27%が並んでいる。",
+          "context": "販売促進/CRMとして効果検証表を確認する。増分売上 680万円、粗利 27%が今日の判断材料になる。",
+          "content": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換するため、効果検証表を読んで継続判断を残す。",
+          "roleSpecificContext": "販売促進/CRMは顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する仕事。",
+          "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は効果検証表である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "増分売上 680万円の背景と粗利 27%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "増分売上 680万円を重く見るほど、粗利 27%や別の制約を犠牲にする。",
+          "consequenceHook": "crm-promotion-増分売上 680万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「効果検証表を読まずに進めると、販売促進/CRMの判断ではなくなる」",
+          "workMaterial": "効果検証表\n- 増分売上 680万円\n- 粗利 27%\n- 判断対象: 効果検証表",
+          "decisionPrompt": "crm-promotion-増分売上 680万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "増分売上 680万円を優先し、当日中に効果検証表の結論を出す",
+              "text": "増分売上 680万円を優先し、当日中に効果検証表の結論を出す。材料は増分売上 680万円、粗利 27%。",
+              "immediateFeedback": "増分売上 680万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 2,
+                "crm_promotion_risk": -1,
+                "crm_promotion_speed": 2,
+                "crm_promotion_value": -1,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは印象ではなく、増分売上 680万円と粗利 27%を読んで判断する。",
+              "studentFeedback": {
+                "good": "増分売上 680万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は粗利 27%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "増分売上 680万円と粗利 27%を突き合わせ、条件付きで進める",
+              "text": "増分売上 680万円と粗利 27%を突き合わせ、条件付きで進める。材料は増分売上 680万円、粗利 27%。",
+              "immediateFeedback": "効果検証表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": 1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": 1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "販売促進/CRMは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "増分売上 680万円と粗利 27%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は効果検証表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "粗利 27%の制約を重く見て、判断範囲を絞る",
+              "text": "粗利 27%の制約を重く見て、判断範囲を絞る。材料は増分売上 680万円、粗利 27%。",
+              "immediateFeedback": "粗利 27%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "販売促進/CRMで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "crm_promotion_evidence": -1,
+                "crm_promotion_risk": 2,
+                "crm_promotion_speed": -1,
+                "crm_promotion_value": 2,
+                "crm_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "販売促進/CRMは慎重さだけでなく、増分売上 680万円と粗利 27%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "粗利 27%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は増分売上 680万円を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "crm-promotion-増分売上 680万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "crm-promotion-増分売上 680万円判断",
+            "roleSpecificMaterials": [
+              "効果検証表",
+              "判断対象: 効果検証表"
+            ],
+            "roleSpecificMetrics": [
+              "増分売上 680万円",
+              "粗利 27%"
+            ],
+            "roleSpecificFailureRisk": "効果検証表を読まず、増分売上 680万円か粗利 27%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "増分売上 680万円と粗利 27%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "効果検証表、増分売上 680万円、粗利 27%を判断の主役にしている。",
+            "kernelConnection": "効果検証表をcrm-promotion-増分売上 680万円判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "crm-promotion-material-reader",
+      "title": "販売促進/CRMの材料読解型",
+      "strengths": [
+        "販売促進/CRMの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "crm_promotion_evidence",
+        "crm_promotion_risk"
+      ],
+      "valuedMeters": [
+        "crm_promotion_evidence"
+      ],
+      "sacrificedMeters": [
+        "crm_promotion_speed"
+      ],
+      "roleRealityReveal": "販売促進/CRMは、購買履歴と販促原資を読み、続けて使われる理由を設計する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "販売促進/CRMの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "crm-promotion-constraint-designer",
+      "title": "販売促進/CRMの制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "crm_promotion_risk",
+        "crm_promotion_speed"
+      ],
+      "valuedMeters": [
+        "crm_promotion_risk"
+      ],
+      "sacrificedMeters": [
+        "crm_promotion_value"
+      ],
+      "roleRealityReveal": "販売促進/CRMは、購買履歴と販促原資を読み、続けて使われる理由を設計する仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "販売促進/CRMとして制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "crm-promotion-execution-planner",
+      "title": "販売促進/CRMの実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "crm_promotion_speed",
+        "crm_promotion_value"
+      ],
+      "valuedMeters": [
+        "crm_promotion_speed"
+      ],
+      "sacrificedMeters": [
+        "crm_promotion_feasibility"
+      ],
+      "roleRealityReveal": "販売促進/CRMは、購買履歴と販促原資を読み、続けて使われる理由を設計する仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "販売促進/CRMとして実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "販売促進/CRMは、購買履歴と販促原資を読み、続けて使われる理由を設計する仕事。",
+    "misconceptionCorrection": "販売促進/CRMは印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "販売促進/CRMとして、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "crm-promotion_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "crm_promotion_retention_vs_crm_promotion_margin",
+      "crm_promotion_segment_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "crm_promotion_retention",
+      "label": "retention",
+      "description": "販売促進/CRMのretention判断"
+    },
+    {
+      "key": "crm_promotion_margin",
+      "label": "margin",
+      "description": "販売促進/CRMのmargin判断"
+    },
+    {
+      "key": "crm_promotion_segment",
+      "label": "segment",
+      "description": "販売促進/CRMのsegment判断"
+    },
+    {
+      "key": "crm_promotion_offer",
+      "label": "offer",
+      "description": "販売促進/CRMのoffer判断"
+    },
+    {
+      "key": "crm_promotion_learning",
+      "label": "learning",
+      "description": "販売促進/CRMのlearning判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "販売促進/CRMの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "crm_promotion_retention",
+      "crm_promotion_margin",
+      "crm_promotion_segment",
+      "crm_promotion_offer",
+      "crm_promotion_learning"
+    ]
+  },
+  "roleCoreFriction": "割引を強めるほど反応は増えるが、粗利と長期利用を読まない販促は価値を削る葛藤。",
+  "roleMisconception": "販売促進/CRMはクーポンやメルマガを作る仕事で、顧客別の継続価値設計は補助的だと思われやすい。",
+  "roleRealityReveal": "販売促進/CRMは、購買履歴と販促原資を読み、続けて使われる理由を設計する仕事。",
+  "roleWorkKernel": {
+    "input": "休眠 18,000人、LTV 2.1万円、再購入率 24%、平均間隔 46日、原資 320万円、上限割引 12%、開封率 31%、クリック 6.4%、増分売上 680万円、粗利 27%",
+    "output": "販売促進/CRMとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "顧客セグメント、購買履歴、販促原資を継続利用施策へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "顧客セグメント表",
+      "購買履歴分析",
+      "販促原資表",
+      "配信案比較",
+      "効果検証表"
+    ],
+    "metrics": [
+      "休眠 18,000人",
+      "LTV 2.1万円",
+      "再購入率 24%",
+      "平均間隔 46日",
+      "原資 320万円",
+      "上限割引 12%",
+      "開封率 31%",
+      "クリック 6.4%",
+      "増分売上 680万円",
+      "粗利 27%"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "顧客セグメント表、購買履歴分析、販促原資表と休眠 18,000人、再購入率 24%を読まなければ成立しないため。"
+  }
+}

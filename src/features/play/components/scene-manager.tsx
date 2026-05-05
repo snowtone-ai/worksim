@@ -1,14 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import type { Scenario, Scene } from '@/lib/scenario/loader'
 import { encodeAnswers } from '@/lib/scoring/calculator'
+import { trackScenarioEvent } from '@/lib/analytics/events'
 import { TaskEmail } from './task-email'
 import { TaskMeeting } from './task-meeting'
 import { TaskReview } from './task-review'
 import { TaskDebug } from './task-debug'
 import { GlossaryPanel } from './glossary-panel'
+import { SceneFeedback } from './scene-feedback'
+import { ScenarioIntro } from './scenario-intro'
 
 type Props = {
   scenario: Scenario
@@ -22,25 +25,43 @@ export function SceneManager({ scenario, industry, role }: Props) {
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [answered, setAnswered] = useState<string | null>(null)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [started, setStarted] = useState(scenario.id === 'it/web-engineer')
 
   const currentScene = scenario.scenes[sceneIndex]
-  if (!currentScene) return null
-
   const totalScenes = scenario.scenes.length
   const progress = Math.round((sceneIndex / totalScenes) * 100)
-  const currentSceneId = currentScene.id
+  const currentSceneId = currentScene?.id ?? ''
 
   function handleAnswer(choiceId: string) {
     setAnswered(choiceId)
     setAnswers((prev) => ({ ...prev, [currentSceneId]: choiceId }))
+    trackScenarioEvent({
+      eventName: 'choice_select',
+      scenarioId: scenario.id,
+      industrySlug: industry,
+      roleSlug: role,
+      sceneId: currentSceneId,
+      choiceId,
+      mode: 'immersive',
+    })
   }
 
   function handleNext() {
     setIsTransitioning(true)
     setTimeout(() => {
       const nextIndex = sceneIndex + 1
+      const finalAnswers = answered ? { ...answers, [currentSceneId]: answered } : { ...answers }
       if (nextIndex >= totalScenes) {
-        const encoded = encodeAnswers({ ...answers })
+        trackScenarioEvent({
+          eventName: 'scenario_complete',
+          scenarioId: scenario.id,
+          industrySlug: industry,
+          roleSlug: role,
+          sceneId: currentSceneId,
+          choiceId: answered ?? undefined,
+          mode: 'immersive',
+        })
+        const encoded = encodeAnswers(finalAnswers)
         router.push(`/play/${industry}/${role}/result?a=${encoded}`)
       } else {
         setSceneIndex(nextIndex)
@@ -49,6 +70,39 @@ export function SceneManager({ scenario, industry, role }: Props) {
       }
     }, 200)
   }
+
+  const selectedChoice = currentScene?.choices.find((choice) => choice.id === answered)
+
+  useEffect(() => {
+    if (!started || !currentSceneId) return
+    trackScenarioEvent({
+      eventName: sceneIndex === 0 ? 'scenario_start' : 'scene_view',
+      scenarioId: scenario.id,
+      industrySlug: industry,
+      roleSlug: role,
+      sceneId: currentSceneId,
+      mode: 'immersive',
+    })
+  }, [currentSceneId, industry, role, scenario.id, sceneIndex, started])
+
+  useEffect(() => {
+    if (!started || !selectedChoice || !currentSceneId) return
+    trackScenarioEvent({
+      eventName: 'feedback_view',
+      scenarioId: scenario.id,
+      industrySlug: industry,
+      roleSlug: role,
+      sceneId: currentSceneId,
+      choiceId: selectedChoice.id,
+      mode: 'immersive',
+    })
+  }, [currentSceneId, industry, role, scenario.id, selectedChoice, started])
+
+  if (!started) {
+    return <ScenarioIntro scenario={scenario} onStart={() => setStarted(true)} />
+  }
+
+  if (!currentScene) return null
 
   return (
     <div className={`flex flex-col gap-6 transition-opacity duration-200 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
@@ -83,6 +137,8 @@ export function SceneManager({ scenario, industry, role }: Props) {
         <GlossaryPanel glossary={scenario.glossary} />
       )}
 
+      {selectedChoice && <SceneFeedback choice={selectedChoice} />}
+
       {/* Next button */}
       {answered && (
         <button
@@ -101,8 +157,8 @@ function sceneTypeLabel(scene: Scene): string {
     email: 'メール対応',
     meeting: '会議',
     memo: 'メモ確認',
-    debug: 'デバッグ',
-    review: 'コードレビュー',
+    debug: '問題調査',
+    review: '資料確認',
   }
   return labels[scene.type] ?? scene.type
 }

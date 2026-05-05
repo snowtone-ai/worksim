@@ -1,0 +1,2190 @@
+{
+  "id": "finance/retail-asset-advisor",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "金融",
+  "industrySlug": "finance",
+  "role": "個人資産相談/リテール営業",
+  "roleSlug": "retail-asset-advisor",
+  "roleCategory": "industry_specific_sales",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "営業系",
+    "分析系",
+    "高難易度"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 金融 個人資産相談/リテール営業.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "finance",
+      "retail-asset-advisor"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "家計ヒアリング"
+    },
+    {
+      "time": "10:40",
+      "label": "保有資産表"
+    },
+    {
+      "time": "12:20",
+      "label": "リスク確認票"
+    },
+    {
+      "time": "14:15",
+      "label": "商品比較表"
+    },
+    {
+      "time": "16:35",
+      "label": "提案メモ"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "家計ヒアリング"
+    },
+    {
+      "time": "10:40",
+      "label": "保有資産表"
+    },
+    {
+      "time": "12:20",
+      "label": "リスク確認票"
+    },
+    {
+      "time": "14:15",
+      "label": "商品比較表"
+    },
+    {
+      "time": "16:35",
+      "label": "提案メモ"
+    }
+  ],
+  "sceneList": [
+    "retail-asset-advisor-01",
+    "retail-asset-advisor-02",
+    "retail-asset-advisor-03",
+    "retail-asset-advisor-04",
+    "retail-asset-advisor-05"
+  ],
+  "meta": {
+    "title": "個人資産相談/リテール営業",
+    "industry": "金融",
+    "role": "個人資産相談/リテール営業",
+    "duration_minutes": 18,
+    "description": "家計・リスク許容度・商品条件を資産形成提案へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "retail-asset-advisor-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "家計ヒアリング",
+      "openingHook": "09:10。家計ヒアリングに余剰 4.2万円/月と教育費 8年後が並んでいる。",
+      "context": "個人資産相談/リテール営業として家計ヒアリングを確認する。余剰 4.2万円/月、教育費 8年後が今日の判断材料になる。",
+      "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、家計ヒアリングを読んで次の作業判断を残す。",
+      "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+      "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は家計ヒアリングである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "余剰 4.2万円/月の背景と教育費 8年後の確度が完全にはそろっていない。",
+      "decisionTradeoff": "余剰 4.2万円/月を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "retail-asset-advisor-家計ヒアリング判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は預金 620万円で副作用を確認する。",
+      "npcDialogue": "先輩:「家計ヒアリングを読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+      "workMaterial": "家計ヒアリング\n- 余剰 4.2万円/月\n- 教育費 8年後\n- 判断対象: 家計ヒアリング",
+      "decisionPrompt": "retail-asset-advisor-家計ヒアリング判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "余剰 4.2万円/月を重く見て、当日中に前へ進める",
+          "text": "余剰 4.2万円/月を重く見て、当日中に前へ進める。材料は家計ヒアリング、余剰 4.2万円/月、教育費 8年後。",
+          "immediateFeedback": "家計ヒアリングに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 2,
+            "retail_asset_advisor_risk": -1,
+            "retail_asset_advisor_speed": 2,
+            "retail_asset_advisor_value": -1,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、家計ヒアリングと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "家計ヒアリングの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は余剰 4.2万円/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "家計ヒアリングの余剰 4.2万円/月と教育費 8年後を突き合わせ、条件付きで進める",
+          "text": "家計ヒアリングの余剰 4.2万円/月と教育費 8年後を突き合わせ、条件付きで進める。材料は家計ヒアリング、余剰 4.2万円/月、教育費 8年後。",
+          "immediateFeedback": "家計ヒアリングに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": 1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、家計ヒアリングと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "家計ヒアリングの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は余剰 4.2万円/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "教育費 8年後の不確実性を理由に、判断範囲を絞る",
+          "text": "教育費 8年後の不確実性を理由に、判断範囲を絞る。材料は家計ヒアリング、余剰 4.2万円/月、教育費 8年後。",
+          "immediateFeedback": "家計ヒアリングに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": -1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": -1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、家計ヒアリングと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "家計ヒアリングの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は余剰 4.2万円/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "retail-asset-advisor-家計ヒアリング判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "retail-asset-advisor-家計ヒアリング判断",
+        "roleSpecificMaterials": [
+          "家計ヒアリング",
+          "判断対象: 家計ヒアリング"
+        ],
+        "roleSpecificMetrics": [
+          "余剰 4.2万円/月",
+          "教育費 8年後"
+        ],
+        "roleSpecificFailureRisk": "家計ヒアリングを読まず、余剰 4.2万円/月か教育費 8年後のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "余剰 4.2万円/月と教育費 8年後を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "家計ヒアリング、余剰 4.2万円/月、教育費 8年後を判断の主役にしている。",
+        "kernelConnection": "家計ヒアリングをretail-asset-advisor-家計ヒアリング判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "retail-asset-advisor-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "保有資産表",
+      "openingHook": "10:40。保有資産表に預金 620万円と投信 80万円が並んでいる。",
+      "context": "個人資産相談/リテール営業として保有資産表を確認する。預金 620万円、投信 80万円が今日の判断材料になる。",
+      "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、保有資産表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+      "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は保有資産表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "預金 620万円の背景と投信 80万円の確度が完全にはそろっていない。",
+      "decisionTradeoff": "預金 620万円を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "retail-asset-advisor-保有資産表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は下落許容 -10%で副作用を確認する。",
+      "npcDialogue": "先輩:「保有資産表を読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+      "workMaterial": "保有資産表\n- 預金 620万円\n- 投信 80万円\n- 判断対象: 保有資産表",
+      "decisionPrompt": "retail-asset-advisor-保有資産表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "預金 620万円を重く見て、当日中に前へ進める",
+          "text": "預金 620万円を重く見て、当日中に前へ進める。材料は保有資産表、預金 620万円、投信 80万円。",
+          "immediateFeedback": "保有資産表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 2,
+            "retail_asset_advisor_risk": -1,
+            "retail_asset_advisor_speed": 2,
+            "retail_asset_advisor_value": -1,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、保有資産表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保有資産表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は預金 620万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "保有資産表の預金 620万円と投信 80万円を突き合わせ、条件付きで進める",
+          "text": "保有資産表の預金 620万円と投信 80万円を突き合わせ、条件付きで進める。材料は保有資産表、預金 620万円、投信 80万円。",
+          "immediateFeedback": "保有資産表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": 1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、保有資産表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保有資産表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は預金 620万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "投信 80万円の不確実性を理由に、判断範囲を絞る",
+          "text": "投信 80万円の不確実性を理由に、判断範囲を絞る。材料は保有資産表、預金 620万円、投信 80万円。",
+          "immediateFeedback": "保有資産表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": -1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": -1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、保有資産表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保有資産表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は預金 620万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "retail-asset-advisor-保有資産表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "retail-asset-advisor-保有資産表判断",
+        "roleSpecificMaterials": [
+          "保有資産表",
+          "判断対象: 保有資産表"
+        ],
+        "roleSpecificMetrics": [
+          "預金 620万円",
+          "投信 80万円"
+        ],
+        "roleSpecificFailureRisk": "保有資産表を読まず、預金 620万円か投信 80万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "預金 620万円と投信 80万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "保有資産表、預金 620万円、投信 80万円を判断の主役にしている。",
+        "kernelConnection": "保有資産表をretail-asset-advisor-保有資産表判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "retail-asset-advisor-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "リスク確認票",
+      "openingHook": "12:20。リスク確認票に下落許容 -10%と運用期間 15年が並んでいる。",
+      "context": "個人資産相談/リテール営業としてリスク確認票を確認する。下落許容 -10%、運用期間 15年が今日の判断材料になる。",
+      "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、リスク確認票を読んで次の作業判断を残す。",
+      "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+      "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はリスク確認票である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "下落許容 -10%の背景と運用期間 15年の確度が完全にはそろっていない。",
+      "decisionTradeoff": "下落許容 -10%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "retail-asset-advisor-リスク確認票判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は信託報酬 0.18%で副作用を確認する。",
+      "npcDialogue": "先輩:「リスク確認票を読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+      "workMaterial": "リスク確認票\n- 下落許容 -10%\n- 運用期間 15年\n- 判断対象: リスク確認票",
+      "decisionPrompt": "retail-asset-advisor-リスク確認票判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "下落許容 -10%を重く見て、当日中に前へ進める",
+          "text": "下落許容 -10%を重く見て、当日中に前へ進める。材料はリスク確認票、下落許容 -10%、運用期間 15年。",
+          "immediateFeedback": "リスク確認票に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 2,
+            "retail_asset_advisor_risk": -1,
+            "retail_asset_advisor_speed": 2,
+            "retail_asset_advisor_value": -1,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、リスク確認票と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リスク確認票の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は下落許容 -10%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "リスク確認票の下落許容 -10%と運用期間 15年を突き合わせ、条件付きで進める",
+          "text": "リスク確認票の下落許容 -10%と運用期間 15年を突き合わせ、条件付きで進める。材料はリスク確認票、下落許容 -10%、運用期間 15年。",
+          "immediateFeedback": "リスク確認票に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": 1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、リスク確認票と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リスク確認票の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は下落許容 -10%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "運用期間 15年の不確実性を理由に、判断範囲を絞る",
+          "text": "運用期間 15年の不確実性を理由に、判断範囲を絞る。材料はリスク確認票、下落許容 -10%、運用期間 15年。",
+          "immediateFeedback": "リスク確認票に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": -1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": -1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、リスク確認票と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リスク確認票の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は下落許容 -10%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "retail-asset-advisor-リスク確認票判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "retail-asset-advisor-リスク確認票判断",
+        "roleSpecificMaterials": [
+          "リスク確認票",
+          "判断対象: リスク確認票"
+        ],
+        "roleSpecificMetrics": [
+          "下落許容 -10%",
+          "運用期間 15年"
+        ],
+        "roleSpecificFailureRisk": "リスク確認票を読まず、下落許容 -10%か運用期間 15年のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "下落許容 -10%と運用期間 15年を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "リスク確認票、下落許容 -10%、運用期間 15年を判断の主役にしている。",
+        "kernelConnection": "リスク確認票をretail-asset-advisor-リスク確認票判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "retail-asset-advisor-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "商品比較表",
+      "openingHook": "14:15。商品比較表に信託報酬 0.18%と為替リスク ありが並んでいる。",
+      "context": "個人資産相談/リテール営業として商品比較表を確認する。信託報酬 0.18%、為替リスク ありが今日の判断材料になる。",
+      "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、商品比較表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+      "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は商品比較表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "信託報酬 0.18%の背景と為替リスク ありの確度が完全にはそろっていない。",
+      "decisionTradeoff": "信託報酬 0.18%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "retail-asset-advisor-商品比較表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は積立 3万円/月で副作用を確認する。",
+      "npcDialogue": "先輩:「商品比較表を読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+      "workMaterial": "商品比較表\n- 信託報酬 0.18%\n- 為替リスク あり\n- 判断対象: 商品比較表",
+      "decisionPrompt": "retail-asset-advisor-商品比較表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "信託報酬 0.18%を重く見て、当日中に前へ進める",
+          "text": "信託報酬 0.18%を重く見て、当日中に前へ進める。材料は商品比較表、信託報酬 0.18%、為替リスク あり。",
+          "immediateFeedback": "商品比較表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 2,
+            "retail_asset_advisor_risk": -1,
+            "retail_asset_advisor_speed": 2,
+            "retail_asset_advisor_value": -1,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、商品比較表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "商品比較表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は信託報酬 0.18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "商品比較表の信託報酬 0.18%と為替リスク ありを突き合わせ、条件付きで進める",
+          "text": "商品比較表の信託報酬 0.18%と為替リスク ありを突き合わせ、条件付きで進める。材料は商品比較表、信託報酬 0.18%、為替リスク あり。",
+          "immediateFeedback": "商品比較表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": 1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、商品比較表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "商品比較表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は信託報酬 0.18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "為替リスク ありの不確実性を理由に、判断範囲を絞る",
+          "text": "為替リスク ありの不確実性を理由に、判断範囲を絞る。材料は商品比較表、信託報酬 0.18%、為替リスク あり。",
+          "immediateFeedback": "商品比較表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": -1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": -1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、商品比較表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "商品比較表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は信託報酬 0.18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "retail-asset-advisor-商品比較表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "retail-asset-advisor-商品比較表判断",
+        "roleSpecificMaterials": [
+          "商品比較表",
+          "判断対象: 商品比較表"
+        ],
+        "roleSpecificMetrics": [
+          "信託報酬 0.18%",
+          "為替リスク あり"
+        ],
+        "roleSpecificFailureRisk": "商品比較表を読まず、信託報酬 0.18%か為替リスク ありのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "信託報酬 0.18%と為替リスク ありを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "商品比較表、信託報酬 0.18%、為替リスク ありを判断の主役にしている。",
+        "kernelConnection": "商品比較表をretail-asset-advisor-商品比較表判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "retail-asset-advisor-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "提案メモ",
+      "openingHook": "16:35。提案メモに積立 3万円/月と緊急資金 180万円が並んでいる。",
+      "context": "個人資産相談/リテール営業として提案メモを確認する。積立 3万円/月、緊急資金 180万円が今日の判断材料になる。",
+      "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、提案メモを読んで次の作業判断を残す。",
+      "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+      "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は提案メモである。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "積立 3万円/月の背景と緊急資金 180万円の確度が完全にはそろっていない。",
+      "decisionTradeoff": "積立 3万円/月を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "retail-asset-advisor-提案メモ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「提案メモを読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+      "workMaterial": "提案メモ\n- 積立 3万円/月\n- 緊急資金 180万円\n- 判断対象: 提案メモ",
+      "decisionPrompt": "retail-asset-advisor-提案メモ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "積立 3万円/月を重く見て、当日中に前へ進める",
+          "text": "積立 3万円/月を重く見て、当日中に前へ進める。材料は提案メモ、積立 3万円/月、緊急資金 180万円。",
+          "immediateFeedback": "提案メモに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 2,
+            "retail_asset_advisor_risk": -1,
+            "retail_asset_advisor_speed": 2,
+            "retail_asset_advisor_value": -1,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、提案メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "提案メモの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は積立 3万円/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "提案メモの積立 3万円/月と緊急資金 180万円を突き合わせ、条件付きで進める",
+          "text": "提案メモの積立 3万円/月と緊急資金 180万円を突き合わせ、条件付きで進める。材料は提案メモ、積立 3万円/月、緊急資金 180万円。",
+          "immediateFeedback": "提案メモに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": 1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": 1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、提案メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "提案メモの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は積立 3万円/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "緊急資金 180万円の不確実性を理由に、判断範囲を絞る",
+          "text": "緊急資金 180万円の不確実性を理由に、判断範囲を絞る。材料は提案メモ、積立 3万円/月、緊急資金 180万円。",
+          "immediateFeedback": "提案メモに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "retail_asset_advisor_evidence": -1,
+            "retail_asset_advisor_risk": 2,
+            "retail_asset_advisor_speed": -1,
+            "retail_asset_advisor_value": 2,
+            "retail_asset_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、提案メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "提案メモの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は積立 3万円/月の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "retail-asset-advisor-提案メモ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "retail-asset-advisor-提案メモ判断",
+        "roleSpecificMaterials": [
+          "提案メモ",
+          "判断対象: 提案メモ"
+        ],
+        "roleSpecificMetrics": [
+          "積立 3万円/月",
+          "緊急資金 180万円"
+        ],
+        "roleSpecificFailureRisk": "提案メモを読まず、積立 3万円/月か緊急資金 180万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "積立 3万円/月と緊急資金 180万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "提案メモ、積立 3万円/月、緊急資金 180万円を判断の主役にしている。",
+        "kernelConnection": "提案メモをretail-asset-advisor-提案メモ判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "retail-asset-advisor-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "家計ヒアリング",
+          "openingHook": "09:10。家計ヒアリングに余剰 4.2万円/月と教育費 8年後が並んでいる。",
+          "context": "個人資産相談/リテール営業として家計ヒアリングを確認する。余剰 4.2万円/月、教育費 8年後が今日の判断材料になる。",
+          "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、家計ヒアリングを読んで次の作業判断を残す。",
+          "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+          "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は家計ヒアリングである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "余剰 4.2万円/月の背景と教育費 8年後の確度が完全にはそろっていない。",
+          "decisionTradeoff": "余剰 4.2万円/月を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "retail-asset-advisor-家計ヒアリング判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は預金 620万円で副作用を確認する。",
+          "npcDialogue": "先輩:「家計ヒアリングを読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+          "workMaterial": "家計ヒアリング\n- 余剰 4.2万円/月\n- 教育費 8年後\n- 判断対象: 家計ヒアリング",
+          "decisionPrompt": "retail-asset-advisor-家計ヒアリング判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "余剰 4.2万円/月を重く見て、当日中に前へ進める",
+              "text": "余剰 4.2万円/月を重く見て、当日中に前へ進める。材料は家計ヒアリング、余剰 4.2万円/月、教育費 8年後。",
+              "immediateFeedback": "家計ヒアリングに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 2,
+                "retail_asset_advisor_risk": -1,
+                "retail_asset_advisor_speed": 2,
+                "retail_asset_advisor_value": -1,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、家計ヒアリングと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "家計ヒアリングの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は余剰 4.2万円/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "家計ヒアリングの余剰 4.2万円/月と教育費 8年後を突き合わせ、条件付きで進める",
+              "text": "家計ヒアリングの余剰 4.2万円/月と教育費 8年後を突き合わせ、条件付きで進める。材料は家計ヒアリング、余剰 4.2万円/月、教育費 8年後。",
+              "immediateFeedback": "家計ヒアリングに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": 1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、家計ヒアリングと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "家計ヒアリングの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は余剰 4.2万円/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "教育費 8年後の不確実性を理由に、判断範囲を絞る",
+              "text": "教育費 8年後の不確実性を理由に、判断範囲を絞る。材料は家計ヒアリング、余剰 4.2万円/月、教育費 8年後。",
+              "immediateFeedback": "家計ヒアリングに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": -1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": -1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、家計ヒアリングと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "家計ヒアリングの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は余剰 4.2万円/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "retail-asset-advisor-家計ヒアリング判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "retail-asset-advisor-家計ヒアリング判断",
+            "roleSpecificMaterials": [
+              "家計ヒアリング",
+              "判断対象: 家計ヒアリング"
+            ],
+            "roleSpecificMetrics": [
+              "余剰 4.2万円/月",
+              "教育費 8年後"
+            ],
+            "roleSpecificFailureRisk": "家計ヒアリングを読まず、余剰 4.2万円/月か教育費 8年後のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "余剰 4.2万円/月と教育費 8年後を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "家計ヒアリング、余剰 4.2万円/月、教育費 8年後を判断の主役にしている。",
+            "kernelConnection": "家計ヒアリングをretail-asset-advisor-家計ヒアリング判断へ接続する。"
+          }
+        },
+        {
+          "id": "retail-asset-advisor-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "保有資産表",
+          "openingHook": "10:40。保有資産表に預金 620万円と投信 80万円が並んでいる。",
+          "context": "個人資産相談/リテール営業として保有資産表を確認する。預金 620万円、投信 80万円が今日の判断材料になる。",
+          "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、保有資産表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+          "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は保有資産表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "預金 620万円の背景と投信 80万円の確度が完全にはそろっていない。",
+          "decisionTradeoff": "預金 620万円を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "retail-asset-advisor-保有資産表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は下落許容 -10%で副作用を確認する。",
+          "npcDialogue": "先輩:「保有資産表を読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+          "workMaterial": "保有資産表\n- 預金 620万円\n- 投信 80万円\n- 判断対象: 保有資産表",
+          "decisionPrompt": "retail-asset-advisor-保有資産表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "預金 620万円を重く見て、当日中に前へ進める",
+              "text": "預金 620万円を重く見て、当日中に前へ進める。材料は保有資産表、預金 620万円、投信 80万円。",
+              "immediateFeedback": "保有資産表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 2,
+                "retail_asset_advisor_risk": -1,
+                "retail_asset_advisor_speed": 2,
+                "retail_asset_advisor_value": -1,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、保有資産表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保有資産表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は預金 620万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "保有資産表の預金 620万円と投信 80万円を突き合わせ、条件付きで進める",
+              "text": "保有資産表の預金 620万円と投信 80万円を突き合わせ、条件付きで進める。材料は保有資産表、預金 620万円、投信 80万円。",
+              "immediateFeedback": "保有資産表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": 1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、保有資産表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保有資産表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は預金 620万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "投信 80万円の不確実性を理由に、判断範囲を絞る",
+              "text": "投信 80万円の不確実性を理由に、判断範囲を絞る。材料は保有資産表、預金 620万円、投信 80万円。",
+              "immediateFeedback": "保有資産表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": -1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": -1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、保有資産表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保有資産表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は預金 620万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "retail-asset-advisor-保有資産表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "retail-asset-advisor-保有資産表判断",
+            "roleSpecificMaterials": [
+              "保有資産表",
+              "判断対象: 保有資産表"
+            ],
+            "roleSpecificMetrics": [
+              "預金 620万円",
+              "投信 80万円"
+            ],
+            "roleSpecificFailureRisk": "保有資産表を読まず、預金 620万円か投信 80万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "預金 620万円と投信 80万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "保有資産表、預金 620万円、投信 80万円を判断の主役にしている。",
+            "kernelConnection": "保有資産表をretail-asset-advisor-保有資産表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "retail-asset-advisor-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "リスク確認票",
+          "openingHook": "12:20。リスク確認票に下落許容 -10%と運用期間 15年が並んでいる。",
+          "context": "個人資産相談/リテール営業としてリスク確認票を確認する。下落許容 -10%、運用期間 15年が今日の判断材料になる。",
+          "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、リスク確認票を読んで次の作業判断を残す。",
+          "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+          "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はリスク確認票である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "下落許容 -10%の背景と運用期間 15年の確度が完全にはそろっていない。",
+          "decisionTradeoff": "下落許容 -10%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "retail-asset-advisor-リスク確認票判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は信託報酬 0.18%で副作用を確認する。",
+          "npcDialogue": "先輩:「リスク確認票を読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+          "workMaterial": "リスク確認票\n- 下落許容 -10%\n- 運用期間 15年\n- 判断対象: リスク確認票",
+          "decisionPrompt": "retail-asset-advisor-リスク確認票判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "下落許容 -10%を重く見て、当日中に前へ進める",
+              "text": "下落許容 -10%を重く見て、当日中に前へ進める。材料はリスク確認票、下落許容 -10%、運用期間 15年。",
+              "immediateFeedback": "リスク確認票に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 2,
+                "retail_asset_advisor_risk": -1,
+                "retail_asset_advisor_speed": 2,
+                "retail_asset_advisor_value": -1,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、リスク確認票と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リスク確認票の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は下落許容 -10%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "リスク確認票の下落許容 -10%と運用期間 15年を突き合わせ、条件付きで進める",
+              "text": "リスク確認票の下落許容 -10%と運用期間 15年を突き合わせ、条件付きで進める。材料はリスク確認票、下落許容 -10%、運用期間 15年。",
+              "immediateFeedback": "リスク確認票に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": 1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、リスク確認票と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リスク確認票の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は下落許容 -10%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "運用期間 15年の不確実性を理由に、判断範囲を絞る",
+              "text": "運用期間 15年の不確実性を理由に、判断範囲を絞る。材料はリスク確認票、下落許容 -10%、運用期間 15年。",
+              "immediateFeedback": "リスク確認票に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": -1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": -1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、リスク確認票と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リスク確認票の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は下落許容 -10%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "retail-asset-advisor-リスク確認票判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "retail-asset-advisor-リスク確認票判断",
+            "roleSpecificMaterials": [
+              "リスク確認票",
+              "判断対象: リスク確認票"
+            ],
+            "roleSpecificMetrics": [
+              "下落許容 -10%",
+              "運用期間 15年"
+            ],
+            "roleSpecificFailureRisk": "リスク確認票を読まず、下落許容 -10%か運用期間 15年のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "下落許容 -10%と運用期間 15年を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "リスク確認票、下落許容 -10%、運用期間 15年を判断の主役にしている。",
+            "kernelConnection": "リスク確認票をretail-asset-advisor-リスク確認票判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "retail-asset-advisor-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "商品比較表",
+          "openingHook": "14:15。商品比較表に信託報酬 0.18%と為替リスク ありが並んでいる。",
+          "context": "個人資産相談/リテール営業として商品比較表を確認する。信託報酬 0.18%、為替リスク ありが今日の判断材料になる。",
+          "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、商品比較表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+          "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は商品比較表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "信託報酬 0.18%の背景と為替リスク ありの確度が完全にはそろっていない。",
+          "decisionTradeoff": "信託報酬 0.18%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "retail-asset-advisor-商品比較表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は積立 3万円/月で副作用を確認する。",
+          "npcDialogue": "先輩:「商品比較表を読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+          "workMaterial": "商品比較表\n- 信託報酬 0.18%\n- 為替リスク あり\n- 判断対象: 商品比較表",
+          "decisionPrompt": "retail-asset-advisor-商品比較表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "信託報酬 0.18%を重く見て、当日中に前へ進める",
+              "text": "信託報酬 0.18%を重く見て、当日中に前へ進める。材料は商品比較表、信託報酬 0.18%、為替リスク あり。",
+              "immediateFeedback": "商品比較表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 2,
+                "retail_asset_advisor_risk": -1,
+                "retail_asset_advisor_speed": 2,
+                "retail_asset_advisor_value": -1,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、商品比較表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "商品比較表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は信託報酬 0.18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "商品比較表の信託報酬 0.18%と為替リスク ありを突き合わせ、条件付きで進める",
+              "text": "商品比較表の信託報酬 0.18%と為替リスク ありを突き合わせ、条件付きで進める。材料は商品比較表、信託報酬 0.18%、為替リスク あり。",
+              "immediateFeedback": "商品比較表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": 1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、商品比較表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "商品比較表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は信託報酬 0.18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "為替リスク ありの不確実性を理由に、判断範囲を絞る",
+              "text": "為替リスク ありの不確実性を理由に、判断範囲を絞る。材料は商品比較表、信託報酬 0.18%、為替リスク あり。",
+              "immediateFeedback": "商品比較表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": -1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": -1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、商品比較表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "商品比較表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は信託報酬 0.18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "retail-asset-advisor-商品比較表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "retail-asset-advisor-商品比較表判断",
+            "roleSpecificMaterials": [
+              "商品比較表",
+              "判断対象: 商品比較表"
+            ],
+            "roleSpecificMetrics": [
+              "信託報酬 0.18%",
+              "為替リスク あり"
+            ],
+            "roleSpecificFailureRisk": "商品比較表を読まず、信託報酬 0.18%か為替リスク ありのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "信託報酬 0.18%と為替リスク ありを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "商品比較表、信託報酬 0.18%、為替リスク ありを判断の主役にしている。",
+            "kernelConnection": "商品比較表をretail-asset-advisor-商品比較表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "retail-asset-advisor-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "提案メモ",
+          "openingHook": "16:35。提案メモに積立 3万円/月と緊急資金 180万円が並んでいる。",
+          "context": "個人資産相談/リテール営業として提案メモを確認する。積立 3万円/月、緊急資金 180万円が今日の判断材料になる。",
+          "content": "家計・リスク許容度・商品条件を資産形成提案へ変換するため、提案メモを読んで次の作業判断を残す。",
+          "roleSpecificContext": "個人資産相談/リテール営業は家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+          "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は提案メモである。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "積立 3万円/月の背景と緊急資金 180万円の確度が完全にはそろっていない。",
+          "decisionTradeoff": "積立 3万円/月を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "retail-asset-advisor-提案メモ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「提案メモを読まずに進めると、個人資産相談/リテール営業の判断ではなくなる」",
+          "workMaterial": "提案メモ\n- 積立 3万円/月\n- 緊急資金 180万円\n- 判断対象: 提案メモ",
+          "decisionPrompt": "retail-asset-advisor-提案メモ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "積立 3万円/月を重く見て、当日中に前へ進める",
+              "text": "積立 3万円/月を重く見て、当日中に前へ進める。材料は提案メモ、積立 3万円/月、緊急資金 180万円。",
+              "immediateFeedback": "提案メモに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 2,
+                "retail_asset_advisor_risk": -1,
+                "retail_asset_advisor_speed": 2,
+                "retail_asset_advisor_value": -1,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、提案メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "提案メモの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は積立 3万円/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "提案メモの積立 3万円/月と緊急資金 180万円を突き合わせ、条件付きで進める",
+              "text": "提案メモの積立 3万円/月と緊急資金 180万円を突き合わせ、条件付きで進める。材料は提案メモ、積立 3万円/月、緊急資金 180万円。",
+              "immediateFeedback": "提案メモに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": 1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": 1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、提案メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "提案メモの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は積立 3万円/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "緊急資金 180万円の不確実性を理由に、判断範囲を絞る",
+              "text": "緊急資金 180万円の不確実性を理由に、判断範囲を絞る。材料は提案メモ、積立 3万円/月、緊急資金 180万円。",
+              "immediateFeedback": "提案メモに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "個人資産相談/リテール営業で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "retail_asset_advisor_evidence": -1,
+                "retail_asset_advisor_risk": 2,
+                "retail_asset_advisor_speed": -1,
+                "retail_asset_advisor_value": 2,
+                "retail_asset_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "個人資産相談/リテール営業は印象ではなく、提案メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "提案メモの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は積立 3万円/月の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "retail-asset-advisor-提案メモ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "retail-asset-advisor-提案メモ判断",
+            "roleSpecificMaterials": [
+              "提案メモ",
+              "判断対象: 提案メモ"
+            ],
+            "roleSpecificMetrics": [
+              "積立 3万円/月",
+              "緊急資金 180万円"
+            ],
+            "roleSpecificFailureRisk": "提案メモを読まず、積立 3万円/月か緊急資金 180万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "積立 3万円/月と緊急資金 180万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "提案メモ、積立 3万円/月、緊急資金 180万円を判断の主役にしている。",
+            "kernelConnection": "提案メモをretail-asset-advisor-提案メモ判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "個人資産相談/リテール営業の材料翻訳型",
+      "strengths": [
+        "個人資産相談/リテール営業の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "retail_asset_advisor_evidence",
+        "retail_asset_advisor_risk"
+      ],
+      "valuedMeters": [
+        "retail_asset_advisor_evidence"
+      ],
+      "sacrificedMeters": [
+        "retail_asset_advisor_speed"
+      ],
+      "roleRealityReveal": "個人資産相談/リテール営業は、家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "個人資産相談/リテール営業の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "個人資産相談/リテール営業の推進型",
+      "strengths": [
+        "個人資産相談/リテール営業の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "retail_asset_advisor_risk",
+        "retail_asset_advisor_speed"
+      ],
+      "valuedMeters": [
+        "retail_asset_advisor_risk"
+      ],
+      "sacrificedMeters": [
+        "retail_asset_advisor_value"
+      ],
+      "roleRealityReveal": "個人資産相談/リテール営業は、家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "個人資産相談/リテール営業の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "個人資産相談/リテール営業の安全設計型",
+      "strengths": [
+        "個人資産相談/リテール営業の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "retail_asset_advisor_speed",
+        "retail_asset_advisor_value"
+      ],
+      "valuedMeters": [
+        "retail_asset_advisor_speed"
+      ],
+      "sacrificedMeters": [
+        "retail_asset_advisor_feasibility"
+      ],
+      "roleRealityReveal": "個人資産相談/リテール営業は、家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "個人資産相談/リテール営業の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "個人資産相談/リテール営業は、家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "個人資産相談/リテール営業として、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "retail-asset-advisor_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "retail_asset_advisor_evidence_vs_retail_asset_advisor_risk",
+      "retail_asset_advisor_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "家計・リスク許容度・商品条件を資産形成提案へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "retail_asset_advisor_evidence",
+      "label": "evidence",
+      "description": "個人資産相談/リテール営業のevidence判断"
+    },
+    {
+      "key": "retail_asset_advisor_risk",
+      "label": "risk",
+      "description": "個人資産相談/リテール営業のrisk判断"
+    },
+    {
+      "key": "retail_asset_advisor_speed",
+      "label": "speed",
+      "description": "個人資産相談/リテール営業のspeed判断"
+    },
+    {
+      "key": "retail_asset_advisor_value",
+      "label": "value",
+      "description": "個人資産相談/リテール営業のvalue判断"
+    },
+    {
+      "key": "retail_asset_advisor_feasibility",
+      "label": "feasibility",
+      "description": "個人資産相談/リテール営業のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "個人資産相談/リテール営業の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "retail_asset_advisor_evidence",
+      "retail_asset_advisor_risk",
+      "retail_asset_advisor_speed",
+      "retail_asset_advisor_value",
+      "retail_asset_advisor_feasibility"
+    ]
+  },
+  "roleCoreFriction": "家計・リスク許容度・商品条件を資産形成提案へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "個人資産相談/リテール営業は会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "個人資産相談/リテール営業は、家計・リスク許容度・商品条件を資産形成提案へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "余剰 4.2万円/月、預金 620万円、下落許容 -10%、信託報酬 0.18%、積立 3万円/月、関係者制約、期限",
+    "output": "個人資産相談/リテール営業としての判断案、次回確認項目、リスクメモ",
+    "transformation": "家計・リスク許容度・商品条件を資産形成提案へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "余剰 4.2万円/月",
+      "預金 620万円",
+      "下落許容 -10%",
+      "信託報酬 0.18%",
+      "積立 3万円/月"
+    ],
+    "metrics": [
+      "余剰 4.2万円/月",
+      "教育費 8年後",
+      "預金 620万円",
+      "投信 80万円",
+      "下落許容 -10%",
+      "運用期間 15年",
+      "信託報酬 0.18%",
+      "為替リスク あり",
+      "積立 3万円/月",
+      "緊急資金 180万円"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "余剰 4.2万円/月、預金 620万円、下落許容 -10%と教育費 8年後、、投信 80万円を読まなければ成立しないため。"
+  }
+}

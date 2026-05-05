@@ -1,0 +1,2244 @@
+{
+  "id": "finance/regional-bank-corporate-loan",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "金融",
+  "industrySlug": "finance",
+  "role": "地方銀行 法人営業/融資担当",
+  "roleSlug": "regional-bank-corporate-loan",
+  "roleCategory": "industry_specific_sales",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "営業系",
+    "地方就職",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a high-quality realistic workplace background image for a career simulation game. Scene: 金融 industry, 地方銀行 法人営業/融資担当 role, decision point before a key task.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, distorted hands, distorted face, low quality, blurry, stock photo advertisement, fantasy, cyberpunk, anime, manga, unrealistic office, fake letters",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "finance",
+      "regional bank corporate loan"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "chat",
+      "dashboard"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:05",
+      "label": "8日後の給与資金"
+    },
+    {
+      "time": "10:20",
+      "label": "売掛入金のずれ"
+    },
+    {
+      "time": "12:15",
+      "label": "昼休みの社長来店"
+    },
+    {
+      "time": "14:05",
+      "label": "審査部の赤字コメント"
+    },
+    {
+      "time": "16:40",
+      "label": "最終回答の10分前"
+    }
+  ],
+  "meta": {
+    "title": "地方銀行 法人営業/融資担当",
+    "industry": "金融",
+    "role": "地方銀行 法人営業/融資担当",
+    "duration_minutes": 12,
+    "description": "地域中小企業の資金繰り相談を、返済原資・保証協会・審査部・社長の感情まで含めて条件設計する法人融資シミュレーション。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 企業公式採用ページ",
+      "to_be_researched: 社員インタビュー/現場発信"
+    ],
+    "company_model": "架空の事業者を前提にしたCαドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝え、合意形成する力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "自分事として責任を持ち、やり切る姿勢"
+    },
+    {
+      "key": "ethics",
+      "label": "倫理観",
+      "description": "ルールや社会的影響を踏まえて判断する力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化やトラブルに素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "finance-09-05-funding-call",
+      "type": "email",
+      "title": "8日後の給与資金",
+      "context": "09:05。支店の電話が鳴った。「今月の給与、8日だけ足りません」\n\n機械部品加工の架空企業、三島精工から短期資金の相談が入る。給与遅配を避けたいが、前回融資からまだ4か月しか経っていない。",
+      "content": "社長は声を落として「従業員にはまだ言っていない」と言う。支店長は10時までに初動方針を求めている。助けるだけでは銀行の説明が通らない。",
+      "roleSpecificContext": "地方銀行の法人担当は、地域雇用を守る顔と、銀行の信用を守る顔を同時に持つ。",
+      "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+      "hiddenWorkReality": "銀行の仕事は「貸す」より前に、返せる形と説明できる条件を作ることから始まる。",
+      "stakeholderPressure": "社長は給与遅配を避けたい。支店長は地域雇用と自行リスクの両方を見ている。",
+      "timePressure": "10:00の支店長朝会までに初動方針が必要。",
+      "missingInformation": "売掛入金の確度、保証協会の利用余地、資金使途の内訳が未確認。",
+      "decisionTradeoff": "先に安心を出すほど顧客信頼は上がるが、審査で約束を取り消すリスクが増える。",
+      "consequenceHook": "朝の一言が、昼の社長説明と審査部コメントの厳しさに残る。",
+      "nextSceneEcho": "売掛入金の確度を確認しないまま進めると、次の資金繰り表で穴が広がる。",
+      "npcDialogue": "社長:「満額とは言いません。ただ、給料だけは遅らせたくない」\n支店長:「気持ちは分かる。だが返済原資を見ずに希望だけ持たせるな」",
+      "workMaterial": "相談メモ\n- 希望額: 1,200万円\n- 当座残高: 180万円\n- 8日後給与: 910万円\n- 月末入金予定: A社 760万円、B社 430万円\n- 既存借入: 残高4,800万円、前回実行4か月前",
+      "decisionPrompt": "社長への初回返答として、どの温度で動き出すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "給与資金を最優先に、満額支援の可能性を前向きに伝える",
+          "text": "給与遅配を避けるため満額支援を前提に動くと伝え、必要資料を急ぎ回収する。",
+          "immediateFeedback": "社長は一息つき、資料提出に協力的になる。",
+          "delayedConsequence": "審査で減額になった場合、期待値を上げた分だけ失望が大きい。",
+          "nextSceneEffect": "資金繰り表の穴を埋める資料回収は早まるが、支店長への説明は重くなる。",
+          "resultSummaryEffect": "顧客の安心を先に作る判断が多い。",
+          "meterEffects": {
+            "customer_trust": 2,
+            "regional_impact": 2,
+            "credit_risk": -2,
+            "compliance_safety": -1
+          },
+          "misconceptionEffect": "銀行は顧客の希望額を約束する仕事ではなく、希望を審査に通る条件へ翻訳する仕事だと気づきにくい。",
+          "studentFeedback": {
+            "good": "給与遅配という地域雇用リスクに即応できている。",
+            "risk": "返済原資を確認する前に期待値を作っている。",
+            "next": "次は売掛入金の確度で、前向き発言の裏付けを探す。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 1,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "customer_empathy_first",
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "regional_employment_sensitivity"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "overpromises_credit"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "可能性は否定せず、返済原資と保証協会の確認を先に置く",
+          "text": "支援の方向で検討すると伝えつつ、売掛入金、資金使途、保証協会枠を午前中に確認する。",
+          "immediateFeedback": "社長は少し不安を残すが、必要資料の意味を理解する。",
+          "delayedConsequence": "午前の確認量は増えるが、審査部への説明の芯ができる。",
+          "nextSceneEffect": "資金繰り表の数字確認に自然につながる。",
+          "resultSummaryEffect": "安心と条件を同時に設計する判断が多い。",
+          "meterEffects": {
+            "customer_trust": 1,
+            "compliance_safety": 2,
+            "credit_risk": 1,
+            "internal_workload": -1
+          },
+          "misconceptionEffect": "「貸す/断る」の二択ではなく、条件を組み立てる仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "顧客を突き放さず、銀行として説明できる順番を守っている。",
+            "risk": "即答を求める社長には、冷たく聞こえる可能性がある。",
+            "next": "次は売掛入金の確度を材料に、段階支援の根拠を作る。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "condition_design",
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "communication_tension"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "現時点では満額回答を避け、追加資料なしでは進めないと線を引く",
+          "text": "返済原資が未確認なので、資料が揃うまで融資可能性に触れない。",
+          "immediateFeedback": "銀行としての不用意な発言は避けられる。",
+          "delayedConsequence": "社長が他行や取引先に走り、相談の主導権を失う可能性がある。",
+          "nextSceneEffect": "数字確認は厳密になるが、顧客の本音が出にくくなる。",
+          "resultSummaryEffect": "説明責任と保全を優先する判断が多い。",
+          "meterEffects": {
+            "compliance_safety": 3,
+            "credit_risk": 2,
+            "customer_trust": -2,
+            "regional_impact": -1
+          },
+          "misconceptionEffect": "銀行員は冷静に断るだけでなく、顧客が話し続けられる余地も設計する必要がある。",
+          "studentFeedback": {
+            "good": "コンプライアンスと審査説明を守っている。",
+            "risk": "資金繰り危機の感情を受け止めず、信頼を失う恐れがある。",
+            "next": "次は資料精査で、厳しい姿勢を支える根拠が問われる。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "compliance_first"
+          ],
+          "universityInsightTags": [
+            "risk_control_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "customer_trust_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "empathy_vs_credit_discipline",
+        "frictionType": "cash_shortage",
+        "workValueTags": [
+          "地域金融",
+          "中小企業支援",
+          "説明責任"
+        ],
+        "careerRealityTags": [
+          "credit_decision",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "regional_employment",
+          "local_business"
+        ]
+      },
+      "openingHook": "09:05。支店の電話が鳴った。「今月の給与、8日だけ足りません」",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "資金不足の初期切り分け",
+        "roleSpecificMaterials": [
+          "相談メモ",
+          "当座残高",
+          "8日後給与"
+        ],
+        "roleSpecificMetrics": [
+          "希望額: 1,200万円",
+          "当座残高: 180万円",
+          "8日後給与: 910万円",
+          "月末入金予定: A社 760万円、B社 430万円"
+        ],
+        "roleSpecificFailureRisk": "希望額を先に約束し、返済原資と審査説明の根拠が崩れる。",
+        "roleSpecificEvaluationCriteria": "顧客の不安を受け止めながら、資金使途・不足期間・返済原資を審査に出せる形へ切り分けられるか。",
+        "genericCoordinationRisk": "単なる顧客への寄り添いと上司確認の場面に見える。",
+        "antiGenericDesignNote": "当座残高、給与支払予定、売掛入金予定を材料にし、銀行固有の初期ヒアリング判断にしている。",
+        "kernelConnection": "顧客の資金不安と希望額を、返済原資確認に進める初期融資設計へ接続する。"
+      }
+    },
+    {
+      "id": "finance-10-20-cashflow-gap",
+      "type": "review",
+      "title": "売掛入金のずれ",
+      "context": "10:20。資金繰り表のA社入金欄だけ、鉛筆で「70%」と書き足されていた。\n\n社長が送った資金繰り表には、月末入金予定の一部に未確定要素がある。在庫も前期比で増えている。",
+      "content": "A社760万円は検収待ち。B社430万円は入金確定。棚卸資産は前年比132%。売上は横ばい。満額支援の根拠が揺れる。",
+      "roleSpecificContext": "法人融資では、表の合計額より「その入金が本当に入るか」を見る。",
+      "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+      "hiddenWorkReality": "返済原資は決算書の利益だけではなく、入金日と確度で崩れる。",
+      "stakeholderPressure": "社長は「毎年この時期は在庫が増える」と説明する。審査部は検収前売掛を慎重に見る。",
+      "timePressure": "11:30までに保証協会へ事前相談するか決める必要がある。",
+      "missingInformation": "A社の検収完了予定、在庫増の理由、保証協会の残枠。",
+      "decisionTradeoff": "追加確認をすれば説明は強くなるが、保証協会相談の時間を失う。",
+      "consequenceHook": "ここで見落とした確度が、午後の審査部差し戻しにつながる。",
+      "nextSceneEcho": "保証協会に相談する材料の厚みが昼の社長説明を左右する。",
+      "npcDialogue": "融資事務:「A社、前も検収が月をまたぎましたよね」\n社長:「今回の品物はもう納めています。入金は大丈夫なはずです」",
+      "workMaterial": "資金繰り表抜粋\n- 7/25 給与: -910万円\n- 7/31 A社売掛: +760万円（検収待ち、社長見込み70%）\n- 7/31 B社売掛: +430万円（請求書発行済み）\n- 8/10 材料費: -520万円\n決算書断片: 棚卸資産 2,900万円（前年比132%）、営業利益率2.1%",
+      "decisionPrompt": "保証協会への事前相談前に、どこまで数字を固めるか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "A社入金を保守的に半額で置き、800万円の短期支援案に下げる",
+          "text": "A社入金を380万円として資金ショート額を再計算し、満額ではなく短期800万円の案を作る。",
+          "immediateFeedback": "審査説明は堅くなるが、社長の希望額とは離れる。",
+          "delayedConsequence": "給与は守れる可能性が高いが、材料費支払いは再調整が必要になる。",
+          "nextSceneEffect": "昼の社長説明では、減額理由を感情面も含めて伝える必要が出る。",
+          "resultSummaryEffect": "不確実な入金を厳しく見る判断が多い。",
+          "meterEffects": {
+            "credit_risk": 2,
+            "compliance_safety": 2,
+            "customer_trust": -1,
+            "regional_impact": -1
+          },
+          "misconceptionEffect": "融資判断は「困っている額」ではなく「返せる見込み額」から逆算する。",
+          "studentFeedback": {
+            "good": "入金確度を反映し、返済原資の説明が通りやすい。",
+            "risk": "顧客には銀行が助けてくれない印象を与えやすい。",
+            "next": "次は減額案を社長が受け止められる説明に変える。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "receivable_discounting"
+          ],
+          "universityInsightTags": [
+            "credit_evidence_focus"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "customer_expectation_gap"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "A社検収の証跡を取りに行き、保証協会には条件付きで相談する",
+          "text": "A社の検収予定メールを社長に依頼し、保証協会には「証跡確認中」として1,000万円案を相談する。",
+          "immediateFeedback": "確認作業は増えるが、満額と減額の間に説明可能な案ができる。",
+          "delayedConsequence": "証跡が取れれば審査部の懸念を一部抑えられる。",
+          "nextSceneEffect": "昼の社長説明で、条件付き支援として話せる。",
+          "resultSummaryEffect": "条件を集めながら支援幅を残す判断が多い。",
+          "meterEffects": {
+            "customer_trust": 1,
+            "credit_risk": 1,
+            "compliance_safety": 2,
+            "internal_workload": -2
+          },
+          "misconceptionEffect": "銀行員は資料を要求するだけでなく、通る資料の形を一緒に作る。",
+          "studentFeedback": {
+            "good": "顧客支援と審査説明を同時に進めている。",
+            "risk": "関係者全員の反応待ちになり、時間が詰まる。",
+            "next": "次は条件付き支援をどう伝えるかが問われる。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "condition_design",
+            "evidence_building"
+          ],
+          "universityInsightTags": [
+            "work_artifact_literacy"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "社長見込みを尊重し、1,200万円案で保証協会に先行相談する",
+          "text": "A社入金は見込みどおりとして、希望額1,200万円の保証協会付き短期融資を先に相談する。",
+          "immediateFeedback": "社長の期待には沿える。保証協会との会話も早い。",
+          "delayedConsequence": "検収遅れが出た場合、返済原資の説明が崩れる。",
+          "nextSceneEffect": "審査部からA社入金の証跡を強く求められる。",
+          "resultSummaryEffect": "顧客の事業継続を広く支える判断が多い。",
+          "meterEffects": {
+            "customer_trust": 2,
+            "regional_impact": 1,
+            "credit_risk": -2,
+            "compliance_safety": -1
+          },
+          "misconceptionEffect": "地域金融は情だけでは進まず、見込みを証拠に変える力が必要。",
+          "studentFeedback": {
+            "good": "資金繰りの時間制約に素早く反応している。",
+            "risk": "不確実な売掛をそのまま返済原資にしている。",
+            "next": "次は社長の期待値が上がった状態で条件説明に入る。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 1,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first",
+            "trust_first"
+          ],
+          "universityInsightTags": [
+            "empathy_vs_risk_gap"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "weak_repayment_source"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "evidence_vs_speed",
+        "frictionType": "uncertain_receivable",
+        "workValueTags": [
+          "地域金融",
+          "中小企業支援",
+          "説明責任"
+        ],
+        "careerRealityTags": [
+          "credit_decision",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "regional_employment",
+          "local_business"
+        ]
+      },
+      "openingHook": "10:20。資金繰り表のA社入金欄だけ、鉛筆で「70%」と書き足されていた。",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "返済原資評価",
+        "roleSpecificMaterials": [
+          "資金繰り表抜粋",
+          "A社売掛",
+          "B社売掛"
+        ],
+        "roleSpecificMetrics": [
+          "7/31 A社売掛: +760万円",
+          "7/31 B社売掛: +430万円",
+          "8/10 材料費: -520万円"
+        ],
+        "roleSpecificFailureRisk": "売掛入金の確度を見誤り、返済可能性を過大評価した稟議になる。",
+        "roleSpecificEvaluationCriteria": "不足額ではなく返済原資から支援額と追加資料を逆算できるか。",
+        "genericCoordinationRisk": "資料を集めるだけの進行管理に見える。",
+        "antiGenericDesignNote": "売掛入金確度、棚卸増加、営業利益率を読み、融資判断の根拠へ変換している。",
+        "kernelConnection": "資金繰り表と売掛入金予定を、返済原資の確度評価へ接続する。"
+      }
+    },
+    {
+      "id": "finance-12-15-president-expectation",
+      "type": "meeting",
+      "title": "昼休みの社長来店",
+      "context": "12:15。社長が窓口に現れた。「満額いけそうですか。工場のみんな、昼飯も喉を通らないって」\n\n保証協会は「短期資金なら前向き。ただし売掛証跡と返済予定の明記が必要」と回答した。社長は満額の期待を持って来店する。",
+      "content": "ここで優しく言いすぎると審査前の約束になる。正確に言いすぎると、社長は見放されたと感じる。",
+      "roleSpecificContext": "法人担当は、金融条件を人が受け取れる言葉に変換する。",
+      "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+      "hiddenWorkReality": "融資の説明は数字だけでなく、顧客の感情と次の行動を設計する仕事でもある。",
+      "stakeholderPressure": "社長は従業員の生活を背負っている。保証協会は条件明記を求める。",
+      "timePressure": "13:30の審査部持ち込みまでに、社長の追加資料提出を取り付けたい。",
+      "missingInformation": "社長が減額や条件付き支援を受け入れられるか。",
+      "decisionTradeoff": "安心を先に渡すほど資料協力は得やすいが、審査結果との落差が大きくなる。",
+      "consequenceHook": "社長の受け止め方が、夕方の最終説明の信頼残高になる。",
+      "nextSceneEcho": "ここで得た証跡が午後の審査部コメントを左右する。",
+      "npcDialogue": "社長:「従業員には絶対に遅らせたくないんです」\n支店長:「言葉を選べ。約束ではなく、通すための条件を伝えるんだ」",
+      "workMaterial": "保証協会メモ\n- 保証付き短期運転資金は検討可\n- A社検収予定メール、B社請求書、8月返済予定表が必要\n- 既存保証残枠は限定的\n来店メモ: 社長は満額支援を期待。給与遅配回避を最優先。",
+      "decisionPrompt": "社長に、どの説明で追加資料と現実的な期待値を作るか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "「満額を目指します」と言い、社長の協力を引き出す",
+          "text": "満額支援を目指す姿勢を前面に出し、検収メールと返済予定表を今日中に依頼する。",
+          "immediateFeedback": "社長は前向きになり、資料提出を急いでくれる。",
+          "delayedConsequence": "満額不可のとき、銀行が約束を破ったように受け取られる。",
+          "nextSceneEffect": "審査部への持ち込みでは、発言の強さを支店長に説明する必要がある。",
+          "resultSummaryEffect": "相手の感情を先に支える判断が多い。",
+          "meterEffects": {
+            "customer_trust": 2,
+            "regional_impact": 1,
+            "compliance_safety": -2,
+            "credit_risk": -1
+          },
+          "misconceptionEffect": "顧客を安心させる言葉ほど、銀行では記録と責任が重くなる。",
+          "studentFeedback": {
+            "good": "社長の不安を受け止め、行動につなげている。",
+            "risk": "審査前の期待値管理としては強すぎる。",
+            "next": "次は審査部から、顧客への伝え方も問われる。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 1,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "emotional_support"
+          ],
+          "universityInsightTags": [
+            "stakeholder_emotion_sensitivity"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "expectation_overrun"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "「給与を守る案を優先して組みます」と目的と条件を分けて伝える",
+          "text": "満額可否は未定と明言し、給与資金を守る短期支援案と必要条件を説明する。",
+          "immediateFeedback": "社長は満額でない可能性を理解しつつ、何を出せばよいか分かる。",
+          "delayedConsequence": "夕方に減額案になっても、説明の筋が残る。",
+          "nextSceneEffect": "審査部に、顧客説明済みの条件付き案として持ち込める。",
+          "resultSummaryEffect": "顧客の安心と銀行の条件を切り分ける判断が多い。",
+          "meterEffects": {
+            "customer_trust": 1,
+            "compliance_safety": 2,
+            "regional_impact": 1,
+            "credit_risk": 1,
+            "internal_workload": -1
+          },
+          "misconceptionEffect": "法人営業は明るく売る仕事ではなく、相手が動ける条件に翻訳する仕事。",
+          "studentFeedback": {
+            "good": "感情を受け止めながら、約束の線を越えていない。",
+            "risk": "社長には歯切れが悪く感じられる可能性がある。",
+            "next": "次は審査部に、条件付き案として説明する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "expectation_design"
+          ],
+          "universityInsightTags": [
+            "condition_design_learning"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "perceived_ambiguity"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "審査結果が出るまで金額に触れず、資料提出だけを依頼する",
+          "text": "不用意な期待値を避け、保証協会と審査部の確認後に正式回答すると伝える。",
+          "immediateFeedback": "記録上のリスクは抑えられる。",
+          "delayedConsequence": "社長は不安なまま戻り、資料提出が遅れる恐れがある。",
+          "nextSceneEffect": "審査部説明は堅いが、顧客協力の弱さを補う必要が出る。",
+          "resultSummaryEffect": "審査安全性を優先する判断が多い。",
+          "meterEffects": {
+            "compliance_safety": 3,
+            "credit_risk": 1,
+            "customer_trust": -2,
+            "regional_impact": -1
+          },
+          "misconceptionEffect": "正確な説明だけでは、顧客が次に動けないことがある。",
+          "studentFeedback": {
+            "good": "審査前の約束を避けている。",
+            "risk": "顧客感情と地域雇用への配慮が薄く見える。",
+            "next": "次は不足資料のまま審査部と向き合う。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "strict_boundary"
+          ],
+          "universityInsightTags": [
+            "compliance_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "low_customer_momentum"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "expectation_management",
+        "frictionType": "emotional_pressure",
+        "workValueTags": [
+          "地域金融",
+          "中小企業支援",
+          "説明責任"
+        ],
+        "careerRealityTags": [
+          "credit_decision",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "regional_employment",
+          "local_business"
+        ]
+      },
+      "openingHook": "12:15。社長が窓口に現れた。「満額いけそうですか。工場のみんな、昼飯も喉を通らないって」",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "保証条件設計",
+        "roleSpecificMaterials": [
+          "保証協会メモ",
+          "来店メモ",
+          "8月返済予定表"
+        ],
+        "roleSpecificMetrics": [
+          "満額支援",
+          "既存保証残枠は限定的",
+          "A社検収予定メール、B社請求書、8月返済予定表が必要"
+        ],
+        "roleSpecificFailureRisk": "安心させる発言が先行し、保証条件や必要資料が未確定のまま期待だけを膨らませる。",
+        "roleSpecificEvaluationCriteria": "顧客が次に動ける条件を示しつつ、保証協会と銀行の説明責任を守れるか。",
+        "genericCoordinationRisk": "顧客と保証協会の板挟み調整に見える。",
+        "antiGenericDesignNote": "保証残枠、検収メール、請求書、返済予定表を使い、条件付き支援の設計判断にしている。",
+        "kernelConnection": "保証協会条件と社長説明を、顧客期待値を上げすぎない条件設計へ接続する。"
+      }
+    },
+    {
+      "id": "finance-14-05-credit-review",
+      "type": "meeting",
+      "title": "審査部の赤字コメント",
+      "context": "14:05。稟議下書きに赤字が入った。「返済原資の記述が希望的。保全の説明も不足」\n\n午後の審査部レビュー。支店長は地域雇用の重要性を補足するが、審査部は返済原資と保全を見ている。",
+      "content": "給与遅配回避は重要。ただし銀行としては、返済予定、保証協会、モニタリング条件まで示さないと通せない。",
+      "roleSpecificContext": "法人担当は顧客の代弁者であり、審査部に通る説明の編集者でもある。",
+      "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+      "hiddenWorkReality": "組織の中で通る判断には、熱意だけでなく記録、条件、次回確認日が必要になる。",
+      "stakeholderPressure": "審査部は説明責任を求める。支店長は地域の信用と収益を同時に気にする。",
+      "timePressure": "16:30までに社長へ方向性を返す必要がある。",
+      "missingInformation": "保証協会の最終保証可否、A社検収メールの正式回答。",
+      "decisionTradeoff": "条件を増やせば通りやすいが、顧客には厳しい支援になる。",
+      "consequenceHook": "審査部との握り方が、夕方の満額/減額/段階支援の選択肢を決める。",
+      "nextSceneEcho": "ここで決めた条件が、社長への最終説明の骨子になる。",
+      "npcDialogue": "審査部:「地域雇用は分かります。ただ、返済原資はA社検収待ちですよね」\n支店長:「満額にこだわるな。給与を守る着地点を探せ」",
+      "workMaterial": "稟議コメント\n- 資金使途: 給与資金910万円、材料費一部\n- 返済原資: A社・B社売掛入金。ただしA社は検収待ち\n- 保全: 保証協会付き、代表者保証、月次資金繰り表提出\n- 審査部意見: 満額1,200万円は根拠弱い。800〜1,000万円の段階支援なら検討余地",
+      "decisionPrompt": "審査部に、どの案で押し返すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "地域雇用を理由に1,200万円満額を強く主張する",
+          "text": "給与遅配と地域雇用への影響を前面に出し、満額支援の必要性を支店長と一緒に押す。",
+          "immediateFeedback": "支店の熱意は伝わる。",
+          "delayedConsequence": "審査部には返済原資の弱さを感情で埋めたように見える。",
+          "nextSceneEffect": "夕方、満額不可になった場合の説明が苦しくなる。",
+          "resultSummaryEffect": "地域支援を前面に出す判断が多い。",
+          "meterEffects": {
+            "regional_impact": 2,
+            "customer_trust": 1,
+            "credit_risk": -2,
+            "compliance_safety": -1,
+            "branch_profit": 1
+          },
+          "misconceptionEffect": "地域貢献は重要だが、銀行内では数字と条件に変換しないと通らない。",
+          "studentFeedback": {
+            "good": "地域雇用への責任を引き受けている。",
+            "risk": "審査部の論点に正面から答えきれていない。",
+            "next": "次は強く押した分、社長への期待値調整が難しくなる。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 1,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "branch_advocacy"
+          ],
+          "universityInsightTags": [
+            "regional_impact_focus"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "weak_internal_logic"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "1,000万円を上限に、保証協会と月次管理を条件にする",
+          "text": "給与資金を守る額に絞り、保証協会・月次資金繰り表・A社検収確認を条件にした案へ修正する。",
+          "immediateFeedback": "審査部は検討可能な案として受け止める。",
+          "delayedConsequence": "社長には満額ではない理由と条件を丁寧に説明する必要がある。",
+          "nextSceneEffect": "夕方、段階支援として着地できる。",
+          "resultSummaryEffect": "通る条件に翻訳する判断が多い。",
+          "meterEffects": {
+            "compliance_safety": 2,
+            "credit_risk": 2,
+            "customer_trust": 1,
+            "regional_impact": 1,
+            "internal_workload": -1
+          },
+          "misconceptionEffect": "銀行の法人営業は顧客要望をそのまま社内に通す仕事ではない。",
+          "studentFeedback": {
+            "good": "返済原資、保全、顧客目的を1つの案にまとめている。",
+            "risk": "条件が増え、顧客側の事務負担は重くなる。",
+            "next": "次は段階支援を社長が納得できる言葉にする。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "approval_design"
+          ],
+          "universityInsightTags": [
+            "organizational_decision_learning"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "customer_admin_burden"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "800万円に減額し、材料費は取引先支払猶予を前提にする",
+          "text": "銀行支援を給与資金中心に限定し、材料費は社長に支払猶予交渉を依頼する案にする。",
+          "immediateFeedback": "審査部のリスク懸念はかなり下がる。",
+          "delayedConsequence": "仕入先との関係悪化や生産遅れの火種が残る。",
+          "nextSceneEffect": "夕方、社長には厳しい現実を伝える必要がある。",
+          "resultSummaryEffect": "銀行リスクを先に絞る判断が多い。",
+          "meterEffects": {
+            "credit_risk": 3,
+            "compliance_safety": 2,
+            "customer_trust": -1,
+            "regional_impact": -1,
+            "branch_profit": -1
+          },
+          "misconceptionEffect": "リスクを下げれば終わりではなく、顧客の事業継続への副作用も残る。",
+          "studentFeedback": {
+            "good": "返済原資の弱さに合わせて支援額を現実化している。",
+            "risk": "資金繰り全体では火種を残す。",
+            "next": "次は減額案の副作用まで説明する。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "credit_risk_first"
+          ],
+          "universityInsightTags": [
+            "risk_control_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "business_continuity_gap"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "branch_advocacy_vs_credit_review",
+        "frictionType": "internal_approval",
+        "workValueTags": [
+          "地域金融",
+          "中小企業支援",
+          "説明責任"
+        ],
+        "careerRealityTags": [
+          "credit_decision",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "regional_employment",
+          "local_business"
+        ]
+      },
+      "openingHook": "14:05。稟議下書きに赤字が入った。「返済原資の記述が希望的。保全の説明も不足」",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "稟議説明補強",
+        "roleSpecificMaterials": [
+          "稟議コメント",
+          "審査部意見",
+          "月次資金繰り表提出"
+        ],
+        "roleSpecificMetrics": [
+          "給与資金910万円",
+          "満額1,200万円",
+          "800〜1,000万円の段階支援"
+        ],
+        "roleSpecificFailureRisk": "地域貢献や顧客事情だけを書き、審査部が検証できる保全・返済原資説明が不足する。",
+        "roleSpecificEvaluationCriteria": "顧客要望をそのまま通すのではなく、審査が読める根拠・条件・副作用に翻訳できるか。",
+        "genericCoordinationRisk": "審査部と営業の社内調整に見える。",
+        "antiGenericDesignNote": "稟議コメント、保全条件、実行額レンジを扱い、法人融資固有の説明責任を判断対象にしている。",
+        "kernelConnection": "審査部コメントを、稟議で説明できる保全・返済根拠の補強へ接続する。"
+      }
+    },
+    {
+      "id": "finance-16-40-final-call",
+      "type": "meeting",
+      "title": "最終回答の10分前",
+      "context": "16:40。保証協会から折り返し。「1,000万円、条件付きなら前向きです」\n\n保証協会は条件付きで前向き。審査部も1,000万円までなら稟議可。社長には17時に電話する約束をしている。",
+      "content": "満額ではない。だが給与資金は守れる。条件を厳しく伝えすぎると社長は萎縮し、甘く伝えると銀行の記録が崩れる。",
+      "roleSpecificContext": "最終判断は金額だけでなく、顧客が明日動ける説明にする必要がある。",
+      "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+      "hiddenWorkReality": "法人融資の着地は、支援額、条件、次回確認、顧客の感情を同じ紙に乗せること。",
+      "stakeholderPressure": "社長は満額を期待。審査部は条件遵守。支店長は支店の信用を守りたい。",
+      "timePressure": "17:00までに社長へ回答。今日中に追加資料提出の合意が必要。",
+      "missingInformation": "社長が条件を飲み、A社検収メールを出せるか。",
+      "decisionTradeoff": "条件を曖昧にすれば受け入れやすいが、後で銀行と顧客双方を傷つける。",
+      "consequenceHook": "最終説明が結果画面の職業理解タイプに直結する。",
+      "nextSceneEcho": "プレイヤーの判断は、顧客信頼と説明責任のどちらを残したかとして返る。",
+      "npcDialogue": "支店長:「満額ではない。でも給与は守れる。ここからが担当者の仕事だ」\n社長:「条件付きでも、今日方向が見えるなら助かります」",
+      "workMaterial": "最終条件案\n- 実行額: 1,000万円\n- 使途: 給与資金910万円、残額は当座余裕\n- 条件: A社検収メール、B社請求書、月次資金繰り表3か月提出\n- 返済原資: 7月末・8月末売掛入金\n- 次回確認: 2週間後に入金状況確認",
+      "decisionPrompt": "社長への最終回答として、何を軸に伝えるか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "「給与は守れます」と先に伝え、条件は後半で説明する",
+          "text": "安心を先に置き、1,000万円条件付き支援と追加資料を順に伝える。",
+          "immediateFeedback": "社長は落ち着き、従業員への説明がしやすくなる。",
+          "delayedConsequence": "条件の重さが後から効き、提出漏れが出る恐れがある。",
+          "nextSceneEffect": "結果では、顧客安心を優先したタイプとして表れる。",
+          "resultSummaryEffect": "顧客の不安を先にほどく判断が多い。",
+          "meterEffects": {
+            "customer_trust": 2,
+            "regional_impact": 2,
+            "compliance_safety": -1,
+            "credit_risk": -1
+          },
+          "misconceptionEffect": "安心を作る言葉にも、条件を守らせる設計が必要。",
+          "studentFeedback": {
+            "good": "顧客が明日動ける心理状態を作っている。",
+            "risk": "条件の重要性が弱く伝わる可能性がある。",
+            "next": "結果では顧客信頼と条件管理のバランスを振り返る。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 1,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "customer_reassurance"
+          ],
+          "universityInsightTags": [
+            "empathy_strength"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "condition_undercommunication"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "金額、条件、次回確認日を1枚の約束として伝える",
+          "text": "1,000万円支援、必要資料、2週間後確認を同じ重みで説明し、社長の合意を取る。",
+          "immediateFeedback": "社長は満額でない理由と、銀行が支援する条件を理解する。",
+          "delayedConsequence": "次回確認まで関係を保ちながら、銀行内の説明も残る。",
+          "nextSceneEffect": "結果では、条件と安心を同時に設計するタイプとして表れる。",
+          "resultSummaryEffect": "支援を通る条件へ翻訳する判断が多い。",
+          "meterEffects": {
+            "customer_trust": 1,
+            "compliance_safety": 2,
+            "credit_risk": 2,
+            "regional_impact": 1,
+            "internal_workload": -1
+          },
+          "misconceptionEffect": "銀行は貸す仕事ではなく、条件と安心を同時に設計する仕事だと理解できる。",
+          "studentFeedback": {
+            "good": "顧客信頼、返済原資、説明責任を同じ文脈で扱っている。",
+            "risk": "説明量が多く、社長が一度で飲み込めない可能性がある。",
+            "next": "結果では職業理解の中核として、条件設計力を返す。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "condition_and_trust_balance"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "communication_density"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "条件不履行時のリスクを先に伝え、銀行の線引きを明確にする",
+          "text": "保証協会条件、資料未提出時の実行不可、次回確認を先に説明し、その上で1,000万円支援を伝える。",
+          "immediateFeedback": "銀行としての線引きは明確になる。",
+          "delayedConsequence": "社長は助かったよりも監視される印象を持つ可能性がある。",
+          "nextSceneEffect": "結果では、説明安全性を優先したタイプとして表れる。",
+          "resultSummaryEffect": "銀行信用と記録を守る判断が多い。",
+          "meterEffects": {
+            "compliance_safety": 3,
+            "credit_risk": 2,
+            "customer_trust": -2,
+            "regional_impact": -1
+          },
+          "misconceptionEffect": "正確さだけでは、顧客が銀行を相談相手と感じにくくなる。",
+          "studentFeedback": {
+            "good": "条件不履行リスクを曖昧にしていない。",
+            "risk": "支援の意図より制約が強く伝わる。",
+            "next": "結果では説明責任と顧客信頼の緊張を振り返る。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "strict_conditioning"
+          ],
+          "universityInsightTags": [
+            "compliance_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "trust_erosion"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "final_explanation",
+        "frictionType": "conditional_support",
+        "workValueTags": [
+          "地域金融",
+          "中小企業支援",
+          "説明責任"
+        ],
+        "careerRealityTags": [
+          "credit_decision",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "regional_employment",
+          "local_business"
+        ]
+      },
+      "openingHook": "16:40。保証協会から折り返し。「1,000万円、条件付きなら前向きです」",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "条件付き最終回答",
+        "roleSpecificMaterials": [
+          "最終条件案",
+          "A社検収メール",
+          "月次資金繰り表3か月"
+        ],
+        "roleSpecificMetrics": [
+          "実行額: 1,000万円",
+          "給与資金910万円",
+          "次回確認: 2週間後に入金状況確認"
+        ],
+        "roleSpecificFailureRisk": "可否だけを伝え、条件遵守・入金確認・次回モニタリングが抜ける。",
+        "roleSpecificEvaluationCriteria": "顧客安心と銀行の条件管理を両立する最終説明にできるか。",
+        "genericCoordinationRisk": "最終連絡の言い方だけを選ぶ会話ゲームに見える。",
+        "antiGenericDesignNote": "実行額、資金使途、提出資料、返済原資、確認日を材料にし、融資条件の着地判断にしている。",
+        "kernelConnection": "最終条件案を、顧客が動けて銀行内にも記録が残る回答へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "朝: 初動判断",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "給与資金のSOSに、どこまで前向きな初動を返すか。",
+      "scenes": [
+        {
+          "id": "finance-09-05-funding-call",
+          "type": "email",
+          "time": "09:05",
+          "interactable": "phone",
+          "presenter": "社長",
+          "title": "8日後の給与資金",
+          "openingHook": "09:05。支店の電話が鳴った。「今月の給与、8日だけ足りません」",
+          "context": "09:05。支店の電話が鳴った。「今月の給与、8日だけ足りません」\n\n機械部品加工の架空企業、三島精工から短期資金の相談が入る。給与遅配を避けたいが、前回融資からまだ4か月しか経っていない。",
+          "content": "社長は声を落として「従業員にはまだ言っていない」と言う。支店長は10時までに初動方針を求めている。助けるだけでは銀行の説明が通らない。",
+          "roleSpecificContext": "地方銀行の法人担当は、地域雇用を守る顔と、銀行の信用を守る顔を同時に持つ。",
+          "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+          "hiddenWorkReality": "銀行の仕事は「貸す」より前に、返せる形と説明できる条件を作ることから始まる。",
+          "stakeholderPressure": "社長は給与遅配を避けたい。支店長は地域雇用と自行リスクの両方を見ている。",
+          "timePressure": "10:00の支店長朝会までに初動方針が必要。",
+          "missingInformation": "売掛入金の確度、保証協会の利用余地、資金使途の内訳が未確認。",
+          "decisionTradeoff": "先に安心を出すほど顧客信頼は上がるが、審査で約束を取り消すリスクが増える。",
+          "consequenceHook": "朝の一言が、昼の社長説明と審査部コメントの厳しさに残る。",
+          "nextSceneEcho": "売掛入金の確度を確認しないまま進めると、次の資金繰り表で穴が広がる。",
+          "npcDialogue": "社長:「満額とは言いません。ただ、給料だけは遅らせたくない」\n支店長:「気持ちは分かる。だが返済原資を見ずに希望だけ持たせるな」",
+          "workMaterial": "相談メモ\n- 希望額: 1,200万円\n- 当座残高: 180万円\n- 8日後給与: 910万円\n- 月末入金予定: A社 760万円、B社 430万円\n- 既存借入: 残高4,800万円、前回実行4か月前",
+          "decisionPrompt": "社長への初回返答として、どの温度で動き出すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "給与資金を最優先に、満額支援の可能性を前向きに伝える",
+              "text": "給与遅配を避けるため満額支援を前提に動くと伝え、必要資料を急ぎ回収する。",
+              "immediateFeedback": "社長は一息つき、資料提出に協力的になる。",
+              "delayedConsequence": "審査で減額になった場合、期待値を上げた分だけ失望が大きい。",
+              "nextSceneEffect": "資金繰り表の穴を埋める資料回収は早まるが、支店長への説明は重くなる。",
+              "resultSummaryEffect": "顧客の安心を先に作る判断が多い。",
+              "meterEffects": {
+                "customer_trust": 2,
+                "regional_impact": 2,
+                "credit_risk": -2,
+                "compliance_safety": -1
+              },
+              "misconceptionEffect": "銀行は顧客の希望額を約束する仕事ではなく、希望を審査に通る条件へ翻訳する仕事だと気づきにくい。",
+              "studentFeedback": {
+                "good": "給与遅配という地域雇用リスクに即応できている。",
+                "risk": "返済原資を確認する前に期待値を作っている。",
+                "next": "次は売掛入金の確度で、前向き発言の裏付けを探す。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 1,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "customer_empathy_first",
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "regional_employment_sensitivity"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "overpromises_credit"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "可能性は否定せず、返済原資と保証協会の確認を先に置く",
+              "text": "支援の方向で検討すると伝えつつ、売掛入金、資金使途、保証協会枠を午前中に確認する。",
+              "immediateFeedback": "社長は少し不安を残すが、必要資料の意味を理解する。",
+              "delayedConsequence": "午前の確認量は増えるが、審査部への説明の芯ができる。",
+              "nextSceneEffect": "資金繰り表の数字確認に自然につながる。",
+              "resultSummaryEffect": "安心と条件を同時に設計する判断が多い。",
+              "meterEffects": {
+                "customer_trust": 1,
+                "compliance_safety": 2,
+                "credit_risk": 1,
+                "internal_workload": -1
+              },
+              "misconceptionEffect": "「貸す/断る」の二択ではなく、条件を組み立てる仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "顧客を突き放さず、銀行として説明できる順番を守っている。",
+                "risk": "即答を求める社長には、冷たく聞こえる可能性がある。",
+                "next": "次は売掛入金の確度を材料に、段階支援の根拠を作る。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "condition_design",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "communication_tension"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "現時点では満額回答を避け、追加資料なしでは進めないと線を引く",
+              "text": "返済原資が未確認なので、資料が揃うまで融資可能性に触れない。",
+              "immediateFeedback": "銀行としての不用意な発言は避けられる。",
+              "delayedConsequence": "社長が他行や取引先に走り、相談の主導権を失う可能性がある。",
+              "nextSceneEffect": "数字確認は厳密になるが、顧客の本音が出にくくなる。",
+              "resultSummaryEffect": "説明責任と保全を優先する判断が多い。",
+              "meterEffects": {
+                "compliance_safety": 3,
+                "credit_risk": 2,
+                "customer_trust": -2,
+                "regional_impact": -1
+              },
+              "misconceptionEffect": "銀行員は冷静に断るだけでなく、顧客が話し続けられる余地も設計する必要がある。",
+              "studentFeedback": {
+                "good": "コンプライアンスと審査説明を守っている。",
+                "risk": "資金繰り危機の感情を受け止めず、信頼を失う恐れがある。",
+                "next": "次は資料精査で、厳しい姿勢を支える根拠が問われる。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "compliance_first"
+              ],
+              "universityInsightTags": [
+                "risk_control_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "customer_trust_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "empathy_vs_credit_discipline",
+            "frictionType": "cash_shortage",
+            "workValueTags": [
+              "地域金融",
+              "中小企業支援",
+              "説明責任"
+            ],
+            "careerRealityTags": [
+              "credit_decision",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "regional_employment",
+              "local_business"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "資金不足の初期切り分け",
+            "roleSpecificMaterials": [
+              "相談メモ",
+              "当座残高",
+              "8日後給与"
+            ],
+            "roleSpecificMetrics": [
+              "希望額: 1,200万円",
+              "当座残高: 180万円",
+              "8日後給与: 910万円",
+              "月末入金予定: A社 760万円、B社 430万円"
+            ],
+            "roleSpecificFailureRisk": "希望額を先に約束し、返済原資と審査説明の根拠が崩れる。",
+            "roleSpecificEvaluationCriteria": "顧客の不安を受け止めながら、資金使途・不足期間・返済原資を審査に出せる形へ切り分けられるか。",
+            "genericCoordinationRisk": "単なる顧客への寄り添いと上司確認の場面に見える。",
+            "antiGenericDesignNote": "当座残高、給与支払予定、売掛入金予定を材料にし、銀行固有の初期ヒアリング判断にしている。",
+            "kernelConnection": "顧客の資金不安と希望額を、返済原資確認に進める初期融資設計へ接続する。"
+          }
+        },
+        {
+          "id": "finance-10-20-cashflow-gap",
+          "type": "review",
+          "time": "10:20",
+          "interactable": "monitor_browser",
+          "presenter": "あなた",
+          "title": "売掛入金のずれ",
+          "openingHook": "10:20。資金繰り表のA社入金欄だけ、鉛筆で「70%」と書き足されていた。",
+          "context": "10:20。資金繰り表のA社入金欄だけ、鉛筆で「70%」と書き足されていた。\n\n社長が送った資金繰り表には、月末入金予定の一部に未確定要素がある。在庫も前期比で増えている。",
+          "content": "A社760万円は検収待ち。B社430万円は入金確定。棚卸資産は前年比132%。売上は横ばい。満額支援の根拠が揺れる。",
+          "roleSpecificContext": "法人融資では、表の合計額より「その入金が本当に入るか」を見る。",
+          "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+          "hiddenWorkReality": "返済原資は決算書の利益だけではなく、入金日と確度で崩れる。",
+          "stakeholderPressure": "社長は「毎年この時期は在庫が増える」と説明する。審査部は検収前売掛を慎重に見る。",
+          "timePressure": "11:30までに保証協会へ事前相談するか決める必要がある。",
+          "missingInformation": "A社の検収完了予定、在庫増の理由、保証協会の残枠。",
+          "decisionTradeoff": "追加確認をすれば説明は強くなるが、保証協会相談の時間を失う。",
+          "consequenceHook": "ここで見落とした確度が、午後の審査部差し戻しにつながる。",
+          "nextSceneEcho": "保証協会に相談する材料の厚みが昼の社長説明を左右する。",
+          "npcDialogue": "融資事務:「A社、前も検収が月をまたぎましたよね」\n社長:「今回の品物はもう納めています。入金は大丈夫なはずです」",
+          "workMaterial": "資金繰り表抜粋\n- 7/25 給与: -910万円\n- 7/31 A社売掛: +760万円（検収待ち、社長見込み70%）\n- 7/31 B社売掛: +430万円（請求書発行済み）\n- 8/10 材料費: -520万円\n決算書断片: 棚卸資産 2,900万円（前年比132%）、営業利益率2.1%",
+          "decisionPrompt": "保証協会への事前相談前に、どこまで数字を固めるか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "A社入金を保守的に半額で置き、800万円の短期支援案に下げる",
+              "text": "A社入金を380万円として資金ショート額を再計算し、満額ではなく短期800万円の案を作る。",
+              "immediateFeedback": "審査説明は堅くなるが、社長の希望額とは離れる。",
+              "delayedConsequence": "給与は守れる可能性が高いが、材料費支払いは再調整が必要になる。",
+              "nextSceneEffect": "昼の社長説明では、減額理由を感情面も含めて伝える必要が出る。",
+              "resultSummaryEffect": "不確実な入金を厳しく見る判断が多い。",
+              "meterEffects": {
+                "credit_risk": 2,
+                "compliance_safety": 2,
+                "customer_trust": -1,
+                "regional_impact": -1
+              },
+              "misconceptionEffect": "融資判断は「困っている額」ではなく「返せる見込み額」から逆算する。",
+              "studentFeedback": {
+                "good": "入金確度を反映し、返済原資の説明が通りやすい。",
+                "risk": "顧客には銀行が助けてくれない印象を与えやすい。",
+                "next": "次は減額案を社長が受け止められる説明に変える。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "receivable_discounting"
+              ],
+              "universityInsightTags": [
+                "credit_evidence_focus"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "customer_expectation_gap"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "A社検収の証跡を取りに行き、保証協会には条件付きで相談する",
+              "text": "A社の検収予定メールを社長に依頼し、保証協会には「証跡確認中」として1,000万円案を相談する。",
+              "immediateFeedback": "確認作業は増えるが、満額と減額の間に説明可能な案ができる。",
+              "delayedConsequence": "証跡が取れれば審査部の懸念を一部抑えられる。",
+              "nextSceneEffect": "昼の社長説明で、条件付き支援として話せる。",
+              "resultSummaryEffect": "条件を集めながら支援幅を残す判断が多い。",
+              "meterEffects": {
+                "customer_trust": 1,
+                "credit_risk": 1,
+                "compliance_safety": 2,
+                "internal_workload": -2
+              },
+              "misconceptionEffect": "銀行員は資料を要求するだけでなく、通る資料の形を一緒に作る。",
+              "studentFeedback": {
+                "good": "顧客支援と審査説明を同時に進めている。",
+                "risk": "関係者全員の反応待ちになり、時間が詰まる。",
+                "next": "次は条件付き支援をどう伝えるかが問われる。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "condition_design",
+                "evidence_building"
+              ],
+              "universityInsightTags": [
+                "work_artifact_literacy"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "社長見込みを尊重し、1,200万円案で保証協会に先行相談する",
+              "text": "A社入金は見込みどおりとして、希望額1,200万円の保証協会付き短期融資を先に相談する。",
+              "immediateFeedback": "社長の期待には沿える。保証協会との会話も早い。",
+              "delayedConsequence": "検収遅れが出た場合、返済原資の説明が崩れる。",
+              "nextSceneEffect": "審査部からA社入金の証跡を強く求められる。",
+              "resultSummaryEffect": "顧客の事業継続を広く支える判断が多い。",
+              "meterEffects": {
+                "customer_trust": 2,
+                "regional_impact": 1,
+                "credit_risk": -2,
+                "compliance_safety": -1
+              },
+              "misconceptionEffect": "地域金融は情だけでは進まず、見込みを証拠に変える力が必要。",
+              "studentFeedback": {
+                "good": "資金繰りの時間制約に素早く反応している。",
+                "risk": "不確実な売掛をそのまま返済原資にしている。",
+                "next": "次は社長の期待値が上がった状態で条件説明に入る。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 1,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first",
+                "trust_first"
+              ],
+              "universityInsightTags": [
+                "empathy_vs_risk_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "weak_repayment_source"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "evidence_vs_speed",
+            "frictionType": "uncertain_receivable",
+            "workValueTags": [
+              "地域金融",
+              "中小企業支援",
+              "説明責任"
+            ],
+            "careerRealityTags": [
+              "credit_decision",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "regional_employment",
+              "local_business"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "返済原資評価",
+            "roleSpecificMaterials": [
+              "資金繰り表抜粋",
+              "A社売掛",
+              "B社売掛"
+            ],
+            "roleSpecificMetrics": [
+              "7/31 A社売掛: +760万円",
+              "7/31 B社売掛: +430万円",
+              "8/10 材料費: -520万円"
+            ],
+            "roleSpecificFailureRisk": "売掛入金の確度を見誤り、返済可能性を過大評価した稟議になる。",
+            "roleSpecificEvaluationCriteria": "不足額ではなく返済原資から支援額と追加資料を逆算できるか。",
+            "genericCoordinationRisk": "資料を集めるだけの進行管理に見える。",
+            "antiGenericDesignNote": "売掛入金確度、棚卸増加、営業利益率を読み、融資判断の根拠へ変換している。",
+            "kernelConnection": "資金繰り表と売掛入金予定を、返済原資の確度評価へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼: 社長の期待値管理",
+      "time_start": "12:00",
+      "time_end": "12:45",
+      "location": "cafeteria",
+      "intro": "数字だけでは動かない社長の感情に向き合う。",
+      "scenes": [
+        {
+          "id": "finance-12-15-president-expectation",
+          "type": "meeting",
+          "time": "12:15",
+          "interactable": "npc_dialogue",
+          "presenter": "社長",
+          "title": "昼休みの社長来店",
+          "openingHook": "12:15。社長が窓口に現れた。「満額いけそうですか。工場のみんな、昼飯も喉を通らないって」",
+          "context": "12:15。社長が窓口に現れた。「満額いけそうですか。工場のみんな、昼飯も喉を通らないって」\n\n保証協会は「短期資金なら前向き。ただし売掛証跡と返済予定の明記が必要」と回答した。社長は満額の期待を持って来店する。",
+          "content": "ここで優しく言いすぎると審査前の約束になる。正確に言いすぎると、社長は見放されたと感じる。",
+          "roleSpecificContext": "法人担当は、金融条件を人が受け取れる言葉に変換する。",
+          "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+          "hiddenWorkReality": "融資の説明は数字だけでなく、顧客の感情と次の行動を設計する仕事でもある。",
+          "stakeholderPressure": "社長は従業員の生活を背負っている。保証協会は条件明記を求める。",
+          "timePressure": "13:30の審査部持ち込みまでに、社長の追加資料提出を取り付けたい。",
+          "missingInformation": "社長が減額や条件付き支援を受け入れられるか。",
+          "decisionTradeoff": "安心を先に渡すほど資料協力は得やすいが、審査結果との落差が大きくなる。",
+          "consequenceHook": "社長の受け止め方が、夕方の最終説明の信頼残高になる。",
+          "nextSceneEcho": "ここで得た証跡が午後の審査部コメントを左右する。",
+          "npcDialogue": "社長:「従業員には絶対に遅らせたくないんです」\n支店長:「言葉を選べ。約束ではなく、通すための条件を伝えるんだ」",
+          "workMaterial": "保証協会メモ\n- 保証付き短期運転資金は検討可\n- A社検収予定メール、B社請求書、8月返済予定表が必要\n- 既存保証残枠は限定的\n来店メモ: 社長は満額支援を期待。給与遅配回避を最優先。",
+          "decisionPrompt": "社長に、どの説明で追加資料と現実的な期待値を作るか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "「満額を目指します」と言い、社長の協力を引き出す",
+              "text": "満額支援を目指す姿勢を前面に出し、検収メールと返済予定表を今日中に依頼する。",
+              "immediateFeedback": "社長は前向きになり、資料提出を急いでくれる。",
+              "delayedConsequence": "満額不可のとき、銀行が約束を破ったように受け取られる。",
+              "nextSceneEffect": "審査部への持ち込みでは、発言の強さを支店長に説明する必要がある。",
+              "resultSummaryEffect": "相手の感情を先に支える判断が多い。",
+              "meterEffects": {
+                "customer_trust": 2,
+                "regional_impact": 1,
+                "compliance_safety": -2,
+                "credit_risk": -1
+              },
+              "misconceptionEffect": "顧客を安心させる言葉ほど、銀行では記録と責任が重くなる。",
+              "studentFeedback": {
+                "good": "社長の不安を受け止め、行動につなげている。",
+                "risk": "審査前の期待値管理としては強すぎる。",
+                "next": "次は審査部から、顧客への伝え方も問われる。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 1,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "emotional_support"
+              ],
+              "universityInsightTags": [
+                "stakeholder_emotion_sensitivity"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "expectation_overrun"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "「給与を守る案を優先して組みます」と目的と条件を分けて伝える",
+              "text": "満額可否は未定と明言し、給与資金を守る短期支援案と必要条件を説明する。",
+              "immediateFeedback": "社長は満額でない可能性を理解しつつ、何を出せばよいか分かる。",
+              "delayedConsequence": "夕方に減額案になっても、説明の筋が残る。",
+              "nextSceneEffect": "審査部に、顧客説明済みの条件付き案として持ち込める。",
+              "resultSummaryEffect": "顧客の安心と銀行の条件を切り分ける判断が多い。",
+              "meterEffects": {
+                "customer_trust": 1,
+                "compliance_safety": 2,
+                "regional_impact": 1,
+                "credit_risk": 1,
+                "internal_workload": -1
+              },
+              "misconceptionEffect": "法人営業は明るく売る仕事ではなく、相手が動ける条件に翻訳する仕事。",
+              "studentFeedback": {
+                "good": "感情を受け止めながら、約束の線を越えていない。",
+                "risk": "社長には歯切れが悪く感じられる可能性がある。",
+                "next": "次は審査部に、条件付き案として説明する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "expectation_design"
+              ],
+              "universityInsightTags": [
+                "condition_design_learning"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "perceived_ambiguity"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "審査結果が出るまで金額に触れず、資料提出だけを依頼する",
+              "text": "不用意な期待値を避け、保証協会と審査部の確認後に正式回答すると伝える。",
+              "immediateFeedback": "記録上のリスクは抑えられる。",
+              "delayedConsequence": "社長は不安なまま戻り、資料提出が遅れる恐れがある。",
+              "nextSceneEffect": "審査部説明は堅いが、顧客協力の弱さを補う必要が出る。",
+              "resultSummaryEffect": "審査安全性を優先する判断が多い。",
+              "meterEffects": {
+                "compliance_safety": 3,
+                "credit_risk": 1,
+                "customer_trust": -2,
+                "regional_impact": -1
+              },
+              "misconceptionEffect": "正確な説明だけでは、顧客が次に動けないことがある。",
+              "studentFeedback": {
+                "good": "審査前の約束を避けている。",
+                "risk": "顧客感情と地域雇用への配慮が薄く見える。",
+                "next": "次は不足資料のまま審査部と向き合う。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "strict_boundary"
+              ],
+              "universityInsightTags": [
+                "compliance_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "low_customer_momentum"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "expectation_management",
+            "frictionType": "emotional_pressure",
+            "workValueTags": [
+              "地域金融",
+              "中小企業支援",
+              "説明責任"
+            ],
+            "careerRealityTags": [
+              "credit_decision",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "regional_employment",
+              "local_business"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "保証条件設計",
+            "roleSpecificMaterials": [
+              "保証協会メモ",
+              "来店メモ",
+              "8月返済予定表"
+            ],
+            "roleSpecificMetrics": [
+              "満額支援",
+              "既存保証残枠は限定的",
+              "A社検収予定メール、B社請求書、8月返済予定表が必要"
+            ],
+            "roleSpecificFailureRisk": "安心させる発言が先行し、保証条件や必要資料が未確定のまま期待だけを膨らませる。",
+            "roleSpecificEvaluationCriteria": "顧客が次に動ける条件を示しつつ、保証協会と銀行の説明責任を守れるか。",
+            "genericCoordinationRisk": "顧客と保証協会の板挟み調整に見える。",
+            "antiGenericDesignNote": "保証残枠、検収メール、請求書、返済予定表を使い、条件付き支援の設計判断にしている。",
+            "kernelConnection": "保証協会条件と社長説明を、顧客期待値を上げすぎない条件設計へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後: 審査部との衝突",
+      "time_start": "14:00",
+      "time_end": "15:00",
+      "location": "conference_room",
+      "intro": "地域支援を、審査部に通る条件へ翻訳する。",
+      "scenes": [
+        {
+          "id": "finance-14-05-credit-review",
+          "type": "meeting",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "presenter": "審査部",
+          "title": "審査部の赤字コメント",
+          "openingHook": "14:05。稟議下書きに赤字が入った。「返済原資の記述が希望的。保全の説明も不足」",
+          "context": "14:05。稟議下書きに赤字が入った。「返済原資の記述が希望的。保全の説明も不足」\n\n午後の審査部レビュー。支店長は地域雇用の重要性を補足するが、審査部は返済原資と保全を見ている。",
+          "content": "給与遅配回避は重要。ただし銀行としては、返済予定、保証協会、モニタリング条件まで示さないと通せない。",
+          "roleSpecificContext": "法人担当は顧客の代弁者であり、審査部に通る説明の編集者でもある。",
+          "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+          "hiddenWorkReality": "組織の中で通る判断には、熱意だけでなく記録、条件、次回確認日が必要になる。",
+          "stakeholderPressure": "審査部は説明責任を求める。支店長は地域の信用と収益を同時に気にする。",
+          "timePressure": "16:30までに社長へ方向性を返す必要がある。",
+          "missingInformation": "保証協会の最終保証可否、A社検収メールの正式回答。",
+          "decisionTradeoff": "条件を増やせば通りやすいが、顧客には厳しい支援になる。",
+          "consequenceHook": "審査部との握り方が、夕方の満額/減額/段階支援の選択肢を決める。",
+          "nextSceneEcho": "ここで決めた条件が、社長への最終説明の骨子になる。",
+          "npcDialogue": "審査部:「地域雇用は分かります。ただ、返済原資はA社検収待ちですよね」\n支店長:「満額にこだわるな。給与を守る着地点を探せ」",
+          "workMaterial": "稟議コメント\n- 資金使途: 給与資金910万円、材料費一部\n- 返済原資: A社・B社売掛入金。ただしA社は検収待ち\n- 保全: 保証協会付き、代表者保証、月次資金繰り表提出\n- 審査部意見: 満額1,200万円は根拠弱い。800〜1,000万円の段階支援なら検討余地",
+          "decisionPrompt": "審査部に、どの案で押し返すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "地域雇用を理由に1,200万円満額を強く主張する",
+              "text": "給与遅配と地域雇用への影響を前面に出し、満額支援の必要性を支店長と一緒に押す。",
+              "immediateFeedback": "支店の熱意は伝わる。",
+              "delayedConsequence": "審査部には返済原資の弱さを感情で埋めたように見える。",
+              "nextSceneEffect": "夕方、満額不可になった場合の説明が苦しくなる。",
+              "resultSummaryEffect": "地域支援を前面に出す判断が多い。",
+              "meterEffects": {
+                "regional_impact": 2,
+                "customer_trust": 1,
+                "credit_risk": -2,
+                "compliance_safety": -1,
+                "branch_profit": 1
+              },
+              "misconceptionEffect": "地域貢献は重要だが、銀行内では数字と条件に変換しないと通らない。",
+              "studentFeedback": {
+                "good": "地域雇用への責任を引き受けている。",
+                "risk": "審査部の論点に正面から答えきれていない。",
+                "next": "次は強く押した分、社長への期待値調整が難しくなる。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 1,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "branch_advocacy"
+              ],
+              "universityInsightTags": [
+                "regional_impact_focus"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "weak_internal_logic"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "1,000万円を上限に、保証協会と月次管理を条件にする",
+              "text": "給与資金を守る額に絞り、保証協会・月次資金繰り表・A社検収確認を条件にした案へ修正する。",
+              "immediateFeedback": "審査部は検討可能な案として受け止める。",
+              "delayedConsequence": "社長には満額ではない理由と条件を丁寧に説明する必要がある。",
+              "nextSceneEffect": "夕方、段階支援として着地できる。",
+              "resultSummaryEffect": "通る条件に翻訳する判断が多い。",
+              "meterEffects": {
+                "compliance_safety": 2,
+                "credit_risk": 2,
+                "customer_trust": 1,
+                "regional_impact": 1,
+                "internal_workload": -1
+              },
+              "misconceptionEffect": "銀行の法人営業は顧客要望をそのまま社内に通す仕事ではない。",
+              "studentFeedback": {
+                "good": "返済原資、保全、顧客目的を1つの案にまとめている。",
+                "risk": "条件が増え、顧客側の事務負担は重くなる。",
+                "next": "次は段階支援を社長が納得できる言葉にする。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "approval_design"
+              ],
+              "universityInsightTags": [
+                "organizational_decision_learning"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "customer_admin_burden"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "800万円に減額し、材料費は取引先支払猶予を前提にする",
+              "text": "銀行支援を給与資金中心に限定し、材料費は社長に支払猶予交渉を依頼する案にする。",
+              "immediateFeedback": "審査部のリスク懸念はかなり下がる。",
+              "delayedConsequence": "仕入先との関係悪化や生産遅れの火種が残る。",
+              "nextSceneEffect": "夕方、社長には厳しい現実を伝える必要がある。",
+              "resultSummaryEffect": "銀行リスクを先に絞る判断が多い。",
+              "meterEffects": {
+                "credit_risk": 3,
+                "compliance_safety": 2,
+                "customer_trust": -1,
+                "regional_impact": -1,
+                "branch_profit": -1
+              },
+              "misconceptionEffect": "リスクを下げれば終わりではなく、顧客の事業継続への副作用も残る。",
+              "studentFeedback": {
+                "good": "返済原資の弱さに合わせて支援額を現実化している。",
+                "risk": "資金繰り全体では火種を残す。",
+                "next": "次は減額案の副作用まで説明する。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "credit_risk_first"
+              ],
+              "universityInsightTags": [
+                "risk_control_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "business_continuity_gap"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "branch_advocacy_vs_credit_review",
+            "frictionType": "internal_approval",
+            "workValueTags": [
+              "地域金融",
+              "中小企業支援",
+              "説明責任"
+            ],
+            "careerRealityTags": [
+              "credit_decision",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "regional_employment",
+              "local_business"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "稟議説明補強",
+            "roleSpecificMaterials": [
+              "稟議コメント",
+              "審査部意見",
+              "月次資金繰り表提出"
+            ],
+            "roleSpecificMetrics": [
+              "給与資金910万円",
+              "満額1,200万円",
+              "800〜1,000万円の段階支援"
+            ],
+            "roleSpecificFailureRisk": "地域貢献や顧客事情だけを書き、審査部が検証できる保全・返済原資説明が不足する。",
+            "roleSpecificEvaluationCriteria": "顧客要望をそのまま通すのではなく、審査が読める根拠・条件・副作用に翻訳できるか。",
+            "genericCoordinationRisk": "審査部と営業の社内調整に見える。",
+            "antiGenericDesignNote": "稟議コメント、保全条件、実行額レンジを扱い、法人融資固有の説明責任を判断対象にしている。",
+            "kernelConnection": "審査部コメントを、稟議で説明できる保全・返済根拠の補強へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方: 最終説明",
+      "time_start": "16:30",
+      "time_end": "17:10",
+      "location": "desk",
+      "intro": "満額ではない支援を、顧客が動ける説明にする。",
+      "scenes": [
+        {
+          "id": "finance-16-40-final-call",
+          "type": "meeting",
+          "time": "16:40",
+          "interactable": "phone",
+          "presenter": "保証協会",
+          "title": "最終回答の10分前",
+          "openingHook": "16:40。保証協会から折り返し。「1,000万円、条件付きなら前向きです」",
+          "context": "16:40。保証協会から折り返し。「1,000万円、条件付きなら前向きです」\n\n保証協会は条件付きで前向き。審査部も1,000万円までなら稟議可。社長には17時に電話する約束をしている。",
+          "content": "満額ではない。だが給与資金は守れる。条件を厳しく伝えすぎると社長は萎縮し、甘く伝えると銀行の記録が崩れる。",
+          "roleSpecificContext": "最終判断は金額だけでなく、顧客が明日動ける説明にする必要がある。",
+          "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+          "hiddenWorkReality": "法人融資の着地は、支援額、条件、次回確認、顧客の感情を同じ紙に乗せること。",
+          "stakeholderPressure": "社長は満額を期待。審査部は条件遵守。支店長は支店の信用を守りたい。",
+          "timePressure": "17:00までに社長へ回答。今日中に追加資料提出の合意が必要。",
+          "missingInformation": "社長が条件を飲み、A社検収メールを出せるか。",
+          "decisionTradeoff": "条件を曖昧にすれば受け入れやすいが、後で銀行と顧客双方を傷つける。",
+          "consequenceHook": "最終説明が結果画面の職業理解タイプに直結する。",
+          "nextSceneEcho": "プレイヤーの判断は、顧客信頼と説明責任のどちらを残したかとして返る。",
+          "npcDialogue": "支店長:「満額ではない。でも給与は守れる。ここからが担当者の仕事だ」\n社長:「条件付きでも、今日方向が見えるなら助かります」",
+          "workMaterial": "最終条件案\n- 実行額: 1,000万円\n- 使途: 給与資金910万円、残額は当座余裕\n- 条件: A社検収メール、B社請求書、月次資金繰り表3か月提出\n- 返済原資: 7月末・8月末売掛入金\n- 次回確認: 2週間後に入金状況確認",
+          "decisionPrompt": "社長への最終回答として、何を軸に伝えるか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "「給与は守れます」と先に伝え、条件は後半で説明する",
+              "text": "安心を先に置き、1,000万円条件付き支援と追加資料を順に伝える。",
+              "immediateFeedback": "社長は落ち着き、従業員への説明がしやすくなる。",
+              "delayedConsequence": "条件の重さが後から効き、提出漏れが出る恐れがある。",
+              "nextSceneEffect": "結果では、顧客安心を優先したタイプとして表れる。",
+              "resultSummaryEffect": "顧客の不安を先にほどく判断が多い。",
+              "meterEffects": {
+                "customer_trust": 2,
+                "regional_impact": 2,
+                "compliance_safety": -1,
+                "credit_risk": -1
+              },
+              "misconceptionEffect": "安心を作る言葉にも、条件を守らせる設計が必要。",
+              "studentFeedback": {
+                "good": "顧客が明日動ける心理状態を作っている。",
+                "risk": "条件の重要性が弱く伝わる可能性がある。",
+                "next": "結果では顧客信頼と条件管理のバランスを振り返る。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 1,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "customer_reassurance"
+              ],
+              "universityInsightTags": [
+                "empathy_strength"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "condition_undercommunication"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "金額、条件、次回確認日を1枚の約束として伝える",
+              "text": "1,000万円支援、必要資料、2週間後確認を同じ重みで説明し、社長の合意を取る。",
+              "immediateFeedback": "社長は満額でない理由と、銀行が支援する条件を理解する。",
+              "delayedConsequence": "次回確認まで関係を保ちながら、銀行内の説明も残る。",
+              "nextSceneEffect": "結果では、条件と安心を同時に設計するタイプとして表れる。",
+              "resultSummaryEffect": "支援を通る条件へ翻訳する判断が多い。",
+              "meterEffects": {
+                "customer_trust": 1,
+                "compliance_safety": 2,
+                "credit_risk": 2,
+                "regional_impact": 1,
+                "internal_workload": -1
+              },
+              "misconceptionEffect": "銀行は貸す仕事ではなく、条件と安心を同時に設計する仕事だと理解できる。",
+              "studentFeedback": {
+                "good": "顧客信頼、返済原資、説明責任を同じ文脈で扱っている。",
+                "risk": "説明量が多く、社長が一度で飲み込めない可能性がある。",
+                "next": "結果では職業理解の中核として、条件設計力を返す。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "condition_and_trust_balance"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "communication_density"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "条件不履行時のリスクを先に伝え、銀行の線引きを明確にする",
+              "text": "保証協会条件、資料未提出時の実行不可、次回確認を先に説明し、その上で1,000万円支援を伝える。",
+              "immediateFeedback": "銀行としての線引きは明確になる。",
+              "delayedConsequence": "社長は助かったよりも監視される印象を持つ可能性がある。",
+              "nextSceneEffect": "結果では、説明安全性を優先したタイプとして表れる。",
+              "resultSummaryEffect": "銀行信用と記録を守る判断が多い。",
+              "meterEffects": {
+                "compliance_safety": 3,
+                "credit_risk": 2,
+                "customer_trust": -2,
+                "regional_impact": -1
+              },
+              "misconceptionEffect": "正確さだけでは、顧客が銀行を相談相手と感じにくくなる。",
+              "studentFeedback": {
+                "good": "条件不履行リスクを曖昧にしていない。",
+                "risk": "支援の意図より制約が強く伝わる。",
+                "next": "結果では説明責任と顧客信頼の緊張を振り返る。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "strict_conditioning"
+              ],
+              "universityInsightTags": [
+                "compliance_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "trust_erosion"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "final_explanation",
+            "frictionType": "conditional_support",
+            "workValueTags": [
+              "地域金融",
+              "中小企業支援",
+              "説明責任"
+            ],
+            "careerRealityTags": [
+              "credit_decision",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "regional_employment",
+              "local_business"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "条件付き最終回答",
+            "roleSpecificMaterials": [
+              "最終条件案",
+              "A社検収メール",
+              "月次資金繰り表3か月"
+            ],
+            "roleSpecificMetrics": [
+              "実行額: 1,000万円",
+              "給与資金910万円",
+              "次回確認: 2週間後に入金状況確認"
+            ],
+            "roleSpecificFailureRisk": "可否だけを伝え、条件遵守・入金確認・次回モニタリングが抜ける。",
+            "roleSpecificEvaluationCriteria": "顧客安心と銀行の条件管理を両立する最終説明にできるか。",
+            "genericCoordinationRisk": "最終連絡の言い方だけを選ぶ会話ゲームに見える。",
+            "antiGenericDesignNote": "実行額、資金使途、提出資料、返済原資、確認日を材料にし、融資条件の着地判断にしている。",
+            "kernelConnection": "最終条件案を、顧客が動けて銀行内にも記録が残る回答へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "communication",
+    "logical",
+    "ownership",
+    "ethics",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "condition-designer-banker",
+      "title": "条件設計型バンカー",
+      "strengths": [
+        "顧客の不安と審査条件を同じテーブルで扱える",
+        "返済原資と保証を説明可能な形にできる"
+      ],
+      "cautionPoints": [
+        "説明量が多くなり、顧客が圧を感じることがある"
+      ],
+      "meterPriorities": [
+        "compliance_safety",
+        "credit_risk",
+        "customer_trust"
+      ],
+      "valuedMeters": [
+        "compliance_safety",
+        "credit_risk"
+      ],
+      "sacrificedMeters": [
+        "internal_workload"
+      ],
+      "roleRealityReveal": "法人融資は、希望額を通す仕事ではなく、顧客が返せる形と銀行が説明できる形を同時に作る仕事です。",
+      "misconceptionCorrection": "「銀行は貸す仕事」という見方から、「条件と安心を同時に設計する仕事」へ理解が進んでいます。",
+      "decisionPatternSummary": "感情を受け止めながら、資料・保証・次回確認で判断を支える傾向があります。",
+      "careerReflectionPrompt": "相手を助けたい気持ちと、数字で線を引く責任の両方を面白いと思えるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "condition_design_learning"
+      ]
+    },
+    {
+      "id": "regional-trust-banker",
+      "title": "地域伴走型バンカー",
+      "strengths": [
+        "顧客感情と地域雇用への感度が高い",
+        "相談の初動を早く作れる"
+      ],
+      "cautionPoints": [
+        "審査前の期待値を上げすぎると信頼を傷つける"
+      ],
+      "meterPriorities": [
+        "customer_trust",
+        "regional_impact"
+      ],
+      "valuedMeters": [
+        "customer_trust",
+        "regional_impact"
+      ],
+      "sacrificedMeters": [
+        "compliance_safety",
+        "credit_risk"
+      ],
+      "roleRealityReveal": "地域企業に寄り添うほど、銀行内で説明できる条件設計が必要になります。",
+      "misconceptionCorrection": "優しさだけでは融資は通らず、優しさを条件に翻訳する力が求められます。",
+      "decisionPatternSummary": "顧客の不安を先にほどき、資料協力を引き出す傾向があります。",
+      "careerReflectionPrompt": "顧客の感情に近づいたまま、どこで銀行として線を引けるか考えてください。",
+      "universityInsightTags": [
+        "regional_employment_sensitivity",
+        "empathy_strength"
+      ]
+    },
+    {
+      "id": "credit-safety-banker",
+      "title": "信用管理型バンカー",
+      "strengths": [
+        "返済原資と保全を慎重に確認できる",
+        "記録と説明責任を守れる"
+      ],
+      "cautionPoints": [
+        "顧客が相談し続ける余地を狭めることがある"
+      ],
+      "meterPriorities": [
+        "credit_risk",
+        "compliance_safety"
+      ],
+      "valuedMeters": [
+        "credit_risk",
+        "compliance_safety"
+      ],
+      "sacrificedMeters": [
+        "customer_trust",
+        "regional_impact"
+      ],
+      "roleRealityReveal": "銀行の信用は、貸す判断だけでなく、貸さない線引きや条件説明でも守られます。",
+      "misconceptionCorrection": "正確さは大切ですが、顧客が次に動ける言葉にすることも法人担当の仕事です。",
+      "decisionPatternSummary": "不確実な売掛や保証条件を厳密に扱う傾向があります。",
+      "careerReflectionPrompt": "リスクを抑える判断が、顧客の事業継続にどんな副作用を残すか考えてください。",
+      "universityInsightTags": [
+        "risk_control_preference",
+        "credit_evidence_focus"
+      ]
+    }
+  ],
+  "analytics": {
+    "decisionStyleAxes": [
+      "customer_trust_vs_credit_risk",
+      "regional_impact_vs_bank_safety",
+      "speed_vs_documentation"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 企業公式採用ページ",
+    "to_be_researched: 大手就活サイト"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "金融の業界固有性が高く、Cα の軸に適している。",
+    "mainConflict": "顧客信頼、返済原資、保証協会、審査部、地域雇用を同時に扱う条件設計。",
+    "sceneRationale": "朝の資金繰りSOSから、数字確認、社長の感情、審査部、夕方の最終説明へ連続する5シーンに再構成した。",
+    "choiceRationale": "正解不正解ではなく、現実にあり得るトレードオフを3択化した。",
+    "scoringRationale": "新卒1-3年目で顕在化しやすい判断特性に寄せて次元を選定した。",
+    "knownLimitations": "架空企業を前提にしたCβ基準シナリオ。実在銀行の個別審査基準は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "customer_trust",
+      "label": "顧客信頼",
+      "description": "企業の不安に向き合い、次に動ける状態を作る力"
+    },
+    {
+      "key": "credit_risk",
+      "label": "与信リスク",
+      "description": "返済原資・保全・業績の不確実性を見極める力"
+    },
+    {
+      "key": "branch_profit",
+      "label": "支店収益",
+      "description": "銀行として持続可能な取引にする視点"
+    },
+    {
+      "key": "compliance_safety",
+      "label": "法令・説明安全性",
+      "description": "確約表現や審査手続きを守る力"
+    },
+    {
+      "key": "regional_impact",
+      "label": "地域影響",
+      "description": "雇用や地域経済への波及を考える視点"
+    },
+    {
+      "key": "internal_workload",
+      "label": "内部処理負荷",
+      "description": "稟議・照会・資料回収を回し切る現実性"
+    }
+  ],
+  "branchSummary": {
+    "overview": "初動、与信分析、顧客説明、審査部調整、最終条件提示が顧客信頼と与信安全性に連鎖する。",
+    "trackedEffects": [
+      "customer_trust",
+      "credit_risk",
+      "compliance_safety",
+      "regional_impact",
+      "internal_workload"
+    ]
+  },
+  "resultFeedback": {
+    "roleRealityReveal": "地方銀行の法人担当は、貸す/断るだけでなく、返済原資・保証・条件・説明を組み合わせて顧客が前に進める形を作る。",
+    "misconceptionCorrection": "「銀行は貸す仕事」ではなく、「条件と安心を同時に設計する仕事」として理解する。",
+    "careerReflectionPrompt": "顧客を助けたい気持ちと、銀行として説明できる線引きの両方を扱うことに興味が持てるか。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "regional_employment_sensitivity",
+      "credit_evidence_focus"
+    ]
+  },
+  "roleCoreFriction": "顧客を助けたい気持ちと、返済原資・保全・説明責任を同時に満たす融資設計の葛藤。",
+  "roleMisconception": "銀行の法人営業は、困っている企業にお金を貸す仕事だと思われやすい。",
+  "roleRealityReveal": "実際は、顧客の不安を受け止めながら、返せる根拠・保証・条件・記録を組み合わせ、銀行内外で通る安心を設計する仕事。",
+  "dayTimeline": [
+    {
+      "time": "09:05",
+      "label": "8日後の給与資金"
+    },
+    {
+      "time": "10:20",
+      "label": "売掛入金のずれ"
+    },
+    {
+      "time": "12:15",
+      "label": "昼休みの社長来店"
+    },
+    {
+      "time": "14:05",
+      "label": "審査部の赤字コメント"
+    },
+    {
+      "time": "16:40",
+      "label": "最終回答の10分前"
+    }
+  ],
+  "sceneList": [
+    "finance-09-05-funding-call",
+    "finance-10-20-cashflow-gap",
+    "finance-12-15-president-expectation",
+    "finance-14-05-credit-review",
+    "finance-16-40-final-call"
+  ],
+  "roleWorkKernel": {
+    "input": "顧客企業の資金不安、資金繰り表、売掛入金予定、保証協会条件、審査部コメント",
+    "output": "返済原資・保全・条件・記録を備えた融資案と顧客への最終回答",
+    "transformation": "顧客の希望額と不安を、銀行内外で説明できる条件付き融資設計に変換する",
+    "constraints": [
+      "返済原資",
+      "保全",
+      "保証協会",
+      "稟議説明",
+      "顧客期待値管理"
+    ],
+    "workArtifacts": [
+      "資金繰り表",
+      "保証協会メモ",
+      "稟議コメント",
+      "最終条件案"
+    ],
+    "metrics": [
+      "希望額: 1,200万円",
+      "当座残高: 180万円",
+      "8日後給与: 910万円",
+      "月末入金予定: A社 760万円、B社 430万円",
+      "7/31 A社売掛: +760万円",
+      "7/31 B社売掛: +430万円",
+      "8/10 材料費: -520万円",
+      "満額支援",
+      "既存保証残枠は限定的",
+      "A社検収予定メール、B社請求書、8月返済予定表が必要",
+      "給与資金910万円",
+      "満額1,200万円",
+      "800〜1,000万円の段階支援",
+      "実行額: 1,000万円",
+      "次回確認: 2週間後に入金状況確認"
+    ],
+    "failureModes": [
+      "返済原資の説明が崩れる",
+      "審査前に期待値を上げすぎる",
+      "顧客が次に動けない説明になる"
+    ],
+    "evaluationCriteria": [
+      "顧客安心と審査説明責任を両立できる",
+      "返済可能性と地域雇用への配慮を同時に扱える",
+      "条件と次回確認を記録に残せる"
+    ],
+    "nonGenericReason": "保証協会、返済原資、保全、稟議という銀行融資固有の判断材料がなければ成立しないため。"
+  }
+}

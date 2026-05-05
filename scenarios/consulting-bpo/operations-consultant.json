@@ -1,0 +1,2190 @@
+{
+  "id": "consulting-bpo/operations-consultant",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "コンサル/BPO/業務支援",
+  "industrySlug": "consulting-bpo",
+  "role": "業務改善コンサル",
+  "roleSlug": "operations-consultant",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for コンサル/BPO/業務支援 業務改善コンサル.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "consulting-bpo",
+      "operations-consultant"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "業務量ログ"
+    },
+    {
+      "time": "10:40",
+      "label": "プロセスマップ"
+    },
+    {
+      "time": "12:20",
+      "label": "ヒアリングメモ"
+    },
+    {
+      "time": "14:15",
+      "label": "改善案比較"
+    },
+    {
+      "time": "16:35",
+      "label": "実行計画"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "業務量ログ"
+    },
+    {
+      "time": "10:40",
+      "label": "プロセスマップ"
+    },
+    {
+      "time": "12:20",
+      "label": "ヒアリングメモ"
+    },
+    {
+      "time": "14:15",
+      "label": "改善案比較"
+    },
+    {
+      "time": "16:35",
+      "label": "実行計画"
+    }
+  ],
+  "sceneList": [
+    "operations-consultant-01",
+    "operations-consultant-02",
+    "operations-consultant-03",
+    "operations-consultant-04",
+    "operations-consultant-05"
+  ],
+  "meta": {
+    "title": "業務改善コンサル",
+    "industry": "コンサル/BPO/業務支援",
+    "role": "業務改善コンサル",
+    "duration_minutes": 18,
+    "description": "業務ログをボトルネックと改善施策へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "operations-consultant-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "業務量ログ",
+      "openingHook": "09:10。処理 1,860件に滞留 14%とundefinedが並んでいる。",
+      "context": "業務改善コンサルとして処理 1,860件を確認する。滞留 14%、undefinedが今日の判断材料になる。",
+      "content": "業務ログをボトルネックと改善施策へ変換するため、処理 1,860件を読んで次の作業判断を残す。",
+      "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+      "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は処理 1,860件である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "滞留 14%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "滞留 14%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "operations-consultant-処理 1,860件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は手戻り 3箇所で副作用を確認する。",
+      "npcDialogue": "先輩:「処理 1,860件を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+      "workMaterial": "業務量ログ\n- 処理 1,860件\n- 滞留 14%\n- 判断対象: 業務量ログ",
+      "decisionPrompt": "operations-consultant-処理 1,860件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "滞留 14%を重く見て、当日中に前へ進める",
+          "text": "滞留 14%を重く見て、当日中に前へ進める。材料は処理 1,860件、滞留 14%、undefined。",
+          "immediateFeedback": "処理 1,860件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 2,
+            "operations_consultant_risk": -1,
+            "operations_consultant_speed": 2,
+            "operations_consultant_value": -1,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、処理 1,860件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "処理 1,860件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は滞留 14%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "処理 1,860件の滞留 14%とundefinedを突き合わせ、条件付きで進める",
+          "text": "処理 1,860件の滞留 14%とundefinedを突き合わせ、条件付きで進める。材料は処理 1,860件、滞留 14%、undefined。",
+          "immediateFeedback": "処理 1,860件に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": 1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、処理 1,860件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "処理 1,860件の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は滞留 14%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は処理 1,860件、滞留 14%、undefined。",
+          "immediateFeedback": "処理 1,860件に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": -1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": -1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、処理 1,860件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "処理 1,860件の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は滞留 14%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "operations-consultant-処理 1,860件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "operations-consultant-処理 1,860件判断",
+        "roleSpecificMaterials": [
+          "業務量ログ",
+          "判断対象: 業務量ログ"
+        ],
+        "roleSpecificMetrics": [
+          "処理 1,860件",
+          "滞留 14%"
+        ],
+        "roleSpecificFailureRisk": "業務量ログを読まず、処理 1,860件か滞留 14%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "処理 1,860件と滞留 14%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "業務量ログ、処理 1,860件、滞留 14%を判断の主役にしている。",
+        "kernelConnection": "業務量ログをoperations-consultant-処理 1,860件判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "operations-consultant-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "プロセスマップ",
+      "openingHook": "10:40。手戻り 3箇所に平均 18分とundefinedが並んでいる。",
+      "context": "業務改善コンサルとして手戻り 3箇所を確認する。平均 18分、undefinedが今日の判断材料になる。",
+      "content": "業務ログをボトルネックと改善施策へ変換するため、手戻り 3箇所を読んで次の作業判断を残す。",
+      "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+      "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は手戻り 3箇所である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "平均 18分の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "平均 18分を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "operations-consultant-手戻り 3箇所判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は例外処理 42件で副作用を確認する。",
+      "npcDialogue": "先輩:「手戻り 3箇所を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+      "workMaterial": "プロセスマップ\n- 手戻り 3箇所\n- 平均 18分\n- 判断対象: プロセスマップ",
+      "decisionPrompt": "operations-consultant-手戻り 3箇所判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "平均 18分を重く見て、当日中に前へ進める",
+          "text": "平均 18分を重く見て、当日中に前へ進める。材料は手戻り 3箇所、平均 18分、undefined。",
+          "immediateFeedback": "手戻り 3箇所に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 2,
+            "operations_consultant_risk": -1,
+            "operations_consultant_speed": 2,
+            "operations_consultant_value": -1,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、手戻り 3箇所と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "手戻り 3箇所の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は平均 18分の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "手戻り 3箇所の平均 18分とundefinedを突き合わせ、条件付きで進める",
+          "text": "手戻り 3箇所の平均 18分とundefinedを突き合わせ、条件付きで進める。材料は手戻り 3箇所、平均 18分、undefined。",
+          "immediateFeedback": "手戻り 3箇所に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": 1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、手戻り 3箇所と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "手戻り 3箇所の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は平均 18分の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は手戻り 3箇所、平均 18分、undefined。",
+          "immediateFeedback": "手戻り 3箇所に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": -1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": -1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、手戻り 3箇所と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "手戻り 3箇所の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は平均 18分の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "operations-consultant-手戻り 3箇所判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "operations-consultant-手戻り 3箇所判断",
+        "roleSpecificMaterials": [
+          "プロセスマップ",
+          "判断対象: プロセスマップ"
+        ],
+        "roleSpecificMetrics": [
+          "手戻り 3箇所",
+          "平均 18分"
+        ],
+        "roleSpecificFailureRisk": "プロセスマップを読まず、手戻り 3箇所か平均 18分のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "手戻り 3箇所と平均 18分を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "プロセスマップ、手戻り 3箇所、平均 18分を判断の主役にしている。",
+        "kernelConnection": "プロセスマップをoperations-consultant-手戻り 3箇所判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "operations-consultant-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "ヒアリングメモ",
+      "openingHook": "12:20。例外処理 42件に属人作業 6名とundefinedが並んでいる。",
+      "context": "業務改善コンサルとして例外処理 42件を確認する。属人作業 6名、undefinedが今日の判断材料になる。",
+      "content": "業務ログをボトルネックと改善施策へ変換するため、例外処理 42件を読んで次の作業判断を残す。",
+      "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+      "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は例外処理 42件である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "属人作業 6名の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "属人作業 6名を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "operations-consultant-例外処理 42件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は削減 120時間で副作用を確認する。",
+      "npcDialogue": "先輩:「例外処理 42件を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+      "workMaterial": "ヒアリングメモ\n- 例外処理 42件\n- 属人作業 6名\n- 判断対象: ヒアリングメモ",
+      "decisionPrompt": "operations-consultant-例外処理 42件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "属人作業 6名を重く見て、当日中に前へ進める",
+          "text": "属人作業 6名を重く見て、当日中に前へ進める。材料は例外処理 42件、属人作業 6名、undefined。",
+          "immediateFeedback": "例外処理 42件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 2,
+            "operations_consultant_risk": -1,
+            "operations_consultant_speed": 2,
+            "operations_consultant_value": -1,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、例外処理 42件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "例外処理 42件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は属人作業 6名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "例外処理 42件の属人作業 6名とundefinedを突き合わせ、条件付きで進める",
+          "text": "例外処理 42件の属人作業 6名とundefinedを突き合わせ、条件付きで進める。材料は例外処理 42件、属人作業 6名、undefined。",
+          "immediateFeedback": "例外処理 42件に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": 1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、例外処理 42件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "例外処理 42件の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は属人作業 6名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は例外処理 42件、属人作業 6名、undefined。",
+          "immediateFeedback": "例外処理 42件に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": -1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": -1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、例外処理 42件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "例外処理 42件の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は属人作業 6名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "operations-consultant-例外処理 42件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "operations-consultant-例外処理 42件判断",
+        "roleSpecificMaterials": [
+          "ヒアリングメモ",
+          "判断対象: ヒアリングメモ"
+        ],
+        "roleSpecificMetrics": [
+          "例外処理 42件",
+          "属人作業 6名"
+        ],
+        "roleSpecificFailureRisk": "ヒアリングメモを読まず、例外処理 42件か属人作業 6名のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "例外処理 42件と属人作業 6名を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "ヒアリングメモ、例外処理 42件、属人作業 6名を判断の主役にしている。",
+        "kernelConnection": "ヒアリングメモをoperations-consultant-例外処理 42件判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "operations-consultant-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "改善案比較",
+      "openingHook": "14:15。削減 120時間に初期費 80万円とundefinedが並んでいる。",
+      "context": "業務改善コンサルとして削減 120時間を確認する。初期費 80万円、undefinedが今日の判断材料になる。",
+      "content": "業務ログをボトルネックと改善施策へ変換するため、削減 120時間を読んで次の作業判断を残す。",
+      "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+      "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は削減 120時間である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "初期費 80万円の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "初期費 80万円を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "operations-consultant-削減 120時間判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は移行期間 30日で副作用を確認する。",
+      "npcDialogue": "先輩:「削減 120時間を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+      "workMaterial": "改善案比較\n- 削減 120時間\n- 初期費 80万円\n- 判断対象: 改善案比較",
+      "decisionPrompt": "operations-consultant-削減 120時間判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "初期費 80万円を重く見て、当日中に前へ進める",
+          "text": "初期費 80万円を重く見て、当日中に前へ進める。材料は削減 120時間、初期費 80万円、undefined。",
+          "immediateFeedback": "削減 120時間に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 2,
+            "operations_consultant_risk": -1,
+            "operations_consultant_speed": 2,
+            "operations_consultant_value": -1,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、削減 120時間と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "削減 120時間の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は初期費 80万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "削減 120時間の初期費 80万円とundefinedを突き合わせ、条件付きで進める",
+          "text": "削減 120時間の初期費 80万円とundefinedを突き合わせ、条件付きで進める。材料は削減 120時間、初期費 80万円、undefined。",
+          "immediateFeedback": "削減 120時間に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": 1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、削減 120時間と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "削減 120時間の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は初期費 80万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は削減 120時間、初期費 80万円、undefined。",
+          "immediateFeedback": "削減 120時間に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": -1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": -1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、削減 120時間と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "削減 120時間の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は初期費 80万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "operations-consultant-削減 120時間判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "operations-consultant-削減 120時間判断",
+        "roleSpecificMaterials": [
+          "改善案比較",
+          "判断対象: 改善案比較"
+        ],
+        "roleSpecificMetrics": [
+          "削減 120時間",
+          "初期費 80万円"
+        ],
+        "roleSpecificFailureRisk": "改善案比較を読まず、削減 120時間か初期費 80万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "削減 120時間と初期費 80万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "改善案比較、削減 120時間、初期費 80万円を判断の主役にしている。",
+        "kernelConnection": "改善案比較をoperations-consultant-削減 120時間判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "operations-consultant-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "実行計画",
+      "openingHook": "16:35。移行期間 30日に教育対象 24名とundefinedが並んでいる。",
+      "context": "業務改善コンサルとして移行期間 30日を確認する。教育対象 24名、undefinedが今日の判断材料になる。",
+      "content": "業務ログをボトルネックと改善施策へ変換するため、移行期間 30日を読んで次の作業判断を残す。",
+      "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+      "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は移行期間 30日である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "教育対象 24名の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "教育対象 24名を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "operations-consultant-移行期間 30日判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「移行期間 30日を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+      "workMaterial": "実行計画\n- 移行期間 30日\n- 教育対象 24名\n- 判断対象: 実行計画",
+      "decisionPrompt": "operations-consultant-移行期間 30日判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "教育対象 24名を重く見て、当日中に前へ進める",
+          "text": "教育対象 24名を重く見て、当日中に前へ進める。材料は移行期間 30日、教育対象 24名、undefined。",
+          "immediateFeedback": "移行期間 30日に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 2,
+            "operations_consultant_risk": -1,
+            "operations_consultant_speed": 2,
+            "operations_consultant_value": -1,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、移行期間 30日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "移行期間 30日の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は教育対象 24名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "移行期間 30日の教育対象 24名とundefinedを突き合わせ、条件付きで進める",
+          "text": "移行期間 30日の教育対象 24名とundefinedを突き合わせ、条件付きで進める。材料は移行期間 30日、教育対象 24名、undefined。",
+          "immediateFeedback": "移行期間 30日に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": 1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": 1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、移行期間 30日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "移行期間 30日の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は教育対象 24名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は移行期間 30日、教育対象 24名、undefined。",
+          "immediateFeedback": "移行期間 30日に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "operations_consultant_evidence": -1,
+            "operations_consultant_risk": 2,
+            "operations_consultant_speed": -1,
+            "operations_consultant_value": 2,
+            "operations_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "業務改善コンサルは印象ではなく、移行期間 30日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "移行期間 30日の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は教育対象 24名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "operations-consultant-移行期間 30日判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "operations-consultant-移行期間 30日判断",
+        "roleSpecificMaterials": [
+          "実行計画",
+          "判断対象: 実行計画"
+        ],
+        "roleSpecificMetrics": [
+          "移行期間 30日",
+          "教育対象 24名"
+        ],
+        "roleSpecificFailureRisk": "実行計画を読まず、移行期間 30日か教育対象 24名のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "移行期間 30日と教育対象 24名を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "実行計画、移行期間 30日、教育対象 24名を判断の主役にしている。",
+        "kernelConnection": "実行計画をoperations-consultant-移行期間 30日判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "operations-consultant-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "業務量ログ",
+          "openingHook": "09:10。処理 1,860件に滞留 14%とundefinedが並んでいる。",
+          "context": "業務改善コンサルとして処理 1,860件を確認する。滞留 14%、undefinedが今日の判断材料になる。",
+          "content": "業務ログをボトルネックと改善施策へ変換するため、処理 1,860件を読んで次の作業判断を残す。",
+          "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+          "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は処理 1,860件である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "滞留 14%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "滞留 14%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "operations-consultant-処理 1,860件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は手戻り 3箇所で副作用を確認する。",
+          "npcDialogue": "先輩:「処理 1,860件を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+          "workMaterial": "業務量ログ\n- 処理 1,860件\n- 滞留 14%\n- 判断対象: 業務量ログ",
+          "decisionPrompt": "operations-consultant-処理 1,860件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "滞留 14%を重く見て、当日中に前へ進める",
+              "text": "滞留 14%を重く見て、当日中に前へ進める。材料は処理 1,860件、滞留 14%、undefined。",
+              "immediateFeedback": "処理 1,860件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 2,
+                "operations_consultant_risk": -1,
+                "operations_consultant_speed": 2,
+                "operations_consultant_value": -1,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、処理 1,860件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "処理 1,860件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は滞留 14%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "処理 1,860件の滞留 14%とundefinedを突き合わせ、条件付きで進める",
+              "text": "処理 1,860件の滞留 14%とundefinedを突き合わせ、条件付きで進める。材料は処理 1,860件、滞留 14%、undefined。",
+              "immediateFeedback": "処理 1,860件に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": 1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、処理 1,860件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "処理 1,860件の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は滞留 14%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は処理 1,860件、滞留 14%、undefined。",
+              "immediateFeedback": "処理 1,860件に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": -1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": -1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、処理 1,860件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "処理 1,860件の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は滞留 14%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "operations-consultant-処理 1,860件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "operations-consultant-処理 1,860件判断",
+            "roleSpecificMaterials": [
+              "業務量ログ",
+              "判断対象: 業務量ログ"
+            ],
+            "roleSpecificMetrics": [
+              "処理 1,860件",
+              "滞留 14%"
+            ],
+            "roleSpecificFailureRisk": "業務量ログを読まず、処理 1,860件か滞留 14%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "処理 1,860件と滞留 14%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "業務量ログ、処理 1,860件、滞留 14%を判断の主役にしている。",
+            "kernelConnection": "業務量ログをoperations-consultant-処理 1,860件判断へ接続する。"
+          }
+        },
+        {
+          "id": "operations-consultant-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "プロセスマップ",
+          "openingHook": "10:40。手戻り 3箇所に平均 18分とundefinedが並んでいる。",
+          "context": "業務改善コンサルとして手戻り 3箇所を確認する。平均 18分、undefinedが今日の判断材料になる。",
+          "content": "業務ログをボトルネックと改善施策へ変換するため、手戻り 3箇所を読んで次の作業判断を残す。",
+          "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+          "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は手戻り 3箇所である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "平均 18分の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "平均 18分を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "operations-consultant-手戻り 3箇所判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は例外処理 42件で副作用を確認する。",
+          "npcDialogue": "先輩:「手戻り 3箇所を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+          "workMaterial": "プロセスマップ\n- 手戻り 3箇所\n- 平均 18分\n- 判断対象: プロセスマップ",
+          "decisionPrompt": "operations-consultant-手戻り 3箇所判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "平均 18分を重く見て、当日中に前へ進める",
+              "text": "平均 18分を重く見て、当日中に前へ進める。材料は手戻り 3箇所、平均 18分、undefined。",
+              "immediateFeedback": "手戻り 3箇所に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 2,
+                "operations_consultant_risk": -1,
+                "operations_consultant_speed": 2,
+                "operations_consultant_value": -1,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、手戻り 3箇所と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "手戻り 3箇所の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は平均 18分の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "手戻り 3箇所の平均 18分とundefinedを突き合わせ、条件付きで進める",
+              "text": "手戻り 3箇所の平均 18分とundefinedを突き合わせ、条件付きで進める。材料は手戻り 3箇所、平均 18分、undefined。",
+              "immediateFeedback": "手戻り 3箇所に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": 1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、手戻り 3箇所と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "手戻り 3箇所の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は平均 18分の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は手戻り 3箇所、平均 18分、undefined。",
+              "immediateFeedback": "手戻り 3箇所に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": -1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": -1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、手戻り 3箇所と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "手戻り 3箇所の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は平均 18分の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "operations-consultant-手戻り 3箇所判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "operations-consultant-手戻り 3箇所判断",
+            "roleSpecificMaterials": [
+              "プロセスマップ",
+              "判断対象: プロセスマップ"
+            ],
+            "roleSpecificMetrics": [
+              "手戻り 3箇所",
+              "平均 18分"
+            ],
+            "roleSpecificFailureRisk": "プロセスマップを読まず、手戻り 3箇所か平均 18分のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "手戻り 3箇所と平均 18分を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "プロセスマップ、手戻り 3箇所、平均 18分を判断の主役にしている。",
+            "kernelConnection": "プロセスマップをoperations-consultant-手戻り 3箇所判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "operations-consultant-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "ヒアリングメモ",
+          "openingHook": "12:20。例外処理 42件に属人作業 6名とundefinedが並んでいる。",
+          "context": "業務改善コンサルとして例外処理 42件を確認する。属人作業 6名、undefinedが今日の判断材料になる。",
+          "content": "業務ログをボトルネックと改善施策へ変換するため、例外処理 42件を読んで次の作業判断を残す。",
+          "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+          "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は例外処理 42件である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "属人作業 6名の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "属人作業 6名を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "operations-consultant-例外処理 42件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は削減 120時間で副作用を確認する。",
+          "npcDialogue": "先輩:「例外処理 42件を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+          "workMaterial": "ヒアリングメモ\n- 例外処理 42件\n- 属人作業 6名\n- 判断対象: ヒアリングメモ",
+          "decisionPrompt": "operations-consultant-例外処理 42件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "属人作業 6名を重く見て、当日中に前へ進める",
+              "text": "属人作業 6名を重く見て、当日中に前へ進める。材料は例外処理 42件、属人作業 6名、undefined。",
+              "immediateFeedback": "例外処理 42件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 2,
+                "operations_consultant_risk": -1,
+                "operations_consultant_speed": 2,
+                "operations_consultant_value": -1,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、例外処理 42件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "例外処理 42件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は属人作業 6名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "例外処理 42件の属人作業 6名とundefinedを突き合わせ、条件付きで進める",
+              "text": "例外処理 42件の属人作業 6名とundefinedを突き合わせ、条件付きで進める。材料は例外処理 42件、属人作業 6名、undefined。",
+              "immediateFeedback": "例外処理 42件に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": 1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、例外処理 42件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "例外処理 42件の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は属人作業 6名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は例外処理 42件、属人作業 6名、undefined。",
+              "immediateFeedback": "例外処理 42件に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": -1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": -1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、例外処理 42件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "例外処理 42件の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は属人作業 6名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "operations-consultant-例外処理 42件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "operations-consultant-例外処理 42件判断",
+            "roleSpecificMaterials": [
+              "ヒアリングメモ",
+              "判断対象: ヒアリングメモ"
+            ],
+            "roleSpecificMetrics": [
+              "例外処理 42件",
+              "属人作業 6名"
+            ],
+            "roleSpecificFailureRisk": "ヒアリングメモを読まず、例外処理 42件か属人作業 6名のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "例外処理 42件と属人作業 6名を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "ヒアリングメモ、例外処理 42件、属人作業 6名を判断の主役にしている。",
+            "kernelConnection": "ヒアリングメモをoperations-consultant-例外処理 42件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "operations-consultant-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "改善案比較",
+          "openingHook": "14:15。削減 120時間に初期費 80万円とundefinedが並んでいる。",
+          "context": "業務改善コンサルとして削減 120時間を確認する。初期費 80万円、undefinedが今日の判断材料になる。",
+          "content": "業務ログをボトルネックと改善施策へ変換するため、削減 120時間を読んで次の作業判断を残す。",
+          "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+          "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は削減 120時間である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "初期費 80万円の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "初期費 80万円を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "operations-consultant-削減 120時間判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は移行期間 30日で副作用を確認する。",
+          "npcDialogue": "先輩:「削減 120時間を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+          "workMaterial": "改善案比較\n- 削減 120時間\n- 初期費 80万円\n- 判断対象: 改善案比較",
+          "decisionPrompt": "operations-consultant-削減 120時間判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "初期費 80万円を重く見て、当日中に前へ進める",
+              "text": "初期費 80万円を重く見て、当日中に前へ進める。材料は削減 120時間、初期費 80万円、undefined。",
+              "immediateFeedback": "削減 120時間に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 2,
+                "operations_consultant_risk": -1,
+                "operations_consultant_speed": 2,
+                "operations_consultant_value": -1,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、削減 120時間と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "削減 120時間の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は初期費 80万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "削減 120時間の初期費 80万円とundefinedを突き合わせ、条件付きで進める",
+              "text": "削減 120時間の初期費 80万円とundefinedを突き合わせ、条件付きで進める。材料は削減 120時間、初期費 80万円、undefined。",
+              "immediateFeedback": "削減 120時間に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": 1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、削減 120時間と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "削減 120時間の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は初期費 80万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は削減 120時間、初期費 80万円、undefined。",
+              "immediateFeedback": "削減 120時間に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": -1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": -1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、削減 120時間と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "削減 120時間の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は初期費 80万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "operations-consultant-削減 120時間判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "operations-consultant-削減 120時間判断",
+            "roleSpecificMaterials": [
+              "改善案比較",
+              "判断対象: 改善案比較"
+            ],
+            "roleSpecificMetrics": [
+              "削減 120時間",
+              "初期費 80万円"
+            ],
+            "roleSpecificFailureRisk": "改善案比較を読まず、削減 120時間か初期費 80万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "削減 120時間と初期費 80万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "改善案比較、削減 120時間、初期費 80万円を判断の主役にしている。",
+            "kernelConnection": "改善案比較をoperations-consultant-削減 120時間判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "operations-consultant-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "実行計画",
+          "openingHook": "16:35。移行期間 30日に教育対象 24名とundefinedが並んでいる。",
+          "context": "業務改善コンサルとして移行期間 30日を確認する。教育対象 24名、undefinedが今日の判断材料になる。",
+          "content": "業務ログをボトルネックと改善施策へ変換するため、移行期間 30日を読んで次の作業判断を残す。",
+          "roleSpecificContext": "業務改善コンサルは業務ログをボトルネックと改善施策へ変換する仕事。",
+          "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は移行期間 30日である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "教育対象 24名の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "教育対象 24名を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "operations-consultant-移行期間 30日判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「移行期間 30日を読まずに進めると、業務改善コンサルの判断ではなくなる」",
+          "workMaterial": "実行計画\n- 移行期間 30日\n- 教育対象 24名\n- 判断対象: 実行計画",
+          "decisionPrompt": "operations-consultant-移行期間 30日判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "教育対象 24名を重く見て、当日中に前へ進める",
+              "text": "教育対象 24名を重く見て、当日中に前へ進める。材料は移行期間 30日、教育対象 24名、undefined。",
+              "immediateFeedback": "移行期間 30日に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 2,
+                "operations_consultant_risk": -1,
+                "operations_consultant_speed": 2,
+                "operations_consultant_value": -1,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、移行期間 30日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "移行期間 30日の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は教育対象 24名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "移行期間 30日の教育対象 24名とundefinedを突き合わせ、条件付きで進める",
+              "text": "移行期間 30日の教育対象 24名とundefinedを突き合わせ、条件付きで進める。材料は移行期間 30日、教育対象 24名、undefined。",
+              "immediateFeedback": "移行期間 30日に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": 1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": 1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、移行期間 30日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "移行期間 30日の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は教育対象 24名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は移行期間 30日、教育対象 24名、undefined。",
+              "immediateFeedback": "移行期間 30日に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "業務改善コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "operations_consultant_evidence": -1,
+                "operations_consultant_risk": 2,
+                "operations_consultant_speed": -1,
+                "operations_consultant_value": 2,
+                "operations_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "業務改善コンサルは印象ではなく、移行期間 30日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "移行期間 30日の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は教育対象 24名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "operations-consultant-移行期間 30日判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "operations-consultant-移行期間 30日判断",
+            "roleSpecificMaterials": [
+              "実行計画",
+              "判断対象: 実行計画"
+            ],
+            "roleSpecificMetrics": [
+              "移行期間 30日",
+              "教育対象 24名"
+            ],
+            "roleSpecificFailureRisk": "実行計画を読まず、移行期間 30日か教育対象 24名のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "移行期間 30日と教育対象 24名を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "実行計画、移行期間 30日、教育対象 24名を判断の主役にしている。",
+            "kernelConnection": "実行計画をoperations-consultant-移行期間 30日判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch2-1",
+      "title": "業務改善コンサルの材料翻訳型",
+      "strengths": [
+        "業務改善コンサルの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "operations_consultant_evidence",
+        "operations_consultant_risk"
+      ],
+      "valuedMeters": [
+        "operations_consultant_evidence"
+      ],
+      "sacrificedMeters": [
+        "operations_consultant_speed"
+      ],
+      "roleRealityReveal": "業務改善コンサルは、業務ログをボトルネックと改善施策へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "業務改善コンサルの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-2",
+      "title": "業務改善コンサルの推進型",
+      "strengths": [
+        "業務改善コンサルの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "operations_consultant_risk",
+        "operations_consultant_speed"
+      ],
+      "valuedMeters": [
+        "operations_consultant_risk"
+      ],
+      "sacrificedMeters": [
+        "operations_consultant_value"
+      ],
+      "roleRealityReveal": "業務改善コンサルは、業務ログをボトルネックと改善施策へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "業務改善コンサルの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-3",
+      "title": "業務改善コンサルの安全設計型",
+      "strengths": [
+        "業務改善コンサルの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "operations_consultant_speed",
+        "operations_consultant_value"
+      ],
+      "valuedMeters": [
+        "operations_consultant_speed"
+      ],
+      "sacrificedMeters": [
+        "operations_consultant_feasibility"
+      ],
+      "roleRealityReveal": "業務改善コンサルは、業務ログをボトルネックと改善施策へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "業務改善コンサルの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "業務改善コンサルは、業務ログをボトルネックと改善施策へ変換する仕事。",
+    "misconceptionCorrection": "見た目の対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "業務改善コンサルとして、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "operations-consultant_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "operations_consultant_evidence_vs_operations_consultant_risk",
+      "operations_consultant_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 2 selected for decision primitive diversity.",
+    "mainConflict": "業務ログをボトルネックと改善施策へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 2 selection skeleton Cに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "operations_consultant_evidence",
+      "label": "evidence",
+      "description": "業務改善コンサルのevidence判断"
+    },
+    {
+      "key": "operations_consultant_risk",
+      "label": "risk",
+      "description": "業務改善コンサルのrisk判断"
+    },
+    {
+      "key": "operations_consultant_speed",
+      "label": "speed",
+      "description": "業務改善コンサルのspeed判断"
+    },
+    {
+      "key": "operations_consultant_value",
+      "label": "value",
+      "description": "業務改善コンサルのvalue判断"
+    },
+    {
+      "key": "operations_consultant_feasibility",
+      "label": "feasibility",
+      "description": "業務改善コンサルのfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "業務改善コンサルの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "operations_consultant_evidence",
+      "operations_consultant_risk",
+      "operations_consultant_speed",
+      "operations_consultant_value",
+      "operations_consultant_feasibility"
+    ]
+  },
+  "roleCoreFriction": "業務ログをボトルネックと改善施策へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "業務改善コンサルは人との調整や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "業務改善コンサルは、業務ログをボトルネックと改善施策へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "処理 1,860件、手戻り 3箇所、例外処理 42件、削減 120時間、移行期間 30日、関係者制約、期限",
+    "output": "業務改善コンサルとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "業務ログをボトルネックと改善施策へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "処理 1,860件",
+      "手戻り 3箇所",
+      "例外処理 42件",
+      "削減 120時間",
+      "移行期間 30日"
+    ],
+    "metrics": [
+      "処理 1,860件",
+      "滞留 14%",
+      "手戻り 3箇所",
+      "平均 18分",
+      "例外処理 42件",
+      "属人作業 6名",
+      "削減 120時間",
+      "初期費 80万円",
+      "移行期間 30日",
+      "教育対象 24名"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "処理 1,860件、手戻り 3箇所、例外処理 42件と滞留 14%、、平均 18分を読まなければ成立しないため。"
+  }
+}

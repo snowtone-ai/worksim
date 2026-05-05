@@ -1,0 +1,2192 @@
+{
+  "id": "hr/recruiting-advisor",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "人材/HR",
+  "industrySlug": "hr",
+  "role": "リクルーティングアドバイザー",
+  "roleSlug": "recruiting-advisor",
+  "roleCategory": "industry_specific_sales",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "営業系",
+    "人と関わる",
+    "分析系"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 人材/HR リクルーティングアドバイザー.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "hr",
+      "recruiting-advisor"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "求人要件票"
+    },
+    {
+      "time": "10:35",
+      "label": "応募者市場表"
+    },
+    {
+      "time": "12:20",
+      "label": "選考歩留まり表"
+    },
+    {
+      "time": "14:05",
+      "label": "スカウト文案"
+    },
+    {
+      "time": "16:25",
+      "label": "企業提案メモ"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "求人要件票"
+    },
+    {
+      "time": "10:35",
+      "label": "応募者市場表"
+    },
+    {
+      "time": "12:20",
+      "label": "選考歩留まり表"
+    },
+    {
+      "time": "14:05",
+      "label": "スカウト文案"
+    },
+    {
+      "time": "16:25",
+      "label": "企業提案メモ"
+    }
+  ],
+  "sceneList": [
+    "recruiting-advisor-01",
+    "recruiting-advisor-02",
+    "recruiting-advisor-03",
+    "recruiting-advisor-04",
+    "recruiting-advisor-05"
+  ],
+  "meta": {
+    "title": "リクルーティングアドバイザー",
+    "industry": "人材/HR",
+    "role": "リクルーティングアドバイザー",
+    "duration_minutes": 18,
+    "description": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "recruiting-advisor-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "求人要件票",
+      "openingHook": "09:10。求人要件票に必須条件 8項目と想定年収 420万円が並んでいる。",
+      "context": "リクルーティングアドバイザーとして求人要件票を確認する。必須条件 8項目、想定年収 420万円が今日の判断材料になる。",
+      "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、求人要件票を読んで緩和条件を選ぶ。",
+      "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+      "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は求人要件票である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "必須条件 8項目の背景と想定年収 420万円の確度が完全にはそろっていない。",
+      "decisionTradeoff": "必須条件 8項目を重く見るほど、想定年収 420万円や別の制約を犠牲にする。",
+      "consequenceHook": "recruiting-advisor-必須条件 8項目判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は応募者市場表で副作用を確認する。",
+      "npcDialogue": "先輩:「求人要件票を読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+      "workMaterial": "求人要件票\n- 必須条件 8項目\n- 想定年収 420万円\n- 判断対象: 求人要件票",
+      "decisionPrompt": "recruiting-advisor-必須条件 8項目判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "必須条件 8項目を優先し、当日中に求人要件票の結論を出す",
+          "text": "必須条件 8項目を優先し、当日中に求人要件票の結論を出す。材料は必須条件 8項目、想定年収 420万円。",
+          "immediateFeedback": "必須条件 8項目に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 2,
+            "recruiting_advisor_risk": -1,
+            "recruiting_advisor_speed": 2,
+            "recruiting_advisor_value": -1,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、必須条件 8項目と想定年収 420万円を読んで判断する。",
+          "studentFeedback": {
+            "good": "必須条件 8項目の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は想定年収 420万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "必須条件 8項目と想定年収 420万円を突き合わせ、条件付きで進める",
+          "text": "必須条件 8項目と想定年収 420万円を突き合わせ、条件付きで進める。材料は必須条件 8項目、想定年収 420万円。",
+          "immediateFeedback": "求人要件票に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": 1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "必須条件 8項目と想定年収 420万円を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は求人要件票の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "想定年収 420万円の制約を重く見て、判断範囲を絞る",
+          "text": "想定年収 420万円の制約を重く見て、判断範囲を絞る。材料は必須条件 8項目、想定年収 420万円。",
+          "immediateFeedback": "想定年収 420万円に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": -1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": -1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、必須条件 8項目と想定年収 420万円の副作用まで読む。",
+          "studentFeedback": {
+            "good": "想定年収 420万円の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は必須条件 8項目を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "recruiting-advisor-必須条件 8項目判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "recruiting-advisor-必須条件 8項目判断",
+        "roleSpecificMaterials": [
+          "求人要件票",
+          "判断対象: 求人要件票"
+        ],
+        "roleSpecificMetrics": [
+          "必須条件 8項目",
+          "想定年収 420万円"
+        ],
+        "roleSpecificFailureRisk": "求人要件票を読まず、必須条件 8項目か想定年収 420万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "必須条件 8項目と想定年収 420万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "求人要件票、必須条件 8項目、想定年収 420万円を判断の主役にしている。",
+        "kernelConnection": "求人要件票をrecruiting-advisor-必須条件 8項目判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "recruiting-advisor-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "応募者市場表",
+      "openingHook": "10:35。応募者市場表に該当者 180人と競合求人 26件が並んでいる。",
+      "context": "リクルーティングアドバイザーとして応募者市場表を確認する。該当者 180人、競合求人 26件が今日の判断材料になる。",
+      "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、応募者市場表を読んで訴求軸を決める。",
+      "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+      "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は応募者市場表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "該当者 180人の背景と競合求人 26件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "該当者 180人を重く見るほど、競合求人 26件や別の制約を犠牲にする。",
+      "consequenceHook": "recruiting-advisor-該当者 180人判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は選考歩留まり表で副作用を確認する。",
+      "npcDialogue": "先輩:「応募者市場表を読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+      "workMaterial": "応募者市場表\n- 該当者 180人\n- 競合求人 26件\n- 判断対象: 応募者市場表",
+      "decisionPrompt": "recruiting-advisor-該当者 180人判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "該当者 180人を優先し、当日中に応募者市場表の結論を出す",
+          "text": "該当者 180人を優先し、当日中に応募者市場表の結論を出す。材料は該当者 180人、競合求人 26件。",
+          "immediateFeedback": "該当者 180人に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 2,
+            "recruiting_advisor_risk": -1,
+            "recruiting_advisor_speed": 2,
+            "recruiting_advisor_value": -1,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、該当者 180人と競合求人 26件を読んで判断する。",
+          "studentFeedback": {
+            "good": "該当者 180人の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は競合求人 26件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "該当者 180人と競合求人 26件を突き合わせ、条件付きで進める",
+          "text": "該当者 180人と競合求人 26件を突き合わせ、条件付きで進める。材料は該当者 180人、競合求人 26件。",
+          "immediateFeedback": "応募者市場表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": 1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "該当者 180人と競合求人 26件を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は応募者市場表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "競合求人 26件の制約を重く見て、判断範囲を絞る",
+          "text": "競合求人 26件の制約を重く見て、判断範囲を絞る。材料は該当者 180人、競合求人 26件。",
+          "immediateFeedback": "競合求人 26件に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": -1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": -1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、該当者 180人と競合求人 26件の副作用まで読む。",
+          "studentFeedback": {
+            "good": "競合求人 26件の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は該当者 180人を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "recruiting-advisor-該当者 180人判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "recruiting-advisor-該当者 180人判断",
+        "roleSpecificMaterials": [
+          "応募者市場表",
+          "判断対象: 応募者市場表"
+        ],
+        "roleSpecificMetrics": [
+          "該当者 180人",
+          "競合求人 26件"
+        ],
+        "roleSpecificFailureRisk": "応募者市場表を読まず、該当者 180人か競合求人 26件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "該当者 180人と競合求人 26件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "応募者市場表、該当者 180人、競合求人 26件を判断の主役にしている。",
+        "kernelConnection": "応募者市場表をrecruiting-advisor-該当者 180人判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "recruiting-advisor-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "選考歩留まり表",
+      "openingHook": "12:20。選考歩留まり表に書類通過 22%と辞退率 35%が並んでいる。",
+      "context": "リクルーティングアドバイザーとして選考歩留まり表を確認する。書類通過 22%、辞退率 35%が今日の判断材料になる。",
+      "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、選考歩留まり表を読んで改善箇所を切る。",
+      "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+      "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は選考歩留まり表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "書類通過 22%の背景と辞退率 35%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "書類通過 22%を重く見るほど、辞退率 35%や別の制約を犠牲にする。",
+      "consequenceHook": "recruiting-advisor-書類通過 22%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次はスカウト文案で副作用を確認する。",
+      "npcDialogue": "先輩:「選考歩留まり表を読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+      "workMaterial": "選考歩留まり表\n- 書類通過 22%\n- 辞退率 35%\n- 判断対象: 選考歩留まり表",
+      "decisionPrompt": "recruiting-advisor-書類通過 22%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "書類通過 22%を優先し、当日中に選考歩留まり表の結論を出す",
+          "text": "書類通過 22%を優先し、当日中に選考歩留まり表の結論を出す。材料は書類通過 22%、辞退率 35%。",
+          "immediateFeedback": "書類通過 22%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 2,
+            "recruiting_advisor_risk": -1,
+            "recruiting_advisor_speed": 2,
+            "recruiting_advisor_value": -1,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、書類通過 22%と辞退率 35%を読んで判断する。",
+          "studentFeedback": {
+            "good": "書類通過 22%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は辞退率 35%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "書類通過 22%と辞退率 35%を突き合わせ、条件付きで進める",
+          "text": "書類通過 22%と辞退率 35%を突き合わせ、条件付きで進める。材料は書類通過 22%、辞退率 35%。",
+          "immediateFeedback": "選考歩留まり表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": 1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "書類通過 22%と辞退率 35%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は選考歩留まり表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "辞退率 35%の制約を重く見て、判断範囲を絞る",
+          "text": "辞退率 35%の制約を重く見て、判断範囲を絞る。材料は書類通過 22%、辞退率 35%。",
+          "immediateFeedback": "辞退率 35%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": -1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": -1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、書類通過 22%と辞退率 35%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "辞退率 35%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は書類通過 22%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "recruiting-advisor-書類通過 22%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "recruiting-advisor-書類通過 22%判断",
+        "roleSpecificMaterials": [
+          "選考歩留まり表",
+          "判断対象: 選考歩留まり表"
+        ],
+        "roleSpecificMetrics": [
+          "書類通過 22%",
+          "辞退率 35%"
+        ],
+        "roleSpecificFailureRisk": "選考歩留まり表を読まず、書類通過 22%か辞退率 35%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "書類通過 22%と辞退率 35%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "選考歩留まり表、書類通過 22%、辞退率 35%を判断の主役にしている。",
+        "kernelConnection": "選考歩留まり表をrecruiting-advisor-書類通過 22%判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "recruiting-advisor-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "スカウト文案",
+      "openingHook": "14:05。スカウト文案に返信率 9%と訴求候補 3案が並んでいる。",
+      "context": "リクルーティングアドバイザーとしてスカウト文案を確認する。返信率 9%、訴求候補 3案が今日の判断材料になる。",
+      "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、スカウト文案を読んで送信対象を分ける。",
+      "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+      "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料はスカウト文案である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "返信率 9%の背景と訴求候補 3案の確度が完全にはそろっていない。",
+      "decisionTradeoff": "返信率 9%を重く見るほど、訴求候補 3案や別の制約を犠牲にする。",
+      "consequenceHook": "recruiting-advisor-返信率 9%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は企業提案メモで副作用を確認する。",
+      "npcDialogue": "先輩:「スカウト文案を読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+      "workMaterial": "スカウト文案\n- 返信率 9%\n- 訴求候補 3案\n- 判断対象: スカウト文案",
+      "decisionPrompt": "recruiting-advisor-返信率 9%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "返信率 9%を優先し、当日中にスカウト文案の結論を出す",
+          "text": "返信率 9%を優先し、当日中にスカウト文案の結論を出す。材料は返信率 9%、訴求候補 3案。",
+          "immediateFeedback": "返信率 9%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 2,
+            "recruiting_advisor_risk": -1,
+            "recruiting_advisor_speed": 2,
+            "recruiting_advisor_value": -1,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、返信率 9%と訴求候補 3案を読んで判断する。",
+          "studentFeedback": {
+            "good": "返信率 9%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は訴求候補 3案の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "返信率 9%と訴求候補 3案を突き合わせ、条件付きで進める",
+          "text": "返信率 9%と訴求候補 3案を突き合わせ、条件付きで進める。材料は返信率 9%、訴求候補 3案。",
+          "immediateFeedback": "スカウト文案に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": 1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "返信率 9%と訴求候補 3案を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はスカウト文案の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "訴求候補 3案の制約を重く見て、判断範囲を絞る",
+          "text": "訴求候補 3案の制約を重く見て、判断範囲を絞る。材料は返信率 9%、訴求候補 3案。",
+          "immediateFeedback": "訴求候補 3案に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": -1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": -1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、返信率 9%と訴求候補 3案の副作用まで読む。",
+          "studentFeedback": {
+            "good": "訴求候補 3案の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は返信率 9%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "recruiting-advisor-返信率 9%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "recruiting-advisor-返信率 9%判断",
+        "roleSpecificMaterials": [
+          "スカウト文案",
+          "判断対象: スカウト文案"
+        ],
+        "roleSpecificMetrics": [
+          "返信率 9%",
+          "訴求候補 3案"
+        ],
+        "roleSpecificFailureRisk": "スカウト文案を読まず、返信率 9%か訴求候補 3案のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "返信率 9%と訴求候補 3案を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "スカウト文案、返信率 9%、訴求候補 3案を判断の主役にしている。",
+        "kernelConnection": "スカウト文案をrecruiting-advisor-返信率 9%判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "recruiting-advisor-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "企業提案メモ",
+      "openingHook": "16:25。企業提案メモに採用目標 3名と期限 10週間が並んでいる。",
+      "context": "リクルーティングアドバイザーとして企業提案メモを確認する。採用目標 3名、期限 10週間が今日の判断材料になる。",
+      "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、企業提案メモを読んで条件変更案を出す。",
+      "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+      "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は企業提案メモである。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "採用目標 3名の背景と期限 10週間の確度が完全にはそろっていない。",
+      "decisionTradeoff": "採用目標 3名を重く見るほど、期限 10週間や別の制約を犠牲にする。",
+      "consequenceHook": "recruiting-advisor-採用目標 3名判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「企業提案メモを読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+      "workMaterial": "企業提案メモ\n- 採用目標 3名\n- 期限 10週間\n- 判断対象: 企業提案メモ",
+      "decisionPrompt": "recruiting-advisor-採用目標 3名判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "採用目標 3名を優先し、当日中に企業提案メモの結論を出す",
+          "text": "採用目標 3名を優先し、当日中に企業提案メモの結論を出す。材料は採用目標 3名、期限 10週間。",
+          "immediateFeedback": "採用目標 3名に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 2,
+            "recruiting_advisor_risk": -1,
+            "recruiting_advisor_speed": 2,
+            "recruiting_advisor_value": -1,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、採用目標 3名と期限 10週間を読んで判断する。",
+          "studentFeedback": {
+            "good": "採用目標 3名の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は期限 10週間の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "採用目標 3名と期限 10週間を突き合わせ、条件付きで進める",
+          "text": "採用目標 3名と期限 10週間を突き合わせ、条件付きで進める。材料は採用目標 3名、期限 10週間。",
+          "immediateFeedback": "企業提案メモに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": 1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": 1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "採用目標 3名と期限 10週間を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は企業提案メモの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "期限 10週間の制約を重く見て、判断範囲を絞る",
+          "text": "期限 10週間の制約を重く見て、判断範囲を絞る。材料は採用目標 3名、期限 10週間。",
+          "immediateFeedback": "期限 10週間に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "recruiting_advisor_evidence": -1,
+            "recruiting_advisor_risk": 2,
+            "recruiting_advisor_speed": -1,
+            "recruiting_advisor_value": 2,
+            "recruiting_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、採用目標 3名と期限 10週間の副作用まで読む。",
+          "studentFeedback": {
+            "good": "期限 10週間の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は採用目標 3名を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "recruiting-advisor-採用目標 3名判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "recruiting-advisor-採用目標 3名判断",
+        "roleSpecificMaterials": [
+          "企業提案メモ",
+          "判断対象: 企業提案メモ"
+        ],
+        "roleSpecificMetrics": [
+          "採用目標 3名",
+          "期限 10週間"
+        ],
+        "roleSpecificFailureRisk": "企業提案メモを読まず、採用目標 3名か期限 10週間のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "採用目標 3名と期限 10週間を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "企業提案メモ、採用目標 3名、期限 10週間を判断の主役にしている。",
+        "kernelConnection": "企業提案メモをrecruiting-advisor-採用目標 3名判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。リクルーティングアドバイザーとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "recruiting-advisor-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "求人要件票",
+          "openingHook": "09:10。求人要件票に必須条件 8項目と想定年収 420万円が並んでいる。",
+          "context": "リクルーティングアドバイザーとして求人要件票を確認する。必須条件 8項目、想定年収 420万円が今日の判断材料になる。",
+          "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、求人要件票を読んで緩和条件を選ぶ。",
+          "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+          "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は求人要件票である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "必須条件 8項目の背景と想定年収 420万円の確度が完全にはそろっていない。",
+          "decisionTradeoff": "必須条件 8項目を重く見るほど、想定年収 420万円や別の制約を犠牲にする。",
+          "consequenceHook": "recruiting-advisor-必須条件 8項目判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は応募者市場表で副作用を確認する。",
+          "npcDialogue": "先輩:「求人要件票を読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+          "workMaterial": "求人要件票\n- 必須条件 8項目\n- 想定年収 420万円\n- 判断対象: 求人要件票",
+          "decisionPrompt": "recruiting-advisor-必須条件 8項目判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "必須条件 8項目を優先し、当日中に求人要件票の結論を出す",
+              "text": "必須条件 8項目を優先し、当日中に求人要件票の結論を出す。材料は必須条件 8項目、想定年収 420万円。",
+              "immediateFeedback": "必須条件 8項目に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 2,
+                "recruiting_advisor_risk": -1,
+                "recruiting_advisor_speed": 2,
+                "recruiting_advisor_value": -1,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、必須条件 8項目と想定年収 420万円を読んで判断する。",
+              "studentFeedback": {
+                "good": "必須条件 8項目の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は想定年収 420万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "必須条件 8項目と想定年収 420万円を突き合わせ、条件付きで進める",
+              "text": "必須条件 8項目と想定年収 420万円を突き合わせ、条件付きで進める。材料は必須条件 8項目、想定年収 420万円。",
+              "immediateFeedback": "求人要件票に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": 1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "必須条件 8項目と想定年収 420万円を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は求人要件票の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "想定年収 420万円の制約を重く見て、判断範囲を絞る",
+              "text": "想定年収 420万円の制約を重く見て、判断範囲を絞る。材料は必須条件 8項目、想定年収 420万円。",
+              "immediateFeedback": "想定年収 420万円に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": -1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": -1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、必須条件 8項目と想定年収 420万円の副作用まで読む。",
+              "studentFeedback": {
+                "good": "想定年収 420万円の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は必須条件 8項目を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "recruiting-advisor-必須条件 8項目判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "recruiting-advisor-必須条件 8項目判断",
+            "roleSpecificMaterials": [
+              "求人要件票",
+              "判断対象: 求人要件票"
+            ],
+            "roleSpecificMetrics": [
+              "必須条件 8項目",
+              "想定年収 420万円"
+            ],
+            "roleSpecificFailureRisk": "求人要件票を読まず、必須条件 8項目か想定年収 420万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "必須条件 8項目と想定年収 420万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "求人要件票、必須条件 8項目、想定年収 420万円を判断の主役にしている。",
+            "kernelConnection": "求人要件票をrecruiting-advisor-必須条件 8項目判断へ接続する。"
+          }
+        },
+        {
+          "id": "recruiting-advisor-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "応募者市場表",
+          "openingHook": "10:35。応募者市場表に該当者 180人と競合求人 26件が並んでいる。",
+          "context": "リクルーティングアドバイザーとして応募者市場表を確認する。該当者 180人、競合求人 26件が今日の判断材料になる。",
+          "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、応募者市場表を読んで訴求軸を決める。",
+          "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+          "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は応募者市場表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "該当者 180人の背景と競合求人 26件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "該当者 180人を重く見るほど、競合求人 26件や別の制約を犠牲にする。",
+          "consequenceHook": "recruiting-advisor-該当者 180人判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は選考歩留まり表で副作用を確認する。",
+          "npcDialogue": "先輩:「応募者市場表を読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+          "workMaterial": "応募者市場表\n- 該当者 180人\n- 競合求人 26件\n- 判断対象: 応募者市場表",
+          "decisionPrompt": "recruiting-advisor-該当者 180人判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "該当者 180人を優先し、当日中に応募者市場表の結論を出す",
+              "text": "該当者 180人を優先し、当日中に応募者市場表の結論を出す。材料は該当者 180人、競合求人 26件。",
+              "immediateFeedback": "該当者 180人に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 2,
+                "recruiting_advisor_risk": -1,
+                "recruiting_advisor_speed": 2,
+                "recruiting_advisor_value": -1,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、該当者 180人と競合求人 26件を読んで判断する。",
+              "studentFeedback": {
+                "good": "該当者 180人の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は競合求人 26件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "該当者 180人と競合求人 26件を突き合わせ、条件付きで進める",
+              "text": "該当者 180人と競合求人 26件を突き合わせ、条件付きで進める。材料は該当者 180人、競合求人 26件。",
+              "immediateFeedback": "応募者市場表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": 1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "該当者 180人と競合求人 26件を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は応募者市場表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "競合求人 26件の制約を重く見て、判断範囲を絞る",
+              "text": "競合求人 26件の制約を重く見て、判断範囲を絞る。材料は該当者 180人、競合求人 26件。",
+              "immediateFeedback": "競合求人 26件に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": -1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": -1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、該当者 180人と競合求人 26件の副作用まで読む。",
+              "studentFeedback": {
+                "good": "競合求人 26件の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は該当者 180人を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "recruiting-advisor-該当者 180人判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "recruiting-advisor-該当者 180人判断",
+            "roleSpecificMaterials": [
+              "応募者市場表",
+              "判断対象: 応募者市場表"
+            ],
+            "roleSpecificMetrics": [
+              "該当者 180人",
+              "競合求人 26件"
+            ],
+            "roleSpecificFailureRisk": "応募者市場表を読まず、該当者 180人か競合求人 26件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "該当者 180人と競合求人 26件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "応募者市場表、該当者 180人、競合求人 26件を判断の主役にしている。",
+            "kernelConnection": "応募者市場表をrecruiting-advisor-該当者 180人判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。リクルーティングアドバイザーとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "recruiting-advisor-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "選考歩留まり表",
+          "openingHook": "12:20。選考歩留まり表に書類通過 22%と辞退率 35%が並んでいる。",
+          "context": "リクルーティングアドバイザーとして選考歩留まり表を確認する。書類通過 22%、辞退率 35%が今日の判断材料になる。",
+          "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、選考歩留まり表を読んで改善箇所を切る。",
+          "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+          "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は選考歩留まり表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "書類通過 22%の背景と辞退率 35%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "書類通過 22%を重く見るほど、辞退率 35%や別の制約を犠牲にする。",
+          "consequenceHook": "recruiting-advisor-書類通過 22%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次はスカウト文案で副作用を確認する。",
+          "npcDialogue": "先輩:「選考歩留まり表を読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+          "workMaterial": "選考歩留まり表\n- 書類通過 22%\n- 辞退率 35%\n- 判断対象: 選考歩留まり表",
+          "decisionPrompt": "recruiting-advisor-書類通過 22%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "書類通過 22%を優先し、当日中に選考歩留まり表の結論を出す",
+              "text": "書類通過 22%を優先し、当日中に選考歩留まり表の結論を出す。材料は書類通過 22%、辞退率 35%。",
+              "immediateFeedback": "書類通過 22%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 2,
+                "recruiting_advisor_risk": -1,
+                "recruiting_advisor_speed": 2,
+                "recruiting_advisor_value": -1,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、書類通過 22%と辞退率 35%を読んで判断する。",
+              "studentFeedback": {
+                "good": "書類通過 22%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は辞退率 35%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "書類通過 22%と辞退率 35%を突き合わせ、条件付きで進める",
+              "text": "書類通過 22%と辞退率 35%を突き合わせ、条件付きで進める。材料は書類通過 22%、辞退率 35%。",
+              "immediateFeedback": "選考歩留まり表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": 1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "書類通過 22%と辞退率 35%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は選考歩留まり表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "辞退率 35%の制約を重く見て、判断範囲を絞る",
+              "text": "辞退率 35%の制約を重く見て、判断範囲を絞る。材料は書類通過 22%、辞退率 35%。",
+              "immediateFeedback": "辞退率 35%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": -1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": -1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、書類通過 22%と辞退率 35%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "辞退率 35%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は書類通過 22%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "recruiting-advisor-書類通過 22%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "recruiting-advisor-書類通過 22%判断",
+            "roleSpecificMaterials": [
+              "選考歩留まり表",
+              "判断対象: 選考歩留まり表"
+            ],
+            "roleSpecificMetrics": [
+              "書類通過 22%",
+              "辞退率 35%"
+            ],
+            "roleSpecificFailureRisk": "選考歩留まり表を読まず、書類通過 22%か辞退率 35%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "書類通過 22%と辞退率 35%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "選考歩留まり表、書類通過 22%、辞退率 35%を判断の主役にしている。",
+            "kernelConnection": "選考歩留まり表をrecruiting-advisor-書類通過 22%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。リクルーティングアドバイザーとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "recruiting-advisor-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "スカウト文案",
+          "openingHook": "14:05。スカウト文案に返信率 9%と訴求候補 3案が並んでいる。",
+          "context": "リクルーティングアドバイザーとしてスカウト文案を確認する。返信率 9%、訴求候補 3案が今日の判断材料になる。",
+          "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、スカウト文案を読んで送信対象を分ける。",
+          "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+          "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料はスカウト文案である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "返信率 9%の背景と訴求候補 3案の確度が完全にはそろっていない。",
+          "decisionTradeoff": "返信率 9%を重く見るほど、訴求候補 3案や別の制約を犠牲にする。",
+          "consequenceHook": "recruiting-advisor-返信率 9%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は企業提案メモで副作用を確認する。",
+          "npcDialogue": "先輩:「スカウト文案を読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+          "workMaterial": "スカウト文案\n- 返信率 9%\n- 訴求候補 3案\n- 判断対象: スカウト文案",
+          "decisionPrompt": "recruiting-advisor-返信率 9%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "返信率 9%を優先し、当日中にスカウト文案の結論を出す",
+              "text": "返信率 9%を優先し、当日中にスカウト文案の結論を出す。材料は返信率 9%、訴求候補 3案。",
+              "immediateFeedback": "返信率 9%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 2,
+                "recruiting_advisor_risk": -1,
+                "recruiting_advisor_speed": 2,
+                "recruiting_advisor_value": -1,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、返信率 9%と訴求候補 3案を読んで判断する。",
+              "studentFeedback": {
+                "good": "返信率 9%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は訴求候補 3案の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "返信率 9%と訴求候補 3案を突き合わせ、条件付きで進める",
+              "text": "返信率 9%と訴求候補 3案を突き合わせ、条件付きで進める。材料は返信率 9%、訴求候補 3案。",
+              "immediateFeedback": "スカウト文案に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": 1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "返信率 9%と訴求候補 3案を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はスカウト文案の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "訴求候補 3案の制約を重く見て、判断範囲を絞る",
+              "text": "訴求候補 3案の制約を重く見て、判断範囲を絞る。材料は返信率 9%、訴求候補 3案。",
+              "immediateFeedback": "訴求候補 3案に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": -1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": -1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、返信率 9%と訴求候補 3案の副作用まで読む。",
+              "studentFeedback": {
+                "good": "訴求候補 3案の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は返信率 9%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "recruiting-advisor-返信率 9%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "recruiting-advisor-返信率 9%判断",
+            "roleSpecificMaterials": [
+              "スカウト文案",
+              "判断対象: スカウト文案"
+            ],
+            "roleSpecificMetrics": [
+              "返信率 9%",
+              "訴求候補 3案"
+            ],
+            "roleSpecificFailureRisk": "スカウト文案を読まず、返信率 9%か訴求候補 3案のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "返信率 9%と訴求候補 3案を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "スカウト文案、返信率 9%、訴求候補 3案を判断の主役にしている。",
+            "kernelConnection": "スカウト文案をrecruiting-advisor-返信率 9%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。リクルーティングアドバイザーとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "recruiting-advisor-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "企業提案メモ",
+          "openingHook": "16:25。企業提案メモに採用目標 3名と期限 10週間が並んでいる。",
+          "context": "リクルーティングアドバイザーとして企業提案メモを確認する。採用目標 3名、期限 10週間が今日の判断材料になる。",
+          "content": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換するため、企業提案メモを読んで条件変更案を出す。",
+          "roleSpecificContext": "リクルーティングアドバイザーは求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する仕事。",
+          "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は企業提案メモである。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "採用目標 3名の背景と期限 10週間の確度が完全にはそろっていない。",
+          "decisionTradeoff": "採用目標 3名を重く見るほど、期限 10週間や別の制約を犠牲にする。",
+          "consequenceHook": "recruiting-advisor-採用目標 3名判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「企業提案メモを読まずに進めると、リクルーティングアドバイザーの判断ではなくなる」",
+          "workMaterial": "企業提案メモ\n- 採用目標 3名\n- 期限 10週間\n- 判断対象: 企業提案メモ",
+          "decisionPrompt": "recruiting-advisor-採用目標 3名判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "採用目標 3名を優先し、当日中に企業提案メモの結論を出す",
+              "text": "採用目標 3名を優先し、当日中に企業提案メモの結論を出す。材料は採用目標 3名、期限 10週間。",
+              "immediateFeedback": "採用目標 3名に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 2,
+                "recruiting_advisor_risk": -1,
+                "recruiting_advisor_speed": 2,
+                "recruiting_advisor_value": -1,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは印象ではなく、採用目標 3名と期限 10週間を読んで判断する。",
+              "studentFeedback": {
+                "good": "採用目標 3名の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は期限 10週間の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "採用目標 3名と期限 10週間を突き合わせ、条件付きで進める",
+              "text": "採用目標 3名と期限 10週間を突き合わせ、条件付きで進める。材料は採用目標 3名、期限 10週間。",
+              "immediateFeedback": "企業提案メモに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": 1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": 1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "採用目標 3名と期限 10週間を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は企業提案メモの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "期限 10週間の制約を重く見て、判断範囲を絞る",
+              "text": "期限 10週間の制約を重く見て、判断範囲を絞る。材料は採用目標 3名、期限 10週間。",
+              "immediateFeedback": "期限 10週間に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "リクルーティングアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "recruiting_advisor_evidence": -1,
+                "recruiting_advisor_risk": 2,
+                "recruiting_advisor_speed": -1,
+                "recruiting_advisor_value": 2,
+                "recruiting_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "リクルーティングアドバイザーは慎重さだけでなく、採用目標 3名と期限 10週間の副作用まで読む。",
+              "studentFeedback": {
+                "good": "期限 10週間の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は採用目標 3名を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "recruiting-advisor-採用目標 3名判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "recruiting-advisor-採用目標 3名判断",
+            "roleSpecificMaterials": [
+              "企業提案メモ",
+              "判断対象: 企業提案メモ"
+            ],
+            "roleSpecificMetrics": [
+              "採用目標 3名",
+              "期限 10週間"
+            ],
+            "roleSpecificFailureRisk": "企業提案メモを読まず、採用目標 3名か期限 10週間のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "採用目標 3名と期限 10週間を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "企業提案メモ、採用目標 3名、期限 10週間を判断の主役にしている。",
+            "kernelConnection": "企業提案メモをrecruiting-advisor-採用目標 3名判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "recruiting-advisor-material-reader",
+      "title": "リクルーティングアドバイザーの材料読解型",
+      "strengths": [
+        "リクルーティングアドバイザーの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "recruiting_advisor_evidence",
+        "recruiting_advisor_risk"
+      ],
+      "valuedMeters": [
+        "recruiting_advisor_evidence"
+      ],
+      "sacrificedMeters": [
+        "recruiting_advisor_speed"
+      ],
+      "roleRealityReveal": "リクルーティングアドバイザーは、求人要件と応募者市場を読み、採用可能性のある条件に再設計する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "リクルーティングアドバイザーの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "recruiting-advisor-constraint-designer",
+      "title": "リクルーティングアドバイザーの制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "recruiting_advisor_risk",
+        "recruiting_advisor_speed"
+      ],
+      "valuedMeters": [
+        "recruiting_advisor_risk"
+      ],
+      "sacrificedMeters": [
+        "recruiting_advisor_value"
+      ],
+      "roleRealityReveal": "リクルーティングアドバイザーは、求人要件と応募者市場を読み、採用可能性のある条件に再設計する仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "リクルーティングアドバイザーとして制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "recruiting-advisor-execution-planner",
+      "title": "リクルーティングアドバイザーの実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "recruiting_advisor_speed",
+        "recruiting_advisor_value"
+      ],
+      "valuedMeters": [
+        "recruiting_advisor_speed"
+      ],
+      "sacrificedMeters": [
+        "recruiting_advisor_feasibility"
+      ],
+      "roleRealityReveal": "リクルーティングアドバイザーは、求人要件と応募者市場を読み、採用可能性のある条件に再設計する仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "リクルーティングアドバイザーとして実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "リクルーティングアドバイザーは、求人要件と応募者市場を読み、採用可能性のある条件に再設計する仕事。",
+    "misconceptionCorrection": "リクルーティングアドバイザーは印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "リクルーティングアドバイザーとして、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "recruiting-advisor_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "recruiting_advisor_market_vs_recruiting_advisor_requirement",
+      "recruiting_advisor_funnel_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "recruiting_advisor_market",
+      "label": "market",
+      "description": "リクルーティングアドバイザーのmarket判断"
+    },
+    {
+      "key": "recruiting_advisor_requirement",
+      "label": "requirement",
+      "description": "リクルーティングアドバイザーのrequirement判断"
+    },
+    {
+      "key": "recruiting_advisor_funnel",
+      "label": "funnel",
+      "description": "リクルーティングアドバイザーのfunnel判断"
+    },
+    {
+      "key": "recruiting_advisor_proposal",
+      "label": "proposal",
+      "description": "リクルーティングアドバイザーのproposal判断"
+    },
+    {
+      "key": "recruiting_advisor_trust",
+      "label": "trust",
+      "description": "リクルーティングアドバイザーのtrust判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "リクルーティングアドバイザーの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "recruiting_advisor_market",
+      "recruiting_advisor_requirement",
+      "recruiting_advisor_funnel",
+      "recruiting_advisor_proposal",
+      "recruiting_advisor_trust"
+    ]
+  },
+  "roleCoreFriction": "企業要望に寄せるほど受注しやすいが、候補者市場と選考歩留まりを外すと採用できない葛藤。",
+  "roleMisconception": "リクルーティングアドバイザーは企業への営業が中心で、求人要件と市場歩留まりの調整は補助的だと思われやすい。",
+  "roleRealityReveal": "リクルーティングアドバイザーは、求人要件と応募者市場を読み、採用可能性のある条件に再設計する仕事。",
+  "roleWorkKernel": {
+    "input": "必須条件 8項目、想定年収 420万円、該当者 180人、競合求人 26件、書類通過 22%、辞退率 35%、返信率 9%、訴求候補 3案、採用目標 3名、期限 10週間",
+    "output": "リクルーティングアドバイザーとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "求人要件、応募者市場、選考歩留まりを企業向け採用提案へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "求人要件票",
+      "応募者市場表",
+      "選考歩留まり表",
+      "スカウト文案",
+      "企業提案メモ"
+    ],
+    "metrics": [
+      "必須条件 8項目",
+      "想定年収 420万円",
+      "該当者 180人",
+      "競合求人 26件",
+      "書類通過 22%",
+      "辞退率 35%",
+      "返信率 9%",
+      "訴求候補 3案",
+      "採用目標 3名",
+      "期限 10週間"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "求人要件票、応募者市場表、選考歩留まり表と必須条件 8項目、該当者 180人を読まなければ成立しないため。"
+  }
+}

@@ -1,0 +1,1102 @@
+[
+  {
+    "industry": "IT・通信",
+    "industrySlug": "it",
+    "role": "Webエンジニア/バックエンド",
+    "roleSlug": "web-engineer",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "理系向け",
+      "分析系",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "Webサービスの安定運用と改善を担うバックエンド職。",
+    "scenarioPath": "scenarios/it/web-engineer.json",
+    "plannedScenarioPath": "scenarios/it/web-engineer.json",
+    "status": "implemented",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "IT・通信",
+    "industrySlug": "it",
+    "role": "ITソリューション営業",
+    "roleSlug": "it-solution-sales",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "文系向け",
+      "営業系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "顧客課題をIT提案に落とし込む法人営業。",
+    "scenarioPath": "scenarios/it/it-solution-sales.json",
+    "plannedScenarioPath": "scenarios/it/it-solution-sales.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "IT・通信",
+    "industrySlug": "it",
+    "role": "PdM/プロダクト企画補佐",
+    "roleSlug": "product-planning-assistant",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "分析系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "プロダクト企画の補佐として要件整理と優先順位づけを担う。",
+    "scenarioPath": "scenarios/it/product-planning-assistant.json",
+    "plannedScenarioPath": "scenarios/it/product-planning-assistant.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "IT・通信",
+    "industrySlug": "it",
+    "role": "インフラ/クラウド運用",
+    "roleSlug": "cloud-operations",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "理系向け",
+      "分析系",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "クラウド基盤の安定稼働と障害予防を支える。",
+    "scenarioPath": "scenarios/it/cloud-operations.json",
+    "plannedScenarioPath": "scenarios/it/cloud-operations.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "IT・通信",
+    "industrySlug": "it",
+    "role": "データアナリスト/BI担当",
+    "roleSlug": "data-analyst-bi",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "理系向け",
+      "分析系",
+      "企画系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "業務データを意思決定に変える分析担当。",
+    "scenarioPath": "scenarios/it/data-analyst-bi.json",
+    "plannedScenarioPath": "scenarios/it/data-analyst-bi.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "金融",
+    "industrySlug": "finance",
+    "role": "地方銀行 法人営業/融資担当",
+    "roleSlug": "regional-bank-corporate-loan",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "営業系",
+      "地方就職",
+      "人と関わる"
+    ],
+    "durationMinutes": 12,
+    "difficulty": "high",
+    "shortDescription": "地域企業の資金相談と融資提案を担う銀行法人担当。",
+    "scenarioPath": "scenarios/finance/regional-bank-corporate-loan.json",
+    "plannedScenarioPath": "scenarios/finance/regional-bank-corporate-loan.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "金融",
+    "industrySlug": "finance",
+    "role": "個人資産相談/リテール営業",
+    "roleSlug": "retail-asset-advisor",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "営業系",
+      "人と関わる",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "個人顧客の資産形成を支える相談営業。",
+    "scenarioPath": "scenarios/finance/retail-asset-advisor.json",
+    "plannedScenarioPath": "scenarios/finance/retail-asset-advisor.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "金融",
+    "industrySlug": "finance",
+    "role": "与信審査/リスク管理",
+    "roleSlug": "credit-risk-management",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "高難易度",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "融資判断やリスク水準の見極めを担う。",
+    "scenarioPath": "scenarios/finance/credit-risk-management.json",
+    "plannedScenarioPath": "scenarios/finance/credit-risk-management.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "金融",
+    "industrySlug": "finance",
+    "role": "証券営業/マーケット提案",
+    "roleSlug": "securities-market-advisory",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "営業系",
+      "分析系",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "市況を踏まえて投資提案を行う証券営業。",
+    "scenarioPath": "scenarios/finance/securities-market-advisory.json",
+    "plannedScenarioPath": "scenarios/finance/securities-market-advisory.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "金融",
+    "industrySlug": "finance",
+    "role": "保険営業/ライフプラン提案",
+    "roleSlug": "insurance-life-planning",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "営業系",
+      "人と関わる",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "ライフイベントに沿った保障設計を提案する。",
+    "scenarioPath": "scenarios/finance/insurance-life-planning.json",
+    "plannedScenarioPath": "scenarios/finance/insurance-life-planning.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "メーカー/ものづくり",
+    "industrySlug": "manufacturing",
+    "role": "商品企画",
+    "roleSlug": "product-planning",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "分析系",
+      "人と関わる"
+    ],
+    "durationMinutes": 12,
+    "difficulty": "standard",
+    "shortDescription": "市場ニーズを商品コンセプトに変える企画職。",
+    "scenarioPath": "scenarios/manufacturing/product-planning.json",
+    "plannedScenarioPath": "scenarios/manufacturing/product-planning.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "メーカー/ものづくり",
+    "industrySlug": "manufacturing",
+    "role": "生産管理",
+    "roleSlug": "production-control",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "地方就職",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "生産計画と納期調整を最適化する。",
+    "scenarioPath": "scenarios/manufacturing/production-control.json",
+    "plannedScenarioPath": "scenarios/manufacturing/production-control.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "メーカー/ものづくり",
+    "industrySlug": "manufacturing",
+    "role": "品質保証",
+    "roleSlug": "quality-assurance",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "理系向け",
+      "分析系",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "不具合を未然に防ぎ品質基準を守る。",
+    "scenarioPath": "scenarios/manufacturing/quality-assurance.json",
+    "plannedScenarioPath": "scenarios/manufacturing/quality-assurance.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "メーカー/ものづくり",
+    "industrySlug": "manufacturing",
+    "role": "購買/調達",
+    "roleSlug": "procurement",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "営業系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "必要な部材を適切な条件で確保する調達担当。",
+    "scenarioPath": "scenarios/manufacturing/procurement.json",
+    "plannedScenarioPath": "scenarios/manufacturing/procurement.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "メーカー/ものづくり",
+    "industrySlug": "manufacturing",
+    "role": "技術営業/フィールドサポート",
+    "roleSlug": "technical-field-support",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "営業系",
+      "理系向け",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "技術理解を活かして導入支援まで伴走する。",
+    "scenarioPath": "scenarios/manufacturing/technical-field-support.json",
+    "plannedScenarioPath": "scenarios/manufacturing/technical-field-support.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "商社/卸",
+    "industrySlug": "trading",
+    "role": "法人営業/トレーディング",
+    "roleSlug": "corporate-trading-sales",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "営業系",
+      "人と関わる",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "需給と採算を読みながら商流を動かす法人営業。",
+    "scenarioPath": "scenarios/trading/corporate-trading-sales.json",
+    "plannedScenarioPath": "scenarios/trading/corporate-trading-sales.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "商社/卸",
+    "industrySlug": "trading",
+    "role": "事業開発/新規取引開拓",
+    "roleSlug": "business-development",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "営業系",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "新たな取引機会や事業テーマを探索する。",
+    "scenarioPath": "scenarios/trading/business-development.json",
+    "plannedScenarioPath": "scenarios/trading/business-development.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "商社/卸",
+    "industrySlug": "trading",
+    "role": "貿易実務/輸出入調整",
+    "roleSlug": "trade-operations",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "人と関わる",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "輸出入書類と日程調整を正確に回す。",
+    "scenarioPath": "scenarios/trading/trade-operations.json",
+    "plannedScenarioPath": "scenarios/trading/trade-operations.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "商社/卸",
+    "industrySlug": "trading",
+    "role": "サプライチェーン調整",
+    "roleSlug": "supply-chain-coordination",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "地方就職",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "需給変動に応じて物流と在庫を整える。",
+    "scenarioPath": "scenarios/trading/supply-chain-coordination.json",
+    "plannedScenarioPath": "scenarios/trading/supply-chain-coordination.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "商社/卸",
+    "industrySlug": "trading",
+    "role": "海外営業/市場開拓",
+    "roleSlug": "overseas-market-development",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "営業系",
+      "人と関わる",
+      "企画系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "海外顧客との関係づくりと市場調査を担う。",
+    "scenarioPath": "scenarios/trading/overseas-market-development.json",
+    "plannedScenarioPath": "scenarios/trading/overseas-market-development.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "広告・マーケティング/メディア",
+    "industrySlug": "marketing-media",
+    "role": "Webマーケター",
+    "roleSlug": "web-marketer",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "企画系",
+      "理系向け"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "集客施策を設計し数字で改善するマーケター。",
+    "scenarioPath": "scenarios/marketing-media/web-marketer.json",
+    "plannedScenarioPath": "scenarios/marketing-media/web-marketer.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "広告・マーケティング/メディア",
+    "industrySlug": "marketing-media",
+    "role": "広告プランナー",
+    "roleSlug": "ad-planner",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "営業系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "課題に合わせた広告企画を組み立てる。",
+    "scenarioPath": "scenarios/marketing-media/ad-planner.json",
+    "plannedScenarioPath": "scenarios/marketing-media/ad-planner.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "広告・マーケティング/メディア",
+    "industrySlug": "marketing-media",
+    "role": "運用型広告担当",
+    "roleSlug": "performance-marketing",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "高難易度",
+      "理系向け"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "広告運用を日次で改善する実行担当。",
+    "scenarioPath": "scenarios/marketing-media/performance-marketing.json",
+    "plannedScenarioPath": "scenarios/marketing-media/performance-marketing.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "広告・マーケティング/メディア",
+    "industrySlug": "marketing-media",
+    "role": "コンテンツ企画/編集",
+    "roleSlug": "content-editor",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "人と関わる",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "読み手視点でコンテンツの企画と編集を行う。",
+    "scenarioPath": "scenarios/marketing-media/content-editor.json",
+    "plannedScenarioPath": "scenarios/marketing-media/content-editor.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "広告・マーケティング/メディア",
+    "industrySlug": "marketing-media",
+    "role": "PR/ブランドコミュニケーション",
+    "roleSlug": "pr-brand-communication",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "人と関わる",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "ブランドの見え方を社内外で整える。",
+    "scenarioPath": "scenarios/marketing-media/pr-brand-communication.json",
+    "plannedScenarioPath": "scenarios/marketing-media/pr-brand-communication.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "コンサル/BPO/業務支援",
+    "industrySlug": "consulting-bpo",
+    "role": "業務改善コンサル",
+    "roleSlug": "operations-consultant",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "分析系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "現場課題を整理し改善案を実装までつなぐ。",
+    "scenarioPath": "scenarios/consulting-bpo/operations-consultant.json",
+    "plannedScenarioPath": "scenarios/consulting-bpo/operations-consultant.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "コンサル/BPO/業務支援",
+    "industrySlug": "consulting-bpo",
+    "role": "IT/DXコンサル",
+    "roleSlug": "it-dx-consultant",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "理系向け",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "業務変革をIT導入計画に落とし込む。",
+    "scenarioPath": "scenarios/consulting-bpo/it-dx-consultant.json",
+    "plannedScenarioPath": "scenarios/consulting-bpo/it-dx-consultant.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "コンサル/BPO/業務支援",
+    "industrySlug": "consulting-bpo",
+    "role": "戦略リサーチアナリスト",
+    "roleSlug": "strategy-research-analyst",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "高難易度",
+      "企画系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "情報を構造化して経営判断の材料にする。",
+    "scenarioPath": "scenarios/consulting-bpo/strategy-research-analyst.json",
+    "plannedScenarioPath": "scenarios/consulting-bpo/strategy-research-analyst.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "コンサル/BPO/業務支援",
+    "industrySlug": "consulting-bpo",
+    "role": "PMO/プロジェクト推進",
+    "roleSlug": "pmo-project-drive",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "人と関わる",
+      "分析系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "プロジェクトの進行管理と課題整理を担う。",
+    "scenarioPath": "scenarios/consulting-bpo/pmo-project-drive.json",
+    "plannedScenarioPath": "scenarios/consulting-bpo/pmo-project-drive.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "コンサル/BPO/業務支援",
+    "industrySlug": "consulting-bpo",
+    "role": "人事組織コンサル",
+    "roleSlug": "hr-organization-consultant",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "人と関わる",
+      "企画系",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "制度設計と現場浸透を支援する組織コンサル。",
+    "scenarioPath": "scenarios/consulting-bpo/hr-organization-consultant.json",
+    "plannedScenarioPath": "scenarios/consulting-bpo/hr-organization-consultant.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "人材/HR",
+    "industrySlug": "hr",
+    "role": "キャリアアドバイザー",
+    "roleSlug": "career-advisor",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "人と関わる",
+      "社会貢献",
+      "営業系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "学生や求職者の進路整理を支える相談役。",
+    "scenarioPath": "scenarios/hr/career-advisor.json",
+    "plannedScenarioPath": "scenarios/hr/career-advisor.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "人材/HR",
+    "industrySlug": "hr",
+    "role": "リクルーティングアドバイザー",
+    "roleSlug": "recruiting-advisor",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "営業系",
+      "人と関わる",
+      "分析系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "企業の採用課題に向き合う法人側アドバイザー。",
+    "scenarioPath": "scenarios/hr/recruiting-advisor.json",
+    "plannedScenarioPath": "scenarios/hr/recruiting-advisor.json",
+    "status": "playable",
+    "roleCategory": "industry_specific_sales"
+  },
+  {
+    "industry": "人材/HR",
+    "industrySlug": "hr",
+    "role": "採用コンサルタント",
+    "roleSlug": "recruitment-consultant",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "人と関わる",
+      "分析系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "採用プロセス全体の改善を提案する。",
+    "scenarioPath": "scenarios/hr/recruitment-consultant.json",
+    "plannedScenarioPath": "scenarios/hr/recruitment-consultant.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "人材/HR",
+    "industrySlug": "hr",
+    "role": "研修/組織開発企画",
+    "roleSlug": "training-organization-development",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "社会貢献",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "研修設計を通じて組織成長を支える。",
+    "scenarioPath": "scenarios/hr/training-organization-development.json",
+    "plannedScenarioPath": "scenarios/hr/training-organization-development.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "人材/HR",
+    "industrySlug": "hr",
+    "role": "求人メディア企画",
+    "roleSlug": "job-media-planning",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "分析系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "求人メディアの商品改善と企画運営を行う。",
+    "scenarioPath": "scenarios/hr/job-media-planning.json",
+    "plannedScenarioPath": "scenarios/hr/job-media-planning.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "自治体/公共/インフラ",
+    "industrySlug": "public-infra",
+    "role": "地域政策担当",
+    "roleSlug": "regional-policy-planning",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "地方就職",
+      "社会貢献",
+      "企画系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "地域課題を施策案にまとめて関係者調整を行う。",
+    "scenarioPath": "scenarios/public-infra/regional-policy-planning.json",
+    "plannedScenarioPath": "scenarios/public-infra/regional-policy-planning.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "自治体/公共/インフラ",
+    "industrySlug": "public-infra",
+    "role": "観光振興担当",
+    "roleSlug": "tourism-promotion",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "地方就職",
+      "企画系",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "地域観光の魅力づくりと事業調整を担う。",
+    "scenarioPath": "scenarios/public-infra/tourism-promotion.json",
+    "plannedScenarioPath": "scenarios/public-infra/tourism-promotion.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "自治体/公共/インフラ",
+    "industrySlug": "public-infra",
+    "role": "防災/危機管理担当",
+    "roleSlug": "disaster-crisis-management",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "社会貢献",
+      "高難易度",
+      "分析系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "平時の備えと緊急時対応計画を整える。",
+    "scenarioPath": "scenarios/public-infra/disaster-crisis-management.json",
+    "plannedScenarioPath": "scenarios/public-infra/disaster-crisis-management.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "自治体/公共/インフラ",
+    "industrySlug": "public-infra",
+    "role": "都市計画/公共事業調整",
+    "roleSlug": "urban-planning-coordination",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "地方就職",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "公共事業の調整と合意形成を進める。",
+    "scenarioPath": "scenarios/public-infra/urban-planning-coordination.json",
+    "plannedScenarioPath": "scenarios/public-infra/urban-planning-coordination.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "自治体/公共/インフラ",
+    "industrySlug": "public-infra",
+    "role": "公営インフラ運営企画",
+    "roleSlug": "public-infrastructure-operations",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "社会貢献",
+      "分析系",
+      "地方就職"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "公共インフラの運営改善と継続性を守る。",
+    "scenarioPath": "scenarios/public-infra/public-infrastructure-operations.json",
+    "plannedScenarioPath": "scenarios/public-infra/public-infrastructure-operations.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "小売/流通/EC",
+    "industrySlug": "retail-ec",
+    "role": "店舗運営/店長候補",
+    "roleSlug": "store-operations",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "人と関わる",
+      "地方就職",
+      "営業系"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "店舗現場を回し売上と体験を両立する。",
+    "scenarioPath": "scenarios/retail-ec/store-operations.json",
+    "plannedScenarioPath": "scenarios/retail-ec/store-operations.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "小売/流通/EC",
+    "industrySlug": "retail-ec",
+    "role": "MD/バイヤー",
+    "roleSlug": "md-buyer",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "分析系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "商品構成と仕入れを決めるマーチャンダイザー。",
+    "scenarioPath": "scenarios/retail-ec/md-buyer.json",
+    "plannedScenarioPath": "scenarios/retail-ec/md-buyer.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "小売/流通/EC",
+    "industrySlug": "retail-ec",
+    "role": "EC運営",
+    "roleSlug": "ec-operations",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "企画系",
+      "理系向け"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "ECサイトの売場改善と運営を担う。",
+    "scenarioPath": "scenarios/retail-ec/ec-operations.json",
+    "plannedScenarioPath": "scenarios/retail-ec/ec-operations.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "小売/流通/EC",
+    "industrySlug": "retail-ec",
+    "role": "物流/需給管理",
+    "roleSlug": "logistics-demand-planning",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "分析系",
+      "高難易度",
+      "地方就職"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "欠品と過剰在庫を避ける需給調整担当。",
+    "scenarioPath": "scenarios/retail-ec/logistics-demand-planning.json",
+    "plannedScenarioPath": "scenarios/retail-ec/logistics-demand-planning.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "小売/流通/EC",
+    "industrySlug": "retail-ec",
+    "role": "販売促進/CRM",
+    "roleSlug": "crm-promotion",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "分析系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "既存顧客の継続利用を促す販促企画担当。",
+    "scenarioPath": "scenarios/retail-ec/crm-promotion.json",
+    "plannedScenarioPath": "scenarios/retail-ec/crm-promotion.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "観光/ホテル/交通",
+    "industrySlug": "tourism-transport",
+    "role": "ホテル運営/フロントマネジメント",
+    "roleSlug": "hotel-front-management",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "人と関わる",
+      "地方就職",
+      "社会貢献"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "宿泊体験と現場運営を両立するホテル運営職。",
+    "scenarioPath": "scenarios/tourism-transport/hotel-front-management.json",
+    "plannedScenarioPath": "scenarios/tourism-transport/hotel-front-management.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "観光/ホテル/交通",
+    "industrySlug": "tourism-transport",
+    "role": "旅行商品企画",
+    "roleSlug": "travel-product-planning",
+    "representative": true,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "地方就職",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "旅行商品の造成と販売計画をつくる。",
+    "scenarioPath": "scenarios/tourism-transport/travel-product-planning.json",
+    "plannedScenarioPath": "scenarios/tourism-transport/travel-product-planning.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "観光/ホテル/交通",
+    "industrySlug": "tourism-transport",
+    "role": "観光施設運営",
+    "roleSlug": "tourism-facility-operations",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "社会貢献",
+      "人と関わる",
+      "地方就職"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "観光施設の満足度と安全運営を両立する。",
+    "scenarioPath": "scenarios/tourism-transport/tourism-facility-operations.json",
+    "plannedScenarioPath": "scenarios/tourism-transport/tourism-facility-operations.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "観光/ホテル/交通",
+    "industrySlug": "tourism-transport",
+    "role": "インバウンドマーケティング",
+    "roleSlug": "inbound-marketing",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "企画系",
+      "分析系",
+      "人と関わる"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "standard",
+    "shortDescription": "訪日客向け施策を企画し発信する。",
+    "scenarioPath": "scenarios/tourism-transport/inbound-marketing.json",
+    "plannedScenarioPath": "scenarios/tourism-transport/inbound-marketing.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  },
+  {
+    "industry": "観光/ホテル/交通",
+    "industrySlug": "tourism-transport",
+    "role": "交通オペレーション企画",
+    "roleSlug": "transport-operations-planning",
+    "representative": false,
+    "modes": [
+      "immersive"
+    ],
+    "tags": [
+      "社会貢献",
+      "分析系",
+      "高難易度"
+    ],
+    "durationMinutes": 18,
+    "difficulty": "high",
+    "shortDescription": "安全性と定時性を踏まえて運行企画を立てる。",
+    "scenarioPath": "scenarios/tourism-transport/transport-operations-planning.json",
+    "plannedScenarioPath": "scenarios/tourism-transport/transport-operations-planning.json",
+    "status": "playable",
+    "roleCategory": "industry_specific"
+  }
+]

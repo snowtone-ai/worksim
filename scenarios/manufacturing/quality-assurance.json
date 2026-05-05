@@ -1,0 +1,2190 @@
+{
+  "id": "manufacturing/quality-assurance",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "メーカー/ものづくり",
+  "industrySlug": "manufacturing",
+  "role": "品質保証",
+  "roleSlug": "quality-assurance",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for メーカー/ものづくり 品質保証.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "manufacturing",
+      "quality-assurance"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "検査記録"
+    },
+    {
+      "time": "10:40",
+      "label": "不具合写真台帳"
+    },
+    {
+      "time": "12:20",
+      "label": "工程チェック表"
+    },
+    {
+      "time": "14:15",
+      "label": "是正処置案"
+    },
+    {
+      "time": "16:35",
+      "label": "出荷判定票"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "検査記録"
+    },
+    {
+      "time": "10:40",
+      "label": "不具合写真台帳"
+    },
+    {
+      "time": "12:20",
+      "label": "工程チェック表"
+    },
+    {
+      "time": "14:15",
+      "label": "是正処置案"
+    },
+    {
+      "time": "16:35",
+      "label": "出荷判定票"
+    }
+  ],
+  "sceneList": [
+    "quality-assurance-01",
+    "quality-assurance-02",
+    "quality-assurance-03",
+    "quality-assurance-04",
+    "quality-assurance-05"
+  ],
+  "meta": {
+    "title": "品質保証",
+    "industry": "メーカー/ものづくり",
+    "role": "品質保証",
+    "duration_minutes": 18,
+    "description": "不具合情報を出荷可否と再発防止へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "quality-assurance-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "検査記録",
+      "openingHook": "09:10。不良率 2.4%に基準 1.0%とundefinedが並んでいる。",
+      "context": "品質保証として不良率 2.4%を確認する。基準 1.0%、undefinedが今日の判断材料になる。",
+      "content": "不具合情報を出荷可否と再発防止へ変換するため、不良率 2.4%を読んで次の作業判断を残す。",
+      "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+      "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は不良率 2.4%である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "基準 1.0%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "基準 1.0%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "quality-assurance-不良率 2.4%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は傷 18件で副作用を確認する。",
+      "npcDialogue": "先輩:「不良率 2.4%を読まずに進めると、品質保証の判断ではなくなる」",
+      "workMaterial": "検査記録\n- 不良率 2.4%\n- 基準 1.0%\n- 判断対象: 検査記録",
+      "decisionPrompt": "quality-assurance-不良率 2.4%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "基準 1.0%を重く見て、当日中に前へ進める",
+          "text": "基準 1.0%を重く見て、当日中に前へ進める。材料は不良率 2.4%、基準 1.0%、undefined。",
+          "immediateFeedback": "不良率 2.4%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 2,
+            "quality_assurance_risk": -1,
+            "quality_assurance_speed": 2,
+            "quality_assurance_value": -1,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、不良率 2.4%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "不良率 2.4%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は基準 1.0%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "不良率 2.4%の基準 1.0%とundefinedを突き合わせ、条件付きで進める",
+          "text": "不良率 2.4%の基準 1.0%とundefinedを突き合わせ、条件付きで進める。材料は不良率 2.4%、基準 1.0%、undefined。",
+          "immediateFeedback": "不良率 2.4%に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": 1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、不良率 2.4%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "不良率 2.4%の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は基準 1.0%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は不良率 2.4%、基準 1.0%、undefined。",
+          "immediateFeedback": "不良率 2.4%に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": -1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": -1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": -1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、不良率 2.4%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "不良率 2.4%の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は基準 1.0%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "quality-assurance-不良率 2.4%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "quality-assurance-不良率 2.4%判断",
+        "roleSpecificMaterials": [
+          "検査記録",
+          "判断対象: 検査記録"
+        ],
+        "roleSpecificMetrics": [
+          "不良率 2.4%",
+          "基準 1.0%"
+        ],
+        "roleSpecificFailureRisk": "検査記録を読まず、不良率 2.4%か基準 1.0%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "不良率 2.4%と基準 1.0%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "検査記録、不良率 2.4%、基準 1.0%を判断の主役にしている。",
+        "kernelConnection": "検査記録をquality-assurance-不良率 2.4%判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "quality-assurance-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "不具合写真台帳",
+      "openingHook": "10:40。傷 18件にロット A17とundefinedが並んでいる。",
+      "context": "品質保証として傷 18件を確認する。ロット A17、undefinedが今日の判断材料になる。",
+      "content": "不具合情報を出荷可否と再発防止へ変換するため、傷 18件を読んで次の作業判断を残す。",
+      "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+      "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は傷 18件である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "ロット A17の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "ロット A17を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "quality-assurance-傷 18件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は温度 78度で副作用を確認する。",
+      "npcDialogue": "先輩:「傷 18件を読まずに進めると、品質保証の判断ではなくなる」",
+      "workMaterial": "不具合写真台帳\n- 傷 18件\n- ロット A17\n- 判断対象: 不具合写真台帳",
+      "decisionPrompt": "quality-assurance-傷 18件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "ロット A17を重く見て、当日中に前へ進める",
+          "text": "ロット A17を重く見て、当日中に前へ進める。材料は傷 18件、ロット A17、undefined。",
+          "immediateFeedback": "傷 18件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 2,
+            "quality_assurance_risk": -1,
+            "quality_assurance_speed": 2,
+            "quality_assurance_value": -1,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、傷 18件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "傷 18件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はロット A17の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "傷 18件のロット A17とundefinedを突き合わせ、条件付きで進める",
+          "text": "傷 18件のロット A17とundefinedを突き合わせ、条件付きで進める。材料は傷 18件、ロット A17、undefined。",
+          "immediateFeedback": "傷 18件に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": 1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、傷 18件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "傷 18件の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はロット A17の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は傷 18件、ロット A17、undefined。",
+          "immediateFeedback": "傷 18件に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": -1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": -1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": -1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、傷 18件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "傷 18件の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次はロット A17の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "quality-assurance-傷 18件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "quality-assurance-傷 18件判断",
+        "roleSpecificMaterials": [
+          "不具合写真台帳",
+          "判断対象: 不具合写真台帳"
+        ],
+        "roleSpecificMetrics": [
+          "傷 18件",
+          "ロット A17"
+        ],
+        "roleSpecificFailureRisk": "不具合写真台帳を読まず、傷 18件かロット A17のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "傷 18件とロット A17を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "不具合写真台帳、傷 18件、ロット A17を判断の主役にしている。",
+        "kernelConnection": "不具合写真台帳をquality-assurance-傷 18件判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "quality-assurance-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "工程チェック表",
+      "openingHook": "12:20。温度 78度に許容 72度とundefinedが並んでいる。",
+      "context": "品質保証として温度 78度を確認する。許容 72度、undefinedが今日の判断材料になる。",
+      "content": "不具合情報を出荷可否と再発防止へ変換するため、温度 78度を読んで次の作業判断を残す。",
+      "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+      "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は温度 78度である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "許容 72度の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "許容 72度を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "quality-assurance-温度 78度判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は追加検査 240個で副作用を確認する。",
+      "npcDialogue": "先輩:「温度 78度を読まずに進めると、品質保証の判断ではなくなる」",
+      "workMaterial": "工程チェック表\n- 温度 78度\n- 許容 72度\n- 判断対象: 工程チェック表",
+      "decisionPrompt": "quality-assurance-温度 78度判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "許容 72度を重く見て、当日中に前へ進める",
+          "text": "許容 72度を重く見て、当日中に前へ進める。材料は温度 78度、許容 72度、undefined。",
+          "immediateFeedback": "温度 78度に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 2,
+            "quality_assurance_risk": -1,
+            "quality_assurance_speed": 2,
+            "quality_assurance_value": -1,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、温度 78度と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "温度 78度の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は許容 72度の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "温度 78度の許容 72度とundefinedを突き合わせ、条件付きで進める",
+          "text": "温度 78度の許容 72度とundefinedを突き合わせ、条件付きで進める。材料は温度 78度、許容 72度、undefined。",
+          "immediateFeedback": "温度 78度に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": 1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、温度 78度と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "温度 78度の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は許容 72度の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は温度 78度、許容 72度、undefined。",
+          "immediateFeedback": "温度 78度に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": -1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": -1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": -1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、温度 78度と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "温度 78度の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は許容 72度の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "quality-assurance-温度 78度判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "quality-assurance-温度 78度判断",
+        "roleSpecificMaterials": [
+          "工程チェック表",
+          "判断対象: 工程チェック表"
+        ],
+        "roleSpecificMetrics": [
+          "温度 78度",
+          "許容 72度"
+        ],
+        "roleSpecificFailureRisk": "工程チェック表を読まず、温度 78度か許容 72度のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "温度 78度と許容 72度を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "工程チェック表、温度 78度、許容 72度を判断の主役にしている。",
+        "kernelConnection": "工程チェック表をquality-assurance-温度 78度判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "quality-assurance-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "是正処置案",
+      "openingHook": "14:15。追加検査 240個に工数 6時間とundefinedが並んでいる。",
+      "context": "品質保証として追加検査 240個を確認する。工数 6時間、undefinedが今日の判断材料になる。",
+      "content": "不具合情報を出荷可否と再発防止へ変換するため、追加検査 240個を読んで次の作業判断を残す。",
+      "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+      "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は追加検査 240個である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "工数 6時間の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "工数 6時間を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "quality-assurance-追加検査 240個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は保留 1,200個で副作用を確認する。",
+      "npcDialogue": "先輩:「追加検査 240個を読まずに進めると、品質保証の判断ではなくなる」",
+      "workMaterial": "是正処置案\n- 追加検査 240個\n- 工数 6時間\n- 判断対象: 是正処置案",
+      "decisionPrompt": "quality-assurance-追加検査 240個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "工数 6時間を重く見て、当日中に前へ進める",
+          "text": "工数 6時間を重く見て、当日中に前へ進める。材料は追加検査 240個、工数 6時間、undefined。",
+          "immediateFeedback": "追加検査 240個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 2,
+            "quality_assurance_risk": -1,
+            "quality_assurance_speed": 2,
+            "quality_assurance_value": -1,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、追加検査 240個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "追加検査 240個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は工数 6時間の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "追加検査 240個の工数 6時間とundefinedを突き合わせ、条件付きで進める",
+          "text": "追加検査 240個の工数 6時間とundefinedを突き合わせ、条件付きで進める。材料は追加検査 240個、工数 6時間、undefined。",
+          "immediateFeedback": "追加検査 240個に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": 1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、追加検査 240個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "追加検査 240個の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は工数 6時間の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は追加検査 240個、工数 6時間、undefined。",
+          "immediateFeedback": "追加検査 240個に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": -1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": -1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": -1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、追加検査 240個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "追加検査 240個の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は工数 6時間の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "quality-assurance-追加検査 240個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "quality-assurance-追加検査 240個判断",
+        "roleSpecificMaterials": [
+          "是正処置案",
+          "判断対象: 是正処置案"
+        ],
+        "roleSpecificMetrics": [
+          "追加検査 240個",
+          "工数 6時間"
+        ],
+        "roleSpecificFailureRisk": "是正処置案を読まず、追加検査 240個か工数 6時間のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "追加検査 240個と工数 6時間を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "是正処置案、追加検査 240個、工数 6時間を判断の主役にしている。",
+        "kernelConnection": "是正処置案をquality-assurance-追加検査 240個判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "quality-assurance-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "出荷判定票",
+      "openingHook": "16:35。保留 1,200個に回答期限 17:00とundefinedが並んでいる。",
+      "context": "品質保証として保留 1,200個を確認する。回答期限 17:00、undefinedが今日の判断材料になる。",
+      "content": "不具合情報を出荷可否と再発防止へ変換するため、保留 1,200個を読んで次の作業判断を残す。",
+      "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+      "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は保留 1,200個である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "回答期限 17:00の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "回答期限 17:00を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "quality-assurance-保留 1,200個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「保留 1,200個を読まずに進めると、品質保証の判断ではなくなる」",
+      "workMaterial": "出荷判定票\n- 保留 1,200個\n- 回答期限 17:00\n- 判断対象: 出荷判定票",
+      "decisionPrompt": "quality-assurance-保留 1,200個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "回答期限 17:00を重く見て、当日中に前へ進める",
+          "text": "回答期限 17:00を重く見て、当日中に前へ進める。材料は保留 1,200個、回答期限 17:00、undefined。",
+          "immediateFeedback": "保留 1,200個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 2,
+            "quality_assurance_risk": -1,
+            "quality_assurance_speed": 2,
+            "quality_assurance_value": -1,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、保留 1,200個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保留 1,200個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は回答期限 17:00の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "保留 1,200個の回答期限 17:00とundefinedを突き合わせ、条件付きで進める",
+          "text": "保留 1,200個の回答期限 17:00とundefinedを突き合わせ、条件付きで進める。材料は保留 1,200個、回答期限 17:00、undefined。",
+          "immediateFeedback": "保留 1,200個に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": 1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": 1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": 1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、保留 1,200個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保留 1,200個の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は回答期限 17:00の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は保留 1,200個、回答期限 17:00、undefined。",
+          "immediateFeedback": "保留 1,200個に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "quality_assurance_evidence": -1,
+            "quality_assurance_risk": 2,
+            "quality_assurance_speed": -1,
+            "quality_assurance_value": 2,
+            "quality_assurance_feasibility": -1
+          },
+          "misconceptionEffect": "品質保証は印象ではなく、保留 1,200個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保留 1,200個の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は回答期限 17:00の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "quality-assurance-保留 1,200個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "quality-assurance-保留 1,200個判断",
+        "roleSpecificMaterials": [
+          "出荷判定票",
+          "判断対象: 出荷判定票"
+        ],
+        "roleSpecificMetrics": [
+          "保留 1,200個",
+          "回答期限 17:00"
+        ],
+        "roleSpecificFailureRisk": "出荷判定票を読まず、保留 1,200個か回答期限 17:00のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "保留 1,200個と回答期限 17:00を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "出荷判定票、保留 1,200個、回答期限 17:00を判断の主役にしている。",
+        "kernelConnection": "出荷判定票をquality-assurance-保留 1,200個判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "quality-assurance-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "検査記録",
+          "openingHook": "09:10。不良率 2.4%に基準 1.0%とundefinedが並んでいる。",
+          "context": "品質保証として不良率 2.4%を確認する。基準 1.0%、undefinedが今日の判断材料になる。",
+          "content": "不具合情報を出荷可否と再発防止へ変換するため、不良率 2.4%を読んで次の作業判断を残す。",
+          "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+          "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は不良率 2.4%である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "基準 1.0%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "基準 1.0%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "quality-assurance-不良率 2.4%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は傷 18件で副作用を確認する。",
+          "npcDialogue": "先輩:「不良率 2.4%を読まずに進めると、品質保証の判断ではなくなる」",
+          "workMaterial": "検査記録\n- 不良率 2.4%\n- 基準 1.0%\n- 判断対象: 検査記録",
+          "decisionPrompt": "quality-assurance-不良率 2.4%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "基準 1.0%を重く見て、当日中に前へ進める",
+              "text": "基準 1.0%を重く見て、当日中に前へ進める。材料は不良率 2.4%、基準 1.0%、undefined。",
+              "immediateFeedback": "不良率 2.4%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 2,
+                "quality_assurance_risk": -1,
+                "quality_assurance_speed": 2,
+                "quality_assurance_value": -1,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、不良率 2.4%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "不良率 2.4%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は基準 1.0%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "不良率 2.4%の基準 1.0%とundefinedを突き合わせ、条件付きで進める",
+              "text": "不良率 2.4%の基準 1.0%とundefinedを突き合わせ、条件付きで進める。材料は不良率 2.4%、基準 1.0%、undefined。",
+              "immediateFeedback": "不良率 2.4%に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": 1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、不良率 2.4%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "不良率 2.4%の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は基準 1.0%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は不良率 2.4%、基準 1.0%、undefined。",
+              "immediateFeedback": "不良率 2.4%に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": -1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": -1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": -1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、不良率 2.4%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "不良率 2.4%の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は基準 1.0%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "quality-assurance-不良率 2.4%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "quality-assurance-不良率 2.4%判断",
+            "roleSpecificMaterials": [
+              "検査記録",
+              "判断対象: 検査記録"
+            ],
+            "roleSpecificMetrics": [
+              "不良率 2.4%",
+              "基準 1.0%"
+            ],
+            "roleSpecificFailureRisk": "検査記録を読まず、不良率 2.4%か基準 1.0%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "不良率 2.4%と基準 1.0%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "検査記録、不良率 2.4%、基準 1.0%を判断の主役にしている。",
+            "kernelConnection": "検査記録をquality-assurance-不良率 2.4%判断へ接続する。"
+          }
+        },
+        {
+          "id": "quality-assurance-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "不具合写真台帳",
+          "openingHook": "10:40。傷 18件にロット A17とundefinedが並んでいる。",
+          "context": "品質保証として傷 18件を確認する。ロット A17、undefinedが今日の判断材料になる。",
+          "content": "不具合情報を出荷可否と再発防止へ変換するため、傷 18件を読んで次の作業判断を残す。",
+          "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+          "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は傷 18件である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "ロット A17の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "ロット A17を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "quality-assurance-傷 18件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は温度 78度で副作用を確認する。",
+          "npcDialogue": "先輩:「傷 18件を読まずに進めると、品質保証の判断ではなくなる」",
+          "workMaterial": "不具合写真台帳\n- 傷 18件\n- ロット A17\n- 判断対象: 不具合写真台帳",
+          "decisionPrompt": "quality-assurance-傷 18件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "ロット A17を重く見て、当日中に前へ進める",
+              "text": "ロット A17を重く見て、当日中に前へ進める。材料は傷 18件、ロット A17、undefined。",
+              "immediateFeedback": "傷 18件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 2,
+                "quality_assurance_risk": -1,
+                "quality_assurance_speed": 2,
+                "quality_assurance_value": -1,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、傷 18件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "傷 18件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はロット A17の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "傷 18件のロット A17とundefinedを突き合わせ、条件付きで進める",
+              "text": "傷 18件のロット A17とundefinedを突き合わせ、条件付きで進める。材料は傷 18件、ロット A17、undefined。",
+              "immediateFeedback": "傷 18件に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": 1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、傷 18件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "傷 18件の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はロット A17の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は傷 18件、ロット A17、undefined。",
+              "immediateFeedback": "傷 18件に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": -1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": -1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": -1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、傷 18件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "傷 18件の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次はロット A17の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "quality-assurance-傷 18件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "quality-assurance-傷 18件判断",
+            "roleSpecificMaterials": [
+              "不具合写真台帳",
+              "判断対象: 不具合写真台帳"
+            ],
+            "roleSpecificMetrics": [
+              "傷 18件",
+              "ロット A17"
+            ],
+            "roleSpecificFailureRisk": "不具合写真台帳を読まず、傷 18件かロット A17のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "傷 18件とロット A17を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "不具合写真台帳、傷 18件、ロット A17を判断の主役にしている。",
+            "kernelConnection": "不具合写真台帳をquality-assurance-傷 18件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "quality-assurance-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "工程チェック表",
+          "openingHook": "12:20。温度 78度に許容 72度とundefinedが並んでいる。",
+          "context": "品質保証として温度 78度を確認する。許容 72度、undefinedが今日の判断材料になる。",
+          "content": "不具合情報を出荷可否と再発防止へ変換するため、温度 78度を読んで次の作業判断を残す。",
+          "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+          "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は温度 78度である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "許容 72度の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "許容 72度を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "quality-assurance-温度 78度判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は追加検査 240個で副作用を確認する。",
+          "npcDialogue": "先輩:「温度 78度を読まずに進めると、品質保証の判断ではなくなる」",
+          "workMaterial": "工程チェック表\n- 温度 78度\n- 許容 72度\n- 判断対象: 工程チェック表",
+          "decisionPrompt": "quality-assurance-温度 78度判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "許容 72度を重く見て、当日中に前へ進める",
+              "text": "許容 72度を重く見て、当日中に前へ進める。材料は温度 78度、許容 72度、undefined。",
+              "immediateFeedback": "温度 78度に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 2,
+                "quality_assurance_risk": -1,
+                "quality_assurance_speed": 2,
+                "quality_assurance_value": -1,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、温度 78度と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "温度 78度の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は許容 72度の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "温度 78度の許容 72度とundefinedを突き合わせ、条件付きで進める",
+              "text": "温度 78度の許容 72度とundefinedを突き合わせ、条件付きで進める。材料は温度 78度、許容 72度、undefined。",
+              "immediateFeedback": "温度 78度に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": 1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、温度 78度と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "温度 78度の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は許容 72度の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は温度 78度、許容 72度、undefined。",
+              "immediateFeedback": "温度 78度に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": -1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": -1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": -1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、温度 78度と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "温度 78度の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は許容 72度の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "quality-assurance-温度 78度判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "quality-assurance-温度 78度判断",
+            "roleSpecificMaterials": [
+              "工程チェック表",
+              "判断対象: 工程チェック表"
+            ],
+            "roleSpecificMetrics": [
+              "温度 78度",
+              "許容 72度"
+            ],
+            "roleSpecificFailureRisk": "工程チェック表を読まず、温度 78度か許容 72度のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "温度 78度と許容 72度を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "工程チェック表、温度 78度、許容 72度を判断の主役にしている。",
+            "kernelConnection": "工程チェック表をquality-assurance-温度 78度判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "quality-assurance-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "是正処置案",
+          "openingHook": "14:15。追加検査 240個に工数 6時間とundefinedが並んでいる。",
+          "context": "品質保証として追加検査 240個を確認する。工数 6時間、undefinedが今日の判断材料になる。",
+          "content": "不具合情報を出荷可否と再発防止へ変換するため、追加検査 240個を読んで次の作業判断を残す。",
+          "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+          "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は追加検査 240個である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "工数 6時間の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "工数 6時間を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "quality-assurance-追加検査 240個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は保留 1,200個で副作用を確認する。",
+          "npcDialogue": "先輩:「追加検査 240個を読まずに進めると、品質保証の判断ではなくなる」",
+          "workMaterial": "是正処置案\n- 追加検査 240個\n- 工数 6時間\n- 判断対象: 是正処置案",
+          "decisionPrompt": "quality-assurance-追加検査 240個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "工数 6時間を重く見て、当日中に前へ進める",
+              "text": "工数 6時間を重く見て、当日中に前へ進める。材料は追加検査 240個、工数 6時間、undefined。",
+              "immediateFeedback": "追加検査 240個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 2,
+                "quality_assurance_risk": -1,
+                "quality_assurance_speed": 2,
+                "quality_assurance_value": -1,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、追加検査 240個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "追加検査 240個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は工数 6時間の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "追加検査 240個の工数 6時間とundefinedを突き合わせ、条件付きで進める",
+              "text": "追加検査 240個の工数 6時間とundefinedを突き合わせ、条件付きで進める。材料は追加検査 240個、工数 6時間、undefined。",
+              "immediateFeedback": "追加検査 240個に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": 1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、追加検査 240個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "追加検査 240個の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は工数 6時間の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は追加検査 240個、工数 6時間、undefined。",
+              "immediateFeedback": "追加検査 240個に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": -1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": -1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": -1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、追加検査 240個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "追加検査 240個の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は工数 6時間の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "quality-assurance-追加検査 240個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "quality-assurance-追加検査 240個判断",
+            "roleSpecificMaterials": [
+              "是正処置案",
+              "判断対象: 是正処置案"
+            ],
+            "roleSpecificMetrics": [
+              "追加検査 240個",
+              "工数 6時間"
+            ],
+            "roleSpecificFailureRisk": "是正処置案を読まず、追加検査 240個か工数 6時間のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "追加検査 240個と工数 6時間を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "是正処置案、追加検査 240個、工数 6時間を判断の主役にしている。",
+            "kernelConnection": "是正処置案をquality-assurance-追加検査 240個判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "quality-assurance-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "出荷判定票",
+          "openingHook": "16:35。保留 1,200個に回答期限 17:00とundefinedが並んでいる。",
+          "context": "品質保証として保留 1,200個を確認する。回答期限 17:00、undefinedが今日の判断材料になる。",
+          "content": "不具合情報を出荷可否と再発防止へ変換するため、保留 1,200個を読んで次の作業判断を残す。",
+          "roleSpecificContext": "品質保証は不具合情報を出荷可否と再発防止へ変換する仕事。",
+          "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は保留 1,200個である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "回答期限 17:00の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "回答期限 17:00を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "quality-assurance-保留 1,200個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「保留 1,200個を読まずに進めると、品質保証の判断ではなくなる」",
+          "workMaterial": "出荷判定票\n- 保留 1,200個\n- 回答期限 17:00\n- 判断対象: 出荷判定票",
+          "decisionPrompt": "quality-assurance-保留 1,200個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "回答期限 17:00を重く見て、当日中に前へ進める",
+              "text": "回答期限 17:00を重く見て、当日中に前へ進める。材料は保留 1,200個、回答期限 17:00、undefined。",
+              "immediateFeedback": "保留 1,200個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 2,
+                "quality_assurance_risk": -1,
+                "quality_assurance_speed": 2,
+                "quality_assurance_value": -1,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、保留 1,200個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保留 1,200個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は回答期限 17:00の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "保留 1,200個の回答期限 17:00とundefinedを突き合わせ、条件付きで進める",
+              "text": "保留 1,200個の回答期限 17:00とundefinedを突き合わせ、条件付きで進める。材料は保留 1,200個、回答期限 17:00、undefined。",
+              "immediateFeedback": "保留 1,200個に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": 1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": 1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": 1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、保留 1,200個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保留 1,200個の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は回答期限 17:00の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は保留 1,200個、回答期限 17:00、undefined。",
+              "immediateFeedback": "保留 1,200個に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "品質保証で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "quality_assurance_evidence": -1,
+                "quality_assurance_risk": 2,
+                "quality_assurance_speed": -1,
+                "quality_assurance_value": 2,
+                "quality_assurance_feasibility": -1
+              },
+              "misconceptionEffect": "品質保証は印象ではなく、保留 1,200個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保留 1,200個の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は回答期限 17:00の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "quality-assurance-保留 1,200個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "quality-assurance-保留 1,200個判断",
+            "roleSpecificMaterials": [
+              "出荷判定票",
+              "判断対象: 出荷判定票"
+            ],
+            "roleSpecificMetrics": [
+              "保留 1,200個",
+              "回答期限 17:00"
+            ],
+            "roleSpecificFailureRisk": "出荷判定票を読まず、保留 1,200個か回答期限 17:00のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "保留 1,200個と回答期限 17:00を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "出荷判定票、保留 1,200個、回答期限 17:00を判断の主役にしている。",
+            "kernelConnection": "出荷判定票をquality-assurance-保留 1,200個判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch2-1",
+      "title": "品質保証の材料翻訳型",
+      "strengths": [
+        "品質保証の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "quality_assurance_evidence",
+        "quality_assurance_risk"
+      ],
+      "valuedMeters": [
+        "quality_assurance_evidence"
+      ],
+      "sacrificedMeters": [
+        "quality_assurance_speed"
+      ],
+      "roleRealityReveal": "品質保証は、不具合情報を出荷可否と再発防止へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "品質保証の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-2",
+      "title": "品質保証の推進型",
+      "strengths": [
+        "品質保証の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "quality_assurance_risk",
+        "quality_assurance_speed"
+      ],
+      "valuedMeters": [
+        "quality_assurance_risk"
+      ],
+      "sacrificedMeters": [
+        "quality_assurance_value"
+      ],
+      "roleRealityReveal": "品質保証は、不具合情報を出荷可否と再発防止へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "品質保証の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-3",
+      "title": "品質保証の安全設計型",
+      "strengths": [
+        "品質保証の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "quality_assurance_speed",
+        "quality_assurance_value"
+      ],
+      "valuedMeters": [
+        "quality_assurance_speed"
+      ],
+      "sacrificedMeters": [
+        "quality_assurance_feasibility"
+      ],
+      "roleRealityReveal": "品質保証は、不具合情報を出荷可否と再発防止へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "品質保証の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "品質保証は、不具合情報を出荷可否と再発防止へ変換する仕事。",
+    "misconceptionCorrection": "見た目の対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "品質保証として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "quality-assurance_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "quality_assurance_evidence_vs_quality_assurance_risk",
+      "quality_assurance_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 2 selected for decision primitive diversity.",
+    "mainConflict": "不具合情報を出荷可否と再発防止へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 2 selection skeleton Cに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "quality_assurance_evidence",
+      "label": "evidence",
+      "description": "品質保証のevidence判断"
+    },
+    {
+      "key": "quality_assurance_risk",
+      "label": "risk",
+      "description": "品質保証のrisk判断"
+    },
+    {
+      "key": "quality_assurance_speed",
+      "label": "speed",
+      "description": "品質保証のspeed判断"
+    },
+    {
+      "key": "quality_assurance_value",
+      "label": "value",
+      "description": "品質保証のvalue判断"
+    },
+    {
+      "key": "quality_assurance_feasibility",
+      "label": "feasibility",
+      "description": "品質保証のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "品質保証の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "quality_assurance_evidence",
+      "quality_assurance_risk",
+      "quality_assurance_speed",
+      "quality_assurance_value",
+      "quality_assurance_feasibility"
+    ]
+  },
+  "roleCoreFriction": "不具合情報を出荷可否と再発防止へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "品質保証は人との調整や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "品質保証は、不具合情報を出荷可否と再発防止へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "不良率 2.4%、傷 18件、温度 78度、追加検査 240個、保留 1,200個、関係者制約、期限",
+    "output": "品質保証としての判断案、次回確認項目、リスクメモ",
+    "transformation": "不具合情報を出荷可否と再発防止へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "不良率 2.4%",
+      "傷 18件",
+      "温度 78度",
+      "追加検査 240個",
+      "保留 1,200個"
+    ],
+    "metrics": [
+      "不良率 2.4%",
+      "基準 1.0%",
+      "傷 18件",
+      "ロット A17",
+      "温度 78度",
+      "許容 72度",
+      "追加検査 240個",
+      "工数 6時間",
+      "保留 1,200個",
+      "回答期限 17:00"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "不良率 2.4%、傷 18件、温度 78度と基準 1.0%、、ロット A17を読まなければ成立しないため。"
+  }
+}

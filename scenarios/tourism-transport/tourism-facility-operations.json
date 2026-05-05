@@ -1,0 +1,2192 @@
+{
+  "id": "tourism-transport/tourism-facility-operations",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "観光/ホテル/交通",
+  "industrySlug": "tourism-transport",
+  "role": "観光施設運営",
+  "roleSlug": "tourism-facility-operations",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "社会貢献",
+    "人と関わる",
+    "地方就職"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 観光/ホテル/交通 観光施設運営.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "tourism-transport",
+      "tourism-facility-operations"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "来場予測表"
+    },
+    {
+      "time": "10:35",
+      "label": "設備点検表"
+    },
+    {
+      "time": "12:20",
+      "label": "待ち時間表"
+    },
+    {
+      "time": "14:05",
+      "label": "安全基準チェック"
+    },
+    {
+      "time": "16:25",
+      "label": "満足度速報"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "来場予測表"
+    },
+    {
+      "time": "10:35",
+      "label": "設備点検表"
+    },
+    {
+      "time": "12:20",
+      "label": "待ち時間表"
+    },
+    {
+      "time": "14:05",
+      "label": "安全基準チェック"
+    },
+    {
+      "time": "16:25",
+      "label": "満足度速報"
+    }
+  ],
+  "sceneList": [
+    "tourism-facility-operations-01",
+    "tourism-facility-operations-02",
+    "tourism-facility-operations-03",
+    "tourism-facility-operations-04",
+    "tourism-facility-operations-05"
+  ],
+  "meta": {
+    "title": "観光施設運営",
+    "industry": "観光/ホテル/交通",
+    "role": "観光施設運営",
+    "duration_minutes": 18,
+    "description": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "tourism-facility-operations-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "来場予測表",
+      "openingHook": "09:10。来場予測表に予測 3,200人と雨天確率 60%が並んでいる。",
+      "context": "観光施設運営として来場予測表を確認する。予測 3,200人、雨天確率 60%が今日の判断材料になる。",
+      "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、来場予測表を読んで運営体制を選ぶ。",
+      "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+      "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は来場予測表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "予測 3,200人の背景と雨天確率 60%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "予測 3,200人を重く見るほど、雨天確率 60%や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-facility-operations-予測 3,200人判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は設備点検表で副作用を確認する。",
+      "npcDialogue": "先輩:「来場予測表を読まずに進めると、観光施設運営の判断ではなくなる」",
+      "workMaterial": "来場予測表\n- 予測 3,200人\n- 雨天確率 60%\n- 判断対象: 来場予測表",
+      "decisionPrompt": "tourism-facility-operations-予測 3,200人判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "予測 3,200人を優先し、当日中に来場予測表の結論を出す",
+          "text": "予測 3,200人を優先し、当日中に来場予測表の結論を出す。材料は予測 3,200人、雨天確率 60%。",
+          "immediateFeedback": "予測 3,200人に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 2,
+            "tourism_facility_operations_risk": -1,
+            "tourism_facility_operations_speed": 2,
+            "tourism_facility_operations_value": -1,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は印象ではなく、予測 3,200人と雨天確率 60%を読んで判断する。",
+          "studentFeedback": {
+            "good": "予測 3,200人の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は雨天確率 60%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "予測 3,200人と雨天確率 60%を突き合わせ、条件付きで進める",
+          "text": "予測 3,200人と雨天確率 60%を突き合わせ、条件付きで進める。材料は予測 3,200人、雨天確率 60%。",
+          "immediateFeedback": "来場予測表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": 1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "予測 3,200人と雨天確率 60%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は来場予測表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "雨天確率 60%の制約を重く見て、判断範囲を絞る",
+          "text": "雨天確率 60%の制約を重く見て、判断範囲を絞る。材料は予測 3,200人、雨天確率 60%。",
+          "immediateFeedback": "雨天確率 60%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": -1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": -1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": -1
+          },
+          "misconceptionEffect": "観光施設運営は慎重さだけでなく、予測 3,200人と雨天確率 60%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "雨天確率 60%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は予測 3,200人を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-facility-operations-予測 3,200人判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "人と関わる",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-facility-operations-予測 3,200人判断",
+        "roleSpecificMaterials": [
+          "来場予測表",
+          "判断対象: 来場予測表"
+        ],
+        "roleSpecificMetrics": [
+          "予測 3,200人",
+          "雨天確率 60%"
+        ],
+        "roleSpecificFailureRisk": "来場予測表を読まず、予測 3,200人か雨天確率 60%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "予測 3,200人と雨天確率 60%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "来場予測表、予測 3,200人、雨天確率 60%を判断の主役にしている。",
+        "kernelConnection": "来場予測表をtourism-facility-operations-予測 3,200人判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "tourism-facility-operations-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "設備点検表",
+      "openingHook": "10:35。設備点検表に注意箇所 5件と停止候補 2台が並んでいる。",
+      "context": "観光施設運営として設備点検表を確認する。注意箇所 5件、停止候補 2台が今日の判断材料になる。",
+      "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、設備点検表を読んで稼働範囲を決める。",
+      "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+      "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は設備点検表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "注意箇所 5件の背景と停止候補 2台の確度が完全にはそろっていない。",
+      "decisionTradeoff": "注意箇所 5件を重く見るほど、停止候補 2台や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-facility-operations-注意箇所 5件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は待ち時間表で副作用を確認する。",
+      "npcDialogue": "先輩:「設備点検表を読まずに進めると、観光施設運営の判断ではなくなる」",
+      "workMaterial": "設備点検表\n- 注意箇所 5件\n- 停止候補 2台\n- 判断対象: 設備点検表",
+      "decisionPrompt": "tourism-facility-operations-注意箇所 5件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "注意箇所 5件を優先し、当日中に設備点検表の結論を出す",
+          "text": "注意箇所 5件を優先し、当日中に設備点検表の結論を出す。材料は注意箇所 5件、停止候補 2台。",
+          "immediateFeedback": "注意箇所 5件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 2,
+            "tourism_facility_operations_risk": -1,
+            "tourism_facility_operations_speed": 2,
+            "tourism_facility_operations_value": -1,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は印象ではなく、注意箇所 5件と停止候補 2台を読んで判断する。",
+          "studentFeedback": {
+            "good": "注意箇所 5件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は停止候補 2台の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "注意箇所 5件と停止候補 2台を突き合わせ、条件付きで進める",
+          "text": "注意箇所 5件と停止候補 2台を突き合わせ、条件付きで進める。材料は注意箇所 5件、停止候補 2台。",
+          "immediateFeedback": "設備点検表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": 1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "注意箇所 5件と停止候補 2台を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は設備点検表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "停止候補 2台の制約を重く見て、判断範囲を絞る",
+          "text": "停止候補 2台の制約を重く見て、判断範囲を絞る。材料は注意箇所 5件、停止候補 2台。",
+          "immediateFeedback": "停止候補 2台に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": -1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": -1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": -1
+          },
+          "misconceptionEffect": "観光施設運営は慎重さだけでなく、注意箇所 5件と停止候補 2台の副作用まで読む。",
+          "studentFeedback": {
+            "good": "停止候補 2台の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は注意箇所 5件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-facility-operations-注意箇所 5件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "人と関わる",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-facility-operations-注意箇所 5件判断",
+        "roleSpecificMaterials": [
+          "設備点検表",
+          "判断対象: 設備点検表"
+        ],
+        "roleSpecificMetrics": [
+          "注意箇所 5件",
+          "停止候補 2台"
+        ],
+        "roleSpecificFailureRisk": "設備点検表を読まず、注意箇所 5件か停止候補 2台のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "注意箇所 5件と停止候補 2台を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "設備点検表、注意箇所 5件、停止候補 2台を判断の主役にしている。",
+        "kernelConnection": "設備点検表をtourism-facility-operations-注意箇所 5件判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "tourism-facility-operations-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "待ち時間表",
+      "openingHook": "12:20。待ち時間表に最大 45分と列長 120mが並んでいる。",
+      "context": "観光施設運営として待ち時間表を確認する。最大 45分、列長 120mが今日の判断材料になる。",
+      "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、待ち時間表を読んで誘導方法を切る。",
+      "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+      "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は待ち時間表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "最大 45分の背景と列長 120mの確度が完全にはそろっていない。",
+      "decisionTradeoff": "最大 45分を重く見るほど、列長 120mや別の制約を犠牲にする。",
+      "consequenceHook": "tourism-facility-operations-最大 45分判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は安全基準チェックで副作用を確認する。",
+      "npcDialogue": "先輩:「待ち時間表を読まずに進めると、観光施設運営の判断ではなくなる」",
+      "workMaterial": "待ち時間表\n- 最大 45分\n- 列長 120m\n- 判断対象: 待ち時間表",
+      "decisionPrompt": "tourism-facility-operations-最大 45分判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "最大 45分を優先し、当日中に待ち時間表の結論を出す",
+          "text": "最大 45分を優先し、当日中に待ち時間表の結論を出す。材料は最大 45分、列長 120m。",
+          "immediateFeedback": "最大 45分に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 2,
+            "tourism_facility_operations_risk": -1,
+            "tourism_facility_operations_speed": 2,
+            "tourism_facility_operations_value": -1,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は印象ではなく、最大 45分と列長 120mを読んで判断する。",
+          "studentFeedback": {
+            "good": "最大 45分の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は列長 120mの副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "最大 45分と列長 120mを突き合わせ、条件付きで進める",
+          "text": "最大 45分と列長 120mを突き合わせ、条件付きで進める。材料は最大 45分、列長 120m。",
+          "immediateFeedback": "待ち時間表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": 1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "最大 45分と列長 120mを両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は待ち時間表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "列長 120mの制約を重く見て、判断範囲を絞る",
+          "text": "列長 120mの制約を重く見て、判断範囲を絞る。材料は最大 45分、列長 120m。",
+          "immediateFeedback": "列長 120mに基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": -1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": -1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": -1
+          },
+          "misconceptionEffect": "観光施設運営は慎重さだけでなく、最大 45分と列長 120mの副作用まで読む。",
+          "studentFeedback": {
+            "good": "列長 120mの制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は最大 45分を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-facility-operations-最大 45分判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "人と関わる",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-facility-operations-最大 45分判断",
+        "roleSpecificMaterials": [
+          "待ち時間表",
+          "判断対象: 待ち時間表"
+        ],
+        "roleSpecificMetrics": [
+          "最大 45分",
+          "列長 120m"
+        ],
+        "roleSpecificFailureRisk": "待ち時間表を読まず、最大 45分か列長 120mのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "最大 45分と列長 120mを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "待ち時間表、最大 45分、列長 120mを判断の主役にしている。",
+        "kernelConnection": "待ち時間表をtourism-facility-operations-最大 45分判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "tourism-facility-operations-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "安全基準チェック",
+      "openingHook": "14:05。安全基準チェックに基準項目 18個と未確認 3個が並んでいる。",
+      "context": "観光施設運営として安全基準チェックを確認する。基準項目 18個、未確認 3個が今日の判断材料になる。",
+      "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、安全基準チェックを読んで確認順を決める。",
+      "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+      "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は安全基準チェックである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "基準項目 18個の背景と未確認 3個の確度が完全にはそろっていない。",
+      "decisionTradeoff": "基準項目 18個を重く見るほど、未確認 3個や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-facility-operations-基準項目 18個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は満足度速報で副作用を確認する。",
+      "npcDialogue": "先輩:「安全基準チェックを読まずに進めると、観光施設運営の判断ではなくなる」",
+      "workMaterial": "安全基準チェック\n- 基準項目 18個\n- 未確認 3個\n- 判断対象: 安全基準チェック",
+      "decisionPrompt": "tourism-facility-operations-基準項目 18個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "基準項目 18個を優先し、当日中に安全基準チェックの結論を出す",
+          "text": "基準項目 18個を優先し、当日中に安全基準チェックの結論を出す。材料は基準項目 18個、未確認 3個。",
+          "immediateFeedback": "基準項目 18個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 2,
+            "tourism_facility_operations_risk": -1,
+            "tourism_facility_operations_speed": 2,
+            "tourism_facility_operations_value": -1,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は印象ではなく、基準項目 18個と未確認 3個を読んで判断する。",
+          "studentFeedback": {
+            "good": "基準項目 18個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は未確認 3個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "基準項目 18個と未確認 3個を突き合わせ、条件付きで進める",
+          "text": "基準項目 18個と未確認 3個を突き合わせ、条件付きで進める。材料は基準項目 18個、未確認 3個。",
+          "immediateFeedback": "安全基準チェックに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": 1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "基準項目 18個と未確認 3個を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は安全基準チェックの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "未確認 3個の制約を重く見て、判断範囲を絞る",
+          "text": "未確認 3個の制約を重く見て、判断範囲を絞る。材料は基準項目 18個、未確認 3個。",
+          "immediateFeedback": "未確認 3個に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": -1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": -1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": -1
+          },
+          "misconceptionEffect": "観光施設運営は慎重さだけでなく、基準項目 18個と未確認 3個の副作用まで読む。",
+          "studentFeedback": {
+            "good": "未確認 3個の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は基準項目 18個を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-facility-operations-基準項目 18個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "人と関わる",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-facility-operations-基準項目 18個判断",
+        "roleSpecificMaterials": [
+          "安全基準チェック",
+          "判断対象: 安全基準チェック"
+        ],
+        "roleSpecificMetrics": [
+          "基準項目 18個",
+          "未確認 3個"
+        ],
+        "roleSpecificFailureRisk": "安全基準チェックを読まず、基準項目 18個か未確認 3個のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "基準項目 18個と未確認 3個を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "安全基準チェック、基準項目 18個、未確認 3個を判断の主役にしている。",
+        "kernelConnection": "安全基準チェックをtourism-facility-operations-基準項目 18個判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "tourism-facility-operations-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "満足度速報",
+      "openingHook": "16:25。満足度速報に満足度 4.0と不満 28件が並んでいる。",
+      "context": "観光施設運営として満足度速報を確認する。満足度 4.0、不満 28件が今日の判断材料になる。",
+      "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、満足度速報を読んで翌日改善を残す。",
+      "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+      "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は満足度速報である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "満足度 4.0の背景と不満 28件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "満足度 4.0を重く見るほど、不満 28件や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-facility-operations-満足度 4.0判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「満足度速報を読まずに進めると、観光施設運営の判断ではなくなる」",
+      "workMaterial": "満足度速報\n- 満足度 4.0\n- 不満 28件\n- 判断対象: 満足度速報",
+      "decisionPrompt": "tourism-facility-operations-満足度 4.0判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "満足度 4.0を優先し、当日中に満足度速報の結論を出す",
+          "text": "満足度 4.0を優先し、当日中に満足度速報の結論を出す。材料は満足度 4.0、不満 28件。",
+          "immediateFeedback": "満足度 4.0に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 2,
+            "tourism_facility_operations_risk": -1,
+            "tourism_facility_operations_speed": 2,
+            "tourism_facility_operations_value": -1,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は印象ではなく、満足度 4.0と不満 28件を読んで判断する。",
+          "studentFeedback": {
+            "good": "満足度 4.0の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は不満 28件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "満足度 4.0と不満 28件を突き合わせ、条件付きで進める",
+          "text": "満足度 4.0と不満 28件を突き合わせ、条件付きで進める。材料は満足度 4.0、不満 28件。",
+          "immediateFeedback": "満足度速報に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": 1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": 1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": 1
+          },
+          "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "満足度 4.0と不満 28件を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は満足度速報の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "不満 28件の制約を重く見て、判断範囲を絞る",
+          "text": "不満 28件の制約を重く見て、判断範囲を絞る。材料は満足度 4.0、不満 28件。",
+          "immediateFeedback": "不満 28件に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_facility_operations_evidence": -1,
+            "tourism_facility_operations_risk": 2,
+            "tourism_facility_operations_speed": -1,
+            "tourism_facility_operations_value": 2,
+            "tourism_facility_operations_feasibility": -1
+          },
+          "misconceptionEffect": "観光施設運営は慎重さだけでなく、満足度 4.0と不満 28件の副作用まで読む。",
+          "studentFeedback": {
+            "good": "不満 28件の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は満足度 4.0を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-facility-operations-満足度 4.0判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "人と関わる",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-facility-operations-満足度 4.0判断",
+        "roleSpecificMaterials": [
+          "満足度速報",
+          "判断対象: 満足度速報"
+        ],
+        "roleSpecificMetrics": [
+          "満足度 4.0",
+          "不満 28件"
+        ],
+        "roleSpecificFailureRisk": "満足度速報を読まず、満足度 4.0か不満 28件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "満足度 4.0と不満 28件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "満足度速報、満足度 4.0、不満 28件を判断の主役にしている。",
+        "kernelConnection": "満足度速報をtourism-facility-operations-満足度 4.0判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。観光施設運営として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "tourism-facility-operations-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "来場予測表",
+          "openingHook": "09:10。来場予測表に予測 3,200人と雨天確率 60%が並んでいる。",
+          "context": "観光施設運営として来場予測表を確認する。予測 3,200人、雨天確率 60%が今日の判断材料になる。",
+          "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、来場予測表を読んで運営体制を選ぶ。",
+          "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+          "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は来場予測表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "予測 3,200人の背景と雨天確率 60%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "予測 3,200人を重く見るほど、雨天確率 60%や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-facility-operations-予測 3,200人判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は設備点検表で副作用を確認する。",
+          "npcDialogue": "先輩:「来場予測表を読まずに進めると、観光施設運営の判断ではなくなる」",
+          "workMaterial": "来場予測表\n- 予測 3,200人\n- 雨天確率 60%\n- 判断対象: 来場予測表",
+          "decisionPrompt": "tourism-facility-operations-予測 3,200人判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "予測 3,200人を優先し、当日中に来場予測表の結論を出す",
+              "text": "予測 3,200人を優先し、当日中に来場予測表の結論を出す。材料は予測 3,200人、雨天確率 60%。",
+              "immediateFeedback": "予測 3,200人に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 2,
+                "tourism_facility_operations_risk": -1,
+                "tourism_facility_operations_speed": 2,
+                "tourism_facility_operations_value": -1,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は印象ではなく、予測 3,200人と雨天確率 60%を読んで判断する。",
+              "studentFeedback": {
+                "good": "予測 3,200人の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は雨天確率 60%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "予測 3,200人と雨天確率 60%を突き合わせ、条件付きで進める",
+              "text": "予測 3,200人と雨天確率 60%を突き合わせ、条件付きで進める。材料は予測 3,200人、雨天確率 60%。",
+              "immediateFeedback": "来場予測表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": 1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "予測 3,200人と雨天確率 60%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は来場予測表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "雨天確率 60%の制約を重く見て、判断範囲を絞る",
+              "text": "雨天確率 60%の制約を重く見て、判断範囲を絞る。材料は予測 3,200人、雨天確率 60%。",
+              "immediateFeedback": "雨天確率 60%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": -1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": -1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": -1
+              },
+              "misconceptionEffect": "観光施設運営は慎重さだけでなく、予測 3,200人と雨天確率 60%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "雨天確率 60%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は予測 3,200人を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-facility-operations-予測 3,200人判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "人と関わる",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-facility-operations-予測 3,200人判断",
+            "roleSpecificMaterials": [
+              "来場予測表",
+              "判断対象: 来場予測表"
+            ],
+            "roleSpecificMetrics": [
+              "予測 3,200人",
+              "雨天確率 60%"
+            ],
+            "roleSpecificFailureRisk": "来場予測表を読まず、予測 3,200人か雨天確率 60%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "予測 3,200人と雨天確率 60%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "来場予測表、予測 3,200人、雨天確率 60%を判断の主役にしている。",
+            "kernelConnection": "来場予測表をtourism-facility-operations-予測 3,200人判断へ接続する。"
+          }
+        },
+        {
+          "id": "tourism-facility-operations-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "設備点検表",
+          "openingHook": "10:35。設備点検表に注意箇所 5件と停止候補 2台が並んでいる。",
+          "context": "観光施設運営として設備点検表を確認する。注意箇所 5件、停止候補 2台が今日の判断材料になる。",
+          "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、設備点検表を読んで稼働範囲を決める。",
+          "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+          "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は設備点検表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "注意箇所 5件の背景と停止候補 2台の確度が完全にはそろっていない。",
+          "decisionTradeoff": "注意箇所 5件を重く見るほど、停止候補 2台や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-facility-operations-注意箇所 5件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は待ち時間表で副作用を確認する。",
+          "npcDialogue": "先輩:「設備点検表を読まずに進めると、観光施設運営の判断ではなくなる」",
+          "workMaterial": "設備点検表\n- 注意箇所 5件\n- 停止候補 2台\n- 判断対象: 設備点検表",
+          "decisionPrompt": "tourism-facility-operations-注意箇所 5件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "注意箇所 5件を優先し、当日中に設備点検表の結論を出す",
+              "text": "注意箇所 5件を優先し、当日中に設備点検表の結論を出す。材料は注意箇所 5件、停止候補 2台。",
+              "immediateFeedback": "注意箇所 5件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 2,
+                "tourism_facility_operations_risk": -1,
+                "tourism_facility_operations_speed": 2,
+                "tourism_facility_operations_value": -1,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は印象ではなく、注意箇所 5件と停止候補 2台を読んで判断する。",
+              "studentFeedback": {
+                "good": "注意箇所 5件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は停止候補 2台の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "注意箇所 5件と停止候補 2台を突き合わせ、条件付きで進める",
+              "text": "注意箇所 5件と停止候補 2台を突き合わせ、条件付きで進める。材料は注意箇所 5件、停止候補 2台。",
+              "immediateFeedback": "設備点検表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": 1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "注意箇所 5件と停止候補 2台を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は設備点検表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "停止候補 2台の制約を重く見て、判断範囲を絞る",
+              "text": "停止候補 2台の制約を重く見て、判断範囲を絞る。材料は注意箇所 5件、停止候補 2台。",
+              "immediateFeedback": "停止候補 2台に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": -1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": -1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": -1
+              },
+              "misconceptionEffect": "観光施設運営は慎重さだけでなく、注意箇所 5件と停止候補 2台の副作用まで読む。",
+              "studentFeedback": {
+                "good": "停止候補 2台の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は注意箇所 5件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-facility-operations-注意箇所 5件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "人と関わる",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-facility-operations-注意箇所 5件判断",
+            "roleSpecificMaterials": [
+              "設備点検表",
+              "判断対象: 設備点検表"
+            ],
+            "roleSpecificMetrics": [
+              "注意箇所 5件",
+              "停止候補 2台"
+            ],
+            "roleSpecificFailureRisk": "設備点検表を読まず、注意箇所 5件か停止候補 2台のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "注意箇所 5件と停止候補 2台を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "設備点検表、注意箇所 5件、停止候補 2台を判断の主役にしている。",
+            "kernelConnection": "設備点検表をtourism-facility-operations-注意箇所 5件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。観光施設運営として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "tourism-facility-operations-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "待ち時間表",
+          "openingHook": "12:20。待ち時間表に最大 45分と列長 120mが並んでいる。",
+          "context": "観光施設運営として待ち時間表を確認する。最大 45分、列長 120mが今日の判断材料になる。",
+          "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、待ち時間表を読んで誘導方法を切る。",
+          "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+          "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は待ち時間表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "最大 45分の背景と列長 120mの確度が完全にはそろっていない。",
+          "decisionTradeoff": "最大 45分を重く見るほど、列長 120mや別の制約を犠牲にする。",
+          "consequenceHook": "tourism-facility-operations-最大 45分判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は安全基準チェックで副作用を確認する。",
+          "npcDialogue": "先輩:「待ち時間表を読まずに進めると、観光施設運営の判断ではなくなる」",
+          "workMaterial": "待ち時間表\n- 最大 45分\n- 列長 120m\n- 判断対象: 待ち時間表",
+          "decisionPrompt": "tourism-facility-operations-最大 45分判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "最大 45分を優先し、当日中に待ち時間表の結論を出す",
+              "text": "最大 45分を優先し、当日中に待ち時間表の結論を出す。材料は最大 45分、列長 120m。",
+              "immediateFeedback": "最大 45分に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 2,
+                "tourism_facility_operations_risk": -1,
+                "tourism_facility_operations_speed": 2,
+                "tourism_facility_operations_value": -1,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は印象ではなく、最大 45分と列長 120mを読んで判断する。",
+              "studentFeedback": {
+                "good": "最大 45分の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は列長 120mの副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "最大 45分と列長 120mを突き合わせ、条件付きで進める",
+              "text": "最大 45分と列長 120mを突き合わせ、条件付きで進める。材料は最大 45分、列長 120m。",
+              "immediateFeedback": "待ち時間表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": 1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "最大 45分と列長 120mを両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は待ち時間表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "列長 120mの制約を重く見て、判断範囲を絞る",
+              "text": "列長 120mの制約を重く見て、判断範囲を絞る。材料は最大 45分、列長 120m。",
+              "immediateFeedback": "列長 120mに基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": -1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": -1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": -1
+              },
+              "misconceptionEffect": "観光施設運営は慎重さだけでなく、最大 45分と列長 120mの副作用まで読む。",
+              "studentFeedback": {
+                "good": "列長 120mの制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は最大 45分を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-facility-operations-最大 45分判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "人と関わる",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-facility-operations-最大 45分判断",
+            "roleSpecificMaterials": [
+              "待ち時間表",
+              "判断対象: 待ち時間表"
+            ],
+            "roleSpecificMetrics": [
+              "最大 45分",
+              "列長 120m"
+            ],
+            "roleSpecificFailureRisk": "待ち時間表を読まず、最大 45分か列長 120mのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "最大 45分と列長 120mを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "待ち時間表、最大 45分、列長 120mを判断の主役にしている。",
+            "kernelConnection": "待ち時間表をtourism-facility-operations-最大 45分判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。観光施設運営として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "tourism-facility-operations-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "安全基準チェック",
+          "openingHook": "14:05。安全基準チェックに基準項目 18個と未確認 3個が並んでいる。",
+          "context": "観光施設運営として安全基準チェックを確認する。基準項目 18個、未確認 3個が今日の判断材料になる。",
+          "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、安全基準チェックを読んで確認順を決める。",
+          "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+          "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は安全基準チェックである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "基準項目 18個の背景と未確認 3個の確度が完全にはそろっていない。",
+          "decisionTradeoff": "基準項目 18個を重く見るほど、未確認 3個や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-facility-operations-基準項目 18個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は満足度速報で副作用を確認する。",
+          "npcDialogue": "先輩:「安全基準チェックを読まずに進めると、観光施設運営の判断ではなくなる」",
+          "workMaterial": "安全基準チェック\n- 基準項目 18個\n- 未確認 3個\n- 判断対象: 安全基準チェック",
+          "decisionPrompt": "tourism-facility-operations-基準項目 18個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "基準項目 18個を優先し、当日中に安全基準チェックの結論を出す",
+              "text": "基準項目 18個を優先し、当日中に安全基準チェックの結論を出す。材料は基準項目 18個、未確認 3個。",
+              "immediateFeedback": "基準項目 18個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 2,
+                "tourism_facility_operations_risk": -1,
+                "tourism_facility_operations_speed": 2,
+                "tourism_facility_operations_value": -1,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は印象ではなく、基準項目 18個と未確認 3個を読んで判断する。",
+              "studentFeedback": {
+                "good": "基準項目 18個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は未確認 3個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "基準項目 18個と未確認 3個を突き合わせ、条件付きで進める",
+              "text": "基準項目 18個と未確認 3個を突き合わせ、条件付きで進める。材料は基準項目 18個、未確認 3個。",
+              "immediateFeedback": "安全基準チェックに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": 1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "基準項目 18個と未確認 3個を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は安全基準チェックの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "未確認 3個の制約を重く見て、判断範囲を絞る",
+              "text": "未確認 3個の制約を重く見て、判断範囲を絞る。材料は基準項目 18個、未確認 3個。",
+              "immediateFeedback": "未確認 3個に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": -1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": -1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": -1
+              },
+              "misconceptionEffect": "観光施設運営は慎重さだけでなく、基準項目 18個と未確認 3個の副作用まで読む。",
+              "studentFeedback": {
+                "good": "未確認 3個の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は基準項目 18個を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-facility-operations-基準項目 18個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "人と関わる",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-facility-operations-基準項目 18個判断",
+            "roleSpecificMaterials": [
+              "安全基準チェック",
+              "判断対象: 安全基準チェック"
+            ],
+            "roleSpecificMetrics": [
+              "基準項目 18個",
+              "未確認 3個"
+            ],
+            "roleSpecificFailureRisk": "安全基準チェックを読まず、基準項目 18個か未確認 3個のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "基準項目 18個と未確認 3個を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "安全基準チェック、基準項目 18個、未確認 3個を判断の主役にしている。",
+            "kernelConnection": "安全基準チェックをtourism-facility-operations-基準項目 18個判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。観光施設運営として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "tourism-facility-operations-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "満足度速報",
+          "openingHook": "16:25。満足度速報に満足度 4.0と不満 28件が並んでいる。",
+          "context": "観光施設運営として満足度速報を確認する。満足度 4.0、不満 28件が今日の判断材料になる。",
+          "content": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換するため、満足度速報を読んで翌日改善を残す。",
+          "roleSpecificContext": "観光施設運営は来場予測、設備状態、安全基準を観光施設の運営判断へ変換する仕事。",
+          "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は満足度速報である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "満足度 4.0の背景と不満 28件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "満足度 4.0を重く見るほど、不満 28件や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-facility-operations-満足度 4.0判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「満足度速報を読まずに進めると、観光施設運営の判断ではなくなる」",
+          "workMaterial": "満足度速報\n- 満足度 4.0\n- 不満 28件\n- 判断対象: 満足度速報",
+          "decisionPrompt": "tourism-facility-operations-満足度 4.0判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "満足度 4.0を優先し、当日中に満足度速報の結論を出す",
+              "text": "満足度 4.0を優先し、当日中に満足度速報の結論を出す。材料は満足度 4.0、不満 28件。",
+              "immediateFeedback": "満足度 4.0に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 2,
+                "tourism_facility_operations_risk": -1,
+                "tourism_facility_operations_speed": 2,
+                "tourism_facility_operations_value": -1,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は印象ではなく、満足度 4.0と不満 28件を読んで判断する。",
+              "studentFeedback": {
+                "good": "満足度 4.0の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は不満 28件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "満足度 4.0と不満 28件を突き合わせ、条件付きで進める",
+              "text": "満足度 4.0と不満 28件を突き合わせ、条件付きで進める。材料は満足度 4.0、不満 28件。",
+              "immediateFeedback": "満足度速報に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": 1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": 1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": 1
+              },
+              "misconceptionEffect": "観光施設運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "満足度 4.0と不満 28件を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は満足度速報の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "不満 28件の制約を重く見て、判断範囲を絞る",
+              "text": "不満 28件の制約を重く見て、判断範囲を絞る。材料は満足度 4.0、不満 28件。",
+              "immediateFeedback": "不満 28件に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光施設運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_facility_operations_evidence": -1,
+                "tourism_facility_operations_risk": 2,
+                "tourism_facility_operations_speed": -1,
+                "tourism_facility_operations_value": 2,
+                "tourism_facility_operations_feasibility": -1
+              },
+              "misconceptionEffect": "観光施設運営は慎重さだけでなく、満足度 4.0と不満 28件の副作用まで読む。",
+              "studentFeedback": {
+                "good": "不満 28件の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は満足度 4.0を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-facility-operations-満足度 4.0判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "人と関わる",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-facility-operations-満足度 4.0判断",
+            "roleSpecificMaterials": [
+              "満足度速報",
+              "判断対象: 満足度速報"
+            ],
+            "roleSpecificMetrics": [
+              "満足度 4.0",
+              "不満 28件"
+            ],
+            "roleSpecificFailureRisk": "満足度速報を読まず、満足度 4.0か不満 28件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "満足度 4.0と不満 28件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "満足度速報、満足度 4.0、不満 28件を判断の主役にしている。",
+            "kernelConnection": "満足度速報をtourism-facility-operations-満足度 4.0判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "tourism-facility-operations-material-reader",
+      "title": "観光施設運営の材料読解型",
+      "strengths": [
+        "観光施設運営の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "tourism_facility_operations_evidence",
+        "tourism_facility_operations_risk"
+      ],
+      "valuedMeters": [
+        "tourism_facility_operations_evidence"
+      ],
+      "sacrificedMeters": [
+        "tourism_facility_operations_speed"
+      ],
+      "roleRealityReveal": "観光施設運営は、来場予測・設備状態・安全基準を読み、楽しい体験を止めずに運営する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "観光施設運営の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "tourism-facility-operations-constraint-designer",
+      "title": "観光施設運営の制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "tourism_facility_operations_risk",
+        "tourism_facility_operations_speed"
+      ],
+      "valuedMeters": [
+        "tourism_facility_operations_risk"
+      ],
+      "sacrificedMeters": [
+        "tourism_facility_operations_value"
+      ],
+      "roleRealityReveal": "観光施設運営は、来場予測・設備状態・安全基準を読み、楽しい体験を止めずに運営する仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "観光施設運営として制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "tourism-facility-operations-execution-planner",
+      "title": "観光施設運営の実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "tourism_facility_operations_speed",
+        "tourism_facility_operations_value"
+      ],
+      "valuedMeters": [
+        "tourism_facility_operations_speed"
+      ],
+      "sacrificedMeters": [
+        "tourism_facility_operations_feasibility"
+      ],
+      "roleRealityReveal": "観光施設運営は、来場予測・設備状態・安全基準を読み、楽しい体験を止めずに運営する仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "観光施設運営として実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "観光施設運営は、来場予測・設備状態・安全基準を読み、楽しい体験を止めずに運営する仕事。",
+    "misconceptionCorrection": "観光施設運営は印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "観光施設運営として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "tourism-facility-operations_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "tourism_facility_operations_safety_vs_tourism_facility_operations_visitor",
+      "tourism_facility_operations_capacity_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "tourism_facility_operations_safety",
+      "label": "safety",
+      "description": "観光施設運営のsafety判断"
+    },
+    {
+      "key": "tourism_facility_operations_visitor",
+      "label": "visitor",
+      "description": "観光施設運営のvisitor判断"
+    },
+    {
+      "key": "tourism_facility_operations_capacity",
+      "label": "capacity",
+      "description": "観光施設運営のcapacity判断"
+    },
+    {
+      "key": "tourism_facility_operations_maintenance",
+      "label": "maintenance",
+      "description": "観光施設運営のmaintenance判断"
+    },
+    {
+      "key": "tourism_facility_operations_experience",
+      "label": "experience",
+      "description": "観光施設運営のexperience判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "観光施設運営の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "tourism_facility_operations_safety",
+      "tourism_facility_operations_visitor",
+      "tourism_facility_operations_capacity",
+      "tourism_facility_operations_maintenance",
+      "tourism_facility_operations_experience"
+    ]
+  },
+  "roleCoreFriction": "来場体験を広げるほど満足度は上がるが、安全基準と設備能力を外すと運営が止まる葛藤。",
+  "roleMisconception": "観光施設運営は接客やイベント実施が中心で、来場予測と安全運営の数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "観光施設運営は、来場予測・設備状態・安全基準を読み、楽しい体験を止めずに運営する仕事。",
+  "roleWorkKernel": {
+    "input": "予測 3,200人、雨天確率 60%、注意箇所 5件、停止候補 2台、最大 45分、列長 120m、基準項目 18個、未確認 3個、満足度 4.0、不満 28件",
+    "output": "観光施設運営としての判断案、次回確認項目、リスクメモ",
+    "transformation": "来場予測、設備状態、安全基準を観光施設の運営判断へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "来場予測表",
+      "設備点検表",
+      "待ち時間表",
+      "安全基準チェック",
+      "満足度速報"
+    ],
+    "metrics": [
+      "予測 3,200人",
+      "雨天確率 60%",
+      "注意箇所 5件",
+      "停止候補 2台",
+      "最大 45分",
+      "列長 120m",
+      "基準項目 18個",
+      "未確認 3個",
+      "満足度 4.0",
+      "不満 28件"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "来場予測表、設備点検表、待ち時間表と予測 3,200人、注意箇所 5件を読まなければ成立しないため。"
+  }
+}

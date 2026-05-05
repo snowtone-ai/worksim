@@ -132,14 +132,14 @@ JSON 完成後、Claude Code は以下のように要約してユーザーに確
 
 **実装で分かったこと**
 
-- 通常モードは5シーンで十分に適性診断できるが、没入モードは20シーンになるため、E2Eで中盤以降まで必ず進めて確認する
+- Cβ標準の没入モードはexactly 5シーンの連続体験を基本とし、代表既存シナリオは移行完了まで20シーン構成も許容する。E2Eで中盤以降まで必ず進めて確認する
 - 会議シーンは選択肢が長くなりやすく、固定フッターが画面外に押し出される。選択肢部分だけスクロールし、確定ボタンは常に見える構造にする
 - Playwright の認証は Google OAuth 本体を使わず、Supabase の `generateLink` + `verifyOtp` でテスト用 Cookie を作る
 - Vitest と Playwright の `*.spec.ts` が衝突しないよう、Vitest は `src/**/*.{test,spec}.{ts,tsx}` のみ対象にする
 
 **次の職種で気をつけること**
 
-- まず通常モードの5シーンを完成させ、E2Eで結果画面まで通してから没入モードへ広げる
+- まず没入モードのexactly 5シーン連続体験を完成させ、E2Eで結果画面まで通す
 - 長文選択肢が出る場面では、PC画面でもボタンが見えるかをPlaywrightで確認する
 - シナリオ JSON 内では実在企業名・サービス名・人名を避け、固有名詞は架空名に置き換える
 
@@ -219,9 +219,14 @@ NPC の発言は職種ごとに異なるが、人格は一貫させる。
 1. `docs/state.md` を読み、完了済みタスクと進行中タスクを確認する
 2. `docs/decisions.md` を読み、既存の設計判断と矛盾しないことを確認する
 3. 対象職種について、厚労省 job tag と企業公式情報を中心に一次情報源を3つ以上集める
-4. 典型的な1日の流れを5シーンに圧縮し、各シーンの意思決定ポイントを1つずつ決める
-5. `scenarios/_schema.md` に沿って JSON を作成し、`sources[]` に出典を入れる
-6. 通常モードで `pnpm typecheck`、`pnpm lint`、`pnpm test:e2e` を通す
-7. 通常モードが GREEN になってから、必要に応じて没入モードの blocks を追加する
-8. 没入モードを追加した場合は、序盤だけでなく中盤以降の会議・対話シーンまで E2E で進行確認する
-9. `pnpm test`、`pnpm test:e2e`、`pnpm build` が通ったら `docs/state.md` を更新する
+4. Cβでは先にRole Differentiation Sheetと構造化 `roleWorkKernel` を作る
+5. 典型的な1日の流れをexactly 5シーンに圧縮し、各シーンの意思決定ポイントを1つずつ決める
+6. 各sceneで会話より先に `workMaterial` と `roleSpecificity.kernelConnection` を定義する
+7. ステークホルダー圧力は許容するが、仕事材料・数字・decision primitiveを主役にする
+8. `scenarios/_schema.v2.md` に沿って JSON を作成し、`sources[]` に出典を入れる
+9. `node scripts/c-beta/check-cbeta-scenario-quality.mjs` を通す
+10. immersive modeで `pnpm typecheck`、`pnpm lint`、`pnpm test:e2e` を通す
+11. 没入モードを追加した場合は、序盤だけでなく中盤以降の会議・対話シーンまで E2E で進行確認する
+12. `pnpm test`、`pnpm test:e2e`、`pnpm build` が通ったらmatrixと`docs/state.md`を更新する
+
+Cβ 50シナリオ展開は、Cα安定化後にbatch単位で進める。50本を一括生成しない。

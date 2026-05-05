@@ -1,0 +1,2190 @@
+{
+  "id": "finance/securities-market-advisory",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "金融",
+  "industrySlug": "finance",
+  "role": "証券営業/マーケット提案",
+  "roleSlug": "securities-market-advisory",
+  "roleCategory": "industry_specific_sales",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "営業系",
+    "分析系",
+    "高難易度"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 金融 証券営業/マーケット提案.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "finance",
+      "securities-market-advisory"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "市況メモ"
+    },
+    {
+      "time": "10:40",
+      "label": "保有明細"
+    },
+    {
+      "time": "12:20",
+      "label": "リスク確認"
+    },
+    {
+      "time": "14:15",
+      "label": "商品メモ"
+    },
+    {
+      "time": "16:35",
+      "label": "提案記録"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "市況メモ"
+    },
+    {
+      "time": "10:40",
+      "label": "保有明細"
+    },
+    {
+      "time": "12:20",
+      "label": "リスク確認"
+    },
+    {
+      "time": "14:15",
+      "label": "商品メモ"
+    },
+    {
+      "time": "16:35",
+      "label": "提案記録"
+    }
+  ],
+  "sceneList": [
+    "securities-market-advisory-01",
+    "securities-market-advisory-02",
+    "securities-market-advisory-03",
+    "securities-market-advisory-04",
+    "securities-market-advisory-05"
+  ],
+  "meta": {
+    "title": "証券営業/マーケット提案",
+    "industry": "金融",
+    "role": "証券営業/マーケット提案",
+    "duration_minutes": 18,
+    "description": "市況・顧客保有資産・リスクを投資提案へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "securities-market-advisory-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "市況メモ",
+      "openingHook": "09:10。市況メモに指数 -2.8%と金利 +0.25ptが並んでいる。",
+      "context": "証券営業/マーケット提案として市況メモを確認する。指数 -2.8%、金利 +0.25ptが今日の判断材料になる。",
+      "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、市況メモを読んで次の作業判断を残す。",
+      "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+      "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は市況メモである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "指数 -2.8%の背景と金利 +0.25ptの確度が完全にはそろっていない。",
+      "decisionTradeoff": "指数 -2.8%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "securities-market-advisory-市況メモ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は国内株 62%で副作用を確認する。",
+      "npcDialogue": "先輩:「市況メモを読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+      "workMaterial": "市況メモ\n- 指数 -2.8%\n- 金利 +0.25pt\n- 判断対象: 市況メモ",
+      "decisionPrompt": "securities-market-advisory-市況メモ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "指数 -2.8%を重く見て、当日中に前へ進める",
+          "text": "指数 -2.8%を重く見て、当日中に前へ進める。材料は市況メモ、指数 -2.8%、金利 +0.25pt。",
+          "immediateFeedback": "市況メモに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 2,
+            "securities_market_advisory_risk": -1,
+            "securities_market_advisory_speed": 2,
+            "securities_market_advisory_value": -1,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、市況メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "市況メモの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は指数 -2.8%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "市況メモの指数 -2.8%と金利 +0.25ptを突き合わせ、条件付きで進める",
+          "text": "市況メモの指数 -2.8%と金利 +0.25ptを突き合わせ、条件付きで進める。材料は市況メモ、指数 -2.8%、金利 +0.25pt。",
+          "immediateFeedback": "市況メモに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": 1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、市況メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "市況メモの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は指数 -2.8%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "金利 +0.25ptの不確実性を理由に、判断範囲を絞る",
+          "text": "金利 +0.25ptの不確実性を理由に、判断範囲を絞る。材料は市況メモ、指数 -2.8%、金利 +0.25pt。",
+          "immediateFeedback": "市況メモに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": -1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": -1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": -1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、市況メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "市況メモの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は指数 -2.8%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "securities-market-advisory-市況メモ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "securities-market-advisory-市況メモ判断",
+        "roleSpecificMaterials": [
+          "市況メモ",
+          "判断対象: 市況メモ"
+        ],
+        "roleSpecificMetrics": [
+          "指数 -2.8%",
+          "金利 +0.25pt"
+        ],
+        "roleSpecificFailureRisk": "市況メモを読まず、指数 -2.8%か金利 +0.25ptのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "指数 -2.8%と金利 +0.25ptを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "市況メモ、指数 -2.8%、金利 +0.25ptを判断の主役にしている。",
+        "kernelConnection": "市況メモをsecurities-market-advisory-市況メモ判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "securities-market-advisory-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "保有明細",
+      "openingHook": "10:40。保有明細に国内株 62%と含み損 -9%が並んでいる。",
+      "context": "証券営業/マーケット提案として保有明細を確認する。国内株 62%、含み損 -9%が今日の判断材料になる。",
+      "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、保有明細を読んで次の作業判断を残す。",
+      "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+      "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は保有明細である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "国内株 62%の背景と含み損 -9%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "国内株 62%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "securities-market-advisory-保有明細判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は投資期間 5年で副作用を確認する。",
+      "npcDialogue": "先輩:「保有明細を読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+      "workMaterial": "保有明細\n- 国内株 62%\n- 含み損 -9%\n- 判断対象: 保有明細",
+      "decisionPrompt": "securities-market-advisory-保有明細判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "国内株 62%を重く見て、当日中に前へ進める",
+          "text": "国内株 62%を重く見て、当日中に前へ進める。材料は保有明細、国内株 62%、含み損 -9%。",
+          "immediateFeedback": "保有明細に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 2,
+            "securities_market_advisory_risk": -1,
+            "securities_market_advisory_speed": 2,
+            "securities_market_advisory_value": -1,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、保有明細と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保有明細の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は国内株 62%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "保有明細の国内株 62%と含み損 -9%を突き合わせ、条件付きで進める",
+          "text": "保有明細の国内株 62%と含み損 -9%を突き合わせ、条件付きで進める。材料は保有明細、国内株 62%、含み損 -9%。",
+          "immediateFeedback": "保有明細に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": 1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、保有明細と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保有明細の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は国内株 62%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "含み損 -9%の不確実性を理由に、判断範囲を絞る",
+          "text": "含み損 -9%の不確実性を理由に、判断範囲を絞る。材料は保有明細、国内株 62%、含み損 -9%。",
+          "immediateFeedback": "保有明細に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": -1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": -1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": -1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、保有明細と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "保有明細の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は国内株 62%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "securities-market-advisory-保有明細判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "securities-market-advisory-保有明細判断",
+        "roleSpecificMaterials": [
+          "保有明細",
+          "判断対象: 保有明細"
+        ],
+        "roleSpecificMetrics": [
+          "国内株 62%",
+          "含み損 -9%"
+        ],
+        "roleSpecificFailureRisk": "保有明細を読まず、国内株 62%か含み損 -9%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "国内株 62%と含み損 -9%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "保有明細、国内株 62%、含み損 -9%を判断の主役にしている。",
+        "kernelConnection": "保有明細をsecurities-market-advisory-保有明細判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "securities-market-advisory-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "リスク確認",
+      "openingHook": "12:20。リスク確認に投資期間 5年と許容損失 80万円が並んでいる。",
+      "context": "証券営業/マーケット提案としてリスク確認を確認する。投資期間 5年、許容損失 80万円が今日の判断材料になる。",
+      "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、リスク確認を読んで次の作業判断を残す。",
+      "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+      "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はリスク確認である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "投資期間 5年の背景と許容損失 80万円の確度が完全にはそろっていない。",
+      "decisionTradeoff": "投資期間 5年を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "securities-market-advisory-リスク確認判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は分配利回り 3.1%で副作用を確認する。",
+      "npcDialogue": "先輩:「リスク確認を読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+      "workMaterial": "リスク確認\n- 投資期間 5年\n- 許容損失 80万円\n- 判断対象: リスク確認",
+      "decisionPrompt": "securities-market-advisory-リスク確認判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "投資期間 5年を重く見て、当日中に前へ進める",
+          "text": "投資期間 5年を重く見て、当日中に前へ進める。材料はリスク確認、投資期間 5年、許容損失 80万円。",
+          "immediateFeedback": "リスク確認に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 2,
+            "securities_market_advisory_risk": -1,
+            "securities_market_advisory_speed": 2,
+            "securities_market_advisory_value": -1,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、リスク確認と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リスク確認の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は投資期間 5年の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "リスク確認の投資期間 5年と許容損失 80万円を突き合わせ、条件付きで進める",
+          "text": "リスク確認の投資期間 5年と許容損失 80万円を突き合わせ、条件付きで進める。材料はリスク確認、投資期間 5年、許容損失 80万円。",
+          "immediateFeedback": "リスク確認に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": 1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、リスク確認と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リスク確認の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は投資期間 5年の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "許容損失 80万円の不確実性を理由に、判断範囲を絞る",
+          "text": "許容損失 80万円の不確実性を理由に、判断範囲を絞る。材料はリスク確認、投資期間 5年、許容損失 80万円。",
+          "immediateFeedback": "リスク確認に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": -1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": -1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": -1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、リスク確認と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リスク確認の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は投資期間 5年の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "securities-market-advisory-リスク確認判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "securities-market-advisory-リスク確認判断",
+        "roleSpecificMaterials": [
+          "リスク確認",
+          "判断対象: リスク確認"
+        ],
+        "roleSpecificMetrics": [
+          "投資期間 5年",
+          "許容損失 80万円"
+        ],
+        "roleSpecificFailureRisk": "リスク確認を読まず、投資期間 5年か許容損失 80万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "投資期間 5年と許容損失 80万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "リスク確認、投資期間 5年、許容損失 80万円を判断の主役にしている。",
+        "kernelConnection": "リスク確認をsecurities-market-advisory-リスク確認判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "securities-market-advisory-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "商品メモ",
+      "openingHook": "14:15。商品メモに分配利回り 3.1%と為替ヘッジ なしが並んでいる。",
+      "context": "証券営業/マーケット提案として商品メモを確認する。分配利回り 3.1%、為替ヘッジ なしが今日の判断材料になる。",
+      "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、商品メモを読んで次の作業判断を残す。",
+      "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+      "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は商品メモである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "分配利回り 3.1%の背景と為替ヘッジ なしの確度が完全にはそろっていない。",
+      "decisionTradeoff": "分配利回り 3.1%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "securities-market-advisory-商品メモ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は入替 20%で副作用を確認する。",
+      "npcDialogue": "先輩:「商品メモを読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+      "workMaterial": "商品メモ\n- 分配利回り 3.1%\n- 為替ヘッジ なし\n- 判断対象: 商品メモ",
+      "decisionPrompt": "securities-market-advisory-商品メモ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "分配利回り 3.1%を重く見て、当日中に前へ進める",
+          "text": "分配利回り 3.1%を重く見て、当日中に前へ進める。材料は商品メモ、分配利回り 3.1%、為替ヘッジ なし。",
+          "immediateFeedback": "商品メモに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 2,
+            "securities_market_advisory_risk": -1,
+            "securities_market_advisory_speed": 2,
+            "securities_market_advisory_value": -1,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、商品メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "商品メモの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は分配利回り 3.1%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "商品メモの分配利回り 3.1%と為替ヘッジ なしを突き合わせ、条件付きで進める",
+          "text": "商品メモの分配利回り 3.1%と為替ヘッジ なしを突き合わせ、条件付きで進める。材料は商品メモ、分配利回り 3.1%、為替ヘッジ なし。",
+          "immediateFeedback": "商品メモに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": 1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、商品メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "商品メモの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は分配利回り 3.1%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "為替ヘッジ なしの不確実性を理由に、判断範囲を絞る",
+          "text": "為替ヘッジ なしの不確実性を理由に、判断範囲を絞る。材料は商品メモ、分配利回り 3.1%、為替ヘッジ なし。",
+          "immediateFeedback": "商品メモに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": -1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": -1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": -1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、商品メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "商品メモの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は分配利回り 3.1%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "securities-market-advisory-商品メモ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "securities-market-advisory-商品メモ判断",
+        "roleSpecificMaterials": [
+          "商品メモ",
+          "判断対象: 商品メモ"
+        ],
+        "roleSpecificMetrics": [
+          "分配利回り 3.1%",
+          "為替ヘッジ なし"
+        ],
+        "roleSpecificFailureRisk": "商品メモを読まず、分配利回り 3.1%か為替ヘッジ なしのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "分配利回り 3.1%と為替ヘッジ なしを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "商品メモ、分配利回り 3.1%、為替ヘッジ なしを判断の主役にしている。",
+        "kernelConnection": "商品メモをsecurities-market-advisory-商品メモ判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "securities-market-advisory-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "提案記録",
+      "openingHook": "16:35。提案記録に入替 20%と説明期限 16:00が並んでいる。",
+      "context": "証券営業/マーケット提案として提案記録を確認する。入替 20%、説明期限 16:00が今日の判断材料になる。",
+      "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、提案記録を読んで次の作業判断を残す。",
+      "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+      "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は提案記録である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "入替 20%の背景と説明期限 16:00の確度が完全にはそろっていない。",
+      "decisionTradeoff": "入替 20%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "securities-market-advisory-提案記録判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「提案記録を読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+      "workMaterial": "提案記録\n- 入替 20%\n- 説明期限 16:00\n- 判断対象: 提案記録",
+      "decisionPrompt": "securities-market-advisory-提案記録判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "入替 20%を重く見て、当日中に前へ進める",
+          "text": "入替 20%を重く見て、当日中に前へ進める。材料は提案記録、入替 20%、説明期限 16:00。",
+          "immediateFeedback": "提案記録に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 2,
+            "securities_market_advisory_risk": -1,
+            "securities_market_advisory_speed": 2,
+            "securities_market_advisory_value": -1,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、提案記録と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "提案記録の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は入替 20%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "提案記録の入替 20%と説明期限 16:00を突き合わせ、条件付きで進める",
+          "text": "提案記録の入替 20%と説明期限 16:00を突き合わせ、条件付きで進める。材料は提案記録、入替 20%、説明期限 16:00。",
+          "immediateFeedback": "提案記録に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": 1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": 1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": 1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、提案記録と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "提案記録の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は入替 20%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "説明期限 16:00の不確実性を理由に、判断範囲を絞る",
+          "text": "説明期限 16:00の不確実性を理由に、判断範囲を絞る。材料は提案記録、入替 20%、説明期限 16:00。",
+          "immediateFeedback": "提案記録に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "securities_market_advisory_evidence": -1,
+            "securities_market_advisory_risk": 2,
+            "securities_market_advisory_speed": -1,
+            "securities_market_advisory_value": 2,
+            "securities_market_advisory_feasibility": -1
+          },
+          "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、提案記録と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "提案記録の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は入替 20%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "securities-market-advisory-提案記録判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "営業系",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "securities-market-advisory-提案記録判断",
+        "roleSpecificMaterials": [
+          "提案記録",
+          "判断対象: 提案記録"
+        ],
+        "roleSpecificMetrics": [
+          "入替 20%",
+          "説明期限 16:00"
+        ],
+        "roleSpecificFailureRisk": "提案記録を読まず、入替 20%か説明期限 16:00のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "入替 20%と説明期限 16:00を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "提案記録、入替 20%、説明期限 16:00を判断の主役にしている。",
+        "kernelConnection": "提案記録をsecurities-market-advisory-提案記録判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "securities-market-advisory-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "市況メモ",
+          "openingHook": "09:10。市況メモに指数 -2.8%と金利 +0.25ptが並んでいる。",
+          "context": "証券営業/マーケット提案として市況メモを確認する。指数 -2.8%、金利 +0.25ptが今日の判断材料になる。",
+          "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、市況メモを読んで次の作業判断を残す。",
+          "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+          "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は市況メモである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "指数 -2.8%の背景と金利 +0.25ptの確度が完全にはそろっていない。",
+          "decisionTradeoff": "指数 -2.8%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "securities-market-advisory-市況メモ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は国内株 62%で副作用を確認する。",
+          "npcDialogue": "先輩:「市況メモを読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+          "workMaterial": "市況メモ\n- 指数 -2.8%\n- 金利 +0.25pt\n- 判断対象: 市況メモ",
+          "decisionPrompt": "securities-market-advisory-市況メモ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "指数 -2.8%を重く見て、当日中に前へ進める",
+              "text": "指数 -2.8%を重く見て、当日中に前へ進める。材料は市況メモ、指数 -2.8%、金利 +0.25pt。",
+              "immediateFeedback": "市況メモに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 2,
+                "securities_market_advisory_risk": -1,
+                "securities_market_advisory_speed": 2,
+                "securities_market_advisory_value": -1,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、市況メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "市況メモの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は指数 -2.8%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "市況メモの指数 -2.8%と金利 +0.25ptを突き合わせ、条件付きで進める",
+              "text": "市況メモの指数 -2.8%と金利 +0.25ptを突き合わせ、条件付きで進める。材料は市況メモ、指数 -2.8%、金利 +0.25pt。",
+              "immediateFeedback": "市況メモに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": 1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、市況メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "市況メモの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は指数 -2.8%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "金利 +0.25ptの不確実性を理由に、判断範囲を絞る",
+              "text": "金利 +0.25ptの不確実性を理由に、判断範囲を絞る。材料は市況メモ、指数 -2.8%、金利 +0.25pt。",
+              "immediateFeedback": "市況メモに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": -1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": -1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": -1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、市況メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "市況メモの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は指数 -2.8%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "securities-market-advisory-市況メモ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "securities-market-advisory-市況メモ判断",
+            "roleSpecificMaterials": [
+              "市況メモ",
+              "判断対象: 市況メモ"
+            ],
+            "roleSpecificMetrics": [
+              "指数 -2.8%",
+              "金利 +0.25pt"
+            ],
+            "roleSpecificFailureRisk": "市況メモを読まず、指数 -2.8%か金利 +0.25ptのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "指数 -2.8%と金利 +0.25ptを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "市況メモ、指数 -2.8%、金利 +0.25ptを判断の主役にしている。",
+            "kernelConnection": "市況メモをsecurities-market-advisory-市況メモ判断へ接続する。"
+          }
+        },
+        {
+          "id": "securities-market-advisory-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "保有明細",
+          "openingHook": "10:40。保有明細に国内株 62%と含み損 -9%が並んでいる。",
+          "context": "証券営業/マーケット提案として保有明細を確認する。国内株 62%、含み損 -9%が今日の判断材料になる。",
+          "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、保有明細を読んで次の作業判断を残す。",
+          "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+          "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は保有明細である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "国内株 62%の背景と含み損 -9%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "国内株 62%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "securities-market-advisory-保有明細判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は投資期間 5年で副作用を確認する。",
+          "npcDialogue": "先輩:「保有明細を読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+          "workMaterial": "保有明細\n- 国内株 62%\n- 含み損 -9%\n- 判断対象: 保有明細",
+          "decisionPrompt": "securities-market-advisory-保有明細判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "国内株 62%を重く見て、当日中に前へ進める",
+              "text": "国内株 62%を重く見て、当日中に前へ進める。材料は保有明細、国内株 62%、含み損 -9%。",
+              "immediateFeedback": "保有明細に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 2,
+                "securities_market_advisory_risk": -1,
+                "securities_market_advisory_speed": 2,
+                "securities_market_advisory_value": -1,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、保有明細と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保有明細の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は国内株 62%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "保有明細の国内株 62%と含み損 -9%を突き合わせ、条件付きで進める",
+              "text": "保有明細の国内株 62%と含み損 -9%を突き合わせ、条件付きで進める。材料は保有明細、国内株 62%、含み損 -9%。",
+              "immediateFeedback": "保有明細に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": 1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、保有明細と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保有明細の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は国内株 62%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "含み損 -9%の不確実性を理由に、判断範囲を絞る",
+              "text": "含み損 -9%の不確実性を理由に、判断範囲を絞る。材料は保有明細、国内株 62%、含み損 -9%。",
+              "immediateFeedback": "保有明細に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": -1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": -1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": -1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、保有明細と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "保有明細の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は国内株 62%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "securities-market-advisory-保有明細判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "securities-market-advisory-保有明細判断",
+            "roleSpecificMaterials": [
+              "保有明細",
+              "判断対象: 保有明細"
+            ],
+            "roleSpecificMetrics": [
+              "国内株 62%",
+              "含み損 -9%"
+            ],
+            "roleSpecificFailureRisk": "保有明細を読まず、国内株 62%か含み損 -9%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "国内株 62%と含み損 -9%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "保有明細、国内株 62%、含み損 -9%を判断の主役にしている。",
+            "kernelConnection": "保有明細をsecurities-market-advisory-保有明細判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "securities-market-advisory-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "リスク確認",
+          "openingHook": "12:20。リスク確認に投資期間 5年と許容損失 80万円が並んでいる。",
+          "context": "証券営業/マーケット提案としてリスク確認を確認する。投資期間 5年、許容損失 80万円が今日の判断材料になる。",
+          "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、リスク確認を読んで次の作業判断を残す。",
+          "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+          "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はリスク確認である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "投資期間 5年の背景と許容損失 80万円の確度が完全にはそろっていない。",
+          "decisionTradeoff": "投資期間 5年を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "securities-market-advisory-リスク確認判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は分配利回り 3.1%で副作用を確認する。",
+          "npcDialogue": "先輩:「リスク確認を読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+          "workMaterial": "リスク確認\n- 投資期間 5年\n- 許容損失 80万円\n- 判断対象: リスク確認",
+          "decisionPrompt": "securities-market-advisory-リスク確認判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "投資期間 5年を重く見て、当日中に前へ進める",
+              "text": "投資期間 5年を重く見て、当日中に前へ進める。材料はリスク確認、投資期間 5年、許容損失 80万円。",
+              "immediateFeedback": "リスク確認に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 2,
+                "securities_market_advisory_risk": -1,
+                "securities_market_advisory_speed": 2,
+                "securities_market_advisory_value": -1,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、リスク確認と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リスク確認の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は投資期間 5年の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "リスク確認の投資期間 5年と許容損失 80万円を突き合わせ、条件付きで進める",
+              "text": "リスク確認の投資期間 5年と許容損失 80万円を突き合わせ、条件付きで進める。材料はリスク確認、投資期間 5年、許容損失 80万円。",
+              "immediateFeedback": "リスク確認に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": 1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、リスク確認と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リスク確認の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は投資期間 5年の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "許容損失 80万円の不確実性を理由に、判断範囲を絞る",
+              "text": "許容損失 80万円の不確実性を理由に、判断範囲を絞る。材料はリスク確認、投資期間 5年、許容損失 80万円。",
+              "immediateFeedback": "リスク確認に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": -1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": -1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": -1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、リスク確認と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リスク確認の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は投資期間 5年の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "securities-market-advisory-リスク確認判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "securities-market-advisory-リスク確認判断",
+            "roleSpecificMaterials": [
+              "リスク確認",
+              "判断対象: リスク確認"
+            ],
+            "roleSpecificMetrics": [
+              "投資期間 5年",
+              "許容損失 80万円"
+            ],
+            "roleSpecificFailureRisk": "リスク確認を読まず、投資期間 5年か許容損失 80万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "投資期間 5年と許容損失 80万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "リスク確認、投資期間 5年、許容損失 80万円を判断の主役にしている。",
+            "kernelConnection": "リスク確認をsecurities-market-advisory-リスク確認判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "securities-market-advisory-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "商品メモ",
+          "openingHook": "14:15。商品メモに分配利回り 3.1%と為替ヘッジ なしが並んでいる。",
+          "context": "証券営業/マーケット提案として商品メモを確認する。分配利回り 3.1%、為替ヘッジ なしが今日の判断材料になる。",
+          "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、商品メモを読んで次の作業判断を残す。",
+          "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+          "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は商品メモである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "分配利回り 3.1%の背景と為替ヘッジ なしの確度が完全にはそろっていない。",
+          "decisionTradeoff": "分配利回り 3.1%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "securities-market-advisory-商品メモ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は入替 20%で副作用を確認する。",
+          "npcDialogue": "先輩:「商品メモを読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+          "workMaterial": "商品メモ\n- 分配利回り 3.1%\n- 為替ヘッジ なし\n- 判断対象: 商品メモ",
+          "decisionPrompt": "securities-market-advisory-商品メモ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "分配利回り 3.1%を重く見て、当日中に前へ進める",
+              "text": "分配利回り 3.1%を重く見て、当日中に前へ進める。材料は商品メモ、分配利回り 3.1%、為替ヘッジ なし。",
+              "immediateFeedback": "商品メモに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 2,
+                "securities_market_advisory_risk": -1,
+                "securities_market_advisory_speed": 2,
+                "securities_market_advisory_value": -1,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、商品メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "商品メモの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は分配利回り 3.1%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "商品メモの分配利回り 3.1%と為替ヘッジ なしを突き合わせ、条件付きで進める",
+              "text": "商品メモの分配利回り 3.1%と為替ヘッジ なしを突き合わせ、条件付きで進める。材料は商品メモ、分配利回り 3.1%、為替ヘッジ なし。",
+              "immediateFeedback": "商品メモに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": 1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、商品メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "商品メモの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は分配利回り 3.1%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "為替ヘッジ なしの不確実性を理由に、判断範囲を絞る",
+              "text": "為替ヘッジ なしの不確実性を理由に、判断範囲を絞る。材料は商品メモ、分配利回り 3.1%、為替ヘッジ なし。",
+              "immediateFeedback": "商品メモに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": -1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": -1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": -1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、商品メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "商品メモの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は分配利回り 3.1%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "securities-market-advisory-商品メモ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "securities-market-advisory-商品メモ判断",
+            "roleSpecificMaterials": [
+              "商品メモ",
+              "判断対象: 商品メモ"
+            ],
+            "roleSpecificMetrics": [
+              "分配利回り 3.1%",
+              "為替ヘッジ なし"
+            ],
+            "roleSpecificFailureRisk": "商品メモを読まず、分配利回り 3.1%か為替ヘッジ なしのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "分配利回り 3.1%と為替ヘッジ なしを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "商品メモ、分配利回り 3.1%、為替ヘッジ なしを判断の主役にしている。",
+            "kernelConnection": "商品メモをsecurities-market-advisory-商品メモ判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "securities-market-advisory-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "提案記録",
+          "openingHook": "16:35。提案記録に入替 20%と説明期限 16:00が並んでいる。",
+          "context": "証券営業/マーケット提案として提案記録を確認する。入替 20%、説明期限 16:00が今日の判断材料になる。",
+          "content": "市況・顧客保有資産・リスクを投資提案へ変換するため、提案記録を読んで次の作業判断を残す。",
+          "roleSpecificContext": "証券営業/マーケット提案は市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+          "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は提案記録である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "入替 20%の背景と説明期限 16:00の確度が完全にはそろっていない。",
+          "decisionTradeoff": "入替 20%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "securities-market-advisory-提案記録判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「提案記録を読まずに進めると、証券営業/マーケット提案の判断ではなくなる」",
+          "workMaterial": "提案記録\n- 入替 20%\n- 説明期限 16:00\n- 判断対象: 提案記録",
+          "decisionPrompt": "securities-market-advisory-提案記録判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "入替 20%を重く見て、当日中に前へ進める",
+              "text": "入替 20%を重く見て、当日中に前へ進める。材料は提案記録、入替 20%、説明期限 16:00。",
+              "immediateFeedback": "提案記録に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 2,
+                "securities_market_advisory_risk": -1,
+                "securities_market_advisory_speed": 2,
+                "securities_market_advisory_value": -1,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、提案記録と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "提案記録の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は入替 20%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "提案記録の入替 20%と説明期限 16:00を突き合わせ、条件付きで進める",
+              "text": "提案記録の入替 20%と説明期限 16:00を突き合わせ、条件付きで進める。材料は提案記録、入替 20%、説明期限 16:00。",
+              "immediateFeedback": "提案記録に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": 1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": 1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": 1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、提案記録と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "提案記録の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は入替 20%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "説明期限 16:00の不確実性を理由に、判断範囲を絞る",
+              "text": "説明期限 16:00の不確実性を理由に、判断範囲を絞る。材料は提案記録、入替 20%、説明期限 16:00。",
+              "immediateFeedback": "提案記録に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "証券営業/マーケット提案で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "securities_market_advisory_evidence": -1,
+                "securities_market_advisory_risk": 2,
+                "securities_market_advisory_speed": -1,
+                "securities_market_advisory_value": 2,
+                "securities_market_advisory_feasibility": -1
+              },
+              "misconceptionEffect": "証券営業/マーケット提案は印象ではなく、提案記録と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "提案記録の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は入替 20%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "securities-market-advisory-提案記録判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "営業系",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "securities-market-advisory-提案記録判断",
+            "roleSpecificMaterials": [
+              "提案記録",
+              "判断対象: 提案記録"
+            ],
+            "roleSpecificMetrics": [
+              "入替 20%",
+              "説明期限 16:00"
+            ],
+            "roleSpecificFailureRisk": "提案記録を読まず、入替 20%か説明期限 16:00のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "入替 20%と説明期限 16:00を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "提案記録、入替 20%、説明期限 16:00を判断の主役にしている。",
+            "kernelConnection": "提案記録をsecurities-market-advisory-提案記録判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "証券営業/マーケット提案の材料翻訳型",
+      "strengths": [
+        "証券営業/マーケット提案の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "securities_market_advisory_evidence",
+        "securities_market_advisory_risk"
+      ],
+      "valuedMeters": [
+        "securities_market_advisory_evidence"
+      ],
+      "sacrificedMeters": [
+        "securities_market_advisory_speed"
+      ],
+      "roleRealityReveal": "証券営業/マーケット提案は、市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "証券営業/マーケット提案の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "証券営業/マーケット提案の推進型",
+      "strengths": [
+        "証券営業/マーケット提案の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "securities_market_advisory_risk",
+        "securities_market_advisory_speed"
+      ],
+      "valuedMeters": [
+        "securities_market_advisory_risk"
+      ],
+      "sacrificedMeters": [
+        "securities_market_advisory_value"
+      ],
+      "roleRealityReveal": "証券営業/マーケット提案は、市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "証券営業/マーケット提案の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "証券営業/マーケット提案の安全設計型",
+      "strengths": [
+        "証券営業/マーケット提案の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "securities_market_advisory_speed",
+        "securities_market_advisory_value"
+      ],
+      "valuedMeters": [
+        "securities_market_advisory_speed"
+      ],
+      "sacrificedMeters": [
+        "securities_market_advisory_feasibility"
+      ],
+      "roleRealityReveal": "証券営業/マーケット提案は、市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "証券営業/マーケット提案の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "証券営業/マーケット提案は、市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "証券営業/マーケット提案として、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "securities-market-advisory_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "securities_market_advisory_evidence_vs_securities_market_advisory_risk",
+      "securities_market_advisory_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "市況・顧客保有資産・リスクを投資提案へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "securities_market_advisory_evidence",
+      "label": "evidence",
+      "description": "証券営業/マーケット提案のevidence判断"
+    },
+    {
+      "key": "securities_market_advisory_risk",
+      "label": "risk",
+      "description": "証券営業/マーケット提案のrisk判断"
+    },
+    {
+      "key": "securities_market_advisory_speed",
+      "label": "speed",
+      "description": "証券営業/マーケット提案のspeed判断"
+    },
+    {
+      "key": "securities_market_advisory_value",
+      "label": "value",
+      "description": "証券営業/マーケット提案のvalue判断"
+    },
+    {
+      "key": "securities_market_advisory_feasibility",
+      "label": "feasibility",
+      "description": "証券営業/マーケット提案のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "証券営業/マーケット提案の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "securities_market_advisory_evidence",
+      "securities_market_advisory_risk",
+      "securities_market_advisory_speed",
+      "securities_market_advisory_value",
+      "securities_market_advisory_feasibility"
+    ]
+  },
+  "roleCoreFriction": "市況・顧客保有資産・リスクを投資提案へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "証券営業/マーケット提案は会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "証券営業/マーケット提案は、市況・顧客保有資産・リスクを投資提案へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "指数 -2.8%、国内株 62%、投資期間 5年、分配利回り 3.1%、入替 20%、関係者制約、期限",
+    "output": "証券営業/マーケット提案としての判断案、次回確認項目、リスクメモ",
+    "transformation": "市況・顧客保有資産・リスクを投資提案へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "指数 -2.8%",
+      "国内株 62%",
+      "投資期間 5年",
+      "分配利回り 3.1%",
+      "入替 20%"
+    ],
+    "metrics": [
+      "指数 -2.8%",
+      "金利 +0.25pt",
+      "国内株 62%",
+      "含み損 -9%",
+      "投資期間 5年",
+      "許容損失 80万円",
+      "分配利回り 3.1%",
+      "為替ヘッジ なし",
+      "入替 20%",
+      "説明期限 16:00"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "指数 -2.8%、国内株 62%、投資期間 5年と金利 +0.25pt、、含み損 -9%を読まなければ成立しないため。"
+  }
+}

@@ -1,0 +1,2192 @@
+{
+  "id": "retail-ec/store-operations",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "小売/流通/EC",
+  "industrySlug": "retail-ec",
+  "role": "店舗運営/店長候補",
+  "roleSlug": "store-operations",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "人と関わる",
+    "地方就職",
+    "営業系"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 小売/流通/EC 店舗運営/店長候補.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "retail-ec",
+      "store-operations"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "日次売上表"
+    },
+    {
+      "time": "10:35",
+      "label": "シフト表"
+    },
+    {
+      "time": "12:20",
+      "label": "売場点検表"
+    },
+    {
+      "time": "14:05",
+      "label": "クレーム記録"
+    },
+    {
+      "time": "16:25",
+      "label": "閉店後振返り表"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "日次売上表"
+    },
+    {
+      "time": "10:35",
+      "label": "シフト表"
+    },
+    {
+      "time": "12:20",
+      "label": "売場点検表"
+    },
+    {
+      "time": "14:05",
+      "label": "クレーム記録"
+    },
+    {
+      "time": "16:25",
+      "label": "閉店後振返り表"
+    }
+  ],
+  "sceneList": [
+    "store-operations-01",
+    "store-operations-02",
+    "store-operations-03",
+    "store-operations-04",
+    "store-operations-05"
+  ],
+  "meta": {
+    "title": "店舗運営/店長候補",
+    "industry": "小売/流通/EC",
+    "role": "店舗運営/店長候補",
+    "duration_minutes": 18,
+    "description": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "store-operations-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "日次売上表",
+      "openingHook": "09:10。日次売上表に売上 128万円と前年比 94%が並んでいる。",
+      "context": "店舗運営/店長候補として日次売上表を確認する。売上 128万円、前年比 94%が今日の判断材料になる。",
+      "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、日次売上表を読んで重点売場を選ぶ。",
+      "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+      "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は日次売上表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "売上 128万円の背景と前年比 94%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "売上 128万円を重く見るほど、前年比 94%や別の制約を犠牲にする。",
+      "consequenceHook": "store-operations-売上 128万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次はシフト表で副作用を確認する。",
+      "npcDialogue": "先輩:「日次売上表を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+      "workMaterial": "日次売上表\n- 売上 128万円\n- 前年比 94%\n- 判断対象: 日次売上表",
+      "decisionPrompt": "store-operations-売上 128万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "売上 128万円を優先し、当日中に日次売上表の結論を出す",
+          "text": "売上 128万円を優先し、当日中に日次売上表の結論を出す。材料は売上 128万円、前年比 94%。",
+          "immediateFeedback": "売上 128万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 2,
+            "store_operations_risk": -1,
+            "store_operations_speed": 2,
+            "store_operations_value": -1,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は印象ではなく、売上 128万円と前年比 94%を読んで判断する。",
+          "studentFeedback": {
+            "good": "売上 128万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は前年比 94%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "売上 128万円と前年比 94%を突き合わせ、条件付きで進める",
+          "text": "売上 128万円と前年比 94%を突き合わせ、条件付きで進める。材料は売上 128万円、前年比 94%。",
+          "immediateFeedback": "日次売上表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 1,
+            "store_operations_risk": 2,
+            "store_operations_speed": 1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "売上 128万円と前年比 94%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は日次売上表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "前年比 94%の制約を重く見て、判断範囲を絞る",
+          "text": "前年比 94%の制約を重く見て、判断範囲を絞る。材料は売上 128万円、前年比 94%。",
+          "immediateFeedback": "前年比 94%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": -1,
+            "store_operations_risk": 2,
+            "store_operations_speed": -1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": -1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、売上 128万円と前年比 94%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "前年比 94%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は売上 128万円を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "store-operations-売上 128万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "地方就職",
+          "営業系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "store-operations-売上 128万円判断",
+        "roleSpecificMaterials": [
+          "日次売上表",
+          "判断対象: 日次売上表"
+        ],
+        "roleSpecificMetrics": [
+          "売上 128万円",
+          "前年比 94%"
+        ],
+        "roleSpecificFailureRisk": "日次売上表を読まず、売上 128万円か前年比 94%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "売上 128万円と前年比 94%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "日次売上表、売上 128万円、前年比 94%を判断の主役にしている。",
+        "kernelConnection": "日次売上表をstore-operations-売上 128万円判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "store-operations-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "シフト表",
+      "openingHook": "10:35。シフト表に欠員 2名とピーク 14時が並んでいる。",
+      "context": "店舗運営/店長候補としてシフト表を確認する。欠員 2名、ピーク 14時が今日の判断材料になる。",
+      "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、シフト表を読んで配置を組み替える。",
+      "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+      "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料はシフト表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "欠員 2名の背景とピーク 14時の確度が完全にはそろっていない。",
+      "decisionTradeoff": "欠員 2名を重く見るほど、ピーク 14時や別の制約を犠牲にする。",
+      "consequenceHook": "store-operations-欠員 2名判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は売場点検表で副作用を確認する。",
+      "npcDialogue": "先輩:「シフト表を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+      "workMaterial": "シフト表\n- 欠員 2名\n- ピーク 14時\n- 判断対象: シフト表",
+      "decisionPrompt": "store-operations-欠員 2名判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "欠員 2名を優先し、当日中にシフト表の結論を出す",
+          "text": "欠員 2名を優先し、当日中にシフト表の結論を出す。材料は欠員 2名、ピーク 14時。",
+          "immediateFeedback": "欠員 2名に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 2,
+            "store_operations_risk": -1,
+            "store_operations_speed": 2,
+            "store_operations_value": -1,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は印象ではなく、欠員 2名とピーク 14時を読んで判断する。",
+          "studentFeedback": {
+            "good": "欠員 2名の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はピーク 14時の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "欠員 2名とピーク 14時を突き合わせ、条件付きで進める",
+          "text": "欠員 2名とピーク 14時を突き合わせ、条件付きで進める。材料は欠員 2名、ピーク 14時。",
+          "immediateFeedback": "シフト表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 1,
+            "store_operations_risk": 2,
+            "store_operations_speed": 1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "欠員 2名とピーク 14時を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はシフト表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "ピーク 14時の制約を重く見て、判断範囲を絞る",
+          "text": "ピーク 14時の制約を重く見て、判断範囲を絞る。材料は欠員 2名、ピーク 14時。",
+          "immediateFeedback": "ピーク 14時に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": -1,
+            "store_operations_risk": 2,
+            "store_operations_speed": -1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": -1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、欠員 2名とピーク 14時の副作用まで読む。",
+          "studentFeedback": {
+            "good": "ピーク 14時の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は欠員 2名を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "store-operations-欠員 2名判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "地方就職",
+          "営業系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "store-operations-欠員 2名判断",
+        "roleSpecificMaterials": [
+          "シフト表",
+          "判断対象: シフト表"
+        ],
+        "roleSpecificMetrics": [
+          "欠員 2名",
+          "ピーク 14時"
+        ],
+        "roleSpecificFailureRisk": "シフト表を読まず、欠員 2名かピーク 14時のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "欠員 2名とピーク 14時を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "シフト表、欠員 2名、ピーク 14時を判断の主役にしている。",
+        "kernelConnection": "シフト表をstore-operations-欠員 2名判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "store-operations-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "売場点検表",
+      "openingHook": "12:20。売場点検表に欠品 18SKUと乱れ棚 4列が並んでいる。",
+      "context": "店舗運営/店長候補として売場点検表を確認する。欠品 18SKU、乱れ棚 4列が今日の判断材料になる。",
+      "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、売場点検表を読んで補充順を決める。",
+      "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+      "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は売場点検表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "欠品 18SKUの背景と乱れ棚 4列の確度が完全にはそろっていない。",
+      "decisionTradeoff": "欠品 18SKUを重く見るほど、乱れ棚 4列や別の制約を犠牲にする。",
+      "consequenceHook": "store-operations-欠品 18SKU判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次はクレーム記録で副作用を確認する。",
+      "npcDialogue": "先輩:「売場点検表を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+      "workMaterial": "売場点検表\n- 欠品 18SKU\n- 乱れ棚 4列\n- 判断対象: 売場点検表",
+      "decisionPrompt": "store-operations-欠品 18SKU判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "欠品 18SKUを優先し、当日中に売場点検表の結論を出す",
+          "text": "欠品 18SKUを優先し、当日中に売場点検表の結論を出す。材料は欠品 18SKU、乱れ棚 4列。",
+          "immediateFeedback": "欠品 18SKUに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 2,
+            "store_operations_risk": -1,
+            "store_operations_speed": 2,
+            "store_operations_value": -1,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は印象ではなく、欠品 18SKUと乱れ棚 4列を読んで判断する。",
+          "studentFeedback": {
+            "good": "欠品 18SKUの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は乱れ棚 4列の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "欠品 18SKUと乱れ棚 4列を突き合わせ、条件付きで進める",
+          "text": "欠品 18SKUと乱れ棚 4列を突き合わせ、条件付きで進める。材料は欠品 18SKU、乱れ棚 4列。",
+          "immediateFeedback": "売場点検表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 1,
+            "store_operations_risk": 2,
+            "store_operations_speed": 1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "欠品 18SKUと乱れ棚 4列を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は売場点検表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "乱れ棚 4列の制約を重く見て、判断範囲を絞る",
+          "text": "乱れ棚 4列の制約を重く見て、判断範囲を絞る。材料は欠品 18SKU、乱れ棚 4列。",
+          "immediateFeedback": "乱れ棚 4列に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": -1,
+            "store_operations_risk": 2,
+            "store_operations_speed": -1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": -1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、欠品 18SKUと乱れ棚 4列の副作用まで読む。",
+          "studentFeedback": {
+            "good": "乱れ棚 4列の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は欠品 18SKUを抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "store-operations-欠品 18SKU判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "地方就職",
+          "営業系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "store-operations-欠品 18SKU判断",
+        "roleSpecificMaterials": [
+          "売場点検表",
+          "判断対象: 売場点検表"
+        ],
+        "roleSpecificMetrics": [
+          "欠品 18SKU",
+          "乱れ棚 4列"
+        ],
+        "roleSpecificFailureRisk": "売場点検表を読まず、欠品 18SKUか乱れ棚 4列のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "欠品 18SKUと乱れ棚 4列を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "売場点検表、欠品 18SKU、乱れ棚 4列を判断の主役にしている。",
+        "kernelConnection": "売場点検表をstore-operations-欠品 18SKU判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "store-operations-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "クレーム記録",
+      "openingHook": "14:05。クレーム記録に待ち時間 12分と苦情 6件が並んでいる。",
+      "context": "店舗運営/店長候補としてクレーム記録を確認する。待ち時間 12分、苦情 6件が今日の判断材料になる。",
+      "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、クレーム記録を読んで改善指示を出す。",
+      "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+      "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料はクレーム記録である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "待ち時間 12分の背景と苦情 6件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "待ち時間 12分を重く見るほど、苦情 6件や別の制約を犠牲にする。",
+      "consequenceHook": "store-operations-待ち時間 12分判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は閉店後振返り表で副作用を確認する。",
+      "npcDialogue": "先輩:「クレーム記録を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+      "workMaterial": "クレーム記録\n- 待ち時間 12分\n- 苦情 6件\n- 判断対象: クレーム記録",
+      "decisionPrompt": "store-operations-待ち時間 12分判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "待ち時間 12分を優先し、当日中にクレーム記録の結論を出す",
+          "text": "待ち時間 12分を優先し、当日中にクレーム記録の結論を出す。材料は待ち時間 12分、苦情 6件。",
+          "immediateFeedback": "待ち時間 12分に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 2,
+            "store_operations_risk": -1,
+            "store_operations_speed": 2,
+            "store_operations_value": -1,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は印象ではなく、待ち時間 12分と苦情 6件を読んで判断する。",
+          "studentFeedback": {
+            "good": "待ち時間 12分の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は苦情 6件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "待ち時間 12分と苦情 6件を突き合わせ、条件付きで進める",
+          "text": "待ち時間 12分と苦情 6件を突き合わせ、条件付きで進める。材料は待ち時間 12分、苦情 6件。",
+          "immediateFeedback": "クレーム記録に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 1,
+            "store_operations_risk": 2,
+            "store_operations_speed": 1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "待ち時間 12分と苦情 6件を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はクレーム記録の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "苦情 6件の制約を重く見て、判断範囲を絞る",
+          "text": "苦情 6件の制約を重く見て、判断範囲を絞る。材料は待ち時間 12分、苦情 6件。",
+          "immediateFeedback": "苦情 6件に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": -1,
+            "store_operations_risk": 2,
+            "store_operations_speed": -1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": -1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、待ち時間 12分と苦情 6件の副作用まで読む。",
+          "studentFeedback": {
+            "good": "苦情 6件の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は待ち時間 12分を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "store-operations-待ち時間 12分判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "地方就職",
+          "営業系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "store-operations-待ち時間 12分判断",
+        "roleSpecificMaterials": [
+          "クレーム記録",
+          "判断対象: クレーム記録"
+        ],
+        "roleSpecificMetrics": [
+          "待ち時間 12分",
+          "苦情 6件"
+        ],
+        "roleSpecificFailureRisk": "クレーム記録を読まず、待ち時間 12分か苦情 6件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "待ち時間 12分と苦情 6件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "クレーム記録、待ち時間 12分、苦情 6件を判断の主役にしている。",
+        "kernelConnection": "クレーム記録をstore-operations-待ち時間 12分判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "store-operations-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "閉店後振返り表",
+      "openingHook": "16:25。閉店後振返り表に目標差 8万円と残業 3.5時間が並んでいる。",
+      "context": "店舗運営/店長候補として閉店後振返り表を確認する。目標差 8万円、残業 3.5時間が今日の判断材料になる。",
+      "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、閉店後振返り表を読んで翌日課題を残す。",
+      "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+      "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は閉店後振返り表である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "目標差 8万円の背景と残業 3.5時間の確度が完全にはそろっていない。",
+      "decisionTradeoff": "目標差 8万円を重く見るほど、残業 3.5時間や別の制約を犠牲にする。",
+      "consequenceHook": "store-operations-目標差 8万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「閉店後振返り表を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+      "workMaterial": "閉店後振返り表\n- 目標差 8万円\n- 残業 3.5時間\n- 判断対象: 閉店後振返り表",
+      "decisionPrompt": "store-operations-目標差 8万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "目標差 8万円を優先し、当日中に閉店後振返り表の結論を出す",
+          "text": "目標差 8万円を優先し、当日中に閉店後振返り表の結論を出す。材料は目標差 8万円、残業 3.5時間。",
+          "immediateFeedback": "目標差 8万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 2,
+            "store_operations_risk": -1,
+            "store_operations_speed": 2,
+            "store_operations_value": -1,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は印象ではなく、目標差 8万円と残業 3.5時間を読んで判断する。",
+          "studentFeedback": {
+            "good": "目標差 8万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は残業 3.5時間の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "目標差 8万円と残業 3.5時間を突き合わせ、条件付きで進める",
+          "text": "目標差 8万円と残業 3.5時間を突き合わせ、条件付きで進める。材料は目標差 8万円、残業 3.5時間。",
+          "immediateFeedback": "閉店後振返り表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": 1,
+            "store_operations_risk": 2,
+            "store_operations_speed": 1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": 1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "目標差 8万円と残業 3.5時間を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は閉店後振返り表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "残業 3.5時間の制約を重く見て、判断範囲を絞る",
+          "text": "残業 3.5時間の制約を重く見て、判断範囲を絞る。材料は目標差 8万円、残業 3.5時間。",
+          "immediateFeedback": "残業 3.5時間に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "store_operations_evidence": -1,
+            "store_operations_risk": 2,
+            "store_operations_speed": -1,
+            "store_operations_value": 2,
+            "store_operations_feasibility": -1
+          },
+          "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、目標差 8万円と残業 3.5時間の副作用まで読む。",
+          "studentFeedback": {
+            "good": "残業 3.5時間の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は目標差 8万円を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "store-operations-目標差 8万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "地方就職",
+          "営業系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "store-operations-目標差 8万円判断",
+        "roleSpecificMaterials": [
+          "閉店後振返り表",
+          "判断対象: 閉店後振返り表"
+        ],
+        "roleSpecificMetrics": [
+          "目標差 8万円",
+          "残業 3.5時間"
+        ],
+        "roleSpecificFailureRisk": "閉店後振返り表を読まず、目標差 8万円か残業 3.5時間のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "目標差 8万円と残業 3.5時間を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "閉店後振返り表、目標差 8万円、残業 3.5時間を判断の主役にしている。",
+        "kernelConnection": "閉店後振返り表をstore-operations-目標差 8万円判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。店舗運営/店長候補として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "store-operations-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "日次売上表",
+          "openingHook": "09:10。日次売上表に売上 128万円と前年比 94%が並んでいる。",
+          "context": "店舗運営/店長候補として日次売上表を確認する。売上 128万円、前年比 94%が今日の判断材料になる。",
+          "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、日次売上表を読んで重点売場を選ぶ。",
+          "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+          "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は日次売上表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "売上 128万円の背景と前年比 94%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "売上 128万円を重く見るほど、前年比 94%や別の制約を犠牲にする。",
+          "consequenceHook": "store-operations-売上 128万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次はシフト表で副作用を確認する。",
+          "npcDialogue": "先輩:「日次売上表を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+          "workMaterial": "日次売上表\n- 売上 128万円\n- 前年比 94%\n- 判断対象: 日次売上表",
+          "decisionPrompt": "store-operations-売上 128万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "売上 128万円を優先し、当日中に日次売上表の結論を出す",
+              "text": "売上 128万円を優先し、当日中に日次売上表の結論を出す。材料は売上 128万円、前年比 94%。",
+              "immediateFeedback": "売上 128万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 2,
+                "store_operations_risk": -1,
+                "store_operations_speed": 2,
+                "store_operations_value": -1,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は印象ではなく、売上 128万円と前年比 94%を読んで判断する。",
+              "studentFeedback": {
+                "good": "売上 128万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は前年比 94%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "売上 128万円と前年比 94%を突き合わせ、条件付きで進める",
+              "text": "売上 128万円と前年比 94%を突き合わせ、条件付きで進める。材料は売上 128万円、前年比 94%。",
+              "immediateFeedback": "日次売上表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 1,
+                "store_operations_risk": 2,
+                "store_operations_speed": 1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "売上 128万円と前年比 94%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は日次売上表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "前年比 94%の制約を重く見て、判断範囲を絞る",
+              "text": "前年比 94%の制約を重く見て、判断範囲を絞る。材料は売上 128万円、前年比 94%。",
+              "immediateFeedback": "前年比 94%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": -1,
+                "store_operations_risk": 2,
+                "store_operations_speed": -1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": -1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、売上 128万円と前年比 94%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "前年比 94%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は売上 128万円を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "store-operations-売上 128万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "地方就職",
+              "営業系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "store-operations-売上 128万円判断",
+            "roleSpecificMaterials": [
+              "日次売上表",
+              "判断対象: 日次売上表"
+            ],
+            "roleSpecificMetrics": [
+              "売上 128万円",
+              "前年比 94%"
+            ],
+            "roleSpecificFailureRisk": "日次売上表を読まず、売上 128万円か前年比 94%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "売上 128万円と前年比 94%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "日次売上表、売上 128万円、前年比 94%を判断の主役にしている。",
+            "kernelConnection": "日次売上表をstore-operations-売上 128万円判断へ接続する。"
+          }
+        },
+        {
+          "id": "store-operations-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "シフト表",
+          "openingHook": "10:35。シフト表に欠員 2名とピーク 14時が並んでいる。",
+          "context": "店舗運営/店長候補としてシフト表を確認する。欠員 2名、ピーク 14時が今日の判断材料になる。",
+          "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、シフト表を読んで配置を組み替える。",
+          "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+          "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料はシフト表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "欠員 2名の背景とピーク 14時の確度が完全にはそろっていない。",
+          "decisionTradeoff": "欠員 2名を重く見るほど、ピーク 14時や別の制約を犠牲にする。",
+          "consequenceHook": "store-operations-欠員 2名判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は売場点検表で副作用を確認する。",
+          "npcDialogue": "先輩:「シフト表を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+          "workMaterial": "シフト表\n- 欠員 2名\n- ピーク 14時\n- 判断対象: シフト表",
+          "decisionPrompt": "store-operations-欠員 2名判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "欠員 2名を優先し、当日中にシフト表の結論を出す",
+              "text": "欠員 2名を優先し、当日中にシフト表の結論を出す。材料は欠員 2名、ピーク 14時。",
+              "immediateFeedback": "欠員 2名に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 2,
+                "store_operations_risk": -1,
+                "store_operations_speed": 2,
+                "store_operations_value": -1,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は印象ではなく、欠員 2名とピーク 14時を読んで判断する。",
+              "studentFeedback": {
+                "good": "欠員 2名の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はピーク 14時の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "欠員 2名とピーク 14時を突き合わせ、条件付きで進める",
+              "text": "欠員 2名とピーク 14時を突き合わせ、条件付きで進める。材料は欠員 2名、ピーク 14時。",
+              "immediateFeedback": "シフト表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 1,
+                "store_operations_risk": 2,
+                "store_operations_speed": 1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "欠員 2名とピーク 14時を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はシフト表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "ピーク 14時の制約を重く見て、判断範囲を絞る",
+              "text": "ピーク 14時の制約を重く見て、判断範囲を絞る。材料は欠員 2名、ピーク 14時。",
+              "immediateFeedback": "ピーク 14時に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": -1,
+                "store_operations_risk": 2,
+                "store_operations_speed": -1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": -1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、欠員 2名とピーク 14時の副作用まで読む。",
+              "studentFeedback": {
+                "good": "ピーク 14時の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は欠員 2名を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "store-operations-欠員 2名判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "地方就職",
+              "営業系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "store-operations-欠員 2名判断",
+            "roleSpecificMaterials": [
+              "シフト表",
+              "判断対象: シフト表"
+            ],
+            "roleSpecificMetrics": [
+              "欠員 2名",
+              "ピーク 14時"
+            ],
+            "roleSpecificFailureRisk": "シフト表を読まず、欠員 2名かピーク 14時のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "欠員 2名とピーク 14時を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "シフト表、欠員 2名、ピーク 14時を判断の主役にしている。",
+            "kernelConnection": "シフト表をstore-operations-欠員 2名判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。店舗運営/店長候補として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "store-operations-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "売場点検表",
+          "openingHook": "12:20。売場点検表に欠品 18SKUと乱れ棚 4列が並んでいる。",
+          "context": "店舗運営/店長候補として売場点検表を確認する。欠品 18SKU、乱れ棚 4列が今日の判断材料になる。",
+          "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、売場点検表を読んで補充順を決める。",
+          "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+          "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は売場点検表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "欠品 18SKUの背景と乱れ棚 4列の確度が完全にはそろっていない。",
+          "decisionTradeoff": "欠品 18SKUを重く見るほど、乱れ棚 4列や別の制約を犠牲にする。",
+          "consequenceHook": "store-operations-欠品 18SKU判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次はクレーム記録で副作用を確認する。",
+          "npcDialogue": "先輩:「売場点検表を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+          "workMaterial": "売場点検表\n- 欠品 18SKU\n- 乱れ棚 4列\n- 判断対象: 売場点検表",
+          "decisionPrompt": "store-operations-欠品 18SKU判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "欠品 18SKUを優先し、当日中に売場点検表の結論を出す",
+              "text": "欠品 18SKUを優先し、当日中に売場点検表の結論を出す。材料は欠品 18SKU、乱れ棚 4列。",
+              "immediateFeedback": "欠品 18SKUに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 2,
+                "store_operations_risk": -1,
+                "store_operations_speed": 2,
+                "store_operations_value": -1,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は印象ではなく、欠品 18SKUと乱れ棚 4列を読んで判断する。",
+              "studentFeedback": {
+                "good": "欠品 18SKUの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は乱れ棚 4列の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "欠品 18SKUと乱れ棚 4列を突き合わせ、条件付きで進める",
+              "text": "欠品 18SKUと乱れ棚 4列を突き合わせ、条件付きで進める。材料は欠品 18SKU、乱れ棚 4列。",
+              "immediateFeedback": "売場点検表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 1,
+                "store_operations_risk": 2,
+                "store_operations_speed": 1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "欠品 18SKUと乱れ棚 4列を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は売場点検表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "乱れ棚 4列の制約を重く見て、判断範囲を絞る",
+              "text": "乱れ棚 4列の制約を重く見て、判断範囲を絞る。材料は欠品 18SKU、乱れ棚 4列。",
+              "immediateFeedback": "乱れ棚 4列に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": -1,
+                "store_operations_risk": 2,
+                "store_operations_speed": -1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": -1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、欠品 18SKUと乱れ棚 4列の副作用まで読む。",
+              "studentFeedback": {
+                "good": "乱れ棚 4列の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は欠品 18SKUを抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "store-operations-欠品 18SKU判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "地方就職",
+              "営業系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "store-operations-欠品 18SKU判断",
+            "roleSpecificMaterials": [
+              "売場点検表",
+              "判断対象: 売場点検表"
+            ],
+            "roleSpecificMetrics": [
+              "欠品 18SKU",
+              "乱れ棚 4列"
+            ],
+            "roleSpecificFailureRisk": "売場点検表を読まず、欠品 18SKUか乱れ棚 4列のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "欠品 18SKUと乱れ棚 4列を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "売場点検表、欠品 18SKU、乱れ棚 4列を判断の主役にしている。",
+            "kernelConnection": "売場点検表をstore-operations-欠品 18SKU判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。店舗運営/店長候補として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "store-operations-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "クレーム記録",
+          "openingHook": "14:05。クレーム記録に待ち時間 12分と苦情 6件が並んでいる。",
+          "context": "店舗運営/店長候補としてクレーム記録を確認する。待ち時間 12分、苦情 6件が今日の判断材料になる。",
+          "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、クレーム記録を読んで改善指示を出す。",
+          "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+          "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料はクレーム記録である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "待ち時間 12分の背景と苦情 6件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "待ち時間 12分を重く見るほど、苦情 6件や別の制約を犠牲にする。",
+          "consequenceHook": "store-operations-待ち時間 12分判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は閉店後振返り表で副作用を確認する。",
+          "npcDialogue": "先輩:「クレーム記録を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+          "workMaterial": "クレーム記録\n- 待ち時間 12分\n- 苦情 6件\n- 判断対象: クレーム記録",
+          "decisionPrompt": "store-operations-待ち時間 12分判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "待ち時間 12分を優先し、当日中にクレーム記録の結論を出す",
+              "text": "待ち時間 12分を優先し、当日中にクレーム記録の結論を出す。材料は待ち時間 12分、苦情 6件。",
+              "immediateFeedback": "待ち時間 12分に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 2,
+                "store_operations_risk": -1,
+                "store_operations_speed": 2,
+                "store_operations_value": -1,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は印象ではなく、待ち時間 12分と苦情 6件を読んで判断する。",
+              "studentFeedback": {
+                "good": "待ち時間 12分の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は苦情 6件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "待ち時間 12分と苦情 6件を突き合わせ、条件付きで進める",
+              "text": "待ち時間 12分と苦情 6件を突き合わせ、条件付きで進める。材料は待ち時間 12分、苦情 6件。",
+              "immediateFeedback": "クレーム記録に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 1,
+                "store_operations_risk": 2,
+                "store_operations_speed": 1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "待ち時間 12分と苦情 6件を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はクレーム記録の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "苦情 6件の制約を重く見て、判断範囲を絞る",
+              "text": "苦情 6件の制約を重く見て、判断範囲を絞る。材料は待ち時間 12分、苦情 6件。",
+              "immediateFeedback": "苦情 6件に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": -1,
+                "store_operations_risk": 2,
+                "store_operations_speed": -1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": -1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、待ち時間 12分と苦情 6件の副作用まで読む。",
+              "studentFeedback": {
+                "good": "苦情 6件の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は待ち時間 12分を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "store-operations-待ち時間 12分判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "地方就職",
+              "営業系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "store-operations-待ち時間 12分判断",
+            "roleSpecificMaterials": [
+              "クレーム記録",
+              "判断対象: クレーム記録"
+            ],
+            "roleSpecificMetrics": [
+              "待ち時間 12分",
+              "苦情 6件"
+            ],
+            "roleSpecificFailureRisk": "クレーム記録を読まず、待ち時間 12分か苦情 6件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "待ち時間 12分と苦情 6件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "クレーム記録、待ち時間 12分、苦情 6件を判断の主役にしている。",
+            "kernelConnection": "クレーム記録をstore-operations-待ち時間 12分判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。店舗運営/店長候補として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "store-operations-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "閉店後振返り表",
+          "openingHook": "16:25。閉店後振返り表に目標差 8万円と残業 3.5時間が並んでいる。",
+          "context": "店舗運営/店長候補として閉店後振返り表を確認する。目標差 8万円、残業 3.5時間が今日の判断材料になる。",
+          "content": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換するため、閉店後振返り表を読んで翌日課題を残す。",
+          "roleSpecificContext": "店舗運営/店長候補は売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する仕事。",
+          "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は閉店後振返り表である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "目標差 8万円の背景と残業 3.5時間の確度が完全にはそろっていない。",
+          "decisionTradeoff": "目標差 8万円を重く見るほど、残業 3.5時間や別の制約を犠牲にする。",
+          "consequenceHook": "store-operations-目標差 8万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「閉店後振返り表を読まずに進めると、店舗運営/店長候補の判断ではなくなる」",
+          "workMaterial": "閉店後振返り表\n- 目標差 8万円\n- 残業 3.5時間\n- 判断対象: 閉店後振返り表",
+          "decisionPrompt": "store-operations-目標差 8万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "目標差 8万円を優先し、当日中に閉店後振返り表の結論を出す",
+              "text": "目標差 8万円を優先し、当日中に閉店後振返り表の結論を出す。材料は目標差 8万円、残業 3.5時間。",
+              "immediateFeedback": "目標差 8万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 2,
+                "store_operations_risk": -1,
+                "store_operations_speed": 2,
+                "store_operations_value": -1,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は印象ではなく、目標差 8万円と残業 3.5時間を読んで判断する。",
+              "studentFeedback": {
+                "good": "目標差 8万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は残業 3.5時間の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "目標差 8万円と残業 3.5時間を突き合わせ、条件付きで進める",
+              "text": "目標差 8万円と残業 3.5時間を突き合わせ、条件付きで進める。材料は目標差 8万円、残業 3.5時間。",
+              "immediateFeedback": "閉店後振返り表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": 1,
+                "store_operations_risk": 2,
+                "store_operations_speed": 1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": 1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "目標差 8万円と残業 3.5時間を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は閉店後振返り表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "残業 3.5時間の制約を重く見て、判断範囲を絞る",
+              "text": "残業 3.5時間の制約を重く見て、判断範囲を絞る。材料は目標差 8万円、残業 3.5時間。",
+              "immediateFeedback": "残業 3.5時間に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "店舗運営/店長候補で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "store_operations_evidence": -1,
+                "store_operations_risk": 2,
+                "store_operations_speed": -1,
+                "store_operations_value": 2,
+                "store_operations_feasibility": -1
+              },
+              "misconceptionEffect": "店舗運営/店長候補は慎重さだけでなく、目標差 8万円と残業 3.5時間の副作用まで読む。",
+              "studentFeedback": {
+                "good": "残業 3.5時間の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は目標差 8万円を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "store-operations-目標差 8万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "地方就職",
+              "営業系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "store-operations-目標差 8万円判断",
+            "roleSpecificMaterials": [
+              "閉店後振返り表",
+              "判断対象: 閉店後振返り表"
+            ],
+            "roleSpecificMetrics": [
+              "目標差 8万円",
+              "残業 3.5時間"
+            ],
+            "roleSpecificFailureRisk": "閉店後振返り表を読まず、目標差 8万円か残業 3.5時間のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "目標差 8万円と残業 3.5時間を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "閉店後振返り表、目標差 8万円、残業 3.5時間を判断の主役にしている。",
+            "kernelConnection": "閉店後振返り表をstore-operations-目標差 8万円判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "store-operations-material-reader",
+      "title": "店舗運営/店長候補の材料読解型",
+      "strengths": [
+        "店舗運営/店長候補の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "store_operations_evidence",
+        "store_operations_risk"
+      ],
+      "valuedMeters": [
+        "store_operations_evidence"
+      ],
+      "sacrificedMeters": [
+        "store_operations_speed"
+      ],
+      "roleRealityReveal": "店舗運営/店長候補は、売上と人員配置を読み、当日の売場と体験を回す判断をする仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "店舗運営/店長候補の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "store-operations-constraint-designer",
+      "title": "店舗運営/店長候補の制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "store_operations_risk",
+        "store_operations_speed"
+      ],
+      "valuedMeters": [
+        "store_operations_risk"
+      ],
+      "sacrificedMeters": [
+        "store_operations_value"
+      ],
+      "roleRealityReveal": "店舗運営/店長候補は、売上と人員配置を読み、当日の売場と体験を回す判断をする仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "店舗運営/店長候補として制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "store-operations-execution-planner",
+      "title": "店舗運営/店長候補の実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "store_operations_speed",
+        "store_operations_value"
+      ],
+      "valuedMeters": [
+        "store_operations_speed"
+      ],
+      "sacrificedMeters": [
+        "store_operations_feasibility"
+      ],
+      "roleRealityReveal": "店舗運営/店長候補は、売上と人員配置を読み、当日の売場と体験を回す判断をする仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "店舗運営/店長候補として実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "店舗運営/店長候補は、売上と人員配置を読み、当日の売場と体験を回す判断をする仕事。",
+    "misconceptionCorrection": "店舗運営/店長候補は印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "店舗運営/店長候補として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "store-operations_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "store_operations_sales_vs_store_operations_staffing",
+      "store_operations_service_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "store_operations_sales",
+      "label": "sales",
+      "description": "店舗運営/店長候補のsales判断"
+    },
+    {
+      "key": "store_operations_staffing",
+      "label": "staffing",
+      "description": "店舗運営/店長候補のstaffing判断"
+    },
+    {
+      "key": "store_operations_service",
+      "label": "service",
+      "description": "店舗運営/店長候補のservice判断"
+    },
+    {
+      "key": "store_operations_inventory",
+      "label": "inventory",
+      "description": "店舗運営/店長候補のinventory判断"
+    },
+    {
+      "key": "store_operations_execution",
+      "label": "execution",
+      "description": "店舗運営/店長候補のexecution判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "店舗運営/店長候補の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "store_operations_sales",
+      "store_operations_staffing",
+      "store_operations_service",
+      "store_operations_inventory",
+      "store_operations_execution"
+    ]
+  },
+  "roleCoreFriction": "売上を追うほど現場負荷が上がり、体験品質と人員制約を読まないと店が回らない葛藤。",
+  "roleMisconception": "店舗運営は接客と現場対応が中心で、売上・人員・売場データの設計は補助的だと思われやすい。",
+  "roleRealityReveal": "店舗運営/店長候補は、売上と人員配置を読み、当日の売場と体験を回す判断をする仕事。",
+  "roleWorkKernel": {
+    "input": "売上 128万円、前年比 94%、欠員 2名、ピーク 14時、欠品 18SKU、乱れ棚 4列、待ち時間 12分、苦情 6件、目標差 8万円、残業 3.5時間",
+    "output": "店舗運営/店長候補としての判断案、次回確認項目、リスクメモ",
+    "transformation": "売上、人員、売場状況を店舗運営の当日指示と改善優先度へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "日次売上表",
+      "シフト表",
+      "売場点検表",
+      "クレーム記録",
+      "閉店後振返り表"
+    ],
+    "metrics": [
+      "売上 128万円",
+      "前年比 94%",
+      "欠員 2名",
+      "ピーク 14時",
+      "欠品 18SKU",
+      "乱れ棚 4列",
+      "待ち時間 12分",
+      "苦情 6件",
+      "目標差 8万円",
+      "残業 3.5時間"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "日次売上表、シフト表、売場点検表と売上 128万円、欠員 2名を読まなければ成立しないため。"
+  }
+}

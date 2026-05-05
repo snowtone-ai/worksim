@@ -44,7 +44,7 @@ export function TaskReview({ scene, onAnswer, answered }: Props) {
         choices={scene.choices}
         answered={answered}
         onAnswer={onAnswer}
-        prompt="どうレビューしますか？"
+        prompt={scene.decisionPrompt ?? 'どうレビューしますか？'}
       />
     </div>
   )

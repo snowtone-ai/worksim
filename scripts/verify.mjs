@@ -9,6 +9,7 @@ const pnpmBin = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm'
 const e2ePort = String(await getFreePort())
 const steps = [
   ['claude-import', ['node', ['scripts/sync-claude-md.mjs']]],
+  ['cbeta-quality', ['node', ['scripts/c-beta/check-cbeta-scenario-quality.mjs']]],
   ['lint', [pnpmBin, ['lint']]],
   ['typecheck', [pnpmBin, ['typecheck']]],
   ['build', [pnpmBin, ['build']]],

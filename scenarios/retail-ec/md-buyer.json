@@ -1,0 +1,2190 @@
+{
+  "id": "retail-ec/md-buyer",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "小売/流通/EC",
+  "industrySlug": "retail-ec",
+  "role": "MD/バイヤー",
+  "roleSlug": "md-buyer",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "企画系",
+    "分析系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 小売/流通/EC MD/バイヤー.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "retail-ec",
+      "md-buyer"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "週次売上表"
+    },
+    {
+      "time": "10:40",
+      "label": "在庫年齢表"
+    },
+    {
+      "time": "12:20",
+      "label": "仕入条件書"
+    },
+    {
+      "time": "14:15",
+      "label": "棚割案"
+    },
+    {
+      "time": "16:35",
+      "label": "投入計画"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "週次売上表"
+    },
+    {
+      "time": "10:40",
+      "label": "在庫年齢表"
+    },
+    {
+      "time": "12:20",
+      "label": "仕入条件書"
+    },
+    {
+      "time": "14:15",
+      "label": "棚割案"
+    },
+    {
+      "time": "16:35",
+      "label": "投入計画"
+    }
+  ],
+  "sceneList": [
+    "md-buyer-01",
+    "md-buyer-02",
+    "md-buyer-03",
+    "md-buyer-04",
+    "md-buyer-05"
+  ],
+  "meta": {
+    "title": "MD/バイヤー",
+    "industry": "小売/流通/EC",
+    "role": "MD/バイヤー",
+    "duration_minutes": 18,
+    "description": "販売実績・粗利・在庫を仕入判断へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "md-buyer-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "週次売上表",
+      "openingHook": "09:10。販売数 840点に粗利率 38%とundefinedが並んでいる。",
+      "context": "MD/バイヤーとして販売数 840点を確認する。粗利率 38%、undefinedが今日の判断材料になる。",
+      "content": "販売実績・粗利・在庫を仕入判断へ変換するため、販売数 840点を読んで次の作業判断を残す。",
+      "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+      "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は販売数 840点である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "粗利率 38%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "粗利率 38%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "md-buyer-販売数 840点判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は滞留 62日で副作用を確認する。",
+      "npcDialogue": "先輩:「販売数 840点を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+      "workMaterial": "週次売上表\n- 販売数 840点\n- 粗利率 38%\n- 判断対象: 週次売上表",
+      "decisionPrompt": "md-buyer-販売数 840点判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "粗利率 38%を重く見て、当日中に前へ進める",
+          "text": "粗利率 38%を重く見て、当日中に前へ進める。材料は販売数 840点、粗利率 38%、undefined。",
+          "immediateFeedback": "販売数 840点に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 2,
+            "md_buyer_risk": -1,
+            "md_buyer_speed": 2,
+            "md_buyer_value": -1,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、販売数 840点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "販売数 840点の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は粗利率 38%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "販売数 840点の粗利率 38%とundefinedを突き合わせ、条件付きで進める",
+          "text": "販売数 840点の粗利率 38%とundefinedを突き合わせ、条件付きで進める。材料は販売数 840点、粗利率 38%、undefined。",
+          "immediateFeedback": "販売数 840点に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": 1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、販売数 840点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "販売数 840点の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は粗利率 38%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は販売数 840点、粗利率 38%、undefined。",
+          "immediateFeedback": "販売数 840点に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": -1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": -1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": -1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、販売数 840点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "販売数 840点の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は粗利率 38%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "md-buyer-販売数 840点判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "md-buyer-販売数 840点判断",
+        "roleSpecificMaterials": [
+          "週次売上表",
+          "判断対象: 週次売上表"
+        ],
+        "roleSpecificMetrics": [
+          "販売数 840点",
+          "粗利率 38%"
+        ],
+        "roleSpecificFailureRisk": "週次売上表を読まず、販売数 840点か粗利率 38%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "販売数 840点と粗利率 38%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "週次売上表、販売数 840点、粗利率 38%を判断の主役にしている。",
+        "kernelConnection": "週次売上表をmd-buyer-販売数 840点判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "md-buyer-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "在庫年齢表",
+      "openingHook": "10:40。滞留 62日に在庫 1,900点とundefinedが並んでいる。",
+      "context": "MD/バイヤーとして滞留 62日を確認する。在庫 1,900点、undefinedが今日の判断材料になる。",
+      "content": "販売実績・粗利・在庫を仕入判断へ変換するため、滞留 62日を読んで次の作業判断を残す。",
+      "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+      "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は滞留 62日である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "在庫 1,900点の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "在庫 1,900点を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "md-buyer-滞留 62日判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は発注 1,200点で副作用を確認する。",
+      "npcDialogue": "先輩:「滞留 62日を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+      "workMaterial": "在庫年齢表\n- 滞留 62日\n- 在庫 1,900点\n- 判断対象: 在庫年齢表",
+      "decisionPrompt": "md-buyer-滞留 62日判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "在庫 1,900点を重く見て、当日中に前へ進める",
+          "text": "在庫 1,900点を重く見て、当日中に前へ進める。材料は滞留 62日、在庫 1,900点、undefined。",
+          "immediateFeedback": "滞留 62日に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 2,
+            "md_buyer_risk": -1,
+            "md_buyer_speed": 2,
+            "md_buyer_value": -1,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、滞留 62日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "滞留 62日の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は在庫 1,900点の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "滞留 62日の在庫 1,900点とundefinedを突き合わせ、条件付きで進める",
+          "text": "滞留 62日の在庫 1,900点とundefinedを突き合わせ、条件付きで進める。材料は滞留 62日、在庫 1,900点、undefined。",
+          "immediateFeedback": "滞留 62日に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": 1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、滞留 62日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "滞留 62日の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は在庫 1,900点の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は滞留 62日、在庫 1,900点、undefined。",
+          "immediateFeedback": "滞留 62日に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": -1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": -1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": -1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、滞留 62日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "滞留 62日の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は在庫 1,900点の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "md-buyer-滞留 62日判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "md-buyer-滞留 62日判断",
+        "roleSpecificMaterials": [
+          "在庫年齢表",
+          "判断対象: 在庫年齢表"
+        ],
+        "roleSpecificMetrics": [
+          "滞留 62日",
+          "在庫 1,900点"
+        ],
+        "roleSpecificFailureRisk": "在庫年齢表を読まず、滞留 62日か在庫 1,900点のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "滞留 62日と在庫 1,900点を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "在庫年齢表、滞留 62日、在庫 1,900点を判断の主役にしている。",
+        "kernelConnection": "在庫年齢表をmd-buyer-滞留 62日判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "md-buyer-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "仕入条件書",
+      "openingHook": "12:20。発注 1,200点に値引率 12%とundefinedが並んでいる。",
+      "context": "MD/バイヤーとして発注 1,200点を確認する。値引率 12%、undefinedが今日の判断材料になる。",
+      "content": "販売実績・粗利・在庫を仕入判断へ変換するため、発注 1,200点を読んで次の作業判断を残す。",
+      "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+      "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は発注 1,200点である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "値引率 12%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "値引率 12%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "md-buyer-発注 1,200点判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は面数 4面で副作用を確認する。",
+      "npcDialogue": "先輩:「発注 1,200点を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+      "workMaterial": "仕入条件書\n- 発注 1,200点\n- 値引率 12%\n- 判断対象: 仕入条件書",
+      "decisionPrompt": "md-buyer-発注 1,200点判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "値引率 12%を重く見て、当日中に前へ進める",
+          "text": "値引率 12%を重く見て、当日中に前へ進める。材料は発注 1,200点、値引率 12%、undefined。",
+          "immediateFeedback": "発注 1,200点に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 2,
+            "md_buyer_risk": -1,
+            "md_buyer_speed": 2,
+            "md_buyer_value": -1,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、発注 1,200点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "発注 1,200点の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は値引率 12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "発注 1,200点の値引率 12%とundefinedを突き合わせ、条件付きで進める",
+          "text": "発注 1,200点の値引率 12%とundefinedを突き合わせ、条件付きで進める。材料は発注 1,200点、値引率 12%、undefined。",
+          "immediateFeedback": "発注 1,200点に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": 1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、発注 1,200点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "発注 1,200点の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は値引率 12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は発注 1,200点、値引率 12%、undefined。",
+          "immediateFeedback": "発注 1,200点に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": -1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": -1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": -1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、発注 1,200点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "発注 1,200点の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は値引率 12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "md-buyer-発注 1,200点判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "md-buyer-発注 1,200点判断",
+        "roleSpecificMaterials": [
+          "仕入条件書",
+          "判断対象: 仕入条件書"
+        ],
+        "roleSpecificMetrics": [
+          "発注 1,200点",
+          "値引率 12%"
+        ],
+        "roleSpecificFailureRisk": "仕入条件書を読まず、発注 1,200点か値引率 12%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "発注 1,200点と値引率 12%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "仕入条件書、発注 1,200点、値引率 12%を判断の主役にしている。",
+        "kernelConnection": "仕入条件書をmd-buyer-発注 1,200点判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "md-buyer-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "棚割案",
+      "openingHook": "14:15。面数 4面に回転率 1.6とundefinedが並んでいる。",
+      "context": "MD/バイヤーとして面数 4面を確認する。回転率 1.6、undefinedが今日の判断材料になる。",
+      "content": "販売実績・粗利・在庫を仕入判断へ変換するため、面数 4面を読んで次の作業判断を残す。",
+      "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+      "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は面数 4面である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "回転率 1.6の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "回転率 1.6を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "md-buyer-面数 4面判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は初回 600点で副作用を確認する。",
+      "npcDialogue": "先輩:「面数 4面を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+      "workMaterial": "棚割案\n- 面数 4面\n- 回転率 1.6\n- 判断対象: 棚割案",
+      "decisionPrompt": "md-buyer-面数 4面判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "回転率 1.6を重く見て、当日中に前へ進める",
+          "text": "回転率 1.6を重く見て、当日中に前へ進める。材料は面数 4面、回転率 1.6、undefined。",
+          "immediateFeedback": "面数 4面に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 2,
+            "md_buyer_risk": -1,
+            "md_buyer_speed": 2,
+            "md_buyer_value": -1,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、面数 4面と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "面数 4面の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は回転率 1.6の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "面数 4面の回転率 1.6とundefinedを突き合わせ、条件付きで進める",
+          "text": "面数 4面の回転率 1.6とundefinedを突き合わせ、条件付きで進める。材料は面数 4面、回転率 1.6、undefined。",
+          "immediateFeedback": "面数 4面に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": 1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、面数 4面と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "面数 4面の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は回転率 1.6の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は面数 4面、回転率 1.6、undefined。",
+          "immediateFeedback": "面数 4面に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": -1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": -1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": -1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、面数 4面と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "面数 4面の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は回転率 1.6の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "md-buyer-面数 4面判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "md-buyer-面数 4面判断",
+        "roleSpecificMaterials": [
+          "棚割案",
+          "判断対象: 棚割案"
+        ],
+        "roleSpecificMetrics": [
+          "面数 4面",
+          "回転率 1.6"
+        ],
+        "roleSpecificFailureRisk": "棚割案を読まず、面数 4面か回転率 1.6のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "面数 4面と回転率 1.6を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "棚割案、面数 4面、回転率 1.6を判断の主役にしている。",
+        "kernelConnection": "棚割案をmd-buyer-面数 4面判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "md-buyer-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "投入計画",
+      "openingHook": "16:35。初回 600点に追加判断 10日後とundefinedが並んでいる。",
+      "context": "MD/バイヤーとして初回 600点を確認する。追加判断 10日後、undefinedが今日の判断材料になる。",
+      "content": "販売実績・粗利・在庫を仕入判断へ変換するため、初回 600点を読んで次の作業判断を残す。",
+      "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+      "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は初回 600点である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "追加判断 10日後の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "追加判断 10日後を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "md-buyer-初回 600点判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「初回 600点を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+      "workMaterial": "投入計画\n- 初回 600点\n- 追加判断 10日後\n- 判断対象: 投入計画",
+      "decisionPrompt": "md-buyer-初回 600点判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "追加判断 10日後を重く見て、当日中に前へ進める",
+          "text": "追加判断 10日後を重く見て、当日中に前へ進める。材料は初回 600点、追加判断 10日後、undefined。",
+          "immediateFeedback": "初回 600点に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 2,
+            "md_buyer_risk": -1,
+            "md_buyer_speed": 2,
+            "md_buyer_value": -1,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、初回 600点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "初回 600点の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は追加判断 10日後の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "初回 600点の追加判断 10日後とundefinedを突き合わせ、条件付きで進める",
+          "text": "初回 600点の追加判断 10日後とundefinedを突き合わせ、条件付きで進める。材料は初回 600点、追加判断 10日後、undefined。",
+          "immediateFeedback": "初回 600点に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": 1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": 1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": 1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、初回 600点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "初回 600点の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は追加判断 10日後の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は初回 600点、追加判断 10日後、undefined。",
+          "immediateFeedback": "初回 600点に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "md_buyer_evidence": -1,
+            "md_buyer_risk": 2,
+            "md_buyer_speed": -1,
+            "md_buyer_value": 2,
+            "md_buyer_feasibility": -1
+          },
+          "misconceptionEffect": "MD/バイヤーは印象ではなく、初回 600点と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "初回 600点の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は追加判断 10日後の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "md-buyer-初回 600点判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "分析系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "md-buyer-初回 600点判断",
+        "roleSpecificMaterials": [
+          "投入計画",
+          "判断対象: 投入計画"
+        ],
+        "roleSpecificMetrics": [
+          "初回 600点",
+          "追加判断 10日後"
+        ],
+        "roleSpecificFailureRisk": "投入計画を読まず、初回 600点か追加判断 10日後のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "初回 600点と追加判断 10日後を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "投入計画、初回 600点、追加判断 10日後を判断の主役にしている。",
+        "kernelConnection": "投入計画をmd-buyer-初回 600点判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "md-buyer-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "週次売上表",
+          "openingHook": "09:10。販売数 840点に粗利率 38%とundefinedが並んでいる。",
+          "context": "MD/バイヤーとして販売数 840点を確認する。粗利率 38%、undefinedが今日の判断材料になる。",
+          "content": "販売実績・粗利・在庫を仕入判断へ変換するため、販売数 840点を読んで次の作業判断を残す。",
+          "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+          "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は販売数 840点である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "粗利率 38%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "粗利率 38%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "md-buyer-販売数 840点判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は滞留 62日で副作用を確認する。",
+          "npcDialogue": "先輩:「販売数 840点を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+          "workMaterial": "週次売上表\n- 販売数 840点\n- 粗利率 38%\n- 判断対象: 週次売上表",
+          "decisionPrompt": "md-buyer-販売数 840点判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "粗利率 38%を重く見て、当日中に前へ進める",
+              "text": "粗利率 38%を重く見て、当日中に前へ進める。材料は販売数 840点、粗利率 38%、undefined。",
+              "immediateFeedback": "販売数 840点に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 2,
+                "md_buyer_risk": -1,
+                "md_buyer_speed": 2,
+                "md_buyer_value": -1,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、販売数 840点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "販売数 840点の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は粗利率 38%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "販売数 840点の粗利率 38%とundefinedを突き合わせ、条件付きで進める",
+              "text": "販売数 840点の粗利率 38%とundefinedを突き合わせ、条件付きで進める。材料は販売数 840点、粗利率 38%、undefined。",
+              "immediateFeedback": "販売数 840点に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": 1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、販売数 840点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "販売数 840点の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は粗利率 38%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は販売数 840点、粗利率 38%、undefined。",
+              "immediateFeedback": "販売数 840点に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": -1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": -1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": -1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、販売数 840点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "販売数 840点の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は粗利率 38%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "md-buyer-販売数 840点判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "md-buyer-販売数 840点判断",
+            "roleSpecificMaterials": [
+              "週次売上表",
+              "判断対象: 週次売上表"
+            ],
+            "roleSpecificMetrics": [
+              "販売数 840点",
+              "粗利率 38%"
+            ],
+            "roleSpecificFailureRisk": "週次売上表を読まず、販売数 840点か粗利率 38%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "販売数 840点と粗利率 38%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "週次売上表、販売数 840点、粗利率 38%を判断の主役にしている。",
+            "kernelConnection": "週次売上表をmd-buyer-販売数 840点判断へ接続する。"
+          }
+        },
+        {
+          "id": "md-buyer-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "在庫年齢表",
+          "openingHook": "10:40。滞留 62日に在庫 1,900点とundefinedが並んでいる。",
+          "context": "MD/バイヤーとして滞留 62日を確認する。在庫 1,900点、undefinedが今日の判断材料になる。",
+          "content": "販売実績・粗利・在庫を仕入判断へ変換するため、滞留 62日を読んで次の作業判断を残す。",
+          "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+          "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は滞留 62日である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "在庫 1,900点の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "在庫 1,900点を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "md-buyer-滞留 62日判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は発注 1,200点で副作用を確認する。",
+          "npcDialogue": "先輩:「滞留 62日を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+          "workMaterial": "在庫年齢表\n- 滞留 62日\n- 在庫 1,900点\n- 判断対象: 在庫年齢表",
+          "decisionPrompt": "md-buyer-滞留 62日判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "在庫 1,900点を重く見て、当日中に前へ進める",
+              "text": "在庫 1,900点を重く見て、当日中に前へ進める。材料は滞留 62日、在庫 1,900点、undefined。",
+              "immediateFeedback": "滞留 62日に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 2,
+                "md_buyer_risk": -1,
+                "md_buyer_speed": 2,
+                "md_buyer_value": -1,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、滞留 62日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "滞留 62日の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は在庫 1,900点の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "滞留 62日の在庫 1,900点とundefinedを突き合わせ、条件付きで進める",
+              "text": "滞留 62日の在庫 1,900点とundefinedを突き合わせ、条件付きで進める。材料は滞留 62日、在庫 1,900点、undefined。",
+              "immediateFeedback": "滞留 62日に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": 1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、滞留 62日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "滞留 62日の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は在庫 1,900点の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は滞留 62日、在庫 1,900点、undefined。",
+              "immediateFeedback": "滞留 62日に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": -1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": -1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": -1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、滞留 62日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "滞留 62日の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は在庫 1,900点の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "md-buyer-滞留 62日判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "md-buyer-滞留 62日判断",
+            "roleSpecificMaterials": [
+              "在庫年齢表",
+              "判断対象: 在庫年齢表"
+            ],
+            "roleSpecificMetrics": [
+              "滞留 62日",
+              "在庫 1,900点"
+            ],
+            "roleSpecificFailureRisk": "在庫年齢表を読まず、滞留 62日か在庫 1,900点のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "滞留 62日と在庫 1,900点を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "在庫年齢表、滞留 62日、在庫 1,900点を判断の主役にしている。",
+            "kernelConnection": "在庫年齢表をmd-buyer-滞留 62日判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "md-buyer-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "仕入条件書",
+          "openingHook": "12:20。発注 1,200点に値引率 12%とundefinedが並んでいる。",
+          "context": "MD/バイヤーとして発注 1,200点を確認する。値引率 12%、undefinedが今日の判断材料になる。",
+          "content": "販売実績・粗利・在庫を仕入判断へ変換するため、発注 1,200点を読んで次の作業判断を残す。",
+          "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+          "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は発注 1,200点である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "値引率 12%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "値引率 12%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "md-buyer-発注 1,200点判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は面数 4面で副作用を確認する。",
+          "npcDialogue": "先輩:「発注 1,200点を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+          "workMaterial": "仕入条件書\n- 発注 1,200点\n- 値引率 12%\n- 判断対象: 仕入条件書",
+          "decisionPrompt": "md-buyer-発注 1,200点判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "値引率 12%を重く見て、当日中に前へ進める",
+              "text": "値引率 12%を重く見て、当日中に前へ進める。材料は発注 1,200点、値引率 12%、undefined。",
+              "immediateFeedback": "発注 1,200点に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 2,
+                "md_buyer_risk": -1,
+                "md_buyer_speed": 2,
+                "md_buyer_value": -1,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、発注 1,200点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "発注 1,200点の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は値引率 12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "発注 1,200点の値引率 12%とundefinedを突き合わせ、条件付きで進める",
+              "text": "発注 1,200点の値引率 12%とundefinedを突き合わせ、条件付きで進める。材料は発注 1,200点、値引率 12%、undefined。",
+              "immediateFeedback": "発注 1,200点に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": 1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、発注 1,200点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "発注 1,200点の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は値引率 12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は発注 1,200点、値引率 12%、undefined。",
+              "immediateFeedback": "発注 1,200点に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": -1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": -1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": -1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、発注 1,200点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "発注 1,200点の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は値引率 12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "md-buyer-発注 1,200点判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "md-buyer-発注 1,200点判断",
+            "roleSpecificMaterials": [
+              "仕入条件書",
+              "判断対象: 仕入条件書"
+            ],
+            "roleSpecificMetrics": [
+              "発注 1,200点",
+              "値引率 12%"
+            ],
+            "roleSpecificFailureRisk": "仕入条件書を読まず、発注 1,200点か値引率 12%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "発注 1,200点と値引率 12%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "仕入条件書、発注 1,200点、値引率 12%を判断の主役にしている。",
+            "kernelConnection": "仕入条件書をmd-buyer-発注 1,200点判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "md-buyer-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "棚割案",
+          "openingHook": "14:15。面数 4面に回転率 1.6とundefinedが並んでいる。",
+          "context": "MD/バイヤーとして面数 4面を確認する。回転率 1.6、undefinedが今日の判断材料になる。",
+          "content": "販売実績・粗利・在庫を仕入判断へ変換するため、面数 4面を読んで次の作業判断を残す。",
+          "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+          "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は面数 4面である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "回転率 1.6の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "回転率 1.6を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "md-buyer-面数 4面判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は初回 600点で副作用を確認する。",
+          "npcDialogue": "先輩:「面数 4面を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+          "workMaterial": "棚割案\n- 面数 4面\n- 回転率 1.6\n- 判断対象: 棚割案",
+          "decisionPrompt": "md-buyer-面数 4面判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "回転率 1.6を重く見て、当日中に前へ進める",
+              "text": "回転率 1.6を重く見て、当日中に前へ進める。材料は面数 4面、回転率 1.6、undefined。",
+              "immediateFeedback": "面数 4面に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 2,
+                "md_buyer_risk": -1,
+                "md_buyer_speed": 2,
+                "md_buyer_value": -1,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、面数 4面と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "面数 4面の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は回転率 1.6の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "面数 4面の回転率 1.6とundefinedを突き合わせ、条件付きで進める",
+              "text": "面数 4面の回転率 1.6とundefinedを突き合わせ、条件付きで進める。材料は面数 4面、回転率 1.6、undefined。",
+              "immediateFeedback": "面数 4面に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": 1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、面数 4面と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "面数 4面の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は回転率 1.6の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は面数 4面、回転率 1.6、undefined。",
+              "immediateFeedback": "面数 4面に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": -1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": -1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": -1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、面数 4面と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "面数 4面の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は回転率 1.6の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "md-buyer-面数 4面判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "md-buyer-面数 4面判断",
+            "roleSpecificMaterials": [
+              "棚割案",
+              "判断対象: 棚割案"
+            ],
+            "roleSpecificMetrics": [
+              "面数 4面",
+              "回転率 1.6"
+            ],
+            "roleSpecificFailureRisk": "棚割案を読まず、面数 4面か回転率 1.6のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "面数 4面と回転率 1.6を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "棚割案、面数 4面、回転率 1.6を判断の主役にしている。",
+            "kernelConnection": "棚割案をmd-buyer-面数 4面判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "md-buyer-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "投入計画",
+          "openingHook": "16:35。初回 600点に追加判断 10日後とundefinedが並んでいる。",
+          "context": "MD/バイヤーとして初回 600点を確認する。追加判断 10日後、undefinedが今日の判断材料になる。",
+          "content": "販売実績・粗利・在庫を仕入判断へ変換するため、初回 600点を読んで次の作業判断を残す。",
+          "roleSpecificContext": "MD/バイヤーは販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+          "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は初回 600点である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "追加判断 10日後の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "追加判断 10日後を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "md-buyer-初回 600点判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「初回 600点を読まずに進めると、MD/バイヤーの判断ではなくなる」",
+          "workMaterial": "投入計画\n- 初回 600点\n- 追加判断 10日後\n- 判断対象: 投入計画",
+          "decisionPrompt": "md-buyer-初回 600点判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "追加判断 10日後を重く見て、当日中に前へ進める",
+              "text": "追加判断 10日後を重く見て、当日中に前へ進める。材料は初回 600点、追加判断 10日後、undefined。",
+              "immediateFeedback": "初回 600点に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 2,
+                "md_buyer_risk": -1,
+                "md_buyer_speed": 2,
+                "md_buyer_value": -1,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、初回 600点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "初回 600点の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は追加判断 10日後の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "初回 600点の追加判断 10日後とundefinedを突き合わせ、条件付きで進める",
+              "text": "初回 600点の追加判断 10日後とundefinedを突き合わせ、条件付きで進める。材料は初回 600点、追加判断 10日後、undefined。",
+              "immediateFeedback": "初回 600点に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": 1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": 1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": 1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、初回 600点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "初回 600点の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は追加判断 10日後の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は初回 600点、追加判断 10日後、undefined。",
+              "immediateFeedback": "初回 600点に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "MD/バイヤーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "md_buyer_evidence": -1,
+                "md_buyer_risk": 2,
+                "md_buyer_speed": -1,
+                "md_buyer_value": 2,
+                "md_buyer_feasibility": -1
+              },
+              "misconceptionEffect": "MD/バイヤーは印象ではなく、初回 600点と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "初回 600点の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は追加判断 10日後の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "md-buyer-初回 600点判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "分析系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "md-buyer-初回 600点判断",
+            "roleSpecificMaterials": [
+              "投入計画",
+              "判断対象: 投入計画"
+            ],
+            "roleSpecificMetrics": [
+              "初回 600点",
+              "追加判断 10日後"
+            ],
+            "roleSpecificFailureRisk": "投入計画を読まず、初回 600点か追加判断 10日後のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "初回 600点と追加判断 10日後を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "投入計画、初回 600点、追加判断 10日後を判断の主役にしている。",
+            "kernelConnection": "投入計画をmd-buyer-初回 600点判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch2-1",
+      "title": "MD/バイヤーの材料翻訳型",
+      "strengths": [
+        "MD/バイヤーの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "md_buyer_evidence",
+        "md_buyer_risk"
+      ],
+      "valuedMeters": [
+        "md_buyer_evidence"
+      ],
+      "sacrificedMeters": [
+        "md_buyer_speed"
+      ],
+      "roleRealityReveal": "MD/バイヤーは、販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "MD/バイヤーの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-2",
+      "title": "MD/バイヤーの推進型",
+      "strengths": [
+        "MD/バイヤーの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "md_buyer_risk",
+        "md_buyer_speed"
+      ],
+      "valuedMeters": [
+        "md_buyer_risk"
+      ],
+      "sacrificedMeters": [
+        "md_buyer_value"
+      ],
+      "roleRealityReveal": "MD/バイヤーは、販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "MD/バイヤーの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-3",
+      "title": "MD/バイヤーの安全設計型",
+      "strengths": [
+        "MD/バイヤーの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "md_buyer_speed",
+        "md_buyer_value"
+      ],
+      "valuedMeters": [
+        "md_buyer_speed"
+      ],
+      "sacrificedMeters": [
+        "md_buyer_feasibility"
+      ],
+      "roleRealityReveal": "MD/バイヤーは、販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "MD/バイヤーの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "MD/バイヤーは、販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+    "misconceptionCorrection": "見た目の対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "MD/バイヤーとして、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "md-buyer_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "md_buyer_evidence_vs_md_buyer_risk",
+      "md_buyer_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 2 selected for decision primitive diversity.",
+    "mainConflict": "販売実績・粗利・在庫を仕入判断へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 2 selection skeleton Cに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "md_buyer_evidence",
+      "label": "evidence",
+      "description": "MD/バイヤーのevidence判断"
+    },
+    {
+      "key": "md_buyer_risk",
+      "label": "risk",
+      "description": "MD/バイヤーのrisk判断"
+    },
+    {
+      "key": "md_buyer_speed",
+      "label": "speed",
+      "description": "MD/バイヤーのspeed判断"
+    },
+    {
+      "key": "md_buyer_value",
+      "label": "value",
+      "description": "MD/バイヤーのvalue判断"
+    },
+    {
+      "key": "md_buyer_feasibility",
+      "label": "feasibility",
+      "description": "MD/バイヤーのfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "MD/バイヤーの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "md_buyer_evidence",
+      "md_buyer_risk",
+      "md_buyer_speed",
+      "md_buyer_value",
+      "md_buyer_feasibility"
+    ]
+  },
+  "roleCoreFriction": "販売実績・粗利・在庫を仕入判断へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "MD/バイヤーは人との調整や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "MD/バイヤーは、販売実績・粗利・在庫を仕入判断へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "販売数 840点、滞留 62日、発注 1,200点、面数 4面、初回 600点、関係者制約、期限",
+    "output": "MD/バイヤーとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "販売実績・粗利・在庫を仕入判断へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "販売数 840点",
+      "滞留 62日",
+      "発注 1,200点",
+      "面数 4面",
+      "初回 600点"
+    ],
+    "metrics": [
+      "販売数 840点",
+      "粗利率 38%",
+      "滞留 62日",
+      "在庫 1,900点",
+      "発注 1,200点",
+      "値引率 12%",
+      "面数 4面",
+      "回転率 1.6",
+      "初回 600点",
+      "追加判断 10日後"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "販売数 840点、滞留 62日、発注 1,200点と粗利率 38%、、在庫 1,900点を読まなければ成立しないため。"
+  }
+}

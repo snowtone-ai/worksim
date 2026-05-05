@@ -71,3 +71,13 @@ a 5-view self review in `docs/issues.md`.
 @VERIFICATION.md
 @HANDOFF-JA.md
 </imports>
+
+## WorkSim Cα Scenario Production Rules
+
+- Future agents must read `docs/c-alpha/*` before scenario, analytics, Cタイプ, Cβ, or Bタイプ work.
+- Scenario generation must use `scenarios/_schema.v2.md` and `docs/c-alpha/02-SCENARIO-PRODUCTION-OS.md`.
+- Cα scenario data must include `behaviorTags`, `universityInsightTags`, `companyInsightTags`, and `riskTags`.
+- Cα is currently 2D background-image based, but metadata must preserve future 3D/metaverse extensibility.
+- University/company analytics must be anonymized and aggregated by default.
+- Companies must not receive individual student choice data for selection screening by default.
+- If a future agent cannot complete all scenarios, it must update `docs/c-alpha/08-IMPLEMENTATION-CHECKLIST.md` with exact remaining work.

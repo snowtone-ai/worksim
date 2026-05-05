@@ -1,0 +1,2190 @@
+{
+  "id": "it/data-analyst-bi",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "IT・通信",
+  "industrySlug": "it",
+  "role": "データアナリスト/BI担当",
+  "roleSlug": "data-analyst-bi",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "理系向け",
+    "分析系",
+    "高難易度"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for IT・通信 データアナリスト/BI担当.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "it",
+      "data-analyst-bi"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "売上ダッシュボード"
+    },
+    {
+      "time": "10:40",
+      "label": "SQL抽出条件"
+    },
+    {
+      "time": "12:20",
+      "label": "部門別KPI表"
+    },
+    {
+      "time": "14:15",
+      "label": "仮説メモ"
+    },
+    {
+      "time": "16:35",
+      "label": "報告スライド"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "売上ダッシュボード"
+    },
+    {
+      "time": "10:40",
+      "label": "SQL抽出条件"
+    },
+    {
+      "time": "12:20",
+      "label": "部門別KPI表"
+    },
+    {
+      "time": "14:15",
+      "label": "仮説メモ"
+    },
+    {
+      "time": "16:35",
+      "label": "報告スライド"
+    }
+  ],
+  "sceneList": [
+    "data-analyst-bi-01",
+    "data-analyst-bi-02",
+    "data-analyst-bi-03",
+    "data-analyst-bi-04",
+    "data-analyst-bi-05"
+  ],
+  "meta": {
+    "title": "データアナリスト/BI担当",
+    "industry": "IT・通信",
+    "role": "データアナリスト/BI担当",
+    "duration_minutes": 18,
+    "description": "業務データを意思決定指標へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "technical",
+      "label": "技術力",
+      "description": "技術的な問題を分析・解決する力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を整理して判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "data-analyst-bi-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "売上ダッシュボード",
+      "openingHook": "09:10。CVR 1.8%に離脱率 42%とundefinedが並んでいる。",
+      "context": "データアナリスト/BI担当としてCVR 1.8%を確認する。離脱率 42%、undefinedが今日の判断材料になる。",
+      "content": "業務データを意思決定指標へ変換するため、CVR 1.8%を読んで次の作業判断を残す。",
+      "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+      "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はCVR 1.8%である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "離脱率 42%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "離脱率 42%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "data-analyst-bi-CVR 1.8%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は対象期間 28日で副作用を確認する。",
+      "npcDialogue": "先輩:「CVR 1.8%を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+      "workMaterial": "売上ダッシュボード\n- CVR 1.8%\n- 離脱率 42%\n- 判断対象: 売上ダッシュボード",
+      "decisionPrompt": "data-analyst-bi-CVR 1.8%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "離脱率 42%を重く見て、当日中に前へ進める",
+          "text": "離脱率 42%を重く見て、当日中に前へ進める。材料はCVR 1.8%、離脱率 42%、undefined。",
+          "immediateFeedback": "CVR 1.8%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 2,
+            "data_analyst_bi_risk": -1,
+            "data_analyst_bi_speed": 2,
+            "data_analyst_bi_value": -1,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、CVR 1.8%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "CVR 1.8%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は離脱率 42%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "CVR 1.8%の離脱率 42%とundefinedを突き合わせ、条件付きで進める",
+          "text": "CVR 1.8%の離脱率 42%とundefinedを突き合わせ、条件付きで進める。材料はCVR 1.8%、離脱率 42%、undefined。",
+          "immediateFeedback": "CVR 1.8%に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": 1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、CVR 1.8%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "CVR 1.8%の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は離脱率 42%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料はCVR 1.8%、離脱率 42%、undefined。",
+          "immediateFeedback": "CVR 1.8%に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": -1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": -1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": -1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、CVR 1.8%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "CVR 1.8%の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は離脱率 42%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "data-analyst-bi-CVR 1.8%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "data-analyst-bi-CVR 1.8%判断",
+        "roleSpecificMaterials": [
+          "売上ダッシュボード",
+          "判断対象: 売上ダッシュボード"
+        ],
+        "roleSpecificMetrics": [
+          "CVR 1.8%",
+          "離脱率 42%"
+        ],
+        "roleSpecificFailureRisk": "売上ダッシュボードを読まず、CVR 1.8%か離脱率 42%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "CVR 1.8%と離脱率 42%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "売上ダッシュボード、CVR 1.8%、離脱率 42%を判断の主役にしている。",
+        "kernelConnection": "売上ダッシュボードをdata-analyst-bi-CVR 1.8%判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "data-analyst-bi-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "SQL抽出条件",
+      "openingHook": "10:40。対象期間 28日に除外率 6%とundefinedが並んでいる。",
+      "context": "データアナリスト/BI担当として対象期間 28日を確認する。除外率 6%、undefinedが今日の判断材料になる。",
+      "content": "業務データを意思決定指標へ変換するため、対象期間 28日を読んで次の作業判断を残す。",
+      "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+      "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は対象期間 28日である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "除外率 6%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "除外率 6%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "data-analyst-bi-対象期間 28日判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は粗利率 31%で副作用を確認する。",
+      "npcDialogue": "先輩:「対象期間 28日を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+      "workMaterial": "SQL抽出条件\n- 対象期間 28日\n- 除外率 6%\n- 判断対象: SQL抽出条件",
+      "decisionPrompt": "data-analyst-bi-対象期間 28日判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "除外率 6%を重く見て、当日中に前へ進める",
+          "text": "除外率 6%を重く見て、当日中に前へ進める。材料は対象期間 28日、除外率 6%、undefined。",
+          "immediateFeedback": "対象期間 28日に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 2,
+            "data_analyst_bi_risk": -1,
+            "data_analyst_bi_speed": 2,
+            "data_analyst_bi_value": -1,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、対象期間 28日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対象期間 28日の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は除外率 6%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "対象期間 28日の除外率 6%とundefinedを突き合わせ、条件付きで進める",
+          "text": "対象期間 28日の除外率 6%とundefinedを突き合わせ、条件付きで進める。材料は対象期間 28日、除外率 6%、undefined。",
+          "immediateFeedback": "対象期間 28日に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": 1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、対象期間 28日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対象期間 28日の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は除外率 6%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は対象期間 28日、除外率 6%、undefined。",
+          "immediateFeedback": "対象期間 28日に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": -1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": -1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": -1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、対象期間 28日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対象期間 28日の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は除外率 6%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "data-analyst-bi-対象期間 28日判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "data-analyst-bi-対象期間 28日判断",
+        "roleSpecificMaterials": [
+          "SQL抽出条件",
+          "判断対象: SQL抽出条件"
+        ],
+        "roleSpecificMetrics": [
+          "対象期間 28日",
+          "除外率 6%"
+        ],
+        "roleSpecificFailureRisk": "SQL抽出条件を読まず、対象期間 28日か除外率 6%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "対象期間 28日と除外率 6%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "SQL抽出条件、対象期間 28日、除外率 6%を判断の主役にしている。",
+        "kernelConnection": "SQL抽出条件をdata-analyst-bi-対象期間 28日判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "data-analyst-bi-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "部門別KPI表",
+      "openingHook": "12:20。粗利率 31%に前年差 -4ptとundefinedが並んでいる。",
+      "context": "データアナリスト/BI担当として粗利率 31%を確認する。前年差 -4pt、undefinedが今日の判断材料になる。",
+      "content": "業務データを意思決定指標へ変換するため、粗利率 31%を読んで次の作業判断を残す。",
+      "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+      "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は粗利率 31%である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "前年差 -4ptの背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "前年差 -4ptを重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "data-analyst-bi-粗利率 31%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は母数 4,200件で副作用を確認する。",
+      "npcDialogue": "先輩:「粗利率 31%を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+      "workMaterial": "部門別KPI表\n- 粗利率 31%\n- 前年差 -4pt\n- 判断対象: 部門別KPI表",
+      "decisionPrompt": "data-analyst-bi-粗利率 31%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "前年差 -4ptを重く見て、当日中に前へ進める",
+          "text": "前年差 -4ptを重く見て、当日中に前へ進める。材料は粗利率 31%、前年差 -4pt、undefined。",
+          "immediateFeedback": "粗利率 31%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 2,
+            "data_analyst_bi_risk": -1,
+            "data_analyst_bi_speed": 2,
+            "data_analyst_bi_value": -1,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、粗利率 31%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "粗利率 31%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は前年差 -4ptの副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "粗利率 31%の前年差 -4ptとundefinedを突き合わせ、条件付きで進める",
+          "text": "粗利率 31%の前年差 -4ptとundefinedを突き合わせ、条件付きで進める。材料は粗利率 31%、前年差 -4pt、undefined。",
+          "immediateFeedback": "粗利率 31%に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": 1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、粗利率 31%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "粗利率 31%の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は前年差 -4ptの副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は粗利率 31%、前年差 -4pt、undefined。",
+          "immediateFeedback": "粗利率 31%に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": -1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": -1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": -1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、粗利率 31%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "粗利率 31%の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は前年差 -4ptの副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "data-analyst-bi-粗利率 31%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "data-analyst-bi-粗利率 31%判断",
+        "roleSpecificMaterials": [
+          "部門別KPI表",
+          "判断対象: 部門別KPI表"
+        ],
+        "roleSpecificMetrics": [
+          "粗利率 31%",
+          "前年差 -4pt"
+        ],
+        "roleSpecificFailureRisk": "部門別KPI表を読まず、粗利率 31%か前年差 -4ptのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "粗利率 31%と前年差 -4ptを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "部門別KPI表、粗利率 31%、前年差 -4ptを判断の主役にしている。",
+        "kernelConnection": "部門別KPI表をdata-analyst-bi-粗利率 31%判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "data-analyst-bi-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "仮説メモ",
+      "openingHook": "14:15。母数 4,200件に有意差 なしとundefinedが並んでいる。",
+      "context": "データアナリスト/BI担当として母数 4,200件を確認する。有意差 なし、undefinedが今日の判断材料になる。",
+      "content": "業務データを意思決定指標へ変換するため、母数 4,200件を読んで次の作業判断を残す。",
+      "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+      "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は母数 4,200件である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "有意差 なしの背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "有意差 なしを重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "data-analyst-bi-母数 4,200件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は推奨施策 2案で副作用を確認する。",
+      "npcDialogue": "先輩:「母数 4,200件を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+      "workMaterial": "仮説メモ\n- 母数 4,200件\n- 有意差 なし\n- 判断対象: 仮説メモ",
+      "decisionPrompt": "data-analyst-bi-母数 4,200件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "有意差 なしを重く見て、当日中に前へ進める",
+          "text": "有意差 なしを重く見て、当日中に前へ進める。材料は母数 4,200件、有意差 なし、undefined。",
+          "immediateFeedback": "母数 4,200件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 2,
+            "data_analyst_bi_risk": -1,
+            "data_analyst_bi_speed": 2,
+            "data_analyst_bi_value": -1,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、母数 4,200件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "母数 4,200件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は有意差 なしの副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "母数 4,200件の有意差 なしとundefinedを突き合わせ、条件付きで進める",
+          "text": "母数 4,200件の有意差 なしとundefinedを突き合わせ、条件付きで進める。材料は母数 4,200件、有意差 なし、undefined。",
+          "immediateFeedback": "母数 4,200件に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": 1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、母数 4,200件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "母数 4,200件の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は有意差 なしの副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は母数 4,200件、有意差 なし、undefined。",
+          "immediateFeedback": "母数 4,200件に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": -1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": -1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": -1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、母数 4,200件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "母数 4,200件の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は有意差 なしの副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "data-analyst-bi-母数 4,200件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "data-analyst-bi-母数 4,200件判断",
+        "roleSpecificMaterials": [
+          "仮説メモ",
+          "判断対象: 仮説メモ"
+        ],
+        "roleSpecificMetrics": [
+          "母数 4,200件",
+          "有意差 なし"
+        ],
+        "roleSpecificFailureRisk": "仮説メモを読まず、母数 4,200件か有意差 なしのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "母数 4,200件と有意差 なしを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "仮説メモ、母数 4,200件、有意差 なしを判断の主役にしている。",
+        "kernelConnection": "仮説メモをdata-analyst-bi-母数 4,200件判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "data-analyst-bi-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "報告スライド",
+      "openingHook": "16:35。推奨施策 2案に想定改善 +8%とundefinedが並んでいる。",
+      "context": "データアナリスト/BI担当として推奨施策 2案を確認する。想定改善 +8%、undefinedが今日の判断材料になる。",
+      "content": "業務データを意思決定指標へ変換するため、推奨施策 2案を読んで次の作業判断を残す。",
+      "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+      "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は推奨施策 2案である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "想定改善 +8%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "想定改善 +8%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "data-analyst-bi-推奨施策 2案判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「推奨施策 2案を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+      "workMaterial": "報告スライド\n- 推奨施策 2案\n- 想定改善 +8%\n- 判断対象: 報告スライド",
+      "decisionPrompt": "data-analyst-bi-推奨施策 2案判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "想定改善 +8%を重く見て、当日中に前へ進める",
+          "text": "想定改善 +8%を重く見て、当日中に前へ進める。材料は推奨施策 2案、想定改善 +8%、undefined。",
+          "immediateFeedback": "推奨施策 2案に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 2,
+            "data_analyst_bi_risk": -1,
+            "data_analyst_bi_speed": 2,
+            "data_analyst_bi_value": -1,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、推奨施策 2案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "推奨施策 2案の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は想定改善 +8%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "推奨施策 2案の想定改善 +8%とundefinedを突き合わせ、条件付きで進める",
+          "text": "推奨施策 2案の想定改善 +8%とundefinedを突き合わせ、条件付きで進める。材料は推奨施策 2案、想定改善 +8%、undefined。",
+          "immediateFeedback": "推奨施策 2案に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": 1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": 1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": 1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、推奨施策 2案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "推奨施策 2案の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は想定改善 +8%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は推奨施策 2案、想定改善 +8%、undefined。",
+          "immediateFeedback": "推奨施策 2案に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "data_analyst_bi_evidence": -1,
+            "data_analyst_bi_risk": 2,
+            "data_analyst_bi_speed": -1,
+            "data_analyst_bi_value": 2,
+            "data_analyst_bi_feasibility": -1
+          },
+          "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、推奨施策 2案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "推奨施策 2案の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は想定改善 +8%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "data-analyst-bi-推奨施策 2案判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "data-analyst-bi-推奨施策 2案判断",
+        "roleSpecificMaterials": [
+          "報告スライド",
+          "判断対象: 報告スライド"
+        ],
+        "roleSpecificMetrics": [
+          "推奨施策 2案",
+          "想定改善 +8%"
+        ],
+        "roleSpecificFailureRisk": "報告スライドを読まず、推奨施策 2案か想定改善 +8%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "推奨施策 2案と想定改善 +8%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "報告スライド、推奨施策 2案、想定改善 +8%を判断の主役にしている。",
+        "kernelConnection": "報告スライドをdata-analyst-bi-推奨施策 2案判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "data-analyst-bi-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "売上ダッシュボード",
+          "openingHook": "09:10。CVR 1.8%に離脱率 42%とundefinedが並んでいる。",
+          "context": "データアナリスト/BI担当としてCVR 1.8%を確認する。離脱率 42%、undefinedが今日の判断材料になる。",
+          "content": "業務データを意思決定指標へ変換するため、CVR 1.8%を読んで次の作業判断を残す。",
+          "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+          "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はCVR 1.8%である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "離脱率 42%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "離脱率 42%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "data-analyst-bi-CVR 1.8%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は対象期間 28日で副作用を確認する。",
+          "npcDialogue": "先輩:「CVR 1.8%を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+          "workMaterial": "売上ダッシュボード\n- CVR 1.8%\n- 離脱率 42%\n- 判断対象: 売上ダッシュボード",
+          "decisionPrompt": "data-analyst-bi-CVR 1.8%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "離脱率 42%を重く見て、当日中に前へ進める",
+              "text": "離脱率 42%を重く見て、当日中に前へ進める。材料はCVR 1.8%、離脱率 42%、undefined。",
+              "immediateFeedback": "CVR 1.8%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 2,
+                "data_analyst_bi_risk": -1,
+                "data_analyst_bi_speed": 2,
+                "data_analyst_bi_value": -1,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、CVR 1.8%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "CVR 1.8%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は離脱率 42%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "CVR 1.8%の離脱率 42%とundefinedを突き合わせ、条件付きで進める",
+              "text": "CVR 1.8%の離脱率 42%とundefinedを突き合わせ、条件付きで進める。材料はCVR 1.8%、離脱率 42%、undefined。",
+              "immediateFeedback": "CVR 1.8%に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": 1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、CVR 1.8%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "CVR 1.8%の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は離脱率 42%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料はCVR 1.8%、離脱率 42%、undefined。",
+              "immediateFeedback": "CVR 1.8%に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": -1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": -1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": -1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、CVR 1.8%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "CVR 1.8%の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は離脱率 42%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "data-analyst-bi-CVR 1.8%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "data-analyst-bi-CVR 1.8%判断",
+            "roleSpecificMaterials": [
+              "売上ダッシュボード",
+              "判断対象: 売上ダッシュボード"
+            ],
+            "roleSpecificMetrics": [
+              "CVR 1.8%",
+              "離脱率 42%"
+            ],
+            "roleSpecificFailureRisk": "売上ダッシュボードを読まず、CVR 1.8%か離脱率 42%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "CVR 1.8%と離脱率 42%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "売上ダッシュボード、CVR 1.8%、離脱率 42%を判断の主役にしている。",
+            "kernelConnection": "売上ダッシュボードをdata-analyst-bi-CVR 1.8%判断へ接続する。"
+          }
+        },
+        {
+          "id": "data-analyst-bi-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "SQL抽出条件",
+          "openingHook": "10:40。対象期間 28日に除外率 6%とundefinedが並んでいる。",
+          "context": "データアナリスト/BI担当として対象期間 28日を確認する。除外率 6%、undefinedが今日の判断材料になる。",
+          "content": "業務データを意思決定指標へ変換するため、対象期間 28日を読んで次の作業判断を残す。",
+          "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+          "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は対象期間 28日である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "除外率 6%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "除外率 6%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "data-analyst-bi-対象期間 28日判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は粗利率 31%で副作用を確認する。",
+          "npcDialogue": "先輩:「対象期間 28日を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+          "workMaterial": "SQL抽出条件\n- 対象期間 28日\n- 除外率 6%\n- 判断対象: SQL抽出条件",
+          "decisionPrompt": "data-analyst-bi-対象期間 28日判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "除外率 6%を重く見て、当日中に前へ進める",
+              "text": "除外率 6%を重く見て、当日中に前へ進める。材料は対象期間 28日、除外率 6%、undefined。",
+              "immediateFeedback": "対象期間 28日に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 2,
+                "data_analyst_bi_risk": -1,
+                "data_analyst_bi_speed": 2,
+                "data_analyst_bi_value": -1,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、対象期間 28日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対象期間 28日の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は除外率 6%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "対象期間 28日の除外率 6%とundefinedを突き合わせ、条件付きで進める",
+              "text": "対象期間 28日の除外率 6%とundefinedを突き合わせ、条件付きで進める。材料は対象期間 28日、除外率 6%、undefined。",
+              "immediateFeedback": "対象期間 28日に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": 1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、対象期間 28日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対象期間 28日の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は除外率 6%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は対象期間 28日、除外率 6%、undefined。",
+              "immediateFeedback": "対象期間 28日に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": -1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": -1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": -1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、対象期間 28日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対象期間 28日の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は除外率 6%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "data-analyst-bi-対象期間 28日判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "data-analyst-bi-対象期間 28日判断",
+            "roleSpecificMaterials": [
+              "SQL抽出条件",
+              "判断対象: SQL抽出条件"
+            ],
+            "roleSpecificMetrics": [
+              "対象期間 28日",
+              "除外率 6%"
+            ],
+            "roleSpecificFailureRisk": "SQL抽出条件を読まず、対象期間 28日か除外率 6%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "対象期間 28日と除外率 6%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "SQL抽出条件、対象期間 28日、除外率 6%を判断の主役にしている。",
+            "kernelConnection": "SQL抽出条件をdata-analyst-bi-対象期間 28日判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "data-analyst-bi-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "部門別KPI表",
+          "openingHook": "12:20。粗利率 31%に前年差 -4ptとundefinedが並んでいる。",
+          "context": "データアナリスト/BI担当として粗利率 31%を確認する。前年差 -4pt、undefinedが今日の判断材料になる。",
+          "content": "業務データを意思決定指標へ変換するため、粗利率 31%を読んで次の作業判断を残す。",
+          "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+          "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は粗利率 31%である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "前年差 -4ptの背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "前年差 -4ptを重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "data-analyst-bi-粗利率 31%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は母数 4,200件で副作用を確認する。",
+          "npcDialogue": "先輩:「粗利率 31%を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+          "workMaterial": "部門別KPI表\n- 粗利率 31%\n- 前年差 -4pt\n- 判断対象: 部門別KPI表",
+          "decisionPrompt": "data-analyst-bi-粗利率 31%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "前年差 -4ptを重く見て、当日中に前へ進める",
+              "text": "前年差 -4ptを重く見て、当日中に前へ進める。材料は粗利率 31%、前年差 -4pt、undefined。",
+              "immediateFeedback": "粗利率 31%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 2,
+                "data_analyst_bi_risk": -1,
+                "data_analyst_bi_speed": 2,
+                "data_analyst_bi_value": -1,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、粗利率 31%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "粗利率 31%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は前年差 -4ptの副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "粗利率 31%の前年差 -4ptとundefinedを突き合わせ、条件付きで進める",
+              "text": "粗利率 31%の前年差 -4ptとundefinedを突き合わせ、条件付きで進める。材料は粗利率 31%、前年差 -4pt、undefined。",
+              "immediateFeedback": "粗利率 31%に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": 1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、粗利率 31%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "粗利率 31%の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は前年差 -4ptの副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は粗利率 31%、前年差 -4pt、undefined。",
+              "immediateFeedback": "粗利率 31%に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": -1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": -1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": -1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、粗利率 31%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "粗利率 31%の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は前年差 -4ptの副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "data-analyst-bi-粗利率 31%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "data-analyst-bi-粗利率 31%判断",
+            "roleSpecificMaterials": [
+              "部門別KPI表",
+              "判断対象: 部門別KPI表"
+            ],
+            "roleSpecificMetrics": [
+              "粗利率 31%",
+              "前年差 -4pt"
+            ],
+            "roleSpecificFailureRisk": "部門別KPI表を読まず、粗利率 31%か前年差 -4ptのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "粗利率 31%と前年差 -4ptを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "部門別KPI表、粗利率 31%、前年差 -4ptを判断の主役にしている。",
+            "kernelConnection": "部門別KPI表をdata-analyst-bi-粗利率 31%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "data-analyst-bi-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "仮説メモ",
+          "openingHook": "14:15。母数 4,200件に有意差 なしとundefinedが並んでいる。",
+          "context": "データアナリスト/BI担当として母数 4,200件を確認する。有意差 なし、undefinedが今日の判断材料になる。",
+          "content": "業務データを意思決定指標へ変換するため、母数 4,200件を読んで次の作業判断を残す。",
+          "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+          "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は母数 4,200件である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "有意差 なしの背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "有意差 なしを重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "data-analyst-bi-母数 4,200件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は推奨施策 2案で副作用を確認する。",
+          "npcDialogue": "先輩:「母数 4,200件を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+          "workMaterial": "仮説メモ\n- 母数 4,200件\n- 有意差 なし\n- 判断対象: 仮説メモ",
+          "decisionPrompt": "data-analyst-bi-母数 4,200件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "有意差 なしを重く見て、当日中に前へ進める",
+              "text": "有意差 なしを重く見て、当日中に前へ進める。材料は母数 4,200件、有意差 なし、undefined。",
+              "immediateFeedback": "母数 4,200件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 2,
+                "data_analyst_bi_risk": -1,
+                "data_analyst_bi_speed": 2,
+                "data_analyst_bi_value": -1,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、母数 4,200件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "母数 4,200件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は有意差 なしの副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "母数 4,200件の有意差 なしとundefinedを突き合わせ、条件付きで進める",
+              "text": "母数 4,200件の有意差 なしとundefinedを突き合わせ、条件付きで進める。材料は母数 4,200件、有意差 なし、undefined。",
+              "immediateFeedback": "母数 4,200件に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": 1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、母数 4,200件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "母数 4,200件の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は有意差 なしの副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は母数 4,200件、有意差 なし、undefined。",
+              "immediateFeedback": "母数 4,200件に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": -1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": -1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": -1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、母数 4,200件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "母数 4,200件の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は有意差 なしの副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "data-analyst-bi-母数 4,200件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "data-analyst-bi-母数 4,200件判断",
+            "roleSpecificMaterials": [
+              "仮説メモ",
+              "判断対象: 仮説メモ"
+            ],
+            "roleSpecificMetrics": [
+              "母数 4,200件",
+              "有意差 なし"
+            ],
+            "roleSpecificFailureRisk": "仮説メモを読まず、母数 4,200件か有意差 なしのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "母数 4,200件と有意差 なしを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "仮説メモ、母数 4,200件、有意差 なしを判断の主役にしている。",
+            "kernelConnection": "仮説メモをdata-analyst-bi-母数 4,200件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "data-analyst-bi-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "報告スライド",
+          "openingHook": "16:35。推奨施策 2案に想定改善 +8%とundefinedが並んでいる。",
+          "context": "データアナリスト/BI担当として推奨施策 2案を確認する。想定改善 +8%、undefinedが今日の判断材料になる。",
+          "content": "業務データを意思決定指標へ変換するため、推奨施策 2案を読んで次の作業判断を残す。",
+          "roleSpecificContext": "データアナリスト/BI担当は業務データを意思決定指標へ変換する仕事。",
+          "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は推奨施策 2案である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "想定改善 +8%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "想定改善 +8%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "data-analyst-bi-推奨施策 2案判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「推奨施策 2案を読まずに進めると、データアナリスト/BI担当の判断ではなくなる」",
+          "workMaterial": "報告スライド\n- 推奨施策 2案\n- 想定改善 +8%\n- 判断対象: 報告スライド",
+          "decisionPrompt": "data-analyst-bi-推奨施策 2案判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "想定改善 +8%を重く見て、当日中に前へ進める",
+              "text": "想定改善 +8%を重く見て、当日中に前へ進める。材料は推奨施策 2案、想定改善 +8%、undefined。",
+              "immediateFeedback": "推奨施策 2案に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 2,
+                "data_analyst_bi_risk": -1,
+                "data_analyst_bi_speed": 2,
+                "data_analyst_bi_value": -1,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、推奨施策 2案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "推奨施策 2案の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は想定改善 +8%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "推奨施策 2案の想定改善 +8%とundefinedを突き合わせ、条件付きで進める",
+              "text": "推奨施策 2案の想定改善 +8%とundefinedを突き合わせ、条件付きで進める。材料は推奨施策 2案、想定改善 +8%、undefined。",
+              "immediateFeedback": "推奨施策 2案に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": 1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": 1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": 1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、推奨施策 2案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "推奨施策 2案の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は想定改善 +8%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は推奨施策 2案、想定改善 +8%、undefined。",
+              "immediateFeedback": "推奨施策 2案に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "データアナリスト/BI担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "data_analyst_bi_evidence": -1,
+                "data_analyst_bi_risk": 2,
+                "data_analyst_bi_speed": -1,
+                "data_analyst_bi_value": 2,
+                "data_analyst_bi_feasibility": -1
+              },
+              "misconceptionEffect": "データアナリスト/BI担当は印象ではなく、推奨施策 2案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "推奨施策 2案の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は想定改善 +8%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "data-analyst-bi-推奨施策 2案判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "data-analyst-bi-推奨施策 2案判断",
+            "roleSpecificMaterials": [
+              "報告スライド",
+              "判断対象: 報告スライド"
+            ],
+            "roleSpecificMetrics": [
+              "推奨施策 2案",
+              "想定改善 +8%"
+            ],
+            "roleSpecificFailureRisk": "報告スライドを読まず、推奨施策 2案か想定改善 +8%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "推奨施策 2案と想定改善 +8%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "報告スライド、推奨施策 2案、想定改善 +8%を判断の主役にしている。",
+            "kernelConnection": "報告スライドをdata-analyst-bi-推奨施策 2案判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "technical",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch2-1",
+      "title": "データアナリスト/BI担当の材料翻訳型",
+      "strengths": [
+        "データアナリスト/BI担当の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "data_analyst_bi_evidence",
+        "data_analyst_bi_risk"
+      ],
+      "valuedMeters": [
+        "data_analyst_bi_evidence"
+      ],
+      "sacrificedMeters": [
+        "data_analyst_bi_speed"
+      ],
+      "roleRealityReveal": "データアナリスト/BI担当は、業務データを意思決定指標へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "データアナリスト/BI担当の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-2",
+      "title": "データアナリスト/BI担当の推進型",
+      "strengths": [
+        "データアナリスト/BI担当の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "data_analyst_bi_risk",
+        "data_analyst_bi_speed"
+      ],
+      "valuedMeters": [
+        "data_analyst_bi_risk"
+      ],
+      "sacrificedMeters": [
+        "data_analyst_bi_value"
+      ],
+      "roleRealityReveal": "データアナリスト/BI担当は、業務データを意思決定指標へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "データアナリスト/BI担当の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-3",
+      "title": "データアナリスト/BI担当の安全設計型",
+      "strengths": [
+        "データアナリスト/BI担当の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "data_analyst_bi_speed",
+        "data_analyst_bi_value"
+      ],
+      "valuedMeters": [
+        "data_analyst_bi_speed"
+      ],
+      "sacrificedMeters": [
+        "data_analyst_bi_feasibility"
+      ],
+      "roleRealityReveal": "データアナリスト/BI担当は、業務データを意思決定指標へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "データアナリスト/BI担当の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "データアナリスト/BI担当は、業務データを意思決定指標へ変換する仕事。",
+    "misconceptionCorrection": "見た目の対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "データアナリスト/BI担当として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "data-analyst-bi_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "data_analyst_bi_evidence_vs_data_analyst_bi_risk",
+      "data_analyst_bi_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 2 selected for decision primitive diversity.",
+    "mainConflict": "業務データを意思決定指標へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 2 selection skeleton Cに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "data_analyst_bi_evidence",
+      "label": "evidence",
+      "description": "データアナリスト/BI担当のevidence判断"
+    },
+    {
+      "key": "data_analyst_bi_risk",
+      "label": "risk",
+      "description": "データアナリスト/BI担当のrisk判断"
+    },
+    {
+      "key": "data_analyst_bi_speed",
+      "label": "speed",
+      "description": "データアナリスト/BI担当のspeed判断"
+    },
+    {
+      "key": "data_analyst_bi_value",
+      "label": "value",
+      "description": "データアナリスト/BI担当のvalue判断"
+    },
+    {
+      "key": "data_analyst_bi_feasibility",
+      "label": "feasibility",
+      "description": "データアナリスト/BI担当のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "データアナリスト/BI担当の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "data_analyst_bi_evidence",
+      "data_analyst_bi_risk",
+      "data_analyst_bi_speed",
+      "data_analyst_bi_value",
+      "data_analyst_bi_feasibility"
+    ]
+  },
+  "roleCoreFriction": "業務データを意思決定指標へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "データアナリスト/BI担当は人との調整や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "データアナリスト/BI担当は、業務データを意思決定指標へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "CVR 1.8%、対象期間 28日、粗利率 31%、母数 4,200件、推奨施策 2案、関係者制約、期限",
+    "output": "データアナリスト/BI担当としての判断案、次回確認項目、リスクメモ",
+    "transformation": "業務データを意思決定指標へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "CVR 1.8%",
+      "対象期間 28日",
+      "粗利率 31%",
+      "母数 4,200件",
+      "推奨施策 2案"
+    ],
+    "metrics": [
+      "CVR 1.8%",
+      "離脱率 42%",
+      "対象期間 28日",
+      "除外率 6%",
+      "粗利率 31%",
+      "前年差 -4pt",
+      "母数 4,200件",
+      "有意差 なし",
+      "推奨施策 2案",
+      "想定改善 +8%"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "CVR 1.8%、対象期間 28日、粗利率 31%と離脱率 42%、、除外率 6%を読まなければ成立しないため。"
+  }
+}

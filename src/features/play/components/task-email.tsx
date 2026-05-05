@@ -42,7 +42,7 @@ export function TaskEmail({ scene, onAnswer, answered }: Props) {
         choices={scene.choices}
         answered={answered}
         onAnswer={onAnswer}
-        prompt="あなたはどうする？"
+        prompt={scene.decisionPrompt ?? 'あなたはどうする？'}
       />
     </div>
   )

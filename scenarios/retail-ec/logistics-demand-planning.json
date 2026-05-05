@@ -1,0 +1,2192 @@
+{
+  "id": "retail-ec/logistics-demand-planning",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "小売/流通/EC",
+  "industrySlug": "retail-ec",
+  "role": "物流/需給管理",
+  "roleSlug": "logistics-demand-planning",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "分析系",
+    "高難易度",
+    "地方就職"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 小売/流通/EC 物流/需給管理.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "retail-ec",
+      "logistics-demand-planning"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "需要予測表"
+    },
+    {
+      "time": "10:35",
+      "label": "倉庫在庫表"
+    },
+    {
+      "time": "12:20",
+      "label": "配送能力表"
+    },
+    {
+      "time": "14:05",
+      "label": "欠品リスク表"
+    },
+    {
+      "time": "16:25",
+      "label": "在庫圧縮案"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "需要予測表"
+    },
+    {
+      "time": "10:35",
+      "label": "倉庫在庫表"
+    },
+    {
+      "time": "12:20",
+      "label": "配送能力表"
+    },
+    {
+      "time": "14:05",
+      "label": "欠品リスク表"
+    },
+    {
+      "time": "16:25",
+      "label": "在庫圧縮案"
+    }
+  ],
+  "sceneList": [
+    "logistics-demand-planning-01",
+    "logistics-demand-planning-02",
+    "logistics-demand-planning-03",
+    "logistics-demand-planning-04",
+    "logistics-demand-planning-05"
+  ],
+  "meta": {
+    "title": "物流/需給管理",
+    "industry": "小売/流通/EC",
+    "role": "物流/需給管理",
+    "duration_minutes": 18,
+    "description": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "logistics-demand-planning-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "需要予測表",
+      "openingHook": "09:10。需要予測表に予測 8,400個と誤差 14%が並んでいる。",
+      "context": "物流/需給管理として需要予測表を確認する。予測 8,400個、誤差 14%が今日の判断材料になる。",
+      "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、需要予測表を読んで発注量を決める。",
+      "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+      "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は需要予測表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "予測 8,400個の背景と誤差 14%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "予測 8,400個を重く見るほど、誤差 14%や別の制約を犠牲にする。",
+      "consequenceHook": "logistics-demand-planning-予測 8,400個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は倉庫在庫表で副作用を確認する。",
+      "npcDialogue": "先輩:「需要予測表を読まずに進めると、物流/需給管理の判断ではなくなる」",
+      "workMaterial": "需要予測表\n- 予測 8,400個\n- 誤差 14%\n- 判断対象: 需要予測表",
+      "decisionPrompt": "logistics-demand-planning-予測 8,400個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "予測 8,400個を優先し、当日中に需要予測表の結論を出す",
+          "text": "予測 8,400個を優先し、当日中に需要予測表の結論を出す。材料は予測 8,400個、誤差 14%。",
+          "immediateFeedback": "予測 8,400個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 2,
+            "logistics_demand_planning_risk": -1,
+            "logistics_demand_planning_speed": 2,
+            "logistics_demand_planning_value": -1,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は印象ではなく、予測 8,400個と誤差 14%を読んで判断する。",
+          "studentFeedback": {
+            "good": "予測 8,400個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は誤差 14%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "予測 8,400個と誤差 14%を突き合わせ、条件付きで進める",
+          "text": "予測 8,400個と誤差 14%を突き合わせ、条件付きで進める。材料は予測 8,400個、誤差 14%。",
+          "immediateFeedback": "需要予測表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": 1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "予測 8,400個と誤差 14%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は需要予測表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "誤差 14%の制約を重く見て、判断範囲を絞る",
+          "text": "誤差 14%の制約を重く見て、判断範囲を絞る。材料は予測 8,400個、誤差 14%。",
+          "immediateFeedback": "誤差 14%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": -1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": -1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": -1
+          },
+          "misconceptionEffect": "物流/需給管理は慎重さだけでなく、予測 8,400個と誤差 14%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "誤差 14%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は予測 8,400個を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "logistics-demand-planning-予測 8,400個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "logistics-demand-planning-予測 8,400個判断",
+        "roleSpecificMaterials": [
+          "需要予測表",
+          "判断対象: 需要予測表"
+        ],
+        "roleSpecificMetrics": [
+          "予測 8,400個",
+          "誤差 14%"
+        ],
+        "roleSpecificFailureRisk": "需要予測表を読まず、予測 8,400個か誤差 14%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "予測 8,400個と誤差 14%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "需要予測表、予測 8,400個、誤差 14%を判断の主役にしている。",
+        "kernelConnection": "需要予測表をlogistics-demand-planning-予測 8,400個判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "logistics-demand-planning-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "倉庫在庫表",
+      "openingHook": "10:35。倉庫在庫表に在庫 12,600個と保管率 86%が並んでいる。",
+      "context": "物流/需給管理として倉庫在庫表を確認する。在庫 12,600個、保管率 86%が今日の判断材料になる。",
+      "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、倉庫在庫表を読んで配置を変える。",
+      "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+      "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は倉庫在庫表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "在庫 12,600個の背景と保管率 86%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "在庫 12,600個を重く見るほど、保管率 86%や別の制約を犠牲にする。",
+      "consequenceHook": "logistics-demand-planning-在庫 12,600個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は配送能力表で副作用を確認する。",
+      "npcDialogue": "先輩:「倉庫在庫表を読まずに進めると、物流/需給管理の判断ではなくなる」",
+      "workMaterial": "倉庫在庫表\n- 在庫 12,600個\n- 保管率 86%\n- 判断対象: 倉庫在庫表",
+      "decisionPrompt": "logistics-demand-planning-在庫 12,600個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "在庫 12,600個を優先し、当日中に倉庫在庫表の結論を出す",
+          "text": "在庫 12,600個を優先し、当日中に倉庫在庫表の結論を出す。材料は在庫 12,600個、保管率 86%。",
+          "immediateFeedback": "在庫 12,600個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 2,
+            "logistics_demand_planning_risk": -1,
+            "logistics_demand_planning_speed": 2,
+            "logistics_demand_planning_value": -1,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は印象ではなく、在庫 12,600個と保管率 86%を読んで判断する。",
+          "studentFeedback": {
+            "good": "在庫 12,600個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は保管率 86%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "在庫 12,600個と保管率 86%を突き合わせ、条件付きで進める",
+          "text": "在庫 12,600個と保管率 86%を突き合わせ、条件付きで進める。材料は在庫 12,600個、保管率 86%。",
+          "immediateFeedback": "倉庫在庫表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": 1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "在庫 12,600個と保管率 86%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は倉庫在庫表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "保管率 86%の制約を重く見て、判断範囲を絞る",
+          "text": "保管率 86%の制約を重く見て、判断範囲を絞る。材料は在庫 12,600個、保管率 86%。",
+          "immediateFeedback": "保管率 86%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": -1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": -1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": -1
+          },
+          "misconceptionEffect": "物流/需給管理は慎重さだけでなく、在庫 12,600個と保管率 86%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "保管率 86%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は在庫 12,600個を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "logistics-demand-planning-在庫 12,600個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "logistics-demand-planning-在庫 12,600個判断",
+        "roleSpecificMaterials": [
+          "倉庫在庫表",
+          "判断対象: 倉庫在庫表"
+        ],
+        "roleSpecificMetrics": [
+          "在庫 12,600個",
+          "保管率 86%"
+        ],
+        "roleSpecificFailureRisk": "倉庫在庫表を読まず、在庫 12,600個か保管率 86%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "在庫 12,600個と保管率 86%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "倉庫在庫表、在庫 12,600個、保管率 86%を判断の主役にしている。",
+        "kernelConnection": "倉庫在庫表をlogistics-demand-planning-在庫 12,600個判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "logistics-demand-planning-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "配送能力表",
+      "openingHook": "12:20。配送能力表に処理 2,200件/日と超過 340件が並んでいる。",
+      "context": "物流/需給管理として配送能力表を確認する。処理 2,200件/日、超過 340件が今日の判断材料になる。",
+      "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、配送能力表を読んで出荷順を切る。",
+      "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+      "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は配送能力表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "処理 2,200件/日の背景と超過 340件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "処理 2,200件/日を重く見るほど、超過 340件や別の制約を犠牲にする。",
+      "consequenceHook": "logistics-demand-planning-処理 2,200件/日判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は欠品リスク表で副作用を確認する。",
+      "npcDialogue": "先輩:「配送能力表を読まずに進めると、物流/需給管理の判断ではなくなる」",
+      "workMaterial": "配送能力表\n- 処理 2,200件/日\n- 超過 340件\n- 判断対象: 配送能力表",
+      "decisionPrompt": "logistics-demand-planning-処理 2,200件/日判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "処理 2,200件/日を優先し、当日中に配送能力表の結論を出す",
+          "text": "処理 2,200件/日を優先し、当日中に配送能力表の結論を出す。材料は処理 2,200件/日、超過 340件。",
+          "immediateFeedback": "処理 2,200件/日に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 2,
+            "logistics_demand_planning_risk": -1,
+            "logistics_demand_planning_speed": 2,
+            "logistics_demand_planning_value": -1,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は印象ではなく、処理 2,200件/日と超過 340件を読んで判断する。",
+          "studentFeedback": {
+            "good": "処理 2,200件/日の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は超過 340件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "処理 2,200件/日と超過 340件を突き合わせ、条件付きで進める",
+          "text": "処理 2,200件/日と超過 340件を突き合わせ、条件付きで進める。材料は処理 2,200件/日、超過 340件。",
+          "immediateFeedback": "配送能力表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": 1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "処理 2,200件/日と超過 340件を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は配送能力表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "超過 340件の制約を重く見て、判断範囲を絞る",
+          "text": "超過 340件の制約を重く見て、判断範囲を絞る。材料は処理 2,200件/日、超過 340件。",
+          "immediateFeedback": "超過 340件に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": -1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": -1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": -1
+          },
+          "misconceptionEffect": "物流/需給管理は慎重さだけでなく、処理 2,200件/日と超過 340件の副作用まで読む。",
+          "studentFeedback": {
+            "good": "超過 340件の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は処理 2,200件/日を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "logistics-demand-planning-処理 2,200件/日判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "logistics-demand-planning-処理 2,200件/日判断",
+        "roleSpecificMaterials": [
+          "配送能力表",
+          "判断対象: 配送能力表"
+        ],
+        "roleSpecificMetrics": [
+          "処理 2,200件/日",
+          "超過 340件"
+        ],
+        "roleSpecificFailureRisk": "配送能力表を読まず、処理 2,200件/日か超過 340件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "処理 2,200件/日と超過 340件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "配送能力表、処理 2,200件/日、超過 340件を判断の主役にしている。",
+        "kernelConnection": "配送能力表をlogistics-demand-planning-処理 2,200件/日判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "logistics-demand-planning-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "欠品リスク表",
+      "openingHook": "14:05。欠品リスク表に欠品予測 7SKUと売上影響 180万円が並んでいる。",
+      "context": "物流/需給管理として欠品リスク表を確認する。欠品予測 7SKU、売上影響 180万円が今日の判断材料になる。",
+      "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、欠品リスク表を読んで補充優先度を選ぶ。",
+      "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+      "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は欠品リスク表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "欠品予測 7SKUの背景と売上影響 180万円の確度が完全にはそろっていない。",
+      "decisionTradeoff": "欠品予測 7SKUを重く見るほど、売上影響 180万円や別の制約を犠牲にする。",
+      "consequenceHook": "logistics-demand-planning-欠品予測 7SKU判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は在庫圧縮案で副作用を確認する。",
+      "npcDialogue": "先輩:「欠品リスク表を読まずに進めると、物流/需給管理の判断ではなくなる」",
+      "workMaterial": "欠品リスク表\n- 欠品予測 7SKU\n- 売上影響 180万円\n- 判断対象: 欠品リスク表",
+      "decisionPrompt": "logistics-demand-planning-欠品予測 7SKU判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "欠品予測 7SKUを優先し、当日中に欠品リスク表の結論を出す",
+          "text": "欠品予測 7SKUを優先し、当日中に欠品リスク表の結論を出す。材料は欠品予測 7SKU、売上影響 180万円。",
+          "immediateFeedback": "欠品予測 7SKUに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 2,
+            "logistics_demand_planning_risk": -1,
+            "logistics_demand_planning_speed": 2,
+            "logistics_demand_planning_value": -1,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は印象ではなく、欠品予測 7SKUと売上影響 180万円を読んで判断する。",
+          "studentFeedback": {
+            "good": "欠品予測 7SKUの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は売上影響 180万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "欠品予測 7SKUと売上影響 180万円を突き合わせ、条件付きで進める",
+          "text": "欠品予測 7SKUと売上影響 180万円を突き合わせ、条件付きで進める。材料は欠品予測 7SKU、売上影響 180万円。",
+          "immediateFeedback": "欠品リスク表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": 1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "欠品予測 7SKUと売上影響 180万円を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は欠品リスク表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "売上影響 180万円の制約を重く見て、判断範囲を絞る",
+          "text": "売上影響 180万円の制約を重く見て、判断範囲を絞る。材料は欠品予測 7SKU、売上影響 180万円。",
+          "immediateFeedback": "売上影響 180万円に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": -1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": -1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": -1
+          },
+          "misconceptionEffect": "物流/需給管理は慎重さだけでなく、欠品予測 7SKUと売上影響 180万円の副作用まで読む。",
+          "studentFeedback": {
+            "good": "売上影響 180万円の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は欠品予測 7SKUを抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "logistics-demand-planning-欠品予測 7SKU判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "logistics-demand-planning-欠品予測 7SKU判断",
+        "roleSpecificMaterials": [
+          "欠品リスク表",
+          "判断対象: 欠品リスク表"
+        ],
+        "roleSpecificMetrics": [
+          "欠品予測 7SKU",
+          "売上影響 180万円"
+        ],
+        "roleSpecificFailureRisk": "欠品リスク表を読まず、欠品予測 7SKUか売上影響 180万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "欠品予測 7SKUと売上影響 180万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "欠品リスク表、欠品予測 7SKU、売上影響 180万円を判断の主役にしている。",
+        "kernelConnection": "欠品リスク表をlogistics-demand-planning-欠品予測 7SKU判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "logistics-demand-planning-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "在庫圧縮案",
+      "openingHook": "16:25。在庫圧縮案に削減 1,900個と費用減 72万円が並んでいる。",
+      "context": "物流/需給管理として在庫圧縮案を確認する。削減 1,900個、費用減 72万円が今日の判断材料になる。",
+      "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、在庫圧縮案を読んで圧縮範囲を決める。",
+      "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+      "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は在庫圧縮案である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "削減 1,900個の背景と費用減 72万円の確度が完全にはそろっていない。",
+      "decisionTradeoff": "削減 1,900個を重く見るほど、費用減 72万円や別の制約を犠牲にする。",
+      "consequenceHook": "logistics-demand-planning-削減 1,900個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「在庫圧縮案を読まずに進めると、物流/需給管理の判断ではなくなる」",
+      "workMaterial": "在庫圧縮案\n- 削減 1,900個\n- 費用減 72万円\n- 判断対象: 在庫圧縮案",
+      "decisionPrompt": "logistics-demand-planning-削減 1,900個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "削減 1,900個を優先し、当日中に在庫圧縮案の結論を出す",
+          "text": "削減 1,900個を優先し、当日中に在庫圧縮案の結論を出す。材料は削減 1,900個、費用減 72万円。",
+          "immediateFeedback": "削減 1,900個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 2,
+            "logistics_demand_planning_risk": -1,
+            "logistics_demand_planning_speed": 2,
+            "logistics_demand_planning_value": -1,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は印象ではなく、削減 1,900個と費用減 72万円を読んで判断する。",
+          "studentFeedback": {
+            "good": "削減 1,900個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は費用減 72万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "削減 1,900個と費用減 72万円を突き合わせ、条件付きで進める",
+          "text": "削減 1,900個と費用減 72万円を突き合わせ、条件付きで進める。材料は削減 1,900個、費用減 72万円。",
+          "immediateFeedback": "在庫圧縮案に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": 1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": 1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": 1
+          },
+          "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "削減 1,900個と費用減 72万円を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は在庫圧縮案の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "費用減 72万円の制約を重く見て、判断範囲を絞る",
+          "text": "費用減 72万円の制約を重く見て、判断範囲を絞る。材料は削減 1,900個、費用減 72万円。",
+          "immediateFeedback": "費用減 72万円に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "logistics_demand_planning_evidence": -1,
+            "logistics_demand_planning_risk": 2,
+            "logistics_demand_planning_speed": -1,
+            "logistics_demand_planning_value": 2,
+            "logistics_demand_planning_feasibility": -1
+          },
+          "misconceptionEffect": "物流/需給管理は慎重さだけでなく、削減 1,900個と費用減 72万円の副作用まで読む。",
+          "studentFeedback": {
+            "good": "費用減 72万円の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は削減 1,900個を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "logistics-demand-planning-削減 1,900個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "地方就職"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "logistics-demand-planning-削減 1,900個判断",
+        "roleSpecificMaterials": [
+          "在庫圧縮案",
+          "判断対象: 在庫圧縮案"
+        ],
+        "roleSpecificMetrics": [
+          "削減 1,900個",
+          "費用減 72万円"
+        ],
+        "roleSpecificFailureRisk": "在庫圧縮案を読まず、削減 1,900個か費用減 72万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "削減 1,900個と費用減 72万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "在庫圧縮案、削減 1,900個、費用減 72万円を判断の主役にしている。",
+        "kernelConnection": "在庫圧縮案をlogistics-demand-planning-削減 1,900個判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。物流/需給管理として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "logistics-demand-planning-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "需要予測表",
+          "openingHook": "09:10。需要予測表に予測 8,400個と誤差 14%が並んでいる。",
+          "context": "物流/需給管理として需要予測表を確認する。予測 8,400個、誤差 14%が今日の判断材料になる。",
+          "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、需要予測表を読んで発注量を決める。",
+          "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+          "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は需要予測表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "予測 8,400個の背景と誤差 14%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "予測 8,400個を重く見るほど、誤差 14%や別の制約を犠牲にする。",
+          "consequenceHook": "logistics-demand-planning-予測 8,400個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は倉庫在庫表で副作用を確認する。",
+          "npcDialogue": "先輩:「需要予測表を読まずに進めると、物流/需給管理の判断ではなくなる」",
+          "workMaterial": "需要予測表\n- 予測 8,400個\n- 誤差 14%\n- 判断対象: 需要予測表",
+          "decisionPrompt": "logistics-demand-planning-予測 8,400個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "予測 8,400個を優先し、当日中に需要予測表の結論を出す",
+              "text": "予測 8,400個を優先し、当日中に需要予測表の結論を出す。材料は予測 8,400個、誤差 14%。",
+              "immediateFeedback": "予測 8,400個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 2,
+                "logistics_demand_planning_risk": -1,
+                "logistics_demand_planning_speed": 2,
+                "logistics_demand_planning_value": -1,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は印象ではなく、予測 8,400個と誤差 14%を読んで判断する。",
+              "studentFeedback": {
+                "good": "予測 8,400個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は誤差 14%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "予測 8,400個と誤差 14%を突き合わせ、条件付きで進める",
+              "text": "予測 8,400個と誤差 14%を突き合わせ、条件付きで進める。材料は予測 8,400個、誤差 14%。",
+              "immediateFeedback": "需要予測表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": 1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "予測 8,400個と誤差 14%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は需要予測表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "誤差 14%の制約を重く見て、判断範囲を絞る",
+              "text": "誤差 14%の制約を重く見て、判断範囲を絞る。材料は予測 8,400個、誤差 14%。",
+              "immediateFeedback": "誤差 14%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": -1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": -1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": -1
+              },
+              "misconceptionEffect": "物流/需給管理は慎重さだけでなく、予測 8,400個と誤差 14%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "誤差 14%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は予測 8,400個を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "logistics-demand-planning-予測 8,400個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "logistics-demand-planning-予測 8,400個判断",
+            "roleSpecificMaterials": [
+              "需要予測表",
+              "判断対象: 需要予測表"
+            ],
+            "roleSpecificMetrics": [
+              "予測 8,400個",
+              "誤差 14%"
+            ],
+            "roleSpecificFailureRisk": "需要予測表を読まず、予測 8,400個か誤差 14%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "予測 8,400個と誤差 14%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "需要予測表、予測 8,400個、誤差 14%を判断の主役にしている。",
+            "kernelConnection": "需要予測表をlogistics-demand-planning-予測 8,400個判断へ接続する。"
+          }
+        },
+        {
+          "id": "logistics-demand-planning-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "倉庫在庫表",
+          "openingHook": "10:35。倉庫在庫表に在庫 12,600個と保管率 86%が並んでいる。",
+          "context": "物流/需給管理として倉庫在庫表を確認する。在庫 12,600個、保管率 86%が今日の判断材料になる。",
+          "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、倉庫在庫表を読んで配置を変える。",
+          "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+          "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は倉庫在庫表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "在庫 12,600個の背景と保管率 86%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "在庫 12,600個を重く見るほど、保管率 86%や別の制約を犠牲にする。",
+          "consequenceHook": "logistics-demand-planning-在庫 12,600個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は配送能力表で副作用を確認する。",
+          "npcDialogue": "先輩:「倉庫在庫表を読まずに進めると、物流/需給管理の判断ではなくなる」",
+          "workMaterial": "倉庫在庫表\n- 在庫 12,600個\n- 保管率 86%\n- 判断対象: 倉庫在庫表",
+          "decisionPrompt": "logistics-demand-planning-在庫 12,600個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "在庫 12,600個を優先し、当日中に倉庫在庫表の結論を出す",
+              "text": "在庫 12,600個を優先し、当日中に倉庫在庫表の結論を出す。材料は在庫 12,600個、保管率 86%。",
+              "immediateFeedback": "在庫 12,600個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 2,
+                "logistics_demand_planning_risk": -1,
+                "logistics_demand_planning_speed": 2,
+                "logistics_demand_planning_value": -1,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は印象ではなく、在庫 12,600個と保管率 86%を読んで判断する。",
+              "studentFeedback": {
+                "good": "在庫 12,600個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は保管率 86%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "在庫 12,600個と保管率 86%を突き合わせ、条件付きで進める",
+              "text": "在庫 12,600個と保管率 86%を突き合わせ、条件付きで進める。材料は在庫 12,600個、保管率 86%。",
+              "immediateFeedback": "倉庫在庫表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": 1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "在庫 12,600個と保管率 86%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は倉庫在庫表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "保管率 86%の制約を重く見て、判断範囲を絞る",
+              "text": "保管率 86%の制約を重く見て、判断範囲を絞る。材料は在庫 12,600個、保管率 86%。",
+              "immediateFeedback": "保管率 86%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": -1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": -1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": -1
+              },
+              "misconceptionEffect": "物流/需給管理は慎重さだけでなく、在庫 12,600個と保管率 86%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "保管率 86%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は在庫 12,600個を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "logistics-demand-planning-在庫 12,600個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "logistics-demand-planning-在庫 12,600個判断",
+            "roleSpecificMaterials": [
+              "倉庫在庫表",
+              "判断対象: 倉庫在庫表"
+            ],
+            "roleSpecificMetrics": [
+              "在庫 12,600個",
+              "保管率 86%"
+            ],
+            "roleSpecificFailureRisk": "倉庫在庫表を読まず、在庫 12,600個か保管率 86%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "在庫 12,600個と保管率 86%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "倉庫在庫表、在庫 12,600個、保管率 86%を判断の主役にしている。",
+            "kernelConnection": "倉庫在庫表をlogistics-demand-planning-在庫 12,600個判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。物流/需給管理として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "logistics-demand-planning-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "配送能力表",
+          "openingHook": "12:20。配送能力表に処理 2,200件/日と超過 340件が並んでいる。",
+          "context": "物流/需給管理として配送能力表を確認する。処理 2,200件/日、超過 340件が今日の判断材料になる。",
+          "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、配送能力表を読んで出荷順を切る。",
+          "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+          "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は配送能力表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "処理 2,200件/日の背景と超過 340件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "処理 2,200件/日を重く見るほど、超過 340件や別の制約を犠牲にする。",
+          "consequenceHook": "logistics-demand-planning-処理 2,200件/日判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は欠品リスク表で副作用を確認する。",
+          "npcDialogue": "先輩:「配送能力表を読まずに進めると、物流/需給管理の判断ではなくなる」",
+          "workMaterial": "配送能力表\n- 処理 2,200件/日\n- 超過 340件\n- 判断対象: 配送能力表",
+          "decisionPrompt": "logistics-demand-planning-処理 2,200件/日判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "処理 2,200件/日を優先し、当日中に配送能力表の結論を出す",
+              "text": "処理 2,200件/日を優先し、当日中に配送能力表の結論を出す。材料は処理 2,200件/日、超過 340件。",
+              "immediateFeedback": "処理 2,200件/日に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 2,
+                "logistics_demand_planning_risk": -1,
+                "logistics_demand_planning_speed": 2,
+                "logistics_demand_planning_value": -1,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は印象ではなく、処理 2,200件/日と超過 340件を読んで判断する。",
+              "studentFeedback": {
+                "good": "処理 2,200件/日の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は超過 340件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "処理 2,200件/日と超過 340件を突き合わせ、条件付きで進める",
+              "text": "処理 2,200件/日と超過 340件を突き合わせ、条件付きで進める。材料は処理 2,200件/日、超過 340件。",
+              "immediateFeedback": "配送能力表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": 1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "処理 2,200件/日と超過 340件を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は配送能力表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "超過 340件の制約を重く見て、判断範囲を絞る",
+              "text": "超過 340件の制約を重く見て、判断範囲を絞る。材料は処理 2,200件/日、超過 340件。",
+              "immediateFeedback": "超過 340件に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": -1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": -1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": -1
+              },
+              "misconceptionEffect": "物流/需給管理は慎重さだけでなく、処理 2,200件/日と超過 340件の副作用まで読む。",
+              "studentFeedback": {
+                "good": "超過 340件の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は処理 2,200件/日を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "logistics-demand-planning-処理 2,200件/日判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "logistics-demand-planning-処理 2,200件/日判断",
+            "roleSpecificMaterials": [
+              "配送能力表",
+              "判断対象: 配送能力表"
+            ],
+            "roleSpecificMetrics": [
+              "処理 2,200件/日",
+              "超過 340件"
+            ],
+            "roleSpecificFailureRisk": "配送能力表を読まず、処理 2,200件/日か超過 340件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "処理 2,200件/日と超過 340件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "配送能力表、処理 2,200件/日、超過 340件を判断の主役にしている。",
+            "kernelConnection": "配送能力表をlogistics-demand-planning-処理 2,200件/日判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。物流/需給管理として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "logistics-demand-planning-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "欠品リスク表",
+          "openingHook": "14:05。欠品リスク表に欠品予測 7SKUと売上影響 180万円が並んでいる。",
+          "context": "物流/需給管理として欠品リスク表を確認する。欠品予測 7SKU、売上影響 180万円が今日の判断材料になる。",
+          "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、欠品リスク表を読んで補充優先度を選ぶ。",
+          "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+          "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は欠品リスク表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "欠品予測 7SKUの背景と売上影響 180万円の確度が完全にはそろっていない。",
+          "decisionTradeoff": "欠品予測 7SKUを重く見るほど、売上影響 180万円や別の制約を犠牲にする。",
+          "consequenceHook": "logistics-demand-planning-欠品予測 7SKU判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は在庫圧縮案で副作用を確認する。",
+          "npcDialogue": "先輩:「欠品リスク表を読まずに進めると、物流/需給管理の判断ではなくなる」",
+          "workMaterial": "欠品リスク表\n- 欠品予測 7SKU\n- 売上影響 180万円\n- 判断対象: 欠品リスク表",
+          "decisionPrompt": "logistics-demand-planning-欠品予測 7SKU判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "欠品予測 7SKUを優先し、当日中に欠品リスク表の結論を出す",
+              "text": "欠品予測 7SKUを優先し、当日中に欠品リスク表の結論を出す。材料は欠品予測 7SKU、売上影響 180万円。",
+              "immediateFeedback": "欠品予測 7SKUに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 2,
+                "logistics_demand_planning_risk": -1,
+                "logistics_demand_planning_speed": 2,
+                "logistics_demand_planning_value": -1,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は印象ではなく、欠品予測 7SKUと売上影響 180万円を読んで判断する。",
+              "studentFeedback": {
+                "good": "欠品予測 7SKUの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は売上影響 180万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "欠品予測 7SKUと売上影響 180万円を突き合わせ、条件付きで進める",
+              "text": "欠品予測 7SKUと売上影響 180万円を突き合わせ、条件付きで進める。材料は欠品予測 7SKU、売上影響 180万円。",
+              "immediateFeedback": "欠品リスク表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": 1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "欠品予測 7SKUと売上影響 180万円を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は欠品リスク表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "売上影響 180万円の制約を重く見て、判断範囲を絞る",
+              "text": "売上影響 180万円の制約を重く見て、判断範囲を絞る。材料は欠品予測 7SKU、売上影響 180万円。",
+              "immediateFeedback": "売上影響 180万円に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": -1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": -1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": -1
+              },
+              "misconceptionEffect": "物流/需給管理は慎重さだけでなく、欠品予測 7SKUと売上影響 180万円の副作用まで読む。",
+              "studentFeedback": {
+                "good": "売上影響 180万円の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は欠品予測 7SKUを抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "logistics-demand-planning-欠品予測 7SKU判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "logistics-demand-planning-欠品予測 7SKU判断",
+            "roleSpecificMaterials": [
+              "欠品リスク表",
+              "判断対象: 欠品リスク表"
+            ],
+            "roleSpecificMetrics": [
+              "欠品予測 7SKU",
+              "売上影響 180万円"
+            ],
+            "roleSpecificFailureRisk": "欠品リスク表を読まず、欠品予測 7SKUか売上影響 180万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "欠品予測 7SKUと売上影響 180万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "欠品リスク表、欠品予測 7SKU、売上影響 180万円を判断の主役にしている。",
+            "kernelConnection": "欠品リスク表をlogistics-demand-planning-欠品予測 7SKU判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。物流/需給管理として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "logistics-demand-planning-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "在庫圧縮案",
+          "openingHook": "16:25。在庫圧縮案に削減 1,900個と費用減 72万円が並んでいる。",
+          "context": "物流/需給管理として在庫圧縮案を確認する。削減 1,900個、費用減 72万円が今日の判断材料になる。",
+          "content": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換するため、在庫圧縮案を読んで圧縮範囲を決める。",
+          "roleSpecificContext": "物流/需給管理は需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する仕事。",
+          "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は在庫圧縮案である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "削減 1,900個の背景と費用減 72万円の確度が完全にはそろっていない。",
+          "decisionTradeoff": "削減 1,900個を重く見るほど、費用減 72万円や別の制約を犠牲にする。",
+          "consequenceHook": "logistics-demand-planning-削減 1,900個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「在庫圧縮案を読まずに進めると、物流/需給管理の判断ではなくなる」",
+          "workMaterial": "在庫圧縮案\n- 削減 1,900個\n- 費用減 72万円\n- 判断対象: 在庫圧縮案",
+          "decisionPrompt": "logistics-demand-planning-削減 1,900個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "削減 1,900個を優先し、当日中に在庫圧縮案の結論を出す",
+              "text": "削減 1,900個を優先し、当日中に在庫圧縮案の結論を出す。材料は削減 1,900個、費用減 72万円。",
+              "immediateFeedback": "削減 1,900個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 2,
+                "logistics_demand_planning_risk": -1,
+                "logistics_demand_planning_speed": 2,
+                "logistics_demand_planning_value": -1,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は印象ではなく、削減 1,900個と費用減 72万円を読んで判断する。",
+              "studentFeedback": {
+                "good": "削減 1,900個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は費用減 72万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "削減 1,900個と費用減 72万円を突き合わせ、条件付きで進める",
+              "text": "削減 1,900個と費用減 72万円を突き合わせ、条件付きで進める。材料は削減 1,900個、費用減 72万円。",
+              "immediateFeedback": "在庫圧縮案に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": 1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": 1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": 1
+              },
+              "misconceptionEffect": "物流/需給管理は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "削減 1,900個と費用減 72万円を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は在庫圧縮案の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "費用減 72万円の制約を重く見て、判断範囲を絞る",
+              "text": "費用減 72万円の制約を重く見て、判断範囲を絞る。材料は削減 1,900個、費用減 72万円。",
+              "immediateFeedback": "費用減 72万円に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "物流/需給管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "logistics_demand_planning_evidence": -1,
+                "logistics_demand_planning_risk": 2,
+                "logistics_demand_planning_speed": -1,
+                "logistics_demand_planning_value": 2,
+                "logistics_demand_planning_feasibility": -1
+              },
+              "misconceptionEffect": "物流/需給管理は慎重さだけでなく、削減 1,900個と費用減 72万円の副作用まで読む。",
+              "studentFeedback": {
+                "good": "費用減 72万円の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は削減 1,900個を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "logistics-demand-planning-削減 1,900個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "地方就職"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "logistics-demand-planning-削減 1,900個判断",
+            "roleSpecificMaterials": [
+              "在庫圧縮案",
+              "判断対象: 在庫圧縮案"
+            ],
+            "roleSpecificMetrics": [
+              "削減 1,900個",
+              "費用減 72万円"
+            ],
+            "roleSpecificFailureRisk": "在庫圧縮案を読まず、削減 1,900個か費用減 72万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "削減 1,900個と費用減 72万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "在庫圧縮案、削減 1,900個、費用減 72万円を判断の主役にしている。",
+            "kernelConnection": "在庫圧縮案をlogistics-demand-planning-削減 1,900個判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "logistics-demand-planning-material-reader",
+      "title": "物流/需給管理の材料読解型",
+      "strengths": [
+        "物流/需給管理の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "logistics_demand_planning_evidence",
+        "logistics_demand_planning_risk"
+      ],
+      "valuedMeters": [
+        "logistics_demand_planning_evidence"
+      ],
+      "sacrificedMeters": [
+        "logistics_demand_planning_speed"
+      ],
+      "roleRealityReveal": "物流/需給管理は、需要予測と在庫配置を読み、欠品・過剰・配送制約を同時に抑える仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "物流/需給管理の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "logistics-demand-planning-constraint-designer",
+      "title": "物流/需給管理の制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "logistics_demand_planning_risk",
+        "logistics_demand_planning_speed"
+      ],
+      "valuedMeters": [
+        "logistics_demand_planning_risk"
+      ],
+      "sacrificedMeters": [
+        "logistics_demand_planning_value"
+      ],
+      "roleRealityReveal": "物流/需給管理は、需要予測と在庫配置を読み、欠品・過剰・配送制約を同時に抑える仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "物流/需給管理として制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "logistics-demand-planning-execution-planner",
+      "title": "物流/需給管理の実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "logistics_demand_planning_speed",
+        "logistics_demand_planning_value"
+      ],
+      "valuedMeters": [
+        "logistics_demand_planning_speed"
+      ],
+      "sacrificedMeters": [
+        "logistics_demand_planning_feasibility"
+      ],
+      "roleRealityReveal": "物流/需給管理は、需要予測と在庫配置を読み、欠品・過剰・配送制約を同時に抑える仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "物流/需給管理として実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "物流/需給管理は、需要予測と在庫配置を読み、欠品・過剰・配送制約を同時に抑える仕事。",
+    "misconceptionCorrection": "物流/需給管理は印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "物流/需給管理として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "logistics-demand-planning_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "logistics_demand_planning_forecast_vs_logistics_demand_planning_stock",
+      "logistics_demand_planning_capacity_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "logistics_demand_planning_forecast",
+      "label": "forecast",
+      "description": "物流/需給管理のforecast判断"
+    },
+    {
+      "key": "logistics_demand_planning_stock",
+      "label": "stock",
+      "description": "物流/需給管理のstock判断"
+    },
+    {
+      "key": "logistics_demand_planning_capacity",
+      "label": "capacity",
+      "description": "物流/需給管理のcapacity判断"
+    },
+    {
+      "key": "logistics_demand_planning_cost",
+      "label": "cost",
+      "description": "物流/需給管理のcost判断"
+    },
+    {
+      "key": "logistics_demand_planning_service",
+      "label": "service",
+      "description": "物流/需給管理のservice判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "物流/需給管理の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "logistics_demand_planning_forecast",
+      "logistics_demand_planning_stock",
+      "logistics_demand_planning_capacity",
+      "logistics_demand_planning_cost",
+      "logistics_demand_planning_service"
+    ]
+  },
+  "roleCoreFriction": "欠品を避けるほど在庫は膨らみ、保管費と配送能力を読まないと利益を削る葛藤。",
+  "roleMisconception": "物流/需給管理は配送手配が中心で、需要予測と在庫配置の数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "物流/需給管理は、需要予測と在庫配置を読み、欠品・過剰・配送制約を同時に抑える仕事。",
+  "roleWorkKernel": {
+    "input": "予測 8,400個、誤差 14%、在庫 12,600個、保管率 86%、処理 2,200件/日、超過 340件、欠品予測 7SKU、売上影響 180万円、削減 1,900個、費用減 72万円",
+    "output": "物流/需給管理としての判断案、次回確認項目、リスクメモ",
+    "transformation": "需要予測、在庫配置、配送制約を欠品と過剰在庫を抑える需給計画へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "需要予測表",
+      "倉庫在庫表",
+      "配送能力表",
+      "欠品リスク表",
+      "在庫圧縮案"
+    ],
+    "metrics": [
+      "予測 8,400個",
+      "誤差 14%",
+      "在庫 12,600個",
+      "保管率 86%",
+      "処理 2,200件/日",
+      "超過 340件",
+      "欠品予測 7SKU",
+      "売上影響 180万円",
+      "削減 1,900個",
+      "費用減 72万円"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "需要予測表、倉庫在庫表、配送能力表と予測 8,400個、在庫 12,600個を読まなければ成立しないため。"
+  }
+}

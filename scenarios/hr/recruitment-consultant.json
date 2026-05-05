@@ -1,0 +1,2201 @@
+{
+  "id": "hr/recruitment-consultant",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "industry": "人材/HR",
+  "industrySlug": "hr",
+  "role": "採用コンサルタント",
+  "roleSlug": "recruitment-consultant",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "企画系",
+    "人と関わる",
+    "分析系"
+  ],
+  "background": {
+    "imagePrompt": "Create a high-quality realistic workplace background image for a career simulation game. Scene: 人材/HR industry, 採用コンサルタント role, decision point before a key task.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, distorted hands, distorted face, low quality, blurry, stock photo advertisement, fantasy, cyberpunk, anime, manga, unrealistic office, fake letters",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "hr",
+      "recruitment-consultant"
+    ]
+  },
+  "timeline": [
+    {
+      "time": "09:20",
+      "label": "応募はあるのに進まない"
+    },
+    {
+      "time": "10:45",
+      "label": "求人票の条件過多"
+    },
+    {
+      "time": "12:25",
+      "label": "面接評価のばらつき"
+    },
+    {
+      "time": "14:15",
+      "label": "辞退理由の偏り"
+    },
+    {
+      "time": "16:40",
+      "label": "改善提案の着地"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:20",
+      "label": "応募はあるのに進まない"
+    },
+    {
+      "time": "10:45",
+      "label": "求人票の条件過多"
+    },
+    {
+      "time": "12:25",
+      "label": "面接評価のばらつき"
+    },
+    {
+      "time": "14:15",
+      "label": "辞退理由の偏り"
+    },
+    {
+      "time": "16:40",
+      "label": "改善提案の着地"
+    }
+  ],
+  "sceneList": [
+    "recruitment-consultant-01",
+    "recruitment-consultant-02",
+    "recruitment-consultant-03",
+    "recruitment-consultant-04",
+    "recruitment-consultant-05"
+  ],
+  "meta": {
+    "title": "採用コンサルタント",
+    "industry": "人材/HR",
+    "role": "採用コンサルタント",
+    "duration_minutes": 18,
+    "description": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝え、合意形成する力"
+    },
+    {
+      "key": "ethics",
+      "label": "倫理観",
+      "description": "公平性と説明責任を踏まえて判断する力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "自分事として責任を持ち、やり切る姿勢"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "debug",
+      "id": "recruitment-consultant-01",
+      "time": "09:20",
+      "interactable": "monitor_terminal",
+      "title": "応募はあるのに進まない",
+      "openingHook": "09:20。採用ファネル表に応募数: 86件 / 書類通過率: 14%が出ている。",
+      "context": "09:20。採用コンサルタントとして採用ファネル表を確認する。応募数: 86件 / 書類通過率: 14%が今日の判断材料になる。",
+      "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n応募、書類通過を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+      "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+      "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+      "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は採用ファネル表と応募数: 86件 / 書類通過率: 14%である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "応募の確度と、応募数: 86件の背景が完全にはそろっていない。",
+      "decisionTradeoff": "応募数: 86件を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+      "consequenceHook": "ここでのファネル停滞箇所の特定が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は求人票で判断の副作用を確認する。",
+      "npcDialogue": "先輩:「採用ファネル表の数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+      "workMaterial": "採用ファネル表\n- 応募\n- 書類通過\n- 応募数: 86件\n- 書類通過率: 14%",
+      "decisionPrompt": "ファネル停滞箇所の特定として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "応募数: 86件を重く見て、今日の改善を先に出す",
+          "text": "応募数: 86件を重く見て、今日の改善を先に出す。判断材料は採用ファネル表、応募数: 86件、書類通過率: 14%。",
+          "immediateFeedback": "採用ファネル表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "ファネル停滞箇所の特定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 2,
+            "fairness_safety": -1,
+            "requirement_fit": 2,
+            "candidate_experience": -1,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、採用ファネル表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "採用ファネル表の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は応募数: 86件がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "採用ファネル表と書類通過率: 14%を突き合わせ、条件付きで進める",
+          "text": "採用ファネル表と書類通過率: 14%を突き合わせ、条件付きで進める。判断材料は採用ファネル表、応募数: 86件、書類通過率: 14%。",
+          "immediateFeedback": "採用ファネル表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "ファネル停滞箇所の特定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 1,
+            "fairness_safety": 2,
+            "requirement_fit": 1,
+            "candidate_experience": 2,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "studentFeedback": {
+            "good": "採用ファネル表の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は応募数: 86件がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "応募の不確実性を理由に、判断を絞って持ち越す",
+          "text": "応募の不確実性を理由に、判断を絞って持ち越す。判断材料は採用ファネル表、応募数: 86件、書類通過率: 14%。",
+          "immediateFeedback": "採用ファネル表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "ファネル停滞箇所の特定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": -1,
+            "fairness_safety": 2,
+            "requirement_fit": -1,
+            "candidate_experience": 2,
+            "hiring_progress": -1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、採用ファネル表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "採用ファネル表の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は応募数: 86件がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "ファネル停滞箇所の特定",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "ファネル停滞箇所の特定",
+        "roleSpecificMaterials": [
+          "採用ファネル表",
+          "応募",
+          "書類通過"
+        ],
+        "roleSpecificMetrics": [
+          "応募数: 86件",
+          "書類通過率: 14%"
+        ],
+        "roleSpecificFailureRisk": "採用ファネル表を読まずに進め、要件過多で母集団が狭まる。",
+        "roleSpecificEvaluationCriteria": "応募数: 86件、書類通過率: 14%を使って、ボトルネックが特定されているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "採用ファネル表、応募、書類通過、応募数: 86件 / 書類通過率: 14%を判断の主役にしている。",
+        "kernelConnection": "採用ファネル表を、ファネル停滞箇所の特定へ接続する。"
+      }
+    },
+    {
+      "type": "review",
+      "id": "recruitment-consultant-02",
+      "time": "10:45",
+      "interactable": "monitor_browser",
+      "title": "求人票の条件過多",
+      "openingHook": "10:45。求人票に必須要件: 12項目 / 想定母集団: 230人が出ている。",
+      "context": "10:45。採用コンサルタントとして求人票を確認する。必須要件: 12項目 / 想定母集団: 230人が今日の判断材料になる。",
+      "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n必須要件、歓迎要件を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+      "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+      "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+      "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は求人票と必須要件: 12項目 / 想定母集団: 230人である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "必須要件の確度と、必須要件: 12項目の背景が完全にはそろっていない。",
+      "decisionTradeoff": "必須要件: 12項目を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+      "consequenceHook": "ここでの求人要件の絞り込みが、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は評価シートで判断の副作用を確認する。",
+      "npcDialogue": "先輩:「求人票の数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+      "workMaterial": "求人票\n- 必須要件\n- 歓迎要件\n- 必須要件: 12項目\n- 想定母集団: 230人",
+      "decisionPrompt": "求人要件の絞り込みとして、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "必須要件: 12項目を重く見て、今日の改善を先に出す",
+          "text": "必須要件: 12項目を重く見て、今日の改善を先に出す。判断材料は求人票、必須要件: 12項目、想定母集団: 230人。",
+          "immediateFeedback": "求人票に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "求人要件の絞り込みの副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 2,
+            "fairness_safety": -1,
+            "requirement_fit": 2,
+            "candidate_experience": -1,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、求人票と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "求人票の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は必須要件: 12項目がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "求人票と想定母集団: 230人を突き合わせ、条件付きで進める",
+          "text": "求人票と想定母集団: 230人を突き合わせ、条件付きで進める。判断材料は求人票、必須要件: 12項目、想定母集団: 230人。",
+          "immediateFeedback": "求人票に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "求人要件の絞り込みの副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 1,
+            "fairness_safety": 2,
+            "requirement_fit": 1,
+            "candidate_experience": 2,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "studentFeedback": {
+            "good": "求人票の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は必須要件: 12項目がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "必須要件の不確実性を理由に、判断を絞って持ち越す",
+          "text": "必須要件の不確実性を理由に、判断を絞って持ち越す。判断材料は求人票、必須要件: 12項目、想定母集団: 230人。",
+          "immediateFeedback": "求人票に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "求人要件の絞り込みの副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": -1,
+            "fairness_safety": 2,
+            "requirement_fit": -1,
+            "candidate_experience": 2,
+            "hiring_progress": -1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、求人票と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "求人票の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は必須要件: 12項目がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "求人要件の絞り込み",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "求人要件の絞り込み",
+        "roleSpecificMaterials": [
+          "求人票",
+          "必須要件",
+          "歓迎要件"
+        ],
+        "roleSpecificMetrics": [
+          "必須要件: 12項目",
+          "想定母集団: 230人"
+        ],
+        "roleSpecificFailureRisk": "求人票を読まずに進め、要件過多で母集団が狭まる。",
+        "roleSpecificEvaluationCriteria": "必須要件: 12項目、想定母集団: 230人を使って、ボトルネックが特定されているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "求人票、必須要件、歓迎要件、必須要件: 12項目 / 想定母集団: 230人を判断の主役にしている。",
+        "kernelConnection": "求人票を、求人要件の絞り込みへ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "recruitment-consultant-03",
+      "time": "12:25",
+      "interactable": "monitor_mail",
+      "title": "面接評価のばらつき",
+      "openingHook": "12:25。評価シートに面接通過率: 21% / 評価未記入: 5件が出ている。",
+      "context": "12:25。採用コンサルタントとして評価シートを確認する。面接通過率: 21% / 評価未記入: 5件が今日の判断材料になる。",
+      "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n評価観点、面接官コメントを読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+      "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+      "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+      "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は評価シートと面接通過率: 21% / 評価未記入: 5件である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "評価観点の確度と、面接通過率: 21%の背景が完全にはそろっていない。",
+      "decisionTradeoff": "面接通過率: 21%を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+      "consequenceHook": "ここでの評価基準の再設計が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は辞退理由集計で判断の副作用を確認する。",
+      "npcDialogue": "先輩:「評価シートの数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+      "workMaterial": "評価シート\n- 評価観点\n- 面接官コメント\n- 面接通過率: 21%\n- 評価未記入: 5件",
+      "decisionPrompt": "評価基準の再設計として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "面接通過率: 21%を重く見て、今日の改善を先に出す",
+          "text": "面接通過率: 21%を重く見て、今日の改善を先に出す。判断材料は評価シート、面接通過率: 21%、評価未記入: 5件。",
+          "immediateFeedback": "評価シートに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "評価基準の再設計の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 2,
+            "fairness_safety": -1,
+            "requirement_fit": 2,
+            "candidate_experience": -1,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、評価シートと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "評価シートの具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は面接通過率: 21%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "評価シートと評価未記入: 5件を突き合わせ、条件付きで進める",
+          "text": "評価シートと評価未記入: 5件を突き合わせ、条件付きで進める。判断材料は評価シート、面接通過率: 21%、評価未記入: 5件。",
+          "immediateFeedback": "評価シートに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "評価基準の再設計の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 1,
+            "fairness_safety": 2,
+            "requirement_fit": 1,
+            "candidate_experience": 2,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "studentFeedback": {
+            "good": "評価シートの具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は面接通過率: 21%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "評価観点の不確実性を理由に、判断を絞って持ち越す",
+          "text": "評価観点の不確実性を理由に、判断を絞って持ち越す。判断材料は評価シート、面接通過率: 21%、評価未記入: 5件。",
+          "immediateFeedback": "評価シートに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "評価基準の再設計の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": -1,
+            "fairness_safety": 2,
+            "requirement_fit": -1,
+            "candidate_experience": 2,
+            "hiring_progress": -1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、評価シートと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "評価シートの具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は面接通過率: 21%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "評価基準の再設計",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "評価基準の再設計",
+        "roleSpecificMaterials": [
+          "評価シート",
+          "評価観点",
+          "面接官コメント"
+        ],
+        "roleSpecificMetrics": [
+          "面接通過率: 21%",
+          "評価未記入: 5件"
+        ],
+        "roleSpecificFailureRisk": "評価シートを読まずに進め、要件過多で母集団が狭まる。",
+        "roleSpecificEvaluationCriteria": "面接通過率: 21%、評価未記入: 5件を使って、ボトルネックが特定されているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "評価シート、評価観点、面接官コメント、面接通過率: 21% / 評価未記入: 5件を判断の主役にしている。",
+        "kernelConnection": "評価シートを、評価基準の再設計へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "recruitment-consultant-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "辞退理由の偏り",
+      "openingHook": "14:15。辞退理由集計に辞退率: 38% / 平均選考日数: 24日が出ている。",
+      "context": "14:15。採用コンサルタントとして辞退理由集計を確認する。辞退率: 38% / 平均選考日数: 24日が今日の判断材料になる。",
+      "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n選考期間、訴求不足を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+      "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+      "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+      "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は辞退理由集計と辞退率: 38% / 平均選考日数: 24日である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "選考期間の確度と、辞退率: 38%の背景が完全にはそろっていない。",
+      "decisionTradeoff": "辞退率: 38%を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+      "consequenceHook": "ここでの辞退要因の改善仮説化が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は選考改善案で判断の副作用を確認する。",
+      "npcDialogue": "先輩:「辞退理由集計の数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+      "workMaterial": "辞退理由集計\n- 選考期間\n- 訴求不足\n- 辞退率: 38%\n- 平均選考日数: 24日",
+      "decisionPrompt": "辞退要因の改善仮説化として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "辞退率: 38%を重く見て、今日の改善を先に出す",
+          "text": "辞退率: 38%を重く見て、今日の改善を先に出す。判断材料は辞退理由集計、辞退率: 38%、平均選考日数: 24日。",
+          "immediateFeedback": "辞退理由集計に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "辞退要因の改善仮説化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 2,
+            "fairness_safety": -1,
+            "requirement_fit": 2,
+            "candidate_experience": -1,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、辞退理由集計と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "辞退理由集計の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は辞退率: 38%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "辞退理由集計と平均選考日数: 24日を突き合わせ、条件付きで進める",
+          "text": "辞退理由集計と平均選考日数: 24日を突き合わせ、条件付きで進める。判断材料は辞退理由集計、辞退率: 38%、平均選考日数: 24日。",
+          "immediateFeedback": "辞退理由集計に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "辞退要因の改善仮説化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 1,
+            "fairness_safety": 2,
+            "requirement_fit": 1,
+            "candidate_experience": 2,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "studentFeedback": {
+            "good": "辞退理由集計の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は辞退率: 38%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "選考期間の不確実性を理由に、判断を絞って持ち越す",
+          "text": "選考期間の不確実性を理由に、判断を絞って持ち越す。判断材料は辞退理由集計、辞退率: 38%、平均選考日数: 24日。",
+          "immediateFeedback": "辞退理由集計に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "辞退要因の改善仮説化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": -1,
+            "fairness_safety": 2,
+            "requirement_fit": -1,
+            "candidate_experience": 2,
+            "hiring_progress": -1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、辞退理由集計と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "辞退理由集計の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は辞退率: 38%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "辞退要因の改善仮説化",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "辞退要因の改善仮説化",
+        "roleSpecificMaterials": [
+          "辞退理由集計",
+          "選考期間",
+          "訴求不足"
+        ],
+        "roleSpecificMetrics": [
+          "辞退率: 38%",
+          "平均選考日数: 24日"
+        ],
+        "roleSpecificFailureRisk": "辞退理由集計を読まずに進め、要件過多で母集団が狭まる。",
+        "roleSpecificEvaluationCriteria": "辞退率: 38%、平均選考日数: 24日を使って、ボトルネックが特定されているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "辞退理由集計、選考期間、訴求不足、辞退率: 38% / 平均選考日数: 24日を判断の主役にしている。",
+        "kernelConnection": "辞退理由集計を、辞退要因の改善仮説化へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "recruitment-consultant-05",
+      "time": "16:40",
+      "interactable": "sticky_notes",
+      "title": "改善提案の着地",
+      "openingHook": "16:40。選考改善案に内定承諾率: 52% / 目標採用数: 3名が出ている。",
+      "context": "16:40。採用コンサルタントとして選考改善案を確認する。内定承諾率: 52% / 目標採用数: 3名が今日の判断材料になる。",
+      "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n要件修正、面接官すり合わせを読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+      "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+      "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+      "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は選考改善案と内定承諾率: 52% / 目標採用数: 3名である。",
+      "timePressure": "終業までに判断を残す必要がある。",
+      "missingInformation": "要件修正の確度と、内定承諾率: 52%の背景が完全にはそろっていない。",
+      "decisionTradeoff": "内定承諾率: 52%を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+      "consequenceHook": "ここでの採用改善案の優先順位決定が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "結果では職業理解として返る。",
+      "npcDialogue": "先輩:「選考改善案の数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+      "workMaterial": "選考改善案\n- 要件修正\n- 面接官すり合わせ\n- 内定承諾率: 52%\n- 目標採用数: 3名",
+      "decisionPrompt": "採用改善案の優先順位決定として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "内定承諾率: 52%を重く見て、今日の改善を先に出す",
+          "text": "内定承諾率: 52%を重く見て、今日の改善を先に出す。判断材料は選考改善案、内定承諾率: 52%、目標採用数: 3名。",
+          "immediateFeedback": "選考改善案に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "採用改善案の優先順位決定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 2,
+            "fairness_safety": -1,
+            "requirement_fit": 2,
+            "candidate_experience": -1,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、選考改善案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "選考改善案の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は内定承諾率: 52%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "選考改善案と目標採用数: 3名を突き合わせ、条件付きで進める",
+          "text": "選考改善案と目標採用数: 3名を突き合わせ、条件付きで進める。判断材料は選考改善案、内定承諾率: 52%、目標採用数: 3名。",
+          "immediateFeedback": "選考改善案に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "採用改善案の優先順位決定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": 1,
+            "fairness_safety": 2,
+            "requirement_fit": 1,
+            "candidate_experience": 2,
+            "hiring_progress": 1
+          },
+          "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "studentFeedback": {
+            "good": "選考改善案の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は内定承諾率: 52%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "要件修正の不確実性を理由に、判断を絞って持ち越す",
+          "text": "要件修正の不確実性を理由に、判断を絞って持ち越す。判断材料は選考改善案、内定承諾率: 52%、目標採用数: 3名。",
+          "immediateFeedback": "選考改善案に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "採用改善案の優先順位決定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "funnel_diagnosis": -1,
+            "fairness_safety": 2,
+            "requirement_fit": -1,
+            "candidate_experience": 2,
+            "hiring_progress": -1
+          },
+          "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、選考改善案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "選考改善案の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は内定承諾率: 52%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "ownership": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "採用改善案の優先順位決定",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "人と関わる",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "採用改善案の優先順位決定",
+        "roleSpecificMaterials": [
+          "選考改善案",
+          "要件修正",
+          "面接官すり合わせ"
+        ],
+        "roleSpecificMetrics": [
+          "内定承諾率: 52%",
+          "目標採用数: 3名"
+        ],
+        "roleSpecificFailureRisk": "選考改善案を読まずに進め、要件過多で母集団が狭まる。",
+        "roleSpecificEvaluationCriteria": "内定承諾率: 52%、目標採用数: 3名を使って、ボトルネックが特定されているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "選考改善案、要件修正、面接官すり合わせ、内定承諾率: 52% / 目標採用数: 3名を判断の主役にしている。",
+        "kernelConnection": "選考改善案を、採用改善案の優先順位決定へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "採用コンサルタントの午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "recruitment-consultant-01",
+          "time": "09:20",
+          "interactable": "monitor_terminal",
+          "title": "応募はあるのに進まない",
+          "openingHook": "09:20。採用ファネル表に応募数: 86件 / 書類通過率: 14%が出ている。",
+          "context": "09:20。採用コンサルタントとして採用ファネル表を確認する。応募数: 86件 / 書類通過率: 14%が今日の判断材料になる。",
+          "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n応募、書類通過を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+          "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+          "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は採用ファネル表と応募数: 86件 / 書類通過率: 14%である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "応募の確度と、応募数: 86件の背景が完全にはそろっていない。",
+          "decisionTradeoff": "応募数: 86件を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+          "consequenceHook": "ここでのファネル停滞箇所の特定が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は求人票で判断の副作用を確認する。",
+          "npcDialogue": "先輩:「採用ファネル表の数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+          "workMaterial": "採用ファネル表\n- 応募\n- 書類通過\n- 応募数: 86件\n- 書類通過率: 14%",
+          "decisionPrompt": "ファネル停滞箇所の特定として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "応募数: 86件を重く見て、今日の改善を先に出す",
+              "text": "応募数: 86件を重く見て、今日の改善を先に出す。判断材料は採用ファネル表、応募数: 86件、書類通過率: 14%。",
+              "immediateFeedback": "採用ファネル表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "ファネル停滞箇所の特定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 2,
+                "fairness_safety": -1,
+                "requirement_fit": 2,
+                "candidate_experience": -1,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、採用ファネル表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "採用ファネル表の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は応募数: 86件がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "採用ファネル表と書類通過率: 14%を突き合わせ、条件付きで進める",
+              "text": "採用ファネル表と書類通過率: 14%を突き合わせ、条件付きで進める。判断材料は採用ファネル表、応募数: 86件、書類通過率: 14%。",
+              "immediateFeedback": "採用ファネル表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "ファネル停滞箇所の特定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 1,
+                "fairness_safety": 2,
+                "requirement_fit": 1,
+                "candidate_experience": 2,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+              "studentFeedback": {
+                "good": "採用ファネル表の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は応募数: 86件がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "応募の不確実性を理由に、判断を絞って持ち越す",
+              "text": "応募の不確実性を理由に、判断を絞って持ち越す。判断材料は採用ファネル表、応募数: 86件、書類通過率: 14%。",
+              "immediateFeedback": "採用ファネル表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "ファネル停滞箇所の特定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": -1,
+                "fairness_safety": 2,
+                "requirement_fit": -1,
+                "candidate_experience": 2,
+                "hiring_progress": -1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、採用ファネル表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "採用ファネル表の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は応募数: 86件がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "ファネル停滞箇所の特定",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "ファネル停滞箇所の特定",
+            "roleSpecificMaterials": [
+              "採用ファネル表",
+              "応募",
+              "書類通過"
+            ],
+            "roleSpecificMetrics": [
+              "応募数: 86件",
+              "書類通過率: 14%"
+            ],
+            "roleSpecificFailureRisk": "採用ファネル表を読まずに進め、要件過多で母集団が狭まる。",
+            "roleSpecificEvaluationCriteria": "応募数: 86件、書類通過率: 14%を使って、ボトルネックが特定されているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "採用ファネル表、応募、書類通過、応募数: 86件 / 書類通過率: 14%を判断の主役にしている。",
+            "kernelConnection": "採用ファネル表を、ファネル停滞箇所の特定へ接続する。"
+          }
+        },
+        {
+          "id": "recruitment-consultant-02",
+          "time": "10:45",
+          "interactable": "monitor_browser",
+          "title": "求人票の条件過多",
+          "openingHook": "10:45。求人票に必須要件: 12項目 / 想定母集団: 230人が出ている。",
+          "context": "10:45。採用コンサルタントとして求人票を確認する。必須要件: 12項目 / 想定母集団: 230人が今日の判断材料になる。",
+          "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n必須要件、歓迎要件を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+          "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+          "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は求人票と必須要件: 12項目 / 想定母集団: 230人である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "必須要件の確度と、必須要件: 12項目の背景が完全にはそろっていない。",
+          "decisionTradeoff": "必須要件: 12項目を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+          "consequenceHook": "ここでの求人要件の絞り込みが、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は評価シートで判断の副作用を確認する。",
+          "npcDialogue": "先輩:「求人票の数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+          "workMaterial": "求人票\n- 必須要件\n- 歓迎要件\n- 必須要件: 12項目\n- 想定母集団: 230人",
+          "decisionPrompt": "求人要件の絞り込みとして、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "必須要件: 12項目を重く見て、今日の改善を先に出す",
+              "text": "必須要件: 12項目を重く見て、今日の改善を先に出す。判断材料は求人票、必須要件: 12項目、想定母集団: 230人。",
+              "immediateFeedback": "求人票に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "求人要件の絞り込みの副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 2,
+                "fairness_safety": -1,
+                "requirement_fit": 2,
+                "candidate_experience": -1,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、求人票と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "求人票の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は必須要件: 12項目がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "求人票と想定母集団: 230人を突き合わせ、条件付きで進める",
+              "text": "求人票と想定母集団: 230人を突き合わせ、条件付きで進める。判断材料は求人票、必須要件: 12項目、想定母集団: 230人。",
+              "immediateFeedback": "求人票に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "求人要件の絞り込みの副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 1,
+                "fairness_safety": 2,
+                "requirement_fit": 1,
+                "candidate_experience": 2,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+              "studentFeedback": {
+                "good": "求人票の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は必須要件: 12項目がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "必須要件の不確実性を理由に、判断を絞って持ち越す",
+              "text": "必須要件の不確実性を理由に、判断を絞って持ち越す。判断材料は求人票、必須要件: 12項目、想定母集団: 230人。",
+              "immediateFeedback": "求人票に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "求人要件の絞り込みの副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": -1,
+                "fairness_safety": 2,
+                "requirement_fit": -1,
+                "candidate_experience": 2,
+                "hiring_progress": -1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、求人票と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "求人票の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は必須要件: 12項目がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "求人要件の絞り込み",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "求人要件の絞り込み",
+            "roleSpecificMaterials": [
+              "求人票",
+              "必須要件",
+              "歓迎要件"
+            ],
+            "roleSpecificMetrics": [
+              "必須要件: 12項目",
+              "想定母集団: 230人"
+            ],
+            "roleSpecificFailureRisk": "求人票を読まずに進め、要件過多で母集団が狭まる。",
+            "roleSpecificEvaluationCriteria": "必須要件: 12項目、想定母集団: 230人を使って、ボトルネックが特定されているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "求人票、必須要件、歓迎要件、必須要件: 12項目 / 想定母集団: 230人を判断の主役にしている。",
+            "kernelConnection": "求人票を、求人要件の絞り込みへ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "採用コンサルタントの昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "recruitment-consultant-03",
+          "time": "12:25",
+          "interactable": "monitor_mail",
+          "title": "面接評価のばらつき",
+          "openingHook": "12:25。評価シートに面接通過率: 21% / 評価未記入: 5件が出ている。",
+          "context": "12:25。採用コンサルタントとして評価シートを確認する。面接通過率: 21% / 評価未記入: 5件が今日の判断材料になる。",
+          "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n評価観点、面接官コメントを読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+          "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+          "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は評価シートと面接通過率: 21% / 評価未記入: 5件である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "評価観点の確度と、面接通過率: 21%の背景が完全にはそろっていない。",
+          "decisionTradeoff": "面接通過率: 21%を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+          "consequenceHook": "ここでの評価基準の再設計が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は辞退理由集計で判断の副作用を確認する。",
+          "npcDialogue": "先輩:「評価シートの数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+          "workMaterial": "評価シート\n- 評価観点\n- 面接官コメント\n- 面接通過率: 21%\n- 評価未記入: 5件",
+          "decisionPrompt": "評価基準の再設計として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "面接通過率: 21%を重く見て、今日の改善を先に出す",
+              "text": "面接通過率: 21%を重く見て、今日の改善を先に出す。判断材料は評価シート、面接通過率: 21%、評価未記入: 5件。",
+              "immediateFeedback": "評価シートに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "評価基準の再設計の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 2,
+                "fairness_safety": -1,
+                "requirement_fit": 2,
+                "candidate_experience": -1,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、評価シートと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "評価シートの具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は面接通過率: 21%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "評価シートと評価未記入: 5件を突き合わせ、条件付きで進める",
+              "text": "評価シートと評価未記入: 5件を突き合わせ、条件付きで進める。判断材料は評価シート、面接通過率: 21%、評価未記入: 5件。",
+              "immediateFeedback": "評価シートに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "評価基準の再設計の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 1,
+                "fairness_safety": 2,
+                "requirement_fit": 1,
+                "candidate_experience": 2,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+              "studentFeedback": {
+                "good": "評価シートの具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は面接通過率: 21%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "評価観点の不確実性を理由に、判断を絞って持ち越す",
+              "text": "評価観点の不確実性を理由に、判断を絞って持ち越す。判断材料は評価シート、面接通過率: 21%、評価未記入: 5件。",
+              "immediateFeedback": "評価シートに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "評価基準の再設計の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": -1,
+                "fairness_safety": 2,
+                "requirement_fit": -1,
+                "candidate_experience": 2,
+                "hiring_progress": -1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、評価シートと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "評価シートの具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は面接通過率: 21%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "評価基準の再設計",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "評価基準の再設計",
+            "roleSpecificMaterials": [
+              "評価シート",
+              "評価観点",
+              "面接官コメント"
+            ],
+            "roleSpecificMetrics": [
+              "面接通過率: 21%",
+              "評価未記入: 5件"
+            ],
+            "roleSpecificFailureRisk": "評価シートを読まずに進め、要件過多で母集団が狭まる。",
+            "roleSpecificEvaluationCriteria": "面接通過率: 21%、評価未記入: 5件を使って、ボトルネックが特定されているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "評価シート、評価観点、面接官コメント、面接通過率: 21% / 評価未記入: 5件を判断の主役にしている。",
+            "kernelConnection": "評価シートを、評価基準の再設計へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "採用コンサルタントの午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "recruitment-consultant-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "辞退理由の偏り",
+          "openingHook": "14:15。辞退理由集計に辞退率: 38% / 平均選考日数: 24日が出ている。",
+          "context": "14:15。採用コンサルタントとして辞退理由集計を確認する。辞退率: 38% / 平均選考日数: 24日が今日の判断材料になる。",
+          "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n選考期間、訴求不足を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+          "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+          "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は辞退理由集計と辞退率: 38% / 平均選考日数: 24日である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "選考期間の確度と、辞退率: 38%の背景が完全にはそろっていない。",
+          "decisionTradeoff": "辞退率: 38%を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+          "consequenceHook": "ここでの辞退要因の改善仮説化が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は選考改善案で判断の副作用を確認する。",
+          "npcDialogue": "先輩:「辞退理由集計の数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+          "workMaterial": "辞退理由集計\n- 選考期間\n- 訴求不足\n- 辞退率: 38%\n- 平均選考日数: 24日",
+          "decisionPrompt": "辞退要因の改善仮説化として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "辞退率: 38%を重く見て、今日の改善を先に出す",
+              "text": "辞退率: 38%を重く見て、今日の改善を先に出す。判断材料は辞退理由集計、辞退率: 38%、平均選考日数: 24日。",
+              "immediateFeedback": "辞退理由集計に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "辞退要因の改善仮説化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 2,
+                "fairness_safety": -1,
+                "requirement_fit": 2,
+                "candidate_experience": -1,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、辞退理由集計と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "辞退理由集計の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は辞退率: 38%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "辞退理由集計と平均選考日数: 24日を突き合わせ、条件付きで進める",
+              "text": "辞退理由集計と平均選考日数: 24日を突き合わせ、条件付きで進める。判断材料は辞退理由集計、辞退率: 38%、平均選考日数: 24日。",
+              "immediateFeedback": "辞退理由集計に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "辞退要因の改善仮説化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 1,
+                "fairness_safety": 2,
+                "requirement_fit": 1,
+                "candidate_experience": 2,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+              "studentFeedback": {
+                "good": "辞退理由集計の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は辞退率: 38%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "選考期間の不確実性を理由に、判断を絞って持ち越す",
+              "text": "選考期間の不確実性を理由に、判断を絞って持ち越す。判断材料は辞退理由集計、辞退率: 38%、平均選考日数: 24日。",
+              "immediateFeedback": "辞退理由集計に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "辞退要因の改善仮説化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": -1,
+                "fairness_safety": 2,
+                "requirement_fit": -1,
+                "candidate_experience": 2,
+                "hiring_progress": -1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、辞退理由集計と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "辞退理由集計の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は辞退率: 38%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "辞退要因の改善仮説化",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "辞退要因の改善仮説化",
+            "roleSpecificMaterials": [
+              "辞退理由集計",
+              "選考期間",
+              "訴求不足"
+            ],
+            "roleSpecificMetrics": [
+              "辞退率: 38%",
+              "平均選考日数: 24日"
+            ],
+            "roleSpecificFailureRisk": "辞退理由集計を読まずに進め、要件過多で母集団が狭まる。",
+            "roleSpecificEvaluationCriteria": "辞退率: 38%、平均選考日数: 24日を使って、ボトルネックが特定されているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "辞退理由集計、選考期間、訴求不足、辞退率: 38% / 平均選考日数: 24日を判断の主役にしている。",
+            "kernelConnection": "辞退理由集計を、辞退要因の改善仮説化へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "採用コンサルタントの夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "recruitment-consultant-05",
+          "time": "16:40",
+          "interactable": "sticky_notes",
+          "title": "改善提案の着地",
+          "openingHook": "16:40。選考改善案に内定承諾率: 52% / 目標採用数: 3名が出ている。",
+          "context": "16:40。採用コンサルタントとして選考改善案を確認する。内定承諾率: 52% / 目標採用数: 3名が今日の判断材料になる。",
+          "content": "採用停滞をファネル、要件、評価基準、辞退理由から分解する。\n\n要件修正、面接官すり合わせを読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+          "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+          "hiddenWorkReality": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+          "stakeholderPressure": "採用コンサルタントの判断を待つ相手はいるが、主材料は選考改善案と内定承諾率: 52% / 目標採用数: 3名である。",
+          "timePressure": "終業までに判断を残す必要がある。",
+          "missingInformation": "要件修正の確度と、内定承諾率: 52%の背景が完全にはそろっていない。",
+          "decisionTradeoff": "内定承諾率: 52%を急いで改善するほど、公平性を損なわないを外すリスクが増える。",
+          "consequenceHook": "ここでの採用改善案の優先順位決定が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "結果では職業理解として返る。",
+          "npcDialogue": "先輩:「選考改善案の数字を見ずに決めると、採用コンサルタントの判断ではなくなるよ」",
+          "workMaterial": "選考改善案\n- 要件修正\n- 面接官すり合わせ\n- 内定承諾率: 52%\n- 目標採用数: 3名",
+          "decisionPrompt": "採用改善案の優先順位決定として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "内定承諾率: 52%を重く見て、今日の改善を先に出す",
+              "text": "内定承諾率: 52%を重く見て、今日の改善を先に出す。判断材料は選考改善案、内定承諾率: 52%、目標採用数: 3名。",
+              "immediateFeedback": "選考改善案に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "採用改善案の優先順位決定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 2,
+                "fairness_safety": -1,
+                "requirement_fit": 2,
+                "candidate_experience": -1,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、選考改善案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "選考改善案の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は内定承諾率: 52%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "選考改善案と目標採用数: 3名を突き合わせ、条件付きで進める",
+              "text": "選考改善案と目標採用数: 3名を突き合わせ、条件付きで進める。判断材料は選考改善案、内定承諾率: 52%、目標採用数: 3名。",
+              "immediateFeedback": "選考改善案に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "採用改善案の優先順位決定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントの仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": 1,
+                "fairness_safety": 2,
+                "requirement_fit": 1,
+                "candidate_experience": 2,
+                "hiring_progress": 1
+              },
+              "misconceptionEffect": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+              "studentFeedback": {
+                "good": "選考改善案の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は内定承諾率: 52%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "要件修正の不確実性を理由に、判断を絞って持ち越す",
+              "text": "要件修正の不確実性を理由に、判断を絞って持ち越す。判断材料は選考改善案、内定承諾率: 52%、目標採用数: 3名。",
+              "immediateFeedback": "選考改善案に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "採用改善案の優先順位決定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "採用コンサルタントで一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "funnel_diagnosis": -1,
+                "fairness_safety": 2,
+                "requirement_fit": -1,
+                "candidate_experience": 2,
+                "hiring_progress": -1
+              },
+              "misconceptionEffect": "採用コンサルタントは印象や会話だけではなく、選考改善案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "選考改善案の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は内定承諾率: 52%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "ownership": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "採用改善案の優先順位決定",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "人と関わる",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "採用改善案の優先順位決定",
+            "roleSpecificMaterials": [
+              "選考改善案",
+              "要件修正",
+              "面接官すり合わせ"
+            ],
+            "roleSpecificMetrics": [
+              "内定承諾率: 52%",
+              "目標採用数: 3名"
+            ],
+            "roleSpecificFailureRisk": "選考改善案を読まずに進め、要件過多で母集団が狭まる。",
+            "roleSpecificEvaluationCriteria": "内定承諾率: 52%、目標採用数: 3名を使って、ボトルネックが特定されているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "選考改善案、要件修正、面接官すり合わせ、内定承諾率: 52% / 目標採用数: 3名を判断の主役にしている。",
+            "kernelConnection": "選考改善案を、採用改善案の優先順位決定へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ethics",
+    "ownership"
+  ],
+  "resultTypes": [
+    {
+      "id": "material-translator",
+      "title": "採用コンサルタントの材料翻訳型",
+      "strengths": [
+        "採用コンサルタントの仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "funnel_diagnosis",
+        "fairness_safety"
+      ],
+      "valuedMeters": [
+        "funnel_diagnosis",
+        "fairness_safety"
+      ],
+      "sacrificedMeters": [
+        "requirement_fit"
+      ],
+      "roleRealityReveal": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+      "misconceptionCorrection": "採用は応募者を増やす広報や面接の印象判断が中心で、要件定義・選考データ・公平性設計は見えにくい。という誤解が修正される。",
+      "decisionPatternSummary": "採用コンサルタントの資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "採用コンサルタントとして仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "forward-driver",
+      "title": "採用コンサルタントの推進型",
+      "strengths": [
+        "採用コンサルタントの仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "requirement_fit",
+        "funnel_diagnosis"
+      ],
+      "valuedMeters": [
+        "requirement_fit",
+        "funnel_diagnosis"
+      ],
+      "sacrificedMeters": [
+        "fairness_safety"
+      ],
+      "roleRealityReveal": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+      "misconceptionCorrection": "採用は応募者を増やす広報や面接の印象判断が中心で、要件定義・選考データ・公平性設計は見えにくい。という誤解が修正される。",
+      "decisionPatternSummary": "採用コンサルタントの資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "採用コンサルタントとして仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "risk-controller",
+      "title": "採用コンサルタントの安全設計型",
+      "strengths": [
+        "採用コンサルタントの仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "fairness_safety",
+        "requirement_fit"
+      ],
+      "valuedMeters": [
+        "fairness_safety",
+        "requirement_fit"
+      ],
+      "sacrificedMeters": [
+        "funnel_diagnosis"
+      ],
+      "roleRealityReveal": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+      "misconceptionCorrection": "採用は応募者を増やす広報や面接の印象判断が中心で、要件定義・選考データ・公平性設計は見えにくい。という誤解が修正される。",
+      "decisionPatternSummary": "採用コンサルタントの資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "採用コンサルタントとして仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "analytics": {
+    "decisionStyleAxes": [
+      "funnel_diagnosis_vs_hiring_progress",
+      "fairness_safety_vs_speed",
+      "requirement_fit_vs_candidate_pool"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 1 selected role.",
+    "mainConflict": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+    "sceneRationale": "Role Differentiation Sheetの仕事材料から、連続する5 sceneの業務日に再構成した。",
+    "choiceRationale": "正解不正解ではなく、各仕事材料をどう読むかのトレードオフにした。",
+    "scoringRationale": "既存Cαのdimension互換を維持しつつ、Cβ固有meterを追加した。",
+    "knownLimitations": "架空ケースを前提にしたCβ標準シナリオ。実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "funnel_diagnosis",
+      "label": "ファネル診断",
+      "description": "採用停滞の場所を読む力"
+    },
+    {
+      "key": "fairness_safety",
+      "label": "公平性",
+      "description": "評価の偏りを避ける力"
+    },
+    {
+      "key": "requirement_fit",
+      "label": "要件適合",
+      "description": "条件と母集団の整合性"
+    },
+    {
+      "key": "candidate_experience",
+      "label": "候補者体験",
+      "description": "辞退を減らす設計"
+    },
+    {
+      "key": "hiring_progress",
+      "label": "採用前進",
+      "description": "充足へ進める力"
+    }
+  ],
+  "branchSummary": {
+    "overview": "採用コンサルタントの5つの仕事材料判断が、職業理解と意思決定傾向に連鎖する。",
+    "trackedEffects": [
+      "funnel_diagnosis",
+      "fairness_safety",
+      "requirement_fit",
+      "candidate_experience",
+      "hiring_progress"
+    ]
+  },
+  "resultFeedback": {
+    "roleRealityReveal": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+    "misconceptionCorrection": "採用は応募者を増やす広報や面接の印象判断が中心で、要件定義・選考データ・公平性設計は見えにくい。という見方から、採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する職種だと理解する。",
+    "careerReflectionPrompt": "採用コンサルタントとして、数字・資料・制約を読んで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "recruitment-consultant_role_understanding"
+    ]
+  },
+  "roleCoreFriction": "短期充足を求める圧力と、公平性・要件妥当性・定着可能性を同時に守る判断の葛藤。",
+  "roleMisconception": "採用は応募者を増やす広報や面接の印象判断が中心で、要件定義・選考データ・公平性設計は見えにくい。",
+  "roleRealityReveal": "実際は、採用の停滞を要件・母集団・選考・訴求のどこに問題があるかへ分解する仕事。",
+  "roleWorkKernel": {
+    "input": "求人要件、応募者ファネル、選考通過率、面接評価メモ、辞退理由",
+    "output": "採用課題仮説、選考改善案、求人要件修正案、評価観点",
+    "transformation": "採用の停滞を、要件・母集団・選考・訴求のどこに問題があるかへ分解する",
+    "constraints": [
+      "公平性を損なわない",
+      "現場要望をそのまま採用条件にしない",
+      "短期充足と長期定着を両立する"
+    ],
+    "workArtifacts": [
+      "採用ファネル表",
+      "求人票",
+      "評価シート",
+      "辞退理由集計"
+    ],
+    "metrics": [
+      "応募数: 86件",
+      "書類通過率: 14%",
+      "必須要件: 12項目",
+      "想定母集団: 230人",
+      "面接通過率: 21%",
+      "評価未記入: 5件",
+      "辞退率: 38%",
+      "平均選考日数: 24日",
+      "内定承諾率: 52%",
+      "目標採用数: 3名"
+    ],
+    "failureModes": [
+      "要件過多で母集団が狭まる",
+      "評価基準が曖昧になる",
+      "短期採用だけでミスマッチが増える"
+    ],
+    "evaluationCriteria": [
+      "ボトルネックが特定されている",
+      "評価基準が説明可能",
+      "公平性と採用成果が両立している"
+    ],
+    "nonGenericReason": "採用ファネル、求人要件、評価シート、辞退理由を読んで選考設計を変えるため。"
+  }
+}

@@ -1,0 +1,2190 @@
+{
+  "id": "manufacturing/procurement",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "メーカー/ものづくり",
+  "industrySlug": "manufacturing",
+  "role": "購買/調達",
+  "roleSlug": "procurement",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for メーカー/ものづくり 購買/調達.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "manufacturing",
+      "procurement"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "見積比較表"
+    },
+    {
+      "time": "10:40",
+      "label": "納期回答"
+    },
+    {
+      "time": "12:20",
+      "label": "代替部材表"
+    },
+    {
+      "time": "14:15",
+      "label": "為替試算"
+    },
+    {
+      "time": "16:35",
+      "label": "発注条件案"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "見積比較表"
+    },
+    {
+      "time": "10:40",
+      "label": "納期回答"
+    },
+    {
+      "time": "12:20",
+      "label": "代替部材表"
+    },
+    {
+      "time": "14:15",
+      "label": "為替試算"
+    },
+    {
+      "time": "16:35",
+      "label": "発注条件案"
+    }
+  ],
+  "sceneList": [
+    "procurement-01",
+    "procurement-02",
+    "procurement-03",
+    "procurement-04",
+    "procurement-05"
+  ],
+  "meta": {
+    "title": "購買/調達",
+    "industry": "メーカー/ものづくり",
+    "role": "購買/調達",
+    "duration_minutes": 18,
+    "description": "仕様・価格・納期・供給リスクを発注条件へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "procurement-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "見積比較表",
+      "openingHook": "09:10。単価 128円に差額 +9円とundefinedが並んでいる。",
+      "context": "購買/調達として単価 128円を確認する。差額 +9円、undefinedが今日の判断材料になる。",
+      "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、単価 128円を読んで次の作業判断を残す。",
+      "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+      "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は単価 128円である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "差額 +9円の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "差額 +9円を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "procurement-単価 128円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は最短 21日で副作用を確認する。",
+      "npcDialogue": "先輩:「単価 128円を読まずに進めると、購買/調達の判断ではなくなる」",
+      "workMaterial": "見積比較表\n- 単価 128円\n- 差額 +9円\n- 判断対象: 見積比較表",
+      "decisionPrompt": "procurement-単価 128円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "差額 +9円を重く見て、当日中に前へ進める",
+          "text": "差額 +9円を重く見て、当日中に前へ進める。材料は単価 128円、差額 +9円、undefined。",
+          "immediateFeedback": "単価 128円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 2,
+            "procurement_risk": -1,
+            "procurement_speed": 2,
+            "procurement_value": -1,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、単価 128円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "単価 128円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は差額 +9円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "単価 128円の差額 +9円とundefinedを突き合わせ、条件付きで進める",
+          "text": "単価 128円の差額 +9円とundefinedを突き合わせ、条件付きで進める。材料は単価 128円、差額 +9円、undefined。",
+          "immediateFeedback": "単価 128円に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 1,
+            "procurement_risk": 2,
+            "procurement_speed": 1,
+            "procurement_value": 2,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、単価 128円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "単価 128円の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は差額 +9円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は単価 128円、差額 +9円、undefined。",
+          "immediateFeedback": "単価 128円に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": -1,
+            "procurement_risk": 2,
+            "procurement_speed": -1,
+            "procurement_value": 2,
+            "procurement_feasibility": -1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、単価 128円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "単価 128円の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は差額 +9円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "procurement-単価 128円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "procurement-単価 128円判断",
+        "roleSpecificMaterials": [
+          "見積比較表",
+          "判断対象: 見積比較表"
+        ],
+        "roleSpecificMetrics": [
+          "単価 128円",
+          "差額 +9円"
+        ],
+        "roleSpecificFailureRisk": "見積比較表を読まず、単価 128円か差額 +9円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "単価 128円と差額 +9円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "見積比較表、単価 128円、差額 +9円を判断の主役にしている。",
+        "kernelConnection": "見積比較表をprocurement-単価 128円判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "procurement-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "納期回答",
+      "openingHook": "10:40。最短 21日に必要日 18日とundefinedが並んでいる。",
+      "context": "購買/調達として最短 21日を確認する。必要日 18日、undefinedが今日の判断材料になる。",
+      "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、最短 21日を読んで次の作業判断を残す。",
+      "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+      "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は最短 21日である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "必要日 18日の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "必要日 18日を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "procurement-最短 21日判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は適合率 92%で副作用を確認する。",
+      "npcDialogue": "先輩:「最短 21日を読まずに進めると、購買/調達の判断ではなくなる」",
+      "workMaterial": "納期回答\n- 最短 21日\n- 必要日 18日\n- 判断対象: 納期回答",
+      "decisionPrompt": "procurement-最短 21日判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "必要日 18日を重く見て、当日中に前へ進める",
+          "text": "必要日 18日を重く見て、当日中に前へ進める。材料は最短 21日、必要日 18日、undefined。",
+          "immediateFeedback": "最短 21日に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 2,
+            "procurement_risk": -1,
+            "procurement_speed": 2,
+            "procurement_value": -1,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、最短 21日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "最短 21日の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は必要日 18日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "最短 21日の必要日 18日とundefinedを突き合わせ、条件付きで進める",
+          "text": "最短 21日の必要日 18日とundefinedを突き合わせ、条件付きで進める。材料は最短 21日、必要日 18日、undefined。",
+          "immediateFeedback": "最短 21日に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 1,
+            "procurement_risk": 2,
+            "procurement_speed": 1,
+            "procurement_value": 2,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、最短 21日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "最短 21日の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は必要日 18日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は最短 21日、必要日 18日、undefined。",
+          "immediateFeedback": "最短 21日に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": -1,
+            "procurement_risk": 2,
+            "procurement_speed": -1,
+            "procurement_value": 2,
+            "procurement_feasibility": -1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、最短 21日と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "最短 21日の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は必要日 18日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "procurement-最短 21日判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "procurement-最短 21日判断",
+        "roleSpecificMaterials": [
+          "納期回答",
+          "判断対象: 納期回答"
+        ],
+        "roleSpecificMetrics": [
+          "最短 21日",
+          "必要日 18日"
+        ],
+        "roleSpecificFailureRisk": "納期回答を読まず、最短 21日か必要日 18日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "最短 21日と必要日 18日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "納期回答、最短 21日、必要日 18日を判断の主役にしている。",
+        "kernelConnection": "納期回答をprocurement-最短 21日判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "procurement-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "代替部材表",
+      "openingHook": "12:20。適合率 92%に認定 2社とundefinedが並んでいる。",
+      "context": "購買/調達として適合率 92%を確認する。認定 2社、undefinedが今日の判断材料になる。",
+      "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、適合率 92%を読んで次の作業判断を残す。",
+      "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+      "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は適合率 92%である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "認定 2社の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "認定 2社を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "procurement-適合率 92%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次はUSD 157円で副作用を確認する。",
+      "npcDialogue": "先輩:「適合率 92%を読まずに進めると、購買/調達の判断ではなくなる」",
+      "workMaterial": "代替部材表\n- 適合率 92%\n- 認定 2社\n- 判断対象: 代替部材表",
+      "decisionPrompt": "procurement-適合率 92%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "認定 2社を重く見て、当日中に前へ進める",
+          "text": "認定 2社を重く見て、当日中に前へ進める。材料は適合率 92%、認定 2社、undefined。",
+          "immediateFeedback": "適合率 92%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 2,
+            "procurement_risk": -1,
+            "procurement_speed": 2,
+            "procurement_value": -1,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、適合率 92%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "適合率 92%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は認定 2社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "適合率 92%の認定 2社とundefinedを突き合わせ、条件付きで進める",
+          "text": "適合率 92%の認定 2社とundefinedを突き合わせ、条件付きで進める。材料は適合率 92%、認定 2社、undefined。",
+          "immediateFeedback": "適合率 92%に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 1,
+            "procurement_risk": 2,
+            "procurement_speed": 1,
+            "procurement_value": 2,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、適合率 92%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "適合率 92%の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は認定 2社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は適合率 92%、認定 2社、undefined。",
+          "immediateFeedback": "適合率 92%に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": -1,
+            "procurement_risk": 2,
+            "procurement_speed": -1,
+            "procurement_value": 2,
+            "procurement_feasibility": -1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、適合率 92%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "適合率 92%の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は認定 2社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "procurement-適合率 92%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "procurement-適合率 92%判断",
+        "roleSpecificMaterials": [
+          "代替部材表",
+          "判断対象: 代替部材表"
+        ],
+        "roleSpecificMetrics": [
+          "適合率 92%",
+          "認定 2社"
+        ],
+        "roleSpecificFailureRisk": "代替部材表を読まず、適合率 92%か認定 2社のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "適合率 92%と認定 2社を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "代替部材表、適合率 92%、認定 2社を判断の主役にしている。",
+        "kernelConnection": "代替部材表をprocurement-適合率 92%判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "procurement-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "為替試算",
+      "openingHook": "14:15。USD 157円に影響 +4.5%とundefinedが並んでいる。",
+      "context": "購買/調達としてUSD 157円を確認する。影響 +4.5%、undefinedが今日の判断材料になる。",
+      "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、USD 157円を読んで次の作業判断を残す。",
+      "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+      "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はUSD 157円である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "影響 +4.5%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "影響 +4.5%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "procurement-USD 157円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は数量 30,000個で副作用を確認する。",
+      "npcDialogue": "先輩:「USD 157円を読まずに進めると、購買/調達の判断ではなくなる」",
+      "workMaterial": "為替試算\n- USD 157円\n- 影響 +4.5%\n- 判断対象: 為替試算",
+      "decisionPrompt": "procurement-USD 157円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "影響 +4.5%を重く見て、当日中に前へ進める",
+          "text": "影響 +4.5%を重く見て、当日中に前へ進める。材料はUSD 157円、影響 +4.5%、undefined。",
+          "immediateFeedback": "USD 157円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 2,
+            "procurement_risk": -1,
+            "procurement_speed": 2,
+            "procurement_value": -1,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、USD 157円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "USD 157円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は影響 +4.5%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "USD 157円の影響 +4.5%とundefinedを突き合わせ、条件付きで進める",
+          "text": "USD 157円の影響 +4.5%とundefinedを突き合わせ、条件付きで進める。材料はUSD 157円、影響 +4.5%、undefined。",
+          "immediateFeedback": "USD 157円に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 1,
+            "procurement_risk": 2,
+            "procurement_speed": 1,
+            "procurement_value": 2,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、USD 157円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "USD 157円の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は影響 +4.5%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料はUSD 157円、影響 +4.5%、undefined。",
+          "immediateFeedback": "USD 157円に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": -1,
+            "procurement_risk": 2,
+            "procurement_speed": -1,
+            "procurement_value": 2,
+            "procurement_feasibility": -1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、USD 157円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "USD 157円の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は影響 +4.5%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "procurement-USD 157円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "procurement-USD 157円判断",
+        "roleSpecificMaterials": [
+          "為替試算",
+          "判断対象: 為替試算"
+        ],
+        "roleSpecificMetrics": [
+          "USD 157円",
+          "影響 +4.5%"
+        ],
+        "roleSpecificFailureRisk": "為替試算を読まず、USD 157円か影響 +4.5%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "USD 157円と影響 +4.5%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "為替試算、USD 157円、影響 +4.5%を判断の主役にしている。",
+        "kernelConnection": "為替試算をprocurement-USD 157円判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "procurement-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "発注条件案",
+      "openingHook": "16:35。数量 30,000個に安全在庫 12日とundefinedが並んでいる。",
+      "context": "購買/調達として数量 30,000個を確認する。安全在庫 12日、undefinedが今日の判断材料になる。",
+      "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、数量 30,000個を読んで次の作業判断を残す。",
+      "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+      "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は数量 30,000個である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "安全在庫 12日の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "安全在庫 12日を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "procurement-数量 30,000個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「数量 30,000個を読まずに進めると、購買/調達の判断ではなくなる」",
+      "workMaterial": "発注条件案\n- 数量 30,000個\n- 安全在庫 12日\n- 判断対象: 発注条件案",
+      "decisionPrompt": "procurement-数量 30,000個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "安全在庫 12日を重く見て、当日中に前へ進める",
+          "text": "安全在庫 12日を重く見て、当日中に前へ進める。材料は数量 30,000個、安全在庫 12日、undefined。",
+          "immediateFeedback": "数量 30,000個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 2,
+            "procurement_risk": -1,
+            "procurement_speed": 2,
+            "procurement_value": -1,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、数量 30,000個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "数量 30,000個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は安全在庫 12日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "数量 30,000個の安全在庫 12日とundefinedを突き合わせ、条件付きで進める",
+          "text": "数量 30,000個の安全在庫 12日とundefinedを突き合わせ、条件付きで進める。材料は数量 30,000個、安全在庫 12日、undefined。",
+          "immediateFeedback": "数量 30,000個に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": 1,
+            "procurement_risk": 2,
+            "procurement_speed": 1,
+            "procurement_value": 2,
+            "procurement_feasibility": 1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、数量 30,000個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "数量 30,000個の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は安全在庫 12日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は数量 30,000個、安全在庫 12日、undefined。",
+          "immediateFeedback": "数量 30,000個に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "procurement_evidence": -1,
+            "procurement_risk": 2,
+            "procurement_speed": -1,
+            "procurement_value": 2,
+            "procurement_feasibility": -1
+          },
+          "misconceptionEffect": "購買/調達は印象ではなく、数量 30,000個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "数量 30,000個の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は安全在庫 12日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "procurement-数量 30,000個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "procurement-数量 30,000個判断",
+        "roleSpecificMaterials": [
+          "発注条件案",
+          "判断対象: 発注条件案"
+        ],
+        "roleSpecificMetrics": [
+          "数量 30,000個",
+          "安全在庫 12日"
+        ],
+        "roleSpecificFailureRisk": "発注条件案を読まず、数量 30,000個か安全在庫 12日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "数量 30,000個と安全在庫 12日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "発注条件案、数量 30,000個、安全在庫 12日を判断の主役にしている。",
+        "kernelConnection": "発注条件案をprocurement-数量 30,000個判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "procurement-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "見積比較表",
+          "openingHook": "09:10。単価 128円に差額 +9円とundefinedが並んでいる。",
+          "context": "購買/調達として単価 128円を確認する。差額 +9円、undefinedが今日の判断材料になる。",
+          "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、単価 128円を読んで次の作業判断を残す。",
+          "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+          "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は単価 128円である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "差額 +9円の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "差額 +9円を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "procurement-単価 128円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は最短 21日で副作用を確認する。",
+          "npcDialogue": "先輩:「単価 128円を読まずに進めると、購買/調達の判断ではなくなる」",
+          "workMaterial": "見積比較表\n- 単価 128円\n- 差額 +9円\n- 判断対象: 見積比較表",
+          "decisionPrompt": "procurement-単価 128円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "差額 +9円を重く見て、当日中に前へ進める",
+              "text": "差額 +9円を重く見て、当日中に前へ進める。材料は単価 128円、差額 +9円、undefined。",
+              "immediateFeedback": "単価 128円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 2,
+                "procurement_risk": -1,
+                "procurement_speed": 2,
+                "procurement_value": -1,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、単価 128円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "単価 128円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は差額 +9円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "単価 128円の差額 +9円とundefinedを突き合わせ、条件付きで進める",
+              "text": "単価 128円の差額 +9円とundefinedを突き合わせ、条件付きで進める。材料は単価 128円、差額 +9円、undefined。",
+              "immediateFeedback": "単価 128円に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 1,
+                "procurement_risk": 2,
+                "procurement_speed": 1,
+                "procurement_value": 2,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、単価 128円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "単価 128円の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は差額 +9円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は単価 128円、差額 +9円、undefined。",
+              "immediateFeedback": "単価 128円に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": -1,
+                "procurement_risk": 2,
+                "procurement_speed": -1,
+                "procurement_value": 2,
+                "procurement_feasibility": -1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、単価 128円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "単価 128円の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は差額 +9円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "procurement-単価 128円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "procurement-単価 128円判断",
+            "roleSpecificMaterials": [
+              "見積比較表",
+              "判断対象: 見積比較表"
+            ],
+            "roleSpecificMetrics": [
+              "単価 128円",
+              "差額 +9円"
+            ],
+            "roleSpecificFailureRisk": "見積比較表を読まず、単価 128円か差額 +9円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "単価 128円と差額 +9円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "見積比較表、単価 128円、差額 +9円を判断の主役にしている。",
+            "kernelConnection": "見積比較表をprocurement-単価 128円判断へ接続する。"
+          }
+        },
+        {
+          "id": "procurement-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "納期回答",
+          "openingHook": "10:40。最短 21日に必要日 18日とundefinedが並んでいる。",
+          "context": "購買/調達として最短 21日を確認する。必要日 18日、undefinedが今日の判断材料になる。",
+          "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、最短 21日を読んで次の作業判断を残す。",
+          "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+          "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は最短 21日である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "必要日 18日の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "必要日 18日を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "procurement-最短 21日判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は適合率 92%で副作用を確認する。",
+          "npcDialogue": "先輩:「最短 21日を読まずに進めると、購買/調達の判断ではなくなる」",
+          "workMaterial": "納期回答\n- 最短 21日\n- 必要日 18日\n- 判断対象: 納期回答",
+          "decisionPrompt": "procurement-最短 21日判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "必要日 18日を重く見て、当日中に前へ進める",
+              "text": "必要日 18日を重く見て、当日中に前へ進める。材料は最短 21日、必要日 18日、undefined。",
+              "immediateFeedback": "最短 21日に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 2,
+                "procurement_risk": -1,
+                "procurement_speed": 2,
+                "procurement_value": -1,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、最短 21日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "最短 21日の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は必要日 18日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "最短 21日の必要日 18日とundefinedを突き合わせ、条件付きで進める",
+              "text": "最短 21日の必要日 18日とundefinedを突き合わせ、条件付きで進める。材料は最短 21日、必要日 18日、undefined。",
+              "immediateFeedback": "最短 21日に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 1,
+                "procurement_risk": 2,
+                "procurement_speed": 1,
+                "procurement_value": 2,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、最短 21日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "最短 21日の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は必要日 18日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は最短 21日、必要日 18日、undefined。",
+              "immediateFeedback": "最短 21日に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": -1,
+                "procurement_risk": 2,
+                "procurement_speed": -1,
+                "procurement_value": 2,
+                "procurement_feasibility": -1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、最短 21日と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "最短 21日の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は必要日 18日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "procurement-最短 21日判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "procurement-最短 21日判断",
+            "roleSpecificMaterials": [
+              "納期回答",
+              "判断対象: 納期回答"
+            ],
+            "roleSpecificMetrics": [
+              "最短 21日",
+              "必要日 18日"
+            ],
+            "roleSpecificFailureRisk": "納期回答を読まず、最短 21日か必要日 18日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "最短 21日と必要日 18日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "納期回答、最短 21日、必要日 18日を判断の主役にしている。",
+            "kernelConnection": "納期回答をprocurement-最短 21日判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "procurement-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "代替部材表",
+          "openingHook": "12:20。適合率 92%に認定 2社とundefinedが並んでいる。",
+          "context": "購買/調達として適合率 92%を確認する。認定 2社、undefinedが今日の判断材料になる。",
+          "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、適合率 92%を読んで次の作業判断を残す。",
+          "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+          "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は適合率 92%である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "認定 2社の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "認定 2社を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "procurement-適合率 92%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次はUSD 157円で副作用を確認する。",
+          "npcDialogue": "先輩:「適合率 92%を読まずに進めると、購買/調達の判断ではなくなる」",
+          "workMaterial": "代替部材表\n- 適合率 92%\n- 認定 2社\n- 判断対象: 代替部材表",
+          "decisionPrompt": "procurement-適合率 92%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "認定 2社を重く見て、当日中に前へ進める",
+              "text": "認定 2社を重く見て、当日中に前へ進める。材料は適合率 92%、認定 2社、undefined。",
+              "immediateFeedback": "適合率 92%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 2,
+                "procurement_risk": -1,
+                "procurement_speed": 2,
+                "procurement_value": -1,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、適合率 92%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "適合率 92%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は認定 2社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "適合率 92%の認定 2社とundefinedを突き合わせ、条件付きで進める",
+              "text": "適合率 92%の認定 2社とundefinedを突き合わせ、条件付きで進める。材料は適合率 92%、認定 2社、undefined。",
+              "immediateFeedback": "適合率 92%に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 1,
+                "procurement_risk": 2,
+                "procurement_speed": 1,
+                "procurement_value": 2,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、適合率 92%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "適合率 92%の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は認定 2社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は適合率 92%、認定 2社、undefined。",
+              "immediateFeedback": "適合率 92%に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": -1,
+                "procurement_risk": 2,
+                "procurement_speed": -1,
+                "procurement_value": 2,
+                "procurement_feasibility": -1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、適合率 92%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "適合率 92%の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は認定 2社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "procurement-適合率 92%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "procurement-適合率 92%判断",
+            "roleSpecificMaterials": [
+              "代替部材表",
+              "判断対象: 代替部材表"
+            ],
+            "roleSpecificMetrics": [
+              "適合率 92%",
+              "認定 2社"
+            ],
+            "roleSpecificFailureRisk": "代替部材表を読まず、適合率 92%か認定 2社のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "適合率 92%と認定 2社を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "代替部材表、適合率 92%、認定 2社を判断の主役にしている。",
+            "kernelConnection": "代替部材表をprocurement-適合率 92%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "procurement-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "為替試算",
+          "openingHook": "14:15。USD 157円に影響 +4.5%とundefinedが並んでいる。",
+          "context": "購買/調達としてUSD 157円を確認する。影響 +4.5%、undefinedが今日の判断材料になる。",
+          "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、USD 157円を読んで次の作業判断を残す。",
+          "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+          "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はUSD 157円である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "影響 +4.5%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "影響 +4.5%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "procurement-USD 157円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は数量 30,000個で副作用を確認する。",
+          "npcDialogue": "先輩:「USD 157円を読まずに進めると、購買/調達の判断ではなくなる」",
+          "workMaterial": "為替試算\n- USD 157円\n- 影響 +4.5%\n- 判断対象: 為替試算",
+          "decisionPrompt": "procurement-USD 157円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "影響 +4.5%を重く見て、当日中に前へ進める",
+              "text": "影響 +4.5%を重く見て、当日中に前へ進める。材料はUSD 157円、影響 +4.5%、undefined。",
+              "immediateFeedback": "USD 157円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 2,
+                "procurement_risk": -1,
+                "procurement_speed": 2,
+                "procurement_value": -1,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、USD 157円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "USD 157円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は影響 +4.5%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "USD 157円の影響 +4.5%とundefinedを突き合わせ、条件付きで進める",
+              "text": "USD 157円の影響 +4.5%とundefinedを突き合わせ、条件付きで進める。材料はUSD 157円、影響 +4.5%、undefined。",
+              "immediateFeedback": "USD 157円に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 1,
+                "procurement_risk": 2,
+                "procurement_speed": 1,
+                "procurement_value": 2,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、USD 157円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "USD 157円の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は影響 +4.5%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料はUSD 157円、影響 +4.5%、undefined。",
+              "immediateFeedback": "USD 157円に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": -1,
+                "procurement_risk": 2,
+                "procurement_speed": -1,
+                "procurement_value": 2,
+                "procurement_feasibility": -1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、USD 157円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "USD 157円の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は影響 +4.5%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "procurement-USD 157円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "procurement-USD 157円判断",
+            "roleSpecificMaterials": [
+              "為替試算",
+              "判断対象: 為替試算"
+            ],
+            "roleSpecificMetrics": [
+              "USD 157円",
+              "影響 +4.5%"
+            ],
+            "roleSpecificFailureRisk": "為替試算を読まず、USD 157円か影響 +4.5%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "USD 157円と影響 +4.5%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "為替試算、USD 157円、影響 +4.5%を判断の主役にしている。",
+            "kernelConnection": "為替試算をprocurement-USD 157円判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "procurement-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "発注条件案",
+          "openingHook": "16:35。数量 30,000個に安全在庫 12日とundefinedが並んでいる。",
+          "context": "購買/調達として数量 30,000個を確認する。安全在庫 12日、undefinedが今日の判断材料になる。",
+          "content": "仕様・価格・納期・供給リスクを発注条件へ変換するため、数量 30,000個を読んで次の作業判断を残す。",
+          "roleSpecificContext": "購買/調達は仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+          "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は数量 30,000個である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "安全在庫 12日の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "安全在庫 12日を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "procurement-数量 30,000個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「数量 30,000個を読まずに進めると、購買/調達の判断ではなくなる」",
+          "workMaterial": "発注条件案\n- 数量 30,000個\n- 安全在庫 12日\n- 判断対象: 発注条件案",
+          "decisionPrompt": "procurement-数量 30,000個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "安全在庫 12日を重く見て、当日中に前へ進める",
+              "text": "安全在庫 12日を重く見て、当日中に前へ進める。材料は数量 30,000個、安全在庫 12日、undefined。",
+              "immediateFeedback": "数量 30,000個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 2,
+                "procurement_risk": -1,
+                "procurement_speed": 2,
+                "procurement_value": -1,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、数量 30,000個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "数量 30,000個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は安全在庫 12日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "数量 30,000個の安全在庫 12日とundefinedを突き合わせ、条件付きで進める",
+              "text": "数量 30,000個の安全在庫 12日とundefinedを突き合わせ、条件付きで進める。材料は数量 30,000個、安全在庫 12日、undefined。",
+              "immediateFeedback": "数量 30,000個に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": 1,
+                "procurement_risk": 2,
+                "procurement_speed": 1,
+                "procurement_value": 2,
+                "procurement_feasibility": 1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、数量 30,000個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "数量 30,000個の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は安全在庫 12日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は数量 30,000個、安全在庫 12日、undefined。",
+              "immediateFeedback": "数量 30,000個に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "購買/調達で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "procurement_evidence": -1,
+                "procurement_risk": 2,
+                "procurement_speed": -1,
+                "procurement_value": 2,
+                "procurement_feasibility": -1
+              },
+              "misconceptionEffect": "購買/調達は印象ではなく、数量 30,000個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "数量 30,000個の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は安全在庫 12日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "procurement-数量 30,000個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "procurement-数量 30,000個判断",
+            "roleSpecificMaterials": [
+              "発注条件案",
+              "判断対象: 発注条件案"
+            ],
+            "roleSpecificMetrics": [
+              "数量 30,000個",
+              "安全在庫 12日"
+            ],
+            "roleSpecificFailureRisk": "発注条件案を読まず、数量 30,000個か安全在庫 12日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "数量 30,000個と安全在庫 12日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "発注条件案、数量 30,000個、安全在庫 12日を判断の主役にしている。",
+            "kernelConnection": "発注条件案をprocurement-数量 30,000個判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch2-1",
+      "title": "購買/調達の材料翻訳型",
+      "strengths": [
+        "購買/調達の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "procurement_evidence",
+        "procurement_risk"
+      ],
+      "valuedMeters": [
+        "procurement_evidence"
+      ],
+      "sacrificedMeters": [
+        "procurement_speed"
+      ],
+      "roleRealityReveal": "購買/調達は、仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "購買/調達の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-2",
+      "title": "購買/調達の推進型",
+      "strengths": [
+        "購買/調達の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "procurement_risk",
+        "procurement_speed"
+      ],
+      "valuedMeters": [
+        "procurement_risk"
+      ],
+      "sacrificedMeters": [
+        "procurement_value"
+      ],
+      "roleRealityReveal": "購買/調達は、仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "購買/調達の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-3",
+      "title": "購買/調達の安全設計型",
+      "strengths": [
+        "購買/調達の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "procurement_speed",
+        "procurement_value"
+      ],
+      "valuedMeters": [
+        "procurement_speed"
+      ],
+      "sacrificedMeters": [
+        "procurement_feasibility"
+      ],
+      "roleRealityReveal": "購買/調達は、仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "購買/調達の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "購買/調達は、仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+    "misconceptionCorrection": "見た目の対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "購買/調達として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "procurement_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "procurement_evidence_vs_procurement_risk",
+      "procurement_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 2 selected for decision primitive diversity.",
+    "mainConflict": "仕様・価格・納期・供給リスクを発注条件へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 2 selection skeleton Cに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "procurement_evidence",
+      "label": "evidence",
+      "description": "購買/調達のevidence判断"
+    },
+    {
+      "key": "procurement_risk",
+      "label": "risk",
+      "description": "購買/調達のrisk判断"
+    },
+    {
+      "key": "procurement_speed",
+      "label": "speed",
+      "description": "購買/調達のspeed判断"
+    },
+    {
+      "key": "procurement_value",
+      "label": "value",
+      "description": "購買/調達のvalue判断"
+    },
+    {
+      "key": "procurement_feasibility",
+      "label": "feasibility",
+      "description": "購買/調達のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "購買/調達の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "procurement_evidence",
+      "procurement_risk",
+      "procurement_speed",
+      "procurement_value",
+      "procurement_feasibility"
+    ]
+  },
+  "roleCoreFriction": "仕様・価格・納期・供給リスクを発注条件へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "購買/調達は人との調整や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "購買/調達は、仕様・価格・納期・供給リスクを発注条件へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "単価 128円、最短 21日、適合率 92%、USD 157円、数量 30,000個、関係者制約、期限",
+    "output": "購買/調達としての判断案、次回確認項目、リスクメモ",
+    "transformation": "仕様・価格・納期・供給リスクを発注条件へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "単価 128円",
+      "最短 21日",
+      "適合率 92%",
+      "USD 157円",
+      "数量 30,000個"
+    ],
+    "metrics": [
+      "単価 128円",
+      "差額 +9円",
+      "最短 21日",
+      "必要日 18日",
+      "適合率 92%",
+      "認定 2社",
+      "USD 157円",
+      "影響 +4.5%",
+      "数量 30,000個",
+      "安全在庫 12日"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "単価 128円、最短 21日、適合率 92%と差額 +9円、、必要日 18日を読まなければ成立しないため。"
+  }
+}

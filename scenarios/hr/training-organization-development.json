@@ -1,0 +1,2192 @@
+{
+  "id": "hr/training-organization-development",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "人材/HR",
+  "industrySlug": "hr",
+  "role": "研修/組織開発企画",
+  "roleSlug": "training-organization-development",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "企画系",
+    "社会貢献",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 人材/HR 研修/組織開発企画.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "hr",
+      "training-organization-development"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "育成課題メモ"
+    },
+    {
+      "time": "10:35",
+      "label": "受講者セグメント表"
+    },
+    {
+      "time": "12:20",
+      "label": "研修設計案"
+    },
+    {
+      "time": "14:05",
+      "label": "現場実践シート"
+    },
+    {
+      "time": "16:25",
+      "label": "効果測定表"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "育成課題メモ"
+    },
+    {
+      "time": "10:35",
+      "label": "受講者セグメント表"
+    },
+    {
+      "time": "12:20",
+      "label": "研修設計案"
+    },
+    {
+      "time": "14:05",
+      "label": "現場実践シート"
+    },
+    {
+      "time": "16:25",
+      "label": "効果測定表"
+    }
+  ],
+  "sceneList": [
+    "training-organization-development-01",
+    "training-organization-development-02",
+    "training-organization-development-03",
+    "training-organization-development-04",
+    "training-organization-development-05"
+  ],
+  "meta": {
+    "title": "研修/組織開発企画",
+    "industry": "人材/HR",
+    "role": "研修/組織開発企画",
+    "duration_minutes": 18,
+    "description": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "training-organization-development-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "育成課題メモ",
+      "openingHook": "09:10。育成課題メモに対象 120名と課題 4分類が並んでいる。",
+      "context": "研修/組織開発企画として育成課題メモを確認する。対象 120名、課題 4分類が今日の判断材料になる。",
+      "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、育成課題メモを読んで優先テーマを選ぶ。",
+      "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+      "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は育成課題メモである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "対象 120名の背景と課題 4分類の確度が完全にはそろっていない。",
+      "decisionTradeoff": "対象 120名を重く見るほど、課題 4分類や別の制約を犠牲にする。",
+      "consequenceHook": "training-organization-development-対象 120名判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は受講者セグメント表で副作用を確認する。",
+      "npcDialogue": "先輩:「育成課題メモを読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+      "workMaterial": "育成課題メモ\n- 対象 120名\n- 課題 4分類\n- 判断対象: 育成課題メモ",
+      "decisionPrompt": "training-organization-development-対象 120名判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "対象 120名を優先し、当日中に育成課題メモの結論を出す",
+          "text": "対象 120名を優先し、当日中に育成課題メモの結論を出す。材料は対象 120名、課題 4分類。",
+          "immediateFeedback": "対象 120名に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 2,
+            "training_organization_development_risk": -1,
+            "training_organization_development_speed": 2,
+            "training_organization_development_value": -1,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は印象ではなく、対象 120名と課題 4分類を読んで判断する。",
+          "studentFeedback": {
+            "good": "対象 120名の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は課題 4分類の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "対象 120名と課題 4分類を突き合わせ、条件付きで進める",
+          "text": "対象 120名と課題 4分類を突き合わせ、条件付きで進める。材料は対象 120名、課題 4分類。",
+          "immediateFeedback": "育成課題メモに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": 1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "対象 120名と課題 4分類を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は育成課題メモの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "課題 4分類の制約を重く見て、判断範囲を絞る",
+          "text": "課題 4分類の制約を重く見て、判断範囲を絞る。材料は対象 120名、課題 4分類。",
+          "immediateFeedback": "課題 4分類に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": -1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": -1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": -1
+          },
+          "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、対象 120名と課題 4分類の副作用まで読む。",
+          "studentFeedback": {
+            "good": "課題 4分類の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は対象 120名を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "training-organization-development-対象 120名判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "社会貢献",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "training-organization-development-対象 120名判断",
+        "roleSpecificMaterials": [
+          "育成課題メモ",
+          "判断対象: 育成課題メモ"
+        ],
+        "roleSpecificMetrics": [
+          "対象 120名",
+          "課題 4分類"
+        ],
+        "roleSpecificFailureRisk": "育成課題メモを読まず、対象 120名か課題 4分類のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "対象 120名と課題 4分類を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "育成課題メモ、対象 120名、課題 4分類を判断の主役にしている。",
+        "kernelConnection": "育成課題メモをtraining-organization-development-対象 120名判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "training-organization-development-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "受講者セグメント表",
+      "openingHook": "10:35。受講者セグメント表に新人 45名と管理職 18名が並んでいる。",
+      "context": "研修/組織開発企画として受講者セグメント表を確認する。新人 45名、管理職 18名が今日の判断材料になる。",
+      "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、受講者セグメント表を読んで設計単位を分ける。",
+      "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+      "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は受講者セグメント表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "新人 45名の背景と管理職 18名の確度が完全にはそろっていない。",
+      "decisionTradeoff": "新人 45名を重く見るほど、管理職 18名や別の制約を犠牲にする。",
+      "consequenceHook": "training-organization-development-新人 45名判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は研修設計案で副作用を確認する。",
+      "npcDialogue": "先輩:「受講者セグメント表を読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+      "workMaterial": "受講者セグメント表\n- 新人 45名\n- 管理職 18名\n- 判断対象: 受講者セグメント表",
+      "decisionPrompt": "training-organization-development-新人 45名判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "新人 45名を優先し、当日中に受講者セグメント表の結論を出す",
+          "text": "新人 45名を優先し、当日中に受講者セグメント表の結論を出す。材料は新人 45名、管理職 18名。",
+          "immediateFeedback": "新人 45名に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 2,
+            "training_organization_development_risk": -1,
+            "training_organization_development_speed": 2,
+            "training_organization_development_value": -1,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は印象ではなく、新人 45名と管理職 18名を読んで判断する。",
+          "studentFeedback": {
+            "good": "新人 45名の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は管理職 18名の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "新人 45名と管理職 18名を突き合わせ、条件付きで進める",
+          "text": "新人 45名と管理職 18名を突き合わせ、条件付きで進める。材料は新人 45名、管理職 18名。",
+          "immediateFeedback": "受講者セグメント表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": 1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "新人 45名と管理職 18名を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は受講者セグメント表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "管理職 18名の制約を重く見て、判断範囲を絞る",
+          "text": "管理職 18名の制約を重く見て、判断範囲を絞る。材料は新人 45名、管理職 18名。",
+          "immediateFeedback": "管理職 18名に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": -1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": -1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": -1
+          },
+          "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、新人 45名と管理職 18名の副作用まで読む。",
+          "studentFeedback": {
+            "good": "管理職 18名の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は新人 45名を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "training-organization-development-新人 45名判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "社会貢献",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "training-organization-development-新人 45名判断",
+        "roleSpecificMaterials": [
+          "受講者セグメント表",
+          "判断対象: 受講者セグメント表"
+        ],
+        "roleSpecificMetrics": [
+          "新人 45名",
+          "管理職 18名"
+        ],
+        "roleSpecificFailureRisk": "受講者セグメント表を読まず、新人 45名か管理職 18名のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "新人 45名と管理職 18名を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "受講者セグメント表、新人 45名、管理職 18名を判断の主役にしている。",
+        "kernelConnection": "受講者セグメント表をtraining-organization-development-新人 45名判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "training-organization-development-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "研修設計案",
+      "openingHook": "12:20。研修設計案に演習 3本と所要 90分が並んでいる。",
+      "context": "研修/組織開発企画として研修設計案を確認する。演習 3本、所要 90分が今日の判断材料になる。",
+      "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、研修設計案を読んで演習比率を決める。",
+      "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+      "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は研修設計案である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "演習 3本の背景と所要 90分の確度が完全にはそろっていない。",
+      "decisionTradeoff": "演習 3本を重く見るほど、所要 90分や別の制約を犠牲にする。",
+      "consequenceHook": "training-organization-development-演習 3本判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は現場実践シートで副作用を確認する。",
+      "npcDialogue": "先輩:「研修設計案を読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+      "workMaterial": "研修設計案\n- 演習 3本\n- 所要 90分\n- 判断対象: 研修設計案",
+      "decisionPrompt": "training-organization-development-演習 3本判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "演習 3本を優先し、当日中に研修設計案の結論を出す",
+          "text": "演習 3本を優先し、当日中に研修設計案の結論を出す。材料は演習 3本、所要 90分。",
+          "immediateFeedback": "演習 3本に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 2,
+            "training_organization_development_risk": -1,
+            "training_organization_development_speed": 2,
+            "training_organization_development_value": -1,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は印象ではなく、演習 3本と所要 90分を読んで判断する。",
+          "studentFeedback": {
+            "good": "演習 3本の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は所要 90分の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "演習 3本と所要 90分を突き合わせ、条件付きで進める",
+          "text": "演習 3本と所要 90分を突き合わせ、条件付きで進める。材料は演習 3本、所要 90分。",
+          "immediateFeedback": "研修設計案に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": 1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "演習 3本と所要 90分を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は研修設計案の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "所要 90分の制約を重く見て、判断範囲を絞る",
+          "text": "所要 90分の制約を重く見て、判断範囲を絞る。材料は演習 3本、所要 90分。",
+          "immediateFeedback": "所要 90分に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": -1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": -1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": -1
+          },
+          "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、演習 3本と所要 90分の副作用まで読む。",
+          "studentFeedback": {
+            "good": "所要 90分の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は演習 3本を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "training-organization-development-演習 3本判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "社会貢献",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "training-organization-development-演習 3本判断",
+        "roleSpecificMaterials": [
+          "研修設計案",
+          "判断対象: 研修設計案"
+        ],
+        "roleSpecificMetrics": [
+          "演習 3本",
+          "所要 90分"
+        ],
+        "roleSpecificFailureRisk": "研修設計案を読まず、演習 3本か所要 90分のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "演習 3本と所要 90分を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "研修設計案、演習 3本、所要 90分を判断の主役にしている。",
+        "kernelConnection": "研修設計案をtraining-organization-development-演習 3本判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "training-organization-development-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "現場実践シート",
+      "openingHook": "14:05。現場実践シートに行動項目 6個と提出期限 14日が並んでいる。",
+      "context": "研修/組織開発企画として現場実践シートを確認する。行動項目 6個、提出期限 14日が今日の判断材料になる。",
+      "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、現場実践シートを読んで定着方法を作る。",
+      "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+      "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は現場実践シートである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "行動項目 6個の背景と提出期限 14日の確度が完全にはそろっていない。",
+      "decisionTradeoff": "行動項目 6個を重く見るほど、提出期限 14日や別の制約を犠牲にする。",
+      "consequenceHook": "training-organization-development-行動項目 6個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は効果測定表で副作用を確認する。",
+      "npcDialogue": "先輩:「現場実践シートを読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+      "workMaterial": "現場実践シート\n- 行動項目 6個\n- 提出期限 14日\n- 判断対象: 現場実践シート",
+      "decisionPrompt": "training-organization-development-行動項目 6個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "行動項目 6個を優先し、当日中に現場実践シートの結論を出す",
+          "text": "行動項目 6個を優先し、当日中に現場実践シートの結論を出す。材料は行動項目 6個、提出期限 14日。",
+          "immediateFeedback": "行動項目 6個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 2,
+            "training_organization_development_risk": -1,
+            "training_organization_development_speed": 2,
+            "training_organization_development_value": -1,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は印象ではなく、行動項目 6個と提出期限 14日を読んで判断する。",
+          "studentFeedback": {
+            "good": "行動項目 6個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は提出期限 14日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "行動項目 6個と提出期限 14日を突き合わせ、条件付きで進める",
+          "text": "行動項目 6個と提出期限 14日を突き合わせ、条件付きで進める。材料は行動項目 6個、提出期限 14日。",
+          "immediateFeedback": "現場実践シートに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": 1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "行動項目 6個と提出期限 14日を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は現場実践シートの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "提出期限 14日の制約を重く見て、判断範囲を絞る",
+          "text": "提出期限 14日の制約を重く見て、判断範囲を絞る。材料は行動項目 6個、提出期限 14日。",
+          "immediateFeedback": "提出期限 14日に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": -1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": -1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": -1
+          },
+          "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、行動項目 6個と提出期限 14日の副作用まで読む。",
+          "studentFeedback": {
+            "good": "提出期限 14日の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は行動項目 6個を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "training-organization-development-行動項目 6個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "社会貢献",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "training-organization-development-行動項目 6個判断",
+        "roleSpecificMaterials": [
+          "現場実践シート",
+          "判断対象: 現場実践シート"
+        ],
+        "roleSpecificMetrics": [
+          "行動項目 6個",
+          "提出期限 14日"
+        ],
+        "roleSpecificFailureRisk": "現場実践シートを読まず、行動項目 6個か提出期限 14日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "行動項目 6個と提出期限 14日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "現場実践シート、行動項目 6個、提出期限 14日を判断の主役にしている。",
+        "kernelConnection": "現場実践シートをtraining-organization-development-行動項目 6個判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "training-organization-development-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "効果測定表",
+      "openingHook": "16:25。効果測定表に満足度 4.1と実践率 58%が並んでいる。",
+      "context": "研修/組織開発企画として効果測定表を確認する。満足度 4.1、実践率 58%が今日の判断材料になる。",
+      "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、効果測定表を読んで改善指標を選ぶ。",
+      "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+      "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は効果測定表である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "満足度 4.1の背景と実践率 58%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "満足度 4.1を重く見るほど、実践率 58%や別の制約を犠牲にする。",
+      "consequenceHook": "training-organization-development-満足度 4.1判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「効果測定表を読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+      "workMaterial": "効果測定表\n- 満足度 4.1\n- 実践率 58%\n- 判断対象: 効果測定表",
+      "decisionPrompt": "training-organization-development-満足度 4.1判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "満足度 4.1を優先し、当日中に効果測定表の結論を出す",
+          "text": "満足度 4.1を優先し、当日中に効果測定表の結論を出す。材料は満足度 4.1、実践率 58%。",
+          "immediateFeedback": "満足度 4.1に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 2,
+            "training_organization_development_risk": -1,
+            "training_organization_development_speed": 2,
+            "training_organization_development_value": -1,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は印象ではなく、満足度 4.1と実践率 58%を読んで判断する。",
+          "studentFeedback": {
+            "good": "満足度 4.1の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は実践率 58%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "満足度 4.1と実践率 58%を突き合わせ、条件付きで進める",
+          "text": "満足度 4.1と実践率 58%を突き合わせ、条件付きで進める。材料は満足度 4.1、実践率 58%。",
+          "immediateFeedback": "効果測定表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": 1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": 1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": 1
+          },
+          "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "満足度 4.1と実践率 58%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は効果測定表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "実践率 58%の制約を重く見て、判断範囲を絞る",
+          "text": "実践率 58%の制約を重く見て、判断範囲を絞る。材料は満足度 4.1、実践率 58%。",
+          "immediateFeedback": "実践率 58%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "training_organization_development_evidence": -1,
+            "training_organization_development_risk": 2,
+            "training_organization_development_speed": -1,
+            "training_organization_development_value": 2,
+            "training_organization_development_feasibility": -1
+          },
+          "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、満足度 4.1と実践率 58%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "実践率 58%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は満足度 4.1を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "training-organization-development-満足度 4.1判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "企画系",
+          "社会貢献",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "training-organization-development-満足度 4.1判断",
+        "roleSpecificMaterials": [
+          "効果測定表",
+          "判断対象: 効果測定表"
+        ],
+        "roleSpecificMetrics": [
+          "満足度 4.1",
+          "実践率 58%"
+        ],
+        "roleSpecificFailureRisk": "効果測定表を読まず、満足度 4.1か実践率 58%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "満足度 4.1と実践率 58%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "効果測定表、満足度 4.1、実践率 58%を判断の主役にしている。",
+        "kernelConnection": "効果測定表をtraining-organization-development-満足度 4.1判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。研修/組織開発企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "training-organization-development-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "育成課題メモ",
+          "openingHook": "09:10。育成課題メモに対象 120名と課題 4分類が並んでいる。",
+          "context": "研修/組織開発企画として育成課題メモを確認する。対象 120名、課題 4分類が今日の判断材料になる。",
+          "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、育成課題メモを読んで優先テーマを選ぶ。",
+          "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+          "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は育成課題メモである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "対象 120名の背景と課題 4分類の確度が完全にはそろっていない。",
+          "decisionTradeoff": "対象 120名を重く見るほど、課題 4分類や別の制約を犠牲にする。",
+          "consequenceHook": "training-organization-development-対象 120名判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は受講者セグメント表で副作用を確認する。",
+          "npcDialogue": "先輩:「育成課題メモを読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+          "workMaterial": "育成課題メモ\n- 対象 120名\n- 課題 4分類\n- 判断対象: 育成課題メモ",
+          "decisionPrompt": "training-organization-development-対象 120名判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "対象 120名を優先し、当日中に育成課題メモの結論を出す",
+              "text": "対象 120名を優先し、当日中に育成課題メモの結論を出す。材料は対象 120名、課題 4分類。",
+              "immediateFeedback": "対象 120名に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 2,
+                "training_organization_development_risk": -1,
+                "training_organization_development_speed": 2,
+                "training_organization_development_value": -1,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は印象ではなく、対象 120名と課題 4分類を読んで判断する。",
+              "studentFeedback": {
+                "good": "対象 120名の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は課題 4分類の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "対象 120名と課題 4分類を突き合わせ、条件付きで進める",
+              "text": "対象 120名と課題 4分類を突き合わせ、条件付きで進める。材料は対象 120名、課題 4分類。",
+              "immediateFeedback": "育成課題メモに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": 1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "対象 120名と課題 4分類を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は育成課題メモの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "課題 4分類の制約を重く見て、判断範囲を絞る",
+              "text": "課題 4分類の制約を重く見て、判断範囲を絞る。材料は対象 120名、課題 4分類。",
+              "immediateFeedback": "課題 4分類に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": -1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": -1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": -1
+              },
+              "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、対象 120名と課題 4分類の副作用まで読む。",
+              "studentFeedback": {
+                "good": "課題 4分類の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は対象 120名を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "training-organization-development-対象 120名判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "社会貢献",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "training-organization-development-対象 120名判断",
+            "roleSpecificMaterials": [
+              "育成課題メモ",
+              "判断対象: 育成課題メモ"
+            ],
+            "roleSpecificMetrics": [
+              "対象 120名",
+              "課題 4分類"
+            ],
+            "roleSpecificFailureRisk": "育成課題メモを読まず、対象 120名か課題 4分類のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "対象 120名と課題 4分類を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "育成課題メモ、対象 120名、課題 4分類を判断の主役にしている。",
+            "kernelConnection": "育成課題メモをtraining-organization-development-対象 120名判断へ接続する。"
+          }
+        },
+        {
+          "id": "training-organization-development-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "受講者セグメント表",
+          "openingHook": "10:35。受講者セグメント表に新人 45名と管理職 18名が並んでいる。",
+          "context": "研修/組織開発企画として受講者セグメント表を確認する。新人 45名、管理職 18名が今日の判断材料になる。",
+          "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、受講者セグメント表を読んで設計単位を分ける。",
+          "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+          "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は受講者セグメント表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "新人 45名の背景と管理職 18名の確度が完全にはそろっていない。",
+          "decisionTradeoff": "新人 45名を重く見るほど、管理職 18名や別の制約を犠牲にする。",
+          "consequenceHook": "training-organization-development-新人 45名判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は研修設計案で副作用を確認する。",
+          "npcDialogue": "先輩:「受講者セグメント表を読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+          "workMaterial": "受講者セグメント表\n- 新人 45名\n- 管理職 18名\n- 判断対象: 受講者セグメント表",
+          "decisionPrompt": "training-organization-development-新人 45名判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "新人 45名を優先し、当日中に受講者セグメント表の結論を出す",
+              "text": "新人 45名を優先し、当日中に受講者セグメント表の結論を出す。材料は新人 45名、管理職 18名。",
+              "immediateFeedback": "新人 45名に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 2,
+                "training_organization_development_risk": -1,
+                "training_organization_development_speed": 2,
+                "training_organization_development_value": -1,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は印象ではなく、新人 45名と管理職 18名を読んで判断する。",
+              "studentFeedback": {
+                "good": "新人 45名の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は管理職 18名の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "新人 45名と管理職 18名を突き合わせ、条件付きで進める",
+              "text": "新人 45名と管理職 18名を突き合わせ、条件付きで進める。材料は新人 45名、管理職 18名。",
+              "immediateFeedback": "受講者セグメント表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": 1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "新人 45名と管理職 18名を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は受講者セグメント表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "管理職 18名の制約を重く見て、判断範囲を絞る",
+              "text": "管理職 18名の制約を重く見て、判断範囲を絞る。材料は新人 45名、管理職 18名。",
+              "immediateFeedback": "管理職 18名に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": -1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": -1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": -1
+              },
+              "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、新人 45名と管理職 18名の副作用まで読む。",
+              "studentFeedback": {
+                "good": "管理職 18名の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は新人 45名を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "training-organization-development-新人 45名判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "社会貢献",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "training-organization-development-新人 45名判断",
+            "roleSpecificMaterials": [
+              "受講者セグメント表",
+              "判断対象: 受講者セグメント表"
+            ],
+            "roleSpecificMetrics": [
+              "新人 45名",
+              "管理職 18名"
+            ],
+            "roleSpecificFailureRisk": "受講者セグメント表を読まず、新人 45名か管理職 18名のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "新人 45名と管理職 18名を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "受講者セグメント表、新人 45名、管理職 18名を判断の主役にしている。",
+            "kernelConnection": "受講者セグメント表をtraining-organization-development-新人 45名判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。研修/組織開発企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "training-organization-development-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "研修設計案",
+          "openingHook": "12:20。研修設計案に演習 3本と所要 90分が並んでいる。",
+          "context": "研修/組織開発企画として研修設計案を確認する。演習 3本、所要 90分が今日の判断材料になる。",
+          "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、研修設計案を読んで演習比率を決める。",
+          "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+          "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は研修設計案である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "演習 3本の背景と所要 90分の確度が完全にはそろっていない。",
+          "decisionTradeoff": "演習 3本を重く見るほど、所要 90分や別の制約を犠牲にする。",
+          "consequenceHook": "training-organization-development-演習 3本判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は現場実践シートで副作用を確認する。",
+          "npcDialogue": "先輩:「研修設計案を読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+          "workMaterial": "研修設計案\n- 演習 3本\n- 所要 90分\n- 判断対象: 研修設計案",
+          "decisionPrompt": "training-organization-development-演習 3本判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "演習 3本を優先し、当日中に研修設計案の結論を出す",
+              "text": "演習 3本を優先し、当日中に研修設計案の結論を出す。材料は演習 3本、所要 90分。",
+              "immediateFeedback": "演習 3本に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 2,
+                "training_organization_development_risk": -1,
+                "training_organization_development_speed": 2,
+                "training_organization_development_value": -1,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は印象ではなく、演習 3本と所要 90分を読んで判断する。",
+              "studentFeedback": {
+                "good": "演習 3本の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は所要 90分の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "演習 3本と所要 90分を突き合わせ、条件付きで進める",
+              "text": "演習 3本と所要 90分を突き合わせ、条件付きで進める。材料は演習 3本、所要 90分。",
+              "immediateFeedback": "研修設計案に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": 1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "演習 3本と所要 90分を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は研修設計案の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "所要 90分の制約を重く見て、判断範囲を絞る",
+              "text": "所要 90分の制約を重く見て、判断範囲を絞る。材料は演習 3本、所要 90分。",
+              "immediateFeedback": "所要 90分に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": -1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": -1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": -1
+              },
+              "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、演習 3本と所要 90分の副作用まで読む。",
+              "studentFeedback": {
+                "good": "所要 90分の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は演習 3本を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "training-organization-development-演習 3本判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "社会貢献",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "training-organization-development-演習 3本判断",
+            "roleSpecificMaterials": [
+              "研修設計案",
+              "判断対象: 研修設計案"
+            ],
+            "roleSpecificMetrics": [
+              "演習 3本",
+              "所要 90分"
+            ],
+            "roleSpecificFailureRisk": "研修設計案を読まず、演習 3本か所要 90分のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "演習 3本と所要 90分を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "研修設計案、演習 3本、所要 90分を判断の主役にしている。",
+            "kernelConnection": "研修設計案をtraining-organization-development-演習 3本判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。研修/組織開発企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "training-organization-development-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "現場実践シート",
+          "openingHook": "14:05。現場実践シートに行動項目 6個と提出期限 14日が並んでいる。",
+          "context": "研修/組織開発企画として現場実践シートを確認する。行動項目 6個、提出期限 14日が今日の判断材料になる。",
+          "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、現場実践シートを読んで定着方法を作る。",
+          "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+          "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は現場実践シートである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "行動項目 6個の背景と提出期限 14日の確度が完全にはそろっていない。",
+          "decisionTradeoff": "行動項目 6個を重く見るほど、提出期限 14日や別の制約を犠牲にする。",
+          "consequenceHook": "training-organization-development-行動項目 6個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は効果測定表で副作用を確認する。",
+          "npcDialogue": "先輩:「現場実践シートを読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+          "workMaterial": "現場実践シート\n- 行動項目 6個\n- 提出期限 14日\n- 判断対象: 現場実践シート",
+          "decisionPrompt": "training-organization-development-行動項目 6個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "行動項目 6個を優先し、当日中に現場実践シートの結論を出す",
+              "text": "行動項目 6個を優先し、当日中に現場実践シートの結論を出す。材料は行動項目 6個、提出期限 14日。",
+              "immediateFeedback": "行動項目 6個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 2,
+                "training_organization_development_risk": -1,
+                "training_organization_development_speed": 2,
+                "training_organization_development_value": -1,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は印象ではなく、行動項目 6個と提出期限 14日を読んで判断する。",
+              "studentFeedback": {
+                "good": "行動項目 6個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は提出期限 14日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "行動項目 6個と提出期限 14日を突き合わせ、条件付きで進める",
+              "text": "行動項目 6個と提出期限 14日を突き合わせ、条件付きで進める。材料は行動項目 6個、提出期限 14日。",
+              "immediateFeedback": "現場実践シートに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": 1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "行動項目 6個と提出期限 14日を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は現場実践シートの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "提出期限 14日の制約を重く見て、判断範囲を絞る",
+              "text": "提出期限 14日の制約を重く見て、判断範囲を絞る。材料は行動項目 6個、提出期限 14日。",
+              "immediateFeedback": "提出期限 14日に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": -1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": -1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": -1
+              },
+              "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、行動項目 6個と提出期限 14日の副作用まで読む。",
+              "studentFeedback": {
+                "good": "提出期限 14日の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は行動項目 6個を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "training-organization-development-行動項目 6個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "社会貢献",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "training-organization-development-行動項目 6個判断",
+            "roleSpecificMaterials": [
+              "現場実践シート",
+              "判断対象: 現場実践シート"
+            ],
+            "roleSpecificMetrics": [
+              "行動項目 6個",
+              "提出期限 14日"
+            ],
+            "roleSpecificFailureRisk": "現場実践シートを読まず、行動項目 6個か提出期限 14日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "行動項目 6個と提出期限 14日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "現場実践シート、行動項目 6個、提出期限 14日を判断の主役にしている。",
+            "kernelConnection": "現場実践シートをtraining-organization-development-行動項目 6個判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。研修/組織開発企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "training-organization-development-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "効果測定表",
+          "openingHook": "16:25。効果測定表に満足度 4.1と実践率 58%が並んでいる。",
+          "context": "研修/組織開発企画として効果測定表を確認する。満足度 4.1、実践率 58%が今日の判断材料になる。",
+          "content": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換するため、効果測定表を読んで改善指標を選ぶ。",
+          "roleSpecificContext": "研修/組織開発企画は育成課題、受講者層、行動指標を研修設計と定着施策へ変換する仕事。",
+          "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は効果測定表である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "満足度 4.1の背景と実践率 58%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "満足度 4.1を重く見るほど、実践率 58%や別の制約を犠牲にする。",
+          "consequenceHook": "training-organization-development-満足度 4.1判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「効果測定表を読まずに進めると、研修/組織開発企画の判断ではなくなる」",
+          "workMaterial": "効果測定表\n- 満足度 4.1\n- 実践率 58%\n- 判断対象: 効果測定表",
+          "decisionPrompt": "training-organization-development-満足度 4.1判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "満足度 4.1を優先し、当日中に効果測定表の結論を出す",
+              "text": "満足度 4.1を優先し、当日中に効果測定表の結論を出す。材料は満足度 4.1、実践率 58%。",
+              "immediateFeedback": "満足度 4.1に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 2,
+                "training_organization_development_risk": -1,
+                "training_organization_development_speed": 2,
+                "training_organization_development_value": -1,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は印象ではなく、満足度 4.1と実践率 58%を読んで判断する。",
+              "studentFeedback": {
+                "good": "満足度 4.1の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は実践率 58%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "満足度 4.1と実践率 58%を突き合わせ、条件付きで進める",
+              "text": "満足度 4.1と実践率 58%を突き合わせ、条件付きで進める。材料は満足度 4.1、実践率 58%。",
+              "immediateFeedback": "効果測定表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": 1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": 1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": 1
+              },
+              "misconceptionEffect": "研修/組織開発企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "満足度 4.1と実践率 58%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は効果測定表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "実践率 58%の制約を重く見て、判断範囲を絞る",
+              "text": "実践率 58%の制約を重く見て、判断範囲を絞る。材料は満足度 4.1、実践率 58%。",
+              "immediateFeedback": "実践率 58%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "研修/組織開発企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "training_organization_development_evidence": -1,
+                "training_organization_development_risk": 2,
+                "training_organization_development_speed": -1,
+                "training_organization_development_value": 2,
+                "training_organization_development_feasibility": -1
+              },
+              "misconceptionEffect": "研修/組織開発企画は慎重さだけでなく、満足度 4.1と実践率 58%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "実践率 58%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は満足度 4.1を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "training-organization-development-満足度 4.1判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "企画系",
+              "社会貢献",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "training-organization-development-満足度 4.1判断",
+            "roleSpecificMaterials": [
+              "効果測定表",
+              "判断対象: 効果測定表"
+            ],
+            "roleSpecificMetrics": [
+              "満足度 4.1",
+              "実践率 58%"
+            ],
+            "roleSpecificFailureRisk": "効果測定表を読まず、満足度 4.1か実践率 58%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "満足度 4.1と実践率 58%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "効果測定表、満足度 4.1、実践率 58%を判断の主役にしている。",
+            "kernelConnection": "効果測定表をtraining-organization-development-満足度 4.1判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "training-organization-development-material-reader",
+      "title": "研修/組織開発企画の材料読解型",
+      "strengths": [
+        "研修/組織開発企画の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "training_organization_development_evidence",
+        "training_organization_development_risk"
+      ],
+      "valuedMeters": [
+        "training_organization_development_evidence"
+      ],
+      "sacrificedMeters": [
+        "training_organization_development_speed"
+      ],
+      "roleRealityReveal": "研修/組織開発企画は、育成課題を受講設計と現場行動の変化指標へつなぐ仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "研修/組織開発企画の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "training-organization-development-constraint-designer",
+      "title": "研修/組織開発企画の制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "training_organization_development_risk",
+        "training_organization_development_speed"
+      ],
+      "valuedMeters": [
+        "training_organization_development_risk"
+      ],
+      "sacrificedMeters": [
+        "training_organization_development_value"
+      ],
+      "roleRealityReveal": "研修/組織開発企画は、育成課題を受講設計と現場行動の変化指標へつなぐ仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "研修/組織開発企画として制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "training-organization-development-execution-planner",
+      "title": "研修/組織開発企画の実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "training_organization_development_speed",
+        "training_organization_development_value"
+      ],
+      "valuedMeters": [
+        "training_organization_development_speed"
+      ],
+      "sacrificedMeters": [
+        "training_organization_development_feasibility"
+      ],
+      "roleRealityReveal": "研修/組織開発企画は、育成課題を受講設計と現場行動の変化指標へつなぐ仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "研修/組織開発企画として実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "研修/組織開発企画は、育成課題を受講設計と現場行動の変化指標へつなぐ仕事。",
+    "misconceptionCorrection": "研修/組織開発企画は印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "研修/組織開発企画として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "training-organization-development_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "training_organization_development_learning_vs_training_organization_development_behavior",
+      "training_organization_development_fit_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "training_organization_development_learning",
+      "label": "learning",
+      "description": "研修/組織開発企画のlearning判断"
+    },
+    {
+      "key": "training_organization_development_behavior",
+      "label": "behavior",
+      "description": "研修/組織開発企画のbehavior判断"
+    },
+    {
+      "key": "training_organization_development_fit",
+      "label": "fit",
+      "description": "研修/組織開発企画のfit判断"
+    },
+    {
+      "key": "training_organization_development_engagement",
+      "label": "engagement",
+      "description": "研修/組織開発企画のengagement判断"
+    },
+    {
+      "key": "training_organization_development_measurement",
+      "label": "measurement",
+      "description": "研修/組織開発企画のmeasurement判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "研修/組織開発企画の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "training_organization_development_learning",
+      "training_organization_development_behavior",
+      "training_organization_development_fit",
+      "training_organization_development_engagement",
+      "training_organization_development_measurement"
+    ]
+  },
+  "roleCoreFriction": "分かりやすい研修ほど満足度は上がるが、行動変化に接続しないと組織成果にならない葛藤。",
+  "roleMisconception": "研修企画は講義内容を作る仕事で、受講後の行動指標設計は補助的だと思われやすい。",
+  "roleRealityReveal": "研修/組織開発企画は、育成課題を受講設計と現場行動の変化指標へつなぐ仕事。",
+  "roleWorkKernel": {
+    "input": "対象 120名、課題 4分類、新人 45名、管理職 18名、演習 3本、所要 90分、行動項目 6個、提出期限 14日、満足度 4.1、実践率 58%",
+    "output": "研修/組織開発企画としての判断案、次回確認項目、リスクメモ",
+    "transformation": "育成課題、受講者層、行動指標を研修設計と定着施策へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "育成課題メモ",
+      "受講者セグメント表",
+      "研修設計案",
+      "現場実践シート",
+      "効果測定表"
+    ],
+    "metrics": [
+      "対象 120名",
+      "課題 4分類",
+      "新人 45名",
+      "管理職 18名",
+      "演習 3本",
+      "所要 90分",
+      "行動項目 6個",
+      "提出期限 14日",
+      "満足度 4.1",
+      "実践率 58%"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "育成課題メモ、受講者セグメント表、研修設計案と対象 120名、新人 45名を読まなければ成立しないため。"
+  }
+}

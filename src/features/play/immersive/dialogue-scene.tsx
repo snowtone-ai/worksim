@@ -1,6 +1,8 @@
 'use client'
 
 import type { ImmersiveScene, Phase } from '@/lib/scenario/loader'
+import { getTaskBrief } from '@/lib/scenario/view-model'
+import { ChoicePanel } from './choice-panel'
 
 type Props = {
   scene: ImmersiveScene
@@ -20,6 +22,7 @@ export function DialogueScene({ scene, selectedChoice, onChoice, onConfirm, next
   const pageStyle = {
     paddingBottom: 'max(7rem, calc(5rem + env(safe-area-inset-bottom, 0px)))',
   } as const
+  const brief = getTaskBrief(scene)
 
   return (
     <div className={`absolute inset-0 overflow-y-auto overscroll-contain ${bg}`}>
@@ -44,63 +47,17 @@ export function DialogueScene({ scene, selectedChoice, onChoice, onConfirm, next
           </div>
         </section>
 
-        <section className="border border-slate-200 bg-white shadow-xl">
-          <div className="flex items-center justify-between gap-4 border-b border-slate-200 bg-white px-5 py-3">
-            <p className="text-sm font-semibold text-slate-900">あなたの返答</p>
-            <button
-              type="button"
-              onClick={onConfirm}
-              disabled={!selectedChoice}
-              className={`shrink-0 rounded-lg bg-indigo-600 px-8 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700 disabled:pointer-events-none ${!selectedChoice ? 'invisible' : ''}`}
-            >
-              {nextLabel}
-            </button>
-          </div>
-          <div className="px-5 py-3">
-            <div className="flex flex-col gap-2">
-              {scene.choices.map((c) => (
-                <ChoiceButton
-                  key={c.id}
-                  id={c.id}
-                  label={c.label}
-                  selected={selectedChoice === c.id}
-                  onChoice={onChoice}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <ChoicePanel
+          title={brief.title}
+          context={brief.context}
+          prompt={brief.prompt}
+          choices={scene.choices}
+          selectedChoice={selectedChoice}
+          nextLabel={nextLabel}
+          onChoice={onChoice}
+          onConfirm={onConfirm}
+        />
       </div>
     </div>
-  )
-}
-
-function ChoiceButton({ id, label, selected, onChoice }: {
-  id: string
-  label: string
-  selected: boolean
-  onChoice: (id: string) => void
-}) {
-  return (
-    <button
-      type="button"
-      onClick={() => onChoice(id)}
-      className={`text-left px-4 py-2.5 rounded-lg border text-sm flex items-start gap-2 transition-colors ${
-        selected
-          ? 'border-indigo-500 bg-indigo-50 text-indigo-900'
-          : 'border-gray-200 hover:border-indigo-300 hover:bg-indigo-50'
-      }`}
-    >
-      <span className={`mt-0.5 h-4 w-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
-        selected ? 'border-indigo-500 bg-indigo-500' : 'border-gray-300'
-      }`}>
-        {selected && (
-          <svg className="h-2 w-2 text-white" viewBox="0 0 8 8">
-            <path d="M1 4L3 6L7 2" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        )}
-      </span>
-      <span>{label}</span>
-    </button>
   )
 }

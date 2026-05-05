@@ -1,0 +1,2192 @@
+{
+  "id": "public-infra/tourism-promotion",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "自治体/公共/インフラ",
+  "industrySlug": "public-infra",
+  "role": "観光振興担当",
+  "roleSlug": "tourism-promotion",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "地方就職",
+    "企画系",
+    "社会貢献"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 自治体/公共/インフラ 観光振興担当.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "public-infra",
+      "tourism-promotion"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "観光資源リスト"
+    },
+    {
+      "time": "10:35",
+      "label": "来訪者データ"
+    },
+    {
+      "time": "12:20",
+      "label": "地域事業者表"
+    },
+    {
+      "time": "14:05",
+      "label": "予算配分案"
+    },
+    {
+      "time": "16:25",
+      "label": "効果測定計画"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "観光資源リスト"
+    },
+    {
+      "time": "10:35",
+      "label": "来訪者データ"
+    },
+    {
+      "time": "12:20",
+      "label": "地域事業者表"
+    },
+    {
+      "time": "14:05",
+      "label": "予算配分案"
+    },
+    {
+      "time": "16:25",
+      "label": "効果測定計画"
+    }
+  ],
+  "sceneList": [
+    "tourism-promotion-01",
+    "tourism-promotion-02",
+    "tourism-promotion-03",
+    "tourism-promotion-04",
+    "tourism-promotion-05"
+  ],
+  "meta": {
+    "title": "観光振興担当",
+    "industry": "自治体/公共/インフラ",
+    "role": "観光振興担当",
+    "duration_minutes": 18,
+    "description": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "tourism-promotion-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "観光資源リスト",
+      "openingHook": "09:10。観光資源リストに候補 12件と受入上限 600人が並んでいる。",
+      "context": "観光振興担当として観光資源リストを確認する。候補 12件、受入上限 600人が今日の判断材料になる。",
+      "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、観光資源リストを読んで主テーマを選ぶ。",
+      "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+      "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は観光資源リストである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "候補 12件の背景と受入上限 600人の確度が完全にはそろっていない。",
+      "decisionTradeoff": "候補 12件を重く見るほど、受入上限 600人や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-promotion-候補 12件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は来訪者データで副作用を確認する。",
+      "npcDialogue": "先輩:「観光資源リストを読まずに進めると、観光振興担当の判断ではなくなる」",
+      "workMaterial": "観光資源リスト\n- 候補 12件\n- 受入上限 600人\n- 判断対象: 観光資源リスト",
+      "decisionPrompt": "tourism-promotion-候補 12件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "候補 12件を優先し、当日中に観光資源リストの結論を出す",
+          "text": "候補 12件を優先し、当日中に観光資源リストの結論を出す。材料は候補 12件、受入上限 600人。",
+          "immediateFeedback": "候補 12件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 2,
+            "tourism_promotion_risk": -1,
+            "tourism_promotion_speed": 2,
+            "tourism_promotion_value": -1,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は印象ではなく、候補 12件と受入上限 600人を読んで判断する。",
+          "studentFeedback": {
+            "good": "候補 12件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は受入上限 600人の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "候補 12件と受入上限 600人を突き合わせ、条件付きで進める",
+          "text": "候補 12件と受入上限 600人を突き合わせ、条件付きで進める。材料は候補 12件、受入上限 600人。",
+          "immediateFeedback": "観光資源リストに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": 1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "候補 12件と受入上限 600人を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は観光資源リストの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "受入上限 600人の制約を重く見て、判断範囲を絞る",
+          "text": "受入上限 600人の制約を重く見て、判断範囲を絞る。材料は候補 12件、受入上限 600人。",
+          "immediateFeedback": "受入上限 600人に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": -1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": -1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "観光振興担当は慎重さだけでなく、候補 12件と受入上限 600人の副作用まで読む。",
+          "studentFeedback": {
+            "good": "受入上限 600人の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は候補 12件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-promotion-候補 12件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-promotion-候補 12件判断",
+        "roleSpecificMaterials": [
+          "観光資源リスト",
+          "判断対象: 観光資源リスト"
+        ],
+        "roleSpecificMetrics": [
+          "候補 12件",
+          "受入上限 600人"
+        ],
+        "roleSpecificFailureRisk": "観光資源リストを読まず、候補 12件か受入上限 600人のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "候補 12件と受入上限 600人を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "観光資源リスト、候補 12件、受入上限 600人を判断の主役にしている。",
+        "kernelConnection": "観光資源リストをtourism-promotion-候補 12件判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "tourism-promotion-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "来訪者データ",
+      "openingHook": "10:35。来訪者データに週末比率 68%と滞在 2.4時間が並んでいる。",
+      "context": "観光振興担当として来訪者データを確認する。週末比率 68%、滞在 2.4時間が今日の判断材料になる。",
+      "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、来訪者データを読んで課題客層を切る。",
+      "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+      "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は来訪者データである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "週末比率 68%の背景と滞在 2.4時間の確度が完全にはそろっていない。",
+      "decisionTradeoff": "週末比率 68%を重く見るほど、滞在 2.4時間や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-promotion-週末比率 68%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は地域事業者表で副作用を確認する。",
+      "npcDialogue": "先輩:「来訪者データを読まずに進めると、観光振興担当の判断ではなくなる」",
+      "workMaterial": "来訪者データ\n- 週末比率 68%\n- 滞在 2.4時間\n- 判断対象: 来訪者データ",
+      "decisionPrompt": "tourism-promotion-週末比率 68%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "週末比率 68%を優先し、当日中に来訪者データの結論を出す",
+          "text": "週末比率 68%を優先し、当日中に来訪者データの結論を出す。材料は週末比率 68%、滞在 2.4時間。",
+          "immediateFeedback": "週末比率 68%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 2,
+            "tourism_promotion_risk": -1,
+            "tourism_promotion_speed": 2,
+            "tourism_promotion_value": -1,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は印象ではなく、週末比率 68%と滞在 2.4時間を読んで判断する。",
+          "studentFeedback": {
+            "good": "週末比率 68%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は滞在 2.4時間の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "週末比率 68%と滞在 2.4時間を突き合わせ、条件付きで進める",
+          "text": "週末比率 68%と滞在 2.4時間を突き合わせ、条件付きで進める。材料は週末比率 68%、滞在 2.4時間。",
+          "immediateFeedback": "来訪者データに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": 1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "週末比率 68%と滞在 2.4時間を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は来訪者データの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "滞在 2.4時間の制約を重く見て、判断範囲を絞る",
+          "text": "滞在 2.4時間の制約を重く見て、判断範囲を絞る。材料は週末比率 68%、滞在 2.4時間。",
+          "immediateFeedback": "滞在 2.4時間に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": -1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": -1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "観光振興担当は慎重さだけでなく、週末比率 68%と滞在 2.4時間の副作用まで読む。",
+          "studentFeedback": {
+            "good": "滞在 2.4時間の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は週末比率 68%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-promotion-週末比率 68%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-promotion-週末比率 68%判断",
+        "roleSpecificMaterials": [
+          "来訪者データ",
+          "判断対象: 来訪者データ"
+        ],
+        "roleSpecificMetrics": [
+          "週末比率 68%",
+          "滞在 2.4時間"
+        ],
+        "roleSpecificFailureRisk": "来訪者データを読まず、週末比率 68%か滞在 2.4時間のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "週末比率 68%と滞在 2.4時間を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "来訪者データ、週末比率 68%、滞在 2.4時間を判断の主役にしている。",
+        "kernelConnection": "来訪者データをtourism-promotion-週末比率 68%判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "tourism-promotion-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "地域事業者表",
+      "openingHook": "12:20。地域事業者表に参加希望 18件と人員不足 7件が並んでいる。",
+      "context": "観光振興担当として地域事業者表を確認する。参加希望 18件、人員不足 7件が今日の判断材料になる。",
+      "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、地域事業者表を読んで巻き込み範囲を決める。",
+      "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+      "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は地域事業者表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "参加希望 18件の背景と人員不足 7件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "参加希望 18件を重く見るほど、人員不足 7件や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-promotion-参加希望 18件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は予算配分案で副作用を確認する。",
+      "npcDialogue": "先輩:「地域事業者表を読まずに進めると、観光振興担当の判断ではなくなる」",
+      "workMaterial": "地域事業者表\n- 参加希望 18件\n- 人員不足 7件\n- 判断対象: 地域事業者表",
+      "decisionPrompt": "tourism-promotion-参加希望 18件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "参加希望 18件を優先し、当日中に地域事業者表の結論を出す",
+          "text": "参加希望 18件を優先し、当日中に地域事業者表の結論を出す。材料は参加希望 18件、人員不足 7件。",
+          "immediateFeedback": "参加希望 18件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 2,
+            "tourism_promotion_risk": -1,
+            "tourism_promotion_speed": 2,
+            "tourism_promotion_value": -1,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は印象ではなく、参加希望 18件と人員不足 7件を読んで判断する。",
+          "studentFeedback": {
+            "good": "参加希望 18件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は人員不足 7件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "参加希望 18件と人員不足 7件を突き合わせ、条件付きで進める",
+          "text": "参加希望 18件と人員不足 7件を突き合わせ、条件付きで進める。材料は参加希望 18件、人員不足 7件。",
+          "immediateFeedback": "地域事業者表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": 1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "参加希望 18件と人員不足 7件を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は地域事業者表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "人員不足 7件の制約を重く見て、判断範囲を絞る",
+          "text": "人員不足 7件の制約を重く見て、判断範囲を絞る。材料は参加希望 18件、人員不足 7件。",
+          "immediateFeedback": "人員不足 7件に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": -1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": -1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "観光振興担当は慎重さだけでなく、参加希望 18件と人員不足 7件の副作用まで読む。",
+          "studentFeedback": {
+            "good": "人員不足 7件の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は参加希望 18件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-promotion-参加希望 18件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-promotion-参加希望 18件判断",
+        "roleSpecificMaterials": [
+          "地域事業者表",
+          "判断対象: 地域事業者表"
+        ],
+        "roleSpecificMetrics": [
+          "参加希望 18件",
+          "人員不足 7件"
+        ],
+        "roleSpecificFailureRisk": "地域事業者表を読まず、参加希望 18件か人員不足 7件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "参加希望 18件と人員不足 7件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "地域事業者表、参加希望 18件、人員不足 7件を判断の主役にしている。",
+        "kernelConnection": "地域事業者表をtourism-promotion-参加希望 18件判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "tourism-promotion-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "予算配分案",
+      "openingHook": "14:05。予算配分案に総額 480万円と広報費 38%が並んでいる。",
+      "context": "観光振興担当として予算配分案を確認する。総額 480万円、広報費 38%が今日の判断材料になる。",
+      "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、予算配分案を読んで費目を調整する。",
+      "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+      "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は予算配分案である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "総額 480万円の背景と広報費 38%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "総額 480万円を重く見るほど、広報費 38%や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-promotion-総額 480万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は効果測定計画で副作用を確認する。",
+      "npcDialogue": "先輩:「予算配分案を読まずに進めると、観光振興担当の判断ではなくなる」",
+      "workMaterial": "予算配分案\n- 総額 480万円\n- 広報費 38%\n- 判断対象: 予算配分案",
+      "decisionPrompt": "tourism-promotion-総額 480万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "総額 480万円を優先し、当日中に予算配分案の結論を出す",
+          "text": "総額 480万円を優先し、当日中に予算配分案の結論を出す。材料は総額 480万円、広報費 38%。",
+          "immediateFeedback": "総額 480万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 2,
+            "tourism_promotion_risk": -1,
+            "tourism_promotion_speed": 2,
+            "tourism_promotion_value": -1,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は印象ではなく、総額 480万円と広報費 38%を読んで判断する。",
+          "studentFeedback": {
+            "good": "総額 480万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は広報費 38%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "総額 480万円と広報費 38%を突き合わせ、条件付きで進める",
+          "text": "総額 480万円と広報費 38%を突き合わせ、条件付きで進める。材料は総額 480万円、広報費 38%。",
+          "immediateFeedback": "予算配分案に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": 1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "総額 480万円と広報費 38%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は予算配分案の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "広報費 38%の制約を重く見て、判断範囲を絞る",
+          "text": "広報費 38%の制約を重く見て、判断範囲を絞る。材料は総額 480万円、広報費 38%。",
+          "immediateFeedback": "広報費 38%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": -1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": -1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "観光振興担当は慎重さだけでなく、総額 480万円と広報費 38%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "広報費 38%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は総額 480万円を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-promotion-総額 480万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-promotion-総額 480万円判断",
+        "roleSpecificMaterials": [
+          "予算配分案",
+          "判断対象: 予算配分案"
+        ],
+        "roleSpecificMetrics": [
+          "総額 480万円",
+          "広報費 38%"
+        ],
+        "roleSpecificFailureRisk": "予算配分案を読まず、総額 480万円か広報費 38%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "総額 480万円と広報費 38%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "予算配分案、総額 480万円、広報費 38%を判断の主役にしている。",
+        "kernelConnection": "予算配分案をtourism-promotion-総額 480万円判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "tourism-promotion-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "効果測定計画",
+      "openingHook": "16:25。効果測定計画に目標 9,000人と満足度 4.2が並んでいる。",
+      "context": "観光振興担当として効果測定計画を確認する。目標 9,000人、満足度 4.2が今日の判断材料になる。",
+      "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、効果測定計画を読んで評価指標を残す。",
+      "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+      "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は効果測定計画である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "目標 9,000人の背景と満足度 4.2の確度が完全にはそろっていない。",
+      "decisionTradeoff": "目標 9,000人を重く見るほど、満足度 4.2や別の制約を犠牲にする。",
+      "consequenceHook": "tourism-promotion-目標 9,000人判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「効果測定計画を読まずに進めると、観光振興担当の判断ではなくなる」",
+      "workMaterial": "効果測定計画\n- 目標 9,000人\n- 満足度 4.2\n- 判断対象: 効果測定計画",
+      "decisionPrompt": "tourism-promotion-目標 9,000人判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "目標 9,000人を優先し、当日中に効果測定計画の結論を出す",
+          "text": "目標 9,000人を優先し、当日中に効果測定計画の結論を出す。材料は目標 9,000人、満足度 4.2。",
+          "immediateFeedback": "目標 9,000人に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 2,
+            "tourism_promotion_risk": -1,
+            "tourism_promotion_speed": 2,
+            "tourism_promotion_value": -1,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は印象ではなく、目標 9,000人と満足度 4.2を読んで判断する。",
+          "studentFeedback": {
+            "good": "目標 9,000人の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は満足度 4.2の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "目標 9,000人と満足度 4.2を突き合わせ、条件付きで進める",
+          "text": "目標 9,000人と満足度 4.2を突き合わせ、条件付きで進める。材料は目標 9,000人、満足度 4.2。",
+          "immediateFeedback": "効果測定計画に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": 1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": 1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": 1
+          },
+          "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "目標 9,000人と満足度 4.2を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は効果測定計画の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "満足度 4.2の制約を重く見て、判断範囲を絞る",
+          "text": "満足度 4.2の制約を重く見て、判断範囲を絞る。材料は目標 9,000人、満足度 4.2。",
+          "immediateFeedback": "満足度 4.2に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "tourism_promotion_evidence": -1,
+            "tourism_promotion_risk": 2,
+            "tourism_promotion_speed": -1,
+            "tourism_promotion_value": 2,
+            "tourism_promotion_feasibility": -1
+          },
+          "misconceptionEffect": "観光振興担当は慎重さだけでなく、目標 9,000人と満足度 4.2の副作用まで読む。",
+          "studentFeedback": {
+            "good": "満足度 4.2の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は目標 9,000人を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "tourism-promotion-目標 9,000人判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "tourism-promotion-目標 9,000人判断",
+        "roleSpecificMaterials": [
+          "効果測定計画",
+          "判断対象: 効果測定計画"
+        ],
+        "roleSpecificMetrics": [
+          "目標 9,000人",
+          "満足度 4.2"
+        ],
+        "roleSpecificFailureRisk": "効果測定計画を読まず、目標 9,000人か満足度 4.2のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "目標 9,000人と満足度 4.2を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "効果測定計画、目標 9,000人、満足度 4.2を判断の主役にしている。",
+        "kernelConnection": "効果測定計画をtourism-promotion-目標 9,000人判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。観光振興担当として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "tourism-promotion-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "観光資源リスト",
+          "openingHook": "09:10。観光資源リストに候補 12件と受入上限 600人が並んでいる。",
+          "context": "観光振興担当として観光資源リストを確認する。候補 12件、受入上限 600人が今日の判断材料になる。",
+          "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、観光資源リストを読んで主テーマを選ぶ。",
+          "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+          "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は観光資源リストである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "候補 12件の背景と受入上限 600人の確度が完全にはそろっていない。",
+          "decisionTradeoff": "候補 12件を重く見るほど、受入上限 600人や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-promotion-候補 12件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は来訪者データで副作用を確認する。",
+          "npcDialogue": "先輩:「観光資源リストを読まずに進めると、観光振興担当の判断ではなくなる」",
+          "workMaterial": "観光資源リスト\n- 候補 12件\n- 受入上限 600人\n- 判断対象: 観光資源リスト",
+          "decisionPrompt": "tourism-promotion-候補 12件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "候補 12件を優先し、当日中に観光資源リストの結論を出す",
+              "text": "候補 12件を優先し、当日中に観光資源リストの結論を出す。材料は候補 12件、受入上限 600人。",
+              "immediateFeedback": "候補 12件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 2,
+                "tourism_promotion_risk": -1,
+                "tourism_promotion_speed": 2,
+                "tourism_promotion_value": -1,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は印象ではなく、候補 12件と受入上限 600人を読んで判断する。",
+              "studentFeedback": {
+                "good": "候補 12件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は受入上限 600人の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "候補 12件と受入上限 600人を突き合わせ、条件付きで進める",
+              "text": "候補 12件と受入上限 600人を突き合わせ、条件付きで進める。材料は候補 12件、受入上限 600人。",
+              "immediateFeedback": "観光資源リストに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": 1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "候補 12件と受入上限 600人を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は観光資源リストの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "受入上限 600人の制約を重く見て、判断範囲を絞る",
+              "text": "受入上限 600人の制約を重く見て、判断範囲を絞る。材料は候補 12件、受入上限 600人。",
+              "immediateFeedback": "受入上限 600人に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": -1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": -1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "観光振興担当は慎重さだけでなく、候補 12件と受入上限 600人の副作用まで読む。",
+              "studentFeedback": {
+                "good": "受入上限 600人の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は候補 12件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-promotion-候補 12件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-promotion-候補 12件判断",
+            "roleSpecificMaterials": [
+              "観光資源リスト",
+              "判断対象: 観光資源リスト"
+            ],
+            "roleSpecificMetrics": [
+              "候補 12件",
+              "受入上限 600人"
+            ],
+            "roleSpecificFailureRisk": "観光資源リストを読まず、候補 12件か受入上限 600人のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "候補 12件と受入上限 600人を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "観光資源リスト、候補 12件、受入上限 600人を判断の主役にしている。",
+            "kernelConnection": "観光資源リストをtourism-promotion-候補 12件判断へ接続する。"
+          }
+        },
+        {
+          "id": "tourism-promotion-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "来訪者データ",
+          "openingHook": "10:35。来訪者データに週末比率 68%と滞在 2.4時間が並んでいる。",
+          "context": "観光振興担当として来訪者データを確認する。週末比率 68%、滞在 2.4時間が今日の判断材料になる。",
+          "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、来訪者データを読んで課題客層を切る。",
+          "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+          "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は来訪者データである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "週末比率 68%の背景と滞在 2.4時間の確度が完全にはそろっていない。",
+          "decisionTradeoff": "週末比率 68%を重く見るほど、滞在 2.4時間や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-promotion-週末比率 68%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は地域事業者表で副作用を確認する。",
+          "npcDialogue": "先輩:「来訪者データを読まずに進めると、観光振興担当の判断ではなくなる」",
+          "workMaterial": "来訪者データ\n- 週末比率 68%\n- 滞在 2.4時間\n- 判断対象: 来訪者データ",
+          "decisionPrompt": "tourism-promotion-週末比率 68%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "週末比率 68%を優先し、当日中に来訪者データの結論を出す",
+              "text": "週末比率 68%を優先し、当日中に来訪者データの結論を出す。材料は週末比率 68%、滞在 2.4時間。",
+              "immediateFeedback": "週末比率 68%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 2,
+                "tourism_promotion_risk": -1,
+                "tourism_promotion_speed": 2,
+                "tourism_promotion_value": -1,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は印象ではなく、週末比率 68%と滞在 2.4時間を読んで判断する。",
+              "studentFeedback": {
+                "good": "週末比率 68%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は滞在 2.4時間の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "週末比率 68%と滞在 2.4時間を突き合わせ、条件付きで進める",
+              "text": "週末比率 68%と滞在 2.4時間を突き合わせ、条件付きで進める。材料は週末比率 68%、滞在 2.4時間。",
+              "immediateFeedback": "来訪者データに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": 1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "週末比率 68%と滞在 2.4時間を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は来訪者データの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "滞在 2.4時間の制約を重く見て、判断範囲を絞る",
+              "text": "滞在 2.4時間の制約を重く見て、判断範囲を絞る。材料は週末比率 68%、滞在 2.4時間。",
+              "immediateFeedback": "滞在 2.4時間に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": -1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": -1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "観光振興担当は慎重さだけでなく、週末比率 68%と滞在 2.4時間の副作用まで読む。",
+              "studentFeedback": {
+                "good": "滞在 2.4時間の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は週末比率 68%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-promotion-週末比率 68%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-promotion-週末比率 68%判断",
+            "roleSpecificMaterials": [
+              "来訪者データ",
+              "判断対象: 来訪者データ"
+            ],
+            "roleSpecificMetrics": [
+              "週末比率 68%",
+              "滞在 2.4時間"
+            ],
+            "roleSpecificFailureRisk": "来訪者データを読まず、週末比率 68%か滞在 2.4時間のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "週末比率 68%と滞在 2.4時間を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "来訪者データ、週末比率 68%、滞在 2.4時間を判断の主役にしている。",
+            "kernelConnection": "来訪者データをtourism-promotion-週末比率 68%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。観光振興担当として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "tourism-promotion-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "地域事業者表",
+          "openingHook": "12:20。地域事業者表に参加希望 18件と人員不足 7件が並んでいる。",
+          "context": "観光振興担当として地域事業者表を確認する。参加希望 18件、人員不足 7件が今日の判断材料になる。",
+          "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、地域事業者表を読んで巻き込み範囲を決める。",
+          "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+          "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は地域事業者表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "参加希望 18件の背景と人員不足 7件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "参加希望 18件を重く見るほど、人員不足 7件や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-promotion-参加希望 18件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は予算配分案で副作用を確認する。",
+          "npcDialogue": "先輩:「地域事業者表を読まずに進めると、観光振興担当の判断ではなくなる」",
+          "workMaterial": "地域事業者表\n- 参加希望 18件\n- 人員不足 7件\n- 判断対象: 地域事業者表",
+          "decisionPrompt": "tourism-promotion-参加希望 18件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "参加希望 18件を優先し、当日中に地域事業者表の結論を出す",
+              "text": "参加希望 18件を優先し、当日中に地域事業者表の結論を出す。材料は参加希望 18件、人員不足 7件。",
+              "immediateFeedback": "参加希望 18件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 2,
+                "tourism_promotion_risk": -1,
+                "tourism_promotion_speed": 2,
+                "tourism_promotion_value": -1,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は印象ではなく、参加希望 18件と人員不足 7件を読んで判断する。",
+              "studentFeedback": {
+                "good": "参加希望 18件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は人員不足 7件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "参加希望 18件と人員不足 7件を突き合わせ、条件付きで進める",
+              "text": "参加希望 18件と人員不足 7件を突き合わせ、条件付きで進める。材料は参加希望 18件、人員不足 7件。",
+              "immediateFeedback": "地域事業者表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": 1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "参加希望 18件と人員不足 7件を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は地域事業者表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "人員不足 7件の制約を重く見て、判断範囲を絞る",
+              "text": "人員不足 7件の制約を重く見て、判断範囲を絞る。材料は参加希望 18件、人員不足 7件。",
+              "immediateFeedback": "人員不足 7件に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": -1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": -1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "観光振興担当は慎重さだけでなく、参加希望 18件と人員不足 7件の副作用まで読む。",
+              "studentFeedback": {
+                "good": "人員不足 7件の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は参加希望 18件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-promotion-参加希望 18件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-promotion-参加希望 18件判断",
+            "roleSpecificMaterials": [
+              "地域事業者表",
+              "判断対象: 地域事業者表"
+            ],
+            "roleSpecificMetrics": [
+              "参加希望 18件",
+              "人員不足 7件"
+            ],
+            "roleSpecificFailureRisk": "地域事業者表を読まず、参加希望 18件か人員不足 7件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "参加希望 18件と人員不足 7件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "地域事業者表、参加希望 18件、人員不足 7件を判断の主役にしている。",
+            "kernelConnection": "地域事業者表をtourism-promotion-参加希望 18件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。観光振興担当として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "tourism-promotion-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "予算配分案",
+          "openingHook": "14:05。予算配分案に総額 480万円と広報費 38%が並んでいる。",
+          "context": "観光振興担当として予算配分案を確認する。総額 480万円、広報費 38%が今日の判断材料になる。",
+          "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、予算配分案を読んで費目を調整する。",
+          "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+          "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は予算配分案である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "総額 480万円の背景と広報費 38%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "総額 480万円を重く見るほど、広報費 38%や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-promotion-総額 480万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は効果測定計画で副作用を確認する。",
+          "npcDialogue": "先輩:「予算配分案を読まずに進めると、観光振興担当の判断ではなくなる」",
+          "workMaterial": "予算配分案\n- 総額 480万円\n- 広報費 38%\n- 判断対象: 予算配分案",
+          "decisionPrompt": "tourism-promotion-総額 480万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "総額 480万円を優先し、当日中に予算配分案の結論を出す",
+              "text": "総額 480万円を優先し、当日中に予算配分案の結論を出す。材料は総額 480万円、広報費 38%。",
+              "immediateFeedback": "総額 480万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 2,
+                "tourism_promotion_risk": -1,
+                "tourism_promotion_speed": 2,
+                "tourism_promotion_value": -1,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は印象ではなく、総額 480万円と広報費 38%を読んで判断する。",
+              "studentFeedback": {
+                "good": "総額 480万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は広報費 38%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "総額 480万円と広報費 38%を突き合わせ、条件付きで進める",
+              "text": "総額 480万円と広報費 38%を突き合わせ、条件付きで進める。材料は総額 480万円、広報費 38%。",
+              "immediateFeedback": "予算配分案に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": 1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "総額 480万円と広報費 38%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は予算配分案の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "広報費 38%の制約を重く見て、判断範囲を絞る",
+              "text": "広報費 38%の制約を重く見て、判断範囲を絞る。材料は総額 480万円、広報費 38%。",
+              "immediateFeedback": "広報費 38%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": -1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": -1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "観光振興担当は慎重さだけでなく、総額 480万円と広報費 38%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "広報費 38%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は総額 480万円を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-promotion-総額 480万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-promotion-総額 480万円判断",
+            "roleSpecificMaterials": [
+              "予算配分案",
+              "判断対象: 予算配分案"
+            ],
+            "roleSpecificMetrics": [
+              "総額 480万円",
+              "広報費 38%"
+            ],
+            "roleSpecificFailureRisk": "予算配分案を読まず、総額 480万円か広報費 38%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "総額 480万円と広報費 38%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "予算配分案、総額 480万円、広報費 38%を判断の主役にしている。",
+            "kernelConnection": "予算配分案をtourism-promotion-総額 480万円判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。観光振興担当として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "tourism-promotion-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "効果測定計画",
+          "openingHook": "16:25。効果測定計画に目標 9,000人と満足度 4.2が並んでいる。",
+          "context": "観光振興担当として効果測定計画を確認する。目標 9,000人、満足度 4.2が今日の判断材料になる。",
+          "content": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換するため、効果測定計画を読んで評価指標を残す。",
+          "roleSpecificContext": "観光振興担当は観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する仕事。",
+          "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は効果測定計画である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "目標 9,000人の背景と満足度 4.2の確度が完全にはそろっていない。",
+          "decisionTradeoff": "目標 9,000人を重く見るほど、満足度 4.2や別の制約を犠牲にする。",
+          "consequenceHook": "tourism-promotion-目標 9,000人判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「効果測定計画を読まずに進めると、観光振興担当の判断ではなくなる」",
+          "workMaterial": "効果測定計画\n- 目標 9,000人\n- 満足度 4.2\n- 判断対象: 効果測定計画",
+          "decisionPrompt": "tourism-promotion-目標 9,000人判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "目標 9,000人を優先し、当日中に効果測定計画の結論を出す",
+              "text": "目標 9,000人を優先し、当日中に効果測定計画の結論を出す。材料は目標 9,000人、満足度 4.2。",
+              "immediateFeedback": "目標 9,000人に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 2,
+                "tourism_promotion_risk": -1,
+                "tourism_promotion_speed": 2,
+                "tourism_promotion_value": -1,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は印象ではなく、目標 9,000人と満足度 4.2を読んで判断する。",
+              "studentFeedback": {
+                "good": "目標 9,000人の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は満足度 4.2の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "目標 9,000人と満足度 4.2を突き合わせ、条件付きで進める",
+              "text": "目標 9,000人と満足度 4.2を突き合わせ、条件付きで進める。材料は目標 9,000人、満足度 4.2。",
+              "immediateFeedback": "効果測定計画に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": 1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": 1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": 1
+              },
+              "misconceptionEffect": "観光振興担当は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "目標 9,000人と満足度 4.2を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は効果測定計画の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "満足度 4.2の制約を重く見て、判断範囲を絞る",
+              "text": "満足度 4.2の制約を重く見て、判断範囲を絞る。材料は目標 9,000人、満足度 4.2。",
+              "immediateFeedback": "満足度 4.2に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "観光振興担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "tourism_promotion_evidence": -1,
+                "tourism_promotion_risk": 2,
+                "tourism_promotion_speed": -1,
+                "tourism_promotion_value": 2,
+                "tourism_promotion_feasibility": -1
+              },
+              "misconceptionEffect": "観光振興担当は慎重さだけでなく、目標 9,000人と満足度 4.2の副作用まで読む。",
+              "studentFeedback": {
+                "good": "満足度 4.2の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は目標 9,000人を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "tourism-promotion-目標 9,000人判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "tourism-promotion-目標 9,000人判断",
+            "roleSpecificMaterials": [
+              "効果測定計画",
+              "判断対象: 効果測定計画"
+            ],
+            "roleSpecificMetrics": [
+              "目標 9,000人",
+              "満足度 4.2"
+            ],
+            "roleSpecificFailureRisk": "効果測定計画を読まず、目標 9,000人か満足度 4.2のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "目標 9,000人と満足度 4.2を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "効果測定計画、目標 9,000人、満足度 4.2を判断の主役にしている。",
+            "kernelConnection": "効果測定計画をtourism-promotion-目標 9,000人判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "tourism-promotion-material-reader",
+      "title": "観光振興担当の材料読解型",
+      "strengths": [
+        "観光振興担当の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "tourism_promotion_evidence",
+        "tourism_promotion_risk"
+      ],
+      "valuedMeters": [
+        "tourism_promotion_evidence"
+      ],
+      "sacrificedMeters": [
+        "tourism_promotion_speed"
+      ],
+      "roleRealityReveal": "観光振興担当は、観光資源と来訪データを読み、地域が続けられる施策条件へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "観光振興担当の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "tourism-promotion-constraint-designer",
+      "title": "観光振興担当の制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "tourism_promotion_risk",
+        "tourism_promotion_speed"
+      ],
+      "valuedMeters": [
+        "tourism_promotion_risk"
+      ],
+      "sacrificedMeters": [
+        "tourism_promotion_value"
+      ],
+      "roleRealityReveal": "観光振興担当は、観光資源と来訪データを読み、地域が続けられる施策条件へ変換する仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "観光振興担当として制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "tourism-promotion-execution-planner",
+      "title": "観光振興担当の実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "tourism_promotion_speed",
+        "tourism_promotion_value"
+      ],
+      "valuedMeters": [
+        "tourism_promotion_speed"
+      ],
+      "sacrificedMeters": [
+        "tourism_promotion_feasibility"
+      ],
+      "roleRealityReveal": "観光振興担当は、観光資源と来訪データを読み、地域が続けられる施策条件へ変換する仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "観光振興担当として実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "観光振興担当は、観光資源と来訪データを読み、地域が続けられる施策条件へ変換する仕事。",
+    "misconceptionCorrection": "観光振興担当は印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "観光振興担当として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "tourism-promotion_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "tourism_promotion_visitor_vs_tourism_promotion_local",
+      "tourism_promotion_budget_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "tourism_promotion_visitor",
+      "label": "visitor",
+      "description": "観光振興担当のvisitor判断"
+    },
+    {
+      "key": "tourism_promotion_local",
+      "label": "local",
+      "description": "観光振興担当のlocal判断"
+    },
+    {
+      "key": "tourism_promotion_budget",
+      "label": "budget",
+      "description": "観光振興担当のbudget判断"
+    },
+    {
+      "key": "tourism_promotion_feasibility",
+      "label": "feasibility",
+      "description": "観光振興担当のfeasibility判断"
+    },
+    {
+      "key": "tourism_promotion_impact",
+      "label": "impact",
+      "description": "観光振興担当のimpact判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "観光振興担当の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "tourism_promotion_visitor",
+      "tourism_promotion_local",
+      "tourism_promotion_budget",
+      "tourism_promotion_feasibility",
+      "tourism_promotion_impact"
+    ]
+  },
+  "roleCoreFriction": "集客を増やすほど地域経済に効くが、混雑や住民負荷を読まない施策は続かない葛藤。",
+  "roleMisconception": "観光振興はイベントやPRを考える仕事で、来訪データと地域制約の設計は補助的だと思われやすい。",
+  "roleRealityReveal": "観光振興担当は、観光資源と来訪データを読み、地域が続けられる施策条件へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "候補 12件、受入上限 600人、週末比率 68%、滞在 2.4時間、参加希望 18件、人員不足 7件、総額 480万円、広報費 38%、目標 9,000人、満足度 4.2",
+    "output": "観光振興担当としての判断案、次回確認項目、リスクメモ",
+    "transformation": "観光資源、来訪データ、地域制約を観光振興施策と実行条件へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "観光資源リスト",
+      "来訪者データ",
+      "地域事業者表",
+      "予算配分案",
+      "効果測定計画"
+    ],
+    "metrics": [
+      "候補 12件",
+      "受入上限 600人",
+      "週末比率 68%",
+      "滞在 2.4時間",
+      "参加希望 18件",
+      "人員不足 7件",
+      "総額 480万円",
+      "広報費 38%",
+      "目標 9,000人",
+      "満足度 4.2"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "観光資源リスト、来訪者データ、地域事業者表と候補 12件、週末比率 68%を読まなければ成立しないため。"
+  }
+}

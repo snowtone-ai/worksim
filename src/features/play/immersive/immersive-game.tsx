@@ -1,10 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import type { Block, Scenario } from '@/lib/scenario/loader'
+import { trackScenarioEvent } from '@/lib/analytics/events'
 import { encodeAnswers } from '@/lib/scoring/calculator'
+import { getScenarioDisplay } from '@/lib/scenario/view-model'
 import { DeskScene } from './desk-scene'
 import { DialogueScene } from './dialogue-scene'
 import { PhaseTransition } from './phase-transition'
@@ -30,27 +32,14 @@ export function ImmersiveGame({ scenario, industry, role, initialBlockId, initia
   const [modalOpen, setModalOpen] = useState(false)
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null)
 
-  if (blocks.length === 0) {
-    return (
-      <div className="fixed inset-0 flex items-center justify-center bg-slate-900 text-white p-8">
-        <div className="text-center max-w-md">
-          <p className="text-2xl mb-3">🚧 没入モード準備中</p>
-          <p className="text-sm text-slate-300">
-            このシナリオの没入モードはまだ用意されていません。通常モードをお試しください。
-          </p>
-        </div>
-      </div>
-    )
-  }
-
   const currentBlock = blocks[blockIndex]
-  if (!currentBlock) return null
-  const currentScene = currentBlock.scenes[sceneIndex]
-  if (!currentScene) return null
+  const currentScene = currentBlock?.scenes[sceneIndex]
+  const currentSceneId = currentScene?.id ?? ''
+  const scenarioDisplay = getScenarioDisplay(scenario)
 
-  const isLastSceneInBlock = sceneIndex === currentBlock.scenes.length - 1
+  const isLastSceneInBlock = sceneIndex === ((currentBlock?.scenes.length ?? 1) - 1)
   const isLastBlock = blockIndex === blocks.length - 1
-  const isAfternoon = currentBlock.id === 'afternoon'
+  const isAfternoon = currentBlock?.id === 'afternoon'
   const totalAnswered = Object.keys(answers).length
   const totalScenes = blocks.reduce((sum, b) => sum + b.scenes.length, 0)
   const nextBlock = blocks[blockIndex + 1]
@@ -77,17 +66,35 @@ export function ImmersiveGame({ scenario, industry, role, initialBlockId, initia
 
   function handleChoice(choiceId: string) {
     setSelectedChoice(choiceId)
+    trackScenarioEvent({
+      eventName: 'choice_select',
+      scenarioId: scenario.id,
+      industrySlug: industry,
+      roleSlug: role,
+      sceneId: currentSceneId,
+      choiceId,
+      mode: 'immersive',
+    })
   }
 
   function handleConfirm() {
     if (!selectedChoice || !currentScene) return
-    const newAnswers = { ...answers, [currentScene.id]: selectedChoice }
+    const newAnswers = { ...answers, [currentSceneId]: selectedChoice }
     setAnswers(newAnswers)
     setSelectedChoice(null)
     setModalOpen(false)
 
     if (isLastSceneInBlock) {
       if (isLastBlock) {
+        trackScenarioEvent({
+          eventName: 'scenario_complete',
+          scenarioId: scenario.id,
+          industrySlug: industry,
+          roleSlug: role,
+          sceneId: currentSceneId,
+          choiceId: selectedChoice,
+          mode: 'immersive',
+        })
         const encoded = encodeAnswers(newAnswers)
         router.push(`/play/${industry}/${role}/result?a=${encoded}&m=immersive`)
       } else {
@@ -99,6 +106,33 @@ export function ImmersiveGame({ scenario, industry, role, initialBlockId, initia
       setSceneIndex(sceneIndex + 1)
     }
   }
+
+  useEffect(() => {
+    if (showTransition || !currentSceneId) return
+    trackScenarioEvent({
+      eventName: blockIndex === 0 && sceneIndex === 0 ? 'scenario_start' : 'scene_view',
+      scenarioId: scenario.id,
+      industrySlug: industry,
+      roleSlug: role,
+      sceneId: currentSceneId,
+      mode: 'immersive',
+    })
+  }, [blockIndex, currentSceneId, industry, role, scenario.id, sceneIndex, showTransition])
+
+  if (blocks.length === 0) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-slate-900 text-white p-8">
+        <div className="text-center max-w-md">
+          <p className="text-2xl mb-3">🚧 没入モード準備中</p>
+          <p className="text-sm text-slate-300">
+            このシナリオの体験はまだ用意されていません。
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!currentBlock || !currentScene) return null
 
   return (
     <div className="fixed inset-0 bg-slate-100 overflow-hidden flex flex-col">
@@ -159,8 +193,8 @@ export function ImmersiveGame({ scenario, industry, role, initialBlockId, initia
         {showTransition && (
           <PhaseTransition
             block={currentBlock}
+            scenarioDisplay={scenarioDisplay}
             onComplete={() => setShowTransition(false)}
-            isStart={blockIndex === 0}
           />
         )}
       </div>

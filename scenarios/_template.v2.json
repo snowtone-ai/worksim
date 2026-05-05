@@ -1,0 +1,3371 @@
+{
+  "id": "finance/regional-bank-corporate-loan",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "金融",
+  "industrySlug": "finance",
+  "role": "地方銀行 法人営業/融資担当",
+  "roleSlug": "regional-bank-corporate-loan",
+  "roleCategory": "industry_specific_sales",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 12,
+  "difficulty": "high",
+  "tags": [
+    "営業系",
+    "地方就職",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a high-quality realistic workplace background image for a career simulation game. Scene: 金融 industry, 地方銀行 法人営業/融資担当 role, decision point before a key task.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, distorted hands, distorted face, low quality, blurry, stock photo advertisement, fantasy, cyberpunk, anime, manga, unrealistic office, fake letters",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "finance",
+      "regional bank corporate loan"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "chat",
+      "dashboard"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:00",
+      "label": "start"
+    },
+    {
+      "time": "10:00",
+      "label": "initial_task"
+    },
+    {
+      "time": "11:00",
+      "label": "research"
+    },
+    {
+      "time": "12:00",
+      "label": "lunch"
+    },
+    {
+      "time": "13:30",
+      "label": "meeting"
+    },
+    {
+      "time": "15:00",
+      "label": "trouble"
+    },
+    {
+      "time": "16:30",
+      "label": "final_decision"
+    },
+    {
+      "time": "18:00",
+      "label": "result"
+    }
+  ],
+  "meta": {
+    "title": "地方銀行 法人営業/融資担当",
+    "industry": "金融",
+    "role": "地方銀行 法人営業/融資担当",
+    "duration_minutes": 12,
+    "description": "地域企業の資金相談と融資提案を担う銀行法人担当。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 企業公式採用ページ",
+      "to_be_researched: 社員インタビュー/現場発信"
+    ],
+    "company_model": "架空の事業者を前提にしたCαドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝え、合意形成する力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "自分事として責任を持ち、やり切る姿勢"
+    },
+    {
+      "key": "ethics",
+      "label": "倫理観",
+      "description": "ルールや社会的影響を踏まえて判断する力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化やトラブルに素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "regional-bank-corporate-loan-scene-1",
+      "type": "email",
+      "title": "朝の依頼整理",
+      "context": "金融の地方銀行 法人営業/融資担当として、朝一番で届いた依頼の優先順位を決める。",
+      "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n関係者からの期待が重なり、何を先に動かすか迷う。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+      "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+      "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+      "decisionPrompt": "あなたなら、何を優先して進めますか？",
+      "choices": [
+        {
+          "id": "a",
+          "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "見切り発車になる恐れがある。",
+            "next": "1つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "speed_first",
+            "ownership_high"
+          ],
+          "universityInsightTags": [
+            "career_reality_gap",
+            "job_friction"
+          ],
+          "companyInsightTags": [
+            "application_intent_driver",
+            "job_attraction_factor"
+          ],
+          "riskTags": [
+            "overprioritizes_speed"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "調整負荷でスピードが落ちる。",
+            "next": "1つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 2,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "consultation_first",
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "misconception_correction",
+            "readiness_gap"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal",
+            "candidate_expectation_gap"
+          ],
+          "riskTags": [
+            "avoids_stakeholder_alignment"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "過剰設計になる恐れがある。",
+            "next": "1つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "accuracy_first",
+            "structure_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference",
+            "interest_expansion"
+          ],
+          "companyInsightTags": [
+            "employer_message_resonance",
+            "anxiety_point"
+          ],
+          "riskTags": [
+            "ignores_long_term_quality"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "speed_vs_accuracy",
+        "frictionType": "ambiguity",
+        "workValueTags": [
+          "営業系",
+          "地方就職",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off"
+        ],
+        "localCareerTags": [
+          "regional_relevance"
+        ]
+      }
+    },
+    {
+      "id": "regional-bank-corporate-loan-scene-2",
+      "type": "meeting",
+      "title": "材料集め",
+      "context": "金融の地方銀行 法人営業/融資担当として、必要な情報やデータを集めて仮説を立てる。",
+      "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n情報不足のまま進めるか、追加確認を待つかが論点になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+      "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+      "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+      "decisionPrompt": "あなたなら、何を優先して進めますか？",
+      "choices": [
+        {
+          "id": "a",
+          "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "見切り発車になる恐れがある。",
+            "next": "2つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "speed_first",
+            "ownership_high"
+          ],
+          "universityInsightTags": [
+            "career_reality_gap",
+            "job_friction"
+          ],
+          "companyInsightTags": [
+            "application_intent_driver",
+            "job_attraction_factor"
+          ],
+          "riskTags": [
+            "overprioritizes_speed"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "調整負荷でスピードが落ちる。",
+            "next": "2つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 2,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "consultation_first",
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "misconception_correction",
+            "readiness_gap"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal",
+            "candidate_expectation_gap"
+          ],
+          "riskTags": [
+            "avoids_stakeholder_alignment"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "過剰設計になる恐れがある。",
+            "next": "2つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "accuracy_first",
+            "structure_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference",
+            "interest_expansion"
+          ],
+          "companyInsightTags": [
+            "employer_message_resonance",
+            "anxiety_point"
+          ],
+          "riskTags": [
+            "ignores_long_term_quality"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "risk_vs_value",
+        "frictionType": "stakeholder_alignment",
+        "workValueTags": [
+          "営業系",
+          "地方就職",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off"
+        ],
+        "localCareerTags": [
+          "regional_relevance"
+        ]
+      }
+    },
+    {
+      "id": "regional-bank-corporate-loan-scene-3",
+      "type": "memo",
+      "title": "ランチ前の相談",
+      "context": "金融の地方銀行 法人営業/融資担当として、現場感を持つ同僚との会話から論点を補強する。",
+      "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n相手の感情も踏まえて伝え方を選ぶ必要がある。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+      "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+      "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+      "decisionPrompt": "あなたなら、何を優先して進めますか？",
+      "choices": [
+        {
+          "id": "a",
+          "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "見切り発車になる恐れがある。",
+            "next": "3つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "speed_first",
+            "ownership_high"
+          ],
+          "universityInsightTags": [
+            "career_reality_gap",
+            "job_friction"
+          ],
+          "companyInsightTags": [
+            "application_intent_driver",
+            "job_attraction_factor"
+          ],
+          "riskTags": [
+            "overprioritizes_speed"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "調整負荷でスピードが落ちる。",
+            "next": "3つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 2,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "consultation_first",
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "misconception_correction",
+            "readiness_gap"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal",
+            "candidate_expectation_gap"
+          ],
+          "riskTags": [
+            "avoids_stakeholder_alignment"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "過剰設計になる恐れがある。",
+            "next": "3つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "accuracy_first",
+            "structure_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference",
+            "interest_expansion"
+          ],
+          "companyInsightTags": [
+            "employer_message_resonance",
+            "anxiety_point"
+          ],
+          "riskTags": [
+            "ignores_long_term_quality"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "autonomy_vs_consultation",
+        "frictionType": "time_pressure",
+        "workValueTags": [
+          "営業系",
+          "地方就職",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off"
+        ],
+        "localCareerTags": [
+          "regional_relevance"
+        ]
+      }
+    },
+    {
+      "id": "regional-bank-corporate-loan-scene-4",
+      "type": "review",
+      "title": "午後のトラブル",
+      "context": "金融の地方銀行 法人営業/融資担当として、予定外の問題が起き、短期対応と恒久対応の両立が問われる。",
+      "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\nその場しのぎと再発防止のどちらを優先するかが分かれ目になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+      "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+      "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+      "decisionPrompt": "あなたなら、何を優先して進めますか？",
+      "choices": [
+        {
+          "id": "a",
+          "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "見切り発車になる恐れがある。",
+            "next": "4つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "speed_first",
+            "ownership_high"
+          ],
+          "universityInsightTags": [
+            "career_reality_gap",
+            "job_friction"
+          ],
+          "companyInsightTags": [
+            "application_intent_driver",
+            "job_attraction_factor"
+          ],
+          "riskTags": [
+            "overprioritizes_speed"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "調整負荷でスピードが落ちる。",
+            "next": "4つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 2,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "consultation_first",
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "misconception_correction",
+            "readiness_gap"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal",
+            "candidate_expectation_gap"
+          ],
+          "riskTags": [
+            "avoids_stakeholder_alignment"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "過剰設計になる恐れがある。",
+            "next": "4つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "accuracy_first",
+            "structure_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference",
+            "interest_expansion"
+          ],
+          "companyInsightTags": [
+            "employer_message_resonance",
+            "anxiety_point"
+          ],
+          "riskTags": [
+            "ignores_long_term_quality"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "creativity_vs_consistency",
+        "frictionType": "quality_risk",
+        "workValueTags": [
+          "営業系",
+          "地方就職",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off"
+        ],
+        "localCareerTags": [
+          "regional_relevance"
+        ]
+      }
+    },
+    {
+      "id": "regional-bank-corporate-loan-scene-5",
+      "type": "debug",
+      "title": "終業前の最終判断",
+      "context": "金融の地方銀行 法人営業/融資担当として、今日の学びを踏まえ、次に進める方針を決める。",
+      "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n明日に持ち越す宿題と今日決め切る範囲を見極める。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+      "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+      "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+      "decisionPrompt": "あなたなら、何を優先して進めますか？",
+      "choices": [
+        {
+          "id": "a",
+          "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "見切り発車になる恐れがある。",
+            "next": "5つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "speed_first",
+            "ownership_high"
+          ],
+          "universityInsightTags": [
+            "career_reality_gap",
+            "job_friction"
+          ],
+          "companyInsightTags": [
+            "application_intent_driver",
+            "job_attraction_factor"
+          ],
+          "riskTags": [
+            "overprioritizes_speed"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "調整負荷でスピードが落ちる。",
+            "next": "5つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 2,
+            "ownership": 3,
+            "ethics": 2,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "consultation_first",
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "misconception_correction",
+            "readiness_gap"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal",
+            "candidate_expectation_gap"
+          ],
+          "riskTags": [
+            "avoids_stakeholder_alignment"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+          "studentFeedback": {
+            "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+            "risk": "過剰設計になる恐れがある。",
+            "next": "5つ目の論点に進む前提が整理される。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "accuracy_first",
+            "structure_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference",
+            "interest_expansion"
+          ],
+          "companyInsightTags": [
+            "employer_message_resonance",
+            "anxiety_point"
+          ],
+          "riskTags": [
+            "ignores_long_term_quality"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "short_vs_long_term",
+        "frictionType": "priority_conflict",
+        "workValueTags": [
+          "営業系",
+          "地方就職",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off"
+        ],
+        "localCareerTags": [
+          "regional_relevance"
+        ]
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前のタスク",
+      "time_start": "09:00",
+      "time_end": "10:00",
+      "location": "desk",
+      "intro": "地方銀行 法人営業/融資担当としての一日を、午前のタスクから進める。",
+      "scenes": [
+        {
+          "id": "morning-1",
+          "time": "09:05",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "朝の依頼整理",
+          "context": "金融の地方銀行 法人営業/融資担当として、朝一番で届いた依頼の優先順位を決める。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n関係者からの期待が重なり、何を先に動かすか迷う。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "speed_vs_accuracy",
+            "frictionType": "ambiguity",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "morning-2",
+          "time": "09:35",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "材料集め",
+          "context": "金融の地方銀行 法人営業/融資担当として、必要な情報やデータを集めて仮説を立てる。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n情報不足のまま進めるか、追加確認を待つかが論点になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "risk_vs_value",
+            "frictionType": "stakeholder_alignment",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "morning-3",
+          "time": "10:05",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "ランチ前の相談",
+          "context": "金融の地方銀行 法人営業/融資担当として、現場感を持つ同僚との会話から論点を補強する。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n相手の感情も踏まえて伝え方を選ぶ必要がある。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "autonomy_vs_consultation",
+            "frictionType": "time_pressure",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "morning-4",
+          "time": "10:35",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "午後のトラブル",
+          "context": "金融の地方銀行 法人営業/融資担当として、予定外の問題が起き、短期対応と恒久対応の両立が問われる。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\nその場しのぎと再発防止のどちらを優先するかが分かれ目になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "creativity_vs_consistency",
+            "frictionType": "quality_risk",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "morning-5",
+          "time": "11:05",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "終業前の最終判断",
+          "context": "金融の地方銀行 法人営業/融資担当として、今日の学びを踏まえ、次に進める方針を決める。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n明日に持ち越す宿題と今日決め切る範囲を見極める。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "short_vs_long_term",
+            "frictionType": "priority_conflict",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "ランチ",
+      "time_start": "10:00",
+      "time_end": "11:00",
+      "location": "cafeteria",
+      "intro": "地方銀行 法人営業/融資担当としての一日を、ランチから進める。",
+      "scenes": [
+        {
+          "id": "lunch-1",
+          "time": "11:05",
+          "interactable": "npc_dialogue",
+          "presenter": "同僚",
+          "title": "朝の依頼整理",
+          "context": "金融の地方銀行 法人営業/融資担当として、朝一番で届いた依頼の優先順位を決める。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n関係者からの期待が重なり、何を先に動かすか迷う。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "speed_vs_accuracy",
+            "frictionType": "ambiguity",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "lunch-2",
+          "time": "11:35",
+          "interactable": "npc_dialogue",
+          "presenter": "同僚",
+          "title": "材料集め",
+          "context": "金融の地方銀行 法人営業/融資担当として、必要な情報やデータを集めて仮説を立てる。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n情報不足のまま進めるか、追加確認を待つかが論点になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "risk_vs_value",
+            "frictionType": "stakeholder_alignment",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "lunch-3",
+          "time": "12:05",
+          "interactable": "npc_dialogue",
+          "presenter": "同僚",
+          "title": "ランチ前の相談",
+          "context": "金融の地方銀行 法人営業/融資担当として、現場感を持つ同僚との会話から論点を補強する。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n相手の感情も踏まえて伝え方を選ぶ必要がある。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "autonomy_vs_consultation",
+            "frictionType": "time_pressure",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "lunch-4",
+          "time": "12:35",
+          "interactable": "npc_dialogue",
+          "presenter": "同僚",
+          "title": "午後のトラブル",
+          "context": "金融の地方銀行 法人営業/融資担当として、予定外の問題が起き、短期対応と恒久対応の両立が問われる。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\nその場しのぎと再発防止のどちらを優先するかが分かれ目になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "creativity_vs_consistency",
+            "frictionType": "quality_risk",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "lunch-5",
+          "time": "13:05",
+          "interactable": "npc_dialogue",
+          "presenter": "同僚",
+          "title": "終業前の最終判断",
+          "context": "金融の地方銀行 法人営業/融資担当として、今日の学びを踏まえ、次に進める方針を決める。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n明日に持ち越す宿題と今日決め切る範囲を見極める。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "short_vs_long_term",
+            "frictionType": "priority_conflict",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後の会議",
+      "time_start": "11:00",
+      "time_end": "12:00",
+      "location": "conference_room",
+      "intro": "地方銀行 法人営業/融資担当としての一日を、午後の会議から進める。",
+      "scenes": [
+        {
+          "id": "meeting-1",
+          "time": "13:05",
+          "interactable": "meeting_speaker",
+          "presenter": "ファシリテーター",
+          "title": "朝の依頼整理",
+          "context": "金融の地方銀行 法人営業/融資担当として、朝一番で届いた依頼の優先順位を決める。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n関係者からの期待が重なり、何を先に動かすか迷う。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "speed_vs_accuracy",
+            "frictionType": "ambiguity",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "meeting-2",
+          "time": "13:35",
+          "interactable": "meeting_speaker",
+          "presenter": "ファシリテーター",
+          "title": "材料集め",
+          "context": "金融の地方銀行 法人営業/融資担当として、必要な情報やデータを集めて仮説を立てる。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n情報不足のまま進めるか、追加確認を待つかが論点になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "risk_vs_value",
+            "frictionType": "stakeholder_alignment",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "meeting-3",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "presenter": "ファシリテーター",
+          "title": "ランチ前の相談",
+          "context": "金融の地方銀行 法人営業/融資担当として、現場感を持つ同僚との会話から論点を補強する。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n相手の感情も踏まえて伝え方を選ぶ必要がある。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "autonomy_vs_consultation",
+            "frictionType": "time_pressure",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "meeting-4",
+          "time": "14:35",
+          "interactable": "meeting_speaker",
+          "presenter": "ファシリテーター",
+          "title": "午後のトラブル",
+          "context": "金融の地方銀行 法人営業/融資担当として、予定外の問題が起き、短期対応と恒久対応の両立が問われる。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\nその場しのぎと再発防止のどちらを優先するかが分かれ目になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "creativity_vs_consistency",
+            "frictionType": "quality_risk",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "meeting-5",
+          "time": "15:05",
+          "interactable": "meeting_speaker",
+          "presenter": "ファシリテーター",
+          "title": "終業前の最終判断",
+          "context": "金融の地方銀行 法人営業/融資担当として、今日の学びを踏まえ、次に進める方針を決める。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n明日に持ち越す宿題と今日決め切る範囲を見極める。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "short_vs_long_term",
+            "frictionType": "priority_conflict",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "終業前",
+      "time_start": "12:00",
+      "time_end": "13:30",
+      "location": "desk",
+      "intro": "地方銀行 法人営業/融資担当としての一日を、終業前から進める。",
+      "scenes": [
+        {
+          "id": "afternoon-1",
+          "time": "15:05",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "朝の依頼整理",
+          "context": "金融の地方銀行 法人営業/融資担当として、朝一番で届いた依頼の優先順位を決める。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n関係者からの期待が重なり、何を先に動かすか迷う。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "1つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "speed_vs_accuracy",
+            "frictionType": "ambiguity",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "afternoon-2",
+          "time": "15:35",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "材料集め",
+          "context": "金融の地方銀行 法人営業/融資担当として、必要な情報やデータを集めて仮説を立てる。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n情報不足のまま進めるか、追加確認を待つかが論点になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "2つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "risk_vs_value",
+            "frictionType": "stakeholder_alignment",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "afternoon-3",
+          "time": "16:05",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "ランチ前の相談",
+          "context": "金融の地方銀行 法人営業/融資担当として、現場感を持つ同僚との会話から論点を補強する。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n相手の感情も踏まえて伝え方を選ぶ必要がある。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "3つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "autonomy_vs_consultation",
+            "frictionType": "time_pressure",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "afternoon-4",
+          "time": "16:35",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "午後のトラブル",
+          "context": "金融の地方銀行 法人営業/融資担当として、予定外の問題が起き、短期対応と恒久対応の両立が問われる。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\nその場しのぎと再発防止のどちらを優先するかが分かれ目になる。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "4つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "creativity_vs_consistency",
+            "frictionType": "quality_risk",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        },
+        {
+          "id": "afternoon-5",
+          "time": "17:05",
+          "interactable": "monitor_slack",
+          "presenter": "同僚",
+          "title": "終業前の最終判断",
+          "context": "金融の地方銀行 法人営業/融資担当として、今日の学びを踏まえ、次に進める方針を決める。",
+          "content": "地域企業の資金相談と融資提案を担う銀行法人担当。\n\n明日に持ち越す宿題と今日決め切る範囲を見極める。\n\nこの場面では、スピード・正確性・関係者調整のバランスが試される。",
+          "npcDialogue": "地方銀行 法人営業/融資担当の先輩: 「この判断で次の動きが変わる。理由も含めて考えよう」",
+          "workMaterial": "地方銀行 法人営業/融資担当に関するメモ: 現場要望、期限、運用上の制約、社内ルールが同時に存在する。",
+          "decisionPrompt": "あなたなら、何を優先して進めますか？",
+          "choices": [
+            {
+              "id": "a",
+              "label": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "text": "状況把握を急ぎ、まず動かす。地方銀行 法人営業/融資担当として、短期の進行を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "見切り発車になる恐れがある。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "speed_first",
+                "ownership_high"
+              ],
+              "universityInsightTags": [
+                "career_reality_gap",
+                "job_friction"
+              ],
+              "companyInsightTags": [
+                "application_intent_driver",
+                "job_attraction_factor"
+              ],
+              "riskTags": [
+                "overprioritizes_speed"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "text": "関係者に確認し、前提をそろえる。地方銀行 法人営業/融資担当として、周囲との合意を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "調整負荷でスピードが落ちる。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 2,
+                "ownership": 3,
+                "ethics": 2,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "consultation_first",
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "misconception_correction",
+                "readiness_gap"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal",
+                "candidate_expectation_gap"
+              ],
+              "riskTags": [
+                "avoids_stakeholder_alignment"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "text": "中長期の影響まで見て設計する。地方銀行 法人営業/融資担当として、将来の運用を優先する。",
+              "studentFeedback": {
+                "good": "地方銀行 法人営業/融資担当で求められる判断軸の一つを押さえている。",
+                "risk": "過剰設計になる恐れがある。",
+                "next": "5つ目の論点に進む前提が整理される。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "accuracy_first",
+                "structure_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference",
+                "interest_expansion"
+              ],
+              "companyInsightTags": [
+                "employer_message_resonance",
+                "anxiety_point"
+              ],
+              "riskTags": [
+                "ignores_long_term_quality"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "short_vs_long_term",
+            "frictionType": "priority_conflict",
+            "workValueTags": [
+              "営業系",
+              "地方就職",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off"
+            ],
+            "localCareerTags": [
+              "regional_relevance"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "communication",
+    "logical",
+    "ownership",
+    "ethics",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "balanced-driver",
+      "title": "地方銀行 法人営業/融資担当の推進型",
+      "strengths": [
+        "前提整理",
+        "関係者調整",
+        "実行への落とし込み"
+      ],
+      "cautionPoints": [
+        "優先順位が散ると処理が重くなる",
+        "慎重さが過剰だと機会損失になる"
+      ]
+    }
+  ],
+  "analytics": {
+    "decisionStyleAxes": [
+      "speed_vs_accuracy",
+      "customer_empathy_vs_risk_control",
+      "autonomy_vs_consultation"
+    ],
+    "derivedMetrics": [
+      "career_reality_gap",
+      "work_decision_style_vector",
+      "job_friction_heatmap"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 企業公式採用ページ",
+    "to_be_researched: 大手就活サイト"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "金融の業界固有性が高く、Cα の軸に適している。",
+    "mainConflict": "短期成果と長期品質、個別最適と全体最適の両立。",
+    "sceneRationale": "1日の流れに沿って、情報収集・調整・トラブル対応・最終判断を配置した。",
+    "choiceRationale": "正解不正解ではなく、現実にあり得るトレードオフを3択化した。",
+    "scoringRationale": "新卒1-3年目で顕在化しやすい判断特性に寄せて次元を選定した。",
+    "knownLimitations": "Cα 段階の AI 草案であり、Cβ で実地リサーチ検証が必要。"
+  }
+}
