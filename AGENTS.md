@@ -1,83 +1,89 @@
-# WorkSim — AGENTS.md (pm-zero v9.0)
+# WorkSim AGENTS.md -- pm-zero v9.4
 
-<language_rule>
-完了報告、エラー報告、手動確認依頼は日本語で出力する。
-コードコメントは既存方針に合わせ、必要最小限にする。識別子とファイル名は英語を使う。
-</language_rule>
+## Language
+- Completion reports, error reports, and manual confirmation requests: Japanese.
+- Code identifiers and command names: English.
+- When 3+ HIGH assumptions accumulate, ask immediately.
 
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+## Source of Truth
+- Product intent: docs/vision.md, which points to the retained root vision.md product spec.
+- Execution tasks: tasks.md
+- Current state: docs/state.md
+- Decisions: docs/decisions.md
+- Failures: docs/issues.md
+- Repository map: docs/repo-map.md
+- Report: HANDOFF-JA.md
 
-This project runs Next.js 16.2.4 with App Router. Before changing Next.js API, routing,
-Proxy, Server Components, Server Actions, or config, read the relevant guide in
-`node_modules/next/dist/docs/`.
-<!-- END:nextjs-agent-rules -->
+## Startup Read
+- Read this file.
+- Read docs/state.md.
+- Read docs/decisions.md.
+- Read docs/repo-map.md Summary.
 
-<stack>
-- Runtime: Node.js 24.x LTS, pnpm
-- Language: TypeScript strict mode, `noUncheckedIndexedAccess: true`
-- Framework: Next.js 16.2.4 App Router, React 19
-- Styling: Tailwind CSS v4
-- Database/Auth: Supabase SSR + Google OAuth
-- Deploy: Vercel Hobby
-</stack>
+## Repository Navigation
+- Read detailed repo-map sections only when target files are unclear.
+- Update docs/repo-map.md after structural changes.
+- Use rg before broad manual browsing.
 
-<commands>
-- dev: `pnpm dev`
-- lint: `pnpm lint`
-- typecheck: `pnpm typecheck`
-- build: `pnpm build`
-- test: `pnpm test`
-- e2e: `pnpm test:e2e`
-- verify: `pnpm verify`
-</commands>
+## Stack
+- Runtime: Node.js 24.x LTS, pnpm.
+- Language: TypeScript strict mode, noUncheckedIndexedAccess.
+- Framework: Next.js 16.2.4 App Router, React 19.
+- Styling: Tailwind CSS v4.
+- Database/Auth: Supabase SSR + Google OAuth.
+- Deploy: Vercel Hobby.
 
-<external_memory>
-- `docs/state.md` is the SSOT. Read it at session start and do not redo completed tasks.
-- Read `docs/decisions.md` before changing architecture, security, data, auth, or UX rules.
-- Record failures in `docs/issues.md`; after 3 consecutive failures, stop and write `docs/escape.md`.
-- Record durable design notes in `docs/design-notes.md`; keep `docs/xp-rules.md` to 10 lessons.
-- `vision.md` is product scope. Do not silently contradict it.
-</external_memory>
+## Next.js Rule
+- Before changing Next.js API, routing, Proxy, Server Components, Server Actions, or config, read the relevant guide in node_modules/next/dist/docs/ when available.
 
-<rules>
-- 1 file should stay under 300 lines; 1 function should stay under 50 lines where practical.
-- Prefer small, reversible diffs. Do not delete core MVP behavior.
+## Task Ledger Rule
+- Planning output goes to tasks.md.
+- Implementation starts from tasks marked ready.
+- Each ready task includes owner, dependencies, write scope, acceptance, verification, and evidence.
+- Coordinator updates tasks.md.
+- Worker agents report results to the coordinator.
+
+## Scope Lock Rule
+- One coordinator owns tasks.md and docs/state.md.
+- Workers edit only their assigned write scope.
+- Parallel work requires disjoint Write Scopes or isolated worktrees.
+- Tasks touching the same file are serialized.
+
+## Quality Standards
+- Keep files and functions small enough to review.
 - New features and bug fixes need RED -> GREEN tests when practical.
-- Reference Gate: before major UI/API/data/architecture change, record at least 3 real URLs in `docs/decisions.md`.
-- Supabase RLS is required for every table; service role keys are server-only.
-- `profiles` must not store names, emails, birth dates, addresses, phone numbers, or student IDs.
+- Supabase RLS is required for every table.
+- Service role keys are server-only.
+- Profiles must not store names, emails, birth dates, addresses, phone numbers, or student IDs.
 - Public MVP scenarios must not use real company, service, or personal names.
-- University, faculty, and target industry are optional; blank profile must remain playable.
-- Do not read or print `.env`, `.env.*`, secrets, tokens, or private keys.
-- Never modify `.env.local` for routine work and never commit it.
-- Do not run `git reset --hard`, `git clean -fd`, `git push --force`, or push without approval.
-- Do not create files in paths containing non-ASCII characters.
-</rules>
+- University, faculty, and target industry are optional; a blank profile must remain playable.
+- Generated, build, cache, dependency, and secret files must stay ignored.
+- Auth, billing, DB schema, RLS/permissions, deploy, security, 300+ line diff, and new external API require cross-vendor review.
 
-<quality_gate>
-Before completion, run `pnpm lint`, `pnpm typecheck`, `pnpm build`, `pnpm test`,
-`pnpm verify`, and E2E/browser checks unless a documented blocker exists.
-Use Codex CLI `/review` when available; otherwise use `codex exec review` or record
-a 5-view self review in `docs/issues.md`.
-</quality_gate>
+## Commands
+- install: pnpm install
+- lint: pnpm lint
+- typecheck: pnpm typecheck
+- test: pnpm test
+- e2e: pnpm test:e2e
+- build: pnpm build
+- verify: pnpm verify
 
-<imports>
-@OS-KERNEL.md
-@CODE-QUALITY.md
-@ARCHITECTURE-RULES.md
-@REVIEW-GATE.md
-@REFERENCE-GUIDE.md
-@VERIFICATION.md
-@HANDOFF-JA.md
-</imports>
+Use only commands that exist in this repository.
 
-## WorkSim Cα Scenario Production Rules
+## Execution Boundaries
+- Use PowerShell.
+- Use standard push with branch tracking.
+- Keep safe values only in output.
+- Use .env.example as template; runtime reads actual env values.
+- Authentication, billing, production deploy final approval, and personal data handling are human tasks.
+- Product code changes require an explicit task in tasks.md.
 
-- Future agents must read `docs/c-alpha/*` before scenario, analytics, Cタイプ, Cβ, or Bタイプ work.
-- Scenario generation must use `scenarios/_schema.v2.md` and `docs/c-alpha/02-SCENARIO-PRODUCTION-OS.md`.
-- Cα scenario data must include `behaviorTags`, `universityInsightTags`, `companyInsightTags`, and `riskTags`.
-- Cα is currently 2D background-image based, but metadata must preserve future 3D/metaverse extensibility.
+## WorkSim Scenario Production Rules
+- Read docs/c-alpha/* before scenario, analytics, C-type, C-beta, or B-type work.
+- Scenario generation must use scenarios/_schema.v2.md and docs/c-alpha/02-SCENARIO-PRODUCTION-OS.md.
+- C-alpha scenario data must include behaviorTags, universityInsightTags, companyInsightTags, and riskTags.
+- C-alpha is currently 2D background-image based, but metadata must preserve future 3D/metaverse extensibility.
 - University/company analytics must be anonymized and aggregated by default.
 - Companies must not receive individual student choice data for selection screening by default.
-- If a future agent cannot complete all scenarios, it must update `docs/c-alpha/08-IMPLEMENTATION-CHECKLIST.md` with exact remaining work.
+- If future scenario work cannot complete all scenarios, update docs/c-alpha/08-IMPLEMENTATION-CHECKLIST.md with exact remaining work.

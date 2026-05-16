@@ -1,16 +1,19 @@
-# WorkSim — Claude Code Adapter
-
-このプロジェクトは pm-zero v9.0 ベースです。一次ソースは `AGENTS.md` です。
+# Claude Code Adapter -- pm-zero v9.4
 
 @AGENTS.md
-@.claude/rules/karpathy.md
-@.claude/rules/coding-standards.md
-@.claude/rules/testing.md
-@.claude/rules/security.md
 
-<claude_specific>
-- Claude Code でも `docs/state.md` と `docs/decisions.md` を必ず読む。
-- 並列作業はファイル所有範囲を分け、他者の差分を戻さない。
-- Hook は `.claude/settings.json` と `.claude/hooks/` を参照する。
-- 完了報告は `HANDOFF-JA.md` の日本語形式に従う。
-</claude_specific>
+## Claude-specific
+- Claude Code reads CLAUDE.md. Common rules live in AGENTS.md.
+- Prioritize planning, design, review, and prose quality judgment.
+- Write implementation tasks to tasks.md.
+- Use docs/repo-map.md Summary for navigation; read detailed sections only when needed.
+- Auto-execute file, git, build, test, and lint operations according to global settings and project boundaries.
+
+## Shell Policy
+- Primary: PowerShell for all project operations.
+- Project paths use Windows paths with backslash in PowerShell.
+- Node.js scripts run with node scripts/name.mjs.
+
+## Version Policy
+- Keep the user's currently configured Claude Code version.
+- Verify local version during Phase 0 when relevant.

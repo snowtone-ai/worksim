@@ -1,46 +1,29 @@
-# HANDOFF-JA.md
+# HANDOFF-JA.md -- pm-zero v9.4
 
 ## 完了報告テンプレート
 
-### 実施内容
-- 何を変更したか。
+### Summary
+- 目的:
+- 結果:
+- 変更範囲:
 
-### 変更した主要ファイル
-- `path`: 変更理由。
+### Changed Files
+- 
 
-### 検証結果
-- lint:
-- typecheck:
-- build:
-- test:
-- verify:
-- e2e:
-- browser:
-- console:
-- screenshot:
-- review:
+### Task Ledger
+- Active tasks completed:
+- tasks.md updated: yes / no
+- Remaining ready tasks:
+- Blocked tasks:
 
-### Git状態
-- 現在ブランチ:
-- 作成コミット:
-- 未コミット差分:
-- push:
+### Verification Evidence
+- Task ID:
+- Command:
+- Result:
+- Evidence location:
 
-### 残課題
-- なし、または理由・影響・次の最小対応単位。
+### Residual Risk
+- 
 
-## エラー報告テンプレート
-
-### 何が起きているか
-- 一行要約。
-
-### 分類
-- `dependency / type / lint / runtime / UI / API / auth / flaky`
-
-### 試行履歴
-- 1回目:
-- 2回目:
-- 3回目:
-
-### 次の最小対応
-- 自律対応不可の理由がある場合だけ記載。
+### Human Actions Needed
+- None

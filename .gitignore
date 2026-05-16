@@ -41,6 +41,9 @@ Thumbs.db
 # Claude Code session data
 .claude/transcripts/
 .claude/cache/
+.claude/settings.local.json
+.claude/worktrees/
+.mcp.json
 
 # Logs
 logs/
