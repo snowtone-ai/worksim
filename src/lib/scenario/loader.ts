@@ -33,6 +33,16 @@ export const SceneRoleSpecificitySchema = z.object({
   kernelConnection: z.string().optional(),
 })
 
+const TimeSchema = z.string().regex(/^\d{2}:\d{2}$/)
+
+const AnalyticsSchema = z.object({
+  decisionType: z.string(),
+  frictionType: z.string(),
+  workValueTags: z.array(z.string()),
+  careerRealityTags: z.array(z.string()),
+  localCareerTags: z.array(z.string()),
+})
+
 export const RoleWorkKernelSchema = z.union([
   z.string(),
   z.object({
@@ -70,18 +80,12 @@ export const SceneSchema = z.object({
   workMaterial: z.string().optional(),
   decisionPrompt: z.string().optional(),
   choices: z.array(ChoiceSchema).min(2).max(4),
-  analytics: z.object({
-    decisionType: z.string(),
-    frictionType: z.string(),
-    workValueTags: z.array(z.string()),
-    careerRealityTags: z.array(z.string()),
-    localCareerTags: z.array(z.string()),
-  }).optional(),
+  analytics: AnalyticsSchema.optional(),
 })
 
 export const ImmersiveSceneSchema = z.object({
   id: z.string(),
-  time: z.string().regex(/^\d{2}:\d{2}$/),
+  time: TimeSchema,
   interactable: z.enum([
     'monitor_mail', 'monitor_slack', 'monitor_code', 'monitor_terminal',
     'monitor_calendar', 'monitor_browser',
@@ -108,13 +112,7 @@ export const ImmersiveSceneSchema = z.object({
   workMaterial: z.string().optional(),
   decisionPrompt: z.string().optional(),
   choices: z.array(ChoiceSchema).min(2).max(4),
-  analytics: z.object({
-    decisionType: z.string(),
-    frictionType: z.string(),
-    workValueTags: z.array(z.string()),
-    careerRealityTags: z.array(z.string()),
-    localCareerTags: z.array(z.string()),
-  }).optional(),
+  analytics: AnalyticsSchema.optional(),
 })
 
 export const PhaseSchema = z.enum(['morning', 'lunch', 'meeting', 'afternoon'])
@@ -122,8 +120,8 @@ export const PhaseSchema = z.enum(['morning', 'lunch', 'meeting', 'afternoon'])
 export const BlockSchema = z.object({
   id: PhaseSchema,
   label: z.string(),
-  time_start: z.string().regex(/^\d{2}:\d{2}$/),
-  time_end: z.string().regex(/^\d{2}:\d{2}$/),
+  time_start: TimeSchema,
+  time_end: TimeSchema,
   location: z.enum(['desk', 'cafeteria', 'conference_room']),
   intro: z.string(),
   scenes: z.array(ImmersiveSceneSchema).min(1).max(5),

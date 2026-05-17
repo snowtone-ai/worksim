@@ -1,5 +1,7 @@
 import type { Scenario, Choice } from '@/lib/scenario/loader'
 
+type ResultType = NonNullable<Scenario['resultTypes']>[number]
+
 export type DimensionResult = {
   key: string
   label: string
@@ -77,6 +79,11 @@ const APTITUDE_LABELS: Array<{
   },
 ]
 
+const MAX_HIGHLIGHTED_METERS = 3
+const MAX_DECISION_SUMMARY_ITEMS = 2
+const VALUED_METER_WEIGHT = 10
+const SACRIFICED_METER_WEIGHT = 5
+
 function topKey(dims: DimensionResult[]): string {
   return dims.reduce((a, b) => (a.percentage >= b.percentage ? a : b)).key
 }
@@ -93,15 +100,20 @@ export function calculateResult(
   const choicesByScene = collectSelectedChoices(scenario, answers)
 
   const dimensions: DimensionResult[] = scenario.dimensions.map((dim) => {
-    let score = 0
-    let maxScore = 0
-    for (const scene of scenario.scenes) {
-      const choice = choicesByScene.get(scene.id)
-      const dimScore = choice?.scores[dim.key] ?? 0
-      score += dimScore
-      const sceneMax = Math.max(...scene.choices.map((c) => c.scores[dim.key] ?? 0))
-      maxScore += sceneMax
-    }
+    const { score, maxScore } = scenario.scenes.reduce(
+      (total, scene) => {
+        const choice = choicesByScene.get(scene.id)
+        const dimScore = choice?.scores[dim.key] ?? 0
+        const sceneMax = Math.max(...scene.choices.map((c) => c.scores[dim.key] ?? 0))
+
+        return {
+          score: total.score + dimScore,
+          maxScore: total.maxScore + sceneMax,
+        }
+      },
+      { score: 0, maxScore: 0 }
+    )
+
     const percentage = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0
     return { key: dim.key, label: dim.label, description: dim.description, score, maxScore, percentage }
   })
@@ -150,8 +162,8 @@ function calculateMeterResult(
   }
 
   const sortedMeters = [...meterTotals.entries()].sort((a, b) => b[1] - a[1])
-  const dominantMeters = sortedMeters.filter(([, v]) => v > 0).slice(0, 3).map(([k]) => k)
-  const sacrificedMeters = [...sortedMeters].reverse().filter(([, v]) => v < 0).slice(0, 3).map(([k]) => k)
+  const dominantMeters = getPositiveMeterKeys(sortedMeters)
+  const sacrificedMeters = getNegativeMeterKeys(sortedMeters)
   const matchedType = selectResultType(scenario, meterTotals, dominantMeters)
 
   return {
@@ -173,34 +185,73 @@ function selectResultType(
   scenario: Scenario,
   meterTotals: Map<string, number>,
   dominantMeters: string[]
-) {
+): ResultType | undefined {
   const resultTypes = scenario.resultTypes
   if (!resultTypes || resultTypes.length === 0) return undefined
 
   const rankedTypes = resultTypes.map((type, index) => {
-    const valuedMeters = type.valuedMeters ?? type.meterPriorities ?? []
-    const sacrificedMeters = type.sacrificedMeters ?? []
-    const priorityMeters = type.meterPriorities ?? []
-    const priorityScore = priorityMeters.reduce((score, meter, meterIndex) => {
-      const dominantIndex = dominantMeters.indexOf(meter)
-      if (dominantIndex === -1) return score
-      return score + (dominantMeters.length - dominantIndex) * (priorityMeters.length - meterIndex)
-    }, 0)
-    const valuedScore = valuedMeters.reduce((score, meter) => {
-      return score + Math.max(meterTotals.get(meter) ?? 0, 0)
-    }, 0)
-    const sacrificedScore = sacrificedMeters.reduce((score, meter) => {
-      return score + Math.max(-(meterTotals.get(meter) ?? 0), 0)
-    }, 0)
-    return { type, index, score: valuedScore * 10 + sacrificedScore * 5 + priorityScore }
+    return {
+      type,
+      index,
+      score: scoreResultType(type, meterTotals, dominantMeters),
+    }
   })
 
   return rankedTypes.sort((a, b) => b.score - a.score || a.index - b.index)[0]?.type
 }
 
+function getPositiveMeterKeys(sortedMeters: Array<[string, number]>): string[] {
+  return sortedMeters
+    .filter(([, value]) => value > 0)
+    .slice(0, MAX_HIGHLIGHTED_METERS)
+    .map(([key]) => key)
+}
+
+function getNegativeMeterKeys(sortedMeters: Array<[string, number]>): string[] {
+  return [...sortedMeters]
+    .reverse()
+    .filter(([, value]) => value < 0)
+    .slice(0, MAX_HIGHLIGHTED_METERS)
+    .map(([key]) => key)
+}
+
+function scoreResultType(
+  type: ResultType,
+  meterTotals: Map<string, number>,
+  dominantMeters: string[]
+): number {
+  const valuedMeters = type.valuedMeters ?? type.meterPriorities ?? []
+  const sacrificedMeters = type.sacrificedMeters ?? []
+  const priorityScore = scorePriorityMeters(type.meterPriorities ?? [], dominantMeters)
+  const valuedScore = scorePositiveMeters(valuedMeters, meterTotals)
+  const sacrificedScore = scoreNegativeMeters(sacrificedMeters, meterTotals)
+
+  return valuedScore * VALUED_METER_WEIGHT + sacrificedScore * SACRIFICED_METER_WEIGHT + priorityScore
+}
+
+function scorePriorityMeters(priorityMeters: string[], dominantMeters: string[]): number {
+  return priorityMeters.reduce((score, meter, meterIndex) => {
+    const dominantIndex = dominantMeters.indexOf(meter)
+    if (dominantIndex === -1) return score
+    return score + (dominantMeters.length - dominantIndex) * (priorityMeters.length - meterIndex)
+  }, 0)
+}
+
+function scorePositiveMeters(meters: string[], meterTotals: Map<string, number>): number {
+  return meters.reduce((score, meter) => {
+    return score + Math.max(meterTotals.get(meter) ?? 0, 0)
+  }, 0)
+}
+
+function scoreNegativeMeters(meters: string[], meterTotals: Map<string, number>): number {
+  return meters.reduce((score, meter) => {
+    return score + Math.max(-(meterTotals.get(meter) ?? 0), 0)
+  }, 0)
+}
+
 function summarizeDecisionPattern(choiceSummaries: string[]): string | undefined {
   if (choiceSummaries.length === 0) return undefined
-  return choiceSummaries.slice(0, 2).join(' / ')
+  return choiceSummaries.slice(0, MAX_DECISION_SUMMARY_ITEMS).join(' / ')
 }
 
 export function encodeAnswers(answers: Record<string, string>): string {
