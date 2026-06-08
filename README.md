@@ -17,9 +17,11 @@
 
 ## 技術スタック
 
-フロントエンド：Next.js 16（Reactベースのウェブアプリフレームワーク）、TypeScript、Tailwind CSS v4
-データベース：Supabase（PostgreSQL＋行レベルセキュリティ（RLS）＋Google OAuth認証を提供するクラウドサービス）
-インフラ・環境：Vercel（ホスティングプラットフォーム）、GitHub Actions（CI/CD）
+| カテゴリ | 技術・ツール |
+|---|---|
+| フロントエンド | Next.js 16（Reactベースのウェブアプリフレームワーク）、TypeScript、Tailwind CSS v4 |
+| データベース | Supabase（PostgreSQL＋行レベルセキュリティ（RLS）＋Google OAuth認証を提供するクラウドサービス） |
+| インフラ・環境 | Vercel（ホスティングプラットフォーム）、GitHub Actions（CI/CD） |
 
 ---
 
