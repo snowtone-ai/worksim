@@ -1,5 +1,11 @@
 # WorkSim
 
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Supabase](https://img.shields.io/badge/Supabase-RLS-green?logo=supabase)
+![Playwright](https://img.shields.io/badge/Playwright-E2E-green?logo=playwright)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 > 就活生が職場の1日をブラウザで体験できる業務シミュレーションゲーム
 
 説明会や適職診断では伝わりにくい「実際の業務イメージ」を就職前に提供し、入社後のミスマッチを減らすことを目的としています。MVPではIT業界の6職種（Webエンジニア・ITコンサル・法人営業・PdM・インフラ運用・UIデザイナー）に対応しています。
@@ -17,11 +23,12 @@
 
 ## 技術スタック
 
-| カテゴリ | 技術・ツール |
+| カテゴリ | 技術 |
 |---|---|
-| フロントエンド | Next.js 16（Reactベースのウェブアプリフレームワーク）、TypeScript、Tailwind CSS v4 |
-| データベース | Supabase（PostgreSQL＋行レベルセキュリティ（RLS）＋Google OAuth認証を提供するクラウドサービス） |
-| インフラ・環境 | Vercel（ホスティングプラットフォーム）、GitHub Actions（CI/CD） |
+| フロントエンド | Next.js 16, TypeScript, Tailwind CSS v4 |
+| データベース | Supabase（PostgreSQL + RLS + Google OAuth） |
+| インフラ | Vercel, GitHub Actions |
+| テスト | Vitest, Playwright |
 
 ---
 
