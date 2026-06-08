@@ -55,3 +55,7 @@ logs/
 
 # Supabase CLI local state
 supabase/.temp/
+
+# GCP service account keys
+service-account*.json
+credentials.json
