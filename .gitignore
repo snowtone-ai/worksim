@@ -41,6 +41,9 @@ Thumbs.db
 # Claude Code session data
 .claude/transcripts/
 .claude/cache/
+.claude/settings.local.json
+.claude/worktrees/
+.mcp.json
 
 # Logs
 logs/
@@ -52,3 +55,8 @@ logs/
 
 # Supabase CLI local state
 supabase/.temp/
+
+# GCP service account keys
+service-account*.json
+credentials.json
+.codegraph/
