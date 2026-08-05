@@ -1,0 +1,2190 @@
+{
+  "id": "marketing-media/content-editor",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "広告・マーケティング/メディア",
+  "industrySlug": "marketing-media",
+  "role": "コンテンツ企画/編集",
+  "roleSlug": "content-editor",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 広告・マーケティング/メディア コンテンツ企画/編集.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "marketing-media",
+      "content-editor"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "読者調査"
+    },
+    {
+      "time": "10:40",
+      "label": "取材メモ"
+    },
+    {
+      "time": "12:20",
+      "label": "構成案"
+    },
+    {
+      "time": "14:15",
+      "label": "SEO表"
+    },
+    {
+      "time": "16:35",
+      "label": "編集チェック"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "読者調査"
+    },
+    {
+      "time": "10:40",
+      "label": "取材メモ"
+    },
+    {
+      "time": "12:20",
+      "label": "構成案"
+    },
+    {
+      "time": "14:15",
+      "label": "SEO表"
+    },
+    {
+      "time": "16:35",
+      "label": "編集チェック"
+    }
+  ],
+  "sceneList": [
+    "content-editor-01",
+    "content-editor-02",
+    "content-editor-03",
+    "content-editor-04",
+    "content-editor-05"
+  ],
+  "meta": {
+    "title": "コンテンツ企画/編集",
+    "industry": "広告・マーケティング/メディア",
+    "role": "コンテンツ企画/編集",
+    "duration_minutes": 18,
+    "description": "読者課題・取材素材・流入指標を編集企画へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "content-editor-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "読者調査",
+      "openingHook": "09:10。読者調査に悩み 36%と検索意図 4分類が並んでいる。",
+      "context": "コンテンツ企画/編集として読者調査を確認する。悩み 36%、検索意図 4分類が今日の判断材料になる。",
+      "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、読者調査を読んで次の作業判断を残す。",
+      "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+      "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は読者調査である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "悩み 36%の背景と検索意図 4分類の確度が完全にはそろっていない。",
+      "decisionTradeoff": "悩み 36%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "content-editor-読者調査判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は素材 18件で副作用を確認する。",
+      "npcDialogue": "先輩:「読者調査を読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+      "workMaterial": "読者調査\n- 悩み 36%\n- 検索意図 4分類\n- 判断対象: 読者調査",
+      "decisionPrompt": "content-editor-読者調査判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "悩み 36%を重く見て、当日中に前へ進める",
+          "text": "悩み 36%を重く見て、当日中に前へ進める。材料は読者調査、悩み 36%、検索意図 4分類。",
+          "immediateFeedback": "読者調査に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 2,
+            "content_editor_risk": -1,
+            "content_editor_speed": 2,
+            "content_editor_value": -1,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、読者調査と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "読者調査の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は悩み 36%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "読者調査の悩み 36%と検索意図 4分類を突き合わせ、条件付きで進める",
+          "text": "読者調査の悩み 36%と検索意図 4分類を突き合わせ、条件付きで進める。材料は読者調査、悩み 36%、検索意図 4分類。",
+          "immediateFeedback": "読者調査に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 1,
+            "content_editor_risk": 2,
+            "content_editor_speed": 1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、読者調査と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "読者調査の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は悩み 36%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "検索意図 4分類の不確実性を理由に、判断範囲を絞る",
+          "text": "検索意図 4分類の不確実性を理由に、判断範囲を絞る。材料は読者調査、悩み 36%、検索意図 4分類。",
+          "immediateFeedback": "読者調査に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": -1,
+            "content_editor_risk": 2,
+            "content_editor_speed": -1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": -1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、読者調査と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "読者調査の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は悩み 36%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "content-editor-読者調査判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "content-editor-読者調査判断",
+        "roleSpecificMaterials": [
+          "読者調査",
+          "判断対象: 読者調査"
+        ],
+        "roleSpecificMetrics": [
+          "悩み 36%",
+          "検索意図 4分類"
+        ],
+        "roleSpecificFailureRisk": "読者調査を読まず、悩み 36%か検索意図 4分類のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "悩み 36%と検索意図 4分類を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "読者調査、悩み 36%、検索意図 4分類を判断の主役にしている。",
+        "kernelConnection": "読者調査をcontent-editor-読者調査判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "content-editor-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "取材メモ",
+      "openingHook": "10:40。取材メモに素材 18件と引用可 7件が並んでいる。",
+      "context": "コンテンツ企画/編集として取材メモを確認する。素材 18件、引用可 7件が今日の判断材料になる。",
+      "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、取材メモを読んで次の作業判断を残す。",
+      "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+      "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は取材メモである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "素材 18件の背景と引用可 7件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "素材 18件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "content-editor-取材メモ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は見出し 6本で副作用を確認する。",
+      "npcDialogue": "先輩:「取材メモを読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+      "workMaterial": "取材メモ\n- 素材 18件\n- 引用可 7件\n- 判断対象: 取材メモ",
+      "decisionPrompt": "content-editor-取材メモ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "素材 18件を重く見て、当日中に前へ進める",
+          "text": "素材 18件を重く見て、当日中に前へ進める。材料は取材メモ、素材 18件、引用可 7件。",
+          "immediateFeedback": "取材メモに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 2,
+            "content_editor_risk": -1,
+            "content_editor_speed": 2,
+            "content_editor_value": -1,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、取材メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "取材メモの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は素材 18件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "取材メモの素材 18件と引用可 7件を突き合わせ、条件付きで進める",
+          "text": "取材メモの素材 18件と引用可 7件を突き合わせ、条件付きで進める。材料は取材メモ、素材 18件、引用可 7件。",
+          "immediateFeedback": "取材メモに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 1,
+            "content_editor_risk": 2,
+            "content_editor_speed": 1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、取材メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "取材メモの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は素材 18件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "引用可 7件の不確実性を理由に、判断範囲を絞る",
+          "text": "引用可 7件の不確実性を理由に、判断範囲を絞る。材料は取材メモ、素材 18件、引用可 7件。",
+          "immediateFeedback": "取材メモに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": -1,
+            "content_editor_risk": 2,
+            "content_editor_speed": -1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": -1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、取材メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "取材メモの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は素材 18件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "content-editor-取材メモ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "content-editor-取材メモ判断",
+        "roleSpecificMaterials": [
+          "取材メモ",
+          "判断対象: 取材メモ"
+        ],
+        "roleSpecificMetrics": [
+          "素材 18件",
+          "引用可 7件"
+        ],
+        "roleSpecificFailureRisk": "取材メモを読まず、素材 18件か引用可 7件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "素材 18件と引用可 7件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "取材メモ、素材 18件、引用可 7件を判断の主役にしている。",
+        "kernelConnection": "取材メモをcontent-editor-取材メモ判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "content-editor-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "構成案",
+      "openingHook": "12:20。構成案に見出し 6本と想定読了 5分が並んでいる。",
+      "context": "コンテンツ企画/編集として構成案を確認する。見出し 6本、想定読了 5分が今日の判断材料になる。",
+      "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、構成案を読んで次の作業判断を残す。",
+      "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+      "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は構成案である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "見出し 6本の背景と想定読了 5分の確度が完全にはそろっていない。",
+      "decisionTradeoff": "見出し 6本を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "content-editor-構成案判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は月間検索 9,800で副作用を確認する。",
+      "npcDialogue": "先輩:「構成案を読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+      "workMaterial": "構成案\n- 見出し 6本\n- 想定読了 5分\n- 判断対象: 構成案",
+      "decisionPrompt": "content-editor-構成案判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "見出し 6本を重く見て、当日中に前へ進める",
+          "text": "見出し 6本を重く見て、当日中に前へ進める。材料は構成案、見出し 6本、想定読了 5分。",
+          "immediateFeedback": "構成案に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 2,
+            "content_editor_risk": -1,
+            "content_editor_speed": 2,
+            "content_editor_value": -1,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、構成案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "構成案の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は見出し 6本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "構成案の見出し 6本と想定読了 5分を突き合わせ、条件付きで進める",
+          "text": "構成案の見出し 6本と想定読了 5分を突き合わせ、条件付きで進める。材料は構成案、見出し 6本、想定読了 5分。",
+          "immediateFeedback": "構成案に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 1,
+            "content_editor_risk": 2,
+            "content_editor_speed": 1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、構成案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "構成案の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は見出し 6本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "想定読了 5分の不確実性を理由に、判断範囲を絞る",
+          "text": "想定読了 5分の不確実性を理由に、判断範囲を絞る。材料は構成案、見出し 6本、想定読了 5分。",
+          "immediateFeedback": "構成案に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": -1,
+            "content_editor_risk": 2,
+            "content_editor_speed": -1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": -1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、構成案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "構成案の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は見出し 6本の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "content-editor-構成案判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "content-editor-構成案判断",
+        "roleSpecificMaterials": [
+          "構成案",
+          "判断対象: 構成案"
+        ],
+        "roleSpecificMetrics": [
+          "見出し 6本",
+          "想定読了 5分"
+        ],
+        "roleSpecificFailureRisk": "構成案を読まず、見出し 6本か想定読了 5分のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "見出し 6本と想定読了 5分を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "構成案、見出し 6本、想定読了 5分を判断の主役にしている。",
+        "kernelConnection": "構成案をcontent-editor-構成案判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "content-editor-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "SEO表",
+      "openingHook": "14:15。SEO表に月間検索 9,800と難易度 42が並んでいる。",
+      "context": "コンテンツ企画/編集としてSEO表を確認する。月間検索 9,800、難易度 42が今日の判断材料になる。",
+      "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、SEO表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+      "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はSEO表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "月間検索 9,800の背景と難易度 42の確度が完全にはそろっていない。",
+      "decisionTradeoff": "月間検索 9,800を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "content-editor-SEO表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は修正 12件で副作用を確認する。",
+      "npcDialogue": "先輩:「SEO表を読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+      "workMaterial": "SEO表\n- 月間検索 9,800\n- 難易度 42\n- 判断対象: SEO表",
+      "decisionPrompt": "content-editor-SEO表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "月間検索 9,800を重く見て、当日中に前へ進める",
+          "text": "月間検索 9,800を重く見て、当日中に前へ進める。材料はSEO表、月間検索 9,800、難易度 42。",
+          "immediateFeedback": "SEO表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 2,
+            "content_editor_risk": -1,
+            "content_editor_speed": 2,
+            "content_editor_value": -1,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、SEO表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "SEO表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は月間検索 9,800の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "SEO表の月間検索 9,800と難易度 42を突き合わせ、条件付きで進める",
+          "text": "SEO表の月間検索 9,800と難易度 42を突き合わせ、条件付きで進める。材料はSEO表、月間検索 9,800、難易度 42。",
+          "immediateFeedback": "SEO表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 1,
+            "content_editor_risk": 2,
+            "content_editor_speed": 1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、SEO表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "SEO表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は月間検索 9,800の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "難易度 42の不確実性を理由に、判断範囲を絞る",
+          "text": "難易度 42の不確実性を理由に、判断範囲を絞る。材料はSEO表、月間検索 9,800、難易度 42。",
+          "immediateFeedback": "SEO表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": -1,
+            "content_editor_risk": 2,
+            "content_editor_speed": -1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": -1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、SEO表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "SEO表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は月間検索 9,800の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "content-editor-SEO表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "content-editor-SEO表判断",
+        "roleSpecificMaterials": [
+          "SEO表",
+          "判断対象: SEO表"
+        ],
+        "roleSpecificMetrics": [
+          "月間検索 9,800",
+          "難易度 42"
+        ],
+        "roleSpecificFailureRisk": "SEO表を読まず、月間検索 9,800か難易度 42のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "月間検索 9,800と難易度 42を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "SEO表、月間検索 9,800、難易度 42を判断の主役にしている。",
+        "kernelConnection": "SEO表をcontent-editor-SEO表判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "content-editor-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "編集チェック",
+      "openingHook": "16:35。編集チェックに修正 12件と公開期限 17:00が並んでいる。",
+      "context": "コンテンツ企画/編集として編集チェックを確認する。修正 12件、公開期限 17:00が今日の判断材料になる。",
+      "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、編集チェックを読んで次の作業判断を残す。",
+      "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+      "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は編集チェックである。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "修正 12件の背景と公開期限 17:00の確度が完全にはそろっていない。",
+      "decisionTradeoff": "修正 12件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "content-editor-編集チェック判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「編集チェックを読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+      "workMaterial": "編集チェック\n- 修正 12件\n- 公開期限 17:00\n- 判断対象: 編集チェック",
+      "decisionPrompt": "content-editor-編集チェック判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "修正 12件を重く見て、当日中に前へ進める",
+          "text": "修正 12件を重く見て、当日中に前へ進める。材料は編集チェック、修正 12件、公開期限 17:00。",
+          "immediateFeedback": "編集チェックに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 2,
+            "content_editor_risk": -1,
+            "content_editor_speed": 2,
+            "content_editor_value": -1,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、編集チェックと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "編集チェックの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は修正 12件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "編集チェックの修正 12件と公開期限 17:00を突き合わせ、条件付きで進める",
+          "text": "編集チェックの修正 12件と公開期限 17:00を突き合わせ、条件付きで進める。材料は編集チェック、修正 12件、公開期限 17:00。",
+          "immediateFeedback": "編集チェックに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": 1,
+            "content_editor_risk": 2,
+            "content_editor_speed": 1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": 1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、編集チェックと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "編集チェックの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は修正 12件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "公開期限 17:00の不確実性を理由に、判断範囲を絞る",
+          "text": "公開期限 17:00の不確実性を理由に、判断範囲を絞る。材料は編集チェック、修正 12件、公開期限 17:00。",
+          "immediateFeedback": "編集チェックに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "content_editor_evidence": -1,
+            "content_editor_risk": 2,
+            "content_editor_speed": -1,
+            "content_editor_value": 2,
+            "content_editor_feasibility": -1
+          },
+          "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、編集チェックと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "編集チェックの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は修正 12件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "content-editor-編集チェック判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "content-editor-編集チェック判断",
+        "roleSpecificMaterials": [
+          "編集チェック",
+          "判断対象: 編集チェック"
+        ],
+        "roleSpecificMetrics": [
+          "修正 12件",
+          "公開期限 17:00"
+        ],
+        "roleSpecificFailureRisk": "編集チェックを読まず、修正 12件か公開期限 17:00のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "修正 12件と公開期限 17:00を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "編集チェック、修正 12件、公開期限 17:00を判断の主役にしている。",
+        "kernelConnection": "編集チェックをcontent-editor-編集チェック判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "content-editor-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "読者調査",
+          "openingHook": "09:10。読者調査に悩み 36%と検索意図 4分類が並んでいる。",
+          "context": "コンテンツ企画/編集として読者調査を確認する。悩み 36%、検索意図 4分類が今日の判断材料になる。",
+          "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、読者調査を読んで次の作業判断を残す。",
+          "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+          "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は読者調査である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "悩み 36%の背景と検索意図 4分類の確度が完全にはそろっていない。",
+          "decisionTradeoff": "悩み 36%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "content-editor-読者調査判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は素材 18件で副作用を確認する。",
+          "npcDialogue": "先輩:「読者調査を読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+          "workMaterial": "読者調査\n- 悩み 36%\n- 検索意図 4分類\n- 判断対象: 読者調査",
+          "decisionPrompt": "content-editor-読者調査判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "悩み 36%を重く見て、当日中に前へ進める",
+              "text": "悩み 36%を重く見て、当日中に前へ進める。材料は読者調査、悩み 36%、検索意図 4分類。",
+              "immediateFeedback": "読者調査に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 2,
+                "content_editor_risk": -1,
+                "content_editor_speed": 2,
+                "content_editor_value": -1,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、読者調査と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "読者調査の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は悩み 36%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "読者調査の悩み 36%と検索意図 4分類を突き合わせ、条件付きで進める",
+              "text": "読者調査の悩み 36%と検索意図 4分類を突き合わせ、条件付きで進める。材料は読者調査、悩み 36%、検索意図 4分類。",
+              "immediateFeedback": "読者調査に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 1,
+                "content_editor_risk": 2,
+                "content_editor_speed": 1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、読者調査と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "読者調査の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は悩み 36%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "検索意図 4分類の不確実性を理由に、判断範囲を絞る",
+              "text": "検索意図 4分類の不確実性を理由に、判断範囲を絞る。材料は読者調査、悩み 36%、検索意図 4分類。",
+              "immediateFeedback": "読者調査に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": -1,
+                "content_editor_risk": 2,
+                "content_editor_speed": -1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": -1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、読者調査と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "読者調査の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は悩み 36%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "content-editor-読者調査判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "content-editor-読者調査判断",
+            "roleSpecificMaterials": [
+              "読者調査",
+              "判断対象: 読者調査"
+            ],
+            "roleSpecificMetrics": [
+              "悩み 36%",
+              "検索意図 4分類"
+            ],
+            "roleSpecificFailureRisk": "読者調査を読まず、悩み 36%か検索意図 4分類のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "悩み 36%と検索意図 4分類を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "読者調査、悩み 36%、検索意図 4分類を判断の主役にしている。",
+            "kernelConnection": "読者調査をcontent-editor-読者調査判断へ接続する。"
+          }
+        },
+        {
+          "id": "content-editor-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "取材メモ",
+          "openingHook": "10:40。取材メモに素材 18件と引用可 7件が並んでいる。",
+          "context": "コンテンツ企画/編集として取材メモを確認する。素材 18件、引用可 7件が今日の判断材料になる。",
+          "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、取材メモを読んで次の作業判断を残す。",
+          "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+          "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は取材メモである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "素材 18件の背景と引用可 7件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "素材 18件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "content-editor-取材メモ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は見出し 6本で副作用を確認する。",
+          "npcDialogue": "先輩:「取材メモを読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+          "workMaterial": "取材メモ\n- 素材 18件\n- 引用可 7件\n- 判断対象: 取材メモ",
+          "decisionPrompt": "content-editor-取材メモ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "素材 18件を重く見て、当日中に前へ進める",
+              "text": "素材 18件を重く見て、当日中に前へ進める。材料は取材メモ、素材 18件、引用可 7件。",
+              "immediateFeedback": "取材メモに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 2,
+                "content_editor_risk": -1,
+                "content_editor_speed": 2,
+                "content_editor_value": -1,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、取材メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "取材メモの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は素材 18件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "取材メモの素材 18件と引用可 7件を突き合わせ、条件付きで進める",
+              "text": "取材メモの素材 18件と引用可 7件を突き合わせ、条件付きで進める。材料は取材メモ、素材 18件、引用可 7件。",
+              "immediateFeedback": "取材メモに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 1,
+                "content_editor_risk": 2,
+                "content_editor_speed": 1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、取材メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "取材メモの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は素材 18件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "引用可 7件の不確実性を理由に、判断範囲を絞る",
+              "text": "引用可 7件の不確実性を理由に、判断範囲を絞る。材料は取材メモ、素材 18件、引用可 7件。",
+              "immediateFeedback": "取材メモに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": -1,
+                "content_editor_risk": 2,
+                "content_editor_speed": -1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": -1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、取材メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "取材メモの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は素材 18件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "content-editor-取材メモ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "content-editor-取材メモ判断",
+            "roleSpecificMaterials": [
+              "取材メモ",
+              "判断対象: 取材メモ"
+            ],
+            "roleSpecificMetrics": [
+              "素材 18件",
+              "引用可 7件"
+            ],
+            "roleSpecificFailureRisk": "取材メモを読まず、素材 18件か引用可 7件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "素材 18件と引用可 7件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "取材メモ、素材 18件、引用可 7件を判断の主役にしている。",
+            "kernelConnection": "取材メモをcontent-editor-取材メモ判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "content-editor-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "構成案",
+          "openingHook": "12:20。構成案に見出し 6本と想定読了 5分が並んでいる。",
+          "context": "コンテンツ企画/編集として構成案を確認する。見出し 6本、想定読了 5分が今日の判断材料になる。",
+          "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、構成案を読んで次の作業判断を残す。",
+          "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+          "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は構成案である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "見出し 6本の背景と想定読了 5分の確度が完全にはそろっていない。",
+          "decisionTradeoff": "見出し 6本を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "content-editor-構成案判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は月間検索 9,800で副作用を確認する。",
+          "npcDialogue": "先輩:「構成案を読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+          "workMaterial": "構成案\n- 見出し 6本\n- 想定読了 5分\n- 判断対象: 構成案",
+          "decisionPrompt": "content-editor-構成案判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "見出し 6本を重く見て、当日中に前へ進める",
+              "text": "見出し 6本を重く見て、当日中に前へ進める。材料は構成案、見出し 6本、想定読了 5分。",
+              "immediateFeedback": "構成案に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 2,
+                "content_editor_risk": -1,
+                "content_editor_speed": 2,
+                "content_editor_value": -1,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、構成案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "構成案の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は見出し 6本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "構成案の見出し 6本と想定読了 5分を突き合わせ、条件付きで進める",
+              "text": "構成案の見出し 6本と想定読了 5分を突き合わせ、条件付きで進める。材料は構成案、見出し 6本、想定読了 5分。",
+              "immediateFeedback": "構成案に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 1,
+                "content_editor_risk": 2,
+                "content_editor_speed": 1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、構成案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "構成案の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は見出し 6本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "想定読了 5分の不確実性を理由に、判断範囲を絞る",
+              "text": "想定読了 5分の不確実性を理由に、判断範囲を絞る。材料は構成案、見出し 6本、想定読了 5分。",
+              "immediateFeedback": "構成案に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": -1,
+                "content_editor_risk": 2,
+                "content_editor_speed": -1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": -1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、構成案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "構成案の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は見出し 6本の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "content-editor-構成案判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "content-editor-構成案判断",
+            "roleSpecificMaterials": [
+              "構成案",
+              "判断対象: 構成案"
+            ],
+            "roleSpecificMetrics": [
+              "見出し 6本",
+              "想定読了 5分"
+            ],
+            "roleSpecificFailureRisk": "構成案を読まず、見出し 6本か想定読了 5分のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "見出し 6本と想定読了 5分を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "構成案、見出し 6本、想定読了 5分を判断の主役にしている。",
+            "kernelConnection": "構成案をcontent-editor-構成案判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "content-editor-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "SEO表",
+          "openingHook": "14:15。SEO表に月間検索 9,800と難易度 42が並んでいる。",
+          "context": "コンテンツ企画/編集としてSEO表を確認する。月間検索 9,800、難易度 42が今日の判断材料になる。",
+          "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、SEO表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+          "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はSEO表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "月間検索 9,800の背景と難易度 42の確度が完全にはそろっていない。",
+          "decisionTradeoff": "月間検索 9,800を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "content-editor-SEO表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は修正 12件で副作用を確認する。",
+          "npcDialogue": "先輩:「SEO表を読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+          "workMaterial": "SEO表\n- 月間検索 9,800\n- 難易度 42\n- 判断対象: SEO表",
+          "decisionPrompt": "content-editor-SEO表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "月間検索 9,800を重く見て、当日中に前へ進める",
+              "text": "月間検索 9,800を重く見て、当日中に前へ進める。材料はSEO表、月間検索 9,800、難易度 42。",
+              "immediateFeedback": "SEO表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 2,
+                "content_editor_risk": -1,
+                "content_editor_speed": 2,
+                "content_editor_value": -1,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、SEO表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "SEO表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は月間検索 9,800の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "SEO表の月間検索 9,800と難易度 42を突き合わせ、条件付きで進める",
+              "text": "SEO表の月間検索 9,800と難易度 42を突き合わせ、条件付きで進める。材料はSEO表、月間検索 9,800、難易度 42。",
+              "immediateFeedback": "SEO表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 1,
+                "content_editor_risk": 2,
+                "content_editor_speed": 1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、SEO表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "SEO表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は月間検索 9,800の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "難易度 42の不確実性を理由に、判断範囲を絞る",
+              "text": "難易度 42の不確実性を理由に、判断範囲を絞る。材料はSEO表、月間検索 9,800、難易度 42。",
+              "immediateFeedback": "SEO表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": -1,
+                "content_editor_risk": 2,
+                "content_editor_speed": -1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": -1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、SEO表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "SEO表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は月間検索 9,800の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "content-editor-SEO表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "content-editor-SEO表判断",
+            "roleSpecificMaterials": [
+              "SEO表",
+              "判断対象: SEO表"
+            ],
+            "roleSpecificMetrics": [
+              "月間検索 9,800",
+              "難易度 42"
+            ],
+            "roleSpecificFailureRisk": "SEO表を読まず、月間検索 9,800か難易度 42のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "月間検索 9,800と難易度 42を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "SEO表、月間検索 9,800、難易度 42を判断の主役にしている。",
+            "kernelConnection": "SEO表をcontent-editor-SEO表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "content-editor-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "編集チェック",
+          "openingHook": "16:35。編集チェックに修正 12件と公開期限 17:00が並んでいる。",
+          "context": "コンテンツ企画/編集として編集チェックを確認する。修正 12件、公開期限 17:00が今日の判断材料になる。",
+          "content": "読者課題・取材素材・流入指標を編集企画へ変換するため、編集チェックを読んで次の作業判断を残す。",
+          "roleSpecificContext": "コンテンツ企画/編集は読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+          "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は編集チェックである。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "修正 12件の背景と公開期限 17:00の確度が完全にはそろっていない。",
+          "decisionTradeoff": "修正 12件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "content-editor-編集チェック判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「編集チェックを読まずに進めると、コンテンツ企画/編集の判断ではなくなる」",
+          "workMaterial": "編集チェック\n- 修正 12件\n- 公開期限 17:00\n- 判断対象: 編集チェック",
+          "decisionPrompt": "content-editor-編集チェック判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "修正 12件を重く見て、当日中に前へ進める",
+              "text": "修正 12件を重く見て、当日中に前へ進める。材料は編集チェック、修正 12件、公開期限 17:00。",
+              "immediateFeedback": "編集チェックに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 2,
+                "content_editor_risk": -1,
+                "content_editor_speed": 2,
+                "content_editor_value": -1,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、編集チェックと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "編集チェックの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は修正 12件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "編集チェックの修正 12件と公開期限 17:00を突き合わせ、条件付きで進める",
+              "text": "編集チェックの修正 12件と公開期限 17:00を突き合わせ、条件付きで進める。材料は編集チェック、修正 12件、公開期限 17:00。",
+              "immediateFeedback": "編集チェックに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": 1,
+                "content_editor_risk": 2,
+                "content_editor_speed": 1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": 1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、編集チェックと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "編集チェックの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は修正 12件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "公開期限 17:00の不確実性を理由に、判断範囲を絞る",
+              "text": "公開期限 17:00の不確実性を理由に、判断範囲を絞る。材料は編集チェック、修正 12件、公開期限 17:00。",
+              "immediateFeedback": "編集チェックに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "コンテンツ企画/編集で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "content_editor_evidence": -1,
+                "content_editor_risk": 2,
+                "content_editor_speed": -1,
+                "content_editor_value": 2,
+                "content_editor_feasibility": -1
+              },
+              "misconceptionEffect": "コンテンツ企画/編集は印象ではなく、編集チェックと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "編集チェックの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は修正 12件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "content-editor-編集チェック判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "content-editor-編集チェック判断",
+            "roleSpecificMaterials": [
+              "編集チェック",
+              "判断対象: 編集チェック"
+            ],
+            "roleSpecificMetrics": [
+              "修正 12件",
+              "公開期限 17:00"
+            ],
+            "roleSpecificFailureRisk": "編集チェックを読まず、修正 12件か公開期限 17:00のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "修正 12件と公開期限 17:00を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "編集チェック、修正 12件、公開期限 17:00を判断の主役にしている。",
+            "kernelConnection": "編集チェックをcontent-editor-編集チェック判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "コンテンツ企画/編集の材料翻訳型",
+      "strengths": [
+        "コンテンツ企画/編集の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "content_editor_evidence",
+        "content_editor_risk"
+      ],
+      "valuedMeters": [
+        "content_editor_evidence"
+      ],
+      "sacrificedMeters": [
+        "content_editor_speed"
+      ],
+      "roleRealityReveal": "コンテンツ企画/編集は、読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "コンテンツ企画/編集の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "コンテンツ企画/編集の推進型",
+      "strengths": [
+        "コンテンツ企画/編集の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "content_editor_risk",
+        "content_editor_speed"
+      ],
+      "valuedMeters": [
+        "content_editor_risk"
+      ],
+      "sacrificedMeters": [
+        "content_editor_value"
+      ],
+      "roleRealityReveal": "コンテンツ企画/編集は、読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "コンテンツ企画/編集の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "コンテンツ企画/編集の安全設計型",
+      "strengths": [
+        "コンテンツ企画/編集の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "content_editor_speed",
+        "content_editor_value"
+      ],
+      "valuedMeters": [
+        "content_editor_speed"
+      ],
+      "sacrificedMeters": [
+        "content_editor_feasibility"
+      ],
+      "roleRealityReveal": "コンテンツ企画/編集は、読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "コンテンツ企画/編集の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "コンテンツ企画/編集は、読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "コンテンツ企画/編集として、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "content-editor_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "content_editor_evidence_vs_content_editor_risk",
+      "content_editor_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "読者課題・取材素材・流入指標を編集企画へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "content_editor_evidence",
+      "label": "evidence",
+      "description": "コンテンツ企画/編集のevidence判断"
+    },
+    {
+      "key": "content_editor_risk",
+      "label": "risk",
+      "description": "コンテンツ企画/編集のrisk判断"
+    },
+    {
+      "key": "content_editor_speed",
+      "label": "speed",
+      "description": "コンテンツ企画/編集のspeed判断"
+    },
+    {
+      "key": "content_editor_value",
+      "label": "value",
+      "description": "コンテンツ企画/編集のvalue判断"
+    },
+    {
+      "key": "content_editor_feasibility",
+      "label": "feasibility",
+      "description": "コンテンツ企画/編集のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "コンテンツ企画/編集の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "content_editor_evidence",
+      "content_editor_risk",
+      "content_editor_speed",
+      "content_editor_value",
+      "content_editor_feasibility"
+    ]
+  },
+  "roleCoreFriction": "読者課題・取材素材・流入指標を編集企画へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "コンテンツ企画/編集は会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "コンテンツ企画/編集は、読者課題・取材素材・流入指標を編集企画へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "悩み 36%、素材 18件、見出し 6本、月間検索 9,800、修正 12件、関係者制約、期限",
+    "output": "コンテンツ企画/編集としての判断案、次回確認項目、リスクメモ",
+    "transformation": "読者課題・取材素材・流入指標を編集企画へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "悩み 36%",
+      "素材 18件",
+      "見出し 6本",
+      "月間検索 9,800",
+      "修正 12件"
+    ],
+    "metrics": [
+      "悩み 36%",
+      "検索意図 4分類",
+      "素材 18件",
+      "引用可 7件",
+      "見出し 6本",
+      "想定読了 5分",
+      "月間検索 9,800",
+      "難易度 42",
+      "修正 12件",
+      "公開期限 17:00"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "悩み 36%、素材 18件、見出し 6本と検索意図 4分類、、引用可 7件を読まなければ成立しないため。"
+  }
+}

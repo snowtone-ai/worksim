@@ -1,0 +1,2190 @@
+{
+  "id": "hr/career-advisor",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "人材/HR",
+  "industrySlug": "hr",
+  "role": "キャリアアドバイザー",
+  "roleSlug": "career-advisor",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 人材/HR キャリアアドバイザー.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "hr",
+      "career-advisor"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "面談メモ"
+    },
+    {
+      "time": "10:40",
+      "label": "志向整理表"
+    },
+    {
+      "time": "12:20",
+      "label": "求人比較表"
+    },
+    {
+      "time": "14:15",
+      "label": "選考状況表"
+    },
+    {
+      "time": "16:35",
+      "label": "次回支援計画"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "面談メモ"
+    },
+    {
+      "time": "10:40",
+      "label": "志向整理表"
+    },
+    {
+      "time": "12:20",
+      "label": "求人比較表"
+    },
+    {
+      "time": "14:15",
+      "label": "選考状況表"
+    },
+    {
+      "time": "16:35",
+      "label": "次回支援計画"
+    }
+  ],
+  "sceneList": [
+    "career-advisor-01",
+    "career-advisor-02",
+    "career-advisor-03",
+    "career-advisor-04",
+    "career-advisor-05"
+  ],
+  "meta": {
+    "title": "キャリアアドバイザー",
+    "industry": "人材/HR",
+    "role": "キャリアアドバイザー",
+    "duration_minutes": 18,
+    "description": "相談内容・志向・求人条件をキャリア選択支援へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "career-advisor-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "面談メモ",
+      "openingHook": "09:10。面談メモに希望 3条件と不安 5件が並んでいる。",
+      "context": "キャリアアドバイザーとして面談メモを確認する。希望 3条件、不安 5件が今日の判断材料になる。",
+      "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、面談メモを読んで次の作業判断を残す。",
+      "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+      "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は面談メモである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "希望 3条件の背景と不安 5件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "希望 3条件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "career-advisor-面談メモ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は安定志向 4/5で副作用を確認する。",
+      "npcDialogue": "先輩:「面談メモを読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+      "workMaterial": "面談メモ\n- 希望 3条件\n- 不安 5件\n- 判断対象: 面談メモ",
+      "decisionPrompt": "career-advisor-面談メモ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "希望 3条件を重く見て、当日中に前へ進める",
+          "text": "希望 3条件を重く見て、当日中に前へ進める。材料は面談メモ、希望 3条件、不安 5件。",
+          "immediateFeedback": "面談メモに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 2,
+            "career_advisor_risk": -1,
+            "career_advisor_speed": 2,
+            "career_advisor_value": -1,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、面談メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "面談メモの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は希望 3条件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "面談メモの希望 3条件と不安 5件を突き合わせ、条件付きで進める",
+          "text": "面談メモの希望 3条件と不安 5件を突き合わせ、条件付きで進める。材料は面談メモ、希望 3条件、不安 5件。",
+          "immediateFeedback": "面談メモに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": 1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、面談メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "面談メモの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は希望 3条件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "不安 5件の不確実性を理由に、判断範囲を絞る",
+          "text": "不安 5件の不確実性を理由に、判断範囲を絞る。材料は面談メモ、希望 3条件、不安 5件。",
+          "immediateFeedback": "面談メモに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": -1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": -1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、面談メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "面談メモの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は希望 3条件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "career-advisor-面談メモ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "career-advisor-面談メモ判断",
+        "roleSpecificMaterials": [
+          "面談メモ",
+          "判断対象: 面談メモ"
+        ],
+        "roleSpecificMetrics": [
+          "希望 3条件",
+          "不安 5件"
+        ],
+        "roleSpecificFailureRisk": "面談メモを読まず、希望 3条件か不安 5件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "希望 3条件と不安 5件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "面談メモ、希望 3条件、不安 5件を判断の主役にしている。",
+        "kernelConnection": "面談メモをcareer-advisor-面談メモ判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "career-advisor-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "志向整理表",
+      "openingHook": "10:40。志向整理表に安定志向 4/5と成長志向 2/5が並んでいる。",
+      "context": "キャリアアドバイザーとして志向整理表を確認する。安定志向 4/5、成長志向 2/5が今日の判断材料になる。",
+      "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、志向整理表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+      "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は志向整理表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "安定志向 4/5の背景と成長志向 2/5の確度が完全にはそろっていない。",
+      "decisionTradeoff": "安定志向 4/5を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "career-advisor-志向整理表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は候補 8件で副作用を確認する。",
+      "npcDialogue": "先輩:「志向整理表を読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+      "workMaterial": "志向整理表\n- 安定志向 4/5\n- 成長志向 2/5\n- 判断対象: 志向整理表",
+      "decisionPrompt": "career-advisor-志向整理表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "安定志向 4/5を重く見て、当日中に前へ進める",
+          "text": "安定志向 4/5を重く見て、当日中に前へ進める。材料は志向整理表、安定志向 4/5、成長志向 2/5。",
+          "immediateFeedback": "志向整理表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 2,
+            "career_advisor_risk": -1,
+            "career_advisor_speed": 2,
+            "career_advisor_value": -1,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、志向整理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "志向整理表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は安定志向 4/5の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "志向整理表の安定志向 4/5と成長志向 2/5を突き合わせ、条件付きで進める",
+          "text": "志向整理表の安定志向 4/5と成長志向 2/5を突き合わせ、条件付きで進める。材料は志向整理表、安定志向 4/5、成長志向 2/5。",
+          "immediateFeedback": "志向整理表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": 1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、志向整理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "志向整理表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は安定志向 4/5の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "成長志向 2/5の不確実性を理由に、判断範囲を絞る",
+          "text": "成長志向 2/5の不確実性を理由に、判断範囲を絞る。材料は志向整理表、安定志向 4/5、成長志向 2/5。",
+          "immediateFeedback": "志向整理表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": -1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": -1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、志向整理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "志向整理表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は安定志向 4/5の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "career-advisor-志向整理表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "career-advisor-志向整理表判断",
+        "roleSpecificMaterials": [
+          "志向整理表",
+          "判断対象: 志向整理表"
+        ],
+        "roleSpecificMetrics": [
+          "安定志向 4/5",
+          "成長志向 2/5"
+        ],
+        "roleSpecificFailureRisk": "志向整理表を読まず、安定志向 4/5か成長志向 2/5のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "安定志向 4/5と成長志向 2/5を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "志向整理表、安定志向 4/5、成長志向 2/5を判断の主役にしている。",
+        "kernelConnection": "志向整理表をcareer-advisor-志向整理表判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "career-advisor-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "求人比較表",
+      "openingHook": "12:20。求人比較表に候補 8件と必須一致 70%が並んでいる。",
+      "context": "キャリアアドバイザーとして求人比較表を確認する。候補 8件、必須一致 70%が今日の判断材料になる。",
+      "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、求人比較表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+      "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は求人比較表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "候補 8件の背景と必須一致 70%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "候補 8件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "career-advisor-求人比較表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は面接 2社で副作用を確認する。",
+      "npcDialogue": "先輩:「求人比較表を読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+      "workMaterial": "求人比較表\n- 候補 8件\n- 必須一致 70%\n- 判断対象: 求人比較表",
+      "decisionPrompt": "career-advisor-求人比較表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "候補 8件を重く見て、当日中に前へ進める",
+          "text": "候補 8件を重く見て、当日中に前へ進める。材料は求人比較表、候補 8件、必須一致 70%。",
+          "immediateFeedback": "求人比較表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 2,
+            "career_advisor_risk": -1,
+            "career_advisor_speed": 2,
+            "career_advisor_value": -1,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、求人比較表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "求人比較表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は候補 8件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "求人比較表の候補 8件と必須一致 70%を突き合わせ、条件付きで進める",
+          "text": "求人比較表の候補 8件と必須一致 70%を突き合わせ、条件付きで進める。材料は求人比較表、候補 8件、必須一致 70%。",
+          "immediateFeedback": "求人比較表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": 1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、求人比較表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "求人比較表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は候補 8件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "必須一致 70%の不確実性を理由に、判断範囲を絞る",
+          "text": "必須一致 70%の不確実性を理由に、判断範囲を絞る。材料は求人比較表、候補 8件、必須一致 70%。",
+          "immediateFeedback": "求人比較表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": -1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": -1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、求人比較表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "求人比較表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は候補 8件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "career-advisor-求人比較表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "career-advisor-求人比較表判断",
+        "roleSpecificMaterials": [
+          "求人比較表",
+          "判断対象: 求人比較表"
+        ],
+        "roleSpecificMetrics": [
+          "候補 8件",
+          "必須一致 70%"
+        ],
+        "roleSpecificFailureRisk": "求人比較表を読まず、候補 8件か必須一致 70%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "候補 8件と必須一致 70%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "求人比較表、候補 8件、必須一致 70%を判断の主役にしている。",
+        "kernelConnection": "求人比較表をcareer-advisor-求人比較表判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "career-advisor-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "選考状況表",
+      "openingHook": "14:15。選考状況表に面接 2社と辞退迷い 1社が並んでいる。",
+      "context": "キャリアアドバイザーとして選考状況表を確認する。面接 2社、辞退迷い 1社が今日の判断材料になる。",
+      "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、選考状況表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+      "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は選考状況表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "面接 2社の背景と辞退迷い 1社の確度が完全にはそろっていない。",
+      "decisionTradeoff": "面接 2社を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "career-advisor-選考状況表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は応募 3社で副作用を確認する。",
+      "npcDialogue": "先輩:「選考状況表を読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+      "workMaterial": "選考状況表\n- 面接 2社\n- 辞退迷い 1社\n- 判断対象: 選考状況表",
+      "decisionPrompt": "career-advisor-選考状況表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "面接 2社を重く見て、当日中に前へ進める",
+          "text": "面接 2社を重く見て、当日中に前へ進める。材料は選考状況表、面接 2社、辞退迷い 1社。",
+          "immediateFeedback": "選考状況表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 2,
+            "career_advisor_risk": -1,
+            "career_advisor_speed": 2,
+            "career_advisor_value": -1,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、選考状況表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "選考状況表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は面接 2社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "選考状況表の面接 2社と辞退迷い 1社を突き合わせ、条件付きで進める",
+          "text": "選考状況表の面接 2社と辞退迷い 1社を突き合わせ、条件付きで進める。材料は選考状況表、面接 2社、辞退迷い 1社。",
+          "immediateFeedback": "選考状況表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": 1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、選考状況表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "選考状況表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は面接 2社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "辞退迷い 1社の不確実性を理由に、判断範囲を絞る",
+          "text": "辞退迷い 1社の不確実性を理由に、判断範囲を絞る。材料は選考状況表、面接 2社、辞退迷い 1社。",
+          "immediateFeedback": "選考状況表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": -1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": -1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、選考状況表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "選考状況表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は面接 2社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "career-advisor-選考状況表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "career-advisor-選考状況表判断",
+        "roleSpecificMaterials": [
+          "選考状況表",
+          "判断対象: 選考状況表"
+        ],
+        "roleSpecificMetrics": [
+          "面接 2社",
+          "辞退迷い 1社"
+        ],
+        "roleSpecificFailureRisk": "選考状況表を読まず、面接 2社か辞退迷い 1社のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "面接 2社と辞退迷い 1社を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "選考状況表、面接 2社、辞退迷い 1社を判断の主役にしている。",
+        "kernelConnection": "選考状況表をcareer-advisor-選考状況表判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "career-advisor-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "次回支援計画",
+      "openingHook": "16:35。次回支援計画に応募 3社と期限 7日が並んでいる。",
+      "context": "キャリアアドバイザーとして次回支援計画を確認する。応募 3社、期限 7日が今日の判断材料になる。",
+      "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、次回支援計画を読んで次の作業判断を残す。",
+      "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+      "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は次回支援計画である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "応募 3社の背景と期限 7日の確度が完全にはそろっていない。",
+      "decisionTradeoff": "応募 3社を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "career-advisor-次回支援計画判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「次回支援計画を読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+      "workMaterial": "次回支援計画\n- 応募 3社\n- 期限 7日\n- 判断対象: 次回支援計画",
+      "decisionPrompt": "career-advisor-次回支援計画判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "応募 3社を重く見て、当日中に前へ進める",
+          "text": "応募 3社を重く見て、当日中に前へ進める。材料は次回支援計画、応募 3社、期限 7日。",
+          "immediateFeedback": "次回支援計画に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 2,
+            "career_advisor_risk": -1,
+            "career_advisor_speed": 2,
+            "career_advisor_value": -1,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、次回支援計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "次回支援計画の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は応募 3社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "次回支援計画の応募 3社と期限 7日を突き合わせ、条件付きで進める",
+          "text": "次回支援計画の応募 3社と期限 7日を突き合わせ、条件付きで進める。材料は次回支援計画、応募 3社、期限 7日。",
+          "immediateFeedback": "次回支援計画に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": 1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": 1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": 1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、次回支援計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "次回支援計画の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は応募 3社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "期限 7日の不確実性を理由に、判断範囲を絞る",
+          "text": "期限 7日の不確実性を理由に、判断範囲を絞る。材料は次回支援計画、応募 3社、期限 7日。",
+          "immediateFeedback": "次回支援計画に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "career_advisor_evidence": -1,
+            "career_advisor_risk": 2,
+            "career_advisor_speed": -1,
+            "career_advisor_value": 2,
+            "career_advisor_feasibility": -1
+          },
+          "misconceptionEffect": "キャリアアドバイザーは印象ではなく、次回支援計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "次回支援計画の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は応募 3社の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "career-advisor-次回支援計画判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "career-advisor-次回支援計画判断",
+        "roleSpecificMaterials": [
+          "次回支援計画",
+          "判断対象: 次回支援計画"
+        ],
+        "roleSpecificMetrics": [
+          "応募 3社",
+          "期限 7日"
+        ],
+        "roleSpecificFailureRisk": "次回支援計画を読まず、応募 3社か期限 7日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "応募 3社と期限 7日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "次回支援計画、応募 3社、期限 7日を判断の主役にしている。",
+        "kernelConnection": "次回支援計画をcareer-advisor-次回支援計画判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "career-advisor-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "面談メモ",
+          "openingHook": "09:10。面談メモに希望 3条件と不安 5件が並んでいる。",
+          "context": "キャリアアドバイザーとして面談メモを確認する。希望 3条件、不安 5件が今日の判断材料になる。",
+          "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、面談メモを読んで次の作業判断を残す。",
+          "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+          "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は面談メモである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "希望 3条件の背景と不安 5件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "希望 3条件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "career-advisor-面談メモ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は安定志向 4/5で副作用を確認する。",
+          "npcDialogue": "先輩:「面談メモを読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+          "workMaterial": "面談メモ\n- 希望 3条件\n- 不安 5件\n- 判断対象: 面談メモ",
+          "decisionPrompt": "career-advisor-面談メモ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "希望 3条件を重く見て、当日中に前へ進める",
+              "text": "希望 3条件を重く見て、当日中に前へ進める。材料は面談メモ、希望 3条件、不安 5件。",
+              "immediateFeedback": "面談メモに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 2,
+                "career_advisor_risk": -1,
+                "career_advisor_speed": 2,
+                "career_advisor_value": -1,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、面談メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "面談メモの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は希望 3条件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "面談メモの希望 3条件と不安 5件を突き合わせ、条件付きで進める",
+              "text": "面談メモの希望 3条件と不安 5件を突き合わせ、条件付きで進める。材料は面談メモ、希望 3条件、不安 5件。",
+              "immediateFeedback": "面談メモに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": 1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、面談メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "面談メモの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は希望 3条件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "不安 5件の不確実性を理由に、判断範囲を絞る",
+              "text": "不安 5件の不確実性を理由に、判断範囲を絞る。材料は面談メモ、希望 3条件、不安 5件。",
+              "immediateFeedback": "面談メモに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": -1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": -1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、面談メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "面談メモの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は希望 3条件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "career-advisor-面談メモ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "career-advisor-面談メモ判断",
+            "roleSpecificMaterials": [
+              "面談メモ",
+              "判断対象: 面談メモ"
+            ],
+            "roleSpecificMetrics": [
+              "希望 3条件",
+              "不安 5件"
+            ],
+            "roleSpecificFailureRisk": "面談メモを読まず、希望 3条件か不安 5件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "希望 3条件と不安 5件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "面談メモ、希望 3条件、不安 5件を判断の主役にしている。",
+            "kernelConnection": "面談メモをcareer-advisor-面談メモ判断へ接続する。"
+          }
+        },
+        {
+          "id": "career-advisor-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "志向整理表",
+          "openingHook": "10:40。志向整理表に安定志向 4/5と成長志向 2/5が並んでいる。",
+          "context": "キャリアアドバイザーとして志向整理表を確認する。安定志向 4/5、成長志向 2/5が今日の判断材料になる。",
+          "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、志向整理表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+          "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は志向整理表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "安定志向 4/5の背景と成長志向 2/5の確度が完全にはそろっていない。",
+          "decisionTradeoff": "安定志向 4/5を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "career-advisor-志向整理表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は候補 8件で副作用を確認する。",
+          "npcDialogue": "先輩:「志向整理表を読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+          "workMaterial": "志向整理表\n- 安定志向 4/5\n- 成長志向 2/5\n- 判断対象: 志向整理表",
+          "decisionPrompt": "career-advisor-志向整理表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "安定志向 4/5を重く見て、当日中に前へ進める",
+              "text": "安定志向 4/5を重く見て、当日中に前へ進める。材料は志向整理表、安定志向 4/5、成長志向 2/5。",
+              "immediateFeedback": "志向整理表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 2,
+                "career_advisor_risk": -1,
+                "career_advisor_speed": 2,
+                "career_advisor_value": -1,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、志向整理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "志向整理表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は安定志向 4/5の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "志向整理表の安定志向 4/5と成長志向 2/5を突き合わせ、条件付きで進める",
+              "text": "志向整理表の安定志向 4/5と成長志向 2/5を突き合わせ、条件付きで進める。材料は志向整理表、安定志向 4/5、成長志向 2/5。",
+              "immediateFeedback": "志向整理表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": 1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、志向整理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "志向整理表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は安定志向 4/5の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "成長志向 2/5の不確実性を理由に、判断範囲を絞る",
+              "text": "成長志向 2/5の不確実性を理由に、判断範囲を絞る。材料は志向整理表、安定志向 4/5、成長志向 2/5。",
+              "immediateFeedback": "志向整理表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": -1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": -1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、志向整理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "志向整理表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は安定志向 4/5の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "career-advisor-志向整理表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "career-advisor-志向整理表判断",
+            "roleSpecificMaterials": [
+              "志向整理表",
+              "判断対象: 志向整理表"
+            ],
+            "roleSpecificMetrics": [
+              "安定志向 4/5",
+              "成長志向 2/5"
+            ],
+            "roleSpecificFailureRisk": "志向整理表を読まず、安定志向 4/5か成長志向 2/5のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "安定志向 4/5と成長志向 2/5を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "志向整理表、安定志向 4/5、成長志向 2/5を判断の主役にしている。",
+            "kernelConnection": "志向整理表をcareer-advisor-志向整理表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "career-advisor-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "求人比較表",
+          "openingHook": "12:20。求人比較表に候補 8件と必須一致 70%が並んでいる。",
+          "context": "キャリアアドバイザーとして求人比較表を確認する。候補 8件、必須一致 70%が今日の判断材料になる。",
+          "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、求人比較表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+          "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は求人比較表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "候補 8件の背景と必須一致 70%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "候補 8件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "career-advisor-求人比較表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は面接 2社で副作用を確認する。",
+          "npcDialogue": "先輩:「求人比較表を読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+          "workMaterial": "求人比較表\n- 候補 8件\n- 必須一致 70%\n- 判断対象: 求人比較表",
+          "decisionPrompt": "career-advisor-求人比較表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "候補 8件を重く見て、当日中に前へ進める",
+              "text": "候補 8件を重く見て、当日中に前へ進める。材料は求人比較表、候補 8件、必須一致 70%。",
+              "immediateFeedback": "求人比較表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 2,
+                "career_advisor_risk": -1,
+                "career_advisor_speed": 2,
+                "career_advisor_value": -1,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、求人比較表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "求人比較表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は候補 8件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "求人比較表の候補 8件と必須一致 70%を突き合わせ、条件付きで進める",
+              "text": "求人比較表の候補 8件と必須一致 70%を突き合わせ、条件付きで進める。材料は求人比較表、候補 8件、必須一致 70%。",
+              "immediateFeedback": "求人比較表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": 1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、求人比較表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "求人比較表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は候補 8件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "必須一致 70%の不確実性を理由に、判断範囲を絞る",
+              "text": "必須一致 70%の不確実性を理由に、判断範囲を絞る。材料は求人比較表、候補 8件、必須一致 70%。",
+              "immediateFeedback": "求人比較表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": -1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": -1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、求人比較表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "求人比較表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は候補 8件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "career-advisor-求人比較表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "career-advisor-求人比較表判断",
+            "roleSpecificMaterials": [
+              "求人比較表",
+              "判断対象: 求人比較表"
+            ],
+            "roleSpecificMetrics": [
+              "候補 8件",
+              "必須一致 70%"
+            ],
+            "roleSpecificFailureRisk": "求人比較表を読まず、候補 8件か必須一致 70%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "候補 8件と必須一致 70%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "求人比較表、候補 8件、必須一致 70%を判断の主役にしている。",
+            "kernelConnection": "求人比較表をcareer-advisor-求人比較表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "career-advisor-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "選考状況表",
+          "openingHook": "14:15。選考状況表に面接 2社と辞退迷い 1社が並んでいる。",
+          "context": "キャリアアドバイザーとして選考状況表を確認する。面接 2社、辞退迷い 1社が今日の判断材料になる。",
+          "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、選考状況表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+          "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は選考状況表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "面接 2社の背景と辞退迷い 1社の確度が完全にはそろっていない。",
+          "decisionTradeoff": "面接 2社を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "career-advisor-選考状況表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は応募 3社で副作用を確認する。",
+          "npcDialogue": "先輩:「選考状況表を読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+          "workMaterial": "選考状況表\n- 面接 2社\n- 辞退迷い 1社\n- 判断対象: 選考状況表",
+          "decisionPrompt": "career-advisor-選考状況表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "面接 2社を重く見て、当日中に前へ進める",
+              "text": "面接 2社を重く見て、当日中に前へ進める。材料は選考状況表、面接 2社、辞退迷い 1社。",
+              "immediateFeedback": "選考状況表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 2,
+                "career_advisor_risk": -1,
+                "career_advisor_speed": 2,
+                "career_advisor_value": -1,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、選考状況表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "選考状況表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は面接 2社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "選考状況表の面接 2社と辞退迷い 1社を突き合わせ、条件付きで進める",
+              "text": "選考状況表の面接 2社と辞退迷い 1社を突き合わせ、条件付きで進める。材料は選考状況表、面接 2社、辞退迷い 1社。",
+              "immediateFeedback": "選考状況表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": 1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、選考状況表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "選考状況表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は面接 2社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "辞退迷い 1社の不確実性を理由に、判断範囲を絞る",
+              "text": "辞退迷い 1社の不確実性を理由に、判断範囲を絞る。材料は選考状況表、面接 2社、辞退迷い 1社。",
+              "immediateFeedback": "選考状況表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": -1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": -1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、選考状況表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "選考状況表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は面接 2社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "career-advisor-選考状況表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "career-advisor-選考状況表判断",
+            "roleSpecificMaterials": [
+              "選考状況表",
+              "判断対象: 選考状況表"
+            ],
+            "roleSpecificMetrics": [
+              "面接 2社",
+              "辞退迷い 1社"
+            ],
+            "roleSpecificFailureRisk": "選考状況表を読まず、面接 2社か辞退迷い 1社のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "面接 2社と辞退迷い 1社を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "選考状況表、面接 2社、辞退迷い 1社を判断の主役にしている。",
+            "kernelConnection": "選考状況表をcareer-advisor-選考状況表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "career-advisor-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "次回支援計画",
+          "openingHook": "16:35。次回支援計画に応募 3社と期限 7日が並んでいる。",
+          "context": "キャリアアドバイザーとして次回支援計画を確認する。応募 3社、期限 7日が今日の判断材料になる。",
+          "content": "相談内容・志向・求人条件をキャリア選択支援へ変換するため、次回支援計画を読んで次の作業判断を残す。",
+          "roleSpecificContext": "キャリアアドバイザーは相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+          "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は次回支援計画である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "応募 3社の背景と期限 7日の確度が完全にはそろっていない。",
+          "decisionTradeoff": "応募 3社を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "career-advisor-次回支援計画判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「次回支援計画を読まずに進めると、キャリアアドバイザーの判断ではなくなる」",
+          "workMaterial": "次回支援計画\n- 応募 3社\n- 期限 7日\n- 判断対象: 次回支援計画",
+          "decisionPrompt": "career-advisor-次回支援計画判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "応募 3社を重く見て、当日中に前へ進める",
+              "text": "応募 3社を重く見て、当日中に前へ進める。材料は次回支援計画、応募 3社、期限 7日。",
+              "immediateFeedback": "次回支援計画に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 2,
+                "career_advisor_risk": -1,
+                "career_advisor_speed": 2,
+                "career_advisor_value": -1,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、次回支援計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "次回支援計画の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は応募 3社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "次回支援計画の応募 3社と期限 7日を突き合わせ、条件付きで進める",
+              "text": "次回支援計画の応募 3社と期限 7日を突き合わせ、条件付きで進める。材料は次回支援計画、応募 3社、期限 7日。",
+              "immediateFeedback": "次回支援計画に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": 1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": 1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": 1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、次回支援計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "次回支援計画の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は応募 3社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "期限 7日の不確実性を理由に、判断範囲を絞る",
+              "text": "期限 7日の不確実性を理由に、判断範囲を絞る。材料は次回支援計画、応募 3社、期限 7日。",
+              "immediateFeedback": "次回支援計画に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "キャリアアドバイザーで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "career_advisor_evidence": -1,
+                "career_advisor_risk": 2,
+                "career_advisor_speed": -1,
+                "career_advisor_value": 2,
+                "career_advisor_feasibility": -1
+              },
+              "misconceptionEffect": "キャリアアドバイザーは印象ではなく、次回支援計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "次回支援計画の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は応募 3社の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "career-advisor-次回支援計画判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "career-advisor-次回支援計画判断",
+            "roleSpecificMaterials": [
+              "次回支援計画",
+              "判断対象: 次回支援計画"
+            ],
+            "roleSpecificMetrics": [
+              "応募 3社",
+              "期限 7日"
+            ],
+            "roleSpecificFailureRisk": "次回支援計画を読まず、応募 3社か期限 7日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "応募 3社と期限 7日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "次回支援計画、応募 3社、期限 7日を判断の主役にしている。",
+            "kernelConnection": "次回支援計画をcareer-advisor-次回支援計画判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "キャリアアドバイザーの材料翻訳型",
+      "strengths": [
+        "キャリアアドバイザーの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "career_advisor_evidence",
+        "career_advisor_risk"
+      ],
+      "valuedMeters": [
+        "career_advisor_evidence"
+      ],
+      "sacrificedMeters": [
+        "career_advisor_speed"
+      ],
+      "roleRealityReveal": "キャリアアドバイザーは、相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "キャリアアドバイザーの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "キャリアアドバイザーの推進型",
+      "strengths": [
+        "キャリアアドバイザーの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "career_advisor_risk",
+        "career_advisor_speed"
+      ],
+      "valuedMeters": [
+        "career_advisor_risk"
+      ],
+      "sacrificedMeters": [
+        "career_advisor_value"
+      ],
+      "roleRealityReveal": "キャリアアドバイザーは、相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "キャリアアドバイザーの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "キャリアアドバイザーの安全設計型",
+      "strengths": [
+        "キャリアアドバイザーの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "career_advisor_speed",
+        "career_advisor_value"
+      ],
+      "valuedMeters": [
+        "career_advisor_speed"
+      ],
+      "sacrificedMeters": [
+        "career_advisor_feasibility"
+      ],
+      "roleRealityReveal": "キャリアアドバイザーは、相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "キャリアアドバイザーの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "キャリアアドバイザーは、相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "キャリアアドバイザーとして、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "career-advisor_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "career_advisor_evidence_vs_career_advisor_risk",
+      "career_advisor_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "相談内容・志向・求人条件をキャリア選択支援へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "career_advisor_evidence",
+      "label": "evidence",
+      "description": "キャリアアドバイザーのevidence判断"
+    },
+    {
+      "key": "career_advisor_risk",
+      "label": "risk",
+      "description": "キャリアアドバイザーのrisk判断"
+    },
+    {
+      "key": "career_advisor_speed",
+      "label": "speed",
+      "description": "キャリアアドバイザーのspeed判断"
+    },
+    {
+      "key": "career_advisor_value",
+      "label": "value",
+      "description": "キャリアアドバイザーのvalue判断"
+    },
+    {
+      "key": "career_advisor_feasibility",
+      "label": "feasibility",
+      "description": "キャリアアドバイザーのfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "キャリアアドバイザーの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "career_advisor_evidence",
+      "career_advisor_risk",
+      "career_advisor_speed",
+      "career_advisor_value",
+      "career_advisor_feasibility"
+    ]
+  },
+  "roleCoreFriction": "相談内容・志向・求人条件をキャリア選択支援へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "キャリアアドバイザーは会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "キャリアアドバイザーは、相談内容・志向・求人条件をキャリア選択支援へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "希望 3条件、安定志向 4/5、候補 8件、面接 2社、応募 3社、関係者制約、期限",
+    "output": "キャリアアドバイザーとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "相談内容・志向・求人条件をキャリア選択支援へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "希望 3条件",
+      "安定志向 4/5",
+      "候補 8件",
+      "面接 2社",
+      "応募 3社"
+    ],
+    "metrics": [
+      "希望 3条件",
+      "不安 5件",
+      "安定志向 4/5",
+      "成長志向 2/5",
+      "候補 8件",
+      "必須一致 70%",
+      "面接 2社",
+      "辞退迷い 1社",
+      "応募 3社",
+      "期限 7日"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "希望 3条件、安定志向 4/5、候補 8件と不安 5件、、成長志向 2/5を読まなければ成立しないため。"
+  }
+}

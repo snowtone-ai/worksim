@@ -1,60 +1,80 @@
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
-import { listScenarioIds, loadScenario } from '@/lib/scenario/loader'
+import { loadCatalog } from '@/lib/scenario/loader'
+import { displayIndustry } from '@/lib/scenario/view-model'
+import { createClient } from '@/lib/supabase/server'
 
 export default async function PlayPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/')
 
-  const ids = await listScenarioIds()
-  const scenarios = await Promise.all(ids.map((id) => loadScenario(id)))
+  const catalog = await loadCatalog()
+  const industries = Object.values(
+    catalog.reduce<Record<string, {
+      industry: string
+      industrySlug: string
+      roleCount: number
+      tags: Set<string>
+    }>>((acc, item) => {
+      const current = acc[item.industrySlug] ?? {
+        industry: item.industry,
+        industrySlug: item.industrySlug,
+        roleCount: 0,
+        tags: new Set<string>(),
+      }
+      current.roleCount += 1
+      for (const tag of item.tags) current.tags.add(tag)
+      acc[item.industrySlug] = current
+      return acc
+    }, {}),
+  )
 
   return (
-    <div className="flex flex-col flex-1 items-center px-4 py-8">
-      <div className="w-full max-w-xl flex flex-col gap-6">
-        <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-semibold text-gray-900">シナリオ選択</h1>
-          <p className="text-sm text-gray-500">体験したい職種を選んでください</p>
-        </div>
+    <div className="flex flex-1 flex-col px-4 py-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8">
+        <header className="flex flex-col gap-2">
+          <p className="text-sm font-medium text-indigo-600">50職種の職場体験カタログ</p>
+          <h1 className="text-2xl font-semibold text-gray-900">業界を選択</h1>
+          <p className="max-w-2xl text-sm leading-6 text-gray-500">
+            興味のある業界から、職種別の1日体験を選べます。大学PoCでは全業界を同じカード形式で確認できます。
+          </p>
+        </header>
 
-        <div className="flex flex-col gap-4">
-          {scenarios.map((scenario) => {
-            const [industry, role] = scenario.id.split('/')
-            return (
-              <div
-                key={scenario.id}
-                className="rounded-xl border border-gray-200 bg-white px-5 py-4 flex flex-col gap-3"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-medium text-indigo-600">{scenario.meta.industry}</span>
-                  <span className="text-xs text-gray-400">約{scenario.meta.duration_minutes}分</span>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {industries.map((industry) => (
+            <Link
+              key={industry.industrySlug}
+              href={`/play/${industry.industrySlug}`}
+              className="group flex min-h-56 flex-col justify-between rounded-lg border border-gray-200 bg-white p-5 shadow-sm transition-colors hover:border-indigo-300 hover:bg-indigo-50"
+            >
+              <div className="flex flex-col gap-3">
+                <div className="flex items-start justify-between gap-4">
+                  <h2 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-700">
+                    {displayIndustry(industry.industrySlug, industry.industry)}
+                  </h2>
+                  <span className="shrink-0 rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600">
+                    {industry.roleCount}職種
+                  </span>
                 </div>
-                <Link
-                  href={`/play/${industry}/${role}`}
-                  className="font-semibold text-gray-900 hover:text-indigo-600 transition-colors"
-                >
-                  {scenario.meta.role}
-                </Link>
-                <p className="text-sm text-gray-500 line-clamp-2">{scenario.meta.description}</p>
-                <div className="flex gap-2 pt-1">
-                  <Link
-                    href={`/play/${industry}/${role}`}
-                    className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-700 hover:border-indigo-300 hover:bg-indigo-50 transition-colors"
-                  >
-                    通常モード
-                  </Link>
-                  <Link
-                    href={`/play/${industry}/${role}/immersive`}
-                    className="flex-1 rounded-lg bg-indigo-600 px-3 py-2 text-center text-sm font-medium text-white hover:bg-indigo-700 transition-colors"
-                  >
-                    没入モード ✨
-                  </Link>
-                </div>
+
+                <p className="text-sm leading-6 text-gray-500">
+                  この業界の職種カードから、役割・判断内容・所要時間を確認して体験を開始します。
+                </p>
               </div>
-            )
-          })}
+
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-wrap gap-2">
+                  {[...industry.tags].slice(0, 4).map((tag) => (
+                    <span key={tag} className="rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-600">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-indigo-600">職種カードを見る →</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

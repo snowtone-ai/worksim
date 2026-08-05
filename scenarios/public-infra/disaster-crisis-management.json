@@ -1,0 +1,2203 @@
+{
+  "id": "public-infra/disaster-crisis-management",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "industry": "自治体/公共/インフラ",
+  "industrySlug": "public-infra",
+  "role": "防災/危機管理担当",
+  "roleSlug": "disaster-crisis-management",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "社会貢献",
+    "高難易度",
+    "分析系"
+  ],
+  "background": {
+    "imagePrompt": "Create a high-quality realistic workplace background image for a career simulation game. Scene: 自治体/公共/インフラ industry, 防災/危機管理担当 role, decision point before a key task.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, distorted hands, distorted face, low quality, blurry, stock photo advertisement, fantasy, cyberpunk, anime, manga, unrealistic office, fake letters",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "public-infra",
+      "disaster-crisis-management"
+    ]
+  },
+  "timeline": [
+    {
+      "time": "08:50",
+      "label": "警戒情報の更新"
+    },
+    {
+      "time": "10:15",
+      "label": "ハザードの色分け"
+    },
+    {
+      "time": "12:05",
+      "label": "避難所の収容限界"
+    },
+    {
+      "time": "14:00",
+      "label": "連絡網の穴"
+    },
+    {
+      "time": "16:20",
+      "label": "訓練改善へ残す記録"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "08:50",
+      "label": "警戒情報の更新"
+    },
+    {
+      "time": "10:15",
+      "label": "ハザードの色分け"
+    },
+    {
+      "time": "12:05",
+      "label": "避難所の収容限界"
+    },
+    {
+      "time": "14:00",
+      "label": "連絡網の穴"
+    },
+    {
+      "time": "16:20",
+      "label": "訓練改善へ残す記録"
+    }
+  ],
+  "sceneList": [
+    "disaster-crisis-management-01",
+    "disaster-crisis-management-02",
+    "disaster-crisis-management-03",
+    "disaster-crisis-management-04",
+    "disaster-crisis-management-05"
+  ],
+  "meta": {
+    "title": "防災/危機管理担当",
+    "industry": "自治体/公共/インフラ",
+    "role": "防災/危機管理担当",
+    "duration_minutes": 18,
+    "description": "災害リスク情報を住民判断と行政資源配分へ変換する。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝え、合意形成する力"
+    },
+    {
+      "key": "ethics",
+      "label": "倫理観",
+      "description": "社会的影響を踏まえて判断する力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化やトラブルに素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "debug",
+      "id": "disaster-crisis-management-01",
+      "time": "08:50",
+      "interactable": "monitor_terminal",
+      "title": "警戒情報の更新",
+      "openingHook": "08:50。気象警戒情報に予想雨量: 180mm / 初動時間: 30分が出ている。",
+      "context": "08:50。防災/危機管理担当として気象警戒情報を確認する。予想雨量: 180mm / 初動時間: 30分が今日の判断材料になる。",
+      "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\n線状降水帯予測、土砂災害警戒を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+      "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+      "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+      "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料は気象警戒情報と予想雨量: 180mm / 初動時間: 30分である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "線状降水帯予測の確度と、予想雨量: 180mmの背景が完全にはそろっていない。",
+      "decisionTradeoff": "予想雨量: 180mmを急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+      "consequenceHook": "ここでの警戒情報の初動判断が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次はハザードマップで判断の副作用を確認する。",
+      "npcDialogue": "先輩:「気象警戒情報の数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+      "workMaterial": "気象警戒情報\n- 線状降水帯予測\n- 土砂災害警戒\n- 予想雨量: 180mm\n- 初動時間: 30分",
+      "decisionPrompt": "警戒情報の初動判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "予想雨量: 180mmを重く見て、今日の改善を先に出す",
+          "text": "予想雨量: 180mmを重く見て、今日の改善を先に出す。判断材料は気象警戒情報、予想雨量: 180mm、初動時間: 30分。",
+          "immediateFeedback": "気象警戒情報に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "警戒情報の初動判断の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": 2,
+            "capacity_design": -1,
+            "vulnerable_support": 2,
+            "communication_reach": -1,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、気象警戒情報と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "気象警戒情報の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は予想雨量: 180mmがどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "気象警戒情報と初動時間: 30分を突き合わせ、条件付きで進める",
+          "text": "気象警戒情報と初動時間: 30分を突き合わせ、条件付きで進める。判断材料は気象警戒情報、予想雨量: 180mm、初動時間: 30分。",
+          "immediateFeedback": "気象警戒情報に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "警戒情報の初動判断の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "risk_reading": 1,
+            "capacity_design": 2,
+            "vulnerable_support": 1,
+            "communication_reach": 2,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "studentFeedback": {
+            "good": "気象警戒情報の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は予想雨量: 180mmがどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "線状降水帯予測の不確実性を理由に、判断を絞って持ち越す",
+          "text": "線状降水帯予測の不確実性を理由に、判断を絞って持ち越す。判断材料は気象警戒情報、予想雨量: 180mm、初動時間: 30分。",
+          "immediateFeedback": "気象警戒情報に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "警戒情報の初動判断の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": -1,
+            "capacity_design": 2,
+            "vulnerable_support": -1,
+            "communication_reach": 2,
+            "decision_speed": -1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、気象警戒情報と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "気象警戒情報の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は予想雨量: 180mmがどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "警戒情報の初動判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "高難易度",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "警戒情報の初動判断",
+        "roleSpecificMaterials": [
+          "気象警戒情報",
+          "線状降水帯予測",
+          "土砂災害警戒"
+        ],
+        "roleSpecificMetrics": [
+          "予想雨量: 180mm",
+          "初動時間: 30分"
+        ],
+        "roleSpecificFailureRisk": "気象警戒情報を読まずに進め、判断遅れ。",
+        "roleSpecificEvaluationCriteria": "予想雨量: 180mm、初動時間: 30分を使って、不確実性下で説明可能か。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "気象警戒情報、線状降水帯予測、土砂災害警戒、予想雨量: 180mm / 初動時間: 30分を判断の主役にしている。",
+        "kernelConnection": "気象警戒情報を、警戒情報の初動判断へ接続する。"
+      }
+    },
+    {
+      "type": "review",
+      "id": "disaster-crisis-management-02",
+      "time": "10:15",
+      "interactable": "monitor_browser",
+      "title": "ハザードの色分け",
+      "openingHook": "10:15。ハザードマップに避難対象世帯数: 1,240世帯 / 高齢化率: 34%が出ている。",
+      "context": "10:15。防災/危機管理担当としてハザードマップを確認する。避難対象世帯数: 1,240世帯 / 高齢化率: 34%が今日の判断材料になる。",
+      "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\n浸水想定区域、土砂災害区域を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+      "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+      "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+      "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料はハザードマップと避難対象世帯数: 1,240世帯 / 高齢化率: 34%である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "浸水想定区域の確度と、避難対象世帯数: 1,240世帯の背景が完全にはそろっていない。",
+      "decisionTradeoff": "避難対象世帯数: 1,240世帯を急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+      "consequenceHook": "ここでの危険区域の優先順位化が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は避難所一覧で判断の副作用を確認する。",
+      "npcDialogue": "先輩:「ハザードマップの数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+      "workMaterial": "ハザードマップ\n- 浸水想定区域\n- 土砂災害区域\n- 避難対象世帯数: 1,240世帯\n- 高齢化率: 34%",
+      "decisionPrompt": "危険区域の優先順位化として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "避難対象世帯数: 1,240世帯を重く見て、今日の改善を先に出す",
+          "text": "避難対象世帯数: 1,240世帯を重く見て、今日の改善を先に出す。判断材料はハザードマップ、避難対象世帯数: 1,240世帯、高齢化率: 34%。",
+          "immediateFeedback": "ハザードマップに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "危険区域の優先順位化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": 2,
+            "capacity_design": -1,
+            "vulnerable_support": 2,
+            "communication_reach": -1,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、ハザードマップと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "ハザードマップの具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は避難対象世帯数: 1,240世帯がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "ハザードマップと高齢化率: 34%を突き合わせ、条件付きで進める",
+          "text": "ハザードマップと高齢化率: 34%を突き合わせ、条件付きで進める。判断材料はハザードマップ、避難対象世帯数: 1,240世帯、高齢化率: 34%。",
+          "immediateFeedback": "ハザードマップに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "危険区域の優先順位化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "risk_reading": 1,
+            "capacity_design": 2,
+            "vulnerable_support": 1,
+            "communication_reach": 2,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "studentFeedback": {
+            "good": "ハザードマップの具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は避難対象世帯数: 1,240世帯がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "浸水想定区域の不確実性を理由に、判断を絞って持ち越す",
+          "text": "浸水想定区域の不確実性を理由に、判断を絞って持ち越す。判断材料はハザードマップ、避難対象世帯数: 1,240世帯、高齢化率: 34%。",
+          "immediateFeedback": "ハザードマップに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "危険区域の優先順位化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": -1,
+            "capacity_design": 2,
+            "vulnerable_support": -1,
+            "communication_reach": 2,
+            "decision_speed": -1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、ハザードマップと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "ハザードマップの具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は避難対象世帯数: 1,240世帯がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "危険区域の優先順位化",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "高難易度",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "危険区域の優先順位化",
+        "roleSpecificMaterials": [
+          "ハザードマップ",
+          "浸水想定区域",
+          "土砂災害区域"
+        ],
+        "roleSpecificMetrics": [
+          "避難対象世帯数: 1,240世帯",
+          "高齢化率: 34%"
+        ],
+        "roleSpecificFailureRisk": "ハザードマップを読まずに進め、判断遅れ。",
+        "roleSpecificEvaluationCriteria": "避難対象世帯数: 1,240世帯、高齢化率: 34%を使って、不確実性下で説明可能か。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "ハザードマップ、浸水想定区域、土砂災害区域、避難対象世帯数: 1,240世帯 / 高齢化率: 34%を判断の主役にしている。",
+        "kernelConnection": "ハザードマップを、危険区域の優先順位化へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "disaster-crisis-management-03",
+      "time": "12:05",
+      "interactable": "monitor_mail",
+      "title": "避難所の収容限界",
+      "openingHook": "12:05。避難所一覧に避難所収容率: 92% / 福祉枠: 18床が出ている。",
+      "context": "12:05。防災/危機管理担当として避難所一覧を確認する。避難所収容率: 92% / 福祉枠: 18床が今日の判断材料になる。",
+      "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\n第一小学校、福祉避難室を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+      "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+      "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+      "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料は避難所一覧と避難所収容率: 92% / 福祉枠: 18床である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "第一小学校の確度と、避難所収容率: 92%の背景が完全にはそろっていない。",
+      "decisionTradeoff": "避難所収容率: 92%を急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+      "consequenceHook": "ここでの避難容量の配分判断が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は要支援者リストで判断の副作用を確認する。",
+      "npcDialogue": "先輩:「避難所一覧の数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+      "workMaterial": "避難所一覧\n- 第一小学校\n- 福祉避難室\n- 避難所収容率: 92%\n- 福祉枠: 18床",
+      "decisionPrompt": "避難容量の配分判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "避難所収容率: 92%を重く見て、今日の改善を先に出す",
+          "text": "避難所収容率: 92%を重く見て、今日の改善を先に出す。判断材料は避難所一覧、避難所収容率: 92%、福祉枠: 18床。",
+          "immediateFeedback": "避難所一覧に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "避難容量の配分判断の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": 2,
+            "capacity_design": -1,
+            "vulnerable_support": 2,
+            "communication_reach": -1,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、避難所一覧と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "避難所一覧の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は避難所収容率: 92%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "避難所一覧と福祉枠: 18床を突き合わせ、条件付きで進める",
+          "text": "避難所一覧と福祉枠: 18床を突き合わせ、条件付きで進める。判断材料は避難所一覧、避難所収容率: 92%、福祉枠: 18床。",
+          "immediateFeedback": "避難所一覧に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "避難容量の配分判断の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "risk_reading": 1,
+            "capacity_design": 2,
+            "vulnerable_support": 1,
+            "communication_reach": 2,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "studentFeedback": {
+            "good": "避難所一覧の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は避難所収容率: 92%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "第一小学校の不確実性を理由に、判断を絞って持ち越す",
+          "text": "第一小学校の不確実性を理由に、判断を絞って持ち越す。判断材料は避難所一覧、避難所収容率: 92%、福祉枠: 18床。",
+          "immediateFeedback": "避難所一覧に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "避難容量の配分判断の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": -1,
+            "capacity_design": 2,
+            "vulnerable_support": -1,
+            "communication_reach": 2,
+            "decision_speed": -1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、避難所一覧と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "避難所一覧の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は避難所収容率: 92%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "避難容量の配分判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "高難易度",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "避難容量の配分判断",
+        "roleSpecificMaterials": [
+          "避難所一覧",
+          "第一小学校",
+          "福祉避難室"
+        ],
+        "roleSpecificMetrics": [
+          "避難所収容率: 92%",
+          "福祉枠: 18床"
+        ],
+        "roleSpecificFailureRisk": "避難所一覧を読まずに進め、判断遅れ。",
+        "roleSpecificEvaluationCriteria": "避難所収容率: 92%、福祉枠: 18床を使って、不確実性下で説明可能か。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "避難所一覧、第一小学校、福祉避難室、避難所収容率: 92% / 福祉枠: 18床を判断の主役にしている。",
+        "kernelConnection": "避難所一覧を、避難容量の配分判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "disaster-crisis-management-04",
+      "time": "14:00",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "連絡網の穴",
+      "openingHook": "14:00。要支援者リストに連絡完了率: 63% / 要支援者: 76人が出ている。",
+      "context": "14:00。防災/危機管理担当として要支援者リストを確認する。連絡完了率: 63% / 要支援者: 76人が今日の判断材料になる。",
+      "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\n民生委員連絡、電話未達を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+      "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+      "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+      "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料は要支援者リストと連絡完了率: 63% / 要支援者: 76人である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "民生委員連絡の確度と、連絡完了率: 63%の背景が完全にはそろっていない。",
+      "decisionTradeoff": "連絡完了率: 63%を急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+      "consequenceHook": "ここでの要支援者連絡の優先設計が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は防災訓練記録で判断の副作用を確認する。",
+      "npcDialogue": "先輩:「要支援者リストの数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+      "workMaterial": "要支援者リスト\n- 民生委員連絡\n- 電話未達\n- 連絡完了率: 63%\n- 要支援者: 76人",
+      "decisionPrompt": "要支援者連絡の優先設計として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "連絡完了率: 63%を重く見て、今日の改善を先に出す",
+          "text": "連絡完了率: 63%を重く見て、今日の改善を先に出す。判断材料は要支援者リスト、連絡完了率: 63%、要支援者: 76人。",
+          "immediateFeedback": "要支援者リストに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "要支援者連絡の優先設計の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": 2,
+            "capacity_design": -1,
+            "vulnerable_support": 2,
+            "communication_reach": -1,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、要支援者リストと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "要支援者リストの具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は連絡完了率: 63%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "要支援者リストと要支援者: 76人を突き合わせ、条件付きで進める",
+          "text": "要支援者リストと要支援者: 76人を突き合わせ、条件付きで進める。判断材料は要支援者リスト、連絡完了率: 63%、要支援者: 76人。",
+          "immediateFeedback": "要支援者リストに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "要支援者連絡の優先設計の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "risk_reading": 1,
+            "capacity_design": 2,
+            "vulnerable_support": 1,
+            "communication_reach": 2,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "studentFeedback": {
+            "good": "要支援者リストの具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は連絡完了率: 63%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "民生委員連絡の不確実性を理由に、判断を絞って持ち越す",
+          "text": "民生委員連絡の不確実性を理由に、判断を絞って持ち越す。判断材料は要支援者リスト、連絡完了率: 63%、要支援者: 76人。",
+          "immediateFeedback": "要支援者リストに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "要支援者連絡の優先設計の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": -1,
+            "capacity_design": 2,
+            "vulnerable_support": -1,
+            "communication_reach": 2,
+            "decision_speed": -1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、要支援者リストと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "要支援者リストの具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は連絡完了率: 63%がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "要支援者連絡の優先設計",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "高難易度",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "要支援者連絡の優先設計",
+        "roleSpecificMaterials": [
+          "要支援者リスト",
+          "民生委員連絡",
+          "電話未達"
+        ],
+        "roleSpecificMetrics": [
+          "連絡完了率: 63%",
+          "要支援者: 76人"
+        ],
+        "roleSpecificFailureRisk": "要支援者リストを読まずに進め、判断遅れ。",
+        "roleSpecificEvaluationCriteria": "連絡完了率: 63%、要支援者: 76人を使って、不確実性下で説明可能か。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "要支援者リスト、民生委員連絡、電話未達、連絡完了率: 63% / 要支援者: 76人を判断の主役にしている。",
+        "kernelConnection": "要支援者リストを、要支援者連絡の優先設計へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "disaster-crisis-management-05",
+      "time": "16:20",
+      "interactable": "sticky_notes",
+      "title": "訓練改善へ残す記録",
+      "openingHook": "16:20。防災訓練記録に避難開始遅れ: 22分 / 問い合わせ: 118件が出ている。",
+      "context": "16:20。防災/危機管理担当として防災訓練記録を確認する。避難開始遅れ: 22分 / 問い合わせ: 118件が今日の判断材料になる。",
+      "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\nタイムライン、広報文案を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+      "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+      "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+      "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料は防災訓練記録と避難開始遅れ: 22分 / 問い合わせ: 118件である。",
+      "timePressure": "終業までに判断を残す必要がある。",
+      "missingInformation": "タイムラインの確度と、避難開始遅れ: 22分の背景が完全にはそろっていない。",
+      "decisionTradeoff": "避難開始遅れ: 22分を急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+      "consequenceHook": "ここでの初動記録の改善案化が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "結果では職業理解として返る。",
+      "npcDialogue": "先輩:「防災訓練記録の数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+      "workMaterial": "防災訓練記録\n- タイムライン\n- 広報文案\n- 避難開始遅れ: 22分\n- 問い合わせ: 118件",
+      "decisionPrompt": "初動記録の改善案化として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "避難開始遅れ: 22分を重く見て、今日の改善を先に出す",
+          "text": "避難開始遅れ: 22分を重く見て、今日の改善を先に出す。判断材料は防災訓練記録、避難開始遅れ: 22分、問い合わせ: 118件。",
+          "immediateFeedback": "防災訓練記録に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "初動記録の改善案化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": 2,
+            "capacity_design": -1,
+            "vulnerable_support": 2,
+            "communication_reach": -1,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、防災訓練記録と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "防災訓練記録の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は避難開始遅れ: 22分がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "防災訓練記録と問い合わせ: 118件を突き合わせ、条件付きで進める",
+          "text": "防災訓練記録と問い合わせ: 118件を突き合わせ、条件付きで進める。判断材料は防災訓練記録、避難開始遅れ: 22分、問い合わせ: 118件。",
+          "immediateFeedback": "防災訓練記録に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "初動記録の改善案化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "risk_reading": 1,
+            "capacity_design": 2,
+            "vulnerable_support": 1,
+            "communication_reach": 2,
+            "decision_speed": 1
+          },
+          "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "studentFeedback": {
+            "good": "防災訓練記録の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は避難開始遅れ: 22分がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ethics": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "タイムラインの不確実性を理由に、判断を絞って持ち越す",
+          "text": "タイムラインの不確実性を理由に、判断を絞って持ち越す。判断材料は防災訓練記録、避難開始遅れ: 22分、問い合わせ: 118件。",
+          "immediateFeedback": "防災訓練記録に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "初動記録の改善案化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "risk_reading": -1,
+            "capacity_design": 2,
+            "vulnerable_support": -1,
+            "communication_reach": 2,
+            "decision_speed": -1
+          },
+          "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、防災訓練記録と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "防災訓練記録の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は避難開始遅れ: 22分がどう効くか確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "初動記録の改善案化",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "高難易度",
+          "分析系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "初動記録の改善案化",
+        "roleSpecificMaterials": [
+          "防災訓練記録",
+          "タイムライン",
+          "広報文案"
+        ],
+        "roleSpecificMetrics": [
+          "避難開始遅れ: 22分",
+          "問い合わせ: 118件"
+        ],
+        "roleSpecificFailureRisk": "防災訓練記録を読まずに進め、判断遅れ。",
+        "roleSpecificEvaluationCriteria": "避難開始遅れ: 22分、問い合わせ: 118件を使って、不確実性下で説明可能か。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "防災訓練記録、タイムライン、広報文案、避難開始遅れ: 22分 / 問い合わせ: 118件を判断の主役にしている。",
+        "kernelConnection": "防災訓練記録を、初動記録の改善案化へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "防災/危機管理担当の午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "disaster-crisis-management-01",
+          "time": "08:50",
+          "interactable": "monitor_terminal",
+          "title": "警戒情報の更新",
+          "openingHook": "08:50。気象警戒情報に予想雨量: 180mm / 初動時間: 30分が出ている。",
+          "context": "08:50。防災/危機管理担当として気象警戒情報を確認する。予想雨量: 180mm / 初動時間: 30分が今日の判断材料になる。",
+          "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\n線状降水帯予測、土砂災害警戒を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+          "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+          "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料は気象警戒情報と予想雨量: 180mm / 初動時間: 30分である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "線状降水帯予測の確度と、予想雨量: 180mmの背景が完全にはそろっていない。",
+          "decisionTradeoff": "予想雨量: 180mmを急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+          "consequenceHook": "ここでの警戒情報の初動判断が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次はハザードマップで判断の副作用を確認する。",
+          "npcDialogue": "先輩:「気象警戒情報の数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+          "workMaterial": "気象警戒情報\n- 線状降水帯予測\n- 土砂災害警戒\n- 予想雨量: 180mm\n- 初動時間: 30分",
+          "decisionPrompt": "警戒情報の初動判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "予想雨量: 180mmを重く見て、今日の改善を先に出す",
+              "text": "予想雨量: 180mmを重く見て、今日の改善を先に出す。判断材料は気象警戒情報、予想雨量: 180mm、初動時間: 30分。",
+              "immediateFeedback": "気象警戒情報に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "警戒情報の初動判断の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": 2,
+                "capacity_design": -1,
+                "vulnerable_support": 2,
+                "communication_reach": -1,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、気象警戒情報と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "気象警戒情報の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は予想雨量: 180mmがどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "気象警戒情報と初動時間: 30分を突き合わせ、条件付きで進める",
+              "text": "気象警戒情報と初動時間: 30分を突き合わせ、条件付きで進める。判断材料は気象警戒情報、予想雨量: 180mm、初動時間: 30分。",
+              "immediateFeedback": "気象警戒情報に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "警戒情報の初動判断の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "risk_reading": 1,
+                "capacity_design": 2,
+                "vulnerable_support": 1,
+                "communication_reach": 2,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+              "studentFeedback": {
+                "good": "気象警戒情報の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は予想雨量: 180mmがどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "線状降水帯予測の不確実性を理由に、判断を絞って持ち越す",
+              "text": "線状降水帯予測の不確実性を理由に、判断を絞って持ち越す。判断材料は気象警戒情報、予想雨量: 180mm、初動時間: 30分。",
+              "immediateFeedback": "気象警戒情報に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "警戒情報の初動判断の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": -1,
+                "capacity_design": 2,
+                "vulnerable_support": -1,
+                "communication_reach": 2,
+                "decision_speed": -1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、気象警戒情報と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "気象警戒情報の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は予想雨量: 180mmがどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "警戒情報の初動判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "高難易度",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "警戒情報の初動判断",
+            "roleSpecificMaterials": [
+              "気象警戒情報",
+              "線状降水帯予測",
+              "土砂災害警戒"
+            ],
+            "roleSpecificMetrics": [
+              "予想雨量: 180mm",
+              "初動時間: 30分"
+            ],
+            "roleSpecificFailureRisk": "気象警戒情報を読まずに進め、判断遅れ。",
+            "roleSpecificEvaluationCriteria": "予想雨量: 180mm、初動時間: 30分を使って、不確実性下で説明可能か。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "気象警戒情報、線状降水帯予測、土砂災害警戒、予想雨量: 180mm / 初動時間: 30分を判断の主役にしている。",
+            "kernelConnection": "気象警戒情報を、警戒情報の初動判断へ接続する。"
+          }
+        },
+        {
+          "id": "disaster-crisis-management-02",
+          "time": "10:15",
+          "interactable": "monitor_browser",
+          "title": "ハザードの色分け",
+          "openingHook": "10:15。ハザードマップに避難対象世帯数: 1,240世帯 / 高齢化率: 34%が出ている。",
+          "context": "10:15。防災/危機管理担当としてハザードマップを確認する。避難対象世帯数: 1,240世帯 / 高齢化率: 34%が今日の判断材料になる。",
+          "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\n浸水想定区域、土砂災害区域を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+          "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+          "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料はハザードマップと避難対象世帯数: 1,240世帯 / 高齢化率: 34%である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "浸水想定区域の確度と、避難対象世帯数: 1,240世帯の背景が完全にはそろっていない。",
+          "decisionTradeoff": "避難対象世帯数: 1,240世帯を急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+          "consequenceHook": "ここでの危険区域の優先順位化が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は避難所一覧で判断の副作用を確認する。",
+          "npcDialogue": "先輩:「ハザードマップの数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+          "workMaterial": "ハザードマップ\n- 浸水想定区域\n- 土砂災害区域\n- 避難対象世帯数: 1,240世帯\n- 高齢化率: 34%",
+          "decisionPrompt": "危険区域の優先順位化として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "避難対象世帯数: 1,240世帯を重く見て、今日の改善を先に出す",
+              "text": "避難対象世帯数: 1,240世帯を重く見て、今日の改善を先に出す。判断材料はハザードマップ、避難対象世帯数: 1,240世帯、高齢化率: 34%。",
+              "immediateFeedback": "ハザードマップに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "危険区域の優先順位化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": 2,
+                "capacity_design": -1,
+                "vulnerable_support": 2,
+                "communication_reach": -1,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、ハザードマップと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "ハザードマップの具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は避難対象世帯数: 1,240世帯がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "ハザードマップと高齢化率: 34%を突き合わせ、条件付きで進める",
+              "text": "ハザードマップと高齢化率: 34%を突き合わせ、条件付きで進める。判断材料はハザードマップ、避難対象世帯数: 1,240世帯、高齢化率: 34%。",
+              "immediateFeedback": "ハザードマップに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "危険区域の優先順位化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "risk_reading": 1,
+                "capacity_design": 2,
+                "vulnerable_support": 1,
+                "communication_reach": 2,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+              "studentFeedback": {
+                "good": "ハザードマップの具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は避難対象世帯数: 1,240世帯がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "浸水想定区域の不確実性を理由に、判断を絞って持ち越す",
+              "text": "浸水想定区域の不確実性を理由に、判断を絞って持ち越す。判断材料はハザードマップ、避難対象世帯数: 1,240世帯、高齢化率: 34%。",
+              "immediateFeedback": "ハザードマップに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "危険区域の優先順位化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": -1,
+                "capacity_design": 2,
+                "vulnerable_support": -1,
+                "communication_reach": 2,
+                "decision_speed": -1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、ハザードマップと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "ハザードマップの具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は避難対象世帯数: 1,240世帯がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "危険区域の優先順位化",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "高難易度",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "危険区域の優先順位化",
+            "roleSpecificMaterials": [
+              "ハザードマップ",
+              "浸水想定区域",
+              "土砂災害区域"
+            ],
+            "roleSpecificMetrics": [
+              "避難対象世帯数: 1,240世帯",
+              "高齢化率: 34%"
+            ],
+            "roleSpecificFailureRisk": "ハザードマップを読まずに進め、判断遅れ。",
+            "roleSpecificEvaluationCriteria": "避難対象世帯数: 1,240世帯、高齢化率: 34%を使って、不確実性下で説明可能か。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "ハザードマップ、浸水想定区域、土砂災害区域、避難対象世帯数: 1,240世帯 / 高齢化率: 34%を判断の主役にしている。",
+            "kernelConnection": "ハザードマップを、危険区域の優先順位化へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "防災/危機管理担当の昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "disaster-crisis-management-03",
+          "time": "12:05",
+          "interactable": "monitor_mail",
+          "title": "避難所の収容限界",
+          "openingHook": "12:05。避難所一覧に避難所収容率: 92% / 福祉枠: 18床が出ている。",
+          "context": "12:05。防災/危機管理担当として避難所一覧を確認する。避難所収容率: 92% / 福祉枠: 18床が今日の判断材料になる。",
+          "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\n第一小学校、福祉避難室を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+          "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+          "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料は避難所一覧と避難所収容率: 92% / 福祉枠: 18床である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "第一小学校の確度と、避難所収容率: 92%の背景が完全にはそろっていない。",
+          "decisionTradeoff": "避難所収容率: 92%を急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+          "consequenceHook": "ここでの避難容量の配分判断が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は要支援者リストで判断の副作用を確認する。",
+          "npcDialogue": "先輩:「避難所一覧の数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+          "workMaterial": "避難所一覧\n- 第一小学校\n- 福祉避難室\n- 避難所収容率: 92%\n- 福祉枠: 18床",
+          "decisionPrompt": "避難容量の配分判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "避難所収容率: 92%を重く見て、今日の改善を先に出す",
+              "text": "避難所収容率: 92%を重く見て、今日の改善を先に出す。判断材料は避難所一覧、避難所収容率: 92%、福祉枠: 18床。",
+              "immediateFeedback": "避難所一覧に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "避難容量の配分判断の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": 2,
+                "capacity_design": -1,
+                "vulnerable_support": 2,
+                "communication_reach": -1,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、避難所一覧と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "避難所一覧の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は避難所収容率: 92%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "避難所一覧と福祉枠: 18床を突き合わせ、条件付きで進める",
+              "text": "避難所一覧と福祉枠: 18床を突き合わせ、条件付きで進める。判断材料は避難所一覧、避難所収容率: 92%、福祉枠: 18床。",
+              "immediateFeedback": "避難所一覧に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "避難容量の配分判断の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "risk_reading": 1,
+                "capacity_design": 2,
+                "vulnerable_support": 1,
+                "communication_reach": 2,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+              "studentFeedback": {
+                "good": "避難所一覧の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は避難所収容率: 92%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "第一小学校の不確実性を理由に、判断を絞って持ち越す",
+              "text": "第一小学校の不確実性を理由に、判断を絞って持ち越す。判断材料は避難所一覧、避難所収容率: 92%、福祉枠: 18床。",
+              "immediateFeedback": "避難所一覧に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "避難容量の配分判断の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": -1,
+                "capacity_design": 2,
+                "vulnerable_support": -1,
+                "communication_reach": 2,
+                "decision_speed": -1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、避難所一覧と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "避難所一覧の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は避難所収容率: 92%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "避難容量の配分判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "高難易度",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "避難容量の配分判断",
+            "roleSpecificMaterials": [
+              "避難所一覧",
+              "第一小学校",
+              "福祉避難室"
+            ],
+            "roleSpecificMetrics": [
+              "避難所収容率: 92%",
+              "福祉枠: 18床"
+            ],
+            "roleSpecificFailureRisk": "避難所一覧を読まずに進め、判断遅れ。",
+            "roleSpecificEvaluationCriteria": "避難所収容率: 92%、福祉枠: 18床を使って、不確実性下で説明可能か。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "避難所一覧、第一小学校、福祉避難室、避難所収容率: 92% / 福祉枠: 18床を判断の主役にしている。",
+            "kernelConnection": "避難所一覧を、避難容量の配分判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "防災/危機管理担当の午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "disaster-crisis-management-04",
+          "time": "14:00",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "連絡網の穴",
+          "openingHook": "14:00。要支援者リストに連絡完了率: 63% / 要支援者: 76人が出ている。",
+          "context": "14:00。防災/危機管理担当として要支援者リストを確認する。連絡完了率: 63% / 要支援者: 76人が今日の判断材料になる。",
+          "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\n民生委員連絡、電話未達を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+          "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+          "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料は要支援者リストと連絡完了率: 63% / 要支援者: 76人である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "民生委員連絡の確度と、連絡完了率: 63%の背景が完全にはそろっていない。",
+          "decisionTradeoff": "連絡完了率: 63%を急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+          "consequenceHook": "ここでの要支援者連絡の優先設計が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は防災訓練記録で判断の副作用を確認する。",
+          "npcDialogue": "先輩:「要支援者リストの数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+          "workMaterial": "要支援者リスト\n- 民生委員連絡\n- 電話未達\n- 連絡完了率: 63%\n- 要支援者: 76人",
+          "decisionPrompt": "要支援者連絡の優先設計として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "連絡完了率: 63%を重く見て、今日の改善を先に出す",
+              "text": "連絡完了率: 63%を重く見て、今日の改善を先に出す。判断材料は要支援者リスト、連絡完了率: 63%、要支援者: 76人。",
+              "immediateFeedback": "要支援者リストに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "要支援者連絡の優先設計の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": 2,
+                "capacity_design": -1,
+                "vulnerable_support": 2,
+                "communication_reach": -1,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、要支援者リストと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "要支援者リストの具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は連絡完了率: 63%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "要支援者リストと要支援者: 76人を突き合わせ、条件付きで進める",
+              "text": "要支援者リストと要支援者: 76人を突き合わせ、条件付きで進める。判断材料は要支援者リスト、連絡完了率: 63%、要支援者: 76人。",
+              "immediateFeedback": "要支援者リストに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "要支援者連絡の優先設計の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "risk_reading": 1,
+                "capacity_design": 2,
+                "vulnerable_support": 1,
+                "communication_reach": 2,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+              "studentFeedback": {
+                "good": "要支援者リストの具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は連絡完了率: 63%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "民生委員連絡の不確実性を理由に、判断を絞って持ち越す",
+              "text": "民生委員連絡の不確実性を理由に、判断を絞って持ち越す。判断材料は要支援者リスト、連絡完了率: 63%、要支援者: 76人。",
+              "immediateFeedback": "要支援者リストに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "要支援者連絡の優先設計の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": -1,
+                "capacity_design": 2,
+                "vulnerable_support": -1,
+                "communication_reach": 2,
+                "decision_speed": -1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、要支援者リストと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "要支援者リストの具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は連絡完了率: 63%がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "要支援者連絡の優先設計",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "高難易度",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "要支援者連絡の優先設計",
+            "roleSpecificMaterials": [
+              "要支援者リスト",
+              "民生委員連絡",
+              "電話未達"
+            ],
+            "roleSpecificMetrics": [
+              "連絡完了率: 63%",
+              "要支援者: 76人"
+            ],
+            "roleSpecificFailureRisk": "要支援者リストを読まずに進め、判断遅れ。",
+            "roleSpecificEvaluationCriteria": "連絡完了率: 63%、要支援者: 76人を使って、不確実性下で説明可能か。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "要支援者リスト、民生委員連絡、電話未達、連絡完了率: 63% / 要支援者: 76人を判断の主役にしている。",
+            "kernelConnection": "要支援者リストを、要支援者連絡の優先設計へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "防災/危機管理担当の夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "disaster-crisis-management-05",
+          "time": "16:20",
+          "interactable": "sticky_notes",
+          "title": "訓練改善へ残す記録",
+          "openingHook": "16:20。防災訓練記録に避難開始遅れ: 22分 / 問い合わせ: 118件が出ている。",
+          "context": "16:20。防災/危機管理担当として防災訓練記録を確認する。避難開始遅れ: 22分 / 問い合わせ: 118件が今日の判断材料になる。",
+          "content": "災害リスク情報を住民判断と行政資源配分へ変換する。\n\nタイムライン、広報文案を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+          "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+          "hiddenWorkReality": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+          "stakeholderPressure": "防災/危機管理担当の判断を待つ相手はいるが、主材料は防災訓練記録と避難開始遅れ: 22分 / 問い合わせ: 118件である。",
+          "timePressure": "終業までに判断を残す必要がある。",
+          "missingInformation": "タイムラインの確度と、避難開始遅れ: 22分の背景が完全にはそろっていない。",
+          "decisionTradeoff": "避難開始遅れ: 22分を急いで改善するほど、空振り批判を恐れすぎないを外すリスクが増える。",
+          "consequenceHook": "ここでの初動記録の改善案化が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "結果では職業理解として返る。",
+          "npcDialogue": "先輩:「防災訓練記録の数字を見ずに決めると、防災/危機管理担当の判断ではなくなるよ」",
+          "workMaterial": "防災訓練記録\n- タイムライン\n- 広報文案\n- 避難開始遅れ: 22分\n- 問い合わせ: 118件",
+          "decisionPrompt": "初動記録の改善案化として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "避難開始遅れ: 22分を重く見て、今日の改善を先に出す",
+              "text": "避難開始遅れ: 22分を重く見て、今日の改善を先に出す。判断材料は防災訓練記録、避難開始遅れ: 22分、問い合わせ: 118件。",
+              "immediateFeedback": "防災訓練記録に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "初動記録の改善案化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": 2,
+                "capacity_design": -1,
+                "vulnerable_support": 2,
+                "communication_reach": -1,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、防災訓練記録と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "防災訓練記録の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は避難開始遅れ: 22分がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "防災訓練記録と問い合わせ: 118件を突き合わせ、条件付きで進める",
+              "text": "防災訓練記録と問い合わせ: 118件を突き合わせ、条件付きで進める。判断材料は防災訓練記録、避難開始遅れ: 22分、問い合わせ: 118件。",
+              "immediateFeedback": "防災訓練記録に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "初動記録の改善案化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "risk_reading": 1,
+                "capacity_design": 2,
+                "vulnerable_support": 1,
+                "communication_reach": 2,
+                "decision_speed": 1
+              },
+              "misconceptionEffect": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+              "studentFeedback": {
+                "good": "防災訓練記録の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は避難開始遅れ: 22分がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ethics": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "タイムラインの不確実性を理由に、判断を絞って持ち越す",
+              "text": "タイムラインの不確実性を理由に、判断を絞って持ち越す。判断材料は防災訓練記録、避難開始遅れ: 22分、問い合わせ: 118件。",
+              "immediateFeedback": "防災訓練記録に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "初動記録の改善案化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "防災/危機管理担当で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "risk_reading": -1,
+                "capacity_design": 2,
+                "vulnerable_support": -1,
+                "communication_reach": 2,
+                "decision_speed": -1
+              },
+              "misconceptionEffect": "防災/危機管理担当は印象や会話だけではなく、防災訓練記録と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "防災訓練記録の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は避難開始遅れ: 22分がどう効くか確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "初動記録の改善案化",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "高難易度",
+              "分析系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "初動記録の改善案化",
+            "roleSpecificMaterials": [
+              "防災訓練記録",
+              "タイムライン",
+              "広報文案"
+            ],
+            "roleSpecificMetrics": [
+              "避難開始遅れ: 22分",
+              "問い合わせ: 118件"
+            ],
+            "roleSpecificFailureRisk": "防災訓練記録を読まずに進め、判断遅れ。",
+            "roleSpecificEvaluationCriteria": "避難開始遅れ: 22分、問い合わせ: 118件を使って、不確実性下で説明可能か。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "防災訓練記録、タイムライン、広報文案、避難開始遅れ: 22分 / 問い合わせ: 118件を判断の主役にしている。",
+            "kernelConnection": "防災訓練記録を、初動記録の改善案化へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ethics",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "material-translator",
+      "title": "防災/危機管理担当の材料翻訳型",
+      "strengths": [
+        "防災/危機管理担当の仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "risk_reading",
+        "capacity_design"
+      ],
+      "valuedMeters": [
+        "risk_reading",
+        "capacity_design"
+      ],
+      "sacrificedMeters": [
+        "vulnerable_support"
+      ],
+      "roleRealityReveal": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+      "misconceptionCorrection": "災害時に現場で素早く動く仕事という印象が強く、平時のリスク想定や情報伝達設計が見えにくい。という誤解が修正される。",
+      "decisionPatternSummary": "防災/危機管理担当の資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "防災/危機管理担当として仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "forward-driver",
+      "title": "防災/危機管理担当の推進型",
+      "strengths": [
+        "防災/危機管理担当の仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "vulnerable_support",
+        "risk_reading"
+      ],
+      "valuedMeters": [
+        "vulnerable_support",
+        "risk_reading"
+      ],
+      "sacrificedMeters": [
+        "capacity_design"
+      ],
+      "roleRealityReveal": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+      "misconceptionCorrection": "災害時に現場で素早く動く仕事という印象が強く、平時のリスク想定や情報伝達設計が見えにくい。という誤解が修正される。",
+      "decisionPatternSummary": "防災/危機管理担当の資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "防災/危機管理担当として仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "risk-controller",
+      "title": "防災/危機管理担当の安全設計型",
+      "strengths": [
+        "防災/危機管理担当の仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "capacity_design",
+        "vulnerable_support"
+      ],
+      "valuedMeters": [
+        "capacity_design",
+        "vulnerable_support"
+      ],
+      "sacrificedMeters": [
+        "risk_reading"
+      ],
+      "roleRealityReveal": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+      "misconceptionCorrection": "災害時に現場で素早く動く仕事という印象が強く、平時のリスク想定や情報伝達設計が見えにくい。という誤解が修正される。",
+      "decisionPatternSummary": "防災/危機管理担当の資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "防災/危機管理担当として仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "analytics": {
+    "decisionStyleAxes": [
+      "risk_reading_vs_false_alarm",
+      "capacity_design_vs_vulnerable_support",
+      "decision_speed_vs_information_certainty"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 1 selected role.",
+    "mainConflict": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+    "sceneRationale": "Role Differentiation Sheetの仕事材料から、連続する5 sceneの業務日に再構成した。",
+    "choiceRationale": "正解不正解ではなく、各仕事材料をどう読むかのトレードオフにした。",
+    "scoringRationale": "既存Cαのdimension互換を維持しつつ、Cβ固有meterを追加した。",
+    "knownLimitations": "架空ケースを前提にしたCβ標準シナリオ。実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "risk_reading",
+      "label": "危険度読解",
+      "description": "警戒情報を読む力"
+    },
+    {
+      "key": "capacity_design",
+      "label": "容量設計",
+      "description": "避難所と資源を配分する力"
+    },
+    {
+      "key": "vulnerable_support",
+      "label": "要支援者配慮",
+      "description": "取り残しを防ぐ力"
+    },
+    {
+      "key": "communication_reach",
+      "label": "伝達到達",
+      "description": "必要な人に情報を届ける力"
+    },
+    {
+      "key": "decision_speed",
+      "label": "初動速度",
+      "description": "遅れず判断する力"
+    }
+  ],
+  "branchSummary": {
+    "overview": "防災/危機管理担当の5つの仕事材料判断が、職業理解と意思決定傾向に連鎖する。",
+    "trackedEffects": [
+      "risk_reading",
+      "capacity_design",
+      "vulnerable_support",
+      "communication_reach",
+      "decision_speed"
+    ]
+  },
+  "resultFeedback": {
+    "roleRealityReveal": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+    "misconceptionCorrection": "災害時に現場で素早く動く仕事という印象が強く、平時のリスク想定や情報伝達設計が見えにくい。という見方から、災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する職種だと理解する。",
+    "careerReflectionPrompt": "防災/危機管理担当として、数字・資料・制約を読んで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "disaster-crisis-management_role_understanding"
+    ]
+  },
+  "roleCoreFriction": "空振り批判を恐れる圧力と、要支援者・避難容量・不確実な警戒情報を同時に扱う判断の葛藤。",
+  "roleMisconception": "災害時に現場で素早く動く仕事という印象が強く、平時のリスク想定や情報伝達設計が見えにくい。",
+  "roleRealityReveal": "実際は、ハザード、避難容量、警戒情報、行政資源を同時に読み、初動判断を設計する仕事。",
+  "roleWorkKernel": {
+    "input": "ハザードマップ、避難所収容数、要支援者情報、訓練結果、気象警戒情報",
+    "output": "初動判断、避難情報案、資源配分案、訓練改善メモ",
+    "transformation": "災害リスク情報を、住民へ出す判断と限られた行政資源の配分へ変換する",
+    "constraints": [
+      "空振り批判を恐れすぎない",
+      "避難弱者を見落とさない",
+      "情報の不確実性を扱う"
+    ],
+    "workArtifacts": [
+      "ハザードマップ",
+      "避難所一覧",
+      "タイムライン",
+      "防災訓練記録"
+    ],
+    "metrics": [
+      "予想雨量: 180mm",
+      "初動時間: 30分",
+      "避難対象世帯数: 1,240世帯",
+      "高齢化率: 34%",
+      "避難所収容率: 92%",
+      "福祉枠: 18床",
+      "連絡完了率: 63%",
+      "要支援者: 76人",
+      "避難開始遅れ: 22分",
+      "問い合わせ: 118件"
+    ],
+    "failureModes": [
+      "判断遅れ",
+      "避難所容量不足",
+      "要支援者見落とし",
+      "情報伝達の混乱"
+    ],
+    "evaluationCriteria": [
+      "不確実性下で説明可能",
+      "弱者配慮がある",
+      "資源配分が現実的",
+      "初動が遅れない"
+    ],
+    "nonGenericReason": "ハザード、避難容量、要支援者、警戒情報を同時に読まなければ成立しないため。"
+  }
+}

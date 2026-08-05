@@ -1,0 +1,2190 @@
+{
+  "id": "manufacturing/technical-field-support",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "メーカー/ものづくり",
+  "industrySlug": "manufacturing",
+  "role": "技術営業/フィールドサポート",
+  "roleSlug": "technical-field-support",
+  "roleCategory": "industry_specific_sales",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for メーカー/ものづくり 技術営業/フィールドサポート.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "manufacturing",
+      "technical-field-support"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "問い合わせ票"
+    },
+    {
+      "time": "10:40",
+      "label": "現地ログ"
+    },
+    {
+      "time": "12:20",
+      "label": "仕様書"
+    },
+    {
+      "time": "14:15",
+      "label": "対策案"
+    },
+    {
+      "time": "16:35",
+      "label": "報告書"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "問い合わせ票"
+    },
+    {
+      "time": "10:40",
+      "label": "現地ログ"
+    },
+    {
+      "time": "12:20",
+      "label": "仕様書"
+    },
+    {
+      "time": "14:15",
+      "label": "対策案"
+    },
+    {
+      "time": "16:35",
+      "label": "報告書"
+    }
+  ],
+  "sceneList": [
+    "technical-field-support-01",
+    "technical-field-support-02",
+    "technical-field-support-03",
+    "technical-field-support-04",
+    "technical-field-support-05"
+  ],
+  "meta": {
+    "title": "技術営業/フィールドサポート",
+    "industry": "メーカー/ものづくり",
+    "role": "技術営業/フィールドサポート",
+    "duration_minutes": 18,
+    "description": "顧客不具合・使用条件・仕様制約を技術提案へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "technical-field-support-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "問い合わせ票",
+      "openingHook": "09:10。問い合わせ票に停止 3回と使用温度 42度が並んでいる。",
+      "context": "技術営業/フィールドサポートとして問い合わせ票を確認する。停止 3回、使用温度 42度が今日の判断材料になる。",
+      "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、問い合わせ票を読んで次の作業判断を残す。",
+      "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+      "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は問い合わせ票である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "停止 3回の背景と使用温度 42度の確度が完全にはそろっていない。",
+      "decisionTradeoff": "停止 3回を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "technical-field-support-問い合わせ票判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は警告 18件で副作用を確認する。",
+      "npcDialogue": "先輩:「問い合わせ票を読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+      "workMaterial": "問い合わせ票\n- 停止 3回\n- 使用温度 42度\n- 判断対象: 問い合わせ票",
+      "decisionPrompt": "technical-field-support-問い合わせ票判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "停止 3回を重く見て、当日中に前へ進める",
+          "text": "停止 3回を重く見て、当日中に前へ進める。材料は問い合わせ票、停止 3回、使用温度 42度。",
+          "immediateFeedback": "問い合わせ票に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 2,
+            "technical_field_support_risk": -1,
+            "technical_field_support_speed": 2,
+            "technical_field_support_value": -1,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、問い合わせ票と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "問い合わせ票の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は停止 3回の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "問い合わせ票の停止 3回と使用温度 42度を突き合わせ、条件付きで進める",
+          "text": "問い合わせ票の停止 3回と使用温度 42度を突き合わせ、条件付きで進める。材料は問い合わせ票、停止 3回、使用温度 42度。",
+          "immediateFeedback": "問い合わせ票に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": 1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、問い合わせ票と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "問い合わせ票の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は停止 3回の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "使用温度 42度の不確実性を理由に、判断範囲を絞る",
+          "text": "使用温度 42度の不確実性を理由に、判断範囲を絞る。材料は問い合わせ票、停止 3回、使用温度 42度。",
+          "immediateFeedback": "問い合わせ票に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": -1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": -1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": -1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、問い合わせ票と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "問い合わせ票の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は停止 3回の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "technical-field-support-問い合わせ票判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "technical-field-support-問い合わせ票判断",
+        "roleSpecificMaterials": [
+          "問い合わせ票",
+          "判断対象: 問い合わせ票"
+        ],
+        "roleSpecificMetrics": [
+          "停止 3回",
+          "使用温度 42度"
+        ],
+        "roleSpecificFailureRisk": "問い合わせ票を読まず、停止 3回か使用温度 42度のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "停止 3回と使用温度 42度を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "問い合わせ票、停止 3回、使用温度 42度を判断の主役にしている。",
+        "kernelConnection": "問い合わせ票をtechnical-field-support-問い合わせ票判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "technical-field-support-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "現地ログ",
+      "openingHook": "10:40。現地ログに警告 18件と負荷率 88%が並んでいる。",
+      "context": "技術営業/フィールドサポートとして現地ログを確認する。警告 18件、負荷率 88%が今日の判断材料になる。",
+      "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、現地ログを読んで次の作業判断を残す。",
+      "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+      "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は現地ログである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "警告 18件の背景と負荷率 88%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "警告 18件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "technical-field-support-現地ログ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は推奨温度 35度で副作用を確認する。",
+      "npcDialogue": "先輩:「現地ログを読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+      "workMaterial": "現地ログ\n- 警告 18件\n- 負荷率 88%\n- 判断対象: 現地ログ",
+      "decisionPrompt": "technical-field-support-現地ログ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "警告 18件を重く見て、当日中に前へ進める",
+          "text": "警告 18件を重く見て、当日中に前へ進める。材料は現地ログ、警告 18件、負荷率 88%。",
+          "immediateFeedback": "現地ログに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 2,
+            "technical_field_support_risk": -1,
+            "technical_field_support_speed": 2,
+            "technical_field_support_value": -1,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、現地ログと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "現地ログの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は警告 18件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "現地ログの警告 18件と負荷率 88%を突き合わせ、条件付きで進める",
+          "text": "現地ログの警告 18件と負荷率 88%を突き合わせ、条件付きで進める。材料は現地ログ、警告 18件、負荷率 88%。",
+          "immediateFeedback": "現地ログに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": 1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、現地ログと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "現地ログの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は警告 18件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "負荷率 88%の不確実性を理由に、判断範囲を絞る",
+          "text": "負荷率 88%の不確実性を理由に、判断範囲を絞る。材料は現地ログ、警告 18件、負荷率 88%。",
+          "immediateFeedback": "現地ログに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": -1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": -1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": -1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、現地ログと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "現地ログの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は警告 18件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "technical-field-support-現地ログ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "technical-field-support-現地ログ判断",
+        "roleSpecificMaterials": [
+          "現地ログ",
+          "判断対象: 現地ログ"
+        ],
+        "roleSpecificMetrics": [
+          "警告 18件",
+          "負荷率 88%"
+        ],
+        "roleSpecificFailureRisk": "現地ログを読まず、警告 18件か負荷率 88%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "警告 18件と負荷率 88%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "現地ログ、警告 18件、負荷率 88%を判断の主役にしている。",
+        "kernelConnection": "現地ログをtechnical-field-support-現地ログ判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "technical-field-support-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "仕様書",
+      "openingHook": "12:20。仕様書に推奨温度 35度と保証外 2条件が並んでいる。",
+      "context": "技術営業/フィールドサポートとして仕様書を確認する。推奨温度 35度、保証外 2条件が今日の判断材料になる。",
+      "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、仕様書を読んで次の作業判断を残す。",
+      "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+      "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は仕様書である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "推奨温度 35度の背景と保証外 2条件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "推奨温度 35度を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "technical-field-support-仕様書判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は部品交換 6万円で副作用を確認する。",
+      "npcDialogue": "先輩:「仕様書を読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+      "workMaterial": "仕様書\n- 推奨温度 35度\n- 保証外 2条件\n- 判断対象: 仕様書",
+      "decisionPrompt": "technical-field-support-仕様書判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "推奨温度 35度を重く見て、当日中に前へ進める",
+          "text": "推奨温度 35度を重く見て、当日中に前へ進める。材料は仕様書、推奨温度 35度、保証外 2条件。",
+          "immediateFeedback": "仕様書に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 2,
+            "technical_field_support_risk": -1,
+            "technical_field_support_speed": 2,
+            "technical_field_support_value": -1,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、仕様書と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "仕様書の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は推奨温度 35度の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "仕様書の推奨温度 35度と保証外 2条件を突き合わせ、条件付きで進める",
+          "text": "仕様書の推奨温度 35度と保証外 2条件を突き合わせ、条件付きで進める。材料は仕様書、推奨温度 35度、保証外 2条件。",
+          "immediateFeedback": "仕様書に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": 1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、仕様書と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "仕様書の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は推奨温度 35度の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "保証外 2条件の不確実性を理由に、判断範囲を絞る",
+          "text": "保証外 2条件の不確実性を理由に、判断範囲を絞る。材料は仕様書、推奨温度 35度、保証外 2条件。",
+          "immediateFeedback": "仕様書に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": -1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": -1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": -1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、仕様書と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "仕様書の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は推奨温度 35度の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "technical-field-support-仕様書判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "technical-field-support-仕様書判断",
+        "roleSpecificMaterials": [
+          "仕様書",
+          "判断対象: 仕様書"
+        ],
+        "roleSpecificMetrics": [
+          "推奨温度 35度",
+          "保証外 2条件"
+        ],
+        "roleSpecificFailureRisk": "仕様書を読まず、推奨温度 35度か保証外 2条件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "推奨温度 35度と保証外 2条件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "仕様書、推奨温度 35度、保証外 2条件を判断の主役にしている。",
+        "kernelConnection": "仕様書をtechnical-field-support-仕様書判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "technical-field-support-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "対策案",
+      "openingHook": "14:15。対策案に部品交換 6万円と調整 90分が並んでいる。",
+      "context": "技術営業/フィールドサポートとして対策案を確認する。部品交換 6万円、調整 90分が今日の判断材料になる。",
+      "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、対策案を読んで次の作業判断を残す。",
+      "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+      "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は対策案である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "部品交換 6万円の背景と調整 90分の確度が完全にはそろっていない。",
+      "decisionTradeoff": "部品交換 6万円を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "technical-field-support-対策案判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は再発率 12%で副作用を確認する。",
+      "npcDialogue": "先輩:「対策案を読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+      "workMaterial": "対策案\n- 部品交換 6万円\n- 調整 90分\n- 判断対象: 対策案",
+      "decisionPrompt": "technical-field-support-対策案判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "部品交換 6万円を重く見て、当日中に前へ進める",
+          "text": "部品交換 6万円を重く見て、当日中に前へ進める。材料は対策案、部品交換 6万円、調整 90分。",
+          "immediateFeedback": "対策案に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 2,
+            "technical_field_support_risk": -1,
+            "technical_field_support_speed": 2,
+            "technical_field_support_value": -1,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、対策案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対策案の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は部品交換 6万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "対策案の部品交換 6万円と調整 90分を突き合わせ、条件付きで進める",
+          "text": "対策案の部品交換 6万円と調整 90分を突き合わせ、条件付きで進める。材料は対策案、部品交換 6万円、調整 90分。",
+          "immediateFeedback": "対策案に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": 1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、対策案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対策案の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は部品交換 6万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "調整 90分の不確実性を理由に、判断範囲を絞る",
+          "text": "調整 90分の不確実性を理由に、判断範囲を絞る。材料は対策案、部品交換 6万円、調整 90分。",
+          "immediateFeedback": "対策案に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": -1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": -1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": -1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、対策案と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対策案の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は部品交換 6万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "technical-field-support-対策案判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "technical-field-support-対策案判断",
+        "roleSpecificMaterials": [
+          "対策案",
+          "判断対象: 対策案"
+        ],
+        "roleSpecificMetrics": [
+          "部品交換 6万円",
+          "調整 90分"
+        ],
+        "roleSpecificFailureRisk": "対策案を読まず、部品交換 6万円か調整 90分のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "部品交換 6万円と調整 90分を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "対策案、部品交換 6万円、調整 90分を判断の主役にしている。",
+        "kernelConnection": "対策案をtechnical-field-support-対策案判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "technical-field-support-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "報告書",
+      "openingHook": "16:35。報告書に再発率 12%と次回点検 30日後が並んでいる。",
+      "context": "技術営業/フィールドサポートとして報告書を確認する。再発率 12%、次回点検 30日後が今日の判断材料になる。",
+      "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、報告書を読んで次の作業判断を残す。",
+      "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+      "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は報告書である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "再発率 12%の背景と次回点検 30日後の確度が完全にはそろっていない。",
+      "decisionTradeoff": "再発率 12%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "technical-field-support-報告書判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「報告書を読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+      "workMaterial": "報告書\n- 再発率 12%\n- 次回点検 30日後\n- 判断対象: 報告書",
+      "decisionPrompt": "technical-field-support-報告書判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "再発率 12%を重く見て、当日中に前へ進める",
+          "text": "再発率 12%を重く見て、当日中に前へ進める。材料は報告書、再発率 12%、次回点検 30日後。",
+          "immediateFeedback": "報告書に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 2,
+            "technical_field_support_risk": -1,
+            "technical_field_support_speed": 2,
+            "technical_field_support_value": -1,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、報告書と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "報告書の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は再発率 12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "報告書の再発率 12%と次回点検 30日後を突き合わせ、条件付きで進める",
+          "text": "報告書の再発率 12%と次回点検 30日後を突き合わせ、条件付きで進める。材料は報告書、再発率 12%、次回点検 30日後。",
+          "immediateFeedback": "報告書に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": 1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": 1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": 1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、報告書と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "報告書の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は再発率 12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "次回点検 30日後の不確実性を理由に、判断範囲を絞る",
+          "text": "次回点検 30日後の不確実性を理由に、判断範囲を絞る。材料は報告書、再発率 12%、次回点検 30日後。",
+          "immediateFeedback": "報告書に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "technical_field_support_evidence": -1,
+            "technical_field_support_risk": 2,
+            "technical_field_support_speed": -1,
+            "technical_field_support_value": 2,
+            "technical_field_support_feasibility": -1
+          },
+          "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、報告書と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "報告書の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は再発率 12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "technical-field-support-報告書判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "technical-field-support-報告書判断",
+        "roleSpecificMaterials": [
+          "報告書",
+          "判断対象: 報告書"
+        ],
+        "roleSpecificMetrics": [
+          "再発率 12%",
+          "次回点検 30日後"
+        ],
+        "roleSpecificFailureRisk": "報告書を読まず、再発率 12%か次回点検 30日後のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "再発率 12%と次回点検 30日後を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "報告書、再発率 12%、次回点検 30日後を判断の主役にしている。",
+        "kernelConnection": "報告書をtechnical-field-support-報告書判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "technical-field-support-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "問い合わせ票",
+          "openingHook": "09:10。問い合わせ票に停止 3回と使用温度 42度が並んでいる。",
+          "context": "技術営業/フィールドサポートとして問い合わせ票を確認する。停止 3回、使用温度 42度が今日の判断材料になる。",
+          "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、問い合わせ票を読んで次の作業判断を残す。",
+          "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+          "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は問い合わせ票である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "停止 3回の背景と使用温度 42度の確度が完全にはそろっていない。",
+          "decisionTradeoff": "停止 3回を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "technical-field-support-問い合わせ票判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は警告 18件で副作用を確認する。",
+          "npcDialogue": "先輩:「問い合わせ票を読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+          "workMaterial": "問い合わせ票\n- 停止 3回\n- 使用温度 42度\n- 判断対象: 問い合わせ票",
+          "decisionPrompt": "technical-field-support-問い合わせ票判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "停止 3回を重く見て、当日中に前へ進める",
+              "text": "停止 3回を重く見て、当日中に前へ進める。材料は問い合わせ票、停止 3回、使用温度 42度。",
+              "immediateFeedback": "問い合わせ票に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 2,
+                "technical_field_support_risk": -1,
+                "technical_field_support_speed": 2,
+                "technical_field_support_value": -1,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、問い合わせ票と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "問い合わせ票の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は停止 3回の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "問い合わせ票の停止 3回と使用温度 42度を突き合わせ、条件付きで進める",
+              "text": "問い合わせ票の停止 3回と使用温度 42度を突き合わせ、条件付きで進める。材料は問い合わせ票、停止 3回、使用温度 42度。",
+              "immediateFeedback": "問い合わせ票に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": 1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、問い合わせ票と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "問い合わせ票の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は停止 3回の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "使用温度 42度の不確実性を理由に、判断範囲を絞る",
+              "text": "使用温度 42度の不確実性を理由に、判断範囲を絞る。材料は問い合わせ票、停止 3回、使用温度 42度。",
+              "immediateFeedback": "問い合わせ票に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": -1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": -1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": -1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、問い合わせ票と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "問い合わせ票の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は停止 3回の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "technical-field-support-問い合わせ票判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "technical-field-support-問い合わせ票判断",
+            "roleSpecificMaterials": [
+              "問い合わせ票",
+              "判断対象: 問い合わせ票"
+            ],
+            "roleSpecificMetrics": [
+              "停止 3回",
+              "使用温度 42度"
+            ],
+            "roleSpecificFailureRisk": "問い合わせ票を読まず、停止 3回か使用温度 42度のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "停止 3回と使用温度 42度を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "問い合わせ票、停止 3回、使用温度 42度を判断の主役にしている。",
+            "kernelConnection": "問い合わせ票をtechnical-field-support-問い合わせ票判断へ接続する。"
+          }
+        },
+        {
+          "id": "technical-field-support-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "現地ログ",
+          "openingHook": "10:40。現地ログに警告 18件と負荷率 88%が並んでいる。",
+          "context": "技術営業/フィールドサポートとして現地ログを確認する。警告 18件、負荷率 88%が今日の判断材料になる。",
+          "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、現地ログを読んで次の作業判断を残す。",
+          "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+          "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は現地ログである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "警告 18件の背景と負荷率 88%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "警告 18件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "technical-field-support-現地ログ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は推奨温度 35度で副作用を確認する。",
+          "npcDialogue": "先輩:「現地ログを読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+          "workMaterial": "現地ログ\n- 警告 18件\n- 負荷率 88%\n- 判断対象: 現地ログ",
+          "decisionPrompt": "technical-field-support-現地ログ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "警告 18件を重く見て、当日中に前へ進める",
+              "text": "警告 18件を重く見て、当日中に前へ進める。材料は現地ログ、警告 18件、負荷率 88%。",
+              "immediateFeedback": "現地ログに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 2,
+                "technical_field_support_risk": -1,
+                "technical_field_support_speed": 2,
+                "technical_field_support_value": -1,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、現地ログと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "現地ログの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は警告 18件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "現地ログの警告 18件と負荷率 88%を突き合わせ、条件付きで進める",
+              "text": "現地ログの警告 18件と負荷率 88%を突き合わせ、条件付きで進める。材料は現地ログ、警告 18件、負荷率 88%。",
+              "immediateFeedback": "現地ログに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": 1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、現地ログと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "現地ログの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は警告 18件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "負荷率 88%の不確実性を理由に、判断範囲を絞る",
+              "text": "負荷率 88%の不確実性を理由に、判断範囲を絞る。材料は現地ログ、警告 18件、負荷率 88%。",
+              "immediateFeedback": "現地ログに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": -1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": -1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": -1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、現地ログと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "現地ログの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は警告 18件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "technical-field-support-現地ログ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "technical-field-support-現地ログ判断",
+            "roleSpecificMaterials": [
+              "現地ログ",
+              "判断対象: 現地ログ"
+            ],
+            "roleSpecificMetrics": [
+              "警告 18件",
+              "負荷率 88%"
+            ],
+            "roleSpecificFailureRisk": "現地ログを読まず、警告 18件か負荷率 88%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "警告 18件と負荷率 88%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "現地ログ、警告 18件、負荷率 88%を判断の主役にしている。",
+            "kernelConnection": "現地ログをtechnical-field-support-現地ログ判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "technical-field-support-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "仕様書",
+          "openingHook": "12:20。仕様書に推奨温度 35度と保証外 2条件が並んでいる。",
+          "context": "技術営業/フィールドサポートとして仕様書を確認する。推奨温度 35度、保証外 2条件が今日の判断材料になる。",
+          "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、仕様書を読んで次の作業判断を残す。",
+          "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+          "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は仕様書である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "推奨温度 35度の背景と保証外 2条件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "推奨温度 35度を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "technical-field-support-仕様書判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は部品交換 6万円で副作用を確認する。",
+          "npcDialogue": "先輩:「仕様書を読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+          "workMaterial": "仕様書\n- 推奨温度 35度\n- 保証外 2条件\n- 判断対象: 仕様書",
+          "decisionPrompt": "technical-field-support-仕様書判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "推奨温度 35度を重く見て、当日中に前へ進める",
+              "text": "推奨温度 35度を重く見て、当日中に前へ進める。材料は仕様書、推奨温度 35度、保証外 2条件。",
+              "immediateFeedback": "仕様書に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 2,
+                "technical_field_support_risk": -1,
+                "technical_field_support_speed": 2,
+                "technical_field_support_value": -1,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、仕様書と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "仕様書の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は推奨温度 35度の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "仕様書の推奨温度 35度と保証外 2条件を突き合わせ、条件付きで進める",
+              "text": "仕様書の推奨温度 35度と保証外 2条件を突き合わせ、条件付きで進める。材料は仕様書、推奨温度 35度、保証外 2条件。",
+              "immediateFeedback": "仕様書に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": 1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、仕様書と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "仕様書の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は推奨温度 35度の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "保証外 2条件の不確実性を理由に、判断範囲を絞る",
+              "text": "保証外 2条件の不確実性を理由に、判断範囲を絞る。材料は仕様書、推奨温度 35度、保証外 2条件。",
+              "immediateFeedback": "仕様書に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": -1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": -1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": -1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、仕様書と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "仕様書の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は推奨温度 35度の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "technical-field-support-仕様書判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "technical-field-support-仕様書判断",
+            "roleSpecificMaterials": [
+              "仕様書",
+              "判断対象: 仕様書"
+            ],
+            "roleSpecificMetrics": [
+              "推奨温度 35度",
+              "保証外 2条件"
+            ],
+            "roleSpecificFailureRisk": "仕様書を読まず、推奨温度 35度か保証外 2条件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "推奨温度 35度と保証外 2条件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "仕様書、推奨温度 35度、保証外 2条件を判断の主役にしている。",
+            "kernelConnection": "仕様書をtechnical-field-support-仕様書判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "technical-field-support-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "対策案",
+          "openingHook": "14:15。対策案に部品交換 6万円と調整 90分が並んでいる。",
+          "context": "技術営業/フィールドサポートとして対策案を確認する。部品交換 6万円、調整 90分が今日の判断材料になる。",
+          "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、対策案を読んで次の作業判断を残す。",
+          "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+          "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は対策案である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "部品交換 6万円の背景と調整 90分の確度が完全にはそろっていない。",
+          "decisionTradeoff": "部品交換 6万円を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "technical-field-support-対策案判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は再発率 12%で副作用を確認する。",
+          "npcDialogue": "先輩:「対策案を読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+          "workMaterial": "対策案\n- 部品交換 6万円\n- 調整 90分\n- 判断対象: 対策案",
+          "decisionPrompt": "technical-field-support-対策案判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "部品交換 6万円を重く見て、当日中に前へ進める",
+              "text": "部品交換 6万円を重く見て、当日中に前へ進める。材料は対策案、部品交換 6万円、調整 90分。",
+              "immediateFeedback": "対策案に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 2,
+                "technical_field_support_risk": -1,
+                "technical_field_support_speed": 2,
+                "technical_field_support_value": -1,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、対策案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対策案の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は部品交換 6万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "対策案の部品交換 6万円と調整 90分を突き合わせ、条件付きで進める",
+              "text": "対策案の部品交換 6万円と調整 90分を突き合わせ、条件付きで進める。材料は対策案、部品交換 6万円、調整 90分。",
+              "immediateFeedback": "対策案に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": 1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、対策案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対策案の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は部品交換 6万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "調整 90分の不確実性を理由に、判断範囲を絞る",
+              "text": "調整 90分の不確実性を理由に、判断範囲を絞る。材料は対策案、部品交換 6万円、調整 90分。",
+              "immediateFeedback": "対策案に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": -1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": -1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": -1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、対策案と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対策案の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は部品交換 6万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "technical-field-support-対策案判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "technical-field-support-対策案判断",
+            "roleSpecificMaterials": [
+              "対策案",
+              "判断対象: 対策案"
+            ],
+            "roleSpecificMetrics": [
+              "部品交換 6万円",
+              "調整 90分"
+            ],
+            "roleSpecificFailureRisk": "対策案を読まず、部品交換 6万円か調整 90分のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "部品交換 6万円と調整 90分を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "対策案、部品交換 6万円、調整 90分を判断の主役にしている。",
+            "kernelConnection": "対策案をtechnical-field-support-対策案判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "technical-field-support-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "報告書",
+          "openingHook": "16:35。報告書に再発率 12%と次回点検 30日後が並んでいる。",
+          "context": "技術営業/フィールドサポートとして報告書を確認する。再発率 12%、次回点検 30日後が今日の判断材料になる。",
+          "content": "顧客不具合・使用条件・仕様制約を技術提案へ変換するため、報告書を読んで次の作業判断を残す。",
+          "roleSpecificContext": "技術営業/フィールドサポートは顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+          "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は報告書である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "再発率 12%の背景と次回点検 30日後の確度が完全にはそろっていない。",
+          "decisionTradeoff": "再発率 12%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "technical-field-support-報告書判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「報告書を読まずに進めると、技術営業/フィールドサポートの判断ではなくなる」",
+          "workMaterial": "報告書\n- 再発率 12%\n- 次回点検 30日後\n- 判断対象: 報告書",
+          "decisionPrompt": "technical-field-support-報告書判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "再発率 12%を重く見て、当日中に前へ進める",
+              "text": "再発率 12%を重く見て、当日中に前へ進める。材料は報告書、再発率 12%、次回点検 30日後。",
+              "immediateFeedback": "報告書に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 2,
+                "technical_field_support_risk": -1,
+                "technical_field_support_speed": 2,
+                "technical_field_support_value": -1,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、報告書と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "報告書の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は再発率 12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "報告書の再発率 12%と次回点検 30日後を突き合わせ、条件付きで進める",
+              "text": "報告書の再発率 12%と次回点検 30日後を突き合わせ、条件付きで進める。材料は報告書、再発率 12%、次回点検 30日後。",
+              "immediateFeedback": "報告書に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": 1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": 1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": 1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、報告書と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "報告書の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は再発率 12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "次回点検 30日後の不確実性を理由に、判断範囲を絞る",
+              "text": "次回点検 30日後の不確実性を理由に、判断範囲を絞る。材料は報告書、再発率 12%、次回点検 30日後。",
+              "immediateFeedback": "報告書に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "技術営業/フィールドサポートで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "technical_field_support_evidence": -1,
+                "technical_field_support_risk": 2,
+                "technical_field_support_speed": -1,
+                "technical_field_support_value": 2,
+                "technical_field_support_feasibility": -1
+              },
+              "misconceptionEffect": "技術営業/フィールドサポートは印象ではなく、報告書と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "報告書の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は再発率 12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "technical-field-support-報告書判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "technical-field-support-報告書判断",
+            "roleSpecificMaterials": [
+              "報告書",
+              "判断対象: 報告書"
+            ],
+            "roleSpecificMetrics": [
+              "再発率 12%",
+              "次回点検 30日後"
+            ],
+            "roleSpecificFailureRisk": "報告書を読まず、再発率 12%か次回点検 30日後のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "再発率 12%と次回点検 30日後を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "報告書、再発率 12%、次回点検 30日後を判断の主役にしている。",
+            "kernelConnection": "報告書をtechnical-field-support-報告書判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "技術営業/フィールドサポートの材料翻訳型",
+      "strengths": [
+        "技術営業/フィールドサポートの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "technical_field_support_evidence",
+        "technical_field_support_risk"
+      ],
+      "valuedMeters": [
+        "technical_field_support_evidence"
+      ],
+      "sacrificedMeters": [
+        "technical_field_support_speed"
+      ],
+      "roleRealityReveal": "技術営業/フィールドサポートは、顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "技術営業/フィールドサポートの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "技術営業/フィールドサポートの推進型",
+      "strengths": [
+        "技術営業/フィールドサポートの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "technical_field_support_risk",
+        "technical_field_support_speed"
+      ],
+      "valuedMeters": [
+        "technical_field_support_risk"
+      ],
+      "sacrificedMeters": [
+        "technical_field_support_value"
+      ],
+      "roleRealityReveal": "技術営業/フィールドサポートは、顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "技術営業/フィールドサポートの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "技術営業/フィールドサポートの安全設計型",
+      "strengths": [
+        "技術営業/フィールドサポートの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "technical_field_support_speed",
+        "technical_field_support_value"
+      ],
+      "valuedMeters": [
+        "technical_field_support_speed"
+      ],
+      "sacrificedMeters": [
+        "technical_field_support_feasibility"
+      ],
+      "roleRealityReveal": "技術営業/フィールドサポートは、顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "技術営業/フィールドサポートの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "技術営業/フィールドサポートは、顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "技術営業/フィールドサポートとして、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "technical-field-support_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "technical_field_support_evidence_vs_technical_field_support_risk",
+      "technical_field_support_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "technical_field_support_evidence",
+      "label": "evidence",
+      "description": "技術営業/フィールドサポートのevidence判断"
+    },
+    {
+      "key": "technical_field_support_risk",
+      "label": "risk",
+      "description": "技術営業/フィールドサポートのrisk判断"
+    },
+    {
+      "key": "technical_field_support_speed",
+      "label": "speed",
+      "description": "技術営業/フィールドサポートのspeed判断"
+    },
+    {
+      "key": "technical_field_support_value",
+      "label": "value",
+      "description": "技術営業/フィールドサポートのvalue判断"
+    },
+    {
+      "key": "technical_field_support_feasibility",
+      "label": "feasibility",
+      "description": "技術営業/フィールドサポートのfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "技術営業/フィールドサポートの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "technical_field_support_evidence",
+      "technical_field_support_risk",
+      "technical_field_support_speed",
+      "technical_field_support_value",
+      "technical_field_support_feasibility"
+    ]
+  },
+  "roleCoreFriction": "顧客不具合・使用条件・仕様制約を技術提案へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "技術営業/フィールドサポートは会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "技術営業/フィールドサポートは、顧客不具合・使用条件・仕様制約を技術提案へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "停止 3回、警告 18件、推奨温度 35度、部品交換 6万円、再発率 12%、関係者制約、期限",
+    "output": "技術営業/フィールドサポートとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "顧客不具合・使用条件・仕様制約を技術提案へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "停止 3回",
+      "警告 18件",
+      "推奨温度 35度",
+      "部品交換 6万円",
+      "再発率 12%"
+    ],
+    "metrics": [
+      "停止 3回",
+      "使用温度 42度",
+      "警告 18件",
+      "負荷率 88%",
+      "推奨温度 35度",
+      "保証外 2条件",
+      "部品交換 6万円",
+      "調整 90分",
+      "再発率 12%",
+      "次回点検 30日後"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "停止 3回、警告 18件、推奨温度 35度と使用温度 42度、、負荷率 88%を読まなければ成立しないため。"
+  }
+}

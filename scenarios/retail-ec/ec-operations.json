@@ -1,0 +1,2192 @@
+{
+  "id": "retail-ec/ec-operations",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "小売/流通/EC",
+  "industrySlug": "retail-ec",
+  "role": "EC運営",
+  "roleSlug": "ec-operations",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "理系向け"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 小売/流通/EC EC運営.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "retail-ec",
+      "ec-operations"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "アクセス解析表"
+    },
+    {
+      "time": "10:35",
+      "label": "商品ページ診断"
+    },
+    {
+      "time": "12:20",
+      "label": "在庫連動表"
+    },
+    {
+      "time": "14:05",
+      "label": "キャンペーン設定表"
+    },
+    {
+      "time": "16:25",
+      "label": "運営アラート表"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "アクセス解析表"
+    },
+    {
+      "time": "10:35",
+      "label": "商品ページ診断"
+    },
+    {
+      "time": "12:20",
+      "label": "在庫連動表"
+    },
+    {
+      "time": "14:05",
+      "label": "キャンペーン設定表"
+    },
+    {
+      "time": "16:25",
+      "label": "運営アラート表"
+    }
+  ],
+  "sceneList": [
+    "ec-operations-01",
+    "ec-operations-02",
+    "ec-operations-03",
+    "ec-operations-04",
+    "ec-operations-05"
+  ],
+  "meta": {
+    "title": "EC運営",
+    "industry": "小売/流通/EC",
+    "role": "EC運営",
+    "duration_minutes": 18,
+    "description": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "ec-operations-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "アクセス解析表",
+      "openingHook": "09:10。アクセス解析表に流入 32,000件とCVR 1.9%が並んでいる。",
+      "context": "EC運営としてアクセス解析表を確認する。流入 32,000件、CVR 1.9%が今日の判断材料になる。",
+      "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、アクセス解析表を読んで改善導線を選ぶ。",
+      "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+      "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料はアクセス解析表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "流入 32,000件の背景とCVR 1.9%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "流入 32,000件を重く見るほど、CVR 1.9%や別の制約を犠牲にする。",
+      "consequenceHook": "ec-operations-流入 32,000件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は商品ページ診断で副作用を確認する。",
+      "npcDialogue": "先輩:「アクセス解析表を読まずに進めると、EC運営の判断ではなくなる」",
+      "workMaterial": "アクセス解析表\n- 流入 32,000件\n- CVR 1.9%\n- 判断対象: アクセス解析表",
+      "decisionPrompt": "ec-operations-流入 32,000件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "流入 32,000件を優先し、当日中にアクセス解析表の結論を出す",
+          "text": "流入 32,000件を優先し、当日中にアクセス解析表の結論を出す。材料は流入 32,000件、CVR 1.9%。",
+          "immediateFeedback": "流入 32,000件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 2,
+            "ec_operations_risk": -1,
+            "ec_operations_speed": 2,
+            "ec_operations_value": -1,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は印象ではなく、流入 32,000件とCVR 1.9%を読んで判断する。",
+          "studentFeedback": {
+            "good": "流入 32,000件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はCVR 1.9%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "流入 32,000件とCVR 1.9%を突き合わせ、条件付きで進める",
+          "text": "流入 32,000件とCVR 1.9%を突き合わせ、条件付きで進める。材料は流入 32,000件、CVR 1.9%。",
+          "immediateFeedback": "アクセス解析表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": 1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "流入 32,000件とCVR 1.9%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はアクセス解析表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "CVR 1.9%の制約を重く見て、判断範囲を絞る",
+          "text": "CVR 1.9%の制約を重く見て、判断範囲を絞る。材料は流入 32,000件、CVR 1.9%。",
+          "immediateFeedback": "CVR 1.9%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": -1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": -1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": -1
+          },
+          "misconceptionEffect": "EC運営は慎重さだけでなく、流入 32,000件とCVR 1.9%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "CVR 1.9%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は流入 32,000件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "ec-operations-流入 32,000件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "理系向け"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "ec-operations-流入 32,000件判断",
+        "roleSpecificMaterials": [
+          "アクセス解析表",
+          "判断対象: アクセス解析表"
+        ],
+        "roleSpecificMetrics": [
+          "流入 32,000件",
+          "CVR 1.9%"
+        ],
+        "roleSpecificFailureRisk": "アクセス解析表を読まず、流入 32,000件かCVR 1.9%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "流入 32,000件とCVR 1.9%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "アクセス解析表、流入 32,000件、CVR 1.9%を判断の主役にしている。",
+        "kernelConnection": "アクセス解析表をec-operations-流入 32,000件判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "ec-operations-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "商品ページ診断",
+      "openingHook": "10:35。商品ページ診断に離脱率 48%と画像不足 3枚が並んでいる。",
+      "context": "EC運営として商品ページ診断を確認する。離脱率 48%、画像不足 3枚が今日の判断材料になる。",
+      "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、商品ページ診断を読んで修正箇所を決める。",
+      "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+      "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は商品ページ診断である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "離脱率 48%の背景と画像不足 3枚の確度が完全にはそろっていない。",
+      "decisionTradeoff": "離脱率 48%を重く見るほど、画像不足 3枚や別の制約を犠牲にする。",
+      "consequenceHook": "ec-operations-離脱率 48%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は在庫連動表で副作用を確認する。",
+      "npcDialogue": "先輩:「商品ページ診断を読まずに進めると、EC運営の判断ではなくなる」",
+      "workMaterial": "商品ページ診断\n- 離脱率 48%\n- 画像不足 3枚\n- 判断対象: 商品ページ診断",
+      "decisionPrompt": "ec-operations-離脱率 48%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "離脱率 48%を優先し、当日中に商品ページ診断の結論を出す",
+          "text": "離脱率 48%を優先し、当日中に商品ページ診断の結論を出す。材料は離脱率 48%、画像不足 3枚。",
+          "immediateFeedback": "離脱率 48%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 2,
+            "ec_operations_risk": -1,
+            "ec_operations_speed": 2,
+            "ec_operations_value": -1,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は印象ではなく、離脱率 48%と画像不足 3枚を読んで判断する。",
+          "studentFeedback": {
+            "good": "離脱率 48%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は画像不足 3枚の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "離脱率 48%と画像不足 3枚を突き合わせ、条件付きで進める",
+          "text": "離脱率 48%と画像不足 3枚を突き合わせ、条件付きで進める。材料は離脱率 48%、画像不足 3枚。",
+          "immediateFeedback": "商品ページ診断に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": 1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "離脱率 48%と画像不足 3枚を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は商品ページ診断の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "画像不足 3枚の制約を重く見て、判断範囲を絞る",
+          "text": "画像不足 3枚の制約を重く見て、判断範囲を絞る。材料は離脱率 48%、画像不足 3枚。",
+          "immediateFeedback": "画像不足 3枚に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": -1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": -1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": -1
+          },
+          "misconceptionEffect": "EC運営は慎重さだけでなく、離脱率 48%と画像不足 3枚の副作用まで読む。",
+          "studentFeedback": {
+            "good": "画像不足 3枚の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は離脱率 48%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "ec-operations-離脱率 48%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "理系向け"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "ec-operations-離脱率 48%判断",
+        "roleSpecificMaterials": [
+          "商品ページ診断",
+          "判断対象: 商品ページ診断"
+        ],
+        "roleSpecificMetrics": [
+          "離脱率 48%",
+          "画像不足 3枚"
+        ],
+        "roleSpecificFailureRisk": "商品ページ診断を読まず、離脱率 48%か画像不足 3枚のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "離脱率 48%と画像不足 3枚を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "商品ページ診断、離脱率 48%、画像不足 3枚を判断の主役にしている。",
+        "kernelConnection": "商品ページ診断をec-operations-離脱率 48%判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "ec-operations-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "在庫連動表",
+      "openingHook": "12:20。在庫連動表に在庫 420点と欠品予測 5日が並んでいる。",
+      "context": "EC運営として在庫連動表を確認する。在庫 420点、欠品予測 5日が今日の判断材料になる。",
+      "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、在庫連動表を読んで露出量を調整する。",
+      "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+      "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は在庫連動表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "在庫 420点の背景と欠品予測 5日の確度が完全にはそろっていない。",
+      "decisionTradeoff": "在庫 420点を重く見るほど、欠品予測 5日や別の制約を犠牲にする。",
+      "consequenceHook": "ec-operations-在庫 420点判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次はキャンペーン設定表で副作用を確認する。",
+      "npcDialogue": "先輩:「在庫連動表を読まずに進めると、EC運営の判断ではなくなる」",
+      "workMaterial": "在庫連動表\n- 在庫 420点\n- 欠品予測 5日\n- 判断対象: 在庫連動表",
+      "decisionPrompt": "ec-operations-在庫 420点判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "在庫 420点を優先し、当日中に在庫連動表の結論を出す",
+          "text": "在庫 420点を優先し、当日中に在庫連動表の結論を出す。材料は在庫 420点、欠品予測 5日。",
+          "immediateFeedback": "在庫 420点に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 2,
+            "ec_operations_risk": -1,
+            "ec_operations_speed": 2,
+            "ec_operations_value": -1,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は印象ではなく、在庫 420点と欠品予測 5日を読んで判断する。",
+          "studentFeedback": {
+            "good": "在庫 420点の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は欠品予測 5日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "在庫 420点と欠品予測 5日を突き合わせ、条件付きで進める",
+          "text": "在庫 420点と欠品予測 5日を突き合わせ、条件付きで進める。材料は在庫 420点、欠品予測 5日。",
+          "immediateFeedback": "在庫連動表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": 1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "在庫 420点と欠品予測 5日を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は在庫連動表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "欠品予測 5日の制約を重く見て、判断範囲を絞る",
+          "text": "欠品予測 5日の制約を重く見て、判断範囲を絞る。材料は在庫 420点、欠品予測 5日。",
+          "immediateFeedback": "欠品予測 5日に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": -1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": -1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": -1
+          },
+          "misconceptionEffect": "EC運営は慎重さだけでなく、在庫 420点と欠品予測 5日の副作用まで読む。",
+          "studentFeedback": {
+            "good": "欠品予測 5日の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は在庫 420点を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "ec-operations-在庫 420点判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "理系向け"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "ec-operations-在庫 420点判断",
+        "roleSpecificMaterials": [
+          "在庫連動表",
+          "判断対象: 在庫連動表"
+        ],
+        "roleSpecificMetrics": [
+          "在庫 420点",
+          "欠品予測 5日"
+        ],
+        "roleSpecificFailureRisk": "在庫連動表を読まず、在庫 420点か欠品予測 5日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "在庫 420点と欠品予測 5日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "在庫連動表、在庫 420点、欠品予測 5日を判断の主役にしている。",
+        "kernelConnection": "在庫連動表をec-operations-在庫 420点判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "ec-operations-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "キャンペーン設定表",
+      "openingHook": "14:05。キャンペーン設定表に割引 15%と粗利低下 6ptが並んでいる。",
+      "context": "EC運営としてキャンペーン設定表を確認する。割引 15%、粗利低下 6ptが今日の判断材料になる。",
+      "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、キャンペーン設定表を読んで条件を切る。",
+      "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+      "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料はキャンペーン設定表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "割引 15%の背景と粗利低下 6ptの確度が完全にはそろっていない。",
+      "decisionTradeoff": "割引 15%を重く見るほど、粗利低下 6ptや別の制約を犠牲にする。",
+      "consequenceHook": "ec-operations-割引 15%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は運営アラート表で副作用を確認する。",
+      "npcDialogue": "先輩:「キャンペーン設定表を読まずに進めると、EC運営の判断ではなくなる」",
+      "workMaterial": "キャンペーン設定表\n- 割引 15%\n- 粗利低下 6pt\n- 判断対象: キャンペーン設定表",
+      "decisionPrompt": "ec-operations-割引 15%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "割引 15%を優先し、当日中にキャンペーン設定表の結論を出す",
+          "text": "割引 15%を優先し、当日中にキャンペーン設定表の結論を出す。材料は割引 15%、粗利低下 6pt。",
+          "immediateFeedback": "割引 15%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 2,
+            "ec_operations_risk": -1,
+            "ec_operations_speed": 2,
+            "ec_operations_value": -1,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は印象ではなく、割引 15%と粗利低下 6ptを読んで判断する。",
+          "studentFeedback": {
+            "good": "割引 15%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は粗利低下 6ptの副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "割引 15%と粗利低下 6ptを突き合わせ、条件付きで進める",
+          "text": "割引 15%と粗利低下 6ptを突き合わせ、条件付きで進める。材料は割引 15%、粗利低下 6pt。",
+          "immediateFeedback": "キャンペーン設定表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": 1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "割引 15%と粗利低下 6ptを両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はキャンペーン設定表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "粗利低下 6ptの制約を重く見て、判断範囲を絞る",
+          "text": "粗利低下 6ptの制約を重く見て、判断範囲を絞る。材料は割引 15%、粗利低下 6pt。",
+          "immediateFeedback": "粗利低下 6ptに基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": -1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": -1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": -1
+          },
+          "misconceptionEffect": "EC運営は慎重さだけでなく、割引 15%と粗利低下 6ptの副作用まで読む。",
+          "studentFeedback": {
+            "good": "粗利低下 6ptの制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は割引 15%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "ec-operations-割引 15%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "理系向け"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "ec-operations-割引 15%判断",
+        "roleSpecificMaterials": [
+          "キャンペーン設定表",
+          "判断対象: キャンペーン設定表"
+        ],
+        "roleSpecificMetrics": [
+          "割引 15%",
+          "粗利低下 6pt"
+        ],
+        "roleSpecificFailureRisk": "キャンペーン設定表を読まず、割引 15%か粗利低下 6ptのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "割引 15%と粗利低下 6ptを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "キャンペーン設定表、割引 15%、粗利低下 6ptを判断の主役にしている。",
+        "kernelConnection": "キャンペーン設定表をec-operations-割引 15%判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "ec-operations-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "運営アラート表",
+      "openingHook": "16:25。運営アラート表に配送遅延 9件と問い合わせ 36件が並んでいる。",
+      "context": "EC運営として運営アラート表を確認する。配送遅延 9件、問い合わせ 36件が今日の判断材料になる。",
+      "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、運営アラート表を読んで告知範囲を決める。",
+      "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+      "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は運営アラート表である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "配送遅延 9件の背景と問い合わせ 36件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "配送遅延 9件を重く見るほど、問い合わせ 36件や別の制約を犠牲にする。",
+      "consequenceHook": "ec-operations-配送遅延 9件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「運営アラート表を読まずに進めると、EC運営の判断ではなくなる」",
+      "workMaterial": "運営アラート表\n- 配送遅延 9件\n- 問い合わせ 36件\n- 判断対象: 運営アラート表",
+      "decisionPrompt": "ec-operations-配送遅延 9件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "配送遅延 9件を優先し、当日中に運営アラート表の結論を出す",
+          "text": "配送遅延 9件を優先し、当日中に運営アラート表の結論を出す。材料は配送遅延 9件、問い合わせ 36件。",
+          "immediateFeedback": "配送遅延 9件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 2,
+            "ec_operations_risk": -1,
+            "ec_operations_speed": 2,
+            "ec_operations_value": -1,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は印象ではなく、配送遅延 9件と問い合わせ 36件を読んで判断する。",
+          "studentFeedback": {
+            "good": "配送遅延 9件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は問い合わせ 36件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "配送遅延 9件と問い合わせ 36件を突き合わせ、条件付きで進める",
+          "text": "配送遅延 9件と問い合わせ 36件を突き合わせ、条件付きで進める。材料は配送遅延 9件、問い合わせ 36件。",
+          "immediateFeedback": "運営アラート表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": 1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": 1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": 1
+          },
+          "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "配送遅延 9件と問い合わせ 36件を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は運営アラート表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "問い合わせ 36件の制約を重く見て、判断範囲を絞る",
+          "text": "問い合わせ 36件の制約を重く見て、判断範囲を絞る。材料は配送遅延 9件、問い合わせ 36件。",
+          "immediateFeedback": "問い合わせ 36件に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "ec_operations_evidence": -1,
+            "ec_operations_risk": 2,
+            "ec_operations_speed": -1,
+            "ec_operations_value": 2,
+            "ec_operations_feasibility": -1
+          },
+          "misconceptionEffect": "EC運営は慎重さだけでなく、配送遅延 9件と問い合わせ 36件の副作用まで読む。",
+          "studentFeedback": {
+            "good": "問い合わせ 36件の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は配送遅延 9件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "ec-operations-配送遅延 9件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "理系向け"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "ec-operations-配送遅延 9件判断",
+        "roleSpecificMaterials": [
+          "運営アラート表",
+          "判断対象: 運営アラート表"
+        ],
+        "roleSpecificMetrics": [
+          "配送遅延 9件",
+          "問い合わせ 36件"
+        ],
+        "roleSpecificFailureRisk": "運営アラート表を読まず、配送遅延 9件か問い合わせ 36件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "配送遅延 9件と問い合わせ 36件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "運営アラート表、配送遅延 9件、問い合わせ 36件を判断の主役にしている。",
+        "kernelConnection": "運営アラート表をec-operations-配送遅延 9件判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。EC運営として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "ec-operations-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "アクセス解析表",
+          "openingHook": "09:10。アクセス解析表に流入 32,000件とCVR 1.9%が並んでいる。",
+          "context": "EC運営としてアクセス解析表を確認する。流入 32,000件、CVR 1.9%が今日の判断材料になる。",
+          "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、アクセス解析表を読んで改善導線を選ぶ。",
+          "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+          "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料はアクセス解析表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "流入 32,000件の背景とCVR 1.9%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "流入 32,000件を重く見るほど、CVR 1.9%や別の制約を犠牲にする。",
+          "consequenceHook": "ec-operations-流入 32,000件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は商品ページ診断で副作用を確認する。",
+          "npcDialogue": "先輩:「アクセス解析表を読まずに進めると、EC運営の判断ではなくなる」",
+          "workMaterial": "アクセス解析表\n- 流入 32,000件\n- CVR 1.9%\n- 判断対象: アクセス解析表",
+          "decisionPrompt": "ec-operations-流入 32,000件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "流入 32,000件を優先し、当日中にアクセス解析表の結論を出す",
+              "text": "流入 32,000件を優先し、当日中にアクセス解析表の結論を出す。材料は流入 32,000件、CVR 1.9%。",
+              "immediateFeedback": "流入 32,000件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 2,
+                "ec_operations_risk": -1,
+                "ec_operations_speed": 2,
+                "ec_operations_value": -1,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は印象ではなく、流入 32,000件とCVR 1.9%を読んで判断する。",
+              "studentFeedback": {
+                "good": "流入 32,000件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はCVR 1.9%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "流入 32,000件とCVR 1.9%を突き合わせ、条件付きで進める",
+              "text": "流入 32,000件とCVR 1.9%を突き合わせ、条件付きで進める。材料は流入 32,000件、CVR 1.9%。",
+              "immediateFeedback": "アクセス解析表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": 1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "流入 32,000件とCVR 1.9%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はアクセス解析表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "CVR 1.9%の制約を重く見て、判断範囲を絞る",
+              "text": "CVR 1.9%の制約を重く見て、判断範囲を絞る。材料は流入 32,000件、CVR 1.9%。",
+              "immediateFeedback": "CVR 1.9%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": -1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": -1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": -1
+              },
+              "misconceptionEffect": "EC運営は慎重さだけでなく、流入 32,000件とCVR 1.9%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "CVR 1.9%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は流入 32,000件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "ec-operations-流入 32,000件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "理系向け"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "ec-operations-流入 32,000件判断",
+            "roleSpecificMaterials": [
+              "アクセス解析表",
+              "判断対象: アクセス解析表"
+            ],
+            "roleSpecificMetrics": [
+              "流入 32,000件",
+              "CVR 1.9%"
+            ],
+            "roleSpecificFailureRisk": "アクセス解析表を読まず、流入 32,000件かCVR 1.9%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "流入 32,000件とCVR 1.9%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "アクセス解析表、流入 32,000件、CVR 1.9%を判断の主役にしている。",
+            "kernelConnection": "アクセス解析表をec-operations-流入 32,000件判断へ接続する。"
+          }
+        },
+        {
+          "id": "ec-operations-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "商品ページ診断",
+          "openingHook": "10:35。商品ページ診断に離脱率 48%と画像不足 3枚が並んでいる。",
+          "context": "EC運営として商品ページ診断を確認する。離脱率 48%、画像不足 3枚が今日の判断材料になる。",
+          "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、商品ページ診断を読んで修正箇所を決める。",
+          "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+          "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は商品ページ診断である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "離脱率 48%の背景と画像不足 3枚の確度が完全にはそろっていない。",
+          "decisionTradeoff": "離脱率 48%を重く見るほど、画像不足 3枚や別の制約を犠牲にする。",
+          "consequenceHook": "ec-operations-離脱率 48%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は在庫連動表で副作用を確認する。",
+          "npcDialogue": "先輩:「商品ページ診断を読まずに進めると、EC運営の判断ではなくなる」",
+          "workMaterial": "商品ページ診断\n- 離脱率 48%\n- 画像不足 3枚\n- 判断対象: 商品ページ診断",
+          "decisionPrompt": "ec-operations-離脱率 48%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "離脱率 48%を優先し、当日中に商品ページ診断の結論を出す",
+              "text": "離脱率 48%を優先し、当日中に商品ページ診断の結論を出す。材料は離脱率 48%、画像不足 3枚。",
+              "immediateFeedback": "離脱率 48%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 2,
+                "ec_operations_risk": -1,
+                "ec_operations_speed": 2,
+                "ec_operations_value": -1,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は印象ではなく、離脱率 48%と画像不足 3枚を読んで判断する。",
+              "studentFeedback": {
+                "good": "離脱率 48%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は画像不足 3枚の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "離脱率 48%と画像不足 3枚を突き合わせ、条件付きで進める",
+              "text": "離脱率 48%と画像不足 3枚を突き合わせ、条件付きで進める。材料は離脱率 48%、画像不足 3枚。",
+              "immediateFeedback": "商品ページ診断に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": 1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "離脱率 48%と画像不足 3枚を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は商品ページ診断の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "画像不足 3枚の制約を重く見て、判断範囲を絞る",
+              "text": "画像不足 3枚の制約を重く見て、判断範囲を絞る。材料は離脱率 48%、画像不足 3枚。",
+              "immediateFeedback": "画像不足 3枚に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": -1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": -1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": -1
+              },
+              "misconceptionEffect": "EC運営は慎重さだけでなく、離脱率 48%と画像不足 3枚の副作用まで読む。",
+              "studentFeedback": {
+                "good": "画像不足 3枚の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は離脱率 48%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "ec-operations-離脱率 48%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "理系向け"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "ec-operations-離脱率 48%判断",
+            "roleSpecificMaterials": [
+              "商品ページ診断",
+              "判断対象: 商品ページ診断"
+            ],
+            "roleSpecificMetrics": [
+              "離脱率 48%",
+              "画像不足 3枚"
+            ],
+            "roleSpecificFailureRisk": "商品ページ診断を読まず、離脱率 48%か画像不足 3枚のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "離脱率 48%と画像不足 3枚を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "商品ページ診断、離脱率 48%、画像不足 3枚を判断の主役にしている。",
+            "kernelConnection": "商品ページ診断をec-operations-離脱率 48%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。EC運営として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "ec-operations-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "在庫連動表",
+          "openingHook": "12:20。在庫連動表に在庫 420点と欠品予測 5日が並んでいる。",
+          "context": "EC運営として在庫連動表を確認する。在庫 420点、欠品予測 5日が今日の判断材料になる。",
+          "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、在庫連動表を読んで露出量を調整する。",
+          "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+          "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は在庫連動表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "在庫 420点の背景と欠品予測 5日の確度が完全にはそろっていない。",
+          "decisionTradeoff": "在庫 420点を重く見るほど、欠品予測 5日や別の制約を犠牲にする。",
+          "consequenceHook": "ec-operations-在庫 420点判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次はキャンペーン設定表で副作用を確認する。",
+          "npcDialogue": "先輩:「在庫連動表を読まずに進めると、EC運営の判断ではなくなる」",
+          "workMaterial": "在庫連動表\n- 在庫 420点\n- 欠品予測 5日\n- 判断対象: 在庫連動表",
+          "decisionPrompt": "ec-operations-在庫 420点判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "在庫 420点を優先し、当日中に在庫連動表の結論を出す",
+              "text": "在庫 420点を優先し、当日中に在庫連動表の結論を出す。材料は在庫 420点、欠品予測 5日。",
+              "immediateFeedback": "在庫 420点に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 2,
+                "ec_operations_risk": -1,
+                "ec_operations_speed": 2,
+                "ec_operations_value": -1,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は印象ではなく、在庫 420点と欠品予測 5日を読んで判断する。",
+              "studentFeedback": {
+                "good": "在庫 420点の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は欠品予測 5日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "在庫 420点と欠品予測 5日を突き合わせ、条件付きで進める",
+              "text": "在庫 420点と欠品予測 5日を突き合わせ、条件付きで進める。材料は在庫 420点、欠品予測 5日。",
+              "immediateFeedback": "在庫連動表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": 1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "在庫 420点と欠品予測 5日を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は在庫連動表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "欠品予測 5日の制約を重く見て、判断範囲を絞る",
+              "text": "欠品予測 5日の制約を重く見て、判断範囲を絞る。材料は在庫 420点、欠品予測 5日。",
+              "immediateFeedback": "欠品予測 5日に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": -1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": -1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": -1
+              },
+              "misconceptionEffect": "EC運営は慎重さだけでなく、在庫 420点と欠品予測 5日の副作用まで読む。",
+              "studentFeedback": {
+                "good": "欠品予測 5日の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は在庫 420点を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "ec-operations-在庫 420点判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "理系向け"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "ec-operations-在庫 420点判断",
+            "roleSpecificMaterials": [
+              "在庫連動表",
+              "判断対象: 在庫連動表"
+            ],
+            "roleSpecificMetrics": [
+              "在庫 420点",
+              "欠品予測 5日"
+            ],
+            "roleSpecificFailureRisk": "在庫連動表を読まず、在庫 420点か欠品予測 5日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "在庫 420点と欠品予測 5日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "在庫連動表、在庫 420点、欠品予測 5日を判断の主役にしている。",
+            "kernelConnection": "在庫連動表をec-operations-在庫 420点判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。EC運営として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "ec-operations-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "キャンペーン設定表",
+          "openingHook": "14:05。キャンペーン設定表に割引 15%と粗利低下 6ptが並んでいる。",
+          "context": "EC運営としてキャンペーン設定表を確認する。割引 15%、粗利低下 6ptが今日の判断材料になる。",
+          "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、キャンペーン設定表を読んで条件を切る。",
+          "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+          "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料はキャンペーン設定表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "割引 15%の背景と粗利低下 6ptの確度が完全にはそろっていない。",
+          "decisionTradeoff": "割引 15%を重く見るほど、粗利低下 6ptや別の制約を犠牲にする。",
+          "consequenceHook": "ec-operations-割引 15%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は運営アラート表で副作用を確認する。",
+          "npcDialogue": "先輩:「キャンペーン設定表を読まずに進めると、EC運営の判断ではなくなる」",
+          "workMaterial": "キャンペーン設定表\n- 割引 15%\n- 粗利低下 6pt\n- 判断対象: キャンペーン設定表",
+          "decisionPrompt": "ec-operations-割引 15%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "割引 15%を優先し、当日中にキャンペーン設定表の結論を出す",
+              "text": "割引 15%を優先し、当日中にキャンペーン設定表の結論を出す。材料は割引 15%、粗利低下 6pt。",
+              "immediateFeedback": "割引 15%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 2,
+                "ec_operations_risk": -1,
+                "ec_operations_speed": 2,
+                "ec_operations_value": -1,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は印象ではなく、割引 15%と粗利低下 6ptを読んで判断する。",
+              "studentFeedback": {
+                "good": "割引 15%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は粗利低下 6ptの副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "割引 15%と粗利低下 6ptを突き合わせ、条件付きで進める",
+              "text": "割引 15%と粗利低下 6ptを突き合わせ、条件付きで進める。材料は割引 15%、粗利低下 6pt。",
+              "immediateFeedback": "キャンペーン設定表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": 1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "割引 15%と粗利低下 6ptを両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はキャンペーン設定表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "粗利低下 6ptの制約を重く見て、判断範囲を絞る",
+              "text": "粗利低下 6ptの制約を重く見て、判断範囲を絞る。材料は割引 15%、粗利低下 6pt。",
+              "immediateFeedback": "粗利低下 6ptに基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": -1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": -1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": -1
+              },
+              "misconceptionEffect": "EC運営は慎重さだけでなく、割引 15%と粗利低下 6ptの副作用まで読む。",
+              "studentFeedback": {
+                "good": "粗利低下 6ptの制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は割引 15%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "ec-operations-割引 15%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "理系向け"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "ec-operations-割引 15%判断",
+            "roleSpecificMaterials": [
+              "キャンペーン設定表",
+              "判断対象: キャンペーン設定表"
+            ],
+            "roleSpecificMetrics": [
+              "割引 15%",
+              "粗利低下 6pt"
+            ],
+            "roleSpecificFailureRisk": "キャンペーン設定表を読まず、割引 15%か粗利低下 6ptのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "割引 15%と粗利低下 6ptを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "キャンペーン設定表、割引 15%、粗利低下 6ptを判断の主役にしている。",
+            "kernelConnection": "キャンペーン設定表をec-operations-割引 15%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。EC運営として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "ec-operations-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "運営アラート表",
+          "openingHook": "16:25。運営アラート表に配送遅延 9件と問い合わせ 36件が並んでいる。",
+          "context": "EC運営として運営アラート表を確認する。配送遅延 9件、問い合わせ 36件が今日の判断材料になる。",
+          "content": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換するため、運営アラート表を読んで告知範囲を決める。",
+          "roleSpecificContext": "EC運営はEC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する仕事。",
+          "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は運営アラート表である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "配送遅延 9件の背景と問い合わせ 36件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "配送遅延 9件を重く見るほど、問い合わせ 36件や別の制約を犠牲にする。",
+          "consequenceHook": "ec-operations-配送遅延 9件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「運営アラート表を読まずに進めると、EC運営の判断ではなくなる」",
+          "workMaterial": "運営アラート表\n- 配送遅延 9件\n- 問い合わせ 36件\n- 判断対象: 運営アラート表",
+          "decisionPrompt": "ec-operations-配送遅延 9件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "配送遅延 9件を優先し、当日中に運営アラート表の結論を出す",
+              "text": "配送遅延 9件を優先し、当日中に運営アラート表の結論を出す。材料は配送遅延 9件、問い合わせ 36件。",
+              "immediateFeedback": "配送遅延 9件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 2,
+                "ec_operations_risk": -1,
+                "ec_operations_speed": 2,
+                "ec_operations_value": -1,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は印象ではなく、配送遅延 9件と問い合わせ 36件を読んで判断する。",
+              "studentFeedback": {
+                "good": "配送遅延 9件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は問い合わせ 36件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "配送遅延 9件と問い合わせ 36件を突き合わせ、条件付きで進める",
+              "text": "配送遅延 9件と問い合わせ 36件を突き合わせ、条件付きで進める。材料は配送遅延 9件、問い合わせ 36件。",
+              "immediateFeedback": "運営アラート表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": 1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": 1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": 1
+              },
+              "misconceptionEffect": "EC運営は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "配送遅延 9件と問い合わせ 36件を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は運営アラート表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "問い合わせ 36件の制約を重く見て、判断範囲を絞る",
+              "text": "問い合わせ 36件の制約を重く見て、判断範囲を絞る。材料は配送遅延 9件、問い合わせ 36件。",
+              "immediateFeedback": "問い合わせ 36件に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "EC運営で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "ec_operations_evidence": -1,
+                "ec_operations_risk": 2,
+                "ec_operations_speed": -1,
+                "ec_operations_value": 2,
+                "ec_operations_feasibility": -1
+              },
+              "misconceptionEffect": "EC運営は慎重さだけでなく、配送遅延 9件と問い合わせ 36件の副作用まで読む。",
+              "studentFeedback": {
+                "good": "問い合わせ 36件の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は配送遅延 9件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "ec-operations-配送遅延 9件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "理系向け"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "ec-operations-配送遅延 9件判断",
+            "roleSpecificMaterials": [
+              "運営アラート表",
+              "判断対象: 運営アラート表"
+            ],
+            "roleSpecificMetrics": [
+              "配送遅延 9件",
+              "問い合わせ 36件"
+            ],
+            "roleSpecificFailureRisk": "運営アラート表を読まず、配送遅延 9件か問い合わせ 36件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "配送遅延 9件と問い合わせ 36件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "運営アラート表、配送遅延 9件、問い合わせ 36件を判断の主役にしている。",
+            "kernelConnection": "運営アラート表をec-operations-配送遅延 9件判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "ec-operations-material-reader",
+      "title": "EC運営の材料読解型",
+      "strengths": [
+        "EC運営の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "ec_operations_evidence",
+        "ec_operations_risk"
+      ],
+      "valuedMeters": [
+        "ec_operations_evidence"
+      ],
+      "sacrificedMeters": [
+        "ec_operations_speed"
+      ],
+      "roleRealityReveal": "EC運営は、行動データ・商品ページ・在庫を読み、売れる導線と運営リスクを同時に改善する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "EC運営の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "ec-operations-constraint-designer",
+      "title": "EC運営の制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "ec_operations_risk",
+        "ec_operations_speed"
+      ],
+      "valuedMeters": [
+        "ec_operations_risk"
+      ],
+      "sacrificedMeters": [
+        "ec_operations_value"
+      ],
+      "roleRealityReveal": "EC運営は、行動データ・商品ページ・在庫を読み、売れる導線と運営リスクを同時に改善する仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "EC運営として制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "ec-operations-execution-planner",
+      "title": "EC運営の実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "ec_operations_speed",
+        "ec_operations_value"
+      ],
+      "valuedMeters": [
+        "ec_operations_speed"
+      ],
+      "sacrificedMeters": [
+        "ec_operations_feasibility"
+      ],
+      "roleRealityReveal": "EC運営は、行動データ・商品ページ・在庫を読み、売れる導線と運営リスクを同時に改善する仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "EC運営として実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "EC運営は、行動データ・商品ページ・在庫を読み、売れる導線と運営リスクを同時に改善する仕事。",
+    "misconceptionCorrection": "EC運営は印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "EC運営として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "ec-operations_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "ec_operations_conversion_vs_ec_operations_traffic",
+      "ec_operations_stock_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "ec_operations_conversion",
+      "label": "conversion",
+      "description": "EC運営のconversion判断"
+    },
+    {
+      "key": "ec_operations_traffic",
+      "label": "traffic",
+      "description": "EC運営のtraffic判断"
+    },
+    {
+      "key": "ec_operations_stock",
+      "label": "stock",
+      "description": "EC運営のstock判断"
+    },
+    {
+      "key": "ec_operations_content",
+      "label": "content",
+      "description": "EC運営のcontent判断"
+    },
+    {
+      "key": "ec_operations_speed",
+      "label": "speed",
+      "description": "EC運営のspeed判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "EC運営の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "ec_operations_conversion",
+      "ec_operations_traffic",
+      "ec_operations_stock",
+      "ec_operations_content",
+      "ec_operations_speed"
+    ]
+  },
+  "roleCoreFriction": "CVRを追うほど変更は増えるが、在庫と表示品質を読まない改善は機会損失を生む葛藤。",
+  "roleMisconception": "EC運営はページ更新やキャンペーン対応が中心で、行動データと在庫連動の判断は補助的だと思われやすい。",
+  "roleRealityReveal": "EC運営は、行動データ・商品ページ・在庫を読み、売れる導線と運営リスクを同時に改善する仕事。",
+  "roleWorkKernel": {
+    "input": "流入 32,000件、CVR 1.9%、離脱率 48%、画像不足 3枚、在庫 420点、欠品予測 5日、割引 15%、粗利低下 6pt、配送遅延 9件、問い合わせ 36件",
+    "output": "EC運営としての判断案、次回確認項目、リスクメモ",
+    "transformation": "EC行動データ、商品ページ、在庫状況を売場改善と運営判断へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "アクセス解析表",
+      "商品ページ診断",
+      "在庫連動表",
+      "キャンペーン設定表",
+      "運営アラート表"
+    ],
+    "metrics": [
+      "流入 32,000件",
+      "CVR 1.9%",
+      "離脱率 48%",
+      "画像不足 3枚",
+      "在庫 420点",
+      "欠品予測 5日",
+      "割引 15%",
+      "粗利低下 6pt",
+      "配送遅延 9件",
+      "問い合わせ 36件"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "アクセス解析表、商品ページ診断、在庫連動表と流入 32,000件、離脱率 48%を読まなければ成立しないため。"
+  }
+}

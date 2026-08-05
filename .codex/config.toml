@@ -1,16 +1,14 @@
-# WorkSim — Codex CLI config (pm-zero v9.0)
-model = "gpt-5.5"
-model_reasoning_effort = "high"
+#:schema https://developers.openai.com/codex/config-schema.json
+
 approval_policy = "never"
 sandbox_mode = "danger-full-access"
+check_for_update_on_startup = true
+project_doc_fallback_filenames = ["AGENTS.md"]
 
-[profiles.medium]
-model = "gpt-5.4"
-model_reasoning_effort = "medium"
+[features]
+hooks = true
 
-[profiles.light]
-model = "gpt-5.4-mini"
-model_reasoning_effort = "low"
-
-# Hook definitions stay in .codex/hooks.json for this repository.
-# Keep only locally verified Codex config keys here.
+[agents]
+max_threads = 4
+max_depth = 1
+job_max_runtime_seconds = 1800

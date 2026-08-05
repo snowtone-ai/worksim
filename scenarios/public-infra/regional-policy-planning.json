@@ -1,0 +1,2190 @@
+{
+  "id": "public-infra/regional-policy-planning",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "自治体/公共/インフラ",
+  "industrySlug": "public-infra",
+  "role": "地域政策担当",
+  "roleSlug": "regional-policy-planning",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "地方就職",
+    "社会貢献",
+    "企画系"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 自治体/公共/インフラ 地域政策担当.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "public-infra",
+      "regional-policy-planning"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "地域統計"
+    },
+    {
+      "time": "10:40",
+      "label": "住民意見"
+    },
+    {
+      "time": "12:20",
+      "label": "予算表"
+    },
+    {
+      "time": "14:15",
+      "label": "施策比較"
+    },
+    {
+      "time": "16:35",
+      "label": "説明資料"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "地域統計"
+    },
+    {
+      "time": "10:40",
+      "label": "住民意見"
+    },
+    {
+      "time": "12:20",
+      "label": "予算表"
+    },
+    {
+      "time": "14:15",
+      "label": "施策比較"
+    },
+    {
+      "time": "16:35",
+      "label": "説明資料"
+    }
+  ],
+  "sceneList": [
+    "regional-policy-planning-01",
+    "regional-policy-planning-02",
+    "regional-policy-planning-03",
+    "regional-policy-planning-04",
+    "regional-policy-planning-05"
+  ],
+  "meta": {
+    "title": "地域政策担当",
+    "industry": "自治体/公共/インフラ",
+    "role": "地域政策担当",
+    "duration_minutes": 18,
+    "description": "地域データ・住民声・予算制約を施策案へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "regional-policy-planning-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "地域統計",
+      "openingHook": "09:10。地域統計に人口減 -1.8%と高齢化率 36%が並んでいる。",
+      "context": "地域政策担当として地域統計を確認する。人口減 -1.8%、高齢化率 36%が今日の判断材料になる。",
+      "content": "地域データ・住民声・予算制約を施策案へ変換するため、地域統計を読んで次の作業判断を残す。",
+      "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+      "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は地域統計である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "人口減 -1.8%の背景と高齢化率 36%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "人口減 -1.8%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "regional-policy-planning-地域統計判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は要望 124件で副作用を確認する。",
+      "npcDialogue": "先輩:「地域統計を読まずに進めると、地域政策担当の判断ではなくなる」",
+      "workMaterial": "地域統計\n- 人口減 -1.8%\n- 高齢化率 36%\n- 判断対象: 地域統計",
+      "decisionPrompt": "regional-policy-planning-地域統計判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "人口減 -1.8%を重く見て、当日中に前へ進める",
+          "text": "人口減 -1.8%を重く見て、当日中に前へ進める。材料は地域統計、人口減 -1.8%、高齢化率 36%。",
+          "immediateFeedback": "地域統計に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 2,
+            "regional_policy_planning_risk": -1,
+            "regional_policy_planning_speed": 2,
+            "regional_policy_planning_value": -1,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、地域統計と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "地域統計の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は人口減 -1.8%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "地域統計の人口減 -1.8%と高齢化率 36%を突き合わせ、条件付きで進める",
+          "text": "地域統計の人口減 -1.8%と高齢化率 36%を突き合わせ、条件付きで進める。材料は地域統計、人口減 -1.8%、高齢化率 36%。",
+          "immediateFeedback": "地域統計に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": 1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、地域統計と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "地域統計の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は人口減 -1.8%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "高齢化率 36%の不確実性を理由に、判断範囲を絞る",
+          "text": "高齢化率 36%の不確実性を理由に、判断範囲を絞る。材料は地域統計、人口減 -1.8%、高齢化率 36%。",
+          "immediateFeedback": "地域統計に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": -1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": -1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": -1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、地域統計と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "地域統計の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は人口減 -1.8%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "regional-policy-planning-地域統計判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "社会貢献",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "regional-policy-planning-地域統計判断",
+        "roleSpecificMaterials": [
+          "地域統計",
+          "判断対象: 地域統計"
+        ],
+        "roleSpecificMetrics": [
+          "人口減 -1.8%",
+          "高齢化率 36%"
+        ],
+        "roleSpecificFailureRisk": "地域統計を読まず、人口減 -1.8%か高齢化率 36%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "人口減 -1.8%と高齢化率 36%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "地域統計、人口減 -1.8%、高齢化率 36%を判断の主役にしている。",
+        "kernelConnection": "地域統計をregional-policy-planning-地域統計判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "regional-policy-planning-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "住民意見",
+      "openingHook": "10:40。住民意見に要望 124件と反対 18件が並んでいる。",
+      "context": "地域政策担当として住民意見を確認する。要望 124件、反対 18件が今日の判断材料になる。",
+      "content": "地域データ・住民声・予算制約を施策案へ変換するため、住民意見を読んで次の作業判断を残す。",
+      "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+      "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は住民意見である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "要望 124件の背景と反対 18件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "要望 124件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "regional-policy-planning-住民意見判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は上限 900万円で副作用を確認する。",
+      "npcDialogue": "先輩:「住民意見を読まずに進めると、地域政策担当の判断ではなくなる」",
+      "workMaterial": "住民意見\n- 要望 124件\n- 反対 18件\n- 判断対象: 住民意見",
+      "decisionPrompt": "regional-policy-planning-住民意見判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "要望 124件を重く見て、当日中に前へ進める",
+          "text": "要望 124件を重く見て、当日中に前へ進める。材料は住民意見、要望 124件、反対 18件。",
+          "immediateFeedback": "住民意見に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 2,
+            "regional_policy_planning_risk": -1,
+            "regional_policy_planning_speed": 2,
+            "regional_policy_planning_value": -1,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、住民意見と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "住民意見の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は要望 124件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "住民意見の要望 124件と反対 18件を突き合わせ、条件付きで進める",
+          "text": "住民意見の要望 124件と反対 18件を突き合わせ、条件付きで進める。材料は住民意見、要望 124件、反対 18件。",
+          "immediateFeedback": "住民意見に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": 1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、住民意見と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "住民意見の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は要望 124件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "反対 18件の不確実性を理由に、判断範囲を絞る",
+          "text": "反対 18件の不確実性を理由に、判断範囲を絞る。材料は住民意見、要望 124件、反対 18件。",
+          "immediateFeedback": "住民意見に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": -1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": -1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": -1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、住民意見と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "住民意見の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は要望 124件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "regional-policy-planning-住民意見判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "社会貢献",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "regional-policy-planning-住民意見判断",
+        "roleSpecificMaterials": [
+          "住民意見",
+          "判断対象: 住民意見"
+        ],
+        "roleSpecificMetrics": [
+          "要望 124件",
+          "反対 18件"
+        ],
+        "roleSpecificFailureRisk": "住民意見を読まず、要望 124件か反対 18件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "要望 124件と反対 18件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "住民意見、要望 124件、反対 18件を判断の主役にしている。",
+        "kernelConnection": "住民意見をregional-policy-planning-住民意見判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "regional-policy-planning-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "予算表",
+      "openingHook": "12:20。予算表に上限 900万円と補助率 50%が並んでいる。",
+      "context": "地域政策担当として予算表を確認する。上限 900万円、補助率 50%が今日の判断材料になる。",
+      "content": "地域データ・住民声・予算制約を施策案へ変換するため、予算表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+      "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は予算表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "上限 900万円の背景と補助率 50%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "上限 900万円を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "regional-policy-planning-予算表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は効果 +12%で副作用を確認する。",
+      "npcDialogue": "先輩:「予算表を読まずに進めると、地域政策担当の判断ではなくなる」",
+      "workMaterial": "予算表\n- 上限 900万円\n- 補助率 50%\n- 判断対象: 予算表",
+      "decisionPrompt": "regional-policy-planning-予算表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "上限 900万円を重く見て、当日中に前へ進める",
+          "text": "上限 900万円を重く見て、当日中に前へ進める。材料は予算表、上限 900万円、補助率 50%。",
+          "immediateFeedback": "予算表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 2,
+            "regional_policy_planning_risk": -1,
+            "regional_policy_planning_speed": 2,
+            "regional_policy_planning_value": -1,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、予算表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "予算表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は上限 900万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "予算表の上限 900万円と補助率 50%を突き合わせ、条件付きで進める",
+          "text": "予算表の上限 900万円と補助率 50%を突き合わせ、条件付きで進める。材料は予算表、上限 900万円、補助率 50%。",
+          "immediateFeedback": "予算表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": 1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、予算表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "予算表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は上限 900万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "補助率 50%の不確実性を理由に、判断範囲を絞る",
+          "text": "補助率 50%の不確実性を理由に、判断範囲を絞る。材料は予算表、上限 900万円、補助率 50%。",
+          "immediateFeedback": "予算表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": -1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": -1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": -1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、予算表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "予算表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は上限 900万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "regional-policy-planning-予算表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "社会貢献",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "regional-policy-planning-予算表判断",
+        "roleSpecificMaterials": [
+          "予算表",
+          "判断対象: 予算表"
+        ],
+        "roleSpecificMetrics": [
+          "上限 900万円",
+          "補助率 50%"
+        ],
+        "roleSpecificFailureRisk": "予算表を読まず、上限 900万円か補助率 50%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "上限 900万円と補助率 50%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "予算表、上限 900万円、補助率 50%を判断の主役にしている。",
+        "kernelConnection": "予算表をregional-policy-planning-予算表判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "regional-policy-planning-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "施策比較",
+      "openingHook": "14:15。施策比較に効果 +12%と対象 420世帯が並んでいる。",
+      "context": "地域政策担当として施策比較を確認する。効果 +12%、対象 420世帯が今日の判断材料になる。",
+      "content": "地域データ・住民声・予算制約を施策案へ変換するため、施策比較を読んで次の作業判断を残す。",
+      "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+      "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は施策比較である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "効果 +12%の背景と対象 420世帯の確度が完全にはそろっていない。",
+      "decisionTradeoff": "効果 +12%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "regional-policy-planning-施策比較判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次はKPI 3件で副作用を確認する。",
+      "npcDialogue": "先輩:「施策比較を読まずに進めると、地域政策担当の判断ではなくなる」",
+      "workMaterial": "施策比較\n- 効果 +12%\n- 対象 420世帯\n- 判断対象: 施策比較",
+      "decisionPrompt": "regional-policy-planning-施策比較判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "効果 +12%を重く見て、当日中に前へ進める",
+          "text": "効果 +12%を重く見て、当日中に前へ進める。材料は施策比較、効果 +12%、対象 420世帯。",
+          "immediateFeedback": "施策比較に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 2,
+            "regional_policy_planning_risk": -1,
+            "regional_policy_planning_speed": 2,
+            "regional_policy_planning_value": -1,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、施策比較と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "施策比較の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は効果 +12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "施策比較の効果 +12%と対象 420世帯を突き合わせ、条件付きで進める",
+          "text": "施策比較の効果 +12%と対象 420世帯を突き合わせ、条件付きで進める。材料は施策比較、効果 +12%、対象 420世帯。",
+          "immediateFeedback": "施策比較に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": 1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、施策比較と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "施策比較の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は効果 +12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "対象 420世帯の不確実性を理由に、判断範囲を絞る",
+          "text": "対象 420世帯の不確実性を理由に、判断範囲を絞る。材料は施策比較、効果 +12%、対象 420世帯。",
+          "immediateFeedback": "施策比較に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": -1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": -1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": -1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、施策比較と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "施策比較の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は効果 +12%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "regional-policy-planning-施策比較判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "社会貢献",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "regional-policy-planning-施策比較判断",
+        "roleSpecificMaterials": [
+          "施策比較",
+          "判断対象: 施策比較"
+        ],
+        "roleSpecificMetrics": [
+          "効果 +12%",
+          "対象 420世帯"
+        ],
+        "roleSpecificFailureRisk": "施策比較を読まず、効果 +12%か対象 420世帯のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "効果 +12%と対象 420世帯を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "施策比較、効果 +12%、対象 420世帯を判断の主役にしている。",
+        "kernelConnection": "施策比較をregional-policy-planning-施策比較判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "regional-policy-planning-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "説明資料",
+      "openingHook": "16:35。説明資料にKPI 3件と議会期限 16:00が並んでいる。",
+      "context": "地域政策担当として説明資料を確認する。KPI 3件、議会期限 16:00が今日の判断材料になる。",
+      "content": "地域データ・住民声・予算制約を施策案へ変換するため、説明資料を読んで次の作業判断を残す。",
+      "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+      "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は説明資料である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "KPI 3件の背景と議会期限 16:00の確度が完全にはそろっていない。",
+      "decisionTradeoff": "KPI 3件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "regional-policy-planning-説明資料判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「説明資料を読まずに進めると、地域政策担当の判断ではなくなる」",
+      "workMaterial": "説明資料\n- KPI 3件\n- 議会期限 16:00\n- 判断対象: 説明資料",
+      "decisionPrompt": "regional-policy-planning-説明資料判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "KPI 3件を重く見て、当日中に前へ進める",
+          "text": "KPI 3件を重く見て、当日中に前へ進める。材料は説明資料、KPI 3件、議会期限 16:00。",
+          "immediateFeedback": "説明資料に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 2,
+            "regional_policy_planning_risk": -1,
+            "regional_policy_planning_speed": 2,
+            "regional_policy_planning_value": -1,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、説明資料と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "説明資料の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はKPI 3件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "説明資料のKPI 3件と議会期限 16:00を突き合わせ、条件付きで進める",
+          "text": "説明資料のKPI 3件と議会期限 16:00を突き合わせ、条件付きで進める。材料は説明資料、KPI 3件、議会期限 16:00。",
+          "immediateFeedback": "説明資料に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": 1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": 1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": 1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、説明資料と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "説明資料の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はKPI 3件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "議会期限 16:00の不確実性を理由に、判断範囲を絞る",
+          "text": "議会期限 16:00の不確実性を理由に、判断範囲を絞る。材料は説明資料、KPI 3件、議会期限 16:00。",
+          "immediateFeedback": "説明資料に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "regional_policy_planning_evidence": -1,
+            "regional_policy_planning_risk": 2,
+            "regional_policy_planning_speed": -1,
+            "regional_policy_planning_value": 2,
+            "regional_policy_planning_feasibility": -1
+          },
+          "misconceptionEffect": "地域政策担当は印象ではなく、説明資料と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "説明資料の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次はKPI 3件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "regional-policy-planning-説明資料判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "地方就職",
+          "社会貢献",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "regional-policy-planning-説明資料判断",
+        "roleSpecificMaterials": [
+          "説明資料",
+          "判断対象: 説明資料"
+        ],
+        "roleSpecificMetrics": [
+          "KPI 3件",
+          "議会期限 16:00"
+        ],
+        "roleSpecificFailureRisk": "説明資料を読まず、KPI 3件か議会期限 16:00のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "KPI 3件と議会期限 16:00を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "説明資料、KPI 3件、議会期限 16:00を判断の主役にしている。",
+        "kernelConnection": "説明資料をregional-policy-planning-説明資料判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "regional-policy-planning-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "地域統計",
+          "openingHook": "09:10。地域統計に人口減 -1.8%と高齢化率 36%が並んでいる。",
+          "context": "地域政策担当として地域統計を確認する。人口減 -1.8%、高齢化率 36%が今日の判断材料になる。",
+          "content": "地域データ・住民声・予算制約を施策案へ変換するため、地域統計を読んで次の作業判断を残す。",
+          "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+          "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は地域統計である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "人口減 -1.8%の背景と高齢化率 36%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "人口減 -1.8%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "regional-policy-planning-地域統計判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は要望 124件で副作用を確認する。",
+          "npcDialogue": "先輩:「地域統計を読まずに進めると、地域政策担当の判断ではなくなる」",
+          "workMaterial": "地域統計\n- 人口減 -1.8%\n- 高齢化率 36%\n- 判断対象: 地域統計",
+          "decisionPrompt": "regional-policy-planning-地域統計判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "人口減 -1.8%を重く見て、当日中に前へ進める",
+              "text": "人口減 -1.8%を重く見て、当日中に前へ進める。材料は地域統計、人口減 -1.8%、高齢化率 36%。",
+              "immediateFeedback": "地域統計に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 2,
+                "regional_policy_planning_risk": -1,
+                "regional_policy_planning_speed": 2,
+                "regional_policy_planning_value": -1,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、地域統計と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "地域統計の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は人口減 -1.8%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "地域統計の人口減 -1.8%と高齢化率 36%を突き合わせ、条件付きで進める",
+              "text": "地域統計の人口減 -1.8%と高齢化率 36%を突き合わせ、条件付きで進める。材料は地域統計、人口減 -1.8%、高齢化率 36%。",
+              "immediateFeedback": "地域統計に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": 1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、地域統計と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "地域統計の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は人口減 -1.8%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "高齢化率 36%の不確実性を理由に、判断範囲を絞る",
+              "text": "高齢化率 36%の不確実性を理由に、判断範囲を絞る。材料は地域統計、人口減 -1.8%、高齢化率 36%。",
+              "immediateFeedback": "地域統計に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": -1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": -1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": -1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、地域統計と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "地域統計の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は人口減 -1.8%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "regional-policy-planning-地域統計判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "社会貢献",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "regional-policy-planning-地域統計判断",
+            "roleSpecificMaterials": [
+              "地域統計",
+              "判断対象: 地域統計"
+            ],
+            "roleSpecificMetrics": [
+              "人口減 -1.8%",
+              "高齢化率 36%"
+            ],
+            "roleSpecificFailureRisk": "地域統計を読まず、人口減 -1.8%か高齢化率 36%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "人口減 -1.8%と高齢化率 36%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "地域統計、人口減 -1.8%、高齢化率 36%を判断の主役にしている。",
+            "kernelConnection": "地域統計をregional-policy-planning-地域統計判断へ接続する。"
+          }
+        },
+        {
+          "id": "regional-policy-planning-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "住民意見",
+          "openingHook": "10:40。住民意見に要望 124件と反対 18件が並んでいる。",
+          "context": "地域政策担当として住民意見を確認する。要望 124件、反対 18件が今日の判断材料になる。",
+          "content": "地域データ・住民声・予算制約を施策案へ変換するため、住民意見を読んで次の作業判断を残す。",
+          "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+          "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は住民意見である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "要望 124件の背景と反対 18件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "要望 124件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "regional-policy-planning-住民意見判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は上限 900万円で副作用を確認する。",
+          "npcDialogue": "先輩:「住民意見を読まずに進めると、地域政策担当の判断ではなくなる」",
+          "workMaterial": "住民意見\n- 要望 124件\n- 反対 18件\n- 判断対象: 住民意見",
+          "decisionPrompt": "regional-policy-planning-住民意見判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "要望 124件を重く見て、当日中に前へ進める",
+              "text": "要望 124件を重く見て、当日中に前へ進める。材料は住民意見、要望 124件、反対 18件。",
+              "immediateFeedback": "住民意見に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 2,
+                "regional_policy_planning_risk": -1,
+                "regional_policy_planning_speed": 2,
+                "regional_policy_planning_value": -1,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、住民意見と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "住民意見の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は要望 124件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "住民意見の要望 124件と反対 18件を突き合わせ、条件付きで進める",
+              "text": "住民意見の要望 124件と反対 18件を突き合わせ、条件付きで進める。材料は住民意見、要望 124件、反対 18件。",
+              "immediateFeedback": "住民意見に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": 1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、住民意見と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "住民意見の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は要望 124件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "反対 18件の不確実性を理由に、判断範囲を絞る",
+              "text": "反対 18件の不確実性を理由に、判断範囲を絞る。材料は住民意見、要望 124件、反対 18件。",
+              "immediateFeedback": "住民意見に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": -1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": -1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": -1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、住民意見と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "住民意見の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は要望 124件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "regional-policy-planning-住民意見判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "社会貢献",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "regional-policy-planning-住民意見判断",
+            "roleSpecificMaterials": [
+              "住民意見",
+              "判断対象: 住民意見"
+            ],
+            "roleSpecificMetrics": [
+              "要望 124件",
+              "反対 18件"
+            ],
+            "roleSpecificFailureRisk": "住民意見を読まず、要望 124件か反対 18件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "要望 124件と反対 18件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "住民意見、要望 124件、反対 18件を判断の主役にしている。",
+            "kernelConnection": "住民意見をregional-policy-planning-住民意見判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "regional-policy-planning-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "予算表",
+          "openingHook": "12:20。予算表に上限 900万円と補助率 50%が並んでいる。",
+          "context": "地域政策担当として予算表を確認する。上限 900万円、補助率 50%が今日の判断材料になる。",
+          "content": "地域データ・住民声・予算制約を施策案へ変換するため、予算表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+          "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は予算表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "上限 900万円の背景と補助率 50%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "上限 900万円を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "regional-policy-planning-予算表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は効果 +12%で副作用を確認する。",
+          "npcDialogue": "先輩:「予算表を読まずに進めると、地域政策担当の判断ではなくなる」",
+          "workMaterial": "予算表\n- 上限 900万円\n- 補助率 50%\n- 判断対象: 予算表",
+          "decisionPrompt": "regional-policy-planning-予算表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "上限 900万円を重く見て、当日中に前へ進める",
+              "text": "上限 900万円を重く見て、当日中に前へ進める。材料は予算表、上限 900万円、補助率 50%。",
+              "immediateFeedback": "予算表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 2,
+                "regional_policy_planning_risk": -1,
+                "regional_policy_planning_speed": 2,
+                "regional_policy_planning_value": -1,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、予算表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "予算表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は上限 900万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "予算表の上限 900万円と補助率 50%を突き合わせ、条件付きで進める",
+              "text": "予算表の上限 900万円と補助率 50%を突き合わせ、条件付きで進める。材料は予算表、上限 900万円、補助率 50%。",
+              "immediateFeedback": "予算表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": 1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、予算表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "予算表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は上限 900万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "補助率 50%の不確実性を理由に、判断範囲を絞る",
+              "text": "補助率 50%の不確実性を理由に、判断範囲を絞る。材料は予算表、上限 900万円、補助率 50%。",
+              "immediateFeedback": "予算表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": -1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": -1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": -1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、予算表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "予算表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は上限 900万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "regional-policy-planning-予算表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "社会貢献",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "regional-policy-planning-予算表判断",
+            "roleSpecificMaterials": [
+              "予算表",
+              "判断対象: 予算表"
+            ],
+            "roleSpecificMetrics": [
+              "上限 900万円",
+              "補助率 50%"
+            ],
+            "roleSpecificFailureRisk": "予算表を読まず、上限 900万円か補助率 50%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "上限 900万円と補助率 50%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "予算表、上限 900万円、補助率 50%を判断の主役にしている。",
+            "kernelConnection": "予算表をregional-policy-planning-予算表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "regional-policy-planning-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "施策比較",
+          "openingHook": "14:15。施策比較に効果 +12%と対象 420世帯が並んでいる。",
+          "context": "地域政策担当として施策比較を確認する。効果 +12%、対象 420世帯が今日の判断材料になる。",
+          "content": "地域データ・住民声・予算制約を施策案へ変換するため、施策比較を読んで次の作業判断を残す。",
+          "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+          "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は施策比較である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "効果 +12%の背景と対象 420世帯の確度が完全にはそろっていない。",
+          "decisionTradeoff": "効果 +12%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "regional-policy-planning-施策比較判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次はKPI 3件で副作用を確認する。",
+          "npcDialogue": "先輩:「施策比較を読まずに進めると、地域政策担当の判断ではなくなる」",
+          "workMaterial": "施策比較\n- 効果 +12%\n- 対象 420世帯\n- 判断対象: 施策比較",
+          "decisionPrompt": "regional-policy-planning-施策比較判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "効果 +12%を重く見て、当日中に前へ進める",
+              "text": "効果 +12%を重く見て、当日中に前へ進める。材料は施策比較、効果 +12%、対象 420世帯。",
+              "immediateFeedback": "施策比較に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 2,
+                "regional_policy_planning_risk": -1,
+                "regional_policy_planning_speed": 2,
+                "regional_policy_planning_value": -1,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、施策比較と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "施策比較の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は効果 +12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "施策比較の効果 +12%と対象 420世帯を突き合わせ、条件付きで進める",
+              "text": "施策比較の効果 +12%と対象 420世帯を突き合わせ、条件付きで進める。材料は施策比較、効果 +12%、対象 420世帯。",
+              "immediateFeedback": "施策比較に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": 1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、施策比較と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "施策比較の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は効果 +12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "対象 420世帯の不確実性を理由に、判断範囲を絞る",
+              "text": "対象 420世帯の不確実性を理由に、判断範囲を絞る。材料は施策比較、効果 +12%、対象 420世帯。",
+              "immediateFeedback": "施策比較に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": -1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": -1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": -1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、施策比較と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "施策比較の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は効果 +12%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "regional-policy-planning-施策比較判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "社会貢献",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "regional-policy-planning-施策比較判断",
+            "roleSpecificMaterials": [
+              "施策比較",
+              "判断対象: 施策比較"
+            ],
+            "roleSpecificMetrics": [
+              "効果 +12%",
+              "対象 420世帯"
+            ],
+            "roleSpecificFailureRisk": "施策比較を読まず、効果 +12%か対象 420世帯のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "効果 +12%と対象 420世帯を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "施策比較、効果 +12%、対象 420世帯を判断の主役にしている。",
+            "kernelConnection": "施策比較をregional-policy-planning-施策比較判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "regional-policy-planning-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "説明資料",
+          "openingHook": "16:35。説明資料にKPI 3件と議会期限 16:00が並んでいる。",
+          "context": "地域政策担当として説明資料を確認する。KPI 3件、議会期限 16:00が今日の判断材料になる。",
+          "content": "地域データ・住民声・予算制約を施策案へ変換するため、説明資料を読んで次の作業判断を残す。",
+          "roleSpecificContext": "地域政策担当は地域データ・住民声・予算制約を施策案へ変換する仕事。",
+          "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は説明資料である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "KPI 3件の背景と議会期限 16:00の確度が完全にはそろっていない。",
+          "decisionTradeoff": "KPI 3件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "regional-policy-planning-説明資料判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「説明資料を読まずに進めると、地域政策担当の判断ではなくなる」",
+          "workMaterial": "説明資料\n- KPI 3件\n- 議会期限 16:00\n- 判断対象: 説明資料",
+          "decisionPrompt": "regional-policy-planning-説明資料判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "KPI 3件を重く見て、当日中に前へ進める",
+              "text": "KPI 3件を重く見て、当日中に前へ進める。材料は説明資料、KPI 3件、議会期限 16:00。",
+              "immediateFeedback": "説明資料に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 2,
+                "regional_policy_planning_risk": -1,
+                "regional_policy_planning_speed": 2,
+                "regional_policy_planning_value": -1,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、説明資料と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "説明資料の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はKPI 3件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "説明資料のKPI 3件と議会期限 16:00を突き合わせ、条件付きで進める",
+              "text": "説明資料のKPI 3件と議会期限 16:00を突き合わせ、条件付きで進める。材料は説明資料、KPI 3件、議会期限 16:00。",
+              "immediateFeedback": "説明資料に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": 1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": 1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": 1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、説明資料と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "説明資料の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はKPI 3件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "議会期限 16:00の不確実性を理由に、判断範囲を絞る",
+              "text": "議会期限 16:00の不確実性を理由に、判断範囲を絞る。材料は説明資料、KPI 3件、議会期限 16:00。",
+              "immediateFeedback": "説明資料に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "地域政策担当で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "regional_policy_planning_evidence": -1,
+                "regional_policy_planning_risk": 2,
+                "regional_policy_planning_speed": -1,
+                "regional_policy_planning_value": 2,
+                "regional_policy_planning_feasibility": -1
+              },
+              "misconceptionEffect": "地域政策担当は印象ではなく、説明資料と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "説明資料の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次はKPI 3件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "regional-policy-planning-説明資料判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "地方就職",
+              "社会貢献",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "regional-policy-planning-説明資料判断",
+            "roleSpecificMaterials": [
+              "説明資料",
+              "判断対象: 説明資料"
+            ],
+            "roleSpecificMetrics": [
+              "KPI 3件",
+              "議会期限 16:00"
+            ],
+            "roleSpecificFailureRisk": "説明資料を読まず、KPI 3件か議会期限 16:00のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "KPI 3件と議会期限 16:00を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "説明資料、KPI 3件、議会期限 16:00を判断の主役にしている。",
+            "kernelConnection": "説明資料をregional-policy-planning-説明資料判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "地域政策担当の材料翻訳型",
+      "strengths": [
+        "地域政策担当の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "regional_policy_planning_evidence",
+        "regional_policy_planning_risk"
+      ],
+      "valuedMeters": [
+        "regional_policy_planning_evidence"
+      ],
+      "sacrificedMeters": [
+        "regional_policy_planning_speed"
+      ],
+      "roleRealityReveal": "地域政策担当は、地域データ・住民声・予算制約を施策案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "地域政策担当の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "地域政策担当の推進型",
+      "strengths": [
+        "地域政策担当の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "regional_policy_planning_risk",
+        "regional_policy_planning_speed"
+      ],
+      "valuedMeters": [
+        "regional_policy_planning_risk"
+      ],
+      "sacrificedMeters": [
+        "regional_policy_planning_value"
+      ],
+      "roleRealityReveal": "地域政策担当は、地域データ・住民声・予算制約を施策案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "地域政策担当の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "地域政策担当の安全設計型",
+      "strengths": [
+        "地域政策担当の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "regional_policy_planning_speed",
+        "regional_policy_planning_value"
+      ],
+      "valuedMeters": [
+        "regional_policy_planning_speed"
+      ],
+      "sacrificedMeters": [
+        "regional_policy_planning_feasibility"
+      ],
+      "roleRealityReveal": "地域政策担当は、地域データ・住民声・予算制約を施策案へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "地域政策担当の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "地域政策担当は、地域データ・住民声・予算制約を施策案へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "地域政策担当として、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "regional-policy-planning_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "regional_policy_planning_evidence_vs_regional_policy_planning_risk",
+      "regional_policy_planning_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "地域データ・住民声・予算制約を施策案へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "regional_policy_planning_evidence",
+      "label": "evidence",
+      "description": "地域政策担当のevidence判断"
+    },
+    {
+      "key": "regional_policy_planning_risk",
+      "label": "risk",
+      "description": "地域政策担当のrisk判断"
+    },
+    {
+      "key": "regional_policy_planning_speed",
+      "label": "speed",
+      "description": "地域政策担当のspeed判断"
+    },
+    {
+      "key": "regional_policy_planning_value",
+      "label": "value",
+      "description": "地域政策担当のvalue判断"
+    },
+    {
+      "key": "regional_policy_planning_feasibility",
+      "label": "feasibility",
+      "description": "地域政策担当のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "地域政策担当の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "regional_policy_planning_evidence",
+      "regional_policy_planning_risk",
+      "regional_policy_planning_speed",
+      "regional_policy_planning_value",
+      "regional_policy_planning_feasibility"
+    ]
+  },
+  "roleCoreFriction": "地域データ・住民声・予算制約を施策案へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "地域政策担当は会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "地域政策担当は、地域データ・住民声・予算制約を施策案へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "人口減 -1.8%、要望 124件、上限 900万円、効果 +12%、KPI 3件、関係者制約、期限",
+    "output": "地域政策担当としての判断案、次回確認項目、リスクメモ",
+    "transformation": "地域データ・住民声・予算制約を施策案へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "人口減 -1.8%",
+      "要望 124件",
+      "上限 900万円",
+      "効果 +12%",
+      "KPI 3件"
+    ],
+    "metrics": [
+      "人口減 -1.8%",
+      "高齢化率 36%",
+      "要望 124件",
+      "反対 18件",
+      "上限 900万円",
+      "補助率 50%",
+      "効果 +12%",
+      "対象 420世帯",
+      "KPI 3件",
+      "議会期限 16:00"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "人口減 -1.8%、要望 124件、上限 900万円と高齢化率 36%、、反対 18件を読まなければ成立しないため。"
+  }
+}

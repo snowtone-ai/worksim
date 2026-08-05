@@ -1,0 +1,2190 @@
+{
+  "id": "finance/credit-risk-management",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "金融",
+  "industrySlug": "finance",
+  "role": "与信審査/リスク管理",
+  "roleSlug": "credit-risk-management",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "分析系",
+    "高難易度",
+    "社会貢献"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 金融 与信審査/リスク管理.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "finance",
+      "credit-risk-management"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "決算書"
+    },
+    {
+      "time": "10:40",
+      "label": "資金繰り表"
+    },
+    {
+      "time": "12:20",
+      "label": "担保評価メモ"
+    },
+    {
+      "time": "14:15",
+      "label": "反社・延滞照会"
+    },
+    {
+      "time": "16:35",
+      "label": "審査コメント"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "決算書"
+    },
+    {
+      "time": "10:40",
+      "label": "資金繰り表"
+    },
+    {
+      "time": "12:20",
+      "label": "担保評価メモ"
+    },
+    {
+      "time": "14:15",
+      "label": "反社・延滞照会"
+    },
+    {
+      "time": "16:35",
+      "label": "審査コメント"
+    }
+  ],
+  "sceneList": [
+    "credit-risk-management-01",
+    "credit-risk-management-02",
+    "credit-risk-management-03",
+    "credit-risk-management-04",
+    "credit-risk-management-05"
+  ],
+  "meta": {
+    "title": "与信審査/リスク管理",
+    "industry": "金融",
+    "role": "与信審査/リスク管理",
+    "duration_minutes": 18,
+    "description": "財務・担保・返済原資をリスク判断へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "credit-risk-management-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "決算書",
+      "openingHook": "09:10。営業利益率 1.9%に借入残高 7,200万円とundefinedが並んでいる。",
+      "context": "与信審査/リスク管理として営業利益率 1.9%を確認する。借入残高 7,200万円、undefinedが今日の判断材料になる。",
+      "content": "財務・担保・返済原資をリスク判断へ変換するため、営業利益率 1.9%を読んで次の作業判断を残す。",
+      "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+      "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は営業利益率 1.9%である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "借入残高 7,200万円の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "借入残高 7,200万円を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "credit-risk-management-営業利益率 1.9%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は不足額 900万円で副作用を確認する。",
+      "npcDialogue": "先輩:「営業利益率 1.9%を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+      "workMaterial": "決算書\n- 営業利益率 1.9%\n- 借入残高 7,200万円\n- 判断対象: 決算書",
+      "decisionPrompt": "credit-risk-management-営業利益率 1.9%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "借入残高 7,200万円を重く見て、当日中に前へ進める",
+          "text": "借入残高 7,200万円を重く見て、当日中に前へ進める。材料は営業利益率 1.9%、借入残高 7,200万円、undefined。",
+          "immediateFeedback": "営業利益率 1.9%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 2,
+            "credit_risk_management_risk": -1,
+            "credit_risk_management_speed": 2,
+            "credit_risk_management_value": -1,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、営業利益率 1.9%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "営業利益率 1.9%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は借入残高 7,200万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "営業利益率 1.9%の借入残高 7,200万円とundefinedを突き合わせ、条件付きで進める",
+          "text": "営業利益率 1.9%の借入残高 7,200万円とundefinedを突き合わせ、条件付きで進める。材料は営業利益率 1.9%、借入残高 7,200万円、undefined。",
+          "immediateFeedback": "営業利益率 1.9%に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": 1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、営業利益率 1.9%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "営業利益率 1.9%の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は借入残高 7,200万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は営業利益率 1.9%、借入残高 7,200万円、undefined。",
+          "immediateFeedback": "営業利益率 1.9%に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": -1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": -1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": -1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、営業利益率 1.9%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "営業利益率 1.9%の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は借入残高 7,200万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "credit-risk-management-営業利益率 1.9%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "credit-risk-management-営業利益率 1.9%判断",
+        "roleSpecificMaterials": [
+          "決算書",
+          "判断対象: 決算書"
+        ],
+        "roleSpecificMetrics": [
+          "営業利益率 1.9%",
+          "借入残高 7,200万円"
+        ],
+        "roleSpecificFailureRisk": "決算書を読まず、営業利益率 1.9%か借入残高 7,200万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "営業利益率 1.9%と借入残高 7,200万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "決算書、営業利益率 1.9%、借入残高 7,200万円を判断の主役にしている。",
+        "kernelConnection": "決算書をcredit-risk-management-営業利益率 1.9%判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "credit-risk-management-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "資金繰り表",
+      "openingHook": "10:40。不足額 900万円に入金確度 65%とundefinedが並んでいる。",
+      "context": "与信審査/リスク管理として不足額 900万円を確認する。入金確度 65%、undefinedが今日の判断材料になる。",
+      "content": "財務・担保・返済原資をリスク判断へ変換するため、不足額 900万円を読んで次の作業判断を残す。",
+      "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+      "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は不足額 900万円である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "入金確度 65%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "入金確度 65%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "credit-risk-management-不足額 900万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は評価額 3,800万円で副作用を確認する。",
+      "npcDialogue": "先輩:「不足額 900万円を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+      "workMaterial": "資金繰り表\n- 不足額 900万円\n- 入金確度 65%\n- 判断対象: 資金繰り表",
+      "decisionPrompt": "credit-risk-management-不足額 900万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "入金確度 65%を重く見て、当日中に前へ進める",
+          "text": "入金確度 65%を重く見て、当日中に前へ進める。材料は不足額 900万円、入金確度 65%、undefined。",
+          "immediateFeedback": "不足額 900万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 2,
+            "credit_risk_management_risk": -1,
+            "credit_risk_management_speed": 2,
+            "credit_risk_management_value": -1,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、不足額 900万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "不足額 900万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は入金確度 65%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "不足額 900万円の入金確度 65%とundefinedを突き合わせ、条件付きで進める",
+          "text": "不足額 900万円の入金確度 65%とundefinedを突き合わせ、条件付きで進める。材料は不足額 900万円、入金確度 65%、undefined。",
+          "immediateFeedback": "不足額 900万円に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": 1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、不足額 900万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "不足額 900万円の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は入金確度 65%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は不足額 900万円、入金確度 65%、undefined。",
+          "immediateFeedback": "不足額 900万円に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": -1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": -1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": -1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、不足額 900万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "不足額 900万円の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は入金確度 65%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "credit-risk-management-不足額 900万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "credit-risk-management-不足額 900万円判断",
+        "roleSpecificMaterials": [
+          "資金繰り表",
+          "判断対象: 資金繰り表"
+        ],
+        "roleSpecificMetrics": [
+          "不足額 900万円",
+          "入金確度 65%"
+        ],
+        "roleSpecificFailureRisk": "資金繰り表を読まず、不足額 900万円か入金確度 65%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "不足額 900万円と入金確度 65%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "資金繰り表、不足額 900万円、入金確度 65%を判断の主役にしている。",
+        "kernelConnection": "資金繰り表をcredit-risk-management-不足額 900万円判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "credit-risk-management-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "担保評価メモ",
+      "openingHook": "12:20。評価額 3,800万円に掛目 70%とundefinedが並んでいる。",
+      "context": "与信審査/リスク管理として評価額 3,800万円を確認する。掛目 70%、undefinedが今日の判断材料になる。",
+      "content": "財務・担保・返済原資をリスク判断へ変換するため、評価額 3,800万円を読んで次の作業判断を残す。",
+      "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+      "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は評価額 3,800万円である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "掛目 70%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "掛目 70%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "credit-risk-management-評価額 3,800万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は延滞 1件で副作用を確認する。",
+      "npcDialogue": "先輩:「評価額 3,800万円を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+      "workMaterial": "担保評価メモ\n- 評価額 3,800万円\n- 掛目 70%\n- 判断対象: 担保評価メモ",
+      "decisionPrompt": "credit-risk-management-評価額 3,800万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "掛目 70%を重く見て、当日中に前へ進める",
+          "text": "掛目 70%を重く見て、当日中に前へ進める。材料は評価額 3,800万円、掛目 70%、undefined。",
+          "immediateFeedback": "評価額 3,800万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 2,
+            "credit_risk_management_risk": -1,
+            "credit_risk_management_speed": 2,
+            "credit_risk_management_value": -1,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、評価額 3,800万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "評価額 3,800万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は掛目 70%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "評価額 3,800万円の掛目 70%とundefinedを突き合わせ、条件付きで進める",
+          "text": "評価額 3,800万円の掛目 70%とundefinedを突き合わせ、条件付きで進める。材料は評価額 3,800万円、掛目 70%、undefined。",
+          "immediateFeedback": "評価額 3,800万円に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": 1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、評価額 3,800万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "評価額 3,800万円の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は掛目 70%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は評価額 3,800万円、掛目 70%、undefined。",
+          "immediateFeedback": "評価額 3,800万円に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": -1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": -1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": -1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、評価額 3,800万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "評価額 3,800万円の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は掛目 70%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "credit-risk-management-評価額 3,800万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "credit-risk-management-評価額 3,800万円判断",
+        "roleSpecificMaterials": [
+          "担保評価メモ",
+          "判断対象: 担保評価メモ"
+        ],
+        "roleSpecificMetrics": [
+          "評価額 3,800万円",
+          "掛目 70%"
+        ],
+        "roleSpecificFailureRisk": "担保評価メモを読まず、評価額 3,800万円か掛目 70%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "評価額 3,800万円と掛目 70%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "担保評価メモ、評価額 3,800万円、掛目 70%を判断の主役にしている。",
+        "kernelConnection": "担保評価メモをcredit-risk-management-評価額 3,800万円判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "credit-risk-management-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "反社・延滞照会",
+      "openingHook": "14:15。延滞 1件に照会期限 14:00とundefinedが並んでいる。",
+      "context": "与信審査/リスク管理として延滞 1件を確認する。照会期限 14:00、undefinedが今日の判断材料になる。",
+      "content": "財務・担保・返済原資をリスク判断へ変換するため、延滞 1件を読んで次の作業判断を残す。",
+      "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+      "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は延滞 1件である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "照会期限 14:00の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "照会期限 14:00を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "credit-risk-management-延滞 1件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は条件 4項目で副作用を確認する。",
+      "npcDialogue": "先輩:「延滞 1件を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+      "workMaterial": "反社・延滞照会\n- 延滞 1件\n- 照会期限 14:00\n- 判断対象: 反社・延滞照会",
+      "decisionPrompt": "credit-risk-management-延滞 1件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "照会期限 14:00を重く見て、当日中に前へ進める",
+          "text": "照会期限 14:00を重く見て、当日中に前へ進める。材料は延滞 1件、照会期限 14:00、undefined。",
+          "immediateFeedback": "延滞 1件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 2,
+            "credit_risk_management_risk": -1,
+            "credit_risk_management_speed": 2,
+            "credit_risk_management_value": -1,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、延滞 1件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "延滞 1件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は照会期限 14:00の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "延滞 1件の照会期限 14:00とundefinedを突き合わせ、条件付きで進める",
+          "text": "延滞 1件の照会期限 14:00とundefinedを突き合わせ、条件付きで進める。材料は延滞 1件、照会期限 14:00、undefined。",
+          "immediateFeedback": "延滞 1件に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": 1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、延滞 1件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "延滞 1件の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は照会期限 14:00の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は延滞 1件、照会期限 14:00、undefined。",
+          "immediateFeedback": "延滞 1件に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": -1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": -1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": -1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、延滞 1件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "延滞 1件の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は照会期限 14:00の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "credit-risk-management-延滞 1件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "credit-risk-management-延滞 1件判断",
+        "roleSpecificMaterials": [
+          "反社・延滞照会",
+          "判断対象: 反社・延滞照会"
+        ],
+        "roleSpecificMetrics": [
+          "延滞 1件",
+          "照会期限 14:00"
+        ],
+        "roleSpecificFailureRisk": "反社・延滞照会を読まず、延滞 1件か照会期限 14:00のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "延滞 1件と照会期限 14:00を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "反社・延滞照会、延滞 1件、照会期限 14:00を判断の主役にしている。",
+        "kernelConnection": "反社・延滞照会をcredit-risk-management-延滞 1件判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "credit-risk-management-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "審査コメント",
+      "openingHook": "16:35。条件 4項目に承認枠 800万円とundefinedが並んでいる。",
+      "context": "与信審査/リスク管理として条件 4項目を確認する。承認枠 800万円、undefinedが今日の判断材料になる。",
+      "content": "財務・担保・返済原資をリスク判断へ変換するため、条件 4項目を読んで次の作業判断を残す。",
+      "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+      "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は条件 4項目である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "承認枠 800万円の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "承認枠 800万円を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "credit-risk-management-条件 4項目判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「条件 4項目を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+      "workMaterial": "審査コメント\n- 条件 4項目\n- 承認枠 800万円\n- 判断対象: 審査コメント",
+      "decisionPrompt": "credit-risk-management-条件 4項目判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "承認枠 800万円を重く見て、当日中に前へ進める",
+          "text": "承認枠 800万円を重く見て、当日中に前へ進める。材料は条件 4項目、承認枠 800万円、undefined。",
+          "immediateFeedback": "条件 4項目に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 2,
+            "credit_risk_management_risk": -1,
+            "credit_risk_management_speed": 2,
+            "credit_risk_management_value": -1,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、条件 4項目と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "条件 4項目の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は承認枠 800万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "条件 4項目の承認枠 800万円とundefinedを突き合わせ、条件付きで進める",
+          "text": "条件 4項目の承認枠 800万円とundefinedを突き合わせ、条件付きで進める。材料は条件 4項目、承認枠 800万円、undefined。",
+          "immediateFeedback": "条件 4項目に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": 1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": 1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": 1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、条件 4項目と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "条件 4項目の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は承認枠 800万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は条件 4項目、承認枠 800万円、undefined。",
+          "immediateFeedback": "条件 4項目に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "credit_risk_management_evidence": -1,
+            "credit_risk_management_risk": 2,
+            "credit_risk_management_speed": -1,
+            "credit_risk_management_value": 2,
+            "credit_risk_management_feasibility": -1
+          },
+          "misconceptionEffect": "与信審査/リスク管理は印象ではなく、条件 4項目と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "条件 4項目の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は承認枠 800万円の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "credit-risk-management-条件 4項目判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "credit-risk-management-条件 4項目判断",
+        "roleSpecificMaterials": [
+          "審査コメント",
+          "判断対象: 審査コメント"
+        ],
+        "roleSpecificMetrics": [
+          "条件 4項目",
+          "承認枠 800万円"
+        ],
+        "roleSpecificFailureRisk": "審査コメントを読まず、条件 4項目か承認枠 800万円のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "条件 4項目と承認枠 800万円を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "審査コメント、条件 4項目、承認枠 800万円を判断の主役にしている。",
+        "kernelConnection": "審査コメントをcredit-risk-management-条件 4項目判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "credit-risk-management-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "決算書",
+          "openingHook": "09:10。営業利益率 1.9%に借入残高 7,200万円とundefinedが並んでいる。",
+          "context": "与信審査/リスク管理として営業利益率 1.9%を確認する。借入残高 7,200万円、undefinedが今日の判断材料になる。",
+          "content": "財務・担保・返済原資をリスク判断へ変換するため、営業利益率 1.9%を読んで次の作業判断を残す。",
+          "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+          "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は営業利益率 1.9%である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "借入残高 7,200万円の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "借入残高 7,200万円を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "credit-risk-management-営業利益率 1.9%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は不足額 900万円で副作用を確認する。",
+          "npcDialogue": "先輩:「営業利益率 1.9%を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+          "workMaterial": "決算書\n- 営業利益率 1.9%\n- 借入残高 7,200万円\n- 判断対象: 決算書",
+          "decisionPrompt": "credit-risk-management-営業利益率 1.9%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "借入残高 7,200万円を重く見て、当日中に前へ進める",
+              "text": "借入残高 7,200万円を重く見て、当日中に前へ進める。材料は営業利益率 1.9%、借入残高 7,200万円、undefined。",
+              "immediateFeedback": "営業利益率 1.9%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 2,
+                "credit_risk_management_risk": -1,
+                "credit_risk_management_speed": 2,
+                "credit_risk_management_value": -1,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、営業利益率 1.9%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "営業利益率 1.9%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は借入残高 7,200万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "営業利益率 1.9%の借入残高 7,200万円とundefinedを突き合わせ、条件付きで進める",
+              "text": "営業利益率 1.9%の借入残高 7,200万円とundefinedを突き合わせ、条件付きで進める。材料は営業利益率 1.9%、借入残高 7,200万円、undefined。",
+              "immediateFeedback": "営業利益率 1.9%に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": 1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、営業利益率 1.9%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "営業利益率 1.9%の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は借入残高 7,200万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は営業利益率 1.9%、借入残高 7,200万円、undefined。",
+              "immediateFeedback": "営業利益率 1.9%に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": -1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": -1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": -1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、営業利益率 1.9%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "営業利益率 1.9%の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は借入残高 7,200万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "credit-risk-management-営業利益率 1.9%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "credit-risk-management-営業利益率 1.9%判断",
+            "roleSpecificMaterials": [
+              "決算書",
+              "判断対象: 決算書"
+            ],
+            "roleSpecificMetrics": [
+              "営業利益率 1.9%",
+              "借入残高 7,200万円"
+            ],
+            "roleSpecificFailureRisk": "決算書を読まず、営業利益率 1.9%か借入残高 7,200万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "営業利益率 1.9%と借入残高 7,200万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "決算書、営業利益率 1.9%、借入残高 7,200万円を判断の主役にしている。",
+            "kernelConnection": "決算書をcredit-risk-management-営業利益率 1.9%判断へ接続する。"
+          }
+        },
+        {
+          "id": "credit-risk-management-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "資金繰り表",
+          "openingHook": "10:40。不足額 900万円に入金確度 65%とundefinedが並んでいる。",
+          "context": "与信審査/リスク管理として不足額 900万円を確認する。入金確度 65%、undefinedが今日の判断材料になる。",
+          "content": "財務・担保・返済原資をリスク判断へ変換するため、不足額 900万円を読んで次の作業判断を残す。",
+          "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+          "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は不足額 900万円である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "入金確度 65%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "入金確度 65%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "credit-risk-management-不足額 900万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は評価額 3,800万円で副作用を確認する。",
+          "npcDialogue": "先輩:「不足額 900万円を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+          "workMaterial": "資金繰り表\n- 不足額 900万円\n- 入金確度 65%\n- 判断対象: 資金繰り表",
+          "decisionPrompt": "credit-risk-management-不足額 900万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "入金確度 65%を重く見て、当日中に前へ進める",
+              "text": "入金確度 65%を重く見て、当日中に前へ進める。材料は不足額 900万円、入金確度 65%、undefined。",
+              "immediateFeedback": "不足額 900万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 2,
+                "credit_risk_management_risk": -1,
+                "credit_risk_management_speed": 2,
+                "credit_risk_management_value": -1,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、不足額 900万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "不足額 900万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は入金確度 65%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "不足額 900万円の入金確度 65%とundefinedを突き合わせ、条件付きで進める",
+              "text": "不足額 900万円の入金確度 65%とundefinedを突き合わせ、条件付きで進める。材料は不足額 900万円、入金確度 65%、undefined。",
+              "immediateFeedback": "不足額 900万円に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": 1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、不足額 900万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "不足額 900万円の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は入金確度 65%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は不足額 900万円、入金確度 65%、undefined。",
+              "immediateFeedback": "不足額 900万円に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": -1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": -1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": -1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、不足額 900万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "不足額 900万円の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は入金確度 65%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "credit-risk-management-不足額 900万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "credit-risk-management-不足額 900万円判断",
+            "roleSpecificMaterials": [
+              "資金繰り表",
+              "判断対象: 資金繰り表"
+            ],
+            "roleSpecificMetrics": [
+              "不足額 900万円",
+              "入金確度 65%"
+            ],
+            "roleSpecificFailureRisk": "資金繰り表を読まず、不足額 900万円か入金確度 65%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "不足額 900万円と入金確度 65%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "資金繰り表、不足額 900万円、入金確度 65%を判断の主役にしている。",
+            "kernelConnection": "資金繰り表をcredit-risk-management-不足額 900万円判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "credit-risk-management-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "担保評価メモ",
+          "openingHook": "12:20。評価額 3,800万円に掛目 70%とundefinedが並んでいる。",
+          "context": "与信審査/リスク管理として評価額 3,800万円を確認する。掛目 70%、undefinedが今日の判断材料になる。",
+          "content": "財務・担保・返済原資をリスク判断へ変換するため、評価額 3,800万円を読んで次の作業判断を残す。",
+          "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+          "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は評価額 3,800万円である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "掛目 70%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "掛目 70%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "credit-risk-management-評価額 3,800万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は延滞 1件で副作用を確認する。",
+          "npcDialogue": "先輩:「評価額 3,800万円を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+          "workMaterial": "担保評価メモ\n- 評価額 3,800万円\n- 掛目 70%\n- 判断対象: 担保評価メモ",
+          "decisionPrompt": "credit-risk-management-評価額 3,800万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "掛目 70%を重く見て、当日中に前へ進める",
+              "text": "掛目 70%を重く見て、当日中に前へ進める。材料は評価額 3,800万円、掛目 70%、undefined。",
+              "immediateFeedback": "評価額 3,800万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 2,
+                "credit_risk_management_risk": -1,
+                "credit_risk_management_speed": 2,
+                "credit_risk_management_value": -1,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、評価額 3,800万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "評価額 3,800万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は掛目 70%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "評価額 3,800万円の掛目 70%とundefinedを突き合わせ、条件付きで進める",
+              "text": "評価額 3,800万円の掛目 70%とundefinedを突き合わせ、条件付きで進める。材料は評価額 3,800万円、掛目 70%、undefined。",
+              "immediateFeedback": "評価額 3,800万円に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": 1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、評価額 3,800万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "評価額 3,800万円の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は掛目 70%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は評価額 3,800万円、掛目 70%、undefined。",
+              "immediateFeedback": "評価額 3,800万円に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": -1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": -1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": -1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、評価額 3,800万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "評価額 3,800万円の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は掛目 70%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "credit-risk-management-評価額 3,800万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "credit-risk-management-評価額 3,800万円判断",
+            "roleSpecificMaterials": [
+              "担保評価メモ",
+              "判断対象: 担保評価メモ"
+            ],
+            "roleSpecificMetrics": [
+              "評価額 3,800万円",
+              "掛目 70%"
+            ],
+            "roleSpecificFailureRisk": "担保評価メモを読まず、評価額 3,800万円か掛目 70%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "評価額 3,800万円と掛目 70%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "担保評価メモ、評価額 3,800万円、掛目 70%を判断の主役にしている。",
+            "kernelConnection": "担保評価メモをcredit-risk-management-評価額 3,800万円判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "credit-risk-management-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "反社・延滞照会",
+          "openingHook": "14:15。延滞 1件に照会期限 14:00とundefinedが並んでいる。",
+          "context": "与信審査/リスク管理として延滞 1件を確認する。照会期限 14:00、undefinedが今日の判断材料になる。",
+          "content": "財務・担保・返済原資をリスク判断へ変換するため、延滞 1件を読んで次の作業判断を残す。",
+          "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+          "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は延滞 1件である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "照会期限 14:00の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "照会期限 14:00を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "credit-risk-management-延滞 1件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は条件 4項目で副作用を確認する。",
+          "npcDialogue": "先輩:「延滞 1件を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+          "workMaterial": "反社・延滞照会\n- 延滞 1件\n- 照会期限 14:00\n- 判断対象: 反社・延滞照会",
+          "decisionPrompt": "credit-risk-management-延滞 1件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "照会期限 14:00を重く見て、当日中に前へ進める",
+              "text": "照会期限 14:00を重く見て、当日中に前へ進める。材料は延滞 1件、照会期限 14:00、undefined。",
+              "immediateFeedback": "延滞 1件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 2,
+                "credit_risk_management_risk": -1,
+                "credit_risk_management_speed": 2,
+                "credit_risk_management_value": -1,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、延滞 1件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "延滞 1件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は照会期限 14:00の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "延滞 1件の照会期限 14:00とundefinedを突き合わせ、条件付きで進める",
+              "text": "延滞 1件の照会期限 14:00とundefinedを突き合わせ、条件付きで進める。材料は延滞 1件、照会期限 14:00、undefined。",
+              "immediateFeedback": "延滞 1件に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": 1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、延滞 1件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "延滞 1件の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は照会期限 14:00の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は延滞 1件、照会期限 14:00、undefined。",
+              "immediateFeedback": "延滞 1件に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": -1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": -1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": -1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、延滞 1件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "延滞 1件の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は照会期限 14:00の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "credit-risk-management-延滞 1件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "credit-risk-management-延滞 1件判断",
+            "roleSpecificMaterials": [
+              "反社・延滞照会",
+              "判断対象: 反社・延滞照会"
+            ],
+            "roleSpecificMetrics": [
+              "延滞 1件",
+              "照会期限 14:00"
+            ],
+            "roleSpecificFailureRisk": "反社・延滞照会を読まず、延滞 1件か照会期限 14:00のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "延滞 1件と照会期限 14:00を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "反社・延滞照会、延滞 1件、照会期限 14:00を判断の主役にしている。",
+            "kernelConnection": "反社・延滞照会をcredit-risk-management-延滞 1件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "credit-risk-management-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "審査コメント",
+          "openingHook": "16:35。条件 4項目に承認枠 800万円とundefinedが並んでいる。",
+          "context": "与信審査/リスク管理として条件 4項目を確認する。承認枠 800万円、undefinedが今日の判断材料になる。",
+          "content": "財務・担保・返済原資をリスク判断へ変換するため、条件 4項目を読んで次の作業判断を残す。",
+          "roleSpecificContext": "与信審査/リスク管理は財務・担保・返済原資をリスク判断へ変換する仕事。",
+          "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は条件 4項目である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "承認枠 800万円の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "承認枠 800万円を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "credit-risk-management-条件 4項目判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「条件 4項目を読まずに進めると、与信審査/リスク管理の判断ではなくなる」",
+          "workMaterial": "審査コメント\n- 条件 4項目\n- 承認枠 800万円\n- 判断対象: 審査コメント",
+          "decisionPrompt": "credit-risk-management-条件 4項目判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "承認枠 800万円を重く見て、当日中に前へ進める",
+              "text": "承認枠 800万円を重く見て、当日中に前へ進める。材料は条件 4項目、承認枠 800万円、undefined。",
+              "immediateFeedback": "条件 4項目に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 2,
+                "credit_risk_management_risk": -1,
+                "credit_risk_management_speed": 2,
+                "credit_risk_management_value": -1,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、条件 4項目と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "条件 4項目の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は承認枠 800万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "条件 4項目の承認枠 800万円とundefinedを突き合わせ、条件付きで進める",
+              "text": "条件 4項目の承認枠 800万円とundefinedを突き合わせ、条件付きで進める。材料は条件 4項目、承認枠 800万円、undefined。",
+              "immediateFeedback": "条件 4項目に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": 1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": 1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": 1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、条件 4項目と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "条件 4項目の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は承認枠 800万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は条件 4項目、承認枠 800万円、undefined。",
+              "immediateFeedback": "条件 4項目に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "与信審査/リスク管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "credit_risk_management_evidence": -1,
+                "credit_risk_management_risk": 2,
+                "credit_risk_management_speed": -1,
+                "credit_risk_management_value": 2,
+                "credit_risk_management_feasibility": -1
+              },
+              "misconceptionEffect": "与信審査/リスク管理は印象ではなく、条件 4項目と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "条件 4項目の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は承認枠 800万円の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "credit-risk-management-条件 4項目判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "credit-risk-management-条件 4項目判断",
+            "roleSpecificMaterials": [
+              "審査コメント",
+              "判断対象: 審査コメント"
+            ],
+            "roleSpecificMetrics": [
+              "条件 4項目",
+              "承認枠 800万円"
+            ],
+            "roleSpecificFailureRisk": "審査コメントを読まず、条件 4項目か承認枠 800万円のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "条件 4項目と承認枠 800万円を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "審査コメント、条件 4項目、承認枠 800万円を判断の主役にしている。",
+            "kernelConnection": "審査コメントをcredit-risk-management-条件 4項目判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch2-1",
+      "title": "与信審査/リスク管理の材料翻訳型",
+      "strengths": [
+        "与信審査/リスク管理の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "credit_risk_management_evidence",
+        "credit_risk_management_risk"
+      ],
+      "valuedMeters": [
+        "credit_risk_management_evidence"
+      ],
+      "sacrificedMeters": [
+        "credit_risk_management_speed"
+      ],
+      "roleRealityReveal": "与信審査/リスク管理は、財務・担保・返済原資をリスク判断へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "与信審査/リスク管理の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-2",
+      "title": "与信審査/リスク管理の推進型",
+      "strengths": [
+        "与信審査/リスク管理の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "credit_risk_management_risk",
+        "credit_risk_management_speed"
+      ],
+      "valuedMeters": [
+        "credit_risk_management_risk"
+      ],
+      "sacrificedMeters": [
+        "credit_risk_management_value"
+      ],
+      "roleRealityReveal": "与信審査/リスク管理は、財務・担保・返済原資をリスク判断へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "与信審査/リスク管理の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-3",
+      "title": "与信審査/リスク管理の安全設計型",
+      "strengths": [
+        "与信審査/リスク管理の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "credit_risk_management_speed",
+        "credit_risk_management_value"
+      ],
+      "valuedMeters": [
+        "credit_risk_management_speed"
+      ],
+      "sacrificedMeters": [
+        "credit_risk_management_feasibility"
+      ],
+      "roleRealityReveal": "与信審査/リスク管理は、財務・担保・返済原資をリスク判断へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "与信審査/リスク管理の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "与信審査/リスク管理は、財務・担保・返済原資をリスク判断へ変換する仕事。",
+    "misconceptionCorrection": "見た目の対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "与信審査/リスク管理として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "credit-risk-management_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "credit_risk_management_evidence_vs_credit_risk_management_risk",
+      "credit_risk_management_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 2 selected for decision primitive diversity.",
+    "mainConflict": "財務・担保・返済原資をリスク判断へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 2 selection skeleton Cに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "credit_risk_management_evidence",
+      "label": "evidence",
+      "description": "与信審査/リスク管理のevidence判断"
+    },
+    {
+      "key": "credit_risk_management_risk",
+      "label": "risk",
+      "description": "与信審査/リスク管理のrisk判断"
+    },
+    {
+      "key": "credit_risk_management_speed",
+      "label": "speed",
+      "description": "与信審査/リスク管理のspeed判断"
+    },
+    {
+      "key": "credit_risk_management_value",
+      "label": "value",
+      "description": "与信審査/リスク管理のvalue判断"
+    },
+    {
+      "key": "credit_risk_management_feasibility",
+      "label": "feasibility",
+      "description": "与信審査/リスク管理のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "与信審査/リスク管理の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "credit_risk_management_evidence",
+      "credit_risk_management_risk",
+      "credit_risk_management_speed",
+      "credit_risk_management_value",
+      "credit_risk_management_feasibility"
+    ]
+  },
+  "roleCoreFriction": "財務・担保・返済原資をリスク判断へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "与信審査/リスク管理は人との調整や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "与信審査/リスク管理は、財務・担保・返済原資をリスク判断へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "営業利益率 1.9%、不足額 900万円、評価額 3,800万円、延滞 1件、条件 4項目、関係者制約、期限",
+    "output": "与信審査/リスク管理としての判断案、次回確認項目、リスクメモ",
+    "transformation": "財務・担保・返済原資をリスク判断へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "営業利益率 1.9%",
+      "不足額 900万円",
+      "評価額 3,800万円",
+      "延滞 1件",
+      "条件 4項目"
+    ],
+    "metrics": [
+      "営業利益率 1.9%",
+      "借入残高 7,200万円",
+      "不足額 900万円",
+      "入金確度 65%",
+      "評価額 3,800万円",
+      "掛目 70%",
+      "延滞 1件",
+      "照会期限 14:00",
+      "条件 4項目",
+      "承認枠 800万円"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "営業利益率 1.9%、不足額 900万円、評価額 3,800万円と借入残高 7,200万円、、入金確度 65%を読まなければ成立しないため。"
+  }
+}

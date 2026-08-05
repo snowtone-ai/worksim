@@ -1,0 +1,2201 @@
+{
+  "id": "it/it-solution-sales",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "industry": "IT・通信",
+  "industrySlug": "it",
+  "role": "ITソリューション営業",
+  "roleSlug": "it-solution-sales",
+  "roleCategory": "industry_specific_sales",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "文系向け",
+    "営業系",
+    "人と関わる"
+  ],
+  "background": {
+    "imagePrompt": "Create a high-quality realistic workplace background image for a career simulation game. Scene: IT・通信 industry, ITソリューション営業 role, decision point before a key task.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, distorted hands, distorted face, low quality, blurry, stock photo advertisement, fantasy, cyberpunk, anime, manga, unrealistic office, fake letters",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "it",
+      "it-solution-sales"
+    ]
+  },
+  "timeline": [
+    {
+      "time": "09:15",
+      "label": "要望だらけの初回メモ"
+    },
+    {
+      "time": "10:50",
+      "label": "既存システムの壁"
+    },
+    {
+      "time": "12:30",
+      "label": "利用者と決裁者のズレ"
+    },
+    {
+      "time": "14:10",
+      "label": "見積前提の空欄"
+    },
+    {
+      "time": "16:35",
+      "label": "次回提案の条件"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:15",
+      "label": "要望だらけの初回メモ"
+    },
+    {
+      "time": "10:50",
+      "label": "既存システムの壁"
+    },
+    {
+      "time": "12:30",
+      "label": "利用者と決裁者のズレ"
+    },
+    {
+      "time": "14:10",
+      "label": "見積前提の空欄"
+    },
+    {
+      "time": "16:35",
+      "label": "次回提案の条件"
+    }
+  ],
+  "sceneList": [
+    "it-solution-sales-01",
+    "it-solution-sales-02",
+    "it-solution-sales-03",
+    "it-solution-sales-04",
+    "it-solution-sales-05"
+  ],
+  "meta": {
+    "title": "ITソリューション営業",
+    "industry": "IT・通信",
+    "role": "ITソリューション営業",
+    "duration_minutes": 18,
+    "description": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝え、合意形成する力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "自分事として責任を持ち、やり切る姿勢"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化やトラブルに素早く向き合う力"
+    },
+    {
+      "key": "ethics",
+      "label": "倫理観",
+      "description": "ルールや社会的影響を踏まえて判断する力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "debug",
+      "id": "it-solution-sales-01",
+      "time": "09:15",
+      "interactable": "monitor_terminal",
+      "title": "要望だらけの初回メモ",
+      "openingHook": "09:15。ヒアリングメモに入力時間: 1件12分 / 対象部門: 4部門が出ている。",
+      "context": "09:15。ITソリューション営業としてヒアリングメモを確認する。入力時間: 1件12分 / 対象部門: 4部門が今日の判断材料になる。",
+      "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\n受注入力、二重入力を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+      "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+      "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+      "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料はヒアリングメモと入力時間: 1件12分 / 対象部門: 4部門である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "受注入力の確度と、入力時間: 1件12分の背景が完全にはそろっていない。",
+      "decisionTradeoff": "入力時間: 1件12分を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+      "consequenceHook": "ここでの顧客要望の課題仮説化が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は業務フローで判断の副作用を確認する。",
+      "npcDialogue": "先輩:「ヒアリングメモの数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+      "workMaterial": "ヒアリングメモ\n- 受注入力\n- 二重入力\n- 入力時間: 1件12分\n- 対象部門: 4部門",
+      "decisionPrompt": "顧客要望の課題仮説化として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "入力時間: 1件12分を重く見て、今日の改善を先に出す",
+          "text": "入力時間: 1件12分を重く見て、今日の改善を先に出す。判断材料はヒアリングメモ、入力時間: 1件12分、対象部門: 4部門。",
+          "immediateFeedback": "ヒアリングメモに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "顧客要望の課題仮説化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 2,
+            "proposal_fit": -1,
+            "implementation_reality": 2,
+            "decision_progress": -1,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、ヒアリングメモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "ヒアリングメモの具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は入力時間: 1件12分がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "ヒアリングメモと対象部門: 4部門を突き合わせ、条件付きで進める",
+          "text": "ヒアリングメモと対象部門: 4部門を突き合わせ、条件付きで進める。判断材料はヒアリングメモ、入力時間: 1件12分、対象部門: 4部門。",
+          "immediateFeedback": "ヒアリングメモに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "顧客要望の課題仮説化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 1,
+            "proposal_fit": 2,
+            "implementation_reality": 1,
+            "decision_progress": 2,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "studentFeedback": {
+            "good": "ヒアリングメモの具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は入力時間: 1件12分がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "agility": 3,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "受注入力の不確実性を理由に、判断を絞って持ち越す",
+          "text": "受注入力の不確実性を理由に、判断を絞って持ち越す。判断材料はヒアリングメモ、入力時間: 1件12分、対象部門: 4部門。",
+          "immediateFeedback": "ヒアリングメモに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "顧客要望の課題仮説化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": -1,
+            "proposal_fit": 2,
+            "implementation_reality": -1,
+            "decision_progress": 2,
+            "overpromise_safety": -1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、ヒアリングメモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "ヒアリングメモの具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は入力時間: 1件12分がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "顧客要望の課題仮説化",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "文系向け",
+          "営業系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "顧客要望の課題仮説化",
+        "roleSpecificMaterials": [
+          "ヒアリングメモ",
+          "受注入力",
+          "二重入力"
+        ],
+        "roleSpecificMetrics": [
+          "入力時間: 1件12分",
+          "対象部門: 4部門"
+        ],
+        "roleSpecificFailureRisk": "ヒアリングメモを読まずに進め、顧客要望をそのまま売る。",
+        "roleSpecificEvaluationCriteria": "入力時間: 1件12分、対象部門: 4部門を使って、課題と提案範囲が対応しているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "ヒアリングメモ、受注入力、二重入力、入力時間: 1件12分 / 対象部門: 4部門を判断の主役にしている。",
+        "kernelConnection": "ヒアリングメモを、顧客要望の課題仮説化へ接続する。"
+      }
+    },
+    {
+      "type": "review",
+      "id": "it-solution-sales-02",
+      "time": "10:50",
+      "interactable": "monitor_browser",
+      "title": "既存システムの壁",
+      "openingHook": "10:50。業務フローに月間処理: 2,400件 / 手戻り率: 9%が出ている。",
+      "context": "10:50。ITソリューション営業として業務フローを確認する。月間処理: 2,400件 / 手戻り率: 9%が今日の判断材料になる。",
+      "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\n基幹システム、CSV連携を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+      "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+      "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+      "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料は業務フローと月間処理: 2,400件 / 手戻り率: 9%である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "基幹システムの確度と、月間処理: 2,400件の背景が完全にはそろっていない。",
+      "decisionTradeoff": "月間処理: 2,400件を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+      "consequenceHook": "ここでの導入制約の要件化が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は課題整理表で判断の副作用を確認する。",
+      "npcDialogue": "先輩:「業務フローの数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+      "workMaterial": "業務フロー\n- 基幹システム\n- CSV連携\n- 月間処理: 2,400件\n- 手戻り率: 9%",
+      "decisionPrompt": "導入制約の要件化として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "月間処理: 2,400件を重く見て、今日の改善を先に出す",
+          "text": "月間処理: 2,400件を重く見て、今日の改善を先に出す。判断材料は業務フロー、月間処理: 2,400件、手戻り率: 9%。",
+          "immediateFeedback": "業務フローに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "導入制約の要件化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 2,
+            "proposal_fit": -1,
+            "implementation_reality": 2,
+            "decision_progress": -1,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、業務フローと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "業務フローの具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は月間処理: 2,400件がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "業務フローと手戻り率: 9%を突き合わせ、条件付きで進める",
+          "text": "業務フローと手戻り率: 9%を突き合わせ、条件付きで進める。判断材料は業務フロー、月間処理: 2,400件、手戻り率: 9%。",
+          "immediateFeedback": "業務フローに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "導入制約の要件化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 1,
+            "proposal_fit": 2,
+            "implementation_reality": 1,
+            "decision_progress": 2,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "studentFeedback": {
+            "good": "業務フローの具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は月間処理: 2,400件がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "agility": 3,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "基幹システムの不確実性を理由に、判断を絞って持ち越す",
+          "text": "基幹システムの不確実性を理由に、判断を絞って持ち越す。判断材料は業務フロー、月間処理: 2,400件、手戻り率: 9%。",
+          "immediateFeedback": "業務フローに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "導入制約の要件化の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": -1,
+            "proposal_fit": 2,
+            "implementation_reality": -1,
+            "decision_progress": 2,
+            "overpromise_safety": -1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、業務フローと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "業務フローの具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は月間処理: 2,400件がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "導入制約の要件化",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "文系向け",
+          "営業系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "導入制約の要件化",
+        "roleSpecificMaterials": [
+          "業務フロー",
+          "基幹システム",
+          "CSV連携"
+        ],
+        "roleSpecificMetrics": [
+          "月間処理: 2,400件",
+          "手戻り率: 9%"
+        ],
+        "roleSpecificFailureRisk": "業務フローを読まずに進め、顧客要望をそのまま売る。",
+        "roleSpecificEvaluationCriteria": "月間処理: 2,400件、手戻り率: 9%を使って、課題と提案範囲が対応しているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "業務フロー、基幹システム、CSV連携、月間処理: 2,400件 / 手戻り率: 9%を判断の主役にしている。",
+        "kernelConnection": "業務フローを、導入制約の要件化へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "it-solution-sales-03",
+      "time": "12:30",
+      "interactable": "monitor_mail",
+      "title": "利用者と決裁者のズレ",
+      "openingHook": "12:30。課題整理表に削減工数: 月80時間 / 予算上限: 300万円が出ている。",
+      "context": "12:30。ITソリューション営業として課題整理表を確認する。削減工数: 月80時間 / 予算上限: 300万円が今日の判断材料になる。",
+      "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\n現場利用者、経理部長を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+      "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+      "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+      "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料は課題整理表と削減工数: 月80時間 / 予算上限: 300万円である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "現場利用者の確度と、削減工数: 月80時間の背景が完全にはそろっていない。",
+      "decisionTradeoff": "削減工数: 月80時間を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+      "consequenceHook": "ここでの決裁条件の読み替えが、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は提案骨子で判断の副作用を確認する。",
+      "npcDialogue": "先輩:「課題整理表の数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+      "workMaterial": "課題整理表\n- 現場利用者\n- 経理部長\n- 削減工数: 月80時間\n- 予算上限: 300万円",
+      "decisionPrompt": "決裁条件の読み替えとして、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "削減工数: 月80時間を重く見て、今日の改善を先に出す",
+          "text": "削減工数: 月80時間を重く見て、今日の改善を先に出す。判断材料は課題整理表、削減工数: 月80時間、予算上限: 300万円。",
+          "immediateFeedback": "課題整理表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "決裁条件の読み替えの副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 2,
+            "proposal_fit": -1,
+            "implementation_reality": 2,
+            "decision_progress": -1,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、課題整理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "課題整理表の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は削減工数: 月80時間がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "課題整理表と予算上限: 300万円を突き合わせ、条件付きで進める",
+          "text": "課題整理表と予算上限: 300万円を突き合わせ、条件付きで進める。判断材料は課題整理表、削減工数: 月80時間、予算上限: 300万円。",
+          "immediateFeedback": "課題整理表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "決裁条件の読み替えの副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 1,
+            "proposal_fit": 2,
+            "implementation_reality": 1,
+            "decision_progress": 2,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "studentFeedback": {
+            "good": "課題整理表の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は削減工数: 月80時間がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "agility": 3,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "現場利用者の不確実性を理由に、判断を絞って持ち越す",
+          "text": "現場利用者の不確実性を理由に、判断を絞って持ち越す。判断材料は課題整理表、削減工数: 月80時間、予算上限: 300万円。",
+          "immediateFeedback": "課題整理表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "決裁条件の読み替えの副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": -1,
+            "proposal_fit": 2,
+            "implementation_reality": -1,
+            "decision_progress": 2,
+            "overpromise_safety": -1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、課題整理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "課題整理表の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は削減工数: 月80時間がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "決裁条件の読み替え",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "文系向け",
+          "営業系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "決裁条件の読み替え",
+        "roleSpecificMaterials": [
+          "課題整理表",
+          "現場利用者",
+          "経理部長"
+        ],
+        "roleSpecificMetrics": [
+          "削減工数: 月80時間",
+          "予算上限: 300万円"
+        ],
+        "roleSpecificFailureRisk": "課題整理表を読まずに進め、顧客要望をそのまま売る。",
+        "roleSpecificEvaluationCriteria": "削減工数: 月80時間、予算上限: 300万円を使って、課題と提案範囲が対応しているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "課題整理表、現場利用者、経理部長、削減工数: 月80時間 / 予算上限: 300万円を判断の主役にしている。",
+        "kernelConnection": "課題整理表を、決裁条件の読み替えへ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "it-solution-sales-04",
+      "time": "14:10",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "見積前提の空欄",
+      "openingHook": "14:10。提案骨子に導入期限: 90日 / 追加開発: 3機能が出ている。",
+      "context": "14:10。ITソリューション営業として提案骨子を確認する。導入期限: 90日 / 追加開発: 3機能が今日の判断材料になる。",
+      "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\n初期導入、保守範囲を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+      "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+      "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+      "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料は提案骨子と導入期限: 90日 / 追加開発: 3機能である。",
+      "timePressure": "次の予定までに判断を残す必要がある。",
+      "missingInformation": "初期導入の確度と、導入期限: 90日の背景が完全にはそろっていない。",
+      "decisionTradeoff": "導入期限: 90日を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+      "consequenceHook": "ここでの提案範囲の線引きが、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "次は導入効果メモで判断の副作用を確認する。",
+      "npcDialogue": "先輩:「提案骨子の数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+      "workMaterial": "提案骨子\n- 初期導入\n- 保守範囲\n- 導入期限: 90日\n- 追加開発: 3機能",
+      "decisionPrompt": "提案範囲の線引きとして、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "導入期限: 90日を重く見て、今日の改善を先に出す",
+          "text": "導入期限: 90日を重く見て、今日の改善を先に出す。判断材料は提案骨子、導入期限: 90日、追加開発: 3機能。",
+          "immediateFeedback": "提案骨子に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "提案範囲の線引きの副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 2,
+            "proposal_fit": -1,
+            "implementation_reality": 2,
+            "decision_progress": -1,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、提案骨子と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "提案骨子の具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は導入期限: 90日がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "提案骨子と追加開発: 3機能を突き合わせ、条件付きで進める",
+          "text": "提案骨子と追加開発: 3機能を突き合わせ、条件付きで進める。判断材料は提案骨子、導入期限: 90日、追加開発: 3機能。",
+          "immediateFeedback": "提案骨子に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "提案範囲の線引きの副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 1,
+            "proposal_fit": 2,
+            "implementation_reality": 1,
+            "decision_progress": 2,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "studentFeedback": {
+            "good": "提案骨子の具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は導入期限: 90日がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "agility": 3,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "初期導入の不確実性を理由に、判断を絞って持ち越す",
+          "text": "初期導入の不確実性を理由に、判断を絞って持ち越す。判断材料は提案骨子、導入期限: 90日、追加開発: 3機能。",
+          "immediateFeedback": "提案骨子に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "提案範囲の線引きの副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": -1,
+            "proposal_fit": 2,
+            "implementation_reality": -1,
+            "decision_progress": 2,
+            "overpromise_safety": -1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、提案骨子と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "提案骨子の具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は導入期限: 90日がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "提案範囲の線引き",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "文系向け",
+          "営業系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "提案範囲の線引き",
+        "roleSpecificMaterials": [
+          "提案骨子",
+          "初期導入",
+          "保守範囲"
+        ],
+        "roleSpecificMetrics": [
+          "導入期限: 90日",
+          "追加開発: 3機能"
+        ],
+        "roleSpecificFailureRisk": "提案骨子を読まずに進め、顧客要望をそのまま売る。",
+        "roleSpecificEvaluationCriteria": "導入期限: 90日、追加開発: 3機能を使って、課題と提案範囲が対応しているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "提案骨子、初期導入、保守範囲、導入期限: 90日 / 追加開発: 3機能を判断の主役にしている。",
+        "kernelConnection": "提案骨子を、提案範囲の線引きへ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "it-solution-sales-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "次回提案の条件",
+      "openingHook": "16:35。導入効果メモに決裁確度: 60% / 想定回収: 14か月が出ている。",
+      "context": "16:35。ITソリューション営業として導入効果メモを確認する。決裁確度: 60% / 想定回収: 14か月が今日の判断材料になる。",
+      "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\nPoC、稟議資料を読み、次の作業に残す判断を選ぶ。",
+      "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+      "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+      "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+      "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料は導入効果メモと決裁確度: 60% / 想定回収: 14か月である。",
+      "timePressure": "終業までに判断を残す必要がある。",
+      "missingInformation": "PoCの確度と、決裁確度: 60%の背景が完全にはそろっていない。",
+      "decisionTradeoff": "決裁確度: 60%を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+      "consequenceHook": "ここでの次回確認項目の確定が、次の仕事材料の読み方に響く。",
+      "nextSceneEcho": "結果では職業理解として返る。",
+      "npcDialogue": "先輩:「導入効果メモの数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+      "workMaterial": "導入効果メモ\n- PoC\n- 稟議資料\n- 決裁確度: 60%\n- 想定回収: 14か月",
+      "decisionPrompt": "次回確認項目の確定として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "決裁確度: 60%を重く見て、今日の改善を先に出す",
+          "text": "決裁確度: 60%を重く見て、今日の改善を先に出す。判断材料は導入効果メモ、決裁確度: 60%、想定回収: 14か月。",
+          "immediateFeedback": "導入効果メモに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+          "nextSceneEffect": "次回確認項目の確定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 2,
+            "proposal_fit": -1,
+            "implementation_reality": 2,
+            "decision_progress": -1,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、導入効果メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "導入効果メモの具体的な材料を判断に使っている。",
+            "risk": "速度は出るが確認範囲が狭くなる",
+            "next": "次は決裁確度: 60%がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "導入効果メモと想定回収: 14か月を突き合わせ、条件付きで進める",
+          "text": "導入効果メモと想定回収: 14か月を突き合わせ、条件付きで進める。判断材料は導入効果メモ、決裁確度: 60%、想定回収: 14か月。",
+          "immediateFeedback": "導入効果メモに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明できる判断になる",
+          "nextSceneEffect": "次回確認項目の確定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+          "meterEffects": {
+            "issue_clarity": 1,
+            "proposal_fit": 2,
+            "implementation_reality": 1,
+            "decision_progress": 2,
+            "overpromise_safety": 1
+          },
+          "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "studentFeedback": {
+            "good": "導入効果メモの具体的な材料を判断に使っている。",
+            "risk": "作業は増えるが説明できる判断になる",
+            "next": "次は決裁確度: 60%がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "agility": 3,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "PoCの不確実性を理由に、判断を絞って持ち越す",
+          "text": "PoCの不確実性を理由に、判断を絞って持ち越す。判断材料は導入効果メモ、決裁確度: 60%、想定回収: 14か月。",
+          "immediateFeedback": "導入効果メモに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す可能性がある",
+          "nextSceneEffect": "次回確認項目の確定の副作用が次の資料に残る。",
+          "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+          "meterEffects": {
+            "issue_clarity": -1,
+            "proposal_fit": 2,
+            "implementation_reality": -1,
+            "decision_progress": 2,
+            "overpromise_safety": -1
+          },
+          "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、導入効果メモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "導入効果メモの具体的な材料を判断に使っている。",
+            "risk": "安全だが機会を逃す可能性がある",
+            "next": "次は決裁確度: 60%がどう効くか確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 3,
+            "agility": 2,
+            "ethics": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "次回確認項目の確定",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "文系向け",
+          "営業系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "次回確認項目の確定",
+        "roleSpecificMaterials": [
+          "導入効果メモ",
+          "PoC",
+          "稟議資料"
+        ],
+        "roleSpecificMetrics": [
+          "決裁確度: 60%",
+          "想定回収: 14か月"
+        ],
+        "roleSpecificFailureRisk": "導入効果メモを読まずに進め、顧客要望をそのまま売る。",
+        "roleSpecificEvaluationCriteria": "決裁確度: 60%、想定回収: 14か月を使って、課題と提案範囲が対応しているか。",
+        "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "導入効果メモ、PoC、稟議資料、決裁確度: 60% / 想定回収: 14か月を判断の主役にしている。",
+        "kernelConnection": "導入効果メモを、次回確認項目の確定へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "ITソリューション営業の午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "it-solution-sales-01",
+          "time": "09:15",
+          "interactable": "monitor_terminal",
+          "title": "要望だらけの初回メモ",
+          "openingHook": "09:15。ヒアリングメモに入力時間: 1件12分 / 対象部門: 4部門が出ている。",
+          "context": "09:15。ITソリューション営業としてヒアリングメモを確認する。入力時間: 1件12分 / 対象部門: 4部門が今日の判断材料になる。",
+          "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\n受注入力、二重入力を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+          "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+          "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料はヒアリングメモと入力時間: 1件12分 / 対象部門: 4部門である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "受注入力の確度と、入力時間: 1件12分の背景が完全にはそろっていない。",
+          "decisionTradeoff": "入力時間: 1件12分を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+          "consequenceHook": "ここでの顧客要望の課題仮説化が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は業務フローで判断の副作用を確認する。",
+          "npcDialogue": "先輩:「ヒアリングメモの数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+          "workMaterial": "ヒアリングメモ\n- 受注入力\n- 二重入力\n- 入力時間: 1件12分\n- 対象部門: 4部門",
+          "decisionPrompt": "顧客要望の課題仮説化として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "入力時間: 1件12分を重く見て、今日の改善を先に出す",
+              "text": "入力時間: 1件12分を重く見て、今日の改善を先に出す。判断材料はヒアリングメモ、入力時間: 1件12分、対象部門: 4部門。",
+              "immediateFeedback": "ヒアリングメモに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "顧客要望の課題仮説化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 2,
+                "proposal_fit": -1,
+                "implementation_reality": 2,
+                "decision_progress": -1,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、ヒアリングメモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "ヒアリングメモの具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は入力時間: 1件12分がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "ヒアリングメモと対象部門: 4部門を突き合わせ、条件付きで進める",
+              "text": "ヒアリングメモと対象部門: 4部門を突き合わせ、条件付きで進める。判断材料はヒアリングメモ、入力時間: 1件12分、対象部門: 4部門。",
+              "immediateFeedback": "ヒアリングメモに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "顧客要望の課題仮説化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 1,
+                "proposal_fit": 2,
+                "implementation_reality": 1,
+                "decision_progress": 2,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+              "studentFeedback": {
+                "good": "ヒアリングメモの具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は入力時間: 1件12分がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "agility": 3,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "受注入力の不確実性を理由に、判断を絞って持ち越す",
+              "text": "受注入力の不確実性を理由に、判断を絞って持ち越す。判断材料はヒアリングメモ、入力時間: 1件12分、対象部門: 4部門。",
+              "immediateFeedback": "ヒアリングメモに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "顧客要望の課題仮説化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": -1,
+                "proposal_fit": 2,
+                "implementation_reality": -1,
+                "decision_progress": 2,
+                "overpromise_safety": -1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、ヒアリングメモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "ヒアリングメモの具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は入力時間: 1件12分がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "顧客要望の課題仮説化",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "文系向け",
+              "営業系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "顧客要望の課題仮説化",
+            "roleSpecificMaterials": [
+              "ヒアリングメモ",
+              "受注入力",
+              "二重入力"
+            ],
+            "roleSpecificMetrics": [
+              "入力時間: 1件12分",
+              "対象部門: 4部門"
+            ],
+            "roleSpecificFailureRisk": "ヒアリングメモを読まずに進め、顧客要望をそのまま売る。",
+            "roleSpecificEvaluationCriteria": "入力時間: 1件12分、対象部門: 4部門を使って、課題と提案範囲が対応しているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "ヒアリングメモ、受注入力、二重入力、入力時間: 1件12分 / 対象部門: 4部門を判断の主役にしている。",
+            "kernelConnection": "ヒアリングメモを、顧客要望の課題仮説化へ接続する。"
+          }
+        },
+        {
+          "id": "it-solution-sales-02",
+          "time": "10:50",
+          "interactable": "monitor_browser",
+          "title": "既存システムの壁",
+          "openingHook": "10:50。業務フローに月間処理: 2,400件 / 手戻り率: 9%が出ている。",
+          "context": "10:50。ITソリューション営業として業務フローを確認する。月間処理: 2,400件 / 手戻り率: 9%が今日の判断材料になる。",
+          "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\n基幹システム、CSV連携を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+          "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+          "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料は業務フローと月間処理: 2,400件 / 手戻り率: 9%である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "基幹システムの確度と、月間処理: 2,400件の背景が完全にはそろっていない。",
+          "decisionTradeoff": "月間処理: 2,400件を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+          "consequenceHook": "ここでの導入制約の要件化が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は課題整理表で判断の副作用を確認する。",
+          "npcDialogue": "先輩:「業務フローの数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+          "workMaterial": "業務フロー\n- 基幹システム\n- CSV連携\n- 月間処理: 2,400件\n- 手戻り率: 9%",
+          "decisionPrompt": "導入制約の要件化として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "月間処理: 2,400件を重く見て、今日の改善を先に出す",
+              "text": "月間処理: 2,400件を重く見て、今日の改善を先に出す。判断材料は業務フロー、月間処理: 2,400件、手戻り率: 9%。",
+              "immediateFeedback": "業務フローに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "導入制約の要件化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 2,
+                "proposal_fit": -1,
+                "implementation_reality": 2,
+                "decision_progress": -1,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、業務フローと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "業務フローの具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は月間処理: 2,400件がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "業務フローと手戻り率: 9%を突き合わせ、条件付きで進める",
+              "text": "業務フローと手戻り率: 9%を突き合わせ、条件付きで進める。判断材料は業務フロー、月間処理: 2,400件、手戻り率: 9%。",
+              "immediateFeedback": "業務フローに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "導入制約の要件化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 1,
+                "proposal_fit": 2,
+                "implementation_reality": 1,
+                "decision_progress": 2,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+              "studentFeedback": {
+                "good": "業務フローの具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は月間処理: 2,400件がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "agility": 3,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "基幹システムの不確実性を理由に、判断を絞って持ち越す",
+              "text": "基幹システムの不確実性を理由に、判断を絞って持ち越す。判断材料は業務フロー、月間処理: 2,400件、手戻り率: 9%。",
+              "immediateFeedback": "業務フローに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "導入制約の要件化の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": -1,
+                "proposal_fit": 2,
+                "implementation_reality": -1,
+                "decision_progress": 2,
+                "overpromise_safety": -1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、業務フローと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "業務フローの具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は月間処理: 2,400件がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "導入制約の要件化",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "文系向け",
+              "営業系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "導入制約の要件化",
+            "roleSpecificMaterials": [
+              "業務フロー",
+              "基幹システム",
+              "CSV連携"
+            ],
+            "roleSpecificMetrics": [
+              "月間処理: 2,400件",
+              "手戻り率: 9%"
+            ],
+            "roleSpecificFailureRisk": "業務フローを読まずに進め、顧客要望をそのまま売る。",
+            "roleSpecificEvaluationCriteria": "月間処理: 2,400件、手戻り率: 9%を使って、課題と提案範囲が対応しているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "業務フロー、基幹システム、CSV連携、月間処理: 2,400件 / 手戻り率: 9%を判断の主役にしている。",
+            "kernelConnection": "業務フローを、導入制約の要件化へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "ITソリューション営業の昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "it-solution-sales-03",
+          "time": "12:30",
+          "interactable": "monitor_mail",
+          "title": "利用者と決裁者のズレ",
+          "openingHook": "12:30。課題整理表に削減工数: 月80時間 / 予算上限: 300万円が出ている。",
+          "context": "12:30。ITソリューション営業として課題整理表を確認する。削減工数: 月80時間 / 予算上限: 300万円が今日の判断材料になる。",
+          "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\n現場利用者、経理部長を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+          "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+          "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料は課題整理表と削減工数: 月80時間 / 予算上限: 300万円である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "現場利用者の確度と、削減工数: 月80時間の背景が完全にはそろっていない。",
+          "decisionTradeoff": "削減工数: 月80時間を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+          "consequenceHook": "ここでの決裁条件の読み替えが、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は提案骨子で判断の副作用を確認する。",
+          "npcDialogue": "先輩:「課題整理表の数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+          "workMaterial": "課題整理表\n- 現場利用者\n- 経理部長\n- 削減工数: 月80時間\n- 予算上限: 300万円",
+          "decisionPrompt": "決裁条件の読み替えとして、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "削減工数: 月80時間を重く見て、今日の改善を先に出す",
+              "text": "削減工数: 月80時間を重く見て、今日の改善を先に出す。判断材料は課題整理表、削減工数: 月80時間、予算上限: 300万円。",
+              "immediateFeedback": "課題整理表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "決裁条件の読み替えの副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 2,
+                "proposal_fit": -1,
+                "implementation_reality": 2,
+                "decision_progress": -1,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、課題整理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "課題整理表の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は削減工数: 月80時間がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "課題整理表と予算上限: 300万円を突き合わせ、条件付きで進める",
+              "text": "課題整理表と予算上限: 300万円を突き合わせ、条件付きで進める。判断材料は課題整理表、削減工数: 月80時間、予算上限: 300万円。",
+              "immediateFeedback": "課題整理表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "決裁条件の読み替えの副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 1,
+                "proposal_fit": 2,
+                "implementation_reality": 1,
+                "decision_progress": 2,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+              "studentFeedback": {
+                "good": "課題整理表の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は削減工数: 月80時間がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "agility": 3,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "現場利用者の不確実性を理由に、判断を絞って持ち越す",
+              "text": "現場利用者の不確実性を理由に、判断を絞って持ち越す。判断材料は課題整理表、削減工数: 月80時間、予算上限: 300万円。",
+              "immediateFeedback": "課題整理表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "決裁条件の読み替えの副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": -1,
+                "proposal_fit": 2,
+                "implementation_reality": -1,
+                "decision_progress": 2,
+                "overpromise_safety": -1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、課題整理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "課題整理表の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は削減工数: 月80時間がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "決裁条件の読み替え",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "文系向け",
+              "営業系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "決裁条件の読み替え",
+            "roleSpecificMaterials": [
+              "課題整理表",
+              "現場利用者",
+              "経理部長"
+            ],
+            "roleSpecificMetrics": [
+              "削減工数: 月80時間",
+              "予算上限: 300万円"
+            ],
+            "roleSpecificFailureRisk": "課題整理表を読まずに進め、顧客要望をそのまま売る。",
+            "roleSpecificEvaluationCriteria": "削減工数: 月80時間、予算上限: 300万円を使って、課題と提案範囲が対応しているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "課題整理表、現場利用者、経理部長、削減工数: 月80時間 / 予算上限: 300万円を判断の主役にしている。",
+            "kernelConnection": "課題整理表を、決裁条件の読み替えへ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "ITソリューション営業の午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "it-solution-sales-04",
+          "time": "14:10",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "見積前提の空欄",
+          "openingHook": "14:10。提案骨子に導入期限: 90日 / 追加開発: 3機能が出ている。",
+          "context": "14:10。ITソリューション営業として提案骨子を確認する。導入期限: 90日 / 追加開発: 3機能が今日の判断材料になる。",
+          "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\n初期導入、保守範囲を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+          "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+          "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料は提案骨子と導入期限: 90日 / 追加開発: 3機能である。",
+          "timePressure": "次の予定までに判断を残す必要がある。",
+          "missingInformation": "初期導入の確度と、導入期限: 90日の背景が完全にはそろっていない。",
+          "decisionTradeoff": "導入期限: 90日を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+          "consequenceHook": "ここでの提案範囲の線引きが、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "次は導入効果メモで判断の副作用を確認する。",
+          "npcDialogue": "先輩:「提案骨子の数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+          "workMaterial": "提案骨子\n- 初期導入\n- 保守範囲\n- 導入期限: 90日\n- 追加開発: 3機能",
+          "decisionPrompt": "提案範囲の線引きとして、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "導入期限: 90日を重く見て、今日の改善を先に出す",
+              "text": "導入期限: 90日を重く見て、今日の改善を先に出す。判断材料は提案骨子、導入期限: 90日、追加開発: 3機能。",
+              "immediateFeedback": "提案骨子に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "提案範囲の線引きの副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 2,
+                "proposal_fit": -1,
+                "implementation_reality": 2,
+                "decision_progress": -1,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、提案骨子と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "提案骨子の具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は導入期限: 90日がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "提案骨子と追加開発: 3機能を突き合わせ、条件付きで進める",
+              "text": "提案骨子と追加開発: 3機能を突き合わせ、条件付きで進める。判断材料は提案骨子、導入期限: 90日、追加開発: 3機能。",
+              "immediateFeedback": "提案骨子に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "提案範囲の線引きの副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 1,
+                "proposal_fit": 2,
+                "implementation_reality": 1,
+                "decision_progress": 2,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+              "studentFeedback": {
+                "good": "提案骨子の具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は導入期限: 90日がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "agility": 3,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "初期導入の不確実性を理由に、判断を絞って持ち越す",
+              "text": "初期導入の不確実性を理由に、判断を絞って持ち越す。判断材料は提案骨子、導入期限: 90日、追加開発: 3機能。",
+              "immediateFeedback": "提案骨子に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "提案範囲の線引きの副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": -1,
+                "proposal_fit": 2,
+                "implementation_reality": -1,
+                "decision_progress": 2,
+                "overpromise_safety": -1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、提案骨子と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "提案骨子の具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は導入期限: 90日がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "提案範囲の線引き",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "文系向け",
+              "営業系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "提案範囲の線引き",
+            "roleSpecificMaterials": [
+              "提案骨子",
+              "初期導入",
+              "保守範囲"
+            ],
+            "roleSpecificMetrics": [
+              "導入期限: 90日",
+              "追加開発: 3機能"
+            ],
+            "roleSpecificFailureRisk": "提案骨子を読まずに進め、顧客要望をそのまま売る。",
+            "roleSpecificEvaluationCriteria": "導入期限: 90日、追加開発: 3機能を使って、課題と提案範囲が対応しているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "提案骨子、初期導入、保守範囲、導入期限: 90日 / 追加開発: 3機能を判断の主役にしている。",
+            "kernelConnection": "提案骨子を、提案範囲の線引きへ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "ITソリューション営業の夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "it-solution-sales-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "次回提案の条件",
+          "openingHook": "16:35。導入効果メモに決裁確度: 60% / 想定回収: 14か月が出ている。",
+          "context": "16:35。ITソリューション営業として導入効果メモを確認する。決裁確度: 60% / 想定回収: 14か月が今日の判断材料になる。",
+          "content": "顧客業務をIT要件と導入制約に翻訳し、提案範囲を組み立てる。\n\nPoC、稟議資料を読み、次の作業に残す判断を選ぶ。",
+          "roleSpecificContext": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+          "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+          "hiddenWorkReality": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+          "stakeholderPressure": "ITソリューション営業の判断を待つ相手はいるが、主材料は導入効果メモと決裁確度: 60% / 想定回収: 14か月である。",
+          "timePressure": "終業までに判断を残す必要がある。",
+          "missingInformation": "PoCの確度と、決裁確度: 60%の背景が完全にはそろっていない。",
+          "decisionTradeoff": "決裁確度: 60%を急いで改善するほど、過剰提案を避けるを外すリスクが増える。",
+          "consequenceHook": "ここでの次回確認項目の確定が、次の仕事材料の読み方に響く。",
+          "nextSceneEcho": "結果では職業理解として返る。",
+          "npcDialogue": "先輩:「導入効果メモの数字を見ずに決めると、ITソリューション営業の判断ではなくなるよ」",
+          "workMaterial": "導入効果メモ\n- PoC\n- 稟議資料\n- 決裁確度: 60%\n- 想定回収: 14か月",
+          "decisionPrompt": "次回確認項目の確定として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "決裁確度: 60%を重く見て、今日の改善を先に出す",
+              "text": "決裁確度: 60%を重く見て、今日の改善を先に出す。判断材料は導入効果メモ、決裁確度: 60%、想定回収: 14か月。",
+              "immediateFeedback": "導入効果メモに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭くなる",
+              "nextSceneEffect": "次回確認項目の確定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 2,
+                "proposal_fit": -1,
+                "implementation_reality": 2,
+                "decision_progress": -1,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、導入効果メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "導入効果メモの具体的な材料を判断に使っている。",
+                "risk": "速度は出るが確認範囲が狭くなる",
+                "next": "次は決裁確度: 60%がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "導入効果メモと想定回収: 14か月を突き合わせ、条件付きで進める",
+              "text": "導入効果メモと想定回収: 14か月を突き合わせ、条件付きで進める。判断材料は導入効果メモ、決裁確度: 60%、想定回収: 14か月。",
+              "immediateFeedback": "導入効果メモに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明できる判断になる",
+              "nextSceneEffect": "次回確認項目の確定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業の仕事材料を読んで条件を設計する判断が多い。",
+              "meterEffects": {
+                "issue_clarity": 1,
+                "proposal_fit": 2,
+                "implementation_reality": 1,
+                "decision_progress": 2,
+                "overpromise_safety": 1
+              },
+              "misconceptionEffect": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+              "studentFeedback": {
+                "good": "導入効果メモの具体的な材料を判断に使っている。",
+                "risk": "作業は増えるが説明できる判断になる",
+                "next": "次は決裁確度: 60%がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "agility": 3,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "PoCの不確実性を理由に、判断を絞って持ち越す",
+              "text": "PoCの不確実性を理由に、判断を絞って持ち越す。判断材料は導入効果メモ、決裁確度: 60%、想定回収: 14か月。",
+              "immediateFeedback": "導入効果メモに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す可能性がある",
+              "nextSceneEffect": "次回確認項目の確定の副作用が次の資料に残る。",
+              "resultSummaryEffect": "ITソリューション営業で一部の制約を強く見る判断が多い。",
+              "meterEffects": {
+                "issue_clarity": -1,
+                "proposal_fit": 2,
+                "implementation_reality": -1,
+                "decision_progress": 2,
+                "overpromise_safety": -1
+              },
+              "misconceptionEffect": "ITソリューション営業は印象や会話だけではなく、導入効果メモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "導入効果メモの具体的な材料を判断に使っている。",
+                "risk": "安全だが機会を逃す可能性がある",
+                "next": "次は決裁確度: 60%がどう効くか確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 3,
+                "agility": 2,
+                "ethics": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "次回確認項目の確定",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "文系向け",
+              "営業系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "次回確認項目の確定",
+            "roleSpecificMaterials": [
+              "導入効果メモ",
+              "PoC",
+              "稟議資料"
+            ],
+            "roleSpecificMetrics": [
+              "決裁確度: 60%",
+              "想定回収: 14か月"
+            ],
+            "roleSpecificFailureRisk": "導入効果メモを読まずに進め、顧客要望をそのまま売る。",
+            "roleSpecificEvaluationCriteria": "決裁確度: 60%、想定回収: 14か月を使って、課題と提案範囲が対応しているか。",
+            "genericCoordinationRisk": "会話の進め方だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "導入効果メモ、PoC、稟議資料、決裁確度: 60% / 想定回収: 14か月を判断の主役にしている。",
+            "kernelConnection": "導入効果メモを、次回確認項目の確定へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "communication",
+    "logical",
+    "ownership",
+    "agility",
+    "ethics"
+  ],
+  "resultTypes": [
+    {
+      "id": "material-translator",
+      "title": "ITソリューション営業の材料翻訳型",
+      "strengths": [
+        "ITソリューション営業の仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "issue_clarity",
+        "proposal_fit"
+      ],
+      "valuedMeters": [
+        "issue_clarity",
+        "proposal_fit"
+      ],
+      "sacrificedMeters": [
+        "implementation_reality"
+      ],
+      "roleRealityReveal": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+      "misconceptionCorrection": "営業は話術で商品を売る仕事で、業務課題・導入制約・費用対効果の見立ては後工程だと思いやすい。という誤解が修正される。",
+      "decisionPatternSummary": "ITソリューション営業の資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "ITソリューション営業として仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "forward-driver",
+      "title": "ITソリューション営業の推進型",
+      "strengths": [
+        "ITソリューション営業の仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "implementation_reality",
+        "issue_clarity"
+      ],
+      "valuedMeters": [
+        "implementation_reality",
+        "issue_clarity"
+      ],
+      "sacrificedMeters": [
+        "proposal_fit"
+      ],
+      "roleRealityReveal": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+      "misconceptionCorrection": "営業は話術で商品を売る仕事で、業務課題・導入制約・費用対効果の見立ては後工程だと思いやすい。という誤解が修正される。",
+      "decisionPatternSummary": "ITソリューション営業の資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "ITソリューション営業として仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "risk-controller",
+      "title": "ITソリューション営業の安全設計型",
+      "strengths": [
+        "ITソリューション営業の仕事材料を読み、判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重く見た指標の裏で、別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "proposal_fit",
+        "implementation_reality"
+      ],
+      "valuedMeters": [
+        "proposal_fit",
+        "implementation_reality"
+      ],
+      "sacrificedMeters": [
+        "issue_clarity"
+      ],
+      "roleRealityReveal": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+      "misconceptionCorrection": "営業は話術で商品を売る仕事で、業務課題・導入制約・費用対効果の見立ては後工程だと思いやすい。という誤解が修正される。",
+      "decisionPatternSummary": "ITソリューション営業の資料と数値を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "ITソリューション営業として仕事材料を読み切る感覚を振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "analytics": {
+    "decisionStyleAxes": [
+      "issue_clarity_vs_decision_progress",
+      "proposal_fit_vs_overpromise_safety",
+      "implementation_reality_vs_customer_request"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 1 selected role.",
+    "mainConflict": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+    "sceneRationale": "Role Differentiation Sheetの仕事材料から、連続する5 sceneの業務日に再構成した。",
+    "choiceRationale": "正解不正解ではなく、各仕事材料をどう読むかのトレードオフにした。",
+    "scoringRationale": "既存Cαのdimension互換を維持しつつ、Cβ固有meterを追加した。",
+    "knownLimitations": "架空ケースを前提にしたCβ標準シナリオ。実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "issue_clarity",
+      "label": "課題解像度",
+      "description": "顧客課題を具体化できる度合い"
+    },
+    {
+      "key": "proposal_fit",
+      "label": "提案適合",
+      "description": "要件と提案範囲が合う度合い"
+    },
+    {
+      "key": "implementation_reality",
+      "label": "導入現実性",
+      "description": "実装・運用制約を外さない力"
+    },
+    {
+      "key": "decision_progress",
+      "label": "決裁前進",
+      "description": "次の合意へ進める力"
+    },
+    {
+      "key": "overpromise_safety",
+      "label": "過剰約束防止",
+      "description": "売りすぎを避ける力"
+    }
+  ],
+  "branchSummary": {
+    "overview": "ITソリューション営業の5つの仕事材料判断が、職業理解と意思決定傾向に連鎖する。",
+    "trackedEffects": [
+      "issue_clarity",
+      "proposal_fit",
+      "implementation_reality",
+      "decision_progress",
+      "overpromise_safety"
+    ]
+  },
+  "resultFeedback": {
+    "roleRealityReveal": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+    "misconceptionCorrection": "営業は話術で商品を売る仕事で、業務課題・導入制約・費用対効果の見立ては後工程だと思いやすい。という見方から、曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する職種だと理解する。",
+    "careerReflectionPrompt": "ITソリューション営業として、数字・資料・制約を読んで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "it-solution-sales_role_understanding"
+    ]
+  },
+  "roleCoreFriction": "顧客要望に応えたい圧力と、実装難度・運用負荷・費用対効果を外さない判断の葛藤。",
+  "roleMisconception": "営業は話術で商品を売る仕事で、業務課題・導入制約・費用対効果の見立ては後工程だと思いやすい。",
+  "roleRealityReveal": "実際は、曖昧な要望を導入可能なIT提案の要件と優先順位へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "顧客ヒアリング、業務フロー、既存システム制約、予算感、導入期限",
+    "output": "課題仮説、提案範囲、見積前提、次回確認項目",
+    "transformation": "曖昧な要望を、導入可能なIT提案の要件と優先順位へ変換する",
+    "constraints": [
+      "過剰提案を避ける",
+      "実装難度を見落とさない",
+      "決裁者と利用者の差を読む"
+    ],
+    "workArtifacts": [
+      "ヒアリングメモ",
+      "課題整理表",
+      "提案骨子",
+      "導入効果メモ"
+    ],
+    "metrics": [
+      "入力時間: 1件12分",
+      "対象部門: 4部門",
+      "月間処理: 2,400件",
+      "手戻り率: 9%",
+      "削減工数: 月80時間",
+      "予算上限: 300万円",
+      "導入期限: 90日",
+      "追加開発: 3機能",
+      "決裁確度: 60%",
+      "想定回収: 14か月"
+    ],
+    "failureModes": [
+      "顧客要望をそのまま売る",
+      "導入後の運用負荷を見落とす",
+      "決裁条件を外す"
+    ],
+    "evaluationCriteria": [
+      "課題と提案範囲が対応している",
+      "費用対効果が説明できる",
+      "次アクションが明確"
+    ],
+    "nonGenericReason": "業務フロー、既存システム、導入費用、削減工数をIT要件へ翻訳するため。"
+  }
+}

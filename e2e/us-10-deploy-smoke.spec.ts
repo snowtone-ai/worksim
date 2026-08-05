@@ -16,8 +16,14 @@ test('US-10: 未ログインで /play にアクセスするとトップにリダ
 })
 
 test('US-10: 結果ページは認証なしでもアクセスできる', async ({ page }) => {
-  const answers = { standup: 'a', 'bug-email': 'a', 'code-review': 'a', 'feature-design': 'a', 'incident-debug': 'a' }
+  const answers = {
+    'web-engineer-01': 'a',
+    'web-engineer-02': 'a',
+    'web-engineer-03': 'a',
+    'web-engineer-04': 'a',
+    'web-engineer-05': 'a',
+  }
   const encoded = encodeURIComponent(JSON.stringify(answers))
-  await page.goto(`/play/it/web-engineer/result?a=${encoded}`)
+  await page.goto(`/play/it/web-engineer/result?a=${encoded}&m=immersive`)
   await expect(page.getByText('診断結果')).toBeVisible()
 })

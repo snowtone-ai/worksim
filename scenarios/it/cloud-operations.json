@@ -1,0 +1,2190 @@
+{
+  "id": "it/cloud-operations",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "IT・通信",
+  "industrySlug": "it",
+  "role": "インフラ/クラウド運用",
+  "roleSlug": "cloud-operations",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "理系向け",
+    "分析系",
+    "高難易度"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for IT・通信 インフラ/クラウド運用.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "it",
+      "cloud-operations"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "アラート一覧"
+    },
+    {
+      "time": "10:40",
+      "label": "構成変更票"
+    },
+    {
+      "time": "12:20",
+      "label": "コスト明細"
+    },
+    {
+      "time": "14:15",
+      "label": "脆弱性通知"
+    },
+    {
+      "time": "16:35",
+      "label": "運用引継ぎ"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "アラート一覧"
+    },
+    {
+      "time": "10:40",
+      "label": "構成変更票"
+    },
+    {
+      "time": "12:20",
+      "label": "コスト明細"
+    },
+    {
+      "time": "14:15",
+      "label": "脆弱性通知"
+    },
+    {
+      "time": "16:35",
+      "label": "運用引継ぎ"
+    }
+  ],
+  "sceneList": [
+    "cloud-operations-01",
+    "cloud-operations-02",
+    "cloud-operations-03",
+    "cloud-operations-04",
+    "cloud-operations-05"
+  ],
+  "meta": {
+    "title": "インフラ/クラウド運用",
+    "industry": "IT・通信",
+    "role": "インフラ/クラウド運用",
+    "duration_minutes": 18,
+    "description": "クラウド監視と障害予防するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "technical",
+      "label": "技術力",
+      "description": "技術的な問題を分析・解決する力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を整理して判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "cloud-operations-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "アラート一覧",
+      "openingHook": "09:10。CPU 86%にエラー率 2.9%とundefinedが並んでいる。",
+      "context": "インフラ/クラウド運用としてCPU 86%を確認する。エラー率 2.9%、undefinedが今日の判断材料になる。",
+      "content": "クラウド監視と障害予防するため、CPU 86%を読んで次の作業判断を残す。",
+      "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+      "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はCPU 86%である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "エラー率 2.9%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "エラー率 2.9%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "cloud-operations-CPU 86%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は対象VM 18台で副作用を確認する。",
+      "npcDialogue": "先輩:「CPU 86%を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+      "workMaterial": "アラート一覧\n- CPU 86%\n- エラー率 2.9%\n- 判断対象: アラート一覧",
+      "decisionPrompt": "cloud-operations-CPU 86%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "エラー率 2.9%を重く見て、当日中に前へ進める",
+          "text": "エラー率 2.9%を重く見て、当日中に前へ進める。材料はCPU 86%、エラー率 2.9%、undefined。",
+          "immediateFeedback": "CPU 86%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 2,
+            "cloud_operations_risk": -1,
+            "cloud_operations_speed": 2,
+            "cloud_operations_value": -1,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、CPU 86%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "CPU 86%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はエラー率 2.9%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "CPU 86%のエラー率 2.9%とundefinedを突き合わせ、条件付きで進める",
+          "text": "CPU 86%のエラー率 2.9%とundefinedを突き合わせ、条件付きで進める。材料はCPU 86%、エラー率 2.9%、undefined。",
+          "immediateFeedback": "CPU 86%に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": 1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、CPU 86%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "CPU 86%の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次はエラー率 2.9%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料はCPU 86%、エラー率 2.9%、undefined。",
+          "immediateFeedback": "CPU 86%に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": -1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": -1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": -1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、CPU 86%と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "CPU 86%の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次はエラー率 2.9%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "cloud-operations-CPU 86%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "cloud-operations-CPU 86%判断",
+        "roleSpecificMaterials": [
+          "アラート一覧",
+          "判断対象: アラート一覧"
+        ],
+        "roleSpecificMetrics": [
+          "CPU 86%",
+          "エラー率 2.9%"
+        ],
+        "roleSpecificFailureRisk": "アラート一覧を読まず、CPU 86%かエラー率 2.9%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "CPU 86%とエラー率 2.9%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "アラート一覧、CPU 86%、エラー率 2.9%を判断の主役にしている。",
+        "kernelConnection": "アラート一覧をcloud-operations-CPU 86%判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "cloud-operations-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "構成変更票",
+      "openingHook": "10:40。対象VM 18台に切戻し時間 12分とundefinedが並んでいる。",
+      "context": "インフラ/クラウド運用として対象VM 18台を確認する。切戻し時間 12分、undefinedが今日の判断材料になる。",
+      "content": "クラウド監視と障害予防するため、対象VM 18台を読んで次の作業判断を残す。",
+      "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+      "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は対象VM 18台である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "切戻し時間 12分の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "切戻し時間 12分を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "cloud-operations-対象VM 18台判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は月額 142万円で副作用を確認する。",
+      "npcDialogue": "先輩:「対象VM 18台を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+      "workMaterial": "構成変更票\n- 対象VM 18台\n- 切戻し時間 12分\n- 判断対象: 構成変更票",
+      "decisionPrompt": "cloud-operations-対象VM 18台判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "切戻し時間 12分を重く見て、当日中に前へ進める",
+          "text": "切戻し時間 12分を重く見て、当日中に前へ進める。材料は対象VM 18台、切戻し時間 12分、undefined。",
+          "immediateFeedback": "対象VM 18台に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 2,
+            "cloud_operations_risk": -1,
+            "cloud_operations_speed": 2,
+            "cloud_operations_value": -1,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、対象VM 18台と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対象VM 18台の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は切戻し時間 12分の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "対象VM 18台の切戻し時間 12分とundefinedを突き合わせ、条件付きで進める",
+          "text": "対象VM 18台の切戻し時間 12分とundefinedを突き合わせ、条件付きで進める。材料は対象VM 18台、切戻し時間 12分、undefined。",
+          "immediateFeedback": "対象VM 18台に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": 1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、対象VM 18台と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対象VM 18台の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は切戻し時間 12分の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は対象VM 18台、切戻し時間 12分、undefined。",
+          "immediateFeedback": "対象VM 18台に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": -1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": -1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": -1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、対象VM 18台と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "対象VM 18台の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は切戻し時間 12分の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "cloud-operations-対象VM 18台判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "cloud-operations-対象VM 18台判断",
+        "roleSpecificMaterials": [
+          "構成変更票",
+          "判断対象: 構成変更票"
+        ],
+        "roleSpecificMetrics": [
+          "対象VM 18台",
+          "切戻し時間 12分"
+        ],
+        "roleSpecificFailureRisk": "構成変更票を読まず、対象VM 18台か切戻し時間 12分のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "対象VM 18台と切戻し時間 12分を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "構成変更票、対象VM 18台、切戻し時間 12分を判断の主役にしている。",
+        "kernelConnection": "構成変更票をcloud-operations-対象VM 18台判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "cloud-operations-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "コスト明細",
+      "openingHook": "12:20。月額 142万円に未使用率 23%とundefinedが並んでいる。",
+      "context": "インフラ/クラウド運用として月額 142万円を確認する。未使用率 23%、undefinedが今日の判断材料になる。",
+      "content": "クラウド監視と障害予防するため、月額 142万円を読んで次の作業判断を残す。",
+      "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+      "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は月額 142万円である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "未使用率 23%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "未使用率 23%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "cloud-operations-月額 142万円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は重大度 High 4件で副作用を確認する。",
+      "npcDialogue": "先輩:「月額 142万円を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+      "workMaterial": "コスト明細\n- 月額 142万円\n- 未使用率 23%\n- 判断対象: コスト明細",
+      "decisionPrompt": "cloud-operations-月額 142万円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "未使用率 23%を重く見て、当日中に前へ進める",
+          "text": "未使用率 23%を重く見て、当日中に前へ進める。材料は月額 142万円、未使用率 23%、undefined。",
+          "immediateFeedback": "月額 142万円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 2,
+            "cloud_operations_risk": -1,
+            "cloud_operations_speed": 2,
+            "cloud_operations_value": -1,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、月額 142万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "月額 142万円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は未使用率 23%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "月額 142万円の未使用率 23%とundefinedを突き合わせ、条件付きで進める",
+          "text": "月額 142万円の未使用率 23%とundefinedを突き合わせ、条件付きで進める。材料は月額 142万円、未使用率 23%、undefined。",
+          "immediateFeedback": "月額 142万円に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": 1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、月額 142万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "月額 142万円の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は未使用率 23%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は月額 142万円、未使用率 23%、undefined。",
+          "immediateFeedback": "月額 142万円に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": -1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": -1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": -1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、月額 142万円と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "月額 142万円の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は未使用率 23%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "cloud-operations-月額 142万円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "cloud-operations-月額 142万円判断",
+        "roleSpecificMaterials": [
+          "コスト明細",
+          "判断対象: コスト明細"
+        ],
+        "roleSpecificMetrics": [
+          "月額 142万円",
+          "未使用率 23%"
+        ],
+        "roleSpecificFailureRisk": "コスト明細を読まず、月額 142万円か未使用率 23%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "月額 142万円と未使用率 23%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "コスト明細、月額 142万円、未使用率 23%を判断の主役にしている。",
+        "kernelConnection": "コスト明細をcloud-operations-月額 142万円判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "cloud-operations-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "脆弱性通知",
+      "openingHook": "14:15。重大度 High 4件に適用期限 7日とundefinedが並んでいる。",
+      "context": "インフラ/クラウド運用として重大度 High 4件を確認する。適用期限 7日、undefinedが今日の判断材料になる。",
+      "content": "クラウド監視と障害予防するため、重大度 High 4件を読んで次の作業判断を残す。",
+      "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+      "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は重大度 High 4件である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "適用期限 7日の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "適用期限 7日を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "cloud-operations-重大度 High 4件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は未解決 3件で副作用を確認する。",
+      "npcDialogue": "先輩:「重大度 High 4件を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+      "workMaterial": "脆弱性通知\n- 重大度 High 4件\n- 適用期限 7日\n- 判断対象: 脆弱性通知",
+      "decisionPrompt": "cloud-operations-重大度 High 4件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "適用期限 7日を重く見て、当日中に前へ進める",
+          "text": "適用期限 7日を重く見て、当日中に前へ進める。材料は重大度 High 4件、適用期限 7日、undefined。",
+          "immediateFeedback": "重大度 High 4件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 2,
+            "cloud_operations_risk": -1,
+            "cloud_operations_speed": 2,
+            "cloud_operations_value": -1,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、重大度 High 4件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "重大度 High 4件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は適用期限 7日の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "重大度 High 4件の適用期限 7日とundefinedを突き合わせ、条件付きで進める",
+          "text": "重大度 High 4件の適用期限 7日とundefinedを突き合わせ、条件付きで進める。材料は重大度 High 4件、適用期限 7日、undefined。",
+          "immediateFeedback": "重大度 High 4件に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": 1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、重大度 High 4件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "重大度 High 4件の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は適用期限 7日の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は重大度 High 4件、適用期限 7日、undefined。",
+          "immediateFeedback": "重大度 High 4件に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": -1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": -1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": -1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、重大度 High 4件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "重大度 High 4件の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は適用期限 7日の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "cloud-operations-重大度 High 4件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "cloud-operations-重大度 High 4件判断",
+        "roleSpecificMaterials": [
+          "脆弱性通知",
+          "判断対象: 脆弱性通知"
+        ],
+        "roleSpecificMetrics": [
+          "重大度 High 4件",
+          "適用期限 7日"
+        ],
+        "roleSpecificFailureRisk": "脆弱性通知を読まず、重大度 High 4件か適用期限 7日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "重大度 High 4件と適用期限 7日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "脆弱性通知、重大度 High 4件、適用期限 7日を判断の主役にしている。",
+        "kernelConnection": "脆弱性通知をcloud-operations-重大度 High 4件判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "cloud-operations-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "運用引継ぎ",
+      "openingHook": "16:35。未解決 3件に監視間隔 5分とundefinedが並んでいる。",
+      "context": "インフラ/クラウド運用として未解決 3件を確認する。監視間隔 5分、undefinedが今日の判断材料になる。",
+      "content": "クラウド監視と障害予防するため、未解決 3件を読んで次の作業判断を残す。",
+      "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+      "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は未解決 3件である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "監視間隔 5分の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "監視間隔 5分を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "cloud-operations-未解決 3件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「未解決 3件を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+      "workMaterial": "運用引継ぎ\n- 未解決 3件\n- 監視間隔 5分\n- 判断対象: 運用引継ぎ",
+      "decisionPrompt": "cloud-operations-未解決 3件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "監視間隔 5分を重く見て、当日中に前へ進める",
+          "text": "監視間隔 5分を重く見て、当日中に前へ進める。材料は未解決 3件、監視間隔 5分、undefined。",
+          "immediateFeedback": "未解決 3件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 2,
+            "cloud_operations_risk": -1,
+            "cloud_operations_speed": 2,
+            "cloud_operations_value": -1,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、未解決 3件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "未解決 3件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は監視間隔 5分の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "未解決 3件の監視間隔 5分とundefinedを突き合わせ、条件付きで進める",
+          "text": "未解決 3件の監視間隔 5分とundefinedを突き合わせ、条件付きで進める。材料は未解決 3件、監視間隔 5分、undefined。",
+          "immediateFeedback": "未解決 3件に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": 1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": 1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": 1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、未解決 3件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "未解決 3件の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は監視間隔 5分の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は未解決 3件、監視間隔 5分、undefined。",
+          "immediateFeedback": "未解決 3件に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "cloud_operations_evidence": -1,
+            "cloud_operations_risk": 2,
+            "cloud_operations_speed": -1,
+            "cloud_operations_value": 2,
+            "cloud_operations_feasibility": -1
+          },
+          "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、未解決 3件と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "未解決 3件の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は監視間隔 5分の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "cloud-operations-未解決 3件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "cloud-operations-未解決 3件判断",
+        "roleSpecificMaterials": [
+          "運用引継ぎ",
+          "判断対象: 運用引継ぎ"
+        ],
+        "roleSpecificMetrics": [
+          "未解決 3件",
+          "監視間隔 5分"
+        ],
+        "roleSpecificFailureRisk": "運用引継ぎを読まず、未解決 3件か監視間隔 5分のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "未解決 3件と監視間隔 5分を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "運用引継ぎ、未解決 3件、監視間隔 5分を判断の主役にしている。",
+        "kernelConnection": "運用引継ぎをcloud-operations-未解決 3件判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "cloud-operations-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "アラート一覧",
+          "openingHook": "09:10。CPU 86%にエラー率 2.9%とundefinedが並んでいる。",
+          "context": "インフラ/クラウド運用としてCPU 86%を確認する。エラー率 2.9%、undefinedが今日の判断材料になる。",
+          "content": "クラウド監視と障害予防するため、CPU 86%を読んで次の作業判断を残す。",
+          "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+          "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はCPU 86%である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "エラー率 2.9%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "エラー率 2.9%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "cloud-operations-CPU 86%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は対象VM 18台で副作用を確認する。",
+          "npcDialogue": "先輩:「CPU 86%を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+          "workMaterial": "アラート一覧\n- CPU 86%\n- エラー率 2.9%\n- 判断対象: アラート一覧",
+          "decisionPrompt": "cloud-operations-CPU 86%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "エラー率 2.9%を重く見て、当日中に前へ進める",
+              "text": "エラー率 2.9%を重く見て、当日中に前へ進める。材料はCPU 86%、エラー率 2.9%、undefined。",
+              "immediateFeedback": "CPU 86%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 2,
+                "cloud_operations_risk": -1,
+                "cloud_operations_speed": 2,
+                "cloud_operations_value": -1,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、CPU 86%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "CPU 86%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はエラー率 2.9%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "CPU 86%のエラー率 2.9%とundefinedを突き合わせ、条件付きで進める",
+              "text": "CPU 86%のエラー率 2.9%とundefinedを突き合わせ、条件付きで進める。材料はCPU 86%、エラー率 2.9%、undefined。",
+              "immediateFeedback": "CPU 86%に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": 1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、CPU 86%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "CPU 86%の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次はエラー率 2.9%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料はCPU 86%、エラー率 2.9%、undefined。",
+              "immediateFeedback": "CPU 86%に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": -1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": -1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": -1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、CPU 86%と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "CPU 86%の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次はエラー率 2.9%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "cloud-operations-CPU 86%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "cloud-operations-CPU 86%判断",
+            "roleSpecificMaterials": [
+              "アラート一覧",
+              "判断対象: アラート一覧"
+            ],
+            "roleSpecificMetrics": [
+              "CPU 86%",
+              "エラー率 2.9%"
+            ],
+            "roleSpecificFailureRisk": "アラート一覧を読まず、CPU 86%かエラー率 2.9%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "CPU 86%とエラー率 2.9%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "アラート一覧、CPU 86%、エラー率 2.9%を判断の主役にしている。",
+            "kernelConnection": "アラート一覧をcloud-operations-CPU 86%判断へ接続する。"
+          }
+        },
+        {
+          "id": "cloud-operations-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "構成変更票",
+          "openingHook": "10:40。対象VM 18台に切戻し時間 12分とundefinedが並んでいる。",
+          "context": "インフラ/クラウド運用として対象VM 18台を確認する。切戻し時間 12分、undefinedが今日の判断材料になる。",
+          "content": "クラウド監視と障害予防するため、対象VM 18台を読んで次の作業判断を残す。",
+          "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+          "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は対象VM 18台である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "切戻し時間 12分の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "切戻し時間 12分を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "cloud-operations-対象VM 18台判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は月額 142万円で副作用を確認する。",
+          "npcDialogue": "先輩:「対象VM 18台を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+          "workMaterial": "構成変更票\n- 対象VM 18台\n- 切戻し時間 12分\n- 判断対象: 構成変更票",
+          "decisionPrompt": "cloud-operations-対象VM 18台判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "切戻し時間 12分を重く見て、当日中に前へ進める",
+              "text": "切戻し時間 12分を重く見て、当日中に前へ進める。材料は対象VM 18台、切戻し時間 12分、undefined。",
+              "immediateFeedback": "対象VM 18台に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 2,
+                "cloud_operations_risk": -1,
+                "cloud_operations_speed": 2,
+                "cloud_operations_value": -1,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、対象VM 18台と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対象VM 18台の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は切戻し時間 12分の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "対象VM 18台の切戻し時間 12分とundefinedを突き合わせ、条件付きで進める",
+              "text": "対象VM 18台の切戻し時間 12分とundefinedを突き合わせ、条件付きで進める。材料は対象VM 18台、切戻し時間 12分、undefined。",
+              "immediateFeedback": "対象VM 18台に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": 1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、対象VM 18台と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対象VM 18台の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は切戻し時間 12分の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は対象VM 18台、切戻し時間 12分、undefined。",
+              "immediateFeedback": "対象VM 18台に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": -1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": -1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": -1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、対象VM 18台と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "対象VM 18台の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は切戻し時間 12分の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "cloud-operations-対象VM 18台判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "cloud-operations-対象VM 18台判断",
+            "roleSpecificMaterials": [
+              "構成変更票",
+              "判断対象: 構成変更票"
+            ],
+            "roleSpecificMetrics": [
+              "対象VM 18台",
+              "切戻し時間 12分"
+            ],
+            "roleSpecificFailureRisk": "構成変更票を読まず、対象VM 18台か切戻し時間 12分のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "対象VM 18台と切戻し時間 12分を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "構成変更票、対象VM 18台、切戻し時間 12分を判断の主役にしている。",
+            "kernelConnection": "構成変更票をcloud-operations-対象VM 18台判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "cloud-operations-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "コスト明細",
+          "openingHook": "12:20。月額 142万円に未使用率 23%とundefinedが並んでいる。",
+          "context": "インフラ/クラウド運用として月額 142万円を確認する。未使用率 23%、undefinedが今日の判断材料になる。",
+          "content": "クラウド監視と障害予防するため、月額 142万円を読んで次の作業判断を残す。",
+          "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+          "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は月額 142万円である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "未使用率 23%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "未使用率 23%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "cloud-operations-月額 142万円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は重大度 High 4件で副作用を確認する。",
+          "npcDialogue": "先輩:「月額 142万円を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+          "workMaterial": "コスト明細\n- 月額 142万円\n- 未使用率 23%\n- 判断対象: コスト明細",
+          "decisionPrompt": "cloud-operations-月額 142万円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "未使用率 23%を重く見て、当日中に前へ進める",
+              "text": "未使用率 23%を重く見て、当日中に前へ進める。材料は月額 142万円、未使用率 23%、undefined。",
+              "immediateFeedback": "月額 142万円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 2,
+                "cloud_operations_risk": -1,
+                "cloud_operations_speed": 2,
+                "cloud_operations_value": -1,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、月額 142万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "月額 142万円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は未使用率 23%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "月額 142万円の未使用率 23%とundefinedを突き合わせ、条件付きで進める",
+              "text": "月額 142万円の未使用率 23%とundefinedを突き合わせ、条件付きで進める。材料は月額 142万円、未使用率 23%、undefined。",
+              "immediateFeedback": "月額 142万円に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": 1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、月額 142万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "月額 142万円の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は未使用率 23%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は月額 142万円、未使用率 23%、undefined。",
+              "immediateFeedback": "月額 142万円に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": -1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": -1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": -1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、月額 142万円と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "月額 142万円の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は未使用率 23%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "cloud-operations-月額 142万円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "cloud-operations-月額 142万円判断",
+            "roleSpecificMaterials": [
+              "コスト明細",
+              "判断対象: コスト明細"
+            ],
+            "roleSpecificMetrics": [
+              "月額 142万円",
+              "未使用率 23%"
+            ],
+            "roleSpecificFailureRisk": "コスト明細を読まず、月額 142万円か未使用率 23%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "月額 142万円と未使用率 23%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "コスト明細、月額 142万円、未使用率 23%を判断の主役にしている。",
+            "kernelConnection": "コスト明細をcloud-operations-月額 142万円判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "cloud-operations-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "脆弱性通知",
+          "openingHook": "14:15。重大度 High 4件に適用期限 7日とundefinedが並んでいる。",
+          "context": "インフラ/クラウド運用として重大度 High 4件を確認する。適用期限 7日、undefinedが今日の判断材料になる。",
+          "content": "クラウド監視と障害予防するため、重大度 High 4件を読んで次の作業判断を残す。",
+          "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+          "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は重大度 High 4件である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "適用期限 7日の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "適用期限 7日を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "cloud-operations-重大度 High 4件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は未解決 3件で副作用を確認する。",
+          "npcDialogue": "先輩:「重大度 High 4件を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+          "workMaterial": "脆弱性通知\n- 重大度 High 4件\n- 適用期限 7日\n- 判断対象: 脆弱性通知",
+          "decisionPrompt": "cloud-operations-重大度 High 4件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "適用期限 7日を重く見て、当日中に前へ進める",
+              "text": "適用期限 7日を重く見て、当日中に前へ進める。材料は重大度 High 4件、適用期限 7日、undefined。",
+              "immediateFeedback": "重大度 High 4件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 2,
+                "cloud_operations_risk": -1,
+                "cloud_operations_speed": 2,
+                "cloud_operations_value": -1,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、重大度 High 4件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "重大度 High 4件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は適用期限 7日の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "重大度 High 4件の適用期限 7日とundefinedを突き合わせ、条件付きで進める",
+              "text": "重大度 High 4件の適用期限 7日とundefinedを突き合わせ、条件付きで進める。材料は重大度 High 4件、適用期限 7日、undefined。",
+              "immediateFeedback": "重大度 High 4件に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": 1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、重大度 High 4件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "重大度 High 4件の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は適用期限 7日の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は重大度 High 4件、適用期限 7日、undefined。",
+              "immediateFeedback": "重大度 High 4件に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": -1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": -1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": -1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、重大度 High 4件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "重大度 High 4件の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は適用期限 7日の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "cloud-operations-重大度 High 4件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "cloud-operations-重大度 High 4件判断",
+            "roleSpecificMaterials": [
+              "脆弱性通知",
+              "判断対象: 脆弱性通知"
+            ],
+            "roleSpecificMetrics": [
+              "重大度 High 4件",
+              "適用期限 7日"
+            ],
+            "roleSpecificFailureRisk": "脆弱性通知を読まず、重大度 High 4件か適用期限 7日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "重大度 High 4件と適用期限 7日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "脆弱性通知、重大度 High 4件、適用期限 7日を判断の主役にしている。",
+            "kernelConnection": "脆弱性通知をcloud-operations-重大度 High 4件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "cloud-operations-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "運用引継ぎ",
+          "openingHook": "16:35。未解決 3件に監視間隔 5分とundefinedが並んでいる。",
+          "context": "インフラ/クラウド運用として未解決 3件を確認する。監視間隔 5分、undefinedが今日の判断材料になる。",
+          "content": "クラウド監視と障害予防するため、未解決 3件を読んで次の作業判断を残す。",
+          "roleSpecificContext": "インフラ/クラウド運用はクラウド監視と障害予防する仕事。",
+          "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は未解決 3件である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "監視間隔 5分の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "監視間隔 5分を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "cloud-operations-未解決 3件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「未解決 3件を読まずに進めると、インフラ/クラウド運用の判断ではなくなる」",
+          "workMaterial": "運用引継ぎ\n- 未解決 3件\n- 監視間隔 5分\n- 判断対象: 運用引継ぎ",
+          "decisionPrompt": "cloud-operations-未解決 3件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "監視間隔 5分を重く見て、当日中に前へ進める",
+              "text": "監視間隔 5分を重く見て、当日中に前へ進める。材料は未解決 3件、監視間隔 5分、undefined。",
+              "immediateFeedback": "未解決 3件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 2,
+                "cloud_operations_risk": -1,
+                "cloud_operations_speed": 2,
+                "cloud_operations_value": -1,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、未解決 3件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "未解決 3件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は監視間隔 5分の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "未解決 3件の監視間隔 5分とundefinedを突き合わせ、条件付きで進める",
+              "text": "未解決 3件の監視間隔 5分とundefinedを突き合わせ、条件付きで進める。材料は未解決 3件、監視間隔 5分、undefined。",
+              "immediateFeedback": "未解決 3件に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": 1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": 1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": 1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、未解決 3件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "未解決 3件の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は監視間隔 5分の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は未解決 3件、監視間隔 5分、undefined。",
+              "immediateFeedback": "未解決 3件に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "インフラ/クラウド運用で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "cloud_operations_evidence": -1,
+                "cloud_operations_risk": 2,
+                "cloud_operations_speed": -1,
+                "cloud_operations_value": 2,
+                "cloud_operations_feasibility": -1
+              },
+              "misconceptionEffect": "インフラ/クラウド運用は印象ではなく、未解決 3件と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "未解決 3件の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は監視間隔 5分の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "cloud-operations-未解決 3件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "cloud-operations-未解決 3件判断",
+            "roleSpecificMaterials": [
+              "運用引継ぎ",
+              "判断対象: 運用引継ぎ"
+            ],
+            "roleSpecificMetrics": [
+              "未解決 3件",
+              "監視間隔 5分"
+            ],
+            "roleSpecificFailureRisk": "運用引継ぎを読まず、未解決 3件か監視間隔 5分のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "未解決 3件と監視間隔 5分を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "運用引継ぎ、未解決 3件、監視間隔 5分を判断の主役にしている。",
+            "kernelConnection": "運用引継ぎをcloud-operations-未解決 3件判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "technical",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch2-1",
+      "title": "インフラ/クラウド運用の材料翻訳型",
+      "strengths": [
+        "インフラ/クラウド運用の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "cloud_operations_evidence",
+        "cloud_operations_risk"
+      ],
+      "valuedMeters": [
+        "cloud_operations_evidence"
+      ],
+      "sacrificedMeters": [
+        "cloud_operations_speed"
+      ],
+      "roleRealityReveal": "インフラ/クラウド運用は、クラウド監視と障害予防する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "インフラ/クラウド運用の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-2",
+      "title": "インフラ/クラウド運用の推進型",
+      "strengths": [
+        "インフラ/クラウド運用の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "cloud_operations_risk",
+        "cloud_operations_speed"
+      ],
+      "valuedMeters": [
+        "cloud_operations_risk"
+      ],
+      "sacrificedMeters": [
+        "cloud_operations_value"
+      ],
+      "roleRealityReveal": "インフラ/クラウド運用は、クラウド監視と障害予防する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "インフラ/クラウド運用の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-3",
+      "title": "インフラ/クラウド運用の安全設計型",
+      "strengths": [
+        "インフラ/クラウド運用の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "cloud_operations_speed",
+        "cloud_operations_value"
+      ],
+      "valuedMeters": [
+        "cloud_operations_speed"
+      ],
+      "sacrificedMeters": [
+        "cloud_operations_feasibility"
+      ],
+      "roleRealityReveal": "インフラ/クラウド運用は、クラウド監視と障害予防する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "インフラ/クラウド運用の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "インフラ/クラウド運用は、クラウド監視と障害予防する仕事。",
+    "misconceptionCorrection": "見た目の対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "インフラ/クラウド運用として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "cloud-operations_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "cloud_operations_evidence_vs_cloud_operations_risk",
+      "cloud_operations_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 2 selected for decision primitive diversity.",
+    "mainConflict": "クラウド監視と障害予防する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 2 selection skeleton Cに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "cloud_operations_evidence",
+      "label": "evidence",
+      "description": "インフラ/クラウド運用のevidence判断"
+    },
+    {
+      "key": "cloud_operations_risk",
+      "label": "risk",
+      "description": "インフラ/クラウド運用のrisk判断"
+    },
+    {
+      "key": "cloud_operations_speed",
+      "label": "speed",
+      "description": "インフラ/クラウド運用のspeed判断"
+    },
+    {
+      "key": "cloud_operations_value",
+      "label": "value",
+      "description": "インフラ/クラウド運用のvalue判断"
+    },
+    {
+      "key": "cloud_operations_feasibility",
+      "label": "feasibility",
+      "description": "インフラ/クラウド運用のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "インフラ/クラウド運用の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "cloud_operations_evidence",
+      "cloud_operations_risk",
+      "cloud_operations_speed",
+      "cloud_operations_value",
+      "cloud_operations_feasibility"
+    ]
+  },
+  "roleCoreFriction": "クラウド監視と障害予防する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "インフラ/クラウド運用は人との調整や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "インフラ/クラウド運用は、クラウド監視と障害予防する仕事。",
+  "roleWorkKernel": {
+    "input": "CPU 86%、対象VM 18台、月額 142万円、重大度 High 4件、未解決 3件、関係者制約、期限",
+    "output": "インフラ/クラウド運用としての判断案、次回確認項目、リスクメモ",
+    "transformation": "クラウド監視と障害予防する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "CPU 86%",
+      "対象VM 18台",
+      "月額 142万円",
+      "重大度 High 4件",
+      "未解決 3件"
+    ],
+    "metrics": [
+      "CPU 86%",
+      "エラー率 2.9%",
+      "対象VM 18台",
+      "切戻し時間 12分",
+      "月額 142万円",
+      "未使用率 23%",
+      "重大度 High 4件",
+      "適用期限 7日",
+      "未解決 3件",
+      "監視間隔 5分"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "CPU 86%、対象VM 18台、月額 142万円とエラー率 2.9%、、切戻し時間 12分を読まなければ成立しないため。"
+  }
+}

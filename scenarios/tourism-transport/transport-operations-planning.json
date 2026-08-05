@@ -1,0 +1,2192 @@
+{
+  "id": "tourism-transport/transport-operations-planning",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "観光/ホテル/交通",
+  "industrySlug": "tourism-transport",
+  "role": "交通オペレーション企画",
+  "roleSlug": "transport-operations-planning",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "社会貢献",
+    "分析系",
+    "高難易度"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 観光/ホテル/交通 交通オペレーション企画.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "tourism-transport",
+      "transport-operations-planning"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "運行実績表"
+    },
+    {
+      "time": "10:35",
+      "label": "需要予測表"
+    },
+    {
+      "time": "12:20",
+      "label": "乗務員配置表"
+    },
+    {
+      "time": "14:05",
+      "label": "車両運用表"
+    },
+    {
+      "time": "16:25",
+      "label": "安全余裕チェック"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "運行実績表"
+    },
+    {
+      "time": "10:35",
+      "label": "需要予測表"
+    },
+    {
+      "time": "12:20",
+      "label": "乗務員配置表"
+    },
+    {
+      "time": "14:05",
+      "label": "車両運用表"
+    },
+    {
+      "time": "16:25",
+      "label": "安全余裕チェック"
+    }
+  ],
+  "sceneList": [
+    "transport-operations-planning-01",
+    "transport-operations-planning-02",
+    "transport-operations-planning-03",
+    "transport-operations-planning-04",
+    "transport-operations-planning-05"
+  ],
+  "meta": {
+    "title": "交通オペレーション企画",
+    "industry": "観光/ホテル/交通",
+    "role": "交通オペレーション企画",
+    "duration_minutes": 18,
+    "description": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "transport-operations-planning-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "運行実績表",
+      "openingHook": "09:10。運行実績表に遅延率 8.6%と混雑率 142%が並んでいる。",
+      "context": "交通オペレーション企画として運行実績表を確認する。遅延率 8.6%、混雑率 142%が今日の判断材料になる。",
+      "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、運行実績表を読んで改善便を選ぶ。",
+      "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+      "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は運行実績表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "遅延率 8.6%の背景と混雑率 142%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "遅延率 8.6%を重く見るほど、混雑率 142%や別の制約を犠牲にする。",
+      "consequenceHook": "transport-operations-planning-遅延率 8.6%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は需要予測表で副作用を確認する。",
+      "npcDialogue": "先輩:「運行実績表を読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+      "workMaterial": "運行実績表\n- 遅延率 8.6%\n- 混雑率 142%\n- 判断対象: 運行実績表",
+      "decisionPrompt": "transport-operations-planning-遅延率 8.6%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "遅延率 8.6%を優先し、当日中に運行実績表の結論を出す",
+          "text": "遅延率 8.6%を優先し、当日中に運行実績表の結論を出す。材料は遅延率 8.6%、混雑率 142%。",
+          "immediateFeedback": "遅延率 8.6%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 2,
+            "transport_operations_planning_risk": -1,
+            "transport_operations_planning_speed": 2,
+            "transport_operations_planning_value": -1,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は印象ではなく、遅延率 8.6%と混雑率 142%を読んで判断する。",
+          "studentFeedback": {
+            "good": "遅延率 8.6%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は混雑率 142%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "遅延率 8.6%と混雑率 142%を突き合わせ、条件付きで進める",
+          "text": "遅延率 8.6%と混雑率 142%を突き合わせ、条件付きで進める。材料は遅延率 8.6%、混雑率 142%。",
+          "immediateFeedback": "運行実績表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": 1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "遅延率 8.6%と混雑率 142%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は運行実績表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "混雑率 142%の制約を重く見て、判断範囲を絞る",
+          "text": "混雑率 142%の制約を重く見て、判断範囲を絞る。材料は遅延率 8.6%、混雑率 142%。",
+          "immediateFeedback": "混雑率 142%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": -1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": -1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": -1
+          },
+          "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、遅延率 8.6%と混雑率 142%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "混雑率 142%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は遅延率 8.6%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "transport-operations-planning-遅延率 8.6%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "transport-operations-planning-遅延率 8.6%判断",
+        "roleSpecificMaterials": [
+          "運行実績表",
+          "判断対象: 運行実績表"
+        ],
+        "roleSpecificMetrics": [
+          "遅延率 8.6%",
+          "混雑率 142%"
+        ],
+        "roleSpecificFailureRisk": "運行実績表を読まず、遅延率 8.6%か混雑率 142%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "遅延率 8.6%と混雑率 142%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "運行実績表、遅延率 8.6%、混雑率 142%を判断の主役にしている。",
+        "kernelConnection": "運行実績表をtransport-operations-planning-遅延率 8.6%判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "transport-operations-planning-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "需要予測表",
+      "openingHook": "10:35。需要予測表に増加 18%とピーク 08:10が並んでいる。",
+      "context": "交通オペレーション企画として需要予測表を確認する。増加 18%、ピーク 08:10が今日の判断材料になる。",
+      "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、需要予測表を読んで増便幅を決める。",
+      "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+      "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は需要予測表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "増加 18%の背景とピーク 08:10の確度が完全にはそろっていない。",
+      "decisionTradeoff": "増加 18%を重く見るほど、ピーク 08:10や別の制約を犠牲にする。",
+      "consequenceHook": "transport-operations-planning-増加 18%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は乗務員配置表で副作用を確認する。",
+      "npcDialogue": "先輩:「需要予測表を読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+      "workMaterial": "需要予測表\n- 増加 18%\n- ピーク 08:10\n- 判断対象: 需要予測表",
+      "decisionPrompt": "transport-operations-planning-増加 18%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "増加 18%を優先し、当日中に需要予測表の結論を出す",
+          "text": "増加 18%を優先し、当日中に需要予測表の結論を出す。材料は増加 18%、ピーク 08:10。",
+          "immediateFeedback": "増加 18%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 2,
+            "transport_operations_planning_risk": -1,
+            "transport_operations_planning_speed": 2,
+            "transport_operations_planning_value": -1,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は印象ではなく、増加 18%とピーク 08:10を読んで判断する。",
+          "studentFeedback": {
+            "good": "増加 18%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次はピーク 08:10の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "増加 18%とピーク 08:10を突き合わせ、条件付きで進める",
+          "text": "増加 18%とピーク 08:10を突き合わせ、条件付きで進める。材料は増加 18%、ピーク 08:10。",
+          "immediateFeedback": "需要予測表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": 1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "増加 18%とピーク 08:10を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は需要予測表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "ピーク 08:10の制約を重く見て、判断範囲を絞る",
+          "text": "ピーク 08:10の制約を重く見て、判断範囲を絞る。材料は増加 18%、ピーク 08:10。",
+          "immediateFeedback": "ピーク 08:10に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": -1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": -1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": -1
+          },
+          "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、増加 18%とピーク 08:10の副作用まで読む。",
+          "studentFeedback": {
+            "good": "ピーク 08:10の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は増加 18%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "transport-operations-planning-増加 18%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "transport-operations-planning-増加 18%判断",
+        "roleSpecificMaterials": [
+          "需要予測表",
+          "判断対象: 需要予測表"
+        ],
+        "roleSpecificMetrics": [
+          "増加 18%",
+          "ピーク 08:10"
+        ],
+        "roleSpecificFailureRisk": "需要予測表を読まず、増加 18%かピーク 08:10のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "増加 18%とピーク 08:10を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "需要予測表、増加 18%、ピーク 08:10を判断の主役にしている。",
+        "kernelConnection": "需要予測表をtransport-operations-planning-増加 18%判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "transport-operations-planning-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "乗務員配置表",
+      "openingHook": "12:20。乗務員配置表に不足 6名と休息基準 11時間が並んでいる。",
+      "context": "交通オペレーション企画として乗務員配置表を確認する。不足 6名、休息基準 11時間が今日の判断材料になる。",
+      "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、乗務員配置表を読んで配置案を切る。",
+      "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+      "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は乗務員配置表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "不足 6名の背景と休息基準 11時間の確度が完全にはそろっていない。",
+      "decisionTradeoff": "不足 6名を重く見るほど、休息基準 11時間や別の制約を犠牲にする。",
+      "consequenceHook": "transport-operations-planning-不足 6名判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は車両運用表で副作用を確認する。",
+      "npcDialogue": "先輩:「乗務員配置表を読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+      "workMaterial": "乗務員配置表\n- 不足 6名\n- 休息基準 11時間\n- 判断対象: 乗務員配置表",
+      "decisionPrompt": "transport-operations-planning-不足 6名判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "不足 6名を優先し、当日中に乗務員配置表の結論を出す",
+          "text": "不足 6名を優先し、当日中に乗務員配置表の結論を出す。材料は不足 6名、休息基準 11時間。",
+          "immediateFeedback": "不足 6名に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 2,
+            "transport_operations_planning_risk": -1,
+            "transport_operations_planning_speed": 2,
+            "transport_operations_planning_value": -1,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は印象ではなく、不足 6名と休息基準 11時間を読んで判断する。",
+          "studentFeedback": {
+            "good": "不足 6名の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は休息基準 11時間の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "不足 6名と休息基準 11時間を突き合わせ、条件付きで進める",
+          "text": "不足 6名と休息基準 11時間を突き合わせ、条件付きで進める。材料は不足 6名、休息基準 11時間。",
+          "immediateFeedback": "乗務員配置表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": 1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "不足 6名と休息基準 11時間を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は乗務員配置表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "休息基準 11時間の制約を重く見て、判断範囲を絞る",
+          "text": "休息基準 11時間の制約を重く見て、判断範囲を絞る。材料は不足 6名、休息基準 11時間。",
+          "immediateFeedback": "休息基準 11時間に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": -1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": -1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": -1
+          },
+          "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、不足 6名と休息基準 11時間の副作用まで読む。",
+          "studentFeedback": {
+            "good": "休息基準 11時間の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は不足 6名を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "transport-operations-planning-不足 6名判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "transport-operations-planning-不足 6名判断",
+        "roleSpecificMaterials": [
+          "乗務員配置表",
+          "判断対象: 乗務員配置表"
+        ],
+        "roleSpecificMetrics": [
+          "不足 6名",
+          "休息基準 11時間"
+        ],
+        "roleSpecificFailureRisk": "乗務員配置表を読まず、不足 6名か休息基準 11時間のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "不足 6名と休息基準 11時間を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "乗務員配置表、不足 6名、休息基準 11時間を判断の主役にしている。",
+        "kernelConnection": "乗務員配置表をtransport-operations-planning-不足 6名判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "transport-operations-planning-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "車両運用表",
+      "openingHook": "14:05。車両運用表に予備車 2台と点検 4台が並んでいる。",
+      "context": "交通オペレーション企画として車両運用表を確認する。予備車 2台、点検 4台が今日の判断材料になる。",
+      "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、車両運用表を読んで運用順を決める。",
+      "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+      "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は車両運用表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "予備車 2台の背景と点検 4台の確度が完全にはそろっていない。",
+      "decisionTradeoff": "予備車 2台を重く見るほど、点検 4台や別の制約を犠牲にする。",
+      "consequenceHook": "transport-operations-planning-予備車 2台判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は安全余裕チェックで副作用を確認する。",
+      "npcDialogue": "先輩:「車両運用表を読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+      "workMaterial": "車両運用表\n- 予備車 2台\n- 点検 4台\n- 判断対象: 車両運用表",
+      "decisionPrompt": "transport-operations-planning-予備車 2台判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "予備車 2台を優先し、当日中に車両運用表の結論を出す",
+          "text": "予備車 2台を優先し、当日中に車両運用表の結論を出す。材料は予備車 2台、点検 4台。",
+          "immediateFeedback": "予備車 2台に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 2,
+            "transport_operations_planning_risk": -1,
+            "transport_operations_planning_speed": 2,
+            "transport_operations_planning_value": -1,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は印象ではなく、予備車 2台と点検 4台を読んで判断する。",
+          "studentFeedback": {
+            "good": "予備車 2台の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は点検 4台の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "予備車 2台と点検 4台を突き合わせ、条件付きで進める",
+          "text": "予備車 2台と点検 4台を突き合わせ、条件付きで進める。材料は予備車 2台、点検 4台。",
+          "immediateFeedback": "車両運用表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": 1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "予備車 2台と点検 4台を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は車両運用表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "点検 4台の制約を重く見て、判断範囲を絞る",
+          "text": "点検 4台の制約を重く見て、判断範囲を絞る。材料は予備車 2台、点検 4台。",
+          "immediateFeedback": "点検 4台に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": -1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": -1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": -1
+          },
+          "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、予備車 2台と点検 4台の副作用まで読む。",
+          "studentFeedback": {
+            "good": "点検 4台の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は予備車 2台を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "transport-operations-planning-予備車 2台判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "transport-operations-planning-予備車 2台判断",
+        "roleSpecificMaterials": [
+          "車両運用表",
+          "判断対象: 車両運用表"
+        ],
+        "roleSpecificMetrics": [
+          "予備車 2台",
+          "点検 4台"
+        ],
+        "roleSpecificFailureRisk": "車両運用表を読まず、予備車 2台か点検 4台のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "予備車 2台と点検 4台を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "車両運用表、予備車 2台、点検 4台を判断の主役にしている。",
+        "kernelConnection": "車両運用表をtransport-operations-planning-予備車 2台判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "transport-operations-planning-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "安全余裕チェック",
+      "openingHook": "16:25。安全余裕チェックに折返し 7分と遅延吸収 3分が並んでいる。",
+      "context": "交通オペレーション企画として安全余裕チェックを確認する。折返し 7分、遅延吸収 3分が今日の判断材料になる。",
+      "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、安全余裕チェックを読んで時刻修正を残す。",
+      "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+      "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は安全余裕チェックである。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "折返し 7分の背景と遅延吸収 3分の確度が完全にはそろっていない。",
+      "decisionTradeoff": "折返し 7分を重く見るほど、遅延吸収 3分や別の制約を犠牲にする。",
+      "consequenceHook": "transport-operations-planning-折返し 7分判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「安全余裕チェックを読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+      "workMaterial": "安全余裕チェック\n- 折返し 7分\n- 遅延吸収 3分\n- 判断対象: 安全余裕チェック",
+      "decisionPrompt": "transport-operations-planning-折返し 7分判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "折返し 7分を優先し、当日中に安全余裕チェックの結論を出す",
+          "text": "折返し 7分を優先し、当日中に安全余裕チェックの結論を出す。材料は折返し 7分、遅延吸収 3分。",
+          "immediateFeedback": "折返し 7分に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 2,
+            "transport_operations_planning_risk": -1,
+            "transport_operations_planning_speed": 2,
+            "transport_operations_planning_value": -1,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は印象ではなく、折返し 7分と遅延吸収 3分を読んで判断する。",
+          "studentFeedback": {
+            "good": "折返し 7分の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は遅延吸収 3分の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "折返し 7分と遅延吸収 3分を突き合わせ、条件付きで進める",
+          "text": "折返し 7分と遅延吸収 3分を突き合わせ、条件付きで進める。材料は折返し 7分、遅延吸収 3分。",
+          "immediateFeedback": "安全余裕チェックに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": 1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": 1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": 1
+          },
+          "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "折返し 7分と遅延吸収 3分を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は安全余裕チェックの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "遅延吸収 3分の制約を重く見て、判断範囲を絞る",
+          "text": "遅延吸収 3分の制約を重く見て、判断範囲を絞る。材料は折返し 7分、遅延吸収 3分。",
+          "immediateFeedback": "遅延吸収 3分に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "transport_operations_planning_evidence": -1,
+            "transport_operations_planning_risk": 2,
+            "transport_operations_planning_speed": -1,
+            "transport_operations_planning_value": 2,
+            "transport_operations_planning_feasibility": -1
+          },
+          "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、折返し 7分と遅延吸収 3分の副作用まで読む。",
+          "studentFeedback": {
+            "good": "遅延吸収 3分の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は折返し 7分を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "transport-operations-planning-折返し 7分判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "社会貢献",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "transport-operations-planning-折返し 7分判断",
+        "roleSpecificMaterials": [
+          "安全余裕チェック",
+          "判断対象: 安全余裕チェック"
+        ],
+        "roleSpecificMetrics": [
+          "折返し 7分",
+          "遅延吸収 3分"
+        ],
+        "roleSpecificFailureRisk": "安全余裕チェックを読まず、折返し 7分か遅延吸収 3分のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "折返し 7分と遅延吸収 3分を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "安全余裕チェック、折返し 7分、遅延吸収 3分を判断の主役にしている。",
+        "kernelConnection": "安全余裕チェックをtransport-operations-planning-折返し 7分判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。交通オペレーション企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "transport-operations-planning-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "運行実績表",
+          "openingHook": "09:10。運行実績表に遅延率 8.6%と混雑率 142%が並んでいる。",
+          "context": "交通オペレーション企画として運行実績表を確認する。遅延率 8.6%、混雑率 142%が今日の判断材料になる。",
+          "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、運行実績表を読んで改善便を選ぶ。",
+          "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+          "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は運行実績表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "遅延率 8.6%の背景と混雑率 142%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "遅延率 8.6%を重く見るほど、混雑率 142%や別の制約を犠牲にする。",
+          "consequenceHook": "transport-operations-planning-遅延率 8.6%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は需要予測表で副作用を確認する。",
+          "npcDialogue": "先輩:「運行実績表を読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+          "workMaterial": "運行実績表\n- 遅延率 8.6%\n- 混雑率 142%\n- 判断対象: 運行実績表",
+          "decisionPrompt": "transport-operations-planning-遅延率 8.6%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "遅延率 8.6%を優先し、当日中に運行実績表の結論を出す",
+              "text": "遅延率 8.6%を優先し、当日中に運行実績表の結論を出す。材料は遅延率 8.6%、混雑率 142%。",
+              "immediateFeedback": "遅延率 8.6%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 2,
+                "transport_operations_planning_risk": -1,
+                "transport_operations_planning_speed": 2,
+                "transport_operations_planning_value": -1,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は印象ではなく、遅延率 8.6%と混雑率 142%を読んで判断する。",
+              "studentFeedback": {
+                "good": "遅延率 8.6%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は混雑率 142%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "遅延率 8.6%と混雑率 142%を突き合わせ、条件付きで進める",
+              "text": "遅延率 8.6%と混雑率 142%を突き合わせ、条件付きで進める。材料は遅延率 8.6%、混雑率 142%。",
+              "immediateFeedback": "運行実績表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": 1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "遅延率 8.6%と混雑率 142%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は運行実績表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "混雑率 142%の制約を重く見て、判断範囲を絞る",
+              "text": "混雑率 142%の制約を重く見て、判断範囲を絞る。材料は遅延率 8.6%、混雑率 142%。",
+              "immediateFeedback": "混雑率 142%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": -1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": -1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": -1
+              },
+              "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、遅延率 8.6%と混雑率 142%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "混雑率 142%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は遅延率 8.6%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "transport-operations-planning-遅延率 8.6%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "transport-operations-planning-遅延率 8.6%判断",
+            "roleSpecificMaterials": [
+              "運行実績表",
+              "判断対象: 運行実績表"
+            ],
+            "roleSpecificMetrics": [
+              "遅延率 8.6%",
+              "混雑率 142%"
+            ],
+            "roleSpecificFailureRisk": "運行実績表を読まず、遅延率 8.6%か混雑率 142%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "遅延率 8.6%と混雑率 142%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "運行実績表、遅延率 8.6%、混雑率 142%を判断の主役にしている。",
+            "kernelConnection": "運行実績表をtransport-operations-planning-遅延率 8.6%判断へ接続する。"
+          }
+        },
+        {
+          "id": "transport-operations-planning-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "需要予測表",
+          "openingHook": "10:35。需要予測表に増加 18%とピーク 08:10が並んでいる。",
+          "context": "交通オペレーション企画として需要予測表を確認する。増加 18%、ピーク 08:10が今日の判断材料になる。",
+          "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、需要予測表を読んで増便幅を決める。",
+          "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+          "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は需要予測表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "増加 18%の背景とピーク 08:10の確度が完全にはそろっていない。",
+          "decisionTradeoff": "増加 18%を重く見るほど、ピーク 08:10や別の制約を犠牲にする。",
+          "consequenceHook": "transport-operations-planning-増加 18%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は乗務員配置表で副作用を確認する。",
+          "npcDialogue": "先輩:「需要予測表を読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+          "workMaterial": "需要予測表\n- 増加 18%\n- ピーク 08:10\n- 判断対象: 需要予測表",
+          "decisionPrompt": "transport-operations-planning-増加 18%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "増加 18%を優先し、当日中に需要予測表の結論を出す",
+              "text": "増加 18%を優先し、当日中に需要予測表の結論を出す。材料は増加 18%、ピーク 08:10。",
+              "immediateFeedback": "増加 18%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 2,
+                "transport_operations_planning_risk": -1,
+                "transport_operations_planning_speed": 2,
+                "transport_operations_planning_value": -1,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は印象ではなく、増加 18%とピーク 08:10を読んで判断する。",
+              "studentFeedback": {
+                "good": "増加 18%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次はピーク 08:10の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "増加 18%とピーク 08:10を突き合わせ、条件付きで進める",
+              "text": "増加 18%とピーク 08:10を突き合わせ、条件付きで進める。材料は増加 18%、ピーク 08:10。",
+              "immediateFeedback": "需要予測表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": 1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "増加 18%とピーク 08:10を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は需要予測表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "ピーク 08:10の制約を重く見て、判断範囲を絞る",
+              "text": "ピーク 08:10の制約を重く見て、判断範囲を絞る。材料は増加 18%、ピーク 08:10。",
+              "immediateFeedback": "ピーク 08:10に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": -1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": -1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": -1
+              },
+              "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、増加 18%とピーク 08:10の副作用まで読む。",
+              "studentFeedback": {
+                "good": "ピーク 08:10の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は増加 18%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "transport-operations-planning-増加 18%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "transport-operations-planning-増加 18%判断",
+            "roleSpecificMaterials": [
+              "需要予測表",
+              "判断対象: 需要予測表"
+            ],
+            "roleSpecificMetrics": [
+              "増加 18%",
+              "ピーク 08:10"
+            ],
+            "roleSpecificFailureRisk": "需要予測表を読まず、増加 18%かピーク 08:10のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "増加 18%とピーク 08:10を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "需要予測表、増加 18%、ピーク 08:10を判断の主役にしている。",
+            "kernelConnection": "需要予測表をtransport-operations-planning-増加 18%判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。交通オペレーション企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "transport-operations-planning-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "乗務員配置表",
+          "openingHook": "12:20。乗務員配置表に不足 6名と休息基準 11時間が並んでいる。",
+          "context": "交通オペレーション企画として乗務員配置表を確認する。不足 6名、休息基準 11時間が今日の判断材料になる。",
+          "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、乗務員配置表を読んで配置案を切る。",
+          "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+          "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は乗務員配置表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "不足 6名の背景と休息基準 11時間の確度が完全にはそろっていない。",
+          "decisionTradeoff": "不足 6名を重く見るほど、休息基準 11時間や別の制約を犠牲にする。",
+          "consequenceHook": "transport-operations-planning-不足 6名判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は車両運用表で副作用を確認する。",
+          "npcDialogue": "先輩:「乗務員配置表を読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+          "workMaterial": "乗務員配置表\n- 不足 6名\n- 休息基準 11時間\n- 判断対象: 乗務員配置表",
+          "decisionPrompt": "transport-operations-planning-不足 6名判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "不足 6名を優先し、当日中に乗務員配置表の結論を出す",
+              "text": "不足 6名を優先し、当日中に乗務員配置表の結論を出す。材料は不足 6名、休息基準 11時間。",
+              "immediateFeedback": "不足 6名に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 2,
+                "transport_operations_planning_risk": -1,
+                "transport_operations_planning_speed": 2,
+                "transport_operations_planning_value": -1,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は印象ではなく、不足 6名と休息基準 11時間を読んで判断する。",
+              "studentFeedback": {
+                "good": "不足 6名の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は休息基準 11時間の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "不足 6名と休息基準 11時間を突き合わせ、条件付きで進める",
+              "text": "不足 6名と休息基準 11時間を突き合わせ、条件付きで進める。材料は不足 6名、休息基準 11時間。",
+              "immediateFeedback": "乗務員配置表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": 1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "不足 6名と休息基準 11時間を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は乗務員配置表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "休息基準 11時間の制約を重く見て、判断範囲を絞る",
+              "text": "休息基準 11時間の制約を重く見て、判断範囲を絞る。材料は不足 6名、休息基準 11時間。",
+              "immediateFeedback": "休息基準 11時間に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": -1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": -1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": -1
+              },
+              "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、不足 6名と休息基準 11時間の副作用まで読む。",
+              "studentFeedback": {
+                "good": "休息基準 11時間の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は不足 6名を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "transport-operations-planning-不足 6名判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "transport-operations-planning-不足 6名判断",
+            "roleSpecificMaterials": [
+              "乗務員配置表",
+              "判断対象: 乗務員配置表"
+            ],
+            "roleSpecificMetrics": [
+              "不足 6名",
+              "休息基準 11時間"
+            ],
+            "roleSpecificFailureRisk": "乗務員配置表を読まず、不足 6名か休息基準 11時間のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "不足 6名と休息基準 11時間を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "乗務員配置表、不足 6名、休息基準 11時間を判断の主役にしている。",
+            "kernelConnection": "乗務員配置表をtransport-operations-planning-不足 6名判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。交通オペレーション企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "transport-operations-planning-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "車両運用表",
+          "openingHook": "14:05。車両運用表に予備車 2台と点検 4台が並んでいる。",
+          "context": "交通オペレーション企画として車両運用表を確認する。予備車 2台、点検 4台が今日の判断材料になる。",
+          "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、車両運用表を読んで運用順を決める。",
+          "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+          "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は車両運用表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "予備車 2台の背景と点検 4台の確度が完全にはそろっていない。",
+          "decisionTradeoff": "予備車 2台を重く見るほど、点検 4台や別の制約を犠牲にする。",
+          "consequenceHook": "transport-operations-planning-予備車 2台判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は安全余裕チェックで副作用を確認する。",
+          "npcDialogue": "先輩:「車両運用表を読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+          "workMaterial": "車両運用表\n- 予備車 2台\n- 点検 4台\n- 判断対象: 車両運用表",
+          "decisionPrompt": "transport-operations-planning-予備車 2台判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "予備車 2台を優先し、当日中に車両運用表の結論を出す",
+              "text": "予備車 2台を優先し、当日中に車両運用表の結論を出す。材料は予備車 2台、点検 4台。",
+              "immediateFeedback": "予備車 2台に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 2,
+                "transport_operations_planning_risk": -1,
+                "transport_operations_planning_speed": 2,
+                "transport_operations_planning_value": -1,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は印象ではなく、予備車 2台と点検 4台を読んで判断する。",
+              "studentFeedback": {
+                "good": "予備車 2台の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は点検 4台の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "予備車 2台と点検 4台を突き合わせ、条件付きで進める",
+              "text": "予備車 2台と点検 4台を突き合わせ、条件付きで進める。材料は予備車 2台、点検 4台。",
+              "immediateFeedback": "車両運用表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": 1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "予備車 2台と点検 4台を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は車両運用表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "点検 4台の制約を重く見て、判断範囲を絞る",
+              "text": "点検 4台の制約を重く見て、判断範囲を絞る。材料は予備車 2台、点検 4台。",
+              "immediateFeedback": "点検 4台に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": -1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": -1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": -1
+              },
+              "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、予備車 2台と点検 4台の副作用まで読む。",
+              "studentFeedback": {
+                "good": "点検 4台の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は予備車 2台を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "transport-operations-planning-予備車 2台判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "transport-operations-planning-予備車 2台判断",
+            "roleSpecificMaterials": [
+              "車両運用表",
+              "判断対象: 車両運用表"
+            ],
+            "roleSpecificMetrics": [
+              "予備車 2台",
+              "点検 4台"
+            ],
+            "roleSpecificFailureRisk": "車両運用表を読まず、予備車 2台か点検 4台のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "予備車 2台と点検 4台を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "車両運用表、予備車 2台、点検 4台を判断の主役にしている。",
+            "kernelConnection": "車両運用表をtransport-operations-planning-予備車 2台判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。交通オペレーション企画として仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "transport-operations-planning-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "安全余裕チェック",
+          "openingHook": "16:25。安全余裕チェックに折返し 7分と遅延吸収 3分が並んでいる。",
+          "context": "交通オペレーション企画として安全余裕チェックを確認する。折返し 7分、遅延吸収 3分が今日の判断材料になる。",
+          "content": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換するため、安全余裕チェックを読んで時刻修正を残す。",
+          "roleSpecificContext": "交通オペレーション企画は運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する仕事。",
+          "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は安全余裕チェックである。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "折返し 7分の背景と遅延吸収 3分の確度が完全にはそろっていない。",
+          "decisionTradeoff": "折返し 7分を重く見るほど、遅延吸収 3分や別の制約を犠牲にする。",
+          "consequenceHook": "transport-operations-planning-折返し 7分判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「安全余裕チェックを読まずに進めると、交通オペレーション企画の判断ではなくなる」",
+          "workMaterial": "安全余裕チェック\n- 折返し 7分\n- 遅延吸収 3分\n- 判断対象: 安全余裕チェック",
+          "decisionPrompt": "transport-operations-planning-折返し 7分判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "折返し 7分を優先し、当日中に安全余裕チェックの結論を出す",
+              "text": "折返し 7分を優先し、当日中に安全余裕チェックの結論を出す。材料は折返し 7分、遅延吸収 3分。",
+              "immediateFeedback": "折返し 7分に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 2,
+                "transport_operations_planning_risk": -1,
+                "transport_operations_planning_speed": 2,
+                "transport_operations_planning_value": -1,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は印象ではなく、折返し 7分と遅延吸収 3分を読んで判断する。",
+              "studentFeedback": {
+                "good": "折返し 7分の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は遅延吸収 3分の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "折返し 7分と遅延吸収 3分を突き合わせ、条件付きで進める",
+              "text": "折返し 7分と遅延吸収 3分を突き合わせ、条件付きで進める。材料は折返し 7分、遅延吸収 3分。",
+              "immediateFeedback": "安全余裕チェックに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": 1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": 1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": 1
+              },
+              "misconceptionEffect": "交通オペレーション企画は資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "折返し 7分と遅延吸収 3分を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は安全余裕チェックの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "遅延吸収 3分の制約を重く見て、判断範囲を絞る",
+              "text": "遅延吸収 3分の制約を重く見て、判断範囲を絞る。材料は折返し 7分、遅延吸収 3分。",
+              "immediateFeedback": "遅延吸収 3分に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "交通オペレーション企画で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "transport_operations_planning_evidence": -1,
+                "transport_operations_planning_risk": 2,
+                "transport_operations_planning_speed": -1,
+                "transport_operations_planning_value": 2,
+                "transport_operations_planning_feasibility": -1
+              },
+              "misconceptionEffect": "交通オペレーション企画は慎重さだけでなく、折返し 7分と遅延吸収 3分の副作用まで読む。",
+              "studentFeedback": {
+                "good": "遅延吸収 3分の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は折返し 7分を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "transport-operations-planning-折返し 7分判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "社会貢献",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "transport-operations-planning-折返し 7分判断",
+            "roleSpecificMaterials": [
+              "安全余裕チェック",
+              "判断対象: 安全余裕チェック"
+            ],
+            "roleSpecificMetrics": [
+              "折返し 7分",
+              "遅延吸収 3分"
+            ],
+            "roleSpecificFailureRisk": "安全余裕チェックを読まず、折返し 7分か遅延吸収 3分のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "折返し 7分と遅延吸収 3分を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "安全余裕チェック、折返し 7分、遅延吸収 3分を判断の主役にしている。",
+            "kernelConnection": "安全余裕チェックをtransport-operations-planning-折返し 7分判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "transport-operations-planning-material-reader",
+      "title": "交通オペレーション企画の材料読解型",
+      "strengths": [
+        "交通オペレーション企画の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "transport_operations_planning_evidence",
+        "transport_operations_planning_risk"
+      ],
+      "valuedMeters": [
+        "transport_operations_planning_evidence"
+      ],
+      "sacrificedMeters": [
+        "transport_operations_planning_speed"
+      ],
+      "roleRealityReveal": "交通オペレーション企画は、需要・車両・乗務員・安全余裕を読み、定時性と安全性を両立する運行計画を作る仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "交通オペレーション企画の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "transport-operations-planning-constraint-designer",
+      "title": "交通オペレーション企画の制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "transport_operations_planning_risk",
+        "transport_operations_planning_speed"
+      ],
+      "valuedMeters": [
+        "transport_operations_planning_risk"
+      ],
+      "sacrificedMeters": [
+        "transport_operations_planning_value"
+      ],
+      "roleRealityReveal": "交通オペレーション企画は、需要・車両・乗務員・安全余裕を読み、定時性と安全性を両立する運行計画を作る仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "交通オペレーション企画として制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "transport-operations-planning-execution-planner",
+      "title": "交通オペレーション企画の実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "transport_operations_planning_speed",
+        "transport_operations_planning_value"
+      ],
+      "valuedMeters": [
+        "transport_operations_planning_speed"
+      ],
+      "sacrificedMeters": [
+        "transport_operations_planning_feasibility"
+      ],
+      "roleRealityReveal": "交通オペレーション企画は、需要・車両・乗務員・安全余裕を読み、定時性と安全性を両立する運行計画を作る仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "交通オペレーション企画として実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "交通オペレーション企画は、需要・車両・乗務員・安全余裕を読み、定時性と安全性を両立する運行計画を作る仕事。",
+    "misconceptionCorrection": "交通オペレーション企画は印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "交通オペレーション企画として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "transport-operations-planning_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "transport_operations_planning_punctuality_vs_transport_operations_planning_safety",
+      "transport_operations_planning_capacity_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "transport_operations_planning_punctuality",
+      "label": "punctuality",
+      "description": "交通オペレーション企画のpunctuality判断"
+    },
+    {
+      "key": "transport_operations_planning_safety",
+      "label": "safety",
+      "description": "交通オペレーション企画のsafety判断"
+    },
+    {
+      "key": "transport_operations_planning_capacity",
+      "label": "capacity",
+      "description": "交通オペレーション企画のcapacity判断"
+    },
+    {
+      "key": "transport_operations_planning_crew",
+      "label": "crew",
+      "description": "交通オペレーション企画のcrew判断"
+    },
+    {
+      "key": "transport_operations_planning_demand",
+      "label": "demand",
+      "description": "交通オペレーション企画のdemand判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "交通オペレーション企画の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "transport_operations_planning_punctuality",
+      "transport_operations_planning_safety",
+      "transport_operations_planning_capacity",
+      "transport_operations_planning_crew",
+      "transport_operations_planning_demand"
+    ]
+  },
+  "roleCoreFriction": "本数を増やすほど利便性は上がるが、乗務員・車両・安全余裕を読まない計画は破綻する葛藤。",
+  "roleMisconception": "交通オペレーション企画は時刻表を作る仕事で、安全制約と需要予測の同時設計は補助的だと思われやすい。",
+  "roleRealityReveal": "交通オペレーション企画は、需要・車両・乗務員・安全余裕を読み、定時性と安全性を両立する運行計画を作る仕事。",
+  "roleWorkKernel": {
+    "input": "遅延率 8.6%、混雑率 142%、増加 18%、ピーク 08:10、不足 6名、休息基準 11時間、予備車 2台、点検 4台、折返し 7分、遅延吸収 3分",
+    "output": "交通オペレーション企画としての判断案、次回確認項目、リスクメモ",
+    "transformation": "運行実績、需要予測、安全制約を交通オペレーションの運行計画へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "運行実績表",
+      "需要予測表",
+      "乗務員配置表",
+      "車両運用表",
+      "安全余裕チェック"
+    ],
+    "metrics": [
+      "遅延率 8.6%",
+      "混雑率 142%",
+      "増加 18%",
+      "ピーク 08:10",
+      "不足 6名",
+      "休息基準 11時間",
+      "予備車 2台",
+      "点検 4台",
+      "折返し 7分",
+      "遅延吸収 3分"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "運行実績表、需要予測表、乗務員配置表と遅延率 8.6%、増加 18%を読まなければ成立しないため。"
+  }
+}

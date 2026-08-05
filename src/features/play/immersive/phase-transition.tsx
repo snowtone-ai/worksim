@@ -1,11 +1,12 @@
 'use client'
 
 import type { Block } from '@/lib/scenario/loader'
+import { getBlockSummary, type ScenarioDisplay } from '@/lib/scenario/view-model'
 
 type Props = {
   block: Block
+  scenarioDisplay: ScenarioDisplay
   onComplete: () => void
-  isStart: boolean
 }
 
 const PHASE_ICONS: Record<string, string> = {
@@ -22,16 +23,23 @@ const PHASE_BGS: Record<string, string> = {
   afternoon: 'from-stone-950 via-rose-950 to-slate-950',
 }
 
-export function PhaseTransition({ block, onComplete, isStart }: Props) {
+export function PhaseTransition({ block, scenarioDisplay, onComplete }: Props) {
   const icon = PHASE_ICONS[block.id] ?? '⏰'
   const bg = PHASE_BGS[block.id] ?? 'from-slate-900 to-black'
   const scene = getSceneDetail(block.id)
+  const backgroundStyle = scenarioDisplay.backgroundImage
+    ? { backgroundImage: `url(${scenarioDisplay.backgroundImage})` }
+    : undefined
 
   return (
-    <div className={`absolute inset-0 z-50 overflow-hidden bg-gradient-to-br ${bg} text-white`}>
-      <TransitionBackdrop blockId={block.id} icons={scene.icons} />
+    <div
+      className={`absolute inset-0 z-50 overflow-hidden bg-gradient-to-br ${scenarioDisplay.backgroundImage ? scenarioDisplay.fallbackTone : bg} text-white`}
+      style={backgroundStyle}
+    >
+      <div className="absolute inset-0 bg-cover bg-center" style={backgroundStyle} />
+      {!scenarioDisplay.backgroundImage && <TransitionBackdrop blockId={block.id} icons={scene.icons} />}
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/25" />
 
       <div className="relative h-full px-6 py-6 sm:px-8 sm:py-8 lg:px-12 lg:py-10">
         <div className="absolute right-6 top-6 z-10 w-64 border border-white/15 bg-black/35 p-4 backdrop-blur sm:right-8 sm:top-8 sm:w-72 lg:right-12 lg:top-10">
@@ -43,11 +51,17 @@ export function PhaseTransition({ block, onComplete, isStart }: Props) {
             onClick={onComplete}
             className="w-full rounded-sm bg-white px-8 py-4 text-sm font-bold text-slate-950 shadow-2xl transition-transform hover:scale-[1.02] hover:bg-amber-100"
           >
-            {isStart ? '一日を始める →' : 'はじめる →'}
+            START
           </button>
         </div>
 
         <div className="flex h-full max-w-3xl flex-col justify-start pt-14 pr-72 sm:pt-16 sm:pr-80 lg:pt-20">
+          <div className="mb-5 flex flex-wrap items-center gap-2 text-xs font-semibold text-white/75">
+            <span>{scenarioDisplay.industryName}</span>
+            <span className="text-white/35">/</span>
+            <span>{scenarioDisplay.roleName}</span>
+            <span className="rounded-full border border-white/15 px-2 py-1 text-white/65">{scenarioDisplay.durationLabel}</span>
+          </div>
           <div className="inline-flex items-center gap-3 border border-white/15 bg-black/20 px-4 py-2 backdrop-blur">
             <span className="text-3xl">{icon}</span>
             <p className="font-mono text-xs tracking-[0.32em] text-white/70">
@@ -55,7 +69,7 @@ export function PhaseTransition({ block, onComplete, isStart }: Props) {
             </p>
           </div>
           <h2 className="mt-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">{block.label}</h2>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:text-lg sm:leading-8">{block.intro}</p>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:text-lg sm:leading-8">{getBlockSummary(block)}</p>
 
           <div className="mt-8 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
             {scene.cues.map((cue) => (

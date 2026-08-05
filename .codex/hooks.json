@@ -1,40 +1,5 @@
 {
   "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "startup|resume|clear|compact",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .codex/hooks/inject-state.mjs",
-            "statusMessage": "state.md を読み込み中"
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "apply_patch|Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .codex/hooks/update-state.mjs"
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .codex/hooks/block-dangerous.mjs",
-            "statusMessage": "コマンドをチェック中"
-          }
-        ]
-      }
-    ],
     "PostToolUseFailure": [
       {
         "matcher": "",
@@ -42,17 +7,6 @@
           {
             "type": "command",
             "command": "node .codex/hooks/log-error.mjs"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .codex/hooks/stop-guard.mjs"
           }
         ]
       }

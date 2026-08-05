@@ -1,0 +1,2234 @@
+{
+  "id": "manufacturing/product-planning",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "メーカー/ものづくり",
+  "industrySlug": "manufacturing",
+  "role": "商品企画",
+  "roleSlug": "product-planning",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "企画系",
+    "分析系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a high-quality realistic workplace background image for a career simulation game. Scene: メーカー/ものづくり industry, 商品企画 role, decision point before a key task.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, distorted hands, distorted face, low quality, blurry, stock photo advertisement, fantasy, cyberpunk, anime, manga, unrealistic office, fake letters",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "manufacturing",
+      "product planning"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "chat",
+      "dashboard"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "アンケートの温度差"
+    },
+    {
+      "time": "10:55",
+      "label": "原価表の赤字"
+    },
+    {
+      "time": "12:40",
+      "label": "営業の棚提案締切"
+    },
+    {
+      "time": "14:20",
+      "label": "品質保証の差し止め"
+    },
+    {
+      "time": "16:35",
+      "label": "発売判定の15分前"
+    }
+  ],
+  "meta": {
+    "title": "商品企画",
+    "industry": "メーカー/ものづくり",
+    "role": "商品企画",
+    "duration_minutes": 12,
+    "description": "顧客アンケート、競合比較、原価表、営業圧、製造制約、品質保証の表示リスクを束ねて発売条件を決める商品企画シミュレーション。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 企業公式採用ページ",
+      "to_be_researched: 社員インタビュー/現場発信"
+    ],
+    "company_model": "架空の事業者を前提にしたCαドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝え、合意形成する力"
+    },
+    {
+      "key": "creativity",
+      "label": "発想力",
+      "description": "制約の中で新しい切り口を見つける力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "自分事として責任を持ち、やり切る姿勢"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "product-09-10-survey-gap",
+      "type": "review",
+      "title": "アンケートの温度差",
+      "context": "09:10。顧客アンケートの自由記述だけ、赤い付箋が12枚ついていた。\n\n春発売予定の架空キッチン保存容器「ClearKeep Mini」。営業は量販店向けに分かりやすい売り文句を求めている。",
+      "content": "満足度は高いが、自由記述には「開けにくい」「冷蔵庫で場所を取る」が多い。競合は薄型で売れているが、粗利は低そうだ。",
+      "roleSpecificContext": "商品企画はアイデアを出すだけでなく、顧客の不満を仕様と売り方に翻訳する。",
+      "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+      "hiddenWorkReality": "顧客が欲しいと言った機能を全部足すと、原価、製造、ブランドが崩れる。",
+      "stakeholderPressure": "営業は今日中に棚提案の売り文句が必要。ブランド担当は安売り感を嫌がる。",
+      "timePressure": "11:00の原価レビューまでに企画軸を1つに絞る。",
+      "missingInformation": "薄型化した場合の金型費、開けやすさ改善の品質リスク。",
+      "decisionTradeoff": "顧客不満に寄せるほど魅力は出るが、製造と粗利の確認が追いつかない。",
+      "consequenceHook": "朝の企画軸が、昼の原価表と午後の表示リスクに響く。",
+      "nextSceneEcho": "ここで選んだ価値が、原価表で削られる。",
+      "npcDialogue": "営業:「量販店X、2,980円なら春棚3万個いけます。ただ、今日中に売り文句が必要です」\nブランド担当:「便利だけで押すと、うちの価格帯では弱いです」",
+      "workMaterial": "顧客アンケート n=412\n- 保存しやすい: 68%\n- 開け閉めしやすい: 41%\n- 冷蔵庫で場所を取らない: 36%\n自由記述: 「片手で開けたい」34件、「重ねると取り出しにくい」28件\n競合A: 薄型2,780円、競合B: 密閉強化3,480円",
+      "decisionPrompt": "朝の企画軸として、どの顧客価値を置くか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "「片手で開けやすい」を主軸にし、売り文句を先に作る",
+          "text": "自由記述の痛みが強い開けやすさを主軸にし、営業へ棚提案の言葉を先に渡す。",
+          "immediateFeedback": "営業は提案を進めやすくなる。",
+          "delayedConsequence": "機構変更が必要なら原価と品質試験が重くなる。",
+          "nextSceneEffect": "原価レビューで、開閉機構の追加費用が論点になる。",
+          "resultSummaryEffect": "顧客の不満を強い価値に変える判断が多い。",
+          "meterEffects": {
+            "customer_value": 2,
+            "sales_team_buy_in": 2,
+            "manufacturing_feasibility": -1,
+            "gross_margin": -1
+          },
+          "misconceptionEffect": "商品企画はアイデアを出せば終わりではなく、そのアイデアが作れるかまで追う必要がある。",
+          "studentFeedback": {
+            "good": "顧客の具体的な不満から価値を作っている。",
+            "risk": "製造可能性を確認する前に売り文句が先行する。",
+            "next": "次は開けやすさの原価と品質が問われる。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "customer_value_first"
+          ],
+          "universityInsightTags": [
+            "customer_insight_focus"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "claim_before_feasibility"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "「薄型で重ねやすい」を主軸にし、競合差分を取りに行く",
+          "text": "競合Aに近い薄型価値を主軸にし、冷蔵庫内の省スペースを前面に出す。",
+          "immediateFeedback": "営業とブランドの両方に説明しやすい。",
+          "delayedConsequence": "競合追随に見え、独自性が弱くなる可能性がある。",
+          "nextSceneEffect": "原価レビューでは金型費と初回数量の回収が論点になる。",
+          "resultSummaryEffect": "市場差分を仕様に翻訳する判断が多い。",
+          "meterEffects": {
+            "customer_value": 1,
+            "sales_team_buy_in": 1,
+            "brand_fit": 1,
+            "manufacturing_feasibility": -1
+          },
+          "misconceptionEffect": "企画は斬新さだけでなく、比較棚で選ばれる理由を作る仕事。",
+          "studentFeedback": {
+            "good": "顧客不満と競合比較をつないでいる。",
+            "risk": "ブランドらしさが弱いと価格競争に巻き込まれる。",
+            "next": "次は薄型化の金型費と粗利を確認する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "market_comparison"
+          ],
+          "universityInsightTags": [
+            "competitive_positioning"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "weak_differentiation"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "密閉品質を守り、既存構造の小改良に絞る",
+          "text": "ブランドの信頼と製造安定を優先し、開けやすさや薄型化は小改良に留める。",
+          "immediateFeedback": "製造と品質保証には通しやすい。",
+          "delayedConsequence": "顧客の不満に対する変化が弱く、営業の棚提案が鈍る。",
+          "nextSceneEffect": "原価表では堅いが、営業から売れる理由を問われる。",
+          "resultSummaryEffect": "品質と製造安定を先に守る判断が多い。",
+          "meterEffects": {
+            "brand_fit": 2,
+            "manufacturing_feasibility": 2,
+            "gross_margin": 1,
+            "customer_value": -2,
+            "sales_team_buy_in": -1
+          },
+          "misconceptionEffect": "作りやすいだけでは商品企画の価値にならず、顧客が選ぶ理由も必要。",
+          "studentFeedback": {
+            "good": "ブランド品質と製造安定を守っている。",
+            "risk": "顧客の痛みを商品価値に変えきれていない。",
+            "next": "次は粗利が守れても、営業説得が難しくなる。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "quality_stability_first"
+          ],
+          "universityInsightTags": [
+            "manufacturing_feasibility_focus"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "low_customer_pull"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "customer_value_selection",
+        "frictionType": "survey_conflict",
+        "workValueTags": [
+          "商品企画",
+          "顧客価値",
+          "製造制約"
+        ],
+        "careerRealityTags": [
+          "product_trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "manufacturing_career"
+        ]
+      },
+      "openingHook": "09:10。顧客アンケートの自由記述だけ、赤い付箋が12枚ついていた。",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "顧客不満の仕様化",
+        "roleSpecificMaterials": [
+          "顧客アンケート",
+          "自由記述",
+          "競合A"
+        ],
+        "roleSpecificMetrics": [
+          "保存しやすい: 68%",
+          "開け閉めしやすい: 41%",
+          "「片手で開けたい」34件",
+          "競合A: 薄型2,780円"
+        ],
+        "roleSpecificFailureRisk": "顧客不満をそのまま全部盛り仕様にし、製造・原価・棚で成立しない企画になる。",
+        "roleSpecificEvaluationCriteria": "顧客が選ぶ理由を、発売可能な仕様仮説と競合差分に翻訳できるか。",
+        "genericCoordinationRisk": "顧客要望と社内制約の一般的な調整に見える。",
+        "antiGenericDesignNote": "アンケート比率、自由記述、競合価格を使い、商品企画固有の仕様仮説判断にしている。",
+        "kernelConnection": "顧客アンケートと競合比較を、発売可能な仕様仮説へ接続する。"
+      }
+    },
+    {
+      "id": "product-10-55-cost-table",
+      "type": "memo",
+      "title": "原価表の赤字",
+      "context": "10:55。原価表の粗利欄が赤くなった。2,980円では、目標粗利を3.8ポイント下回る。\n\n顧客価値を仕様に落とすと、原価が上がる。営業は2,980円を守りたい。製造は試験期間を求めている。",
+      "content": "開けやすさ機構は+42円。薄型金型は初期費680万円。初回数量3万個なら回収できるが、1.5万個なら赤字になる。",
+      "roleSpecificContext": "商品企画は、欲しい仕様を粗利と初回数量で現実化する。",
+      "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+      "hiddenWorkReality": "良い企画ほど、誰かのコストを増やす。数字にしないと会議で通らない。",
+      "stakeholderPressure": "営業は価格死守。製造は歩留まりと試験期間。経理は粗利率を見ている。",
+      "timePressure": "13:00までに営業へ仕様案を返す。",
+      "missingInformation": "量販店Xの初回数量確度、金型費の償却前提。",
+      "decisionTradeoff": "仕様を守るほど顧客価値は上がるが、粗利と製造負荷が悪化する。",
+      "consequenceHook": "ここで削った仕様が、午後の営業圧と品質表示リスクに跳ね返る。",
+      "nextSceneEcho": "営業は削られた価値に対して、別の売れる言葉を求める。",
+      "npcDialogue": "原価担当:「このままだと粗利31.2%。目標35%に届きません」\n製造:「新しいヒンジは試験2週間。春発売に間に合うか怪しいです」",
+      "workMaterial": "原価表\n- 予定売価: 2,980円\n- 目標粗利率: 35%\n- 現行案粗利率: 31.2%\n- 開閉機構追加: +42円/個\n- 薄型金型費: 680万円\n- 初回数量: 営業希望30,000個、保守試算15,000個",
+      "decisionPrompt": "どの仕様調整で、価値と粗利を両立させるか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "開けやすさ機構を残し、外装色と同梱物を削って粗利を戻す",
+          "text": "顧客価値の中核は守り、見た目や同梱物を簡素化して原価を下げる。",
+          "immediateFeedback": "顧客価値は残るが、ブランドの見え方は弱くなる。",
+          "delayedConsequence": "品質試験が遅れると発売スケジュールに影響する。",
+          "nextSceneEffect": "営業には分かりやすい売り文句を渡せる。",
+          "resultSummaryEffect": "価値の芯を残して周辺を削る判断が多い。",
+          "meterEffects": {
+            "customer_value": 2,
+            "gross_margin": 1,
+            "brand_fit": -1,
+            "manufacturing_feasibility": -1
+          },
+          "misconceptionEffect": "企画は足し算ではなく、何を削って価値を残すかの仕事でもある。",
+          "studentFeedback": {
+            "good": "顧客が感じる価値を守っている。",
+            "risk": "ブランド体験と製造試験にしわ寄せが出る。",
+            "next": "次は営業がこの価値をどう売るかが論点になる。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "core_value_protection"
+          ],
+          "universityInsightTags": [
+            "value_translation_learning"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "brand_compromise"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "薄型化を残し、初回数量3万個の確約を営業条件にする",
+          "text": "金型費を初回数量で回収する前提にし、営業へ数量確度の確認を求める。",
+          "immediateFeedback": "粗利の説明は立つが、営業の数量責任が重くなる。",
+          "delayedConsequence": "初回数量が下振れると在庫と粗利の両方が悪化する。",
+          "nextSceneEffect": "午後、営業部門から強い売り文句の要求が来る。",
+          "resultSummaryEffect": "数量と仕様をセットで設計する判断が多い。",
+          "meterEffects": {
+            "sales_team_buy_in": 1,
+            "gross_margin": 2,
+            "customer_value": 1,
+            "manufacturing_feasibility": -1
+          },
+          "misconceptionEffect": "売れる予感は、数量・粗利・在庫リスクまで見て初めて企画になる。",
+          "studentFeedback": {
+            "good": "競合差分と粗利回収をつないでいる。",
+            "risk": "営業見込みに依存しすぎる。",
+            "next": "次は営業の圧と数量確度に向き合う。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "volume_margin_design"
+          ],
+          "universityInsightTags": [
+            "margin_literacy"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "volume_dependency"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "新規機構をやめ、既存金型で価格と粗利を守る",
+          "text": "仕様変更を最小化し、2,980円と35%粗利を守る既存金型案に寄せる。",
+          "immediateFeedback": "原価と製造は安定する。",
+          "delayedConsequence": "顧客アンケートの不満に答えられず、棚で埋もれる恐れがある。",
+          "nextSceneEffect": "営業から「何が新しいのか」と詰められる。",
+          "resultSummaryEffect": "事業採算と製造安定を優先する判断が多い。",
+          "meterEffects": {
+            "gross_margin": 3,
+            "manufacturing_feasibility": 2,
+            "customer_value": -2,
+            "sales_team_buy_in": -1
+          },
+          "misconceptionEffect": "数字を守るだけでは、顧客が選ぶ理由を作れない。",
+          "studentFeedback": {
+            "good": "粗利と製造リスクを明確に守っている。",
+            "risk": "企画としての変化が弱い。",
+            "next": "次は営業に、弱い差分をどう説明するかが問われる。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "margin_first"
+          ],
+          "universityInsightTags": [
+            "profit_constraint_learning"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "weak_product_value"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "value_vs_margin",
+        "frictionType": "cost_constraint",
+        "workValueTags": [
+          "商品企画",
+          "顧客価値",
+          "製造制約"
+        ],
+        "careerRealityTags": [
+          "product_trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "manufacturing_career"
+        ]
+      },
+      "openingHook": "10:55。原価表の粗利欄が赤くなった。2,980円では、目標粗利を3.8ポイント下回る。",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "原価制約下の仕様削減",
+        "roleSpecificMaterials": [
+          "原価表",
+          "開閉機構追加",
+          "薄型金型費"
+        ],
+        "roleSpecificMetrics": [
+          "予定売価: 2,980円",
+          "目標粗利率: 35%",
+          "現行案粗利率: 31.2%",
+          "薄型金型費: 680万円"
+        ],
+        "roleSpecificFailureRisk": "顧客価値を足し続けて、目標粗利や初回数量の前提が崩れる。",
+        "roleSpecificEvaluationCriteria": "顧客価値を残しながら、粗利・金型費・数量に通る仕様へ削れるか。",
+        "genericCoordinationRisk": "製造と営業の希望をバランスするだけに見える。",
+        "antiGenericDesignNote": "売価、粗利率、追加原価、金型費、初回数量を材料にし、企画仕様の引き算判断にしている。",
+        "kernelConnection": "原価表と初回数量を、粗利を守る仕様削減判断へ接続する。"
+      }
+    },
+    {
+      "id": "product-12-40-sales-pressure",
+      "type": "meeting",
+      "title": "営業の棚提案締切",
+      "context": "12:40。営業チャットが光った。「量販店Xの商談、15時に前倒し。売れる一文ください」\n\n営業は商談資料を急いでいる。だが売れる表現ほど、品質保証の根拠確認が必要になる。",
+      "content": "「片手でラク」「冷蔵庫すっきり」「密閉長持ち」。どれも魅力的だが、根拠なしでは表示リスクになる。",
+      "roleSpecificContext": "商品企画は営業が売りやすい言葉を作るが、言い切れる根拠も一緒に渡す。",
+      "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+      "hiddenWorkReality": "売れる言葉は、品質保証と法務が読める根拠に変換されて初めて使える。",
+      "stakeholderPressure": "営業は棚と初回数量を取りたい。品質保証は根拠のない強い表現を嫌がる。",
+      "timePressure": "15:00商談。14:00までに表現案を確定したい。",
+      "missingInformation": "開閉試験、密閉試験、競合比較の測定条件。",
+      "decisionTradeoff": "強い表現は営業を助けるが、根拠が弱いと品質保証で止まる。",
+      "consequenceHook": "昼の売り文句が、午後の品質保証レビューで止まるか通るかを決める。",
+      "nextSceneEcho": "強い言葉を選ぶほど、品質保証から根拠を求められる。",
+      "npcDialogue": "営業:「棚は今日決まります。ぼんやりした表現だと競合に負けます」\n品質保証:「比較表現を出すなら、測定条件をそろえてください」",
+      "workMaterial": "営業メモ\n- 量販店X 商談15:00\n- 希望売価 2,980円\n- 初回数量 30,000個希望\n表現候補\nA: 片手でラクに開け閉め\nB: 冷蔵庫で重ねてすっきり\nC: 密閉長持ちで作り置きに安心\n根拠状況: Aは社内試作評価のみ、Bは寸法比較あり、Cは密閉試験未完了",
+      "decisionPrompt": "営業に渡す一文を、どの強さにするか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "「片手でラク」を前面に出し、試作評価を根拠として添える",
+          "text": "顧客の痛みが強い開けやすさを売り文句にし、社内試作評価の範囲で表現する。",
+          "immediateFeedback": "営業は商談で話しやすい。",
+          "delayedConsequence": "社内評価だけでは、品質保証から表現修正を求められる。",
+          "nextSceneEffect": "品質保証レビューで「ラク」の根拠が問われる。",
+          "resultSummaryEffect": "売れる表現を先に作る判断が多い。",
+          "meterEffects": {
+            "sales_team_buy_in": 2,
+            "customer_value": 2,
+            "brand_fit": 1,
+            "manufacturing_feasibility": -1,
+            "gross_margin": -1
+          },
+          "misconceptionEffect": "企画の言葉はコピーではなく、根拠付きの仕様説明である。",
+          "studentFeedback": {
+            "good": "顧客の言葉に近い売り文句を作っている。",
+            "risk": "根拠が弱く、表示修正の可能性がある。",
+            "next": "次は品質保証に、表現の根拠を説明する。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "sales_claim_first"
+          ],
+          "universityInsightTags": [
+            "claim_evidence_learning"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "weak_claim_evidence"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "寸法根拠のある「重ねてすっきり」に絞る",
+          "text": "競合比較で寸法差を示せる省スペース価値に絞り、商談資料に測定条件を入れる。",
+          "immediateFeedback": "営業の勢いは少し落ちるが、品質保証に通しやすい。",
+          "delayedConsequence": "派手さは弱いが、表示リスクを抑えて商談に出せる。",
+          "nextSceneEffect": "品質保証レビューでは測定条件の明記が中心になる。",
+          "resultSummaryEffect": "売れる言葉と根拠の両方を残す判断が多い。",
+          "meterEffects": {
+            "sales_team_buy_in": 1,
+            "customer_value": 1,
+            "brand_fit": 1,
+            "manufacturing_feasibility": 1,
+            "gross_margin": 1,
+            "launch_speed": -1
+          },
+          "misconceptionEffect": "商品企画は目立つ言葉を作るより、通せる言葉を設計する仕事。",
+          "studentFeedback": {
+            "good": "競合比較と根拠をセットにしている。",
+            "risk": "顧客の強い不満である開けやすさからは少し離れる。",
+            "next": "次は品質保証とブランドに通る表示へ整える。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "evidence_based_claim"
+          ],
+          "universityInsightTags": [
+            "quality_claim_literacy"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "moderate_sales_impact"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "表現を弱め、「使いやすさに配慮」に留める",
+          "text": "根拠不足の表現を避け、品質保証が止めにくい安全な言葉へ抑える。",
+          "immediateFeedback": "品質保証リスクは低い。",
+          "delayedConsequence": "営業の商談資料が弱くなり、初回数量が下がる可能性がある。",
+          "nextSceneEffect": "営業から商品企画の価値を問われる。",
+          "resultSummaryEffect": "ブランドと表示安全性を守る判断が多い。",
+          "meterEffects": {
+            "manufacturing_feasibility": 1,
+            "brand_fit": 2,
+            "sales_team_buy_in": -2,
+            "customer_value": -1
+          },
+          "misconceptionEffect": "守りの表現だけでは、棚で選ばれる理由を作れない。",
+          "studentFeedback": {
+            "good": "表示リスクを避けている。",
+            "risk": "売れる理由を営業に渡せていない。",
+            "next": "次は営業と品質保証の間で、言葉の強さを再調整する。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "safe_claim"
+          ],
+          "universityInsightTags": [
+            "brand_risk_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "sales_enablement_gap"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "sales_claim_vs_evidence",
+        "frictionType": "claim_risk",
+        "workValueTags": [
+          "商品企画",
+          "顧客価値",
+          "製造制約"
+        ],
+        "careerRealityTags": [
+          "product_trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "manufacturing_career"
+        ]
+      },
+      "openingHook": "12:40。営業チャットが光った。「量販店Xの商談、15時に前倒し。売れる一文ください」",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "根拠ある売り文句設計",
+        "roleSpecificMaterials": [
+          "営業メモ",
+          "表現候補",
+          "根拠状況"
+        ],
+        "roleSpecificMetrics": [
+          "希望売価 2,980円",
+          "初回数量 30,000個希望",
+          "商談15:00"
+        ],
+        "roleSpecificFailureRisk": "売れる表現を優先し、表示根拠や品質確認が不足した訴求になる。",
+        "roleSpecificEvaluationCriteria": "売場で強い言葉を、根拠・仕様・ブランドに通る表現へ設計できるか。",
+        "genericCoordinationRisk": "営業からの急ぎ依頼に対応するだけの締切ゲームに見える。",
+        "antiGenericDesignNote": "訴求候補ごとの根拠状況と棚条件を使い、商品企画固有の表示判断にしている。",
+        "kernelConnection": "営業商談条件と売り文句を、根拠ある訴求設計へ接続する。"
+      }
+    },
+    {
+      "id": "product-14-20-qa-stop",
+      "type": "meeting",
+      "title": "品質保証の差し止め",
+      "context": "14:20。品質保証のコメントは一行だった。「この表現では、店頭POPに出せません」\n\n営業商談前に品質保証が表示案を確認する。強い言葉には測定条件と試験計画が必要だ。",
+      "content": "「ラク」「長持ち」「すっきり」は、どこまで言えるのか。ブランドを守るために止める品質保証と、棚を取りたい営業がぶつかる。",
+      "roleSpecificContext": "商品企画は、売れる表現を品質保証が通せる根拠へ編集する。",
+      "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+      "hiddenWorkReality": "社内で止められるのは敵対ではなく、発売後のクレームを先に減らす仕組み。",
+      "stakeholderPressure": "品質保証は表示リスク。営業は商談時間。ブランドは信頼毀損を避けたい。",
+      "timePressure": "15:00商談まで40分。",
+      "missingInformation": "最終試験結果、店頭POPの文字数制限。",
+      "decisionTradeoff": "表現を強く残せば営業は助かるが、発売後クレームと差し戻しリスクが上がる。",
+      "consequenceHook": "ここで決めた表示が、夕方の発売判定でブランド適合と数量判断に響く。",
+      "nextSceneEcho": "品質保証との合意内容が最終仕様の通過条件になる。",
+      "npcDialogue": "品質保証:「比較条件なしの“ラク”は危ないです」\n営業:「今止めたら棚が消えます」\nブランド担当:「短期で売れても、信頼を削る表現は避けたい」",
+      "workMaterial": "品質保証コメント\n- 「片手でラク」: 評価者5名の試作コメントのみ。客観データ不足\n- 「密閉長持ち」: 密閉試験未完了。使用不可\n- 「重ねてすっきり」: 寸法比較あり。条件明記なら可\n試験計画: 開閉耐久 2週間、密閉試験 10日",
+      "decisionPrompt": "営業商談に出す表示案を、どう修正するか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "「片手でラク」を残し、店頭POPではなく営業トーク限定にする",
+          "text": "POP表示は避け、営業が口頭で試作品の使いやすさを説明する形に逃がす。",
+          "immediateFeedback": "営業は商談で価値を語れる。",
+          "delayedConsequence": "口頭説明でも過度な表現が残ると、期待値と実物の差が出る。",
+          "nextSceneEffect": "最終判定で、営業トーク管理が条件になる。",
+          "resultSummaryEffect": "営業現場の自由度を残す判断が多い。",
+          "meterEffects": {
+            "sales_team_buy_in": 2,
+            "customer_value": 1,
+            "brand_fit": -2,
+            "manufacturing_feasibility": -1
+          },
+          "misconceptionEffect": "表示しなければ安全ではなく、営業トークも商品価値の一部として管理が必要。",
+          "studentFeedback": {
+            "good": "商談機会を守りながら表現リスクを一部下げている。",
+            "risk": "現場で表現が膨らむ可能性がある。",
+            "next": "次は発売判定で、営業管理まで含めた条件が問われる。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "sales_flexibility"
+          ],
+          "universityInsightTags": [
+            "sales_quality_tension"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "uncontrolled_claim"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "「重ねてすっきり」に統一し、寸法比較の注記を入れる",
+          "text": "根拠がある省スペース表現へ統一し、POPにも測定条件を小さく入れる。",
+          "immediateFeedback": "品質保証は通しやすく、営業も最低限の売り文句を持てる。",
+          "delayedConsequence": "開けやすさの強い不満には直接答えにくい。",
+          "nextSceneEffect": "最終判定では、発売スケジュールと初回数量を現実的に決められる。",
+          "resultSummaryEffect": "根拠のある価値に絞る判断が多い。",
+          "meterEffects": {
+            "brand_fit": 2,
+            "manufacturing_feasibility": 1,
+            "sales_team_buy_in": 1,
+            "customer_value": 1,
+            "gross_margin": 1,
+            "launch_speed": -1
+          },
+          "misconceptionEffect": "商品企画は「言いたいこと」より「言えること」を選ぶ場面が多い。",
+          "studentFeedback": {
+            "good": "品質保証、営業、ブランドの通る接点を作っている。",
+            "risk": "顧客価値の尖りは弱くなる。",
+            "next": "次は数量と発売スケジュールの最終判断に進む。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "cross_functional_alignment"
+          ],
+          "universityInsightTags": [
+            "quality_claim_literacy"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "weaker_customer_hook"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "商談資料から機能訴求を外し、ブランドの安心感だけで出す",
+          "text": "機能表現を削り、ブランド品質と既存ユーザー評価中心の資料に差し替える。",
+          "immediateFeedback": "品質保証とブランドは安心する。",
+          "delayedConsequence": "営業は競合比較で弱くなり、初回数量が下がる可能性がある。",
+          "nextSceneEffect": "最終判定で、発売しても売れる根拠が弱いと指摘される。",
+          "resultSummaryEffect": "ブランド保全を優先する判断が多い。",
+          "meterEffects": {
+            "brand_fit": 3,
+            "manufacturing_feasibility": 2,
+            "sales_team_buy_in": -2,
+            "customer_value": -2,
+            "launch_speed": 1
+          },
+          "misconceptionEffect": "ブランドを守るだけでは新商品の役割を果たせない。",
+          "studentFeedback": {
+            "good": "表示リスクとブランド毀損を抑えている。",
+            "risk": "顧客が選ぶ理由を削りすぎている。",
+            "next": "次は発売可否で、価値の弱さが論点になる。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "brand_safety_first"
+          ],
+          "universityInsightTags": [
+            "brand_risk_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "low_sales_pull"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "qa_gate_negotiation",
+        "frictionType": "quality_claim_conflict",
+        "workValueTags": [
+          "商品企画",
+          "顧客価値",
+          "製造制約"
+        ],
+        "careerRealityTags": [
+          "product_trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "manufacturing_career"
+        ]
+      },
+      "openingHook": "14:20。品質保証のコメントは一行だった。「この表現では、店頭POPに出せません」",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "品質表示リスク判定",
+        "roleSpecificMaterials": [
+          "品質保証コメント",
+          "試験計画",
+          "寸法比較"
+        ],
+        "roleSpecificMetrics": [
+          "評価者5名",
+          "開閉耐久 2週間",
+          "密閉試験 10日"
+        ],
+        "roleSpecificFailureRisk": "根拠不足の表現を残し、発売後クレームやブランド毀損につながる。",
+        "roleSpecificEvaluationCriteria": "言いたい価値と、品質保証が許容できる根拠の範囲を合わせられるか。",
+        "genericCoordinationRisk": "品質保証に止められた表現をどう調整するかに見える。",
+        "antiGenericDesignNote": "試験日数、評価者数、寸法比較、未完了試験を使い、表示可能性の判定にしている。",
+        "kernelConnection": "品質保証コメントと試験日数を、表示可能な文言判定へ接続する。"
+      }
+    },
+    {
+      "id": "product-16-35-launch-decision",
+      "type": "meeting",
+      "title": "発売判定の15分前",
+      "context": "16:35。発売判定シートの未決欄は3つ残った。初回数量、表示文言、試験完了日。\n\n発売スケジュールは迫っている。営業は3万個を取りたい。製造は1.5万個なら安定。品質保証は試験完了後の表現更新を条件にする。",
+      "content": "ここで決めるのは「良い商品か」だけではない。作れるか、売れるか、説明できるか、ブランドに残せるかだ。",
+      "roleSpecificContext": "商品企画は顧客価値を、原価・製造・営業・品質保証・ブランドに通る仕様へ翻訳する。",
+      "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+      "hiddenWorkReality": "最終判定では、理想の企画より、発売後に責任を持てる条件が選ばれる。",
+      "stakeholderPressure": "営業は棚確保、製造は歩留まり、品質保証は表示根拠、ブランドは信頼を守りたい。",
+      "timePressure": "17:00までに発売判定を確定し、量販店Xへ回答。",
+      "missingInformation": "商談後の量販店Xの確約数量、試験完了後の表現更新可否。",
+      "decisionTradeoff": "発売を急ぐほど売場を取れるが、仕様と表示の未確定リスクが残る。",
+      "consequenceHook": "最終判断が結果画面の職業理解タイプに直結する。",
+      "nextSceneEcho": "プレイヤーの判断は、顧客価値と製造可能性のどちらを残したかとして返る。",
+      "npcDialogue": "営業:「3万個で棚を取りに行きたいです」\n製造:「初回は1.5万個なら歩留まりを見ながら回せます」\n品質保証:「表示は“重ねてすっきり”まで。試験後に更新なら可です」",
+      "workMaterial": "発売判定シート\n- 売価: 2,980円\n- 初回数量案: 15,000個 / 30,000個\n- 粗利率: 15,000個 33.1%、30,000個 35.4%\n- 表示: 「重ねてすっきり」条件付き可\n- 試験: 開閉耐久と密閉は発売後訴求更新候補\n- 発売予定: 春棚、回答期限17:00",
+      "decisionPrompt": "最終仕様と初回数量をどう決めるか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "3万個で発売し、営業機会を取りに行く",
+          "text": "粗利35.4%と棚確保を優先し、表示は条件付きで3万個発売に進む。",
+          "immediateFeedback": "営業は量販店Xに強く出られる。",
+          "delayedConsequence": "製造歩留まりや表示修正が遅れると、在庫とクレームリスクが増える。",
+          "nextSceneEffect": "結果では市場機会を優先するタイプとして表れる。",
+          "resultSummaryEffect": "売場と初回数量を取りに行く判断が多い。",
+          "meterEffects": {
+            "sales_team_buy_in": 3,
+            "gross_margin": 1,
+            "launch_speed": 2,
+            "manufacturing_feasibility": -2,
+            "brand_fit": -1
+          },
+          "misconceptionEffect": "商品企画は攻めるほど、製造と品質の未確定を背負う。",
+          "studentFeedback": {
+            "good": "市場機会を逃さず、粗利回収の筋もある。",
+            "risk": "製造と品質保証の条件が未消化のまま大きく出る。",
+            "next": "結果では市場機会と実行リスクの扱いを返す。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 2,
+            "ownership": 2,
+            "ethics": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "market_opportunity_first"
+          ],
+          "universityInsightTags": [
+            "sales_opportunity_focus"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "launch_execution_risk"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "1.5万個で段階発売し、試験後に訴求を強める",
+          "text": "初回は製造安定と表示根拠を優先し、試験完了後に追加訴求と増産判断を置く。",
+          "immediateFeedback": "営業の勢いは抑えるが、発売後の責任を持ちやすい。",
+          "delayedConsequence": "売場獲得は小さくなるが、試験結果で訴求を強める余地が残る。",
+          "nextSceneEffect": "結果では顧客価値を通る仕様に翻訳するタイプとして表れる。",
+          "resultSummaryEffect": "段階発売で価値と実行可能性を両立する判断が多い。",
+          "meterEffects": {
+            "manufacturing_feasibility": 2,
+            "brand_fit": 2,
+            "customer_value": 1,
+            "gross_margin": -1,
+            "sales_team_buy_in": -1
+          },
+          "misconceptionEffect": "商品企画はアイデアを出す仕事ではなく、通る仕様と発売条件を設計する仕事だと理解できる。",
+          "studentFeedback": {
+            "good": "製造、品質保証、営業の条件を現実的に束ねている。",
+            "risk": "初回の市場インパクトと粗利率は弱くなる。",
+            "next": "結果では翻訳型の商品企画として振り返る。"
+          },
+          "scores": {
+            "communication": 3,
+            "logical": 3,
+            "ownership": 3,
+            "ethics": 3,
+            "agility": 2
+          },
+          "behaviorTags": [
+            "staged_launch_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "lower_initial_impact"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "発売を2週間延期し、開閉・密閉試験を完了してから出す",
+          "text": "春棚の一部を諦め、機能訴求の根拠を揃えてから発売判定をやり直す。",
+          "immediateFeedback": "品質保証とブランドの不安は解消しやすい。",
+          "delayedConsequence": "量販店Xの春棚を失い、初回数量が下がる可能性がある。",
+          "nextSceneEffect": "結果では品質根拠を優先するタイプとして表れる。",
+          "resultSummaryEffect": "発売後の信頼を守る判断が多い。",
+          "meterEffects": {
+            "brand_fit": 3,
+            "manufacturing_feasibility": 2,
+            "customer_value": 1,
+            "launch_speed": -3,
+            "sales_team_buy_in": -2
+          },
+          "misconceptionEffect": "完璧にしてから出す判断にも、売場機会を失う代償がある。",
+          "studentFeedback": {
+            "good": "根拠のない訴求を避け、ブランド信頼を守っている。",
+            "risk": "発売スケジュールと営業機会を大きく犠牲にする。",
+            "next": "結果では品質根拠と市場タイミングの緊張を返す。"
+          },
+          "scores": {
+            "communication": 2,
+            "logical": 3,
+            "ownership": 2,
+            "ethics": 3,
+            "agility": 1
+          },
+          "behaviorTags": [
+            "quality_evidence_first"
+          ],
+          "universityInsightTags": [
+            "quality_assurance_focus"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "market_timing_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "launch_decision",
+        "frictionType": "final_tradeoff",
+        "workValueTags": [
+          "商品企画",
+          "顧客価値",
+          "製造制約"
+        ],
+        "careerRealityTags": [
+          "product_trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": [
+          "manufacturing_career"
+        ]
+      },
+      "openingHook": "16:35。発売判定シートの未決欄は3つ残った。初回数量、表示文言、試験完了日。",
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "初回数量と発売条件判断",
+        "roleSpecificMaterials": [
+          "発売判定シート",
+          "初回数量案",
+          "表示"
+        ],
+        "roleSpecificMetrics": [
+          "初回数量案: 15,000個 / 30,000個",
+          "粗利率: 15,000個 33.1%、30,000個 35.4%",
+          "回答期限17:00"
+        ],
+        "roleSpecificFailureRisk": "数量・粗利・表示・試験の未決を抱えたまま、発売条件の責任範囲が曖昧になる。",
+        "roleSpecificEvaluationCriteria": "売場機会、粗利、品質根拠、段階訴求を発売条件として統合できるか。",
+        "genericCoordinationRisk": "営業・製造・品質の妥協点探しに見える。",
+        "antiGenericDesignNote": "発売判定シート、数量別粗利、表示条件、試験計画を使い、商品企画の最終発売判断にしている。",
+        "kernelConnection": "発売判定シートを、初回数量・表示・試験完了日の発売条件判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "朝: 顧客価値の選択",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "顧客アンケートと原価表から、残す価値を決める。",
+      "scenes": [
+        {
+          "id": "product-09-10-survey-gap",
+          "type": "review",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "presenter": "あなた",
+          "title": "アンケートの温度差",
+          "openingHook": "09:10。顧客アンケートの自由記述だけ、赤い付箋が12枚ついていた。",
+          "context": "09:10。顧客アンケートの自由記述だけ、赤い付箋が12枚ついていた。\n\n春発売予定の架空キッチン保存容器「ClearKeep Mini」。営業は量販店向けに分かりやすい売り文句を求めている。",
+          "content": "満足度は高いが、自由記述には「開けにくい」「冷蔵庫で場所を取る」が多い。競合は薄型で売れているが、粗利は低そうだ。",
+          "roleSpecificContext": "商品企画はアイデアを出すだけでなく、顧客の不満を仕様と売り方に翻訳する。",
+          "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+          "hiddenWorkReality": "顧客が欲しいと言った機能を全部足すと、原価、製造、ブランドが崩れる。",
+          "stakeholderPressure": "営業は今日中に棚提案の売り文句が必要。ブランド担当は安売り感を嫌がる。",
+          "timePressure": "11:00の原価レビューまでに企画軸を1つに絞る。",
+          "missingInformation": "薄型化した場合の金型費、開けやすさ改善の品質リスク。",
+          "decisionTradeoff": "顧客不満に寄せるほど魅力は出るが、製造と粗利の確認が追いつかない。",
+          "consequenceHook": "朝の企画軸が、昼の原価表と午後の表示リスクに響く。",
+          "nextSceneEcho": "ここで選んだ価値が、原価表で削られる。",
+          "npcDialogue": "営業:「量販店X、2,980円なら春棚3万個いけます。ただ、今日中に売り文句が必要です」\nブランド担当:「便利だけで押すと、うちの価格帯では弱いです」",
+          "workMaterial": "顧客アンケート n=412\n- 保存しやすい: 68%\n- 開け閉めしやすい: 41%\n- 冷蔵庫で場所を取らない: 36%\n自由記述: 「片手で開けたい」34件、「重ねると取り出しにくい」28件\n競合A: 薄型2,780円、競合B: 密閉強化3,480円",
+          "decisionPrompt": "朝の企画軸として、どの顧客価値を置くか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "「片手で開けやすい」を主軸にし、売り文句を先に作る",
+              "text": "自由記述の痛みが強い開けやすさを主軸にし、営業へ棚提案の言葉を先に渡す。",
+              "immediateFeedback": "営業は提案を進めやすくなる。",
+              "delayedConsequence": "機構変更が必要なら原価と品質試験が重くなる。",
+              "nextSceneEffect": "原価レビューで、開閉機構の追加費用が論点になる。",
+              "resultSummaryEffect": "顧客の不満を強い価値に変える判断が多い。",
+              "meterEffects": {
+                "customer_value": 2,
+                "sales_team_buy_in": 2,
+                "manufacturing_feasibility": -1,
+                "gross_margin": -1
+              },
+              "misconceptionEffect": "商品企画はアイデアを出せば終わりではなく、そのアイデアが作れるかまで追う必要がある。",
+              "studentFeedback": {
+                "good": "顧客の具体的な不満から価値を作っている。",
+                "risk": "製造可能性を確認する前に売り文句が先行する。",
+                "next": "次は開けやすさの原価と品質が問われる。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "customer_value_first"
+              ],
+              "universityInsightTags": [
+                "customer_insight_focus"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "claim_before_feasibility"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "「薄型で重ねやすい」を主軸にし、競合差分を取りに行く",
+              "text": "競合Aに近い薄型価値を主軸にし、冷蔵庫内の省スペースを前面に出す。",
+              "immediateFeedback": "営業とブランドの両方に説明しやすい。",
+              "delayedConsequence": "競合追随に見え、独自性が弱くなる可能性がある。",
+              "nextSceneEffect": "原価レビューでは金型費と初回数量の回収が論点になる。",
+              "resultSummaryEffect": "市場差分を仕様に翻訳する判断が多い。",
+              "meterEffects": {
+                "customer_value": 1,
+                "sales_team_buy_in": 1,
+                "brand_fit": 1,
+                "manufacturing_feasibility": -1
+              },
+              "misconceptionEffect": "企画は斬新さだけでなく、比較棚で選ばれる理由を作る仕事。",
+              "studentFeedback": {
+                "good": "顧客不満と競合比較をつないでいる。",
+                "risk": "ブランドらしさが弱いと価格競争に巻き込まれる。",
+                "next": "次は薄型化の金型費と粗利を確認する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "market_comparison"
+              ],
+              "universityInsightTags": [
+                "competitive_positioning"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "weak_differentiation"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "密閉品質を守り、既存構造の小改良に絞る",
+              "text": "ブランドの信頼と製造安定を優先し、開けやすさや薄型化は小改良に留める。",
+              "immediateFeedback": "製造と品質保証には通しやすい。",
+              "delayedConsequence": "顧客の不満に対する変化が弱く、営業の棚提案が鈍る。",
+              "nextSceneEffect": "原価表では堅いが、営業から売れる理由を問われる。",
+              "resultSummaryEffect": "品質と製造安定を先に守る判断が多い。",
+              "meterEffects": {
+                "brand_fit": 2,
+                "manufacturing_feasibility": 2,
+                "gross_margin": 1,
+                "customer_value": -2,
+                "sales_team_buy_in": -1
+              },
+              "misconceptionEffect": "作りやすいだけでは商品企画の価値にならず、顧客が選ぶ理由も必要。",
+              "studentFeedback": {
+                "good": "ブランド品質と製造安定を守っている。",
+                "risk": "顧客の痛みを商品価値に変えきれていない。",
+                "next": "次は粗利が守れても、営業説得が難しくなる。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "quality_stability_first"
+              ],
+              "universityInsightTags": [
+                "manufacturing_feasibility_focus"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "low_customer_pull"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "customer_value_selection",
+            "frictionType": "survey_conflict",
+            "workValueTags": [
+              "商品企画",
+              "顧客価値",
+              "製造制約"
+            ],
+            "careerRealityTags": [
+              "product_trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "manufacturing_career"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "顧客不満の仕様化",
+            "roleSpecificMaterials": [
+              "顧客アンケート",
+              "自由記述",
+              "競合A"
+            ],
+            "roleSpecificMetrics": [
+              "保存しやすい: 68%",
+              "開け閉めしやすい: 41%",
+              "「片手で開けたい」34件",
+              "競合A: 薄型2,780円"
+            ],
+            "roleSpecificFailureRisk": "顧客不満をそのまま全部盛り仕様にし、製造・原価・棚で成立しない企画になる。",
+            "roleSpecificEvaluationCriteria": "顧客が選ぶ理由を、発売可能な仕様仮説と競合差分に翻訳できるか。",
+            "genericCoordinationRisk": "顧客要望と社内制約の一般的な調整に見える。",
+            "antiGenericDesignNote": "アンケート比率、自由記述、競合価格を使い、商品企画固有の仕様仮説判断にしている。",
+            "kernelConnection": "顧客アンケートと競合比較を、発売可能な仕様仮説へ接続する。"
+          }
+        },
+        {
+          "id": "product-10-55-cost-table",
+          "type": "memo",
+          "time": "10:55",
+          "interactable": "sticky_notes",
+          "presenter": "製造原価担当",
+          "title": "原価表の赤字",
+          "openingHook": "10:55。原価表の粗利欄が赤くなった。2,980円では、目標粗利を3.8ポイント下回る。",
+          "context": "10:55。原価表の粗利欄が赤くなった。2,980円では、目標粗利を3.8ポイント下回る。\n\n顧客価値を仕様に落とすと、原価が上がる。営業は2,980円を守りたい。製造は試験期間を求めている。",
+          "content": "開けやすさ機構は+42円。薄型金型は初期費680万円。初回数量3万個なら回収できるが、1.5万個なら赤字になる。",
+          "roleSpecificContext": "商品企画は、欲しい仕様を粗利と初回数量で現実化する。",
+          "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+          "hiddenWorkReality": "良い企画ほど、誰かのコストを増やす。数字にしないと会議で通らない。",
+          "stakeholderPressure": "営業は価格死守。製造は歩留まりと試験期間。経理は粗利率を見ている。",
+          "timePressure": "13:00までに営業へ仕様案を返す。",
+          "missingInformation": "量販店Xの初回数量確度、金型費の償却前提。",
+          "decisionTradeoff": "仕様を守るほど顧客価値は上がるが、粗利と製造負荷が悪化する。",
+          "consequenceHook": "ここで削った仕様が、午後の営業圧と品質表示リスクに跳ね返る。",
+          "nextSceneEcho": "営業は削られた価値に対して、別の売れる言葉を求める。",
+          "npcDialogue": "原価担当:「このままだと粗利31.2%。目標35%に届きません」\n製造:「新しいヒンジは試験2週間。春発売に間に合うか怪しいです」",
+          "workMaterial": "原価表\n- 予定売価: 2,980円\n- 目標粗利率: 35%\n- 現行案粗利率: 31.2%\n- 開閉機構追加: +42円/個\n- 薄型金型費: 680万円\n- 初回数量: 営業希望30,000個、保守試算15,000個",
+          "decisionPrompt": "どの仕様調整で、価値と粗利を両立させるか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "開けやすさ機構を残し、外装色と同梱物を削って粗利を戻す",
+              "text": "顧客価値の中核は守り、見た目や同梱物を簡素化して原価を下げる。",
+              "immediateFeedback": "顧客価値は残るが、ブランドの見え方は弱くなる。",
+              "delayedConsequence": "品質試験が遅れると発売スケジュールに影響する。",
+              "nextSceneEffect": "営業には分かりやすい売り文句を渡せる。",
+              "resultSummaryEffect": "価値の芯を残して周辺を削る判断が多い。",
+              "meterEffects": {
+                "customer_value": 2,
+                "gross_margin": 1,
+                "brand_fit": -1,
+                "manufacturing_feasibility": -1
+              },
+              "misconceptionEffect": "企画は足し算ではなく、何を削って価値を残すかの仕事でもある。",
+              "studentFeedback": {
+                "good": "顧客が感じる価値を守っている。",
+                "risk": "ブランド体験と製造試験にしわ寄せが出る。",
+                "next": "次は営業がこの価値をどう売るかが論点になる。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "core_value_protection"
+              ],
+              "universityInsightTags": [
+                "value_translation_learning"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "brand_compromise"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "薄型化を残し、初回数量3万個の確約を営業条件にする",
+              "text": "金型費を初回数量で回収する前提にし、営業へ数量確度の確認を求める。",
+              "immediateFeedback": "粗利の説明は立つが、営業の数量責任が重くなる。",
+              "delayedConsequence": "初回数量が下振れると在庫と粗利の両方が悪化する。",
+              "nextSceneEffect": "午後、営業部門から強い売り文句の要求が来る。",
+              "resultSummaryEffect": "数量と仕様をセットで設計する判断が多い。",
+              "meterEffects": {
+                "sales_team_buy_in": 1,
+                "gross_margin": 2,
+                "customer_value": 1,
+                "manufacturing_feasibility": -1
+              },
+              "misconceptionEffect": "売れる予感は、数量・粗利・在庫リスクまで見て初めて企画になる。",
+              "studentFeedback": {
+                "good": "競合差分と粗利回収をつないでいる。",
+                "risk": "営業見込みに依存しすぎる。",
+                "next": "次は営業の圧と数量確度に向き合う。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "volume_margin_design"
+              ],
+              "universityInsightTags": [
+                "margin_literacy"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "volume_dependency"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "新規機構をやめ、既存金型で価格と粗利を守る",
+              "text": "仕様変更を最小化し、2,980円と35%粗利を守る既存金型案に寄せる。",
+              "immediateFeedback": "原価と製造は安定する。",
+              "delayedConsequence": "顧客アンケートの不満に答えられず、棚で埋もれる恐れがある。",
+              "nextSceneEffect": "営業から「何が新しいのか」と詰められる。",
+              "resultSummaryEffect": "事業採算と製造安定を優先する判断が多い。",
+              "meterEffects": {
+                "gross_margin": 3,
+                "manufacturing_feasibility": 2,
+                "customer_value": -2,
+                "sales_team_buy_in": -1
+              },
+              "misconceptionEffect": "数字を守るだけでは、顧客が選ぶ理由を作れない。",
+              "studentFeedback": {
+                "good": "粗利と製造リスクを明確に守っている。",
+                "risk": "企画としての変化が弱い。",
+                "next": "次は営業に、弱い差分をどう説明するかが問われる。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "margin_first"
+              ],
+              "universityInsightTags": [
+                "profit_constraint_learning"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "weak_product_value"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "value_vs_margin",
+            "frictionType": "cost_constraint",
+            "workValueTags": [
+              "商品企画",
+              "顧客価値",
+              "製造制約"
+            ],
+            "careerRealityTags": [
+              "product_trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "manufacturing_career"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "原価制約下の仕様削減",
+            "roleSpecificMaterials": [
+              "原価表",
+              "開閉機構追加",
+              "薄型金型費"
+            ],
+            "roleSpecificMetrics": [
+              "予定売価: 2,980円",
+              "目標粗利率: 35%",
+              "現行案粗利率: 31.2%",
+              "薄型金型費: 680万円"
+            ],
+            "roleSpecificFailureRisk": "顧客価値を足し続けて、目標粗利や初回数量の前提が崩れる。",
+            "roleSpecificEvaluationCriteria": "顧客価値を残しながら、粗利・金型費・数量に通る仕様へ削れるか。",
+            "genericCoordinationRisk": "製造と営業の希望をバランスするだけに見える。",
+            "antiGenericDesignNote": "売価、粗利率、追加原価、金型費、初回数量を材料にし、企画仕様の引き算判断にしている。",
+            "kernelConnection": "原価表と初回数量を、粗利を守る仕様削減判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼: 営業の圧",
+      "time_start": "12:30",
+      "time_end": "13:10",
+      "location": "desk",
+      "intro": "棚提案に間に合う言葉を、根拠付きで渡せるか。",
+      "scenes": [
+        {
+          "id": "product-12-40-sales-pressure",
+          "type": "meeting",
+          "time": "12:40",
+          "interactable": "monitor_slack",
+          "presenter": "営業",
+          "title": "営業の棚提案締切",
+          "openingHook": "12:40。営業チャットが光った。「量販店Xの商談、15時に前倒し。売れる一文ください」",
+          "context": "12:40。営業チャットが光った。「量販店Xの商談、15時に前倒し。売れる一文ください」\n\n営業は商談資料を急いでいる。だが売れる表現ほど、品質保証の根拠確認が必要になる。",
+          "content": "「片手でラク」「冷蔵庫すっきり」「密閉長持ち」。どれも魅力的だが、根拠なしでは表示リスクになる。",
+          "roleSpecificContext": "商品企画は営業が売りやすい言葉を作るが、言い切れる根拠も一緒に渡す。",
+          "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+          "hiddenWorkReality": "売れる言葉は、品質保証と法務が読める根拠に変換されて初めて使える。",
+          "stakeholderPressure": "営業は棚と初回数量を取りたい。品質保証は根拠のない強い表現を嫌がる。",
+          "timePressure": "15:00商談。14:00までに表現案を確定したい。",
+          "missingInformation": "開閉試験、密閉試験、競合比較の測定条件。",
+          "decisionTradeoff": "強い表現は営業を助けるが、根拠が弱いと品質保証で止まる。",
+          "consequenceHook": "昼の売り文句が、午後の品質保証レビューで止まるか通るかを決める。",
+          "nextSceneEcho": "強い言葉を選ぶほど、品質保証から根拠を求められる。",
+          "npcDialogue": "営業:「棚は今日決まります。ぼんやりした表現だと競合に負けます」\n品質保証:「比較表現を出すなら、測定条件をそろえてください」",
+          "workMaterial": "営業メモ\n- 量販店X 商談15:00\n- 希望売価 2,980円\n- 初回数量 30,000個希望\n表現候補\nA: 片手でラクに開け閉め\nB: 冷蔵庫で重ねてすっきり\nC: 密閉長持ちで作り置きに安心\n根拠状況: Aは社内試作評価のみ、Bは寸法比較あり、Cは密閉試験未完了",
+          "decisionPrompt": "営業に渡す一文を、どの強さにするか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "「片手でラク」を前面に出し、試作評価を根拠として添える",
+              "text": "顧客の痛みが強い開けやすさを売り文句にし、社内試作評価の範囲で表現する。",
+              "immediateFeedback": "営業は商談で話しやすい。",
+              "delayedConsequence": "社内評価だけでは、品質保証から表現修正を求められる。",
+              "nextSceneEffect": "品質保証レビューで「ラク」の根拠が問われる。",
+              "resultSummaryEffect": "売れる表現を先に作る判断が多い。",
+              "meterEffects": {
+                "sales_team_buy_in": 2,
+                "customer_value": 2,
+                "brand_fit": 1,
+                "manufacturing_feasibility": -1,
+                "gross_margin": -1
+              },
+              "misconceptionEffect": "企画の言葉はコピーではなく、根拠付きの仕様説明である。",
+              "studentFeedback": {
+                "good": "顧客の言葉に近い売り文句を作っている。",
+                "risk": "根拠が弱く、表示修正の可能性がある。",
+                "next": "次は品質保証に、表現の根拠を説明する。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "sales_claim_first"
+              ],
+              "universityInsightTags": [
+                "claim_evidence_learning"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "weak_claim_evidence"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "寸法根拠のある「重ねてすっきり」に絞る",
+              "text": "競合比較で寸法差を示せる省スペース価値に絞り、商談資料に測定条件を入れる。",
+              "immediateFeedback": "営業の勢いは少し落ちるが、品質保証に通しやすい。",
+              "delayedConsequence": "派手さは弱いが、表示リスクを抑えて商談に出せる。",
+              "nextSceneEffect": "品質保証レビューでは測定条件の明記が中心になる。",
+              "resultSummaryEffect": "売れる言葉と根拠の両方を残す判断が多い。",
+              "meterEffects": {
+                "sales_team_buy_in": 1,
+                "customer_value": 1,
+                "brand_fit": 1,
+                "manufacturing_feasibility": 1,
+                "gross_margin": 1,
+                "launch_speed": -1
+              },
+              "misconceptionEffect": "商品企画は目立つ言葉を作るより、通せる言葉を設計する仕事。",
+              "studentFeedback": {
+                "good": "競合比較と根拠をセットにしている。",
+                "risk": "顧客の強い不満である開けやすさからは少し離れる。",
+                "next": "次は品質保証とブランドに通る表示へ整える。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "evidence_based_claim"
+              ],
+              "universityInsightTags": [
+                "quality_claim_literacy"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "moderate_sales_impact"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "表現を弱め、「使いやすさに配慮」に留める",
+              "text": "根拠不足の表現を避け、品質保証が止めにくい安全な言葉へ抑える。",
+              "immediateFeedback": "品質保証リスクは低い。",
+              "delayedConsequence": "営業の商談資料が弱くなり、初回数量が下がる可能性がある。",
+              "nextSceneEffect": "営業から商品企画の価値を問われる。",
+              "resultSummaryEffect": "ブランドと表示安全性を守る判断が多い。",
+              "meterEffects": {
+                "manufacturing_feasibility": 1,
+                "brand_fit": 2,
+                "sales_team_buy_in": -2,
+                "customer_value": -1
+              },
+              "misconceptionEffect": "守りの表現だけでは、棚で選ばれる理由を作れない。",
+              "studentFeedback": {
+                "good": "表示リスクを避けている。",
+                "risk": "売れる理由を営業に渡せていない。",
+                "next": "次は営業と品質保証の間で、言葉の強さを再調整する。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "safe_claim"
+              ],
+              "universityInsightTags": [
+                "brand_risk_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "sales_enablement_gap"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "sales_claim_vs_evidence",
+            "frictionType": "claim_risk",
+            "workValueTags": [
+              "商品企画",
+              "顧客価値",
+              "製造制約"
+            ],
+            "careerRealityTags": [
+              "product_trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "manufacturing_career"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "根拠ある売り文句設計",
+            "roleSpecificMaterials": [
+              "営業メモ",
+              "表現候補",
+              "根拠状況"
+            ],
+            "roleSpecificMetrics": [
+              "希望売価 2,980円",
+              "初回数量 30,000個希望",
+              "商談15:00"
+            ],
+            "roleSpecificFailureRisk": "売れる表現を優先し、表示根拠や品質確認が不足した訴求になる。",
+            "roleSpecificEvaluationCriteria": "売場で強い言葉を、根拠・仕様・ブランドに通る表現へ設計できるか。",
+            "genericCoordinationRisk": "営業からの急ぎ依頼に対応するだけの締切ゲームに見える。",
+            "antiGenericDesignNote": "訴求候補ごとの根拠状況と棚条件を使い、商品企画固有の表示判断にしている。",
+            "kernelConnection": "営業商談条件と売り文句を、根拠ある訴求設計へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後: 品質保証との衝突",
+      "time_start": "14:00",
+      "time_end": "15:00",
+      "location": "conference_room",
+      "intro": "売れる表現を、表示できる表現へ整える。",
+      "scenes": [
+        {
+          "id": "product-14-20-qa-stop",
+          "type": "meeting",
+          "time": "14:20",
+          "interactable": "meeting_speaker",
+          "presenter": "品質保証",
+          "title": "品質保証の差し止め",
+          "openingHook": "14:20。品質保証のコメントは一行だった。「この表現では、店頭POPに出せません」",
+          "context": "14:20。品質保証のコメントは一行だった。「この表現では、店頭POPに出せません」\n\n営業商談前に品質保証が表示案を確認する。強い言葉には測定条件と試験計画が必要だ。",
+          "content": "「ラク」「長持ち」「すっきり」は、どこまで言えるのか。ブランドを守るために止める品質保証と、棚を取りたい営業がぶつかる。",
+          "roleSpecificContext": "商品企画は、売れる表現を品質保証が通せる根拠へ編集する。",
+          "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+          "hiddenWorkReality": "社内で止められるのは敵対ではなく、発売後のクレームを先に減らす仕組み。",
+          "stakeholderPressure": "品質保証は表示リスク。営業は商談時間。ブランドは信頼毀損を避けたい。",
+          "timePressure": "15:00商談まで40分。",
+          "missingInformation": "最終試験結果、店頭POPの文字数制限。",
+          "decisionTradeoff": "表現を強く残せば営業は助かるが、発売後クレームと差し戻しリスクが上がる。",
+          "consequenceHook": "ここで決めた表示が、夕方の発売判定でブランド適合と数量判断に響く。",
+          "nextSceneEcho": "品質保証との合意内容が最終仕様の通過条件になる。",
+          "npcDialogue": "品質保証:「比較条件なしの“ラク”は危ないです」\n営業:「今止めたら棚が消えます」\nブランド担当:「短期で売れても、信頼を削る表現は避けたい」",
+          "workMaterial": "品質保証コメント\n- 「片手でラク」: 評価者5名の試作コメントのみ。客観データ不足\n- 「密閉長持ち」: 密閉試験未完了。使用不可\n- 「重ねてすっきり」: 寸法比較あり。条件明記なら可\n試験計画: 開閉耐久 2週間、密閉試験 10日",
+          "decisionPrompt": "営業商談に出す表示案を、どう修正するか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "「片手でラク」を残し、店頭POPではなく営業トーク限定にする",
+              "text": "POP表示は避け、営業が口頭で試作品の使いやすさを説明する形に逃がす。",
+              "immediateFeedback": "営業は商談で価値を語れる。",
+              "delayedConsequence": "口頭説明でも過度な表現が残ると、期待値と実物の差が出る。",
+              "nextSceneEffect": "最終判定で、営業トーク管理が条件になる。",
+              "resultSummaryEffect": "営業現場の自由度を残す判断が多い。",
+              "meterEffects": {
+                "sales_team_buy_in": 2,
+                "customer_value": 1,
+                "brand_fit": -2,
+                "manufacturing_feasibility": -1
+              },
+              "misconceptionEffect": "表示しなければ安全ではなく、営業トークも商品価値の一部として管理が必要。",
+              "studentFeedback": {
+                "good": "商談機会を守りながら表現リスクを一部下げている。",
+                "risk": "現場で表現が膨らむ可能性がある。",
+                "next": "次は発売判定で、営業管理まで含めた条件が問われる。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "sales_flexibility"
+              ],
+              "universityInsightTags": [
+                "sales_quality_tension"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "uncontrolled_claim"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "「重ねてすっきり」に統一し、寸法比較の注記を入れる",
+              "text": "根拠がある省スペース表現へ統一し、POPにも測定条件を小さく入れる。",
+              "immediateFeedback": "品質保証は通しやすく、営業も最低限の売り文句を持てる。",
+              "delayedConsequence": "開けやすさの強い不満には直接答えにくい。",
+              "nextSceneEffect": "最終判定では、発売スケジュールと初回数量を現実的に決められる。",
+              "resultSummaryEffect": "根拠のある価値に絞る判断が多い。",
+              "meterEffects": {
+                "brand_fit": 2,
+                "manufacturing_feasibility": 1,
+                "sales_team_buy_in": 1,
+                "customer_value": 1,
+                "gross_margin": 1,
+                "launch_speed": -1
+              },
+              "misconceptionEffect": "商品企画は「言いたいこと」より「言えること」を選ぶ場面が多い。",
+              "studentFeedback": {
+                "good": "品質保証、営業、ブランドの通る接点を作っている。",
+                "risk": "顧客価値の尖りは弱くなる。",
+                "next": "次は数量と発売スケジュールの最終判断に進む。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "cross_functional_alignment"
+              ],
+              "universityInsightTags": [
+                "quality_claim_literacy"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "weaker_customer_hook"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "商談資料から機能訴求を外し、ブランドの安心感だけで出す",
+              "text": "機能表現を削り、ブランド品質と既存ユーザー評価中心の資料に差し替える。",
+              "immediateFeedback": "品質保証とブランドは安心する。",
+              "delayedConsequence": "営業は競合比較で弱くなり、初回数量が下がる可能性がある。",
+              "nextSceneEffect": "最終判定で、発売しても売れる根拠が弱いと指摘される。",
+              "resultSummaryEffect": "ブランド保全を優先する判断が多い。",
+              "meterEffects": {
+                "brand_fit": 3,
+                "manufacturing_feasibility": 2,
+                "sales_team_buy_in": -2,
+                "customer_value": -2,
+                "launch_speed": 1
+              },
+              "misconceptionEffect": "ブランドを守るだけでは新商品の役割を果たせない。",
+              "studentFeedback": {
+                "good": "表示リスクとブランド毀損を抑えている。",
+                "risk": "顧客が選ぶ理由を削りすぎている。",
+                "next": "次は発売可否で、価値の弱さが論点になる。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "brand_safety_first"
+              ],
+              "universityInsightTags": [
+                "brand_risk_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "low_sales_pull"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "qa_gate_negotiation",
+            "frictionType": "quality_claim_conflict",
+            "workValueTags": [
+              "商品企画",
+              "顧客価値",
+              "製造制約"
+            ],
+            "careerRealityTags": [
+              "product_trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "manufacturing_career"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "品質表示リスク判定",
+            "roleSpecificMaterials": [
+              "品質保証コメント",
+              "試験計画",
+              "寸法比較"
+            ],
+            "roleSpecificMetrics": [
+              "評価者5名",
+              "開閉耐久 2週間",
+              "密閉試験 10日"
+            ],
+            "roleSpecificFailureRisk": "根拠不足の表現を残し、発売後クレームやブランド毀損につながる。",
+            "roleSpecificEvaluationCriteria": "言いたい価値と、品質保証が許容できる根拠の範囲を合わせられるか。",
+            "genericCoordinationRisk": "品質保証に止められた表現をどう調整するかに見える。",
+            "antiGenericDesignNote": "試験日数、評価者数、寸法比較、未完了試験を使い、表示可能性の判定にしている。",
+            "kernelConnection": "品質保証コメントと試験日数を、表示可能な文言判定へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方: 発売判定",
+      "time_start": "16:30",
+      "time_end": "17:00",
+      "location": "conference_room",
+      "intro": "初回数量、表示、試験完了日を決め切る。",
+      "scenes": [
+        {
+          "id": "product-16-35-launch-decision",
+          "type": "meeting",
+          "time": "16:35",
+          "interactable": "monitor_calendar",
+          "presenter": "商品企画リーダー",
+          "title": "発売判定の15分前",
+          "openingHook": "16:35。発売判定シートの未決欄は3つ残った。初回数量、表示文言、試験完了日。",
+          "context": "16:35。発売判定シートの未決欄は3つ残った。初回数量、表示文言、試験完了日。\n\n発売スケジュールは迫っている。営業は3万個を取りたい。製造は1.5万個なら安定。品質保証は試験完了後の表現更新を条件にする。",
+          "content": "ここで決めるのは「良い商品か」だけではない。作れるか、売れるか、説明できるか、ブランドに残せるかだ。",
+          "roleSpecificContext": "商品企画は顧客価値を、原価・製造・営業・品質保証・ブランドに通る仕様へ翻訳する。",
+          "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+          "hiddenWorkReality": "最終判定では、理想の企画より、発売後に責任を持てる条件が選ばれる。",
+          "stakeholderPressure": "営業は棚確保、製造は歩留まり、品質保証は表示根拠、ブランドは信頼を守りたい。",
+          "timePressure": "17:00までに発売判定を確定し、量販店Xへ回答。",
+          "missingInformation": "商談後の量販店Xの確約数量、試験完了後の表現更新可否。",
+          "decisionTradeoff": "発売を急ぐほど売場を取れるが、仕様と表示の未確定リスクが残る。",
+          "consequenceHook": "最終判断が結果画面の職業理解タイプに直結する。",
+          "nextSceneEcho": "プレイヤーの判断は、顧客価値と製造可能性のどちらを残したかとして返る。",
+          "npcDialogue": "営業:「3万個で棚を取りに行きたいです」\n製造:「初回は1.5万個なら歩留まりを見ながら回せます」\n品質保証:「表示は“重ねてすっきり”まで。試験後に更新なら可です」",
+          "workMaterial": "発売判定シート\n- 売価: 2,980円\n- 初回数量案: 15,000個 / 30,000個\n- 粗利率: 15,000個 33.1%、30,000個 35.4%\n- 表示: 「重ねてすっきり」条件付き可\n- 試験: 開閉耐久と密閉は発売後訴求更新候補\n- 発売予定: 春棚、回答期限17:00",
+          "decisionPrompt": "最終仕様と初回数量をどう決めるか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "3万個で発売し、営業機会を取りに行く",
+              "text": "粗利35.4%と棚確保を優先し、表示は条件付きで3万個発売に進む。",
+              "immediateFeedback": "営業は量販店Xに強く出られる。",
+              "delayedConsequence": "製造歩留まりや表示修正が遅れると、在庫とクレームリスクが増える。",
+              "nextSceneEffect": "結果では市場機会を優先するタイプとして表れる。",
+              "resultSummaryEffect": "売場と初回数量を取りに行く判断が多い。",
+              "meterEffects": {
+                "sales_team_buy_in": 3,
+                "gross_margin": 1,
+                "launch_speed": 2,
+                "manufacturing_feasibility": -2,
+                "brand_fit": -1
+              },
+              "misconceptionEffect": "商品企画は攻めるほど、製造と品質の未確定を背負う。",
+              "studentFeedback": {
+                "good": "市場機会を逃さず、粗利回収の筋もある。",
+                "risk": "製造と品質保証の条件が未消化のまま大きく出る。",
+                "next": "結果では市場機会と実行リスクの扱いを返す。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 2,
+                "ownership": 2,
+                "ethics": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "market_opportunity_first"
+              ],
+              "universityInsightTags": [
+                "sales_opportunity_focus"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "launch_execution_risk"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "1.5万個で段階発売し、試験後に訴求を強める",
+              "text": "初回は製造安定と表示根拠を優先し、試験完了後に追加訴求と増産判断を置く。",
+              "immediateFeedback": "営業の勢いは抑えるが、発売後の責任を持ちやすい。",
+              "delayedConsequence": "売場獲得は小さくなるが、試験結果で訴求を強める余地が残る。",
+              "nextSceneEffect": "結果では顧客価値を通る仕様に翻訳するタイプとして表れる。",
+              "resultSummaryEffect": "段階発売で価値と実行可能性を両立する判断が多い。",
+              "meterEffects": {
+                "manufacturing_feasibility": 2,
+                "brand_fit": 2,
+                "customer_value": 1,
+                "gross_margin": -1,
+                "sales_team_buy_in": -1
+              },
+              "misconceptionEffect": "商品企画はアイデアを出す仕事ではなく、通る仕様と発売条件を設計する仕事だと理解できる。",
+              "studentFeedback": {
+                "good": "製造、品質保証、営業の条件を現実的に束ねている。",
+                "risk": "初回の市場インパクトと粗利率は弱くなる。",
+                "next": "結果では翻訳型の商品企画として振り返る。"
+              },
+              "scores": {
+                "communication": 3,
+                "logical": 3,
+                "ownership": 3,
+                "ethics": 3,
+                "agility": 2
+              },
+              "behaviorTags": [
+                "staged_launch_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "lower_initial_impact"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "発売を2週間延期し、開閉・密閉試験を完了してから出す",
+              "text": "春棚の一部を諦め、機能訴求の根拠を揃えてから発売判定をやり直す。",
+              "immediateFeedback": "品質保証とブランドの不安は解消しやすい。",
+              "delayedConsequence": "量販店Xの春棚を失い、初回数量が下がる可能性がある。",
+              "nextSceneEffect": "結果では品質根拠を優先するタイプとして表れる。",
+              "resultSummaryEffect": "発売後の信頼を守る判断が多い。",
+              "meterEffects": {
+                "brand_fit": 3,
+                "manufacturing_feasibility": 2,
+                "customer_value": 1,
+                "launch_speed": -3,
+                "sales_team_buy_in": -2
+              },
+              "misconceptionEffect": "完璧にしてから出す判断にも、売場機会を失う代償がある。",
+              "studentFeedback": {
+                "good": "根拠のない訴求を避け、ブランド信頼を守っている。",
+                "risk": "発売スケジュールと営業機会を大きく犠牲にする。",
+                "next": "結果では品質根拠と市場タイミングの緊張を返す。"
+              },
+              "scores": {
+                "communication": 2,
+                "logical": 3,
+                "ownership": 2,
+                "ethics": 3,
+                "agility": 1
+              },
+              "behaviorTags": [
+                "quality_evidence_first"
+              ],
+              "universityInsightTags": [
+                "quality_assurance_focus"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "market_timing_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "launch_decision",
+            "frictionType": "final_tradeoff",
+            "workValueTags": [
+              "商品企画",
+              "顧客価値",
+              "製造制約"
+            ],
+            "careerRealityTags": [
+              "product_trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": [
+              "manufacturing_career"
+            ]
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "初回数量と発売条件判断",
+            "roleSpecificMaterials": [
+              "発売判定シート",
+              "初回数量案",
+              "表示"
+            ],
+            "roleSpecificMetrics": [
+              "初回数量案: 15,000個 / 30,000個",
+              "粗利率: 15,000個 33.1%、30,000個 35.4%",
+              "回答期限17:00"
+            ],
+            "roleSpecificFailureRisk": "数量・粗利・表示・試験の未決を抱えたまま、発売条件の責任範囲が曖昧になる。",
+            "roleSpecificEvaluationCriteria": "売場機会、粗利、品質根拠、段階訴求を発売条件として統合できるか。",
+            "genericCoordinationRisk": "営業・製造・品質の妥協点探しに見える。",
+            "antiGenericDesignNote": "発売判定シート、数量別粗利、表示条件、試験計画を使い、商品企画の最終発売判断にしている。",
+            "kernelConnection": "発売判定シートを、初回数量・表示・試験完了日の発売条件判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "creativity",
+    "ownership"
+  ],
+  "resultTypes": [
+    {
+      "id": "translation-planner",
+      "title": "仕様翻訳型プランナー",
+      "strengths": [
+        "顧客価値を製造・品質・営業に通る条件へ翻訳できる",
+        "段階発売や根拠ある表現で関係者を束ねられる"
+      ],
+      "cautionPoints": [
+        "全員に配慮するほど、初回インパクトが弱くなることがある"
+      ],
+      "meterPriorities": [
+        "manufacturing_feasibility",
+        "brand_fit",
+        "customer_value"
+      ],
+      "valuedMeters": [
+        "manufacturing_feasibility",
+        "brand_fit"
+      ],
+      "sacrificedMeters": [
+        "launch_speed"
+      ],
+      "roleRealityReveal": "商品企画は、顧客価値を原価・製造・営業・品質保証・ブランドに通る仕様へ翻訳する仕事です。",
+      "misconceptionCorrection": "「アイデアを出す仕事」から、「価値を通る条件に変える仕事」へ理解が進んでいます。",
+      "decisionPatternSummary": "根拠のある表現と段階的な発売条件で、関係者の衝突を調整する傾向があります。",
+      "careerReflectionPrompt": "良いアイデアを削ってでも発売後に責任を持てる条件を作ることに興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "quality_claim_literacy"
+      ]
+    },
+    {
+      "id": "customer-value-planner",
+      "title": "顧客価値突破型プランナー",
+      "strengths": [
+        "顧客の不満を強い価値に変えられる",
+        "営業が売りやすい言葉を早く作れる"
+      ],
+      "cautionPoints": [
+        "原価、品質根拠、製造試験が後追いになりやすい"
+      ],
+      "meterPriorities": [
+        "customer_value",
+        "sales_team_buy_in"
+      ],
+      "valuedMeters": [
+        "customer_value",
+        "sales_team_buy_in"
+      ],
+      "sacrificedMeters": [
+        "manufacturing_feasibility",
+        "gross_margin"
+      ],
+      "roleRealityReveal": "顧客価値を強く出すほど、製造・原価・品質保証への翻訳責任が重くなります。",
+      "misconceptionCorrection": "面白いアイデアほど、作れる仕様と根拠ある表現に直す必要があります。",
+      "decisionPatternSummary": "顧客の痛みと営業機会を先に捉える傾向があります。",
+      "careerReflectionPrompt": "顧客価値を守りながら、どの制約なら削れるか考えてください。",
+      "universityInsightTags": [
+        "customer_insight_focus",
+        "sales_opportunity_focus"
+      ]
+    },
+    {
+      "id": "brand-quality-planner",
+      "title": "ブランド品質保全型プランナー",
+      "strengths": [
+        "表示リスクと製造安定を慎重に見られる",
+        "発売後の信頼毀損を避けられる"
+      ],
+      "cautionPoints": [
+        "売場機会や顧客が選ぶ理由を弱めることがある"
+      ],
+      "meterPriorities": [
+        "brand_fit",
+        "manufacturing_feasibility"
+      ],
+      "valuedMeters": [
+        "brand_fit",
+        "manufacturing_feasibility"
+      ],
+      "sacrificedMeters": [
+        "sales_team_buy_in",
+        "launch_speed"
+      ],
+      "roleRealityReveal": "品質とブランドを守る判断も商品企画の重要な仕事ですが、市場タイミングとの代償が残ります。",
+      "misconceptionCorrection": "慎重に整えれば必ず良いわけではなく、売場と数量の機会損失も企画責任に含まれます。",
+      "decisionPatternSummary": "根拠が揃うまで強い表現や大量発売を避ける傾向があります。",
+      "careerReflectionPrompt": "ブランド信頼と市場機会がぶつかったとき、自分はどちらのリスクを重く見るか振り返ってください。",
+      "universityInsightTags": [
+        "brand_risk_preference",
+        "quality_assurance_focus"
+      ]
+    }
+  ],
+  "analytics": {
+    "decisionStyleAxes": [
+      "customer_value_vs_manufacturing_feasibility",
+      "brand_fit_vs_sales_claim",
+      "launch_speed_vs_quality_risk"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 企業公式採用ページ",
+    "to_be_researched: 大手就活サイト"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "メーカー/ものづくりの業界固有性が高く、Cα の軸に適している。",
+    "mainConflict": "顧客価値、粗利、製造可能性、営業圧、品質保証、ブランド適合の同時成立。",
+    "sceneRationale": "アンケートから原価表、営業圧、品質保証、発売判定へ連続する5シーンに再構成した。",
+    "choiceRationale": "正解不正解ではなく、現実にあり得るトレードオフを3択化した。",
+    "scoringRationale": "新卒1-3年目で顕在化しやすい判断特性に寄せて次元を選定した。",
+    "knownLimitations": "架空商品を前提にしたCβ基準シナリオ。実在メーカーの商品開発手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "customer_value",
+      "label": "顧客価値",
+      "description": "顧客不満を解く商品価値"
+    },
+    {
+      "key": "brand_fit",
+      "label": "ブランド適合",
+      "description": "自社らしさと信頼を守る度合い"
+    },
+    {
+      "key": "manufacturing_feasibility",
+      "label": "製造可能性",
+      "description": "原価・金型・品質試験を通せる現実性"
+    },
+    {
+      "key": "gross_margin",
+      "label": "粗利",
+      "description": "売れても利益が残る設計"
+    },
+    {
+      "key": "sales_team_buy_in",
+      "label": "営業納得",
+      "description": "店頭で売れる理由を営業が持てる状態"
+    },
+    {
+      "key": "launch_speed",
+      "label": "発売速度",
+      "description": "発売時期を守る力"
+    }
+  ],
+  "branchSummary": {
+    "overview": "市場調査から仕様、原価、営業訴求、品質表示、発売判定までの選択が商品成立性に連鎖する。",
+    "trackedEffects": [
+      "customer_value",
+      "brand_fit",
+      "manufacturing_feasibility",
+      "gross_margin",
+      "sales_team_buy_in",
+      "launch_speed"
+    ]
+  },
+  "resultFeedback": {
+    "roleRealityReveal": "商品企画はアイデアを出すだけではなく、顧客価値を原価・製造・営業・品質保証・ブランドに通る仕様へ翻訳する仕事。",
+    "misconceptionCorrection": "「商品企画はアイデア職」という誤解から、「制約の中で価値を発売条件に変える職種」へ理解する。",
+    "careerReflectionPrompt": "顧客が欲しい価値、会社が守る粗利、製造できる仕様、言い切れる表示の間で判断することに興味が持てるか。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "quality_claim_literacy",
+      "margin_literacy"
+    ]
+  },
+  "roleCoreFriction": "顧客価値を高めたい企画意図と、原価・製造・営業・品質保証・ブランドに通る仕様へ落とす葛藤。",
+  "roleMisconception": "商品企画は、自由にアイデアを出して新商品を考える仕事だと思われやすい。",
+  "roleRealityReveal": "実際は、顧客価値を原価・製造・営業・品質保証・ブランドに通る仕様と発売条件へ翻訳する仕事。",
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "アンケートの温度差"
+    },
+    {
+      "time": "10:55",
+      "label": "原価表の赤字"
+    },
+    {
+      "time": "12:40",
+      "label": "営業の棚提案締切"
+    },
+    {
+      "time": "14:20",
+      "label": "品質保証の差し止め"
+    },
+    {
+      "time": "16:35",
+      "label": "発売判定の15分前"
+    }
+  ],
+  "sceneList": [
+    "product-09-10-survey-gap",
+    "product-10-55-cost-table",
+    "product-12-40-sales-pressure",
+    "product-14-20-qa-stop",
+    "product-16-35-launch-decision"
+  ],
+  "roleWorkKernel": {
+    "input": "顧客アンケート、競合比較、原価表、営業商談条件、品質保証コメント、発売判定シート",
+    "output": "原価・製造・品質保証・営業・ブランドに通る商品仕様と発売条件",
+    "transformation": "顧客の不満と市場機会を、発売可能な仕様・表示文言・初回数量・発売条件に変換する",
+    "constraints": [
+      "売価",
+      "粗利率",
+      "製造可能性",
+      "品質表示根拠",
+      "ブランド整合",
+      "発売時期"
+    ],
+    "workArtifacts": [
+      "顧客アンケート",
+      "原価表",
+      "営業メモ",
+      "品質保証コメント",
+      "発売判定シート"
+    ],
+    "metrics": [
+      "保存しやすい: 68%",
+      "開け閉めしやすい: 41%",
+      "「片手で開けたい」34件",
+      "競合A: 薄型2,780円",
+      "予定売価: 2,980円",
+      "目標粗利率: 35%",
+      "現行案粗利率: 31.2%",
+      "薄型金型費: 680万円",
+      "希望売価 2,980円",
+      "初回数量 30,000個希望",
+      "商談15:00",
+      "評価者5名",
+      "開閉耐久 2週間",
+      "密閉試験 10日",
+      "初回数量案: 15,000個 / 30,000個",
+      "粗利率: 15,000個 33.1%、30,000個 35.4%",
+      "回答期限17:00"
+    ],
+    "failureModes": [
+      "顧客価値が仕様に落ちない",
+      "粗利が目標未達になる",
+      "表示根拠不足で差し止められる",
+      "発売機会を逃す"
+    ],
+    "evaluationCriteria": [
+      "顧客価値を残しながら発売可能条件に落とせる",
+      "売れる表現と根拠ある表現を両立できる",
+      "初回数量・粗利・品質リスクを同時に判断できる"
+    ],
+    "nonGenericReason": "原価表、粗利率、表示根拠、試験日数、初回数量という商品企画固有の判断材料がなければ成立しないため。"
+  }
+}

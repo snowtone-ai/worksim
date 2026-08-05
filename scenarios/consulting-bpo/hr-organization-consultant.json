@@ -1,0 +1,2192 @@
+{
+  "id": "consulting-bpo/hr-organization-consultant",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "コンサル/BPO/業務支援",
+  "industrySlug": "consulting-bpo",
+  "role": "人事組織コンサル",
+  "roleSlug": "hr-organization-consultant",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "人と関わる",
+    "企画系",
+    "社会貢献"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for コンサル/BPO/業務支援 人事組織コンサル.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "consulting-bpo",
+      "hr-organization-consultant"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "組織診断サマリ"
+    },
+    {
+      "time": "10:35",
+      "label": "評価制度案"
+    },
+    {
+      "time": "12:20",
+      "label": "現場ヒアリング表"
+    },
+    {
+      "time": "14:05",
+      "label": "導入ロードマップ"
+    },
+    {
+      "time": "16:25",
+      "label": "効果測定設計"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "組織診断サマリ"
+    },
+    {
+      "time": "10:35",
+      "label": "評価制度案"
+    },
+    {
+      "time": "12:20",
+      "label": "現場ヒアリング表"
+    },
+    {
+      "time": "14:05",
+      "label": "導入ロードマップ"
+    },
+    {
+      "time": "16:25",
+      "label": "効果測定設計"
+    }
+  ],
+  "sceneList": [
+    "hr-organization-consultant-01",
+    "hr-organization-consultant-02",
+    "hr-organization-consultant-03",
+    "hr-organization-consultant-04",
+    "hr-organization-consultant-05"
+  ],
+  "meta": {
+    "title": "人事組織コンサル",
+    "industry": "コンサル/BPO/業務支援",
+    "role": "人事組織コンサル",
+    "duration_minutes": 18,
+    "description": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "hr-organization-consultant-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "組織診断サマリ",
+      "openingHook": "09:10。組織診断サマリに離職率 14%と低スコア部署 3部門が並んでいる。",
+      "context": "人事組織コンサルとして組織診断サマリを確認する。離職率 14%、低スコア部署 3部門が今日の判断材料になる。",
+      "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、組織診断サマリを読んで課題範囲を切る。",
+      "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+      "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は組織診断サマリである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "離職率 14%の背景と低スコア部署 3部門の確度が完全にはそろっていない。",
+      "decisionTradeoff": "離職率 14%を重く見るほど、低スコア部署 3部門や別の制約を犠牲にする。",
+      "consequenceHook": "hr-organization-consultant-離職率 14%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は評価制度案で副作用を確認する。",
+      "npcDialogue": "先輩:「組織診断サマリを読まずに進めると、人事組織コンサルの判断ではなくなる」",
+      "workMaterial": "組織診断サマリ\n- 離職率 14%\n- 低スコア部署 3部門\n- 判断対象: 組織診断サマリ",
+      "decisionPrompt": "hr-organization-consultant-離職率 14%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "離職率 14%を優先し、当日中に組織診断サマリの結論を出す",
+          "text": "離職率 14%を優先し、当日中に組織診断サマリの結論を出す。材料は離職率 14%、低スコア部署 3部門。",
+          "immediateFeedback": "離職率 14%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 2,
+            "hr_organization_consultant_risk": -1,
+            "hr_organization_consultant_speed": 2,
+            "hr_organization_consultant_value": -1,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは印象ではなく、離職率 14%と低スコア部署 3部門を読んで判断する。",
+          "studentFeedback": {
+            "good": "離職率 14%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は低スコア部署 3部門の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "離職率 14%と低スコア部署 3部門を突き合わせ、条件付きで進める",
+          "text": "離職率 14%と低スコア部署 3部門を突き合わせ、条件付きで進める。材料は離職率 14%、低スコア部署 3部門。",
+          "immediateFeedback": "組織診断サマリに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": 1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "離職率 14%と低スコア部署 3部門を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は組織診断サマリの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "低スコア部署 3部門の制約を重く見て、判断範囲を絞る",
+          "text": "低スコア部署 3部門の制約を重く見て、判断範囲を絞る。材料は離職率 14%、低スコア部署 3部門。",
+          "immediateFeedback": "低スコア部署 3部門に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": -1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": -1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、離職率 14%と低スコア部署 3部門の副作用まで読む。",
+          "studentFeedback": {
+            "good": "低スコア部署 3部門の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は離職率 14%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "hr-organization-consultant-離職率 14%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "hr-organization-consultant-離職率 14%判断",
+        "roleSpecificMaterials": [
+          "組織診断サマリ",
+          "判断対象: 組織診断サマリ"
+        ],
+        "roleSpecificMetrics": [
+          "離職率 14%",
+          "低スコア部署 3部門"
+        ],
+        "roleSpecificFailureRisk": "組織診断サマリを読まず、離職率 14%か低スコア部署 3部門のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "離職率 14%と低スコア部署 3部門を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "組織診断サマリ、離職率 14%、低スコア部署 3部門を判断の主役にしている。",
+        "kernelConnection": "組織診断サマリをhr-organization-consultant-離職率 14%判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "hr-organization-consultant-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "評価制度案",
+      "openingHook": "10:35。評価制度案に等級 5段階と評価項目 12個が並んでいる。",
+      "context": "人事組織コンサルとして評価制度案を確認する。等級 5段階、評価項目 12個が今日の判断材料になる。",
+      "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、評価制度案を読んで制度粒度を決める。",
+      "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+      "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は評価制度案である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "等級 5段階の背景と評価項目 12個の確度が完全にはそろっていない。",
+      "decisionTradeoff": "等級 5段階を重く見るほど、評価項目 12個や別の制約を犠牲にする。",
+      "consequenceHook": "hr-organization-consultant-等級 5段階判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は現場ヒアリング表で副作用を確認する。",
+      "npcDialogue": "先輩:「評価制度案を読まずに進めると、人事組織コンサルの判断ではなくなる」",
+      "workMaterial": "評価制度案\n- 等級 5段階\n- 評価項目 12個\n- 判断対象: 評価制度案",
+      "decisionPrompt": "hr-organization-consultant-等級 5段階判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "等級 5段階を優先し、当日中に評価制度案の結論を出す",
+          "text": "等級 5段階を優先し、当日中に評価制度案の結論を出す。材料は等級 5段階、評価項目 12個。",
+          "immediateFeedback": "等級 5段階に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 2,
+            "hr_organization_consultant_risk": -1,
+            "hr_organization_consultant_speed": 2,
+            "hr_organization_consultant_value": -1,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは印象ではなく、等級 5段階と評価項目 12個を読んで判断する。",
+          "studentFeedback": {
+            "good": "等級 5段階の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は評価項目 12個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "等級 5段階と評価項目 12個を突き合わせ、条件付きで進める",
+          "text": "等級 5段階と評価項目 12個を突き合わせ、条件付きで進める。材料は等級 5段階、評価項目 12個。",
+          "immediateFeedback": "評価制度案に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": 1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "等級 5段階と評価項目 12個を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は評価制度案の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "評価項目 12個の制約を重く見て、判断範囲を絞る",
+          "text": "評価項目 12個の制約を重く見て、判断範囲を絞る。材料は等級 5段階、評価項目 12個。",
+          "immediateFeedback": "評価項目 12個に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": -1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": -1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、等級 5段階と評価項目 12個の副作用まで読む。",
+          "studentFeedback": {
+            "good": "評価項目 12個の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は等級 5段階を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "hr-organization-consultant-等級 5段階判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "hr-organization-consultant-等級 5段階判断",
+        "roleSpecificMaterials": [
+          "評価制度案",
+          "判断対象: 評価制度案"
+        ],
+        "roleSpecificMetrics": [
+          "等級 5段階",
+          "評価項目 12個"
+        ],
+        "roleSpecificFailureRisk": "評価制度案を読まず、等級 5段階か評価項目 12個のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "等級 5段階と評価項目 12個を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "評価制度案、等級 5段階、評価項目 12個を判断の主役にしている。",
+        "kernelConnection": "評価制度案をhr-organization-consultant-等級 5段階判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "hr-organization-consultant-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "現場ヒアリング表",
+      "openingHook": "12:20。現場ヒアリング表に懸念 31件と賛成 46%が並んでいる。",
+      "context": "人事組織コンサルとして現場ヒアリング表を確認する。懸念 31件、賛成 46%が今日の判断材料になる。",
+      "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、現場ヒアリング表を読んで抵抗要因を分類する。",
+      "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+      "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は現場ヒアリング表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "懸念 31件の背景と賛成 46%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "懸念 31件を重く見るほど、賛成 46%や別の制約を犠牲にする。",
+      "consequenceHook": "hr-organization-consultant-懸念 31件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は導入ロードマップで副作用を確認する。",
+      "npcDialogue": "先輩:「現場ヒアリング表を読まずに進めると、人事組織コンサルの判断ではなくなる」",
+      "workMaterial": "現場ヒアリング表\n- 懸念 31件\n- 賛成 46%\n- 判断対象: 現場ヒアリング表",
+      "decisionPrompt": "hr-organization-consultant-懸念 31件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "懸念 31件を優先し、当日中に現場ヒアリング表の結論を出す",
+          "text": "懸念 31件を優先し、当日中に現場ヒアリング表の結論を出す。材料は懸念 31件、賛成 46%。",
+          "immediateFeedback": "懸念 31件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 2,
+            "hr_organization_consultant_risk": -1,
+            "hr_organization_consultant_speed": 2,
+            "hr_organization_consultant_value": -1,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは印象ではなく、懸念 31件と賛成 46%を読んで判断する。",
+          "studentFeedback": {
+            "good": "懸念 31件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は賛成 46%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "懸念 31件と賛成 46%を突き合わせ、条件付きで進める",
+          "text": "懸念 31件と賛成 46%を突き合わせ、条件付きで進める。材料は懸念 31件、賛成 46%。",
+          "immediateFeedback": "現場ヒアリング表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": 1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "懸念 31件と賛成 46%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は現場ヒアリング表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "賛成 46%の制約を重く見て、判断範囲を絞る",
+          "text": "賛成 46%の制約を重く見て、判断範囲を絞る。材料は懸念 31件、賛成 46%。",
+          "immediateFeedback": "賛成 46%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": -1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": -1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、懸念 31件と賛成 46%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "賛成 46%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は懸念 31件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "hr-organization-consultant-懸念 31件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "hr-organization-consultant-懸念 31件判断",
+        "roleSpecificMaterials": [
+          "現場ヒアリング表",
+          "判断対象: 現場ヒアリング表"
+        ],
+        "roleSpecificMetrics": [
+          "懸念 31件",
+          "賛成 46%"
+        ],
+        "roleSpecificFailureRisk": "現場ヒアリング表を読まず、懸念 31件か賛成 46%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "懸念 31件と賛成 46%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "現場ヒアリング表、懸念 31件、賛成 46%を判断の主役にしている。",
+        "kernelConnection": "現場ヒアリング表をhr-organization-consultant-懸念 31件判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "hr-organization-consultant-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "導入ロードマップ",
+      "openingHook": "14:05。導入ロードマップに試行 2部署と準備期間 8週間が並んでいる。",
+      "context": "人事組織コンサルとして導入ロードマップを確認する。試行 2部署、準備期間 8週間が今日の判断材料になる。",
+      "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、導入ロードマップを読んで展開順を決める。",
+      "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+      "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は導入ロードマップである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "試行 2部署の背景と準備期間 8週間の確度が完全にはそろっていない。",
+      "decisionTradeoff": "試行 2部署を重く見るほど、準備期間 8週間や別の制約を犠牲にする。",
+      "consequenceHook": "hr-organization-consultant-試行 2部署判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は効果測定設計で副作用を確認する。",
+      "npcDialogue": "先輩:「導入ロードマップを読まずに進めると、人事組織コンサルの判断ではなくなる」",
+      "workMaterial": "導入ロードマップ\n- 試行 2部署\n- 準備期間 8週間\n- 判断対象: 導入ロードマップ",
+      "decisionPrompt": "hr-organization-consultant-試行 2部署判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "試行 2部署を優先し、当日中に導入ロードマップの結論を出す",
+          "text": "試行 2部署を優先し、当日中に導入ロードマップの結論を出す。材料は試行 2部署、準備期間 8週間。",
+          "immediateFeedback": "試行 2部署に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 2,
+            "hr_organization_consultant_risk": -1,
+            "hr_organization_consultant_speed": 2,
+            "hr_organization_consultant_value": -1,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは印象ではなく、試行 2部署と準備期間 8週間を読んで判断する。",
+          "studentFeedback": {
+            "good": "試行 2部署の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は準備期間 8週間の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "試行 2部署と準備期間 8週間を突き合わせ、条件付きで進める",
+          "text": "試行 2部署と準備期間 8週間を突き合わせ、条件付きで進める。材料は試行 2部署、準備期間 8週間。",
+          "immediateFeedback": "導入ロードマップに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": 1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "試行 2部署と準備期間 8週間を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は導入ロードマップの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "準備期間 8週間の制約を重く見て、判断範囲を絞る",
+          "text": "準備期間 8週間の制約を重く見て、判断範囲を絞る。材料は試行 2部署、準備期間 8週間。",
+          "immediateFeedback": "準備期間 8週間に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": -1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": -1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、試行 2部署と準備期間 8週間の副作用まで読む。",
+          "studentFeedback": {
+            "good": "準備期間 8週間の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は試行 2部署を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "hr-organization-consultant-試行 2部署判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "hr-organization-consultant-試行 2部署判断",
+        "roleSpecificMaterials": [
+          "導入ロードマップ",
+          "判断対象: 導入ロードマップ"
+        ],
+        "roleSpecificMetrics": [
+          "試行 2部署",
+          "準備期間 8週間"
+        ],
+        "roleSpecificFailureRisk": "導入ロードマップを読まず、試行 2部署か準備期間 8週間のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "試行 2部署と準備期間 8週間を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "導入ロードマップ、試行 2部署、準備期間 8週間を判断の主役にしている。",
+        "kernelConnection": "導入ロードマップをhr-organization-consultant-試行 2部署判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "hr-organization-consultant-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "効果測定設計",
+      "openingHook": "16:25。効果測定設計に回答率 72%と改善目標 8ptが並んでいる。",
+      "context": "人事組織コンサルとして効果測定設計を確認する。回答率 72%、改善目標 8ptが今日の判断材料になる。",
+      "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、効果測定設計を読んで測定方法を残す。",
+      "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+      "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は効果測定設計である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "回答率 72%の背景と改善目標 8ptの確度が完全にはそろっていない。",
+      "decisionTradeoff": "回答率 72%を重く見るほど、改善目標 8ptや別の制約を犠牲にする。",
+      "consequenceHook": "hr-organization-consultant-回答率 72%判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「効果測定設計を読まずに進めると、人事組織コンサルの判断ではなくなる」",
+      "workMaterial": "効果測定設計\n- 回答率 72%\n- 改善目標 8pt\n- 判断対象: 効果測定設計",
+      "decisionPrompt": "hr-organization-consultant-回答率 72%判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "回答率 72%を優先し、当日中に効果測定設計の結論を出す",
+          "text": "回答率 72%を優先し、当日中に効果測定設計の結論を出す。材料は回答率 72%、改善目標 8pt。",
+          "immediateFeedback": "回答率 72%に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 2,
+            "hr_organization_consultant_risk": -1,
+            "hr_organization_consultant_speed": 2,
+            "hr_organization_consultant_value": -1,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは印象ではなく、回答率 72%と改善目標 8ptを読んで判断する。",
+          "studentFeedback": {
+            "good": "回答率 72%の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は改善目標 8ptの副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "回答率 72%と改善目標 8ptを突き合わせ、条件付きで進める",
+          "text": "回答率 72%と改善目標 8ptを突き合わせ、条件付きで進める。材料は回答率 72%、改善目標 8pt。",
+          "immediateFeedback": "効果測定設計に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": 1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": 1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": 1
+          },
+          "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "回答率 72%と改善目標 8ptを両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は効果測定設計の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "改善目標 8ptの制約を重く見て、判断範囲を絞る",
+          "text": "改善目標 8ptの制約を重く見て、判断範囲を絞る。材料は回答率 72%、改善目標 8pt。",
+          "immediateFeedback": "改善目標 8ptに基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "hr_organization_consultant_evidence": -1,
+            "hr_organization_consultant_risk": 2,
+            "hr_organization_consultant_speed": -1,
+            "hr_organization_consultant_value": 2,
+            "hr_organization_consultant_feasibility": -1
+          },
+          "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、回答率 72%と改善目標 8ptの副作用まで読む。",
+          "studentFeedback": {
+            "good": "改善目標 8ptの制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は回答率 72%を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "hr-organization-consultant-回答率 72%判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "人と関わる",
+          "企画系",
+          "社会貢献"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "hr-organization-consultant-回答率 72%判断",
+        "roleSpecificMaterials": [
+          "効果測定設計",
+          "判断対象: 効果測定設計"
+        ],
+        "roleSpecificMetrics": [
+          "回答率 72%",
+          "改善目標 8pt"
+        ],
+        "roleSpecificFailureRisk": "効果測定設計を読まず、回答率 72%か改善目標 8ptのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "回答率 72%と改善目標 8ptを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "効果測定設計、回答率 72%、改善目標 8ptを判断の主役にしている。",
+        "kernelConnection": "効果測定設計をhr-organization-consultant-回答率 72%判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。人事組織コンサルとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "hr-organization-consultant-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "組織診断サマリ",
+          "openingHook": "09:10。組織診断サマリに離職率 14%と低スコア部署 3部門が並んでいる。",
+          "context": "人事組織コンサルとして組織診断サマリを確認する。離職率 14%、低スコア部署 3部門が今日の判断材料になる。",
+          "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、組織診断サマリを読んで課題範囲を切る。",
+          "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+          "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は組織診断サマリである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "離職率 14%の背景と低スコア部署 3部門の確度が完全にはそろっていない。",
+          "decisionTradeoff": "離職率 14%を重く見るほど、低スコア部署 3部門や別の制約を犠牲にする。",
+          "consequenceHook": "hr-organization-consultant-離職率 14%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は評価制度案で副作用を確認する。",
+          "npcDialogue": "先輩:「組織診断サマリを読まずに進めると、人事組織コンサルの判断ではなくなる」",
+          "workMaterial": "組織診断サマリ\n- 離職率 14%\n- 低スコア部署 3部門\n- 判断対象: 組織診断サマリ",
+          "decisionPrompt": "hr-organization-consultant-離職率 14%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "離職率 14%を優先し、当日中に組織診断サマリの結論を出す",
+              "text": "離職率 14%を優先し、当日中に組織診断サマリの結論を出す。材料は離職率 14%、低スコア部署 3部門。",
+              "immediateFeedback": "離職率 14%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 2,
+                "hr_organization_consultant_risk": -1,
+                "hr_organization_consultant_speed": 2,
+                "hr_organization_consultant_value": -1,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは印象ではなく、離職率 14%と低スコア部署 3部門を読んで判断する。",
+              "studentFeedback": {
+                "good": "離職率 14%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は低スコア部署 3部門の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "離職率 14%と低スコア部署 3部門を突き合わせ、条件付きで進める",
+              "text": "離職率 14%と低スコア部署 3部門を突き合わせ、条件付きで進める。材料は離職率 14%、低スコア部署 3部門。",
+              "immediateFeedback": "組織診断サマリに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": 1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "離職率 14%と低スコア部署 3部門を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は組織診断サマリの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "低スコア部署 3部門の制約を重く見て、判断範囲を絞る",
+              "text": "低スコア部署 3部門の制約を重く見て、判断範囲を絞る。材料は離職率 14%、低スコア部署 3部門。",
+              "immediateFeedback": "低スコア部署 3部門に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": -1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": -1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、離職率 14%と低スコア部署 3部門の副作用まで読む。",
+              "studentFeedback": {
+                "good": "低スコア部署 3部門の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は離職率 14%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "hr-organization-consultant-離職率 14%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "hr-organization-consultant-離職率 14%判断",
+            "roleSpecificMaterials": [
+              "組織診断サマリ",
+              "判断対象: 組織診断サマリ"
+            ],
+            "roleSpecificMetrics": [
+              "離職率 14%",
+              "低スコア部署 3部門"
+            ],
+            "roleSpecificFailureRisk": "組織診断サマリを読まず、離職率 14%か低スコア部署 3部門のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "離職率 14%と低スコア部署 3部門を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "組織診断サマリ、離職率 14%、低スコア部署 3部門を判断の主役にしている。",
+            "kernelConnection": "組織診断サマリをhr-organization-consultant-離職率 14%判断へ接続する。"
+          }
+        },
+        {
+          "id": "hr-organization-consultant-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "評価制度案",
+          "openingHook": "10:35。評価制度案に等級 5段階と評価項目 12個が並んでいる。",
+          "context": "人事組織コンサルとして評価制度案を確認する。等級 5段階、評価項目 12個が今日の判断材料になる。",
+          "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、評価制度案を読んで制度粒度を決める。",
+          "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+          "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は評価制度案である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "等級 5段階の背景と評価項目 12個の確度が完全にはそろっていない。",
+          "decisionTradeoff": "等級 5段階を重く見るほど、評価項目 12個や別の制約を犠牲にする。",
+          "consequenceHook": "hr-organization-consultant-等級 5段階判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は現場ヒアリング表で副作用を確認する。",
+          "npcDialogue": "先輩:「評価制度案を読まずに進めると、人事組織コンサルの判断ではなくなる」",
+          "workMaterial": "評価制度案\n- 等級 5段階\n- 評価項目 12個\n- 判断対象: 評価制度案",
+          "decisionPrompt": "hr-organization-consultant-等級 5段階判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "等級 5段階を優先し、当日中に評価制度案の結論を出す",
+              "text": "等級 5段階を優先し、当日中に評価制度案の結論を出す。材料は等級 5段階、評価項目 12個。",
+              "immediateFeedback": "等級 5段階に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 2,
+                "hr_organization_consultant_risk": -1,
+                "hr_organization_consultant_speed": 2,
+                "hr_organization_consultant_value": -1,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは印象ではなく、等級 5段階と評価項目 12個を読んで判断する。",
+              "studentFeedback": {
+                "good": "等級 5段階の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は評価項目 12個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "等級 5段階と評価項目 12個を突き合わせ、条件付きで進める",
+              "text": "等級 5段階と評価項目 12個を突き合わせ、条件付きで進める。材料は等級 5段階、評価項目 12個。",
+              "immediateFeedback": "評価制度案に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": 1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "等級 5段階と評価項目 12個を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は評価制度案の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "評価項目 12個の制約を重く見て、判断範囲を絞る",
+              "text": "評価項目 12個の制約を重く見て、判断範囲を絞る。材料は等級 5段階、評価項目 12個。",
+              "immediateFeedback": "評価項目 12個に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": -1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": -1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、等級 5段階と評価項目 12個の副作用まで読む。",
+              "studentFeedback": {
+                "good": "評価項目 12個の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は等級 5段階を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "hr-organization-consultant-等級 5段階判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "hr-organization-consultant-等級 5段階判断",
+            "roleSpecificMaterials": [
+              "評価制度案",
+              "判断対象: 評価制度案"
+            ],
+            "roleSpecificMetrics": [
+              "等級 5段階",
+              "評価項目 12個"
+            ],
+            "roleSpecificFailureRisk": "評価制度案を読まず、等級 5段階か評価項目 12個のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "等級 5段階と評価項目 12個を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "評価制度案、等級 5段階、評価項目 12個を判断の主役にしている。",
+            "kernelConnection": "評価制度案をhr-organization-consultant-等級 5段階判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。人事組織コンサルとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "hr-organization-consultant-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "現場ヒアリング表",
+          "openingHook": "12:20。現場ヒアリング表に懸念 31件と賛成 46%が並んでいる。",
+          "context": "人事組織コンサルとして現場ヒアリング表を確認する。懸念 31件、賛成 46%が今日の判断材料になる。",
+          "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、現場ヒアリング表を読んで抵抗要因を分類する。",
+          "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+          "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は現場ヒアリング表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "懸念 31件の背景と賛成 46%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "懸念 31件を重く見るほど、賛成 46%や別の制約を犠牲にする。",
+          "consequenceHook": "hr-organization-consultant-懸念 31件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は導入ロードマップで副作用を確認する。",
+          "npcDialogue": "先輩:「現場ヒアリング表を読まずに進めると、人事組織コンサルの判断ではなくなる」",
+          "workMaterial": "現場ヒアリング表\n- 懸念 31件\n- 賛成 46%\n- 判断対象: 現場ヒアリング表",
+          "decisionPrompt": "hr-organization-consultant-懸念 31件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "懸念 31件を優先し、当日中に現場ヒアリング表の結論を出す",
+              "text": "懸念 31件を優先し、当日中に現場ヒアリング表の結論を出す。材料は懸念 31件、賛成 46%。",
+              "immediateFeedback": "懸念 31件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 2,
+                "hr_organization_consultant_risk": -1,
+                "hr_organization_consultant_speed": 2,
+                "hr_organization_consultant_value": -1,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは印象ではなく、懸念 31件と賛成 46%を読んで判断する。",
+              "studentFeedback": {
+                "good": "懸念 31件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は賛成 46%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "懸念 31件と賛成 46%を突き合わせ、条件付きで進める",
+              "text": "懸念 31件と賛成 46%を突き合わせ、条件付きで進める。材料は懸念 31件、賛成 46%。",
+              "immediateFeedback": "現場ヒアリング表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": 1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "懸念 31件と賛成 46%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は現場ヒアリング表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "賛成 46%の制約を重く見て、判断範囲を絞る",
+              "text": "賛成 46%の制約を重く見て、判断範囲を絞る。材料は懸念 31件、賛成 46%。",
+              "immediateFeedback": "賛成 46%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": -1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": -1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、懸念 31件と賛成 46%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "賛成 46%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は懸念 31件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "hr-organization-consultant-懸念 31件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "hr-organization-consultant-懸念 31件判断",
+            "roleSpecificMaterials": [
+              "現場ヒアリング表",
+              "判断対象: 現場ヒアリング表"
+            ],
+            "roleSpecificMetrics": [
+              "懸念 31件",
+              "賛成 46%"
+            ],
+            "roleSpecificFailureRisk": "現場ヒアリング表を読まず、懸念 31件か賛成 46%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "懸念 31件と賛成 46%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "現場ヒアリング表、懸念 31件、賛成 46%を判断の主役にしている。",
+            "kernelConnection": "現場ヒアリング表をhr-organization-consultant-懸念 31件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。人事組織コンサルとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "hr-organization-consultant-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "導入ロードマップ",
+          "openingHook": "14:05。導入ロードマップに試行 2部署と準備期間 8週間が並んでいる。",
+          "context": "人事組織コンサルとして導入ロードマップを確認する。試行 2部署、準備期間 8週間が今日の判断材料になる。",
+          "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、導入ロードマップを読んで展開順を決める。",
+          "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+          "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は導入ロードマップである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "試行 2部署の背景と準備期間 8週間の確度が完全にはそろっていない。",
+          "decisionTradeoff": "試行 2部署を重く見るほど、準備期間 8週間や別の制約を犠牲にする。",
+          "consequenceHook": "hr-organization-consultant-試行 2部署判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は効果測定設計で副作用を確認する。",
+          "npcDialogue": "先輩:「導入ロードマップを読まずに進めると、人事組織コンサルの判断ではなくなる」",
+          "workMaterial": "導入ロードマップ\n- 試行 2部署\n- 準備期間 8週間\n- 判断対象: 導入ロードマップ",
+          "decisionPrompt": "hr-organization-consultant-試行 2部署判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "試行 2部署を優先し、当日中に導入ロードマップの結論を出す",
+              "text": "試行 2部署を優先し、当日中に導入ロードマップの結論を出す。材料は試行 2部署、準備期間 8週間。",
+              "immediateFeedback": "試行 2部署に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 2,
+                "hr_organization_consultant_risk": -1,
+                "hr_organization_consultant_speed": 2,
+                "hr_organization_consultant_value": -1,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは印象ではなく、試行 2部署と準備期間 8週間を読んで判断する。",
+              "studentFeedback": {
+                "good": "試行 2部署の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は準備期間 8週間の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "試行 2部署と準備期間 8週間を突き合わせ、条件付きで進める",
+              "text": "試行 2部署と準備期間 8週間を突き合わせ、条件付きで進める。材料は試行 2部署、準備期間 8週間。",
+              "immediateFeedback": "導入ロードマップに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": 1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "試行 2部署と準備期間 8週間を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は導入ロードマップの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "準備期間 8週間の制約を重く見て、判断範囲を絞る",
+              "text": "準備期間 8週間の制約を重く見て、判断範囲を絞る。材料は試行 2部署、準備期間 8週間。",
+              "immediateFeedback": "準備期間 8週間に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": -1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": -1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、試行 2部署と準備期間 8週間の副作用まで読む。",
+              "studentFeedback": {
+                "good": "準備期間 8週間の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は試行 2部署を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "hr-organization-consultant-試行 2部署判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "hr-organization-consultant-試行 2部署判断",
+            "roleSpecificMaterials": [
+              "導入ロードマップ",
+              "判断対象: 導入ロードマップ"
+            ],
+            "roleSpecificMetrics": [
+              "試行 2部署",
+              "準備期間 8週間"
+            ],
+            "roleSpecificFailureRisk": "導入ロードマップを読まず、試行 2部署か準備期間 8週間のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "試行 2部署と準備期間 8週間を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "導入ロードマップ、試行 2部署、準備期間 8週間を判断の主役にしている。",
+            "kernelConnection": "導入ロードマップをhr-organization-consultant-試行 2部署判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。人事組織コンサルとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "hr-organization-consultant-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "効果測定設計",
+          "openingHook": "16:25。効果測定設計に回答率 72%と改善目標 8ptが並んでいる。",
+          "context": "人事組織コンサルとして効果測定設計を確認する。回答率 72%、改善目標 8ptが今日の判断材料になる。",
+          "content": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換するため、効果測定設計を読んで測定方法を残す。",
+          "roleSpecificContext": "人事組織コンサルは組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する仕事。",
+          "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は効果測定設計である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "回答率 72%の背景と改善目標 8ptの確度が完全にはそろっていない。",
+          "decisionTradeoff": "回答率 72%を重く見るほど、改善目標 8ptや別の制約を犠牲にする。",
+          "consequenceHook": "hr-organization-consultant-回答率 72%判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「効果測定設計を読まずに進めると、人事組織コンサルの判断ではなくなる」",
+          "workMaterial": "効果測定設計\n- 回答率 72%\n- 改善目標 8pt\n- 判断対象: 効果測定設計",
+          "decisionPrompt": "hr-organization-consultant-回答率 72%判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "回答率 72%を優先し、当日中に効果測定設計の結論を出す",
+              "text": "回答率 72%を優先し、当日中に効果測定設計の結論を出す。材料は回答率 72%、改善目標 8pt。",
+              "immediateFeedback": "回答率 72%に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 2,
+                "hr_organization_consultant_risk": -1,
+                "hr_organization_consultant_speed": 2,
+                "hr_organization_consultant_value": -1,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは印象ではなく、回答率 72%と改善目標 8ptを読んで判断する。",
+              "studentFeedback": {
+                "good": "回答率 72%の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は改善目標 8ptの副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "回答率 72%と改善目標 8ptを突き合わせ、条件付きで進める",
+              "text": "回答率 72%と改善目標 8ptを突き合わせ、条件付きで進める。材料は回答率 72%、改善目標 8pt。",
+              "immediateFeedback": "効果測定設計に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": 1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": 1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": 1
+              },
+              "misconceptionEffect": "人事組織コンサルは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "回答率 72%と改善目標 8ptを両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は効果測定設計の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "改善目標 8ptの制約を重く見て、判断範囲を絞る",
+              "text": "改善目標 8ptの制約を重く見て、判断範囲を絞る。材料は回答率 72%、改善目標 8pt。",
+              "immediateFeedback": "改善目標 8ptに基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "人事組織コンサルで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "hr_organization_consultant_evidence": -1,
+                "hr_organization_consultant_risk": 2,
+                "hr_organization_consultant_speed": -1,
+                "hr_organization_consultant_value": 2,
+                "hr_organization_consultant_feasibility": -1
+              },
+              "misconceptionEffect": "人事組織コンサルは慎重さだけでなく、回答率 72%と改善目標 8ptの副作用まで読む。",
+              "studentFeedback": {
+                "good": "改善目標 8ptの制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は回答率 72%を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "hr-organization-consultant-回答率 72%判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "人と関わる",
+              "企画系",
+              "社会貢献"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "hr-organization-consultant-回答率 72%判断",
+            "roleSpecificMaterials": [
+              "効果測定設計",
+              "判断対象: 効果測定設計"
+            ],
+            "roleSpecificMetrics": [
+              "回答率 72%",
+              "改善目標 8pt"
+            ],
+            "roleSpecificFailureRisk": "効果測定設計を読まず、回答率 72%か改善目標 8ptのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "回答率 72%と改善目標 8ptを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "効果測定設計、回答率 72%、改善目標 8ptを判断の主役にしている。",
+            "kernelConnection": "効果測定設計をhr-organization-consultant-回答率 72%判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "hr-organization-consultant-material-reader",
+      "title": "人事組織コンサルの材料読解型",
+      "strengths": [
+        "人事組織コンサルの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "hr_organization_consultant_evidence",
+        "hr_organization_consultant_risk"
+      ],
+      "valuedMeters": [
+        "hr_organization_consultant_evidence"
+      ],
+      "sacrificedMeters": [
+        "hr_organization_consultant_speed"
+      ],
+      "roleRealityReveal": "人事組織コンサルは、課題データと制度制約を読み、組織が動く導入条件へ落とす仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "人事組織コンサルの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "hr-organization-consultant-constraint-designer",
+      "title": "人事組織コンサルの制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "hr_organization_consultant_risk",
+        "hr_organization_consultant_speed"
+      ],
+      "valuedMeters": [
+        "hr_organization_consultant_risk"
+      ],
+      "sacrificedMeters": [
+        "hr_organization_consultant_value"
+      ],
+      "roleRealityReveal": "人事組織コンサルは、課題データと制度制約を読み、組織が動く導入条件へ落とす仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "人事組織コンサルとして制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "hr-organization-consultant-execution-planner",
+      "title": "人事組織コンサルの実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "hr_organization_consultant_speed",
+        "hr_organization_consultant_value"
+      ],
+      "valuedMeters": [
+        "hr_organization_consultant_speed"
+      ],
+      "sacrificedMeters": [
+        "hr_organization_consultant_feasibility"
+      ],
+      "roleRealityReveal": "人事組織コンサルは、課題データと制度制約を読み、組織が動く導入条件へ落とす仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "人事組織コンサルとして実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "人事組織コンサルは、課題データと制度制約を読み、組織が動く導入条件へ落とす仕事。",
+    "misconceptionCorrection": "人事組織コンサルは印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "人事組織コンサルとして、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "hr-organization-consultant_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "hr_organization_consultant_diagnosis_vs_hr_organization_consultant_fairness",
+      "hr_organization_consultant_adoption_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "hr_organization_consultant_diagnosis",
+      "label": "diagnosis",
+      "description": "人事組織コンサルのdiagnosis判断"
+    },
+    {
+      "key": "hr_organization_consultant_fairness",
+      "label": "fairness",
+      "description": "人事組織コンサルのfairness判断"
+    },
+    {
+      "key": "hr_organization_consultant_adoption",
+      "label": "adoption",
+      "description": "人事組織コンサルのadoption判断"
+    },
+    {
+      "key": "hr_organization_consultant_design",
+      "label": "design",
+      "description": "人事組織コンサルのdesign判断"
+    },
+    {
+      "key": "hr_organization_consultant_measurement",
+      "label": "measurement",
+      "description": "人事組織コンサルのmeasurement判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "人事組織コンサルの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "hr_organization_consultant_diagnosis",
+      "hr_organization_consultant_fairness",
+      "hr_organization_consultant_adoption",
+      "hr_organization_consultant_design",
+      "hr_organization_consultant_measurement"
+    ]
+  },
+  "roleCoreFriction": "理想の制度ほど説明しやすいが、現場運用と評価の納得感が崩れる葛藤。",
+  "roleMisconception": "人事組織コンサルは面談や研修提案が中心で、制度条件と運用副作用の設計は補助的だと思われやすい。",
+  "roleRealityReveal": "人事組織コンサルは、課題データと制度制約を読み、組織が動く導入条件へ落とす仕事。",
+  "roleWorkKernel": {
+    "input": "離職率 14%、低スコア部署 3部門、等級 5段階、評価項目 12個、懸念 31件、賛成 46%、試行 2部署、準備期間 8週間、回答率 72%、改善目標 8pt",
+    "output": "人事組織コンサルとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "組織課題、制度案、現場反応を人事施策の設計条件と導入計画へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "組織診断サマリ",
+      "評価制度案",
+      "現場ヒアリング表",
+      "導入ロードマップ",
+      "効果測定設計"
+    ],
+    "metrics": [
+      "離職率 14%",
+      "低スコア部署 3部門",
+      "等級 5段階",
+      "評価項目 12個",
+      "懸念 31件",
+      "賛成 46%",
+      "試行 2部署",
+      "準備期間 8週間",
+      "回答率 72%",
+      "改善目標 8pt"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "組織診断サマリ、評価制度案、現場ヒアリング表と離職率 14%、等級 5段階を読まなければ成立しないため。"
+  }
+}

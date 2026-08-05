@@ -263,3 +263,243 @@ Claude Code はこれを参照し、過去の判断と矛盾する実装をし�
 - https://developers.openai.com/api/docs/models
 - https://developers.openai.com/api/docs/models/gpt-5.4
 - https://developers.openai.com/api/docs/models/gpt-5.4-mini
+
+---
+
+## D-018：Cタイプ / Cα / Cβ / Bタイプの定義
+
+**日時**：2026-05-04
+
+**判断**：
+- Cタイプは学生向け・大学向けの WorkSim 本体
+- Cα は 10業界 x 5ロールの broad playable alpha
+- Cβ は大学営業・PoC 向けの改良版
+- Bタイプは企業向けの独自シナリオ・企業分析版
+
+**理由**：
+- 学生向け価値検証と、大学販売・企業販売の要求を同一スコープで混ぜると実装判断がぶれるため
+- career readiness を高める学生体験と、進路支援側の集計価値を先に整えるため
+
+**参照した実在例**：
+- https://www.naceweb.org/career-readiness/competencies/career-readiness-defined/
+- https://www.oecd.org/en/about/projects/career-readiness.html
+- https://www.oecd.org/en/publications/indicators-of-teenage-career-readiness_6a80e0cc-en.html
+
+---
+
+## D-019：Cα は 10業界 x 5ロールで構成する
+
+**判断**：Cα は業界固有性の高い 50 ロールを catalog と normal mode playable の主軸にする。
+
+**理由**：
+- 学生の探索価値を高めるには、汎用職種より業界ごとの差が見えるロール設計が有効なため
+- 大学向けの「興味拡張」や「誤解修正」を測るには、比較対象が十分に広い必要があるため
+
+---
+
+## D-020：横断ロールは後続の business-horizontal layer として扱う
+
+**判断**：汎用 HR、経理、法務、総務、汎用営業は Cα の主軸にせず、Cβ/Bタイプ 以降の横断レイヤーで扱う。
+
+**理由**：
+- Cα の段階では「業界をまたいでも同じに見える職種」を増やすより、業界差のある体験を先に揃える方が有効なため
+
+---
+
+## D-021：Cα の task-pre は 1 枚背景 + テキスト overlay 方式
+
+**判断**：task-pre screen は高品質な背景画像 1 枚と overlay text を基本にする。シナリオごとの手置きオブジェクト配置は前提にしない。
+
+**理由**：
+- 50 ロール展開では、背景メタデータ駆動の方が拡張コストと UI 破綻リスクが低いため
+- 将来の画像生成/3D への移行時も scene metadata を流用しやすいため
+
+---
+
+## D-022：Cα analytics は simulation-native behavioral insight を主軸にする
+
+**判断**：PV や人気業界ランキングのような job-board 的指標ではなく、Career Reality Gap、Decision Style Vector、Friction Heatmap などの simulation-native 指標を主軸にする。
+
+**理由**：
+- WorkSim 固有価値は「実際の仕事判断を擬似体験した後に何が変わったか」を測れる点にあるため
+- career readiness 支援では、単純な閲覧数より行動変化と理解変化が重要なため
+
+**参照した実在例**：
+- https://www.naceweb.org/career-readiness/competencies/career-readiness-defined/
+- https://www.oecd.org/en/about/projects/career-readiness.html
+- https://www.oecd.org/en/publications/indicators-of-teenage-career-readiness_6a80e0cc-en.html
+
+---
+
+## D-023：Cα では 3D/metaverse UI を実装しないが schema v2 で拡張余地を保持する
+
+**判断**：Cα の UI は 2D のままとし、`future3d` metadata のみ保持する。
+
+**理由**：
+- 50 ロール展開と品質ゲート維持を優先すると、今は metadata 先行の方が妥当なため
+- 将来の空間 UI を見据えて `environmentType`、`spatialAnchors`、`cameraHint` を先に持たせる方が移行しやすいため
+
+---
+
+## D-024：企業には個票の学生選択データを標準提供しない
+
+**判断**：企業向けには individual student scores / choices を selection screening 用に標準提供しない。大学向け・企業向け双方で anonymized / aggregated を標準にする。
+
+**理由**：
+- 学生が安心して exploratory play できることが Cタイプ の前提だから
+- 教育データの公開は aggregate でも再識別リスクを避ける設計が必要だから
+
+**参照した実在例**：
+- https://studentprivacy.ed.gov/privacy-and-data-sharing
+- https://studentprivacy.ed.gov/content/disclosure
+- https://www.oecd.org/en/topics/privacy-and-data-protection.html
+
+---
+
+## D-025：Cα の選択肢は quiz ではなく realistic trade-off とする
+
+**判断**：選択肢は correct / wrong の正誤問題にしない。現実の仕事で起こる trade-off を 3 択で表現する。
+
+**理由**：
+- 仕事理解と適性の観察対象は「知識正答率」ではなく、何を優先して意思決定するかだから
+- career readiness の観点でも、曖昧さ・調整・責任分担の扱い方が重要だから
+
+---
+
+## D-026：Cβ Scenario OS は Role Work Kernel と exactly 5 tasks で固定する
+
+**日時**：2026-05-05
+
+**判断**：
+- Cβ標準シナリオは `exactly 5 scenes / 5 tasks` とする
+- Cβ正規キーは `workMaterial` とし、旧artifactキーはCβ canonical dataでは使わない
+- 各Cβシナリオは `roleWorkKernel` を持つ
+- 各Cβ sceneは `roleSpecificity` を持ち、職種固有の資料・数字・失敗リスク・評価基準を明示する
+
+**理由**：
+- 5 tasks固定により、大学PoCで説明しやすく、職種横展開時の品質管理が単純になるため
+- ナラティブ性を強めるほど、全職種が顧客・上司・他部署・締切の汎用調整ゲームへ収束しやすいため
+- ステークホルダーを消すのではなく、職種固有の仕事材料を使った判断を主役に戻すため
+
+**参照した実在例**：
+- https://www.naceweb.org/career-readiness/competencies/career-readiness-defined/
+- https://www.oecd.org/en/about/projects/career-readiness.html
+- https://www.oecd.org/en/publications/indicators-of-teenage-career-readiness_6a80e0cc-en.html
+
+**将来の変更可能性**：deep modeや企業別Bタイプではタスク数を拡張してよいが、Cβ標準としては別modeに分ける。
+
+---
+
+## D-027：Cβ roleWorkKernel は構造化objectをcanonical standardにする
+
+**日時**：2026-05-05
+
+**判断**：
+- Cβ canonical scenarioの `roleWorkKernel` は文字列ではなく構造化objectにする
+- 必須fieldは `input`, `output`, `transformation`, `constraints`, `workArtifacts`, `metrics`, `failureModes`, `evaluationCriteria`, `nonGenericReason`
+- loaderは既存互換のため旧string formを受ける
+- 各sceneの `roleSpecificity` には `kernelConnection` を持たせる
+- 50シナリオ展開はCα安定化後にbatch単位で進める
+
+**理由**：
+- 文字列kernelだけでは50本展開時に汎用ステークホルダー調整へ流れる危険を検出しにくい
+- 構造化することで、仕事材料、数字、成果物、失敗リスク、評価基準をscriptとhuman reviewの両方で確認できる
+- 後方互換を残すことで既存Cα/Cタイプデータを壊さずにCβ品質だけを引き上げられる
+
+**将来の変更可能性**：50本展開後にwarning実績を見て、cross-scenario drift checkの一部をhard failへ昇格する。
+
+---
+
+## D-028：Cβ Batch 1は7本canonical default gateで検証する
+
+**日時**：2026-05-05
+
+**判断**：
+- Cβ Batch 1完了後のcanonical setはBatch 0の2本とBatch 1の5本、合計7本とする
+- `scripts/c-beta/check-cbeta-scenario-quality.mjs` の既定対象はこの7本にする
+- 10本未満のcross-scenario drift readinessは引き続きwarningに留める
+
+**理由**：
+- coverage scriptだけでは、追加canonical scenarioの品質ゲート対象漏れを検出しにくいため
+- 7本は基本的なrole-specificity regressionsを検出するには十分だが、職種横断のdecision primitive driftをhard failにするにはまだ小標本のため
+- Batch 2以降も、canonical setが増えるたびに既定品質ゲート対象を広げる運用にするため
+
+**将来の変更可能性**：canonical scenarioが10本以上になった時点で、cross-scenario drift warningの閾値や表示を再評価する。
+
+---
+
+## D-029：Cβ Batch 2はdecision-primitive diversityを優先する
+
+**日時**：2026-05-05
+
+**判断**：
+- Batch 2は高需要順や業界均等だけではなく、decision primitive diversityを主軸に10 roleを選ぶ
+- Batch 2完了後の品質ゲート既定対象は17 canonical scenariosに広げる
+- 17本時点ではcross-scenario drift warningが0になったため、同じartifact-led構造をBatch 3にも引き継ぐ
+
+**理由**：
+- Batch 1で確認したanti-generic guardrailを、技術運用、BI、与信、品質、調達、貿易、SCM、業務改善、MD、旅行企画へ広げるため
+- 学生に見えやすい職種だけを増やすと、営業・相談・調整の類似体験に寄りやすいため
+- 17本のcanonical setがあれば、decision primitive repetitionやmaterial/metric presence warningの有効性をより現実的に確認できるため
+
+**将来の変更可能性**：Batch 3以降は、artifact-led構造を維持したまま結果フィードバック文体の多様性を高める。
+
+---
+
+## D-030：Cβ Batch 3以降は1 prompt fileごとにcompact checkpointを置く
+
+**日時**：2026-05-05
+
+**判断**：
+- `05-CBETA-BATCH3-PRODUCTION.md` 以降は、1 prompt file完了ごとにユーザーへ `/compact` を依頼して停止する
+- Batch 3はmissing decision primitive familiesを主軸に15 roleをchunk 5本単位で生成・検証する
+- Batch 3完了後の品質ゲート既定対象は32 canonical scenariosに広げる
+
+**理由**：
+- 05以降は1 fileあたりの生成量が大きく、context driftを避けるため
+- chunk validationにより、15本生成後にまとめて失敗するリスクを抑えるため
+- 32本時点でCβはmajority coverageに入り、次のBatch 4へ進む前のhandoff精度が重要になるため
+
+**将来の変更可能性**：06、07も同じく各prompt完了後にmanual `/compact` を挟む。
+
+---
+
+## D-031：Cβ Batch 4はdecision primitive gapsで50/50 coverageを完了する
+
+**日時**：2026-05-05
+
+**判断**：
+- Batch 4は残18 roleを業界順ではなくdecision primitive gapsで3chunkに分ける
+- 全50 roleをCβ canonical scenarioとしてimmersive-only / exactly 5 scenes / structured `roleWorkKernel`へ更新する
+- Batch 4完了後の品質ゲート既定対象は50 canonical scenariosに広げる
+
+**理由**：
+- 残18 roleはHR、公共、小売、観光交通に偏っており、業界順だけで作ると相談・調整・接客の汎用driftが起きやすいため
+- 市場開拓、PR、戦略リサーチ、組織開発、公共制約、店舗/EC/物流、宿泊/施設/交通運用の仕事材料を散らすことで、職種固有のdecision primitiveを守れるため
+- 50/50 coverage後はdefault gateで全canonical scenarioを検査する方が、今後の回帰検知に強いため
+
+**将来の変更可能性**：Cγでは結果フィードバック文体や弱い既存シナリオの prose revision を進めてよいが、Cβ標準の5 scene / immersive-only / structured kernelは維持する。
+
+---
+
+## D-032：Cβは50本canonical scenario完成時点でproductionを凍結する
+
+**日時**：2026-05-05
+
+**判断**：
+- Cβ scenario productionは50/50 coverageと最終監査GREENをもって完了とする
+- Cβ completeの定義は、student/university PoC向けのCタイプ体験としての完成であり、Bタイプ企業別機能やDB分析基盤は含めない
+- 今後の作業は新規Cβ scenario量産ではなく、手動ブラウザ確認、学生フィードバック収集、弱い許容シナリオのprose refinement、大学PoC測定設計へ移す
+
+**理由**：
+- 50本すべてがimmersive-only / exactly 5 scenes / structured `roleWorkKernel` / scene-level `workMaterial` / `roleSpecificity.kernelConnection`を満たしたため
+- default quality gateが50本全体を検査し、cross-scenario generic drift warningも0になったため
+- これ以上の同一スコープ内生成は品質向上より文体揺れや不要な差分のリスクが大きいため
+
+**将来の変更可能性**：Cγではresult feedback prose、弱い許容シナリオ、manual UX findingsを改善してよい。ただしCβ標準の構造は維持する。
+## D-017: pm-zero v9.4 Lean Task Ledger alignment
+
+- Date: 2026-05-16
+- Decision: Use AGENTS.md, tasks.md, docs/state.md, docs/repo-map.md, docs/decisions.md, and docs/issues.md as the active project memory layer.
+- Rationale: pm-zero v9.4 keeps reusable behavior and model defaults in global config. WorkSim keeps its Codex error hook because src/hooks/log-error.test.ts verifies its secret redaction behavior.
+- Consequence: Project-local Claude hooks/rules/skills and empty MCP config are removed. .codex/config.toml remains minimal and only enables hooks that are locally tested.

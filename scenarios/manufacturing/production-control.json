@@ -1,0 +1,2190 @@
+{
+  "id": "manufacturing/production-control",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "メーカー/ものづくり",
+  "industrySlug": "manufacturing",
+  "role": "生産管理",
+  "roleSlug": "production-control",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for メーカー/ものづくり 生産管理.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "manufacturing",
+      "production-control"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "受注表"
+    },
+    {
+      "time": "10:40",
+      "label": "在庫表"
+    },
+    {
+      "time": "12:20",
+      "label": "設備稼働表"
+    },
+    {
+      "time": "14:15",
+      "label": "外注回答"
+    },
+    {
+      "time": "16:35",
+      "label": "生産計画"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "受注表"
+    },
+    {
+      "time": "10:40",
+      "label": "在庫表"
+    },
+    {
+      "time": "12:20",
+      "label": "設備稼働表"
+    },
+    {
+      "time": "14:15",
+      "label": "外注回答"
+    },
+    {
+      "time": "16:35",
+      "label": "生産計画"
+    }
+  ],
+  "sceneList": [
+    "production-control-01",
+    "production-control-02",
+    "production-control-03",
+    "production-control-04",
+    "production-control-05"
+  ],
+  "meta": {
+    "title": "生産管理",
+    "industry": "メーカー/ものづくり",
+    "role": "生産管理",
+    "duration_minutes": 18,
+    "description": "受注・在庫・設備能力を生産計画へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "production-control-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "受注表",
+      "openingHook": "09:10。受注表に受注 12,000個と納期 10日後が並んでいる。",
+      "context": "生産管理として受注表を確認する。受注 12,000個、納期 10日後が今日の判断材料になる。",
+      "content": "受注・在庫・設備能力を生産計画へ変換するため、受注表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+      "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は受注表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "受注 12,000個の背景と納期 10日後の確度が完全にはそろっていない。",
+      "decisionTradeoff": "受注 12,000個を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "production-control-受注表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は完成品 3,400個で副作用を確認する。",
+      "npcDialogue": "先輩:「受注表を読まずに進めると、生産管理の判断ではなくなる」",
+      "workMaterial": "受注表\n- 受注 12,000個\n- 納期 10日後\n- 判断対象: 受注表",
+      "decisionPrompt": "production-control-受注表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "受注 12,000個を重く見て、当日中に前へ進める",
+          "text": "受注 12,000個を重く見て、当日中に前へ進める。材料は受注表、受注 12,000個、納期 10日後。",
+          "immediateFeedback": "受注表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 2,
+            "production_control_risk": -1,
+            "production_control_speed": 2,
+            "production_control_value": -1,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、受注表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "受注表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は受注 12,000個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "受注表の受注 12,000個と納期 10日後を突き合わせ、条件付きで進める",
+          "text": "受注表の受注 12,000個と納期 10日後を突き合わせ、条件付きで進める。材料は受注表、受注 12,000個、納期 10日後。",
+          "immediateFeedback": "受注表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 1,
+            "production_control_risk": 2,
+            "production_control_speed": 1,
+            "production_control_value": 2,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、受注表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "受注表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は受注 12,000個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "納期 10日後の不確実性を理由に、判断範囲を絞る",
+          "text": "納期 10日後の不確実性を理由に、判断範囲を絞る。材料は受注表、受注 12,000個、納期 10日後。",
+          "immediateFeedback": "受注表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": -1,
+            "production_control_risk": 2,
+            "production_control_speed": -1,
+            "production_control_value": 2,
+            "production_control_feasibility": -1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、受注表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "受注表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は受注 12,000個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "production-control-受注表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "production-control-受注表判断",
+        "roleSpecificMaterials": [
+          "受注表",
+          "判断対象: 受注表"
+        ],
+        "roleSpecificMetrics": [
+          "受注 12,000個",
+          "納期 10日後"
+        ],
+        "roleSpecificFailureRisk": "受注表を読まず、受注 12,000個か納期 10日後のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "受注 12,000個と納期 10日後を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "受注表、受注 12,000個、納期 10日後を判断の主役にしている。",
+        "kernelConnection": "受注表をproduction-control-受注表判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "production-control-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "在庫表",
+      "openingHook": "10:40。在庫表に完成品 3,400個と部材不足 1,200個が並んでいる。",
+      "context": "生産管理として在庫表を確認する。完成品 3,400個、部材不足 1,200個が今日の判断材料になる。",
+      "content": "受注・在庫・設備能力を生産計画へ変換するため、在庫表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+      "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は在庫表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "完成品 3,400個の背景と部材不足 1,200個の確度が完全にはそろっていない。",
+      "decisionTradeoff": "完成品 3,400個を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "production-control-在庫表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は稼働率 91%で副作用を確認する。",
+      "npcDialogue": "先輩:「在庫表を読まずに進めると、生産管理の判断ではなくなる」",
+      "workMaterial": "在庫表\n- 完成品 3,400個\n- 部材不足 1,200個\n- 判断対象: 在庫表",
+      "decisionPrompt": "production-control-在庫表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "完成品 3,400個を重く見て、当日中に前へ進める",
+          "text": "完成品 3,400個を重く見て、当日中に前へ進める。材料は在庫表、完成品 3,400個、部材不足 1,200個。",
+          "immediateFeedback": "在庫表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 2,
+            "production_control_risk": -1,
+            "production_control_speed": 2,
+            "production_control_value": -1,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、在庫表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "在庫表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は完成品 3,400個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "在庫表の完成品 3,400個と部材不足 1,200個を突き合わせ、条件付きで進める",
+          "text": "在庫表の完成品 3,400個と部材不足 1,200個を突き合わせ、条件付きで進める。材料は在庫表、完成品 3,400個、部材不足 1,200個。",
+          "immediateFeedback": "在庫表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 1,
+            "production_control_risk": 2,
+            "production_control_speed": 1,
+            "production_control_value": 2,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、在庫表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "在庫表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は完成品 3,400個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "部材不足 1,200個の不確実性を理由に、判断範囲を絞る",
+          "text": "部材不足 1,200個の不確実性を理由に、判断範囲を絞る。材料は在庫表、完成品 3,400個、部材不足 1,200個。",
+          "immediateFeedback": "在庫表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": -1,
+            "production_control_risk": 2,
+            "production_control_speed": -1,
+            "production_control_value": 2,
+            "production_control_feasibility": -1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、在庫表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "在庫表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は完成品 3,400個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "production-control-在庫表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "production-control-在庫表判断",
+        "roleSpecificMaterials": [
+          "在庫表",
+          "判断対象: 在庫表"
+        ],
+        "roleSpecificMetrics": [
+          "完成品 3,400個",
+          "部材不足 1,200個"
+        ],
+        "roleSpecificFailureRisk": "在庫表を読まず、完成品 3,400個か部材不足 1,200個のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "完成品 3,400個と部材不足 1,200個を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "在庫表、完成品 3,400個、部材不足 1,200個を判断の主役にしている。",
+        "kernelConnection": "在庫表をproduction-control-在庫表判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "production-control-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "設備稼働表",
+      "openingHook": "12:20。設備稼働表に稼働率 91%と段替え 4時間が並んでいる。",
+      "context": "生産管理として設備稼働表を確認する。稼働率 91%、段替え 4時間が今日の判断材料になる。",
+      "content": "受注・在庫・設備能力を生産計画へ変換するため、設備稼働表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+      "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は設備稼働表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "稼働率 91%の背景と段替え 4時間の確度が完全にはそろっていない。",
+      "decisionTradeoff": "稼働率 91%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "production-control-設備稼働表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は対応 2,000個で副作用を確認する。",
+      "npcDialogue": "先輩:「設備稼働表を読まずに進めると、生産管理の判断ではなくなる」",
+      "workMaterial": "設備稼働表\n- 稼働率 91%\n- 段替え 4時間\n- 判断対象: 設備稼働表",
+      "decisionPrompt": "production-control-設備稼働表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "稼働率 91%を重く見て、当日中に前へ進める",
+          "text": "稼働率 91%を重く見て、当日中に前へ進める。材料は設備稼働表、稼働率 91%、段替え 4時間。",
+          "immediateFeedback": "設備稼働表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 2,
+            "production_control_risk": -1,
+            "production_control_speed": 2,
+            "production_control_value": -1,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、設備稼働表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "設備稼働表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は稼働率 91%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "設備稼働表の稼働率 91%と段替え 4時間を突き合わせ、条件付きで進める",
+          "text": "設備稼働表の稼働率 91%と段替え 4時間を突き合わせ、条件付きで進める。材料は設備稼働表、稼働率 91%、段替え 4時間。",
+          "immediateFeedback": "設備稼働表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 1,
+            "production_control_risk": 2,
+            "production_control_speed": 1,
+            "production_control_value": 2,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、設備稼働表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "設備稼働表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は稼働率 91%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "段替え 4時間の不確実性を理由に、判断範囲を絞る",
+          "text": "段替え 4時間の不確実性を理由に、判断範囲を絞る。材料は設備稼働表、稼働率 91%、段替え 4時間。",
+          "immediateFeedback": "設備稼働表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": -1,
+            "production_control_risk": 2,
+            "production_control_speed": -1,
+            "production_control_value": 2,
+            "production_control_feasibility": -1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、設備稼働表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "設備稼働表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は稼働率 91%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "production-control-設備稼働表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "production-control-設備稼働表判断",
+        "roleSpecificMaterials": [
+          "設備稼働表",
+          "判断対象: 設備稼働表"
+        ],
+        "roleSpecificMetrics": [
+          "稼働率 91%",
+          "段替え 4時間"
+        ],
+        "roleSpecificFailureRisk": "設備稼働表を読まず、稼働率 91%か段替え 4時間のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "稼働率 91%と段替え 4時間を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "設備稼働表、稼働率 91%、段替え 4時間を判断の主役にしている。",
+        "kernelConnection": "設備稼働表をproduction-control-設備稼働表判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "production-control-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "外注回答",
+      "openingHook": "14:15。外注回答に対応 2,000個と単価 +18%が並んでいる。",
+      "context": "生産管理として外注回答を確認する。対応 2,000個、単価 +18%が今日の判断材料になる。",
+      "content": "受注・在庫・設備能力を生産計画へ変換するため、外注回答を読んで次の作業判断を残す。",
+      "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+      "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は外注回答である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "対応 2,000個の背景と単価 +18%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "対応 2,000個を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "production-control-外注回答判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は日産 1,350個で副作用を確認する。",
+      "npcDialogue": "先輩:「外注回答を読まずに進めると、生産管理の判断ではなくなる」",
+      "workMaterial": "外注回答\n- 対応 2,000個\n- 単価 +18%\n- 判断対象: 外注回答",
+      "decisionPrompt": "production-control-外注回答判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "対応 2,000個を重く見て、当日中に前へ進める",
+          "text": "対応 2,000個を重く見て、当日中に前へ進める。材料は外注回答、対応 2,000個、単価 +18%。",
+          "immediateFeedback": "外注回答に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 2,
+            "production_control_risk": -1,
+            "production_control_speed": 2,
+            "production_control_value": -1,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、外注回答と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "外注回答の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は対応 2,000個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "外注回答の対応 2,000個と単価 +18%を突き合わせ、条件付きで進める",
+          "text": "外注回答の対応 2,000個と単価 +18%を突き合わせ、条件付きで進める。材料は外注回答、対応 2,000個、単価 +18%。",
+          "immediateFeedback": "外注回答に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 1,
+            "production_control_risk": 2,
+            "production_control_speed": 1,
+            "production_control_value": 2,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、外注回答と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "外注回答の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は対応 2,000個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "単価 +18%の不確実性を理由に、判断範囲を絞る",
+          "text": "単価 +18%の不確実性を理由に、判断範囲を絞る。材料は外注回答、対応 2,000個、単価 +18%。",
+          "immediateFeedback": "外注回答に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": -1,
+            "production_control_risk": 2,
+            "production_control_speed": -1,
+            "production_control_value": 2,
+            "production_control_feasibility": -1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、外注回答と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "外注回答の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は対応 2,000個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "production-control-外注回答判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "production-control-外注回答判断",
+        "roleSpecificMaterials": [
+          "外注回答",
+          "判断対象: 外注回答"
+        ],
+        "roleSpecificMetrics": [
+          "対応 2,000個",
+          "単価 +18%"
+        ],
+        "roleSpecificFailureRisk": "外注回答を読まず、対応 2,000個か単価 +18%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "対応 2,000個と単価 +18%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "外注回答、対応 2,000個、単価 +18%を判断の主役にしている。",
+        "kernelConnection": "外注回答をproduction-control-外注回答判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "production-control-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "生産計画",
+      "openingHook": "16:35。生産計画に日産 1,350個と遅延リスク 2日が並んでいる。",
+      "context": "生産管理として生産計画を確認する。日産 1,350個、遅延リスク 2日が今日の判断材料になる。",
+      "content": "受注・在庫・設備能力を生産計画へ変換するため、生産計画を読んで次の作業判断を残す。",
+      "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+      "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は生産計画である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "日産 1,350個の背景と遅延リスク 2日の確度が完全にはそろっていない。",
+      "decisionTradeoff": "日産 1,350個を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "production-control-生産計画判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「生産計画を読まずに進めると、生産管理の判断ではなくなる」",
+      "workMaterial": "生産計画\n- 日産 1,350個\n- 遅延リスク 2日\n- 判断対象: 生産計画",
+      "decisionPrompt": "production-control-生産計画判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "日産 1,350個を重く見て、当日中に前へ進める",
+          "text": "日産 1,350個を重く見て、当日中に前へ進める。材料は生産計画、日産 1,350個、遅延リスク 2日。",
+          "immediateFeedback": "生産計画に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 2,
+            "production_control_risk": -1,
+            "production_control_speed": 2,
+            "production_control_value": -1,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、生産計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "生産計画の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は日産 1,350個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "生産計画の日産 1,350個と遅延リスク 2日を突き合わせ、条件付きで進める",
+          "text": "生産計画の日産 1,350個と遅延リスク 2日を突き合わせ、条件付きで進める。材料は生産計画、日産 1,350個、遅延リスク 2日。",
+          "immediateFeedback": "生産計画に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": 1,
+            "production_control_risk": 2,
+            "production_control_speed": 1,
+            "production_control_value": 2,
+            "production_control_feasibility": 1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、生産計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "生産計画の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は日産 1,350個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "遅延リスク 2日の不確実性を理由に、判断範囲を絞る",
+          "text": "遅延リスク 2日の不確実性を理由に、判断範囲を絞る。材料は生産計画、日産 1,350個、遅延リスク 2日。",
+          "immediateFeedback": "生産計画に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "production_control_evidence": -1,
+            "production_control_risk": 2,
+            "production_control_speed": -1,
+            "production_control_value": 2,
+            "production_control_feasibility": -1
+          },
+          "misconceptionEffect": "生産管理は印象ではなく、生産計画と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "生産計画の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は日産 1,350個の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "production-control-生産計画判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "production-control-生産計画判断",
+        "roleSpecificMaterials": [
+          "生産計画",
+          "判断対象: 生産計画"
+        ],
+        "roleSpecificMetrics": [
+          "日産 1,350個",
+          "遅延リスク 2日"
+        ],
+        "roleSpecificFailureRisk": "生産計画を読まず、日産 1,350個か遅延リスク 2日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "日産 1,350個と遅延リスク 2日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "生産計画、日産 1,350個、遅延リスク 2日を判断の主役にしている。",
+        "kernelConnection": "生産計画をproduction-control-生産計画判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "production-control-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "受注表",
+          "openingHook": "09:10。受注表に受注 12,000個と納期 10日後が並んでいる。",
+          "context": "生産管理として受注表を確認する。受注 12,000個、納期 10日後が今日の判断材料になる。",
+          "content": "受注・在庫・設備能力を生産計画へ変換するため、受注表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+          "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は受注表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "受注 12,000個の背景と納期 10日後の確度が完全にはそろっていない。",
+          "decisionTradeoff": "受注 12,000個を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "production-control-受注表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は完成品 3,400個で副作用を確認する。",
+          "npcDialogue": "先輩:「受注表を読まずに進めると、生産管理の判断ではなくなる」",
+          "workMaterial": "受注表\n- 受注 12,000個\n- 納期 10日後\n- 判断対象: 受注表",
+          "decisionPrompt": "production-control-受注表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "受注 12,000個を重く見て、当日中に前へ進める",
+              "text": "受注 12,000個を重く見て、当日中に前へ進める。材料は受注表、受注 12,000個、納期 10日後。",
+              "immediateFeedback": "受注表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 2,
+                "production_control_risk": -1,
+                "production_control_speed": 2,
+                "production_control_value": -1,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、受注表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "受注表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は受注 12,000個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "受注表の受注 12,000個と納期 10日後を突き合わせ、条件付きで進める",
+              "text": "受注表の受注 12,000個と納期 10日後を突き合わせ、条件付きで進める。材料は受注表、受注 12,000個、納期 10日後。",
+              "immediateFeedback": "受注表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 1,
+                "production_control_risk": 2,
+                "production_control_speed": 1,
+                "production_control_value": 2,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、受注表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "受注表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は受注 12,000個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "納期 10日後の不確実性を理由に、判断範囲を絞る",
+              "text": "納期 10日後の不確実性を理由に、判断範囲を絞る。材料は受注表、受注 12,000個、納期 10日後。",
+              "immediateFeedback": "受注表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": -1,
+                "production_control_risk": 2,
+                "production_control_speed": -1,
+                "production_control_value": 2,
+                "production_control_feasibility": -1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、受注表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "受注表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は受注 12,000個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "production-control-受注表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "production-control-受注表判断",
+            "roleSpecificMaterials": [
+              "受注表",
+              "判断対象: 受注表"
+            ],
+            "roleSpecificMetrics": [
+              "受注 12,000個",
+              "納期 10日後"
+            ],
+            "roleSpecificFailureRisk": "受注表を読まず、受注 12,000個か納期 10日後のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "受注 12,000個と納期 10日後を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "受注表、受注 12,000個、納期 10日後を判断の主役にしている。",
+            "kernelConnection": "受注表をproduction-control-受注表判断へ接続する。"
+          }
+        },
+        {
+          "id": "production-control-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "在庫表",
+          "openingHook": "10:40。在庫表に完成品 3,400個と部材不足 1,200個が並んでいる。",
+          "context": "生産管理として在庫表を確認する。完成品 3,400個、部材不足 1,200個が今日の判断材料になる。",
+          "content": "受注・在庫・設備能力を生産計画へ変換するため、在庫表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+          "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は在庫表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "完成品 3,400個の背景と部材不足 1,200個の確度が完全にはそろっていない。",
+          "decisionTradeoff": "完成品 3,400個を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "production-control-在庫表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は稼働率 91%で副作用を確認する。",
+          "npcDialogue": "先輩:「在庫表を読まずに進めると、生産管理の判断ではなくなる」",
+          "workMaterial": "在庫表\n- 完成品 3,400個\n- 部材不足 1,200個\n- 判断対象: 在庫表",
+          "decisionPrompt": "production-control-在庫表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "完成品 3,400個を重く見て、当日中に前へ進める",
+              "text": "完成品 3,400個を重く見て、当日中に前へ進める。材料は在庫表、完成品 3,400個、部材不足 1,200個。",
+              "immediateFeedback": "在庫表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 2,
+                "production_control_risk": -1,
+                "production_control_speed": 2,
+                "production_control_value": -1,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、在庫表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "在庫表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は完成品 3,400個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "在庫表の完成品 3,400個と部材不足 1,200個を突き合わせ、条件付きで進める",
+              "text": "在庫表の完成品 3,400個と部材不足 1,200個を突き合わせ、条件付きで進める。材料は在庫表、完成品 3,400個、部材不足 1,200個。",
+              "immediateFeedback": "在庫表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 1,
+                "production_control_risk": 2,
+                "production_control_speed": 1,
+                "production_control_value": 2,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、在庫表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "在庫表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は完成品 3,400個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "部材不足 1,200個の不確実性を理由に、判断範囲を絞る",
+              "text": "部材不足 1,200個の不確実性を理由に、判断範囲を絞る。材料は在庫表、完成品 3,400個、部材不足 1,200個。",
+              "immediateFeedback": "在庫表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": -1,
+                "production_control_risk": 2,
+                "production_control_speed": -1,
+                "production_control_value": 2,
+                "production_control_feasibility": -1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、在庫表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "在庫表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は完成品 3,400個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "production-control-在庫表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "production-control-在庫表判断",
+            "roleSpecificMaterials": [
+              "在庫表",
+              "判断対象: 在庫表"
+            ],
+            "roleSpecificMetrics": [
+              "完成品 3,400個",
+              "部材不足 1,200個"
+            ],
+            "roleSpecificFailureRisk": "在庫表を読まず、完成品 3,400個か部材不足 1,200個のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "完成品 3,400個と部材不足 1,200個を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "在庫表、完成品 3,400個、部材不足 1,200個を判断の主役にしている。",
+            "kernelConnection": "在庫表をproduction-control-在庫表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "production-control-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "設備稼働表",
+          "openingHook": "12:20。設備稼働表に稼働率 91%と段替え 4時間が並んでいる。",
+          "context": "生産管理として設備稼働表を確認する。稼働率 91%、段替え 4時間が今日の判断材料になる。",
+          "content": "受注・在庫・設備能力を生産計画へ変換するため、設備稼働表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+          "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は設備稼働表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "稼働率 91%の背景と段替え 4時間の確度が完全にはそろっていない。",
+          "decisionTradeoff": "稼働率 91%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "production-control-設備稼働表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は対応 2,000個で副作用を確認する。",
+          "npcDialogue": "先輩:「設備稼働表を読まずに進めると、生産管理の判断ではなくなる」",
+          "workMaterial": "設備稼働表\n- 稼働率 91%\n- 段替え 4時間\n- 判断対象: 設備稼働表",
+          "decisionPrompt": "production-control-設備稼働表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "稼働率 91%を重く見て、当日中に前へ進める",
+              "text": "稼働率 91%を重く見て、当日中に前へ進める。材料は設備稼働表、稼働率 91%、段替え 4時間。",
+              "immediateFeedback": "設備稼働表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 2,
+                "production_control_risk": -1,
+                "production_control_speed": 2,
+                "production_control_value": -1,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、設備稼働表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "設備稼働表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は稼働率 91%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "設備稼働表の稼働率 91%と段替え 4時間を突き合わせ、条件付きで進める",
+              "text": "設備稼働表の稼働率 91%と段替え 4時間を突き合わせ、条件付きで進める。材料は設備稼働表、稼働率 91%、段替え 4時間。",
+              "immediateFeedback": "設備稼働表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 1,
+                "production_control_risk": 2,
+                "production_control_speed": 1,
+                "production_control_value": 2,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、設備稼働表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "設備稼働表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は稼働率 91%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "段替え 4時間の不確実性を理由に、判断範囲を絞る",
+              "text": "段替え 4時間の不確実性を理由に、判断範囲を絞る。材料は設備稼働表、稼働率 91%、段替え 4時間。",
+              "immediateFeedback": "設備稼働表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": -1,
+                "production_control_risk": 2,
+                "production_control_speed": -1,
+                "production_control_value": 2,
+                "production_control_feasibility": -1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、設備稼働表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "設備稼働表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は稼働率 91%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "production-control-設備稼働表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "production-control-設備稼働表判断",
+            "roleSpecificMaterials": [
+              "設備稼働表",
+              "判断対象: 設備稼働表"
+            ],
+            "roleSpecificMetrics": [
+              "稼働率 91%",
+              "段替え 4時間"
+            ],
+            "roleSpecificFailureRisk": "設備稼働表を読まず、稼働率 91%か段替え 4時間のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "稼働率 91%と段替え 4時間を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "設備稼働表、稼働率 91%、段替え 4時間を判断の主役にしている。",
+            "kernelConnection": "設備稼働表をproduction-control-設備稼働表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "production-control-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "外注回答",
+          "openingHook": "14:15。外注回答に対応 2,000個と単価 +18%が並んでいる。",
+          "context": "生産管理として外注回答を確認する。対応 2,000個、単価 +18%が今日の判断材料になる。",
+          "content": "受注・在庫・設備能力を生産計画へ変換するため、外注回答を読んで次の作業判断を残す。",
+          "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+          "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は外注回答である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "対応 2,000個の背景と単価 +18%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "対応 2,000個を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "production-control-外注回答判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は日産 1,350個で副作用を確認する。",
+          "npcDialogue": "先輩:「外注回答を読まずに進めると、生産管理の判断ではなくなる」",
+          "workMaterial": "外注回答\n- 対応 2,000個\n- 単価 +18%\n- 判断対象: 外注回答",
+          "decisionPrompt": "production-control-外注回答判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "対応 2,000個を重く見て、当日中に前へ進める",
+              "text": "対応 2,000個を重く見て、当日中に前へ進める。材料は外注回答、対応 2,000個、単価 +18%。",
+              "immediateFeedback": "外注回答に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 2,
+                "production_control_risk": -1,
+                "production_control_speed": 2,
+                "production_control_value": -1,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、外注回答と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "外注回答の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は対応 2,000個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "外注回答の対応 2,000個と単価 +18%を突き合わせ、条件付きで進める",
+              "text": "外注回答の対応 2,000個と単価 +18%を突き合わせ、条件付きで進める。材料は外注回答、対応 2,000個、単価 +18%。",
+              "immediateFeedback": "外注回答に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 1,
+                "production_control_risk": 2,
+                "production_control_speed": 1,
+                "production_control_value": 2,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、外注回答と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "外注回答の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は対応 2,000個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "単価 +18%の不確実性を理由に、判断範囲を絞る",
+              "text": "単価 +18%の不確実性を理由に、判断範囲を絞る。材料は外注回答、対応 2,000個、単価 +18%。",
+              "immediateFeedback": "外注回答に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": -1,
+                "production_control_risk": 2,
+                "production_control_speed": -1,
+                "production_control_value": 2,
+                "production_control_feasibility": -1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、外注回答と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "外注回答の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は対応 2,000個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "production-control-外注回答判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "production-control-外注回答判断",
+            "roleSpecificMaterials": [
+              "外注回答",
+              "判断対象: 外注回答"
+            ],
+            "roleSpecificMetrics": [
+              "対応 2,000個",
+              "単価 +18%"
+            ],
+            "roleSpecificFailureRisk": "外注回答を読まず、対応 2,000個か単価 +18%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "対応 2,000個と単価 +18%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "外注回答、対応 2,000個、単価 +18%を判断の主役にしている。",
+            "kernelConnection": "外注回答をproduction-control-外注回答判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "production-control-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "生産計画",
+          "openingHook": "16:35。生産計画に日産 1,350個と遅延リスク 2日が並んでいる。",
+          "context": "生産管理として生産計画を確認する。日産 1,350個、遅延リスク 2日が今日の判断材料になる。",
+          "content": "受注・在庫・設備能力を生産計画へ変換するため、生産計画を読んで次の作業判断を残す。",
+          "roleSpecificContext": "生産管理は受注・在庫・設備能力を生産計画へ変換する仕事。",
+          "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は生産計画である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "日産 1,350個の背景と遅延リスク 2日の確度が完全にはそろっていない。",
+          "decisionTradeoff": "日産 1,350個を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "production-control-生産計画判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「生産計画を読まずに進めると、生産管理の判断ではなくなる」",
+          "workMaterial": "生産計画\n- 日産 1,350個\n- 遅延リスク 2日\n- 判断対象: 生産計画",
+          "decisionPrompt": "production-control-生産計画判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "日産 1,350個を重く見て、当日中に前へ進める",
+              "text": "日産 1,350個を重く見て、当日中に前へ進める。材料は生産計画、日産 1,350個、遅延リスク 2日。",
+              "immediateFeedback": "生産計画に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 2,
+                "production_control_risk": -1,
+                "production_control_speed": 2,
+                "production_control_value": -1,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、生産計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "生産計画の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は日産 1,350個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "生産計画の日産 1,350個と遅延リスク 2日を突き合わせ、条件付きで進める",
+              "text": "生産計画の日産 1,350個と遅延リスク 2日を突き合わせ、条件付きで進める。材料は生産計画、日産 1,350個、遅延リスク 2日。",
+              "immediateFeedback": "生産計画に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": 1,
+                "production_control_risk": 2,
+                "production_control_speed": 1,
+                "production_control_value": 2,
+                "production_control_feasibility": 1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、生産計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "生産計画の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は日産 1,350個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "遅延リスク 2日の不確実性を理由に、判断範囲を絞る",
+              "text": "遅延リスク 2日の不確実性を理由に、判断範囲を絞る。材料は生産計画、日産 1,350個、遅延リスク 2日。",
+              "immediateFeedback": "生産計画に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "生産管理で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "production_control_evidence": -1,
+                "production_control_risk": 2,
+                "production_control_speed": -1,
+                "production_control_value": 2,
+                "production_control_feasibility": -1
+              },
+              "misconceptionEffect": "生産管理は印象ではなく、生産計画と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "生産計画の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は日産 1,350個の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "production-control-生産計画判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "production-control-生産計画判断",
+            "roleSpecificMaterials": [
+              "生産計画",
+              "判断対象: 生産計画"
+            ],
+            "roleSpecificMetrics": [
+              "日産 1,350個",
+              "遅延リスク 2日"
+            ],
+            "roleSpecificFailureRisk": "生産計画を読まず、日産 1,350個か遅延リスク 2日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "日産 1,350個と遅延リスク 2日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "生産計画、日産 1,350個、遅延リスク 2日を判断の主役にしている。",
+            "kernelConnection": "生産計画をproduction-control-生産計画判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "生産管理の材料翻訳型",
+      "strengths": [
+        "生産管理の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "production_control_evidence",
+        "production_control_risk"
+      ],
+      "valuedMeters": [
+        "production_control_evidence"
+      ],
+      "sacrificedMeters": [
+        "production_control_speed"
+      ],
+      "roleRealityReveal": "生産管理は、受注・在庫・設備能力を生産計画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "生産管理の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "生産管理の推進型",
+      "strengths": [
+        "生産管理の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "production_control_risk",
+        "production_control_speed"
+      ],
+      "valuedMeters": [
+        "production_control_risk"
+      ],
+      "sacrificedMeters": [
+        "production_control_value"
+      ],
+      "roleRealityReveal": "生産管理は、受注・在庫・設備能力を生産計画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "生産管理の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "生産管理の安全設計型",
+      "strengths": [
+        "生産管理の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "production_control_speed",
+        "production_control_value"
+      ],
+      "valuedMeters": [
+        "production_control_speed"
+      ],
+      "sacrificedMeters": [
+        "production_control_feasibility"
+      ],
+      "roleRealityReveal": "生産管理は、受注・在庫・設備能力を生産計画へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "生産管理の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "生産管理は、受注・在庫・設備能力を生産計画へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "生産管理として、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "production-control_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "production_control_evidence_vs_production_control_risk",
+      "production_control_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "受注・在庫・設備能力を生産計画へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "production_control_evidence",
+      "label": "evidence",
+      "description": "生産管理のevidence判断"
+    },
+    {
+      "key": "production_control_risk",
+      "label": "risk",
+      "description": "生産管理のrisk判断"
+    },
+    {
+      "key": "production_control_speed",
+      "label": "speed",
+      "description": "生産管理のspeed判断"
+    },
+    {
+      "key": "production_control_value",
+      "label": "value",
+      "description": "生産管理のvalue判断"
+    },
+    {
+      "key": "production_control_feasibility",
+      "label": "feasibility",
+      "description": "生産管理のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "生産管理の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "production_control_evidence",
+      "production_control_risk",
+      "production_control_speed",
+      "production_control_value",
+      "production_control_feasibility"
+    ]
+  },
+  "roleCoreFriction": "受注・在庫・設備能力を生産計画へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "生産管理は会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "生産管理は、受注・在庫・設備能力を生産計画へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "受注 12,000個、完成品 3,400個、稼働率 91%、対応 2,000個、日産 1,350個、関係者制約、期限",
+    "output": "生産管理としての判断案、次回確認項目、リスクメモ",
+    "transformation": "受注・在庫・設備能力を生産計画へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "受注 12,000個",
+      "完成品 3,400個",
+      "稼働率 91%",
+      "対応 2,000個",
+      "日産 1,350個"
+    ],
+    "metrics": [
+      "受注 12,000個",
+      "納期 10日後",
+      "完成品 3,400個",
+      "部材不足 1,200個",
+      "稼働率 91%",
+      "段替え 4時間",
+      "対応 2,000個",
+      "単価 +18%",
+      "日産 1,350個",
+      "遅延リスク 2日"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "受注 12,000個、完成品 3,400個、稼働率 91%と納期 10日後、、部材不足 1,200個を読まなければ成立しないため。"
+  }
+}

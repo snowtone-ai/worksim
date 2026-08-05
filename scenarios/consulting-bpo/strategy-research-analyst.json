@@ -1,0 +1,2192 @@
+{
+  "id": "consulting-bpo/strategy-research-analyst",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "コンサル/BPO/業務支援",
+  "industrySlug": "consulting-bpo",
+  "role": "戦略リサーチアナリスト",
+  "roleSlug": "strategy-research-analyst",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "high",
+  "tags": [
+    "分析系",
+    "高難易度",
+    "企画系"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for コンサル/BPO/業務支援 戦略リサーチアナリスト.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "consulting-bpo",
+      "strategy-research-analyst"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "monitor",
+      "memo"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の根拠と副作用を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "市場規模メモ"
+    },
+    {
+      "time": "10:35",
+      "label": "競合比較表"
+    },
+    {
+      "time": "12:20",
+      "label": "顧客インタビュー抜粋"
+    },
+    {
+      "time": "14:05",
+      "label": "論点ツリー"
+    },
+    {
+      "time": "16:25",
+      "label": "示唆メモ"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "市場規模メモ"
+    },
+    {
+      "time": "10:35",
+      "label": "競合比較表"
+    },
+    {
+      "time": "12:20",
+      "label": "顧客インタビュー抜粋"
+    },
+    {
+      "time": "14:05",
+      "label": "論点ツリー"
+    },
+    {
+      "time": "16:25",
+      "label": "示唆メモ"
+    }
+  ],
+  "sceneList": [
+    "strategy-research-analyst-01",
+    "strategy-research-analyst-02",
+    "strategy-research-analyst-03",
+    "strategy-research-analyst-04",
+    "strategy-research-analyst-05"
+  ],
+  "meta": {
+    "title": "戦略リサーチアナリスト",
+    "industry": "コンサル/BPO/業務支援",
+    "role": "戦略リサーチアナリスト",
+    "duration_minutes": 18,
+    "description": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "blockId": "morning",
+      "id": "strategy-research-analyst-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "市場規模メモ",
+      "openingHook": "09:10。市場規模メモにTAM 820億円と成長率 6.5%が並んでいる。",
+      "context": "戦略リサーチアナリストとして市場規模メモを確認する。TAM 820億円、成長率 6.5%が今日の判断材料になる。",
+      "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、市場規模メモを読んで注目市場を切る。",
+      "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+      "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は市場規模メモである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "TAM 820億円の背景と成長率 6.5%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "TAM 820億円を重く見るほど、成長率 6.5%や別の制約を犠牲にする。",
+      "consequenceHook": "strategy-research-analyst-TAM 820億円判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は競合比較表で副作用を確認する。",
+      "npcDialogue": "先輩:「市場規模メモを読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+      "workMaterial": "市場規模メモ\n- TAM 820億円\n- 成長率 6.5%\n- 判断対象: 市場規模メモ",
+      "decisionPrompt": "strategy-research-analyst-TAM 820億円判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "TAM 820億円を優先し、当日中に市場規模メモの結論を出す",
+          "text": "TAM 820億円を優先し、当日中に市場規模メモの結論を出す。材料はTAM 820億円、成長率 6.5%。",
+          "immediateFeedback": "TAM 820億円に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 2,
+            "strategy_research_analyst_risk": -1,
+            "strategy_research_analyst_speed": 2,
+            "strategy_research_analyst_value": -1,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、TAM 820億円と成長率 6.5%を読んで判断する。",
+          "studentFeedback": {
+            "good": "TAM 820億円の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は成長率 6.5%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "TAM 820億円と成長率 6.5%を突き合わせ、条件付きで進める",
+          "text": "TAM 820億円と成長率 6.5%を突き合わせ、条件付きで進める。材料はTAM 820億円、成長率 6.5%。",
+          "immediateFeedback": "市場規模メモに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": 1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "TAM 820億円と成長率 6.5%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は市場規模メモの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "成長率 6.5%の制約を重く見て、判断範囲を絞る",
+          "text": "成長率 6.5%の制約を重く見て、判断範囲を絞る。材料はTAM 820億円、成長率 6.5%。",
+          "immediateFeedback": "成長率 6.5%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": -1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": -1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": -1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、TAM 820億円と成長率 6.5%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "成長率 6.5%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次はTAM 820億円を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "strategy-research-analyst-TAM 820億円判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "strategy-research-analyst-TAM 820億円判断",
+        "roleSpecificMaterials": [
+          "市場規模メモ",
+          "判断対象: 市場規模メモ"
+        ],
+        "roleSpecificMetrics": [
+          "TAM 820億円",
+          "成長率 6.5%"
+        ],
+        "roleSpecificFailureRisk": "市場規模メモを読まず、TAM 820億円か成長率 6.5%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "TAM 820億円と成長率 6.5%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "市場規模メモ、TAM 820億円、成長率 6.5%を判断の主役にしている。",
+        "kernelConnection": "市場規模メモをstrategy-research-analyst-TAM 820億円判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "blockId": "morning",
+      "id": "strategy-research-analyst-02",
+      "time": "10:35",
+      "interactable": "monitor_mail",
+      "title": "競合比較表",
+      "openingHook": "10:35。競合比較表に主要競合 7社と価格差 18%が並んでいる。",
+      "context": "戦略リサーチアナリストとして競合比較表を確認する。主要競合 7社、価格差 18%が今日の判断材料になる。",
+      "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、競合比較表を読んで比較軸を選ぶ。",
+      "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+      "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は競合比較表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "主要競合 7社の背景と価格差 18%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "主要競合 7社を重く見るほど、価格差 18%や別の制約を犠牲にする。",
+      "consequenceHook": "strategy-research-analyst-主要競合 7社判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は顧客インタビュー抜粋で副作用を確認する。",
+      "npcDialogue": "先輩:「競合比較表を読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+      "workMaterial": "競合比較表\n- 主要競合 7社\n- 価格差 18%\n- 判断対象: 競合比較表",
+      "decisionPrompt": "strategy-research-analyst-主要競合 7社判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "主要競合 7社を優先し、当日中に競合比較表の結論を出す",
+          "text": "主要競合 7社を優先し、当日中に競合比較表の結論を出す。材料は主要競合 7社、価格差 18%。",
+          "immediateFeedback": "主要競合 7社に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 2,
+            "strategy_research_analyst_risk": -1,
+            "strategy_research_analyst_speed": 2,
+            "strategy_research_analyst_value": -1,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、主要競合 7社と価格差 18%を読んで判断する。",
+          "studentFeedback": {
+            "good": "主要競合 7社の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は価格差 18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "主要競合 7社と価格差 18%を突き合わせ、条件付きで進める",
+          "text": "主要競合 7社と価格差 18%を突き合わせ、条件付きで進める。材料は主要競合 7社、価格差 18%。",
+          "immediateFeedback": "競合比較表に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": 1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "主要競合 7社と価格差 18%を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は競合比較表の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "価格差 18%の制約を重く見て、判断範囲を絞る",
+          "text": "価格差 18%の制約を重く見て、判断範囲を絞る。材料は主要競合 7社、価格差 18%。",
+          "immediateFeedback": "価格差 18%に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": -1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": -1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": -1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、主要競合 7社と価格差 18%の副作用まで読む。",
+          "studentFeedback": {
+            "good": "価格差 18%の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は主要競合 7社を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "strategy-research-analyst-主要競合 7社判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "strategy-research-analyst-主要競合 7社判断",
+        "roleSpecificMaterials": [
+          "競合比較表",
+          "判断対象: 競合比較表"
+        ],
+        "roleSpecificMetrics": [
+          "主要競合 7社",
+          "価格差 18%"
+        ],
+        "roleSpecificFailureRisk": "競合比較表を読まず、主要競合 7社か価格差 18%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "主要競合 7社と価格差 18%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "競合比較表、主要競合 7社、価格差 18%を判断の主役にしている。",
+        "kernelConnection": "競合比較表をstrategy-research-analyst-主要競合 7社判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "blockId": "lunch",
+      "id": "strategy-research-analyst-03",
+      "time": "12:20",
+      "interactable": "sticky_notes",
+      "title": "顧客インタビュー抜粋",
+      "openingHook": "12:20。顧客インタビュー抜粋に不満 23件と購買障壁 5分類が並んでいる。",
+      "context": "戦略リサーチアナリストとして顧客インタビュー抜粋を確認する。不満 23件、購買障壁 5分類が今日の判断材料になる。",
+      "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、顧客インタビュー抜粋を読んで仮説を修正する。",
+      "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+      "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は顧客インタビュー抜粋である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "不満 23件の背景と購買障壁 5分類の確度が完全にはそろっていない。",
+      "decisionTradeoff": "不満 23件を重く見るほど、購買障壁 5分類や別の制約を犠牲にする。",
+      "consequenceHook": "strategy-research-analyst-不満 23件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は論点ツリーで副作用を確認する。",
+      "npcDialogue": "先輩:「顧客インタビュー抜粋を読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+      "workMaterial": "顧客インタビュー抜粋\n- 不満 23件\n- 購買障壁 5分類\n- 判断対象: 顧客インタビュー抜粋",
+      "decisionPrompt": "strategy-research-analyst-不満 23件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "不満 23件を優先し、当日中に顧客インタビュー抜粋の結論を出す",
+          "text": "不満 23件を優先し、当日中に顧客インタビュー抜粋の結論を出す。材料は不満 23件、購買障壁 5分類。",
+          "immediateFeedback": "不満 23件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 2,
+            "strategy_research_analyst_risk": -1,
+            "strategy_research_analyst_speed": 2,
+            "strategy_research_analyst_value": -1,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、不満 23件と購買障壁 5分類を読んで判断する。",
+          "studentFeedback": {
+            "good": "不満 23件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は購買障壁 5分類の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "不満 23件と購買障壁 5分類を突き合わせ、条件付きで進める",
+          "text": "不満 23件と購買障壁 5分類を突き合わせ、条件付きで進める。材料は不満 23件、購買障壁 5分類。",
+          "immediateFeedback": "顧客インタビュー抜粋に基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": 1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "不満 23件と購買障壁 5分類を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は顧客インタビュー抜粋の条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "購買障壁 5分類の制約を重く見て、判断範囲を絞る",
+          "text": "購買障壁 5分類の制約を重く見て、判断範囲を絞る。材料は不満 23件、購買障壁 5分類。",
+          "immediateFeedback": "購買障壁 5分類に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": -1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": -1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": -1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、不満 23件と購買障壁 5分類の副作用まで読む。",
+          "studentFeedback": {
+            "good": "購買障壁 5分類の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は不満 23件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "strategy-research-analyst-不満 23件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "strategy-research-analyst-不満 23件判断",
+        "roleSpecificMaterials": [
+          "顧客インタビュー抜粋",
+          "判断対象: 顧客インタビュー抜粋"
+        ],
+        "roleSpecificMetrics": [
+          "不満 23件",
+          "購買障壁 5分類"
+        ],
+        "roleSpecificFailureRisk": "顧客インタビュー抜粋を読まず、不満 23件か購買障壁 5分類のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "不満 23件と購買障壁 5分類を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "顧客インタビュー抜粋、不満 23件、購買障壁 5分類を判断の主役にしている。",
+        "kernelConnection": "顧客インタビュー抜粋をstrategy-research-analyst-不満 23件判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "blockId": "meeting",
+      "id": "strategy-research-analyst-04",
+      "time": "14:05",
+      "interactable": "meeting_speaker",
+      "title": "論点ツリー",
+      "openingHook": "14:05。論点ツリーに未検証論点 9件と重要論点 3件が並んでいる。",
+      "context": "戦略リサーチアナリストとして論点ツリーを確認する。未検証論点 9件、重要論点 3件が今日の判断材料になる。",
+      "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、論点ツリーを読んで資料構成を決める。",
+      "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+      "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は論点ツリーである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "未検証論点 9件の背景と重要論点 3件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "未検証論点 9件を重く見るほど、重要論点 3件や別の制約を犠牲にする。",
+      "consequenceHook": "strategy-research-analyst-未検証論点 9件判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は示唆メモで副作用を確認する。",
+      "npcDialogue": "先輩:「論点ツリーを読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+      "workMaterial": "論点ツリー\n- 未検証論点 9件\n- 重要論点 3件\n- 判断対象: 論点ツリー",
+      "decisionPrompt": "strategy-research-analyst-未検証論点 9件判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "未検証論点 9件を優先し、当日中に論点ツリーの結論を出す",
+          "text": "未検証論点 9件を優先し、当日中に論点ツリーの結論を出す。材料は未検証論点 9件、重要論点 3件。",
+          "immediateFeedback": "未検証論点 9件に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 2,
+            "strategy_research_analyst_risk": -1,
+            "strategy_research_analyst_speed": 2,
+            "strategy_research_analyst_value": -1,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、未検証論点 9件と重要論点 3件を読んで判断する。",
+          "studentFeedback": {
+            "good": "未検証論点 9件の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は重要論点 3件の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "未検証論点 9件と重要論点 3件を突き合わせ、条件付きで進める",
+          "text": "未検証論点 9件と重要論点 3件を突き合わせ、条件付きで進める。材料は未検証論点 9件、重要論点 3件。",
+          "immediateFeedback": "論点ツリーに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": 1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "未検証論点 9件と重要論点 3件を両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は論点ツリーの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "重要論点 3件の制約を重く見て、判断範囲を絞る",
+          "text": "重要論点 3件の制約を重く見て、判断範囲を絞る。材料は未検証論点 9件、重要論点 3件。",
+          "immediateFeedback": "重要論点 3件に基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": -1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": -1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": -1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、未検証論点 9件と重要論点 3件の副作用まで読む。",
+          "studentFeedback": {
+            "good": "重要論点 3件の制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は未検証論点 9件を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "strategy-research-analyst-未検証論点 9件判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "strategy-research-analyst-未検証論点 9件判断",
+        "roleSpecificMaterials": [
+          "論点ツリー",
+          "判断対象: 論点ツリー"
+        ],
+        "roleSpecificMetrics": [
+          "未検証論点 9件",
+          "重要論点 3件"
+        ],
+        "roleSpecificFailureRisk": "論点ツリーを読まず、未検証論点 9件か重要論点 3件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "未検証論点 9件と重要論点 3件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "論点ツリー、未検証論点 9件、重要論点 3件を判断の主役にしている。",
+        "kernelConnection": "論点ツリーをstrategy-research-analyst-未検証論点 9件判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "blockId": "afternoon",
+      "id": "strategy-research-analyst-05",
+      "time": "16:25",
+      "interactable": "monitor_terminal",
+      "title": "示唆メモ",
+      "openingHook": "16:25。示唆メモに投資回収 24か月と感度差 12ptが並んでいる。",
+      "context": "戦略リサーチアナリストとして示唆メモを確認する。投資回収 24か月、感度差 12ptが今日の判断材料になる。",
+      "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、示唆メモを読んで推奨案を残す。",
+      "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+      "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "周囲は早い回答を求めるが、主材料は示唆メモである。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "投資回収 24か月の背景と感度差 12ptの確度が完全にはそろっていない。",
+      "decisionTradeoff": "投資回収 24か月を重く見るほど、感度差 12ptや別の制約を犠牲にする。",
+      "consequenceHook": "strategy-research-analyst-投資回収 24か月判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「示唆メモを読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+      "workMaterial": "示唆メモ\n- 投資回収 24か月\n- 感度差 12pt\n- 判断対象: 示唆メモ",
+      "decisionPrompt": "strategy-research-analyst-投資回収 24か月判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "投資回収 24か月を優先し、当日中に示唆メモの結論を出す",
+          "text": "投資回収 24か月を優先し、当日中に示唆メモの結論を出す。材料は投資回収 24か月、感度差 12pt。",
+          "immediateFeedback": "投資回収 24か月に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 2,
+            "strategy_research_analyst_risk": -1,
+            "strategy_research_analyst_speed": 2,
+            "strategy_research_analyst_value": -1,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、投資回収 24か月と感度差 12ptを読んで判断する。",
+          "studentFeedback": {
+            "good": "投資回収 24か月の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は感度差 12ptの副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "投資回収 24か月と感度差 12ptを突き合わせ、条件付きで進める",
+          "text": "投資回収 24か月と感度差 12ptを突き合わせ、条件付きで進める。材料は投資回収 24か月、感度差 12pt。",
+          "immediateFeedback": "示唆メモに基づく説明可能性が上がる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": 1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": 1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": 1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+          "studentFeedback": {
+            "good": "投資回収 24か月と感度差 12ptを両方見ている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は示唆メモの条件が後続へ響く。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "感度差 12ptの制約を重く見て、判断範囲を絞る",
+          "text": "感度差 12ptの制約を重く見て、判断範囲を絞る。材料は投資回収 24か月、感度差 12pt。",
+          "immediateFeedback": "感度差 12ptに基づくリスク抑制が決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "strategy_research_analyst_evidence": -1,
+            "strategy_research_analyst_risk": 2,
+            "strategy_research_analyst_speed": -1,
+            "strategy_research_analyst_value": 2,
+            "strategy_research_analyst_feasibility": -1
+          },
+          "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、投資回収 24か月と感度差 12ptの副作用まで読む。",
+          "studentFeedback": {
+            "good": "感度差 12ptの制約を見落としていない。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は投資回収 24か月を抑えた影響を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "strategy-research-analyst-投資回収 24か月判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "高難易度",
+          "企画系"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "strategy-research-analyst-投資回収 24か月判断",
+        "roleSpecificMaterials": [
+          "示唆メモ",
+          "判断対象: 示唆メモ"
+        ],
+        "roleSpecificMetrics": [
+          "投資回収 24か月",
+          "感度差 12pt"
+        ],
+        "roleSpecificFailureRisk": "示唆メモを読まず、投資回収 24か月か感度差 12ptのどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "投資回収 24か月と感度差 12ptを使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "示唆メモ、投資回収 24か月、感度差 12ptを判断の主役にしている。",
+        "kernelConnection": "示唆メモをstrategy-research-analyst-投資回収 24か月判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:30",
+      "location": "desk",
+      "intro": "午前フェーズ。戦略リサーチアナリストとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "strategy-research-analyst-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "市場規模メモ",
+          "openingHook": "09:10。市場規模メモにTAM 820億円と成長率 6.5%が並んでいる。",
+          "context": "戦略リサーチアナリストとして市場規模メモを確認する。TAM 820億円、成長率 6.5%が今日の判断材料になる。",
+          "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、市場規模メモを読んで注目市場を切る。",
+          "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+          "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は市場規模メモである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "TAM 820億円の背景と成長率 6.5%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "TAM 820億円を重く見るほど、成長率 6.5%や別の制約を犠牲にする。",
+          "consequenceHook": "strategy-research-analyst-TAM 820億円判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は競合比較表で副作用を確認する。",
+          "npcDialogue": "先輩:「市場規模メモを読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+          "workMaterial": "市場規模メモ\n- TAM 820億円\n- 成長率 6.5%\n- 判断対象: 市場規模メモ",
+          "decisionPrompt": "strategy-research-analyst-TAM 820億円判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "TAM 820億円を優先し、当日中に市場規模メモの結論を出す",
+              "text": "TAM 820億円を優先し、当日中に市場規模メモの結論を出す。材料はTAM 820億円、成長率 6.5%。",
+              "immediateFeedback": "TAM 820億円に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 2,
+                "strategy_research_analyst_risk": -1,
+                "strategy_research_analyst_speed": 2,
+                "strategy_research_analyst_value": -1,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、TAM 820億円と成長率 6.5%を読んで判断する。",
+              "studentFeedback": {
+                "good": "TAM 820億円の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は成長率 6.5%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "TAM 820億円と成長率 6.5%を突き合わせ、条件付きで進める",
+              "text": "TAM 820億円と成長率 6.5%を突き合わせ、条件付きで進める。材料はTAM 820億円、成長率 6.5%。",
+              "immediateFeedback": "市場規模メモに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": 1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "TAM 820億円と成長率 6.5%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は市場規模メモの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "成長率 6.5%の制約を重く見て、判断範囲を絞る",
+              "text": "成長率 6.5%の制約を重く見て、判断範囲を絞る。材料はTAM 820億円、成長率 6.5%。",
+              "immediateFeedback": "成長率 6.5%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": -1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": -1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": -1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、TAM 820億円と成長率 6.5%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "成長率 6.5%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次はTAM 820億円を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "strategy-research-analyst-TAM 820億円判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "strategy-research-analyst-TAM 820億円判断",
+            "roleSpecificMaterials": [
+              "市場規模メモ",
+              "判断対象: 市場規模メモ"
+            ],
+            "roleSpecificMetrics": [
+              "TAM 820億円",
+              "成長率 6.5%"
+            ],
+            "roleSpecificFailureRisk": "市場規模メモを読まず、TAM 820億円か成長率 6.5%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "TAM 820億円と成長率 6.5%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "市場規模メモ、TAM 820億円、成長率 6.5%を判断の主役にしている。",
+            "kernelConnection": "市場規模メモをstrategy-research-analyst-TAM 820億円判断へ接続する。"
+          }
+        },
+        {
+          "id": "strategy-research-analyst-02",
+          "time": "10:35",
+          "interactable": "monitor_mail",
+          "title": "競合比較表",
+          "openingHook": "10:35。競合比較表に主要競合 7社と価格差 18%が並んでいる。",
+          "context": "戦略リサーチアナリストとして競合比較表を確認する。主要競合 7社、価格差 18%が今日の判断材料になる。",
+          "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、競合比較表を読んで比較軸を選ぶ。",
+          "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+          "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は競合比較表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "主要競合 7社の背景と価格差 18%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "主要競合 7社を重く見るほど、価格差 18%や別の制約を犠牲にする。",
+          "consequenceHook": "strategy-research-analyst-主要競合 7社判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は顧客インタビュー抜粋で副作用を確認する。",
+          "npcDialogue": "先輩:「競合比較表を読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+          "workMaterial": "競合比較表\n- 主要競合 7社\n- 価格差 18%\n- 判断対象: 競合比較表",
+          "decisionPrompt": "strategy-research-analyst-主要競合 7社判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "主要競合 7社を優先し、当日中に競合比較表の結論を出す",
+              "text": "主要競合 7社を優先し、当日中に競合比較表の結論を出す。材料は主要競合 7社、価格差 18%。",
+              "immediateFeedback": "主要競合 7社に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 2,
+                "strategy_research_analyst_risk": -1,
+                "strategy_research_analyst_speed": 2,
+                "strategy_research_analyst_value": -1,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、主要競合 7社と価格差 18%を読んで判断する。",
+              "studentFeedback": {
+                "good": "主要競合 7社の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は価格差 18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "主要競合 7社と価格差 18%を突き合わせ、条件付きで進める",
+              "text": "主要競合 7社と価格差 18%を突き合わせ、条件付きで進める。材料は主要競合 7社、価格差 18%。",
+              "immediateFeedback": "競合比較表に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": 1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "主要競合 7社と価格差 18%を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は競合比較表の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "価格差 18%の制約を重く見て、判断範囲を絞る",
+              "text": "価格差 18%の制約を重く見て、判断範囲を絞る。材料は主要競合 7社、価格差 18%。",
+              "immediateFeedback": "価格差 18%に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": -1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": -1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": -1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、主要競合 7社と価格差 18%の副作用まで読む。",
+              "studentFeedback": {
+                "good": "価格差 18%の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は主要競合 7社を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "strategy-research-analyst-主要競合 7社判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "strategy-research-analyst-主要競合 7社判断",
+            "roleSpecificMaterials": [
+              "競合比較表",
+              "判断対象: 競合比較表"
+            ],
+            "roleSpecificMetrics": [
+              "主要競合 7社",
+              "価格差 18%"
+            ],
+            "roleSpecificFailureRisk": "競合比較表を読まず、主要競合 7社か価格差 18%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "主要競合 7社と価格差 18%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "競合比較表、主要競合 7社、価格差 18%を判断の主役にしている。",
+            "kernelConnection": "競合比較表をstrategy-research-analyst-主要競合 7社判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "11:30",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。戦略リサーチアナリストとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "strategy-research-analyst-03",
+          "time": "12:20",
+          "interactable": "sticky_notes",
+          "title": "顧客インタビュー抜粋",
+          "openingHook": "12:20。顧客インタビュー抜粋に不満 23件と購買障壁 5分類が並んでいる。",
+          "context": "戦略リサーチアナリストとして顧客インタビュー抜粋を確認する。不満 23件、購買障壁 5分類が今日の判断材料になる。",
+          "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、顧客インタビュー抜粋を読んで仮説を修正する。",
+          "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+          "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は顧客インタビュー抜粋である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "不満 23件の背景と購買障壁 5分類の確度が完全にはそろっていない。",
+          "decisionTradeoff": "不満 23件を重く見るほど、購買障壁 5分類や別の制約を犠牲にする。",
+          "consequenceHook": "strategy-research-analyst-不満 23件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は論点ツリーで副作用を確認する。",
+          "npcDialogue": "先輩:「顧客インタビュー抜粋を読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+          "workMaterial": "顧客インタビュー抜粋\n- 不満 23件\n- 購買障壁 5分類\n- 判断対象: 顧客インタビュー抜粋",
+          "decisionPrompt": "strategy-research-analyst-不満 23件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "不満 23件を優先し、当日中に顧客インタビュー抜粋の結論を出す",
+              "text": "不満 23件を優先し、当日中に顧客インタビュー抜粋の結論を出す。材料は不満 23件、購買障壁 5分類。",
+              "immediateFeedback": "不満 23件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 2,
+                "strategy_research_analyst_risk": -1,
+                "strategy_research_analyst_speed": 2,
+                "strategy_research_analyst_value": -1,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、不満 23件と購買障壁 5分類を読んで判断する。",
+              "studentFeedback": {
+                "good": "不満 23件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は購買障壁 5分類の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "不満 23件と購買障壁 5分類を突き合わせ、条件付きで進める",
+              "text": "不満 23件と購買障壁 5分類を突き合わせ、条件付きで進める。材料は不満 23件、購買障壁 5分類。",
+              "immediateFeedback": "顧客インタビュー抜粋に基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": 1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "不満 23件と購買障壁 5分類を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は顧客インタビュー抜粋の条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "購買障壁 5分類の制約を重く見て、判断範囲を絞る",
+              "text": "購買障壁 5分類の制約を重く見て、判断範囲を絞る。材料は不満 23件、購買障壁 5分類。",
+              "immediateFeedback": "購買障壁 5分類に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": -1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": -1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": -1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、不満 23件と購買障壁 5分類の副作用まで読む。",
+              "studentFeedback": {
+                "good": "購買障壁 5分類の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は不満 23件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "strategy-research-analyst-不満 23件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "strategy-research-analyst-不満 23件判断",
+            "roleSpecificMaterials": [
+              "顧客インタビュー抜粋",
+              "判断対象: 顧客インタビュー抜粋"
+            ],
+            "roleSpecificMetrics": [
+              "不満 23件",
+              "購買障壁 5分類"
+            ],
+            "roleSpecificFailureRisk": "顧客インタビュー抜粋を読まず、不満 23件か購買障壁 5分類のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "不満 23件と購買障壁 5分類を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "顧客インタビュー抜粋、不満 23件、購買障壁 5分類を判断の主役にしている。",
+            "kernelConnection": "顧客インタビュー抜粋をstrategy-research-analyst-不満 23件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:00",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。戦略リサーチアナリストとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "strategy-research-analyst-04",
+          "time": "14:05",
+          "interactable": "meeting_speaker",
+          "title": "論点ツリー",
+          "openingHook": "14:05。論点ツリーに未検証論点 9件と重要論点 3件が並んでいる。",
+          "context": "戦略リサーチアナリストとして論点ツリーを確認する。未検証論点 9件、重要論点 3件が今日の判断材料になる。",
+          "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、論点ツリーを読んで資料構成を決める。",
+          "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+          "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は論点ツリーである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "未検証論点 9件の背景と重要論点 3件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "未検証論点 9件を重く見るほど、重要論点 3件や別の制約を犠牲にする。",
+          "consequenceHook": "strategy-research-analyst-未検証論点 9件判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は示唆メモで副作用を確認する。",
+          "npcDialogue": "先輩:「論点ツリーを読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+          "workMaterial": "論点ツリー\n- 未検証論点 9件\n- 重要論点 3件\n- 判断対象: 論点ツリー",
+          "decisionPrompt": "strategy-research-analyst-未検証論点 9件判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "未検証論点 9件を優先し、当日中に論点ツリーの結論を出す",
+              "text": "未検証論点 9件を優先し、当日中に論点ツリーの結論を出す。材料は未検証論点 9件、重要論点 3件。",
+              "immediateFeedback": "未検証論点 9件に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 2,
+                "strategy_research_analyst_risk": -1,
+                "strategy_research_analyst_speed": 2,
+                "strategy_research_analyst_value": -1,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、未検証論点 9件と重要論点 3件を読んで判断する。",
+              "studentFeedback": {
+                "good": "未検証論点 9件の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は重要論点 3件の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "未検証論点 9件と重要論点 3件を突き合わせ、条件付きで進める",
+              "text": "未検証論点 9件と重要論点 3件を突き合わせ、条件付きで進める。材料は未検証論点 9件、重要論点 3件。",
+              "immediateFeedback": "論点ツリーに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": 1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "未検証論点 9件と重要論点 3件を両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は論点ツリーの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "重要論点 3件の制約を重く見て、判断範囲を絞る",
+              "text": "重要論点 3件の制約を重く見て、判断範囲を絞る。材料は未検証論点 9件、重要論点 3件。",
+              "immediateFeedback": "重要論点 3件に基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": -1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": -1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": -1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、未検証論点 9件と重要論点 3件の副作用まで読む。",
+              "studentFeedback": {
+                "good": "重要論点 3件の制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は未検証論点 9件を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "strategy-research-analyst-未検証論点 9件判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "strategy-research-analyst-未検証論点 9件判断",
+            "roleSpecificMaterials": [
+              "論点ツリー",
+              "判断対象: 論点ツリー"
+            ],
+            "roleSpecificMetrics": [
+              "未検証論点 9件",
+              "重要論点 3件"
+            ],
+            "roleSpecificFailureRisk": "論点ツリーを読まず、未検証論点 9件か重要論点 3件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "未検証論点 9件と重要論点 3件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "論点ツリー、未検証論点 9件、重要論点 3件を判断の主役にしている。",
+            "kernelConnection": "論点ツリーをstrategy-research-analyst-未検証論点 9件判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:30",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。戦略リサーチアナリストとして仕事材料を読み、判断を残す。",
+      "scenes": [
+        {
+          "id": "strategy-research-analyst-05",
+          "time": "16:25",
+          "interactable": "monitor_terminal",
+          "title": "示唆メモ",
+          "openingHook": "16:25。示唆メモに投資回収 24か月と感度差 12ptが並んでいる。",
+          "context": "戦略リサーチアナリストとして示唆メモを確認する。投資回収 24か月、感度差 12ptが今日の判断材料になる。",
+          "content": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換するため、示唆メモを読んで推奨案を残す。",
+          "roleSpecificContext": "戦略リサーチアナリストは市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する仕事。",
+          "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "周囲は早い回答を求めるが、主材料は示唆メモである。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "投資回収 24か月の背景と感度差 12ptの確度が完全にはそろっていない。",
+          "decisionTradeoff": "投資回収 24か月を重く見るほど、感度差 12ptや別の制約を犠牲にする。",
+          "consequenceHook": "strategy-research-analyst-投資回収 24か月判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「示唆メモを読まずに進めると、戦略リサーチアナリストの判断ではなくなる」",
+          "workMaterial": "示唆メモ\n- 投資回収 24か月\n- 感度差 12pt\n- 判断対象: 示唆メモ",
+          "decisionPrompt": "strategy-research-analyst-投資回収 24か月判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "投資回収 24か月を優先し、当日中に示唆メモの結論を出す",
+              "text": "投資回収 24か月を優先し、当日中に示唆メモの結論を出す。材料は投資回収 24か月、感度差 12pt。",
+              "immediateFeedback": "投資回収 24か月に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 2,
+                "strategy_research_analyst_risk": -1,
+                "strategy_research_analyst_speed": 2,
+                "strategy_research_analyst_value": -1,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは印象ではなく、投資回収 24か月と感度差 12ptを読んで判断する。",
+              "studentFeedback": {
+                "good": "投資回収 24か月の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は感度差 12ptの副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "投資回収 24か月と感度差 12ptを突き合わせ、条件付きで進める",
+              "text": "投資回収 24か月と感度差 12ptを突き合わせ、条件付きで進める。材料は投資回収 24か月、感度差 12pt。",
+              "immediateFeedback": "示唆メモに基づく説明可能性が上がる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": 1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": 1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": 1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは資料の数字を成果物に変える仕事だと理解が進む。",
+              "studentFeedback": {
+                "good": "投資回収 24か月と感度差 12ptを両方見ている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は示唆メモの条件が後続へ響く。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "感度差 12ptの制約を重く見て、判断範囲を絞る",
+              "text": "感度差 12ptの制約を重く見て、判断範囲を絞る。材料は投資回収 24か月、感度差 12pt。",
+              "immediateFeedback": "感度差 12ptに基づくリスク抑制が決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "戦略リサーチアナリストで資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "strategy_research_analyst_evidence": -1,
+                "strategy_research_analyst_risk": 2,
+                "strategy_research_analyst_speed": -1,
+                "strategy_research_analyst_value": 2,
+                "strategy_research_analyst_feasibility": -1
+              },
+              "misconceptionEffect": "戦略リサーチアナリストは慎重さだけでなく、投資回収 24か月と感度差 12ptの副作用まで読む。",
+              "studentFeedback": {
+                "good": "感度差 12ptの制約を見落としていない。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は投資回収 24か月を抑えた影響を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "strategy-research-analyst-投資回収 24か月判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "高難易度",
+              "企画系"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "strategy-research-analyst-投資回収 24か月判断",
+            "roleSpecificMaterials": [
+              "示唆メモ",
+              "判断対象: 示唆メモ"
+            ],
+            "roleSpecificMetrics": [
+              "投資回収 24か月",
+              "感度差 12pt"
+            ],
+            "roleSpecificFailureRisk": "示唆メモを読まず、投資回収 24か月か感度差 12ptのどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "投資回収 24か月と感度差 12ptを使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "示唆メモ、投資回収 24か月、感度差 12ptを判断の主役にしている。",
+            "kernelConnection": "示唆メモをstrategy-research-analyst-投資回収 24か月判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "strategy-research-analyst-material-reader",
+      "title": "戦略リサーチアナリストの材料読解型",
+      "strengths": [
+        "戦略リサーチアナリストの資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "strategy_research_analyst_evidence",
+        "strategy_research_analyst_risk"
+      ],
+      "valuedMeters": [
+        "strategy_research_analyst_evidence"
+      ],
+      "sacrificedMeters": [
+        "strategy_research_analyst_speed"
+      ],
+      "roleRealityReveal": "戦略リサーチアナリストは、情報量ではなく仮説・比較軸・不確実性を経営判断に使える形へ圧縮する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "戦略リサーチアナリストの資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "strategy-research-analyst-constraint-designer",
+      "title": "戦略リサーチアナリストの制約設計型",
+      "strengths": [
+        "制約を成果物に残せる",
+        "副作用を先に見積もれる"
+      ],
+      "cautionPoints": [
+        "検討が長くなると実行速度が落ちることがある"
+      ],
+      "meterPriorities": [
+        "strategy_research_analyst_risk",
+        "strategy_research_analyst_speed"
+      ],
+      "valuedMeters": [
+        "strategy_research_analyst_risk"
+      ],
+      "sacrificedMeters": [
+        "strategy_research_analyst_value"
+      ],
+      "roleRealityReveal": "戦略リサーチアナリストは、情報量ではなく仮説・比較軸・不確実性を経営判断に使える形へ圧縮する仕事。",
+      "misconceptionCorrection": "判断は会話ではなく、条件設計で進むと理解が進む。",
+      "decisionPatternSummary": "制約を見て安全な進め方を作る傾向がある。",
+      "careerReflectionPrompt": "戦略リサーチアナリストとして制約込みで進める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "risk_awareness",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "strategy-research-analyst-execution-planner",
+      "title": "戦略リサーチアナリストの実行計画型",
+      "strengths": [
+        "判断後の次アクションを明確にできる",
+        "期限内に成果物へ落とし込める"
+      ],
+      "cautionPoints": [
+        "初期仮説に寄りすぎると見落としが残ることがある"
+      ],
+      "meterPriorities": [
+        "strategy_research_analyst_speed",
+        "strategy_research_analyst_value"
+      ],
+      "valuedMeters": [
+        "strategy_research_analyst_speed"
+      ],
+      "sacrificedMeters": [
+        "strategy_research_analyst_feasibility"
+      ],
+      "roleRealityReveal": "戦略リサーチアナリストは、情報量ではなく仮説・比較軸・不確実性を経営判断に使える形へ圧縮する仕事。",
+      "misconceptionCorrection": "作業処理ではなく、資料を実行順へ変える仕事だと理解が進む。",
+      "decisionPatternSummary": "期限と実行可能性を重視して判断する傾向がある。",
+      "careerReflectionPrompt": "戦略リサーチアナリストとして実行順を決める仕事に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "execution_preference",
+        "role_understanding_signal"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "戦略リサーチアナリストは、情報量ではなく仮説・比較軸・不確実性を経営判断に使える形へ圧縮する仕事。",
+    "misconceptionCorrection": "戦略リサーチアナリストは印象や会話だけではなく、資料・数値・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "戦略リサーチアナリストとして、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "strategy-research-analyst_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "strategy_research_analyst_hypothesis_vs_strategy_research_analyst_evidence",
+      "strategy_research_analyst_focus_vs_speed"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 4 selected to complete remaining 18 roles with decision primitive diversity.",
+    "mainConflict": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+    "sceneRationale": "Batch 4 skeleton Bに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "strategy_research_analyst_hypothesis",
+      "label": "hypothesis",
+      "description": "戦略リサーチアナリストのhypothesis判断"
+    },
+    {
+      "key": "strategy_research_analyst_evidence",
+      "label": "evidence",
+      "description": "戦略リサーチアナリストのevidence判断"
+    },
+    {
+      "key": "strategy_research_analyst_focus",
+      "label": "focus",
+      "description": "戦略リサーチアナリストのfocus判断"
+    },
+    {
+      "key": "strategy_research_analyst_uncertainty",
+      "label": "uncertainty",
+      "description": "戦略リサーチアナリストのuncertainty判断"
+    },
+    {
+      "key": "strategy_research_analyst_insight",
+      "label": "insight",
+      "description": "戦略リサーチアナリストのinsight判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "戦略リサーチアナリストの5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "strategy_research_analyst_hypothesis",
+      "strategy_research_analyst_evidence",
+      "strategy_research_analyst_focus",
+      "strategy_research_analyst_uncertainty",
+      "strategy_research_analyst_insight"
+    ]
+  },
+  "roleCoreFriction": "情報を集めるほど精度は上がるが、論点を絞らないと判断材料にならない葛藤。",
+  "roleMisconception": "戦略リサーチは調べ物が中心で、仮説を削って意思決定材料にする仕事は補助的だと思われやすい。",
+  "roleRealityReveal": "戦略リサーチアナリストは、情報量ではなく仮説・比較軸・不確実性を経営判断に使える形へ圧縮する仕事。",
+  "roleWorkKernel": {
+    "input": "TAM 820億円、成長率 6.5%、主要競合 7社、価格差 18%、不満 23件、購買障壁 5分類、未検証論点 9件、重要論点 3件、投資回収 24か月、感度差 12pt",
+    "output": "戦略リサーチアナリストとしての判断案、次回確認項目、リスクメモ",
+    "transformation": "市場情報、競合比較、仮説の穴を経営判断用の論点と示唆へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "市場規模メモ",
+      "競合比較表",
+      "顧客インタビュー抜粋",
+      "論点ツリー",
+      "示唆メモ"
+    ],
+    "metrics": [
+      "TAM 820億円",
+      "成長率 6.5%",
+      "主要競合 7社",
+      "価格差 18%",
+      "不満 23件",
+      "購買障壁 5分類",
+      "未検証論点 9件",
+      "重要論点 3件",
+      "投資回収 24か月",
+      "感度差 12pt"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "市場規模メモ、競合比較表、顧客インタビュー抜粋とTAM 820億円、主要競合 7社を読まなければ成立しないため。"
+  }
+}

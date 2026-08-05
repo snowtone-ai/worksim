@@ -1,0 +1,2190 @@
+{
+  "id": "trading/supply-chain-coordination",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "商社/卸",
+  "industrySlug": "trading",
+  "role": "サプライチェーン調整",
+  "roleSlug": "supply-chain-coordination",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "分析系",
+    "企画系",
+    "人と関わる"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for 商社/卸 サプライチェーン調整.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "trading",
+      "supply-chain-coordination"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "需要予測表"
+    },
+    {
+      "time": "10:40",
+      "label": "在庫一覧"
+    },
+    {
+      "time": "12:20",
+      "label": "輸送枠表"
+    },
+    {
+      "time": "14:15",
+      "label": "優先配分案"
+    },
+    {
+      "time": "16:35",
+      "label": "補充計画"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "需要予測表"
+    },
+    {
+      "time": "10:40",
+      "label": "在庫一覧"
+    },
+    {
+      "time": "12:20",
+      "label": "輸送枠表"
+    },
+    {
+      "time": "14:15",
+      "label": "優先配分案"
+    },
+    {
+      "time": "16:35",
+      "label": "補充計画"
+    }
+  ],
+  "sceneList": [
+    "supply-chain-coordination-01",
+    "supply-chain-coordination-02",
+    "supply-chain-coordination-03",
+    "supply-chain-coordination-04",
+    "supply-chain-coordination-05"
+  ],
+  "meta": {
+    "title": "サプライチェーン調整",
+    "industry": "商社/卸",
+    "role": "サプライチェーン調整",
+    "duration_minutes": 18,
+    "description": "需要・在庫・輸送制約を供給計画へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "problem_solving",
+      "label": "問題解決力",
+      "description": "状況を整理し、現実的な打ち手を組み立てる力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "supply-chain-coordination-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "需要予測表",
+      "openingHook": "09:10。予測 12,400個に前年差 +18%とundefinedが並んでいる。",
+      "context": "サプライチェーン調整として予測 12,400個を確認する。前年差 +18%、undefinedが今日の判断材料になる。",
+      "content": "需要・在庫・輸送制約を供給計画へ変換するため、予測 12,400個を読んで次の作業判断を残す。",
+      "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+      "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は予測 12,400個である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "前年差 +18%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "前年差 +18%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "supply-chain-coordination-予測 12,400個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は在庫 3,100個で副作用を確認する。",
+      "npcDialogue": "先輩:「予測 12,400個を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+      "workMaterial": "需要予測表\n- 予測 12,400個\n- 前年差 +18%\n- 判断対象: 需要予測表",
+      "decisionPrompt": "supply-chain-coordination-予測 12,400個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "前年差 +18%を重く見て、当日中に前へ進める",
+          "text": "前年差 +18%を重く見て、当日中に前へ進める。材料は予測 12,400個、前年差 +18%、undefined。",
+          "immediateFeedback": "予測 12,400個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 2,
+            "supply_chain_coordination_risk": -1,
+            "supply_chain_coordination_speed": 2,
+            "supply_chain_coordination_value": -1,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、予測 12,400個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "予測 12,400個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は前年差 +18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "予測 12,400個の前年差 +18%とundefinedを突き合わせ、条件付きで進める",
+          "text": "予測 12,400個の前年差 +18%とundefinedを突き合わせ、条件付きで進める。材料は予測 12,400個、前年差 +18%、undefined。",
+          "immediateFeedback": "予測 12,400個に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": 1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、予測 12,400個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "予測 12,400個の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は前年差 +18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は予測 12,400個、前年差 +18%、undefined。",
+          "immediateFeedback": "予測 12,400個に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": -1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": -1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": -1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、予測 12,400個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "予測 12,400個の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は前年差 +18%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "supply-chain-coordination-予測 12,400個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "supply-chain-coordination-予測 12,400個判断",
+        "roleSpecificMaterials": [
+          "需要予測表",
+          "判断対象: 需要予測表"
+        ],
+        "roleSpecificMetrics": [
+          "予測 12,400個",
+          "前年差 +18%"
+        ],
+        "roleSpecificFailureRisk": "需要予測表を読まず、予測 12,400個か前年差 +18%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "予測 12,400個と前年差 +18%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "需要予測表、予測 12,400個、前年差 +18%を判断の主役にしている。",
+        "kernelConnection": "需要予測表をsupply-chain-coordination-予測 12,400個判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "supply-chain-coordination-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "在庫一覧",
+      "openingHook": "10:40。在庫 3,100個に欠品リスク 6日とundefinedが並んでいる。",
+      "context": "サプライチェーン調整として在庫 3,100個を確認する。欠品リスク 6日、undefinedが今日の判断材料になる。",
+      "content": "需要・在庫・輸送制約を供給計画へ変換するため、在庫 3,100個を読んで次の作業判断を残す。",
+      "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+      "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は在庫 3,100個である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "欠品リスク 6日の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "欠品リスク 6日を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "supply-chain-coordination-在庫 3,100個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は枠 8便で副作用を確認する。",
+      "npcDialogue": "先輩:「在庫 3,100個を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+      "workMaterial": "在庫一覧\n- 在庫 3,100個\n- 欠品リスク 6日\n- 判断対象: 在庫一覧",
+      "decisionPrompt": "supply-chain-coordination-在庫 3,100個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "欠品リスク 6日を重く見て、当日中に前へ進める",
+          "text": "欠品リスク 6日を重く見て、当日中に前へ進める。材料は在庫 3,100個、欠品リスク 6日、undefined。",
+          "immediateFeedback": "在庫 3,100個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 2,
+            "supply_chain_coordination_risk": -1,
+            "supply_chain_coordination_speed": 2,
+            "supply_chain_coordination_value": -1,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、在庫 3,100個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "在庫 3,100個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は欠品リスク 6日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "在庫 3,100個の欠品リスク 6日とundefinedを突き合わせ、条件付きで進める",
+          "text": "在庫 3,100個の欠品リスク 6日とundefinedを突き合わせ、条件付きで進める。材料は在庫 3,100個、欠品リスク 6日、undefined。",
+          "immediateFeedback": "在庫 3,100個に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": 1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、在庫 3,100個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "在庫 3,100個の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は欠品リスク 6日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は在庫 3,100個、欠品リスク 6日、undefined。",
+          "immediateFeedback": "在庫 3,100個に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": -1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": -1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": -1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、在庫 3,100個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "在庫 3,100個の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は欠品リスク 6日の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "supply-chain-coordination-在庫 3,100個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "supply-chain-coordination-在庫 3,100個判断",
+        "roleSpecificMaterials": [
+          "在庫一覧",
+          "判断対象: 在庫一覧"
+        ],
+        "roleSpecificMetrics": [
+          "在庫 3,100個",
+          "欠品リスク 6日"
+        ],
+        "roleSpecificFailureRisk": "在庫一覧を読まず、在庫 3,100個か欠品リスク 6日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "在庫 3,100個と欠品リスク 6日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "在庫一覧、在庫 3,100個、欠品リスク 6日を判断の主役にしている。",
+        "kernelConnection": "在庫一覧をsupply-chain-coordination-在庫 3,100個判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "supply-chain-coordination-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "輸送枠表",
+      "openingHook": "12:20。枠 8便に必要 11便とundefinedが並んでいる。",
+      "context": "サプライチェーン調整として枠 8便を確認する。必要 11便、undefinedが今日の判断材料になる。",
+      "content": "需要・在庫・輸送制約を供給計画へ変換するため、枠 8便を読んで次の作業判断を残す。",
+      "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+      "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は枠 8便である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "必要 11便の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "必要 11便を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "supply-chain-coordination-枠 8便判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は重点顧客 5社で副作用を確認する。",
+      "npcDialogue": "先輩:「枠 8便を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+      "workMaterial": "輸送枠表\n- 枠 8便\n- 必要 11便\n- 判断対象: 輸送枠表",
+      "decisionPrompt": "supply-chain-coordination-枠 8便判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "必要 11便を重く見て、当日中に前へ進める",
+          "text": "必要 11便を重く見て、当日中に前へ進める。材料は枠 8便、必要 11便、undefined。",
+          "immediateFeedback": "枠 8便に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 2,
+            "supply_chain_coordination_risk": -1,
+            "supply_chain_coordination_speed": 2,
+            "supply_chain_coordination_value": -1,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、枠 8便と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "枠 8便の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は必要 11便の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "枠 8便の必要 11便とundefinedを突き合わせ、条件付きで進める",
+          "text": "枠 8便の必要 11便とundefinedを突き合わせ、条件付きで進める。材料は枠 8便、必要 11便、undefined。",
+          "immediateFeedback": "枠 8便に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": 1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、枠 8便と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "枠 8便の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は必要 11便の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は枠 8便、必要 11便、undefined。",
+          "immediateFeedback": "枠 8便に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": -1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": -1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": -1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、枠 8便と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "枠 8便の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は必要 11便の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "supply-chain-coordination-枠 8便判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "supply-chain-coordination-枠 8便判断",
+        "roleSpecificMaterials": [
+          "輸送枠表",
+          "判断対象: 輸送枠表"
+        ],
+        "roleSpecificMetrics": [
+          "枠 8便",
+          "必要 11便"
+        ],
+        "roleSpecificFailureRisk": "輸送枠表を読まず、枠 8便か必要 11便のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "枠 8便と必要 11便を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "輸送枠表、枠 8便、必要 11便を判断の主役にしている。",
+        "kernelConnection": "輸送枠表をsupply-chain-coordination-枠 8便判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "supply-chain-coordination-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "優先配分案",
+      "openingHook": "14:15。重点顧客 5社に粗利率 24%とundefinedが並んでいる。",
+      "context": "サプライチェーン調整として重点顧客 5社を確認する。粗利率 24%、undefinedが今日の判断材料になる。",
+      "content": "需要・在庫・輸送制約を供給計画へ変換するため、重点顧客 5社を読んで次の作業判断を残す。",
+      "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+      "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は重点顧客 5社である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "粗利率 24%の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "粗利率 24%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "supply-chain-coordination-重点顧客 5社判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は追加 4,000個で副作用を確認する。",
+      "npcDialogue": "先輩:「重点顧客 5社を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+      "workMaterial": "優先配分案\n- 重点顧客 5社\n- 粗利率 24%\n- 判断対象: 優先配分案",
+      "decisionPrompt": "supply-chain-coordination-重点顧客 5社判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "粗利率 24%を重く見て、当日中に前へ進める",
+          "text": "粗利率 24%を重く見て、当日中に前へ進める。材料は重点顧客 5社、粗利率 24%、undefined。",
+          "immediateFeedback": "重点顧客 5社に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 2,
+            "supply_chain_coordination_risk": -1,
+            "supply_chain_coordination_speed": 2,
+            "supply_chain_coordination_value": -1,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、重点顧客 5社と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "重点顧客 5社の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は粗利率 24%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "重点顧客 5社の粗利率 24%とundefinedを突き合わせ、条件付きで進める",
+          "text": "重点顧客 5社の粗利率 24%とundefinedを突き合わせ、条件付きで進める。材料は重点顧客 5社、粗利率 24%、undefined。",
+          "immediateFeedback": "重点顧客 5社に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": 1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、重点顧客 5社と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "重点顧客 5社の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は粗利率 24%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は重点顧客 5社、粗利率 24%、undefined。",
+          "immediateFeedback": "重点顧客 5社に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": -1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": -1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": -1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、重点顧客 5社と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "重点顧客 5社の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は粗利率 24%の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "supply-chain-coordination-重点顧客 5社判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "supply-chain-coordination-重点顧客 5社判断",
+        "roleSpecificMaterials": [
+          "優先配分案",
+          "判断対象: 優先配分案"
+        ],
+        "roleSpecificMetrics": [
+          "重点顧客 5社",
+          "粗利率 24%"
+        ],
+        "roleSpecificFailureRisk": "優先配分案を読まず、重点顧客 5社か粗利率 24%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "重点顧客 5社と粗利率 24%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "優先配分案、重点顧客 5社、粗利率 24%を判断の主役にしている。",
+        "kernelConnection": "優先配分案をsupply-chain-coordination-重点顧客 5社判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "supply-chain-coordination-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "補充計画",
+      "openingHook": "16:35。追加 4,000個に到着 9日後とundefinedが並んでいる。",
+      "context": "サプライチェーン調整として追加 4,000個を確認する。到着 9日後、undefinedが今日の判断材料になる。",
+      "content": "需要・在庫・輸送制約を供給計画へ変換するため、追加 4,000個を読んで次の作業判断を残す。",
+      "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+      "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は追加 4,000個である。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "到着 9日後の背景とundefinedの確度が完全にはそろっていない。",
+      "decisionTradeoff": "到着 9日後を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "supply-chain-coordination-追加 4,000個判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「追加 4,000個を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+      "workMaterial": "補充計画\n- 追加 4,000個\n- 到着 9日後\n- 判断対象: 補充計画",
+      "decisionPrompt": "supply-chain-coordination-追加 4,000個判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "到着 9日後を重く見て、当日中に前へ進める",
+          "text": "到着 9日後を重く見て、当日中に前へ進める。材料は追加 4,000個、到着 9日後、undefined。",
+          "immediateFeedback": "追加 4,000個に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 2,
+            "supply_chain_coordination_risk": -1,
+            "supply_chain_coordination_speed": 2,
+            "supply_chain_coordination_value": -1,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、追加 4,000個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "追加 4,000個の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は到着 9日後の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "追加 4,000個の到着 9日後とundefinedを突き合わせ、条件付きで進める",
+          "text": "追加 4,000個の到着 9日後とundefinedを突き合わせ、条件付きで進める。材料は追加 4,000個、到着 9日後、undefined。",
+          "immediateFeedback": "追加 4,000個に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": 1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": 1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": 1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、追加 4,000個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "追加 4,000個の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は到着 9日後の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+          "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は追加 4,000個、到着 9日後、undefined。",
+          "immediateFeedback": "追加 4,000個に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "supply_chain_coordination_evidence": -1,
+            "supply_chain_coordination_risk": 2,
+            "supply_chain_coordination_speed": -1,
+            "supply_chain_coordination_value": 2,
+            "supply_chain_coordination_feasibility": -1
+          },
+          "misconceptionEffect": "サプライチェーン調整は印象ではなく、追加 4,000個と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "追加 4,000個の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は到着 9日後の副作用を確認する。"
+          },
+          "scores": {
+            "problem_solving": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "supply-chain-coordination-追加 4,000個判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "分析系",
+          "企画系",
+          "人と関わる"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "supply-chain-coordination-追加 4,000個判断",
+        "roleSpecificMaterials": [
+          "補充計画",
+          "判断対象: 補充計画"
+        ],
+        "roleSpecificMetrics": [
+          "追加 4,000個",
+          "到着 9日後"
+        ],
+        "roleSpecificFailureRisk": "補充計画を読まず、追加 4,000個か到着 9日後のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "追加 4,000個と到着 9日後を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "補充計画、追加 4,000個、到着 9日後を判断の主役にしている。",
+        "kernelConnection": "補充計画をsupply-chain-coordination-追加 4,000個判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "supply-chain-coordination-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "需要予測表",
+          "openingHook": "09:10。予測 12,400個に前年差 +18%とundefinedが並んでいる。",
+          "context": "サプライチェーン調整として予測 12,400個を確認する。前年差 +18%、undefinedが今日の判断材料になる。",
+          "content": "需要・在庫・輸送制約を供給計画へ変換するため、予測 12,400個を読んで次の作業判断を残す。",
+          "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+          "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は予測 12,400個である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "前年差 +18%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "前年差 +18%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "supply-chain-coordination-予測 12,400個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は在庫 3,100個で副作用を確認する。",
+          "npcDialogue": "先輩:「予測 12,400個を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+          "workMaterial": "需要予測表\n- 予測 12,400個\n- 前年差 +18%\n- 判断対象: 需要予測表",
+          "decisionPrompt": "supply-chain-coordination-予測 12,400個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "前年差 +18%を重く見て、当日中に前へ進める",
+              "text": "前年差 +18%を重く見て、当日中に前へ進める。材料は予測 12,400個、前年差 +18%、undefined。",
+              "immediateFeedback": "予測 12,400個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 2,
+                "supply_chain_coordination_risk": -1,
+                "supply_chain_coordination_speed": 2,
+                "supply_chain_coordination_value": -1,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、予測 12,400個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "予測 12,400個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は前年差 +18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "予測 12,400個の前年差 +18%とundefinedを突き合わせ、条件付きで進める",
+              "text": "予測 12,400個の前年差 +18%とundefinedを突き合わせ、条件付きで進める。材料は予測 12,400個、前年差 +18%、undefined。",
+              "immediateFeedback": "予測 12,400個に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": 1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、予測 12,400個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "予測 12,400個の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は前年差 +18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は予測 12,400個、前年差 +18%、undefined。",
+              "immediateFeedback": "予測 12,400個に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": -1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": -1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": -1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、予測 12,400個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "予測 12,400個の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は前年差 +18%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "supply-chain-coordination-予測 12,400個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "supply-chain-coordination-予測 12,400個判断",
+            "roleSpecificMaterials": [
+              "需要予測表",
+              "判断対象: 需要予測表"
+            ],
+            "roleSpecificMetrics": [
+              "予測 12,400個",
+              "前年差 +18%"
+            ],
+            "roleSpecificFailureRisk": "需要予測表を読まず、予測 12,400個か前年差 +18%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "予測 12,400個と前年差 +18%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "需要予測表、予測 12,400個、前年差 +18%を判断の主役にしている。",
+            "kernelConnection": "需要予測表をsupply-chain-coordination-予測 12,400個判断へ接続する。"
+          }
+        },
+        {
+          "id": "supply-chain-coordination-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "在庫一覧",
+          "openingHook": "10:40。在庫 3,100個に欠品リスク 6日とundefinedが並んでいる。",
+          "context": "サプライチェーン調整として在庫 3,100個を確認する。欠品リスク 6日、undefinedが今日の判断材料になる。",
+          "content": "需要・在庫・輸送制約を供給計画へ変換するため、在庫 3,100個を読んで次の作業判断を残す。",
+          "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+          "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は在庫 3,100個である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "欠品リスク 6日の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "欠品リスク 6日を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "supply-chain-coordination-在庫 3,100個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は枠 8便で副作用を確認する。",
+          "npcDialogue": "先輩:「在庫 3,100個を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+          "workMaterial": "在庫一覧\n- 在庫 3,100個\n- 欠品リスク 6日\n- 判断対象: 在庫一覧",
+          "decisionPrompt": "supply-chain-coordination-在庫 3,100個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "欠品リスク 6日を重く見て、当日中に前へ進める",
+              "text": "欠品リスク 6日を重く見て、当日中に前へ進める。材料は在庫 3,100個、欠品リスク 6日、undefined。",
+              "immediateFeedback": "在庫 3,100個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 2,
+                "supply_chain_coordination_risk": -1,
+                "supply_chain_coordination_speed": 2,
+                "supply_chain_coordination_value": -1,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、在庫 3,100個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "在庫 3,100個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は欠品リスク 6日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "在庫 3,100個の欠品リスク 6日とundefinedを突き合わせ、条件付きで進める",
+              "text": "在庫 3,100個の欠品リスク 6日とundefinedを突き合わせ、条件付きで進める。材料は在庫 3,100個、欠品リスク 6日、undefined。",
+              "immediateFeedback": "在庫 3,100個に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": 1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、在庫 3,100個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "在庫 3,100個の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は欠品リスク 6日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は在庫 3,100個、欠品リスク 6日、undefined。",
+              "immediateFeedback": "在庫 3,100個に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": -1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": -1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": -1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、在庫 3,100個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "在庫 3,100個の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は欠品リスク 6日の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "supply-chain-coordination-在庫 3,100個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "supply-chain-coordination-在庫 3,100個判断",
+            "roleSpecificMaterials": [
+              "在庫一覧",
+              "判断対象: 在庫一覧"
+            ],
+            "roleSpecificMetrics": [
+              "在庫 3,100個",
+              "欠品リスク 6日"
+            ],
+            "roleSpecificFailureRisk": "在庫一覧を読まず、在庫 3,100個か欠品リスク 6日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "在庫 3,100個と欠品リスク 6日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "在庫一覧、在庫 3,100個、欠品リスク 6日を判断の主役にしている。",
+            "kernelConnection": "在庫一覧をsupply-chain-coordination-在庫 3,100個判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "supply-chain-coordination-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "輸送枠表",
+          "openingHook": "12:20。枠 8便に必要 11便とundefinedが並んでいる。",
+          "context": "サプライチェーン調整として枠 8便を確認する。必要 11便、undefinedが今日の判断材料になる。",
+          "content": "需要・在庫・輸送制約を供給計画へ変換するため、枠 8便を読んで次の作業判断を残す。",
+          "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+          "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は枠 8便である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "必要 11便の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "必要 11便を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "supply-chain-coordination-枠 8便判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は重点顧客 5社で副作用を確認する。",
+          "npcDialogue": "先輩:「枠 8便を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+          "workMaterial": "輸送枠表\n- 枠 8便\n- 必要 11便\n- 判断対象: 輸送枠表",
+          "decisionPrompt": "supply-chain-coordination-枠 8便判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "必要 11便を重く見て、当日中に前へ進める",
+              "text": "必要 11便を重く見て、当日中に前へ進める。材料は枠 8便、必要 11便、undefined。",
+              "immediateFeedback": "枠 8便に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 2,
+                "supply_chain_coordination_risk": -1,
+                "supply_chain_coordination_speed": 2,
+                "supply_chain_coordination_value": -1,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、枠 8便と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "枠 8便の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は必要 11便の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "枠 8便の必要 11便とundefinedを突き合わせ、条件付きで進める",
+              "text": "枠 8便の必要 11便とundefinedを突き合わせ、条件付きで進める。材料は枠 8便、必要 11便、undefined。",
+              "immediateFeedback": "枠 8便に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": 1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、枠 8便と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "枠 8便の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は必要 11便の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は枠 8便、必要 11便、undefined。",
+              "immediateFeedback": "枠 8便に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": -1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": -1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": -1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、枠 8便と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "枠 8便の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は必要 11便の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "supply-chain-coordination-枠 8便判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "supply-chain-coordination-枠 8便判断",
+            "roleSpecificMaterials": [
+              "輸送枠表",
+              "判断対象: 輸送枠表"
+            ],
+            "roleSpecificMetrics": [
+              "枠 8便",
+              "必要 11便"
+            ],
+            "roleSpecificFailureRisk": "輸送枠表を読まず、枠 8便か必要 11便のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "枠 8便と必要 11便を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "輸送枠表、枠 8便、必要 11便を判断の主役にしている。",
+            "kernelConnection": "輸送枠表をsupply-chain-coordination-枠 8便判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "supply-chain-coordination-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "優先配分案",
+          "openingHook": "14:15。重点顧客 5社に粗利率 24%とundefinedが並んでいる。",
+          "context": "サプライチェーン調整として重点顧客 5社を確認する。粗利率 24%、undefinedが今日の判断材料になる。",
+          "content": "需要・在庫・輸送制約を供給計画へ変換するため、重点顧客 5社を読んで次の作業判断を残す。",
+          "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+          "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は重点顧客 5社である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "粗利率 24%の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "粗利率 24%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "supply-chain-coordination-重点顧客 5社判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は追加 4,000個で副作用を確認する。",
+          "npcDialogue": "先輩:「重点顧客 5社を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+          "workMaterial": "優先配分案\n- 重点顧客 5社\n- 粗利率 24%\n- 判断対象: 優先配分案",
+          "decisionPrompt": "supply-chain-coordination-重点顧客 5社判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "粗利率 24%を重く見て、当日中に前へ進める",
+              "text": "粗利率 24%を重く見て、当日中に前へ進める。材料は重点顧客 5社、粗利率 24%、undefined。",
+              "immediateFeedback": "重点顧客 5社に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 2,
+                "supply_chain_coordination_risk": -1,
+                "supply_chain_coordination_speed": 2,
+                "supply_chain_coordination_value": -1,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、重点顧客 5社と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "重点顧客 5社の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は粗利率 24%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "重点顧客 5社の粗利率 24%とundefinedを突き合わせ、条件付きで進める",
+              "text": "重点顧客 5社の粗利率 24%とundefinedを突き合わせ、条件付きで進める。材料は重点顧客 5社、粗利率 24%、undefined。",
+              "immediateFeedback": "重点顧客 5社に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": 1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、重点顧客 5社と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "重点顧客 5社の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は粗利率 24%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は重点顧客 5社、粗利率 24%、undefined。",
+              "immediateFeedback": "重点顧客 5社に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": -1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": -1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": -1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、重点顧客 5社と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "重点顧客 5社の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は粗利率 24%の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "supply-chain-coordination-重点顧客 5社判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "supply-chain-coordination-重点顧客 5社判断",
+            "roleSpecificMaterials": [
+              "優先配分案",
+              "判断対象: 優先配分案"
+            ],
+            "roleSpecificMetrics": [
+              "重点顧客 5社",
+              "粗利率 24%"
+            ],
+            "roleSpecificFailureRisk": "優先配分案を読まず、重点顧客 5社か粗利率 24%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "重点顧客 5社と粗利率 24%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "優先配分案、重点顧客 5社、粗利率 24%を判断の主役にしている。",
+            "kernelConnection": "優先配分案をsupply-chain-coordination-重点顧客 5社判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "supply-chain-coordination-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "補充計画",
+          "openingHook": "16:35。追加 4,000個に到着 9日後とundefinedが並んでいる。",
+          "context": "サプライチェーン調整として追加 4,000個を確認する。到着 9日後、undefinedが今日の判断材料になる。",
+          "content": "需要・在庫・輸送制約を供給計画へ変換するため、追加 4,000個を読んで次の作業判断を残す。",
+          "roleSpecificContext": "サプライチェーン調整は需要・在庫・輸送制約を供給計画へ変換する仕事。",
+          "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は追加 4,000個である。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "到着 9日後の背景とundefinedの確度が完全にはそろっていない。",
+          "decisionTradeoff": "到着 9日後を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "supply-chain-coordination-追加 4,000個判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「追加 4,000個を読まずに進めると、サプライチェーン調整の判断ではなくなる」",
+          "workMaterial": "補充計画\n- 追加 4,000個\n- 到着 9日後\n- 判断対象: 補充計画",
+          "decisionPrompt": "supply-chain-coordination-追加 4,000個判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "到着 9日後を重く見て、当日中に前へ進める",
+              "text": "到着 9日後を重く見て、当日中に前へ進める。材料は追加 4,000個、到着 9日後、undefined。",
+              "immediateFeedback": "追加 4,000個に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 2,
+                "supply_chain_coordination_risk": -1,
+                "supply_chain_coordination_speed": 2,
+                "supply_chain_coordination_value": -1,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、追加 4,000個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "追加 4,000個の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は到着 9日後の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "追加 4,000個の到着 9日後とundefinedを突き合わせ、条件付きで進める",
+              "text": "追加 4,000個の到着 9日後とundefinedを突き合わせ、条件付きで進める。材料は追加 4,000個、到着 9日後、undefined。",
+              "immediateFeedback": "追加 4,000個に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": 1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": 1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": 1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、追加 4,000個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "追加 4,000個の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は到着 9日後の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "undefinedの不確実性を理由に、判断範囲を絞る",
+              "text": "undefinedの不確実性を理由に、判断範囲を絞る。材料は追加 4,000個、到着 9日後、undefined。",
+              "immediateFeedback": "追加 4,000個に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "サプライチェーン調整で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "supply_chain_coordination_evidence": -1,
+                "supply_chain_coordination_risk": 2,
+                "supply_chain_coordination_speed": -1,
+                "supply_chain_coordination_value": 2,
+                "supply_chain_coordination_feasibility": -1
+              },
+              "misconceptionEffect": "サプライチェーン調整は印象ではなく、追加 4,000個と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "追加 4,000個の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は到着 9日後の副作用を確認する。"
+              },
+              "scores": {
+                "problem_solving": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "supply-chain-coordination-追加 4,000個判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "分析系",
+              "企画系",
+              "人と関わる"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "supply-chain-coordination-追加 4,000個判断",
+            "roleSpecificMaterials": [
+              "補充計画",
+              "判断対象: 補充計画"
+            ],
+            "roleSpecificMetrics": [
+              "追加 4,000個",
+              "到着 9日後"
+            ],
+            "roleSpecificFailureRisk": "補充計画を読まず、追加 4,000個か到着 9日後のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "追加 4,000個と到着 9日後を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "補充計画、追加 4,000個、到着 9日後を判断の主役にしている。",
+            "kernelConnection": "補充計画をsupply-chain-coordination-追加 4,000個判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "problem_solving",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch2-1",
+      "title": "サプライチェーン調整の材料翻訳型",
+      "strengths": [
+        "サプライチェーン調整の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "supply_chain_coordination_evidence",
+        "supply_chain_coordination_risk"
+      ],
+      "valuedMeters": [
+        "supply_chain_coordination_evidence"
+      ],
+      "sacrificedMeters": [
+        "supply_chain_coordination_speed"
+      ],
+      "roleRealityReveal": "サプライチェーン調整は、需要・在庫・輸送制約を供給計画へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "サプライチェーン調整の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-2",
+      "title": "サプライチェーン調整の推進型",
+      "strengths": [
+        "サプライチェーン調整の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "supply_chain_coordination_risk",
+        "supply_chain_coordination_speed"
+      ],
+      "valuedMeters": [
+        "supply_chain_coordination_risk"
+      ],
+      "sacrificedMeters": [
+        "supply_chain_coordination_value"
+      ],
+      "roleRealityReveal": "サプライチェーン調整は、需要・在庫・輸送制約を供給計画へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "サプライチェーン調整の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch2-3",
+      "title": "サプライチェーン調整の安全設計型",
+      "strengths": [
+        "サプライチェーン調整の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "supply_chain_coordination_speed",
+        "supply_chain_coordination_value"
+      ],
+      "valuedMeters": [
+        "supply_chain_coordination_speed"
+      ],
+      "sacrificedMeters": [
+        "supply_chain_coordination_feasibility"
+      ],
+      "roleRealityReveal": "サプライチェーン調整は、需要・在庫・輸送制約を供給計画へ変換する仕事。",
+      "misconceptionCorrection": "見た目の対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "サプライチェーン調整の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "サプライチェーン調整は、需要・在庫・輸送制約を供給計画へ変換する仕事。",
+    "misconceptionCorrection": "見た目の対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "サプライチェーン調整として、数字を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "supply-chain-coordination_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "supply_chain_coordination_evidence_vs_supply_chain_coordination_risk",
+      "supply_chain_coordination_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 2 selected for decision primitive diversity.",
+    "mainConflict": "需要・在庫・輸送制約を供給計画へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 2 selection skeleton Cに基づき、各role固有の仕事材料で5 sceneを構成した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "supply_chain_coordination_evidence",
+      "label": "evidence",
+      "description": "サプライチェーン調整のevidence判断"
+    },
+    {
+      "key": "supply_chain_coordination_risk",
+      "label": "risk",
+      "description": "サプライチェーン調整のrisk判断"
+    },
+    {
+      "key": "supply_chain_coordination_speed",
+      "label": "speed",
+      "description": "サプライチェーン調整のspeed判断"
+    },
+    {
+      "key": "supply_chain_coordination_value",
+      "label": "value",
+      "description": "サプライチェーン調整のvalue判断"
+    },
+    {
+      "key": "supply_chain_coordination_feasibility",
+      "label": "feasibility",
+      "description": "サプライチェーン調整のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "サプライチェーン調整の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "supply_chain_coordination_evidence",
+      "supply_chain_coordination_risk",
+      "supply_chain_coordination_speed",
+      "supply_chain_coordination_value",
+      "supply_chain_coordination_feasibility"
+    ]
+  },
+  "roleCoreFriction": "需要・在庫・輸送制約を供給計画へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "サプライチェーン調整は人との調整や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "サプライチェーン調整は、需要・在庫・輸送制約を供給計画へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "予測 12,400個、在庫 3,100個、枠 8便、重点顧客 5社、追加 4,000個、関係者制約、期限",
+    "output": "サプライチェーン調整としての判断案、次回確認項目、リスクメモ",
+    "transformation": "需要・在庫・輸送制約を供給計画へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "予測 12,400個",
+      "在庫 3,100個",
+      "枠 8便",
+      "重点顧客 5社",
+      "追加 4,000個"
+    ],
+    "metrics": [
+      "予測 12,400個",
+      "前年差 +18%",
+      "在庫 3,100個",
+      "欠品リスク 6日",
+      "枠 8便",
+      "必要 11便",
+      "重点顧客 5社",
+      "粗利率 24%",
+      "追加 4,000個",
+      "到着 9日後"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "予測 12,400個、在庫 3,100個、枠 8便と前年差 +18%、、欠品リスク 6日を読まなければ成立しないため。"
+  }
+}

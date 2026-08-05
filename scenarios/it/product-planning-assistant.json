@@ -1,0 +1,2190 @@
+{
+  "id": "it/product-planning-assistant",
+  "version": "2.0.0",
+  "scenarioVersion": "2",
+  "cType": "C_ALPHA",
+  "industry": "IT・通信",
+  "industrySlug": "it",
+  "role": "PdM/プロダクト企画補佐",
+  "roleSlug": "product-planning-assistant",
+  "roleCategory": "industry_specific",
+  "roleSpecificity": "industry_specific",
+  "modes": [
+    "immersive"
+  ],
+  "durationMinutes": 18,
+  "difficulty": "standard",
+  "tags": [
+    "理系向け",
+    "分析系",
+    "高難易度"
+  ],
+  "targetUsers": [
+    "student",
+    "university"
+  ],
+  "background": {
+    "imagePrompt": "Create a realistic workplace background for IT・通信 PdM/プロダクト企画補佐.",
+    "negativePrompt": "readable text, logo, brand name, watermark, celebrity, low quality, blurry, fantasy, anime, manga",
+    "composition": "16:9 wide background with negative space for overlay",
+    "overlaySafeArea": "left-center",
+    "mood": "calm, focused, realistic",
+    "industryVisualTokens": [
+      "it",
+      "product-planning-assistant"
+    ]
+  },
+  "future3d": {
+    "environmentType": "workplace",
+    "spatialAnchors": [
+      "desk",
+      "meeting-space",
+      "presentation-area"
+    ],
+    "interactableObjects": [
+      "documents",
+      "dashboard",
+      "chat"
+    ],
+    "npcPositions": [
+      "front",
+      "left",
+      "background"
+    ],
+    "cameraHint": "eye-level wide shot",
+    "soundscapeHint": "quiet office ambience",
+    "interactionType": "point_and_select"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "role": "先輩",
+      "summary": "判断の背景を問い返す伴走役。"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "09:10",
+      "label": "要望整理表"
+    },
+    {
+      "time": "10:40",
+      "label": "利用ログ"
+    },
+    {
+      "time": "12:20",
+      "label": "開発見積"
+    },
+    {
+      "time": "14:15",
+      "label": "優先順位表"
+    },
+    {
+      "time": "16:35",
+      "label": "リリースメモ"
+    }
+  ],
+  "dayTimeline": [
+    {
+      "time": "09:10",
+      "label": "要望整理表"
+    },
+    {
+      "time": "10:40",
+      "label": "利用ログ"
+    },
+    {
+      "time": "12:20",
+      "label": "開発見積"
+    },
+    {
+      "time": "14:15",
+      "label": "優先順位表"
+    },
+    {
+      "time": "16:35",
+      "label": "リリースメモ"
+    }
+  ],
+  "sceneList": [
+    "product-planning-assistant-01",
+    "product-planning-assistant-02",
+    "product-planning-assistant-03",
+    "product-planning-assistant-04",
+    "product-planning-assistant-05"
+  ],
+  "meta": {
+    "title": "PdM/プロダクト企画補佐",
+    "industry": "IT・通信",
+    "role": "PdM/プロダクト企画補佐",
+    "duration_minutes": 18,
+    "description": "要望・利用データ・開発制約を機能優先順位へ変換するCβ標準シナリオ。",
+    "sources": [
+      "to_be_researched: 厚労省 job tag",
+      "to_be_researched: 公開職業情報",
+      "to_be_researched: 一般公開の業務解説"
+    ],
+    "company_model": "架空の事業者を前提にしたCβドラフト"
+  },
+  "dimensions": [
+    {
+      "key": "technical",
+      "label": "技術力",
+      "description": "技術的な問題を分析・解決する力"
+    },
+    {
+      "key": "logical",
+      "label": "論理的思考",
+      "description": "情報を比較し、筋道立てて判断する力"
+    },
+    {
+      "key": "communication",
+      "label": "コミュニケーション",
+      "description": "相手に応じて伝える力"
+    },
+    {
+      "key": "ownership",
+      "label": "オーナーシップ",
+      "description": "責任を持って進める力"
+    },
+    {
+      "key": "agility",
+      "label": "対応力",
+      "description": "変化に素早く向き合う力"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "review",
+      "id": "product-planning-assistant-01",
+      "time": "09:10",
+      "interactable": "monitor_browser",
+      "title": "要望整理表",
+      "openingHook": "09:10。要望整理表に要望 48件と重複 11件が並んでいる。",
+      "context": "PdM/プロダクト企画補佐として要望整理表を確認する。要望 48件、重複 11件が今日の判断材料になる。",
+      "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、要望整理表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+      "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は要望整理表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "要望 48件の背景と重複 11件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "要望 48件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "product-planning-assistant-要望整理表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は利用率 23%で副作用を確認する。",
+      "npcDialogue": "先輩:「要望整理表を読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+      "workMaterial": "要望整理表\n- 要望 48件\n- 重複 11件\n- 判断対象: 要望整理表",
+      "decisionPrompt": "product-planning-assistant-要望整理表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "要望 48件を重く見て、当日中に前へ進める",
+          "text": "要望 48件を重く見て、当日中に前へ進める。材料は要望整理表、要望 48件、重複 11件。",
+          "immediateFeedback": "要望整理表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 2,
+            "product_planning_assistant_risk": -1,
+            "product_planning_assistant_speed": 2,
+            "product_planning_assistant_value": -1,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、要望整理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "要望整理表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は要望 48件の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "要望整理表の要望 48件と重複 11件を突き合わせ、条件付きで進める",
+          "text": "要望整理表の要望 48件と重複 11件を突き合わせ、条件付きで進める。材料は要望整理表、要望 48件、重複 11件。",
+          "immediateFeedback": "要望整理表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": 1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、要望整理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "要望整理表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は要望 48件の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "重複 11件の不確実性を理由に、判断範囲を絞る",
+          "text": "重複 11件の不確実性を理由に、判断範囲を絞る。材料は要望整理表、要望 48件、重複 11件。",
+          "immediateFeedback": "要望整理表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": -1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": -1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": -1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、要望整理表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "要望整理表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は要望 48件の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "product-planning-assistant-要望整理表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "product-planning-assistant-要望整理表判断",
+        "roleSpecificMaterials": [
+          "要望整理表",
+          "判断対象: 要望整理表"
+        ],
+        "roleSpecificMetrics": [
+          "要望 48件",
+          "重複 11件"
+        ],
+        "roleSpecificFailureRisk": "要望整理表を読まず、要望 48件か重複 11件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "要望 48件と重複 11件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "要望整理表、要望 48件、重複 11件を判断の主役にしている。",
+        "kernelConnection": "要望整理表をproduct-planning-assistant-要望整理表判断へ接続する。"
+      }
+    },
+    {
+      "type": "debug",
+      "id": "product-planning-assistant-02",
+      "time": "10:40",
+      "interactable": "monitor_terminal",
+      "title": "利用ログ",
+      "openingHook": "10:40。利用ログに利用率 23%と離脱 37%が並んでいる。",
+      "context": "PdM/プロダクト企画補佐として利用ログを確認する。利用率 23%、離脱 37%が今日の判断材料になる。",
+      "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、利用ログを読んで次の作業判断を残す。",
+      "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+      "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は利用ログである。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "利用率 23%の背景と離脱 37%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "利用率 23%を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "product-planning-assistant-利用ログ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は工数 18日で副作用を確認する。",
+      "npcDialogue": "先輩:「利用ログを読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+      "workMaterial": "利用ログ\n- 利用率 23%\n- 離脱 37%\n- 判断対象: 利用ログ",
+      "decisionPrompt": "product-planning-assistant-利用ログ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "利用率 23%を重く見て、当日中に前へ進める",
+          "text": "利用率 23%を重く見て、当日中に前へ進める。材料は利用ログ、利用率 23%、離脱 37%。",
+          "immediateFeedback": "利用ログに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 2,
+            "product_planning_assistant_risk": -1,
+            "product_planning_assistant_speed": 2,
+            "product_planning_assistant_value": -1,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、利用ログと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "利用ログの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は利用率 23%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "利用ログの利用率 23%と離脱 37%を突き合わせ、条件付きで進める",
+          "text": "利用ログの利用率 23%と離脱 37%を突き合わせ、条件付きで進める。材料は利用ログ、利用率 23%、離脱 37%。",
+          "immediateFeedback": "利用ログに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": 1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、利用ログと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "利用ログの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は利用率 23%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "離脱 37%の不確実性を理由に、判断範囲を絞る",
+          "text": "離脱 37%の不確実性を理由に、判断範囲を絞る。材料は利用ログ、利用率 23%、離脱 37%。",
+          "immediateFeedback": "利用ログに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": -1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": -1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": -1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、利用ログと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "利用ログの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は利用率 23%の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "product-planning-assistant-利用ログ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "product-planning-assistant-利用ログ判断",
+        "roleSpecificMaterials": [
+          "利用ログ",
+          "判断対象: 利用ログ"
+        ],
+        "roleSpecificMetrics": [
+          "利用率 23%",
+          "離脱 37%"
+        ],
+        "roleSpecificFailureRisk": "利用ログを読まず、利用率 23%か離脱 37%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "利用率 23%と離脱 37%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "利用ログ、利用率 23%、離脱 37%を判断の主役にしている。",
+        "kernelConnection": "利用ログをproduct-planning-assistant-利用ログ判断へ接続する。"
+      }
+    },
+    {
+      "type": "email",
+      "id": "product-planning-assistant-03",
+      "time": "12:20",
+      "interactable": "monitor_mail",
+      "title": "開発見積",
+      "openingHook": "12:20。開発見積に工数 18日と空き 9日が並んでいる。",
+      "context": "PdM/プロダクト企画補佐として開発見積を確認する。工数 18日、空き 9日が今日の判断材料になる。",
+      "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、開発見積を読んで次の作業判断を残す。",
+      "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+      "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は開発見積である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "工数 18日の背景と空き 9日の確度が完全にはそろっていない。",
+      "decisionTradeoff": "工数 18日を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "product-planning-assistant-開発見積判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は影響ユーザー 4,800人で副作用を確認する。",
+      "npcDialogue": "先輩:「開発見積を読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+      "workMaterial": "開発見積\n- 工数 18日\n- 空き 9日\n- 判断対象: 開発見積",
+      "decisionPrompt": "product-planning-assistant-開発見積判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "工数 18日を重く見て、当日中に前へ進める",
+          "text": "工数 18日を重く見て、当日中に前へ進める。材料は開発見積、工数 18日、空き 9日。",
+          "immediateFeedback": "開発見積に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 2,
+            "product_planning_assistant_risk": -1,
+            "product_planning_assistant_speed": 2,
+            "product_planning_assistant_value": -1,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、開発見積と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "開発見積の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は工数 18日の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "開発見積の工数 18日と空き 9日を突き合わせ、条件付きで進める",
+          "text": "開発見積の工数 18日と空き 9日を突き合わせ、条件付きで進める。材料は開発見積、工数 18日、空き 9日。",
+          "immediateFeedback": "開発見積に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": 1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、開発見積と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "開発見積の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は工数 18日の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "空き 9日の不確実性を理由に、判断範囲を絞る",
+          "text": "空き 9日の不確実性を理由に、判断範囲を絞る。材料は開発見積、工数 18日、空き 9日。",
+          "immediateFeedback": "開発見積に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": -1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": -1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": -1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、開発見積と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "開発見積の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は工数 18日の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "product-planning-assistant-開発見積判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "product-planning-assistant-開発見積判断",
+        "roleSpecificMaterials": [
+          "開発見積",
+          "判断対象: 開発見積"
+        ],
+        "roleSpecificMetrics": [
+          "工数 18日",
+          "空き 9日"
+        ],
+        "roleSpecificFailureRisk": "開発見積を読まず、工数 18日か空き 9日のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "工数 18日と空き 9日を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "開発見積、工数 18日、空き 9日を判断の主役にしている。",
+        "kernelConnection": "開発見積をproduct-planning-assistant-開発見積判断へ接続する。"
+      }
+    },
+    {
+      "type": "meeting",
+      "id": "product-planning-assistant-04",
+      "time": "14:15",
+      "interactable": "meeting_speaker",
+      "presenter": "先輩",
+      "title": "優先順位表",
+      "openingHook": "14:15。優先順位表に影響ユーザー 4,800人と売上影響 +6%が並んでいる。",
+      "context": "PdM/プロダクト企画補佐として優先順位表を確認する。影響ユーザー 4,800人、売上影響 +6%が今日の判断材料になる。",
+      "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、優先順位表を読んで次の作業判断を残す。",
+      "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+      "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料は優先順位表である。",
+      "timePressure": "次の予定までに判断が必要。",
+      "missingInformation": "影響ユーザー 4,800人の背景と売上影響 +6%の確度が完全にはそろっていない。",
+      "decisionTradeoff": "影響ユーザー 4,800人を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "product-planning-assistant-優先順位表判断が次の資料判断へ響く。",
+      "nextSceneEcho": "次は対象機能 2件で副作用を確認する。",
+      "npcDialogue": "先輩:「優先順位表を読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+      "workMaterial": "優先順位表\n- 影響ユーザー 4,800人\n- 売上影響 +6%\n- 判断対象: 優先順位表",
+      "decisionPrompt": "product-planning-assistant-優先順位表判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "影響ユーザー 4,800人を重く見て、当日中に前へ進める",
+          "text": "影響ユーザー 4,800人を重く見て、当日中に前へ進める。材料は優先順位表、影響ユーザー 4,800人、売上影響 +6%。",
+          "immediateFeedback": "優先順位表に基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 2,
+            "product_planning_assistant_risk": -1,
+            "product_planning_assistant_speed": 2,
+            "product_planning_assistant_value": -1,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、優先順位表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "優先順位表の具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は影響ユーザー 4,800人の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "優先順位表の影響ユーザー 4,800人と売上影響 +6%を突き合わせ、条件付きで進める",
+          "text": "優先順位表の影響ユーザー 4,800人と売上影響 +6%を突き合わせ、条件付きで進める。材料は優先順位表、影響ユーザー 4,800人、売上影響 +6%。",
+          "immediateFeedback": "優先順位表に基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": 1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、優先順位表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "優先順位表の具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は影響ユーザー 4,800人の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "売上影響 +6%の不確実性を理由に、判断範囲を絞る",
+          "text": "売上影響 +6%の不確実性を理由に、判断範囲を絞る。材料は優先順位表、影響ユーザー 4,800人、売上影響 +6%。",
+          "immediateFeedback": "優先順位表に基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": -1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": -1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": -1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、優先順位表と数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "優先順位表の具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は影響ユーザー 4,800人の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "product-planning-assistant-優先順位表判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "product-planning-assistant-優先順位表判断",
+        "roleSpecificMaterials": [
+          "優先順位表",
+          "判断対象: 優先順位表"
+        ],
+        "roleSpecificMetrics": [
+          "影響ユーザー 4,800人",
+          "売上影響 +6%"
+        ],
+        "roleSpecificFailureRisk": "優先順位表を読まず、影響ユーザー 4,800人か売上影響 +6%のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "影響ユーザー 4,800人と売上影響 +6%を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "優先順位表、影響ユーザー 4,800人、売上影響 +6%を判断の主役にしている。",
+        "kernelConnection": "優先順位表をproduct-planning-assistant-優先順位表判断へ接続する。"
+      }
+    },
+    {
+      "type": "memo",
+      "id": "product-planning-assistant-05",
+      "time": "16:35",
+      "interactable": "sticky_notes",
+      "title": "リリースメモ",
+      "openingHook": "16:35。リリースメモに対象機能 2件と未決 3件が並んでいる。",
+      "context": "PdM/プロダクト企画補佐としてリリースメモを確認する。対象機能 2件、未決 3件が今日の判断材料になる。",
+      "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、リリースメモを読んで次の作業判断を残す。",
+      "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+      "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+      "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+      "stakeholderPressure": "関係者は早い回答を求めるが、主材料はリリースメモである。",
+      "timePressure": "終業までに判断が必要。",
+      "missingInformation": "対象機能 2件の背景と未決 3件の確度が完全にはそろっていない。",
+      "decisionTradeoff": "対象機能 2件を重く見るほど、別の制約を犠牲にする。",
+      "consequenceHook": "product-planning-assistant-リリースメモ判断が次の資料判断へ響く。",
+      "nextSceneEcho": "結果で職業理解として返る。",
+      "npcDialogue": "先輩:「リリースメモを読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+      "workMaterial": "リリースメモ\n- 対象機能 2件\n- 未決 3件\n- 判断対象: リリースメモ",
+      "decisionPrompt": "product-planning-assistant-リリースメモ判断として、どの判断を残すか。",
+      "choices": [
+        {
+          "id": "a",
+          "label": "対象機能 2件を重く見て、当日中に前へ進める",
+          "text": "対象機能 2件を重く見て、当日中に前へ進める。材料はリリースメモ、対象機能 2件、未決 3件。",
+          "immediateFeedback": "リリースメモに基づく動きが決まる。",
+          "delayedConsequence": "速度は出るが確認範囲が狭い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 2,
+            "product_planning_assistant_risk": -1,
+            "product_planning_assistant_speed": 2,
+            "product_planning_assistant_value": -1,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、リリースメモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リリースメモの具体数字を使っている。",
+            "risk": "速度は出るが確認範囲が狭い",
+            "next": "次は対象機能 2件の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "speed_first"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "premature_action"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "リリースメモの対象機能 2件と未決 3件を突き合わせ、条件付きで進める",
+          "text": "リリースメモの対象機能 2件と未決 3件を突き合わせ、条件付きで進める。材料はリリースメモ、対象機能 2件、未決 3件。",
+          "immediateFeedback": "リリースメモに基づく動きが決まる。",
+          "delayedConsequence": "作業は増えるが説明可能性が高い",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": 1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": 1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": 1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、リリースメモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リリースメモの具体数字を使っている。",
+            "risk": "作業は増えるが説明可能性が高い",
+            "next": "次は対象機能 2件の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 3,
+            "communication": 3,
+            "ownership": 3,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "condition_design"
+          ],
+          "universityInsightTags": [
+            "misconception_correction"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "coordination_load"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "未決 3件の不確実性を理由に、判断範囲を絞る",
+          "text": "未決 3件の不確実性を理由に、判断範囲を絞る。材料はリリースメモ、対象機能 2件、未決 3件。",
+          "immediateFeedback": "リリースメモに基づく動きが決まる。",
+          "delayedConsequence": "安全だが機会を逃す",
+          "nextSceneEffect": "次の資料に判断の副作用が残る。",
+          "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+          "meterEffects": {
+            "product_planning_assistant_evidence": -1,
+            "product_planning_assistant_risk": 2,
+            "product_planning_assistant_speed": -1,
+            "product_planning_assistant_value": 2,
+            "product_planning_assistant_feasibility": -1
+          },
+          "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、リリースメモと数値を読んで判断する。",
+          "studentFeedback": {
+            "good": "リリースメモの具体数字を使っている。",
+            "risk": "安全だが機会を逃す",
+            "next": "次は対象機能 2件の副作用を確認する。"
+          },
+          "scores": {
+            "technical": 3,
+            "logical": 2,
+            "communication": 3,
+            "ownership": 2,
+            "agility": 3
+          },
+          "behaviorTags": [
+            "risk_control"
+          ],
+          "universityInsightTags": [
+            "work_value_preference"
+          ],
+          "companyInsightTags": [
+            "role_understanding_signal"
+          ],
+          "riskTags": [
+            "opportunity_loss"
+          ]
+        }
+      ],
+      "analytics": {
+        "decisionType": "product-planning-assistant-リリースメモ判断",
+        "frictionType": "role_specific_tradeoff",
+        "workValueTags": [
+          "理系向け",
+          "分析系",
+          "高難易度"
+        ],
+        "careerRealityTags": [
+          "job_reality",
+          "trade_off",
+          "misconception_correction"
+        ],
+        "localCareerTags": []
+      },
+      "roleSpecificity": {
+        "coreDecisionPrimitive": "product-planning-assistant-リリースメモ判断",
+        "roleSpecificMaterials": [
+          "リリースメモ",
+          "判断対象: リリースメモ"
+        ],
+        "roleSpecificMetrics": [
+          "対象機能 2件",
+          "未決 3件"
+        ],
+        "roleSpecificFailureRisk": "リリースメモを読まず、対象機能 2件か未決 3件のどちらかを見落とす。",
+        "roleSpecificEvaluationCriteria": "対象機能 2件と未決 3件を使って説明可能な判断にできるか。",
+        "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+        "antiGenericDesignNote": "リリースメモ、対象機能 2件、未決 3件を判断の主役にしている。",
+        "kernelConnection": "リリースメモをproduct-planning-assistant-リリースメモ判断へ接続する。"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "morning",
+      "label": "午前",
+      "time_start": "09:00",
+      "time_end": "11:50",
+      "location": "desk",
+      "intro": "午前フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "product-planning-assistant-01",
+          "time": "09:10",
+          "interactable": "monitor_browser",
+          "title": "要望整理表",
+          "openingHook": "09:10。要望整理表に要望 48件と重複 11件が並んでいる。",
+          "context": "PdM/プロダクト企画補佐として要望整理表を確認する。要望 48件、重複 11件が今日の判断材料になる。",
+          "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、要望整理表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+          "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は要望整理表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "要望 48件の背景と重複 11件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "要望 48件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "product-planning-assistant-要望整理表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は利用率 23%で副作用を確認する。",
+          "npcDialogue": "先輩:「要望整理表を読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+          "workMaterial": "要望整理表\n- 要望 48件\n- 重複 11件\n- 判断対象: 要望整理表",
+          "decisionPrompt": "product-planning-assistant-要望整理表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "要望 48件を重く見て、当日中に前へ進める",
+              "text": "要望 48件を重く見て、当日中に前へ進める。材料は要望整理表、要望 48件、重複 11件。",
+              "immediateFeedback": "要望整理表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 2,
+                "product_planning_assistant_risk": -1,
+                "product_planning_assistant_speed": 2,
+                "product_planning_assistant_value": -1,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、要望整理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "要望整理表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は要望 48件の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "要望整理表の要望 48件と重複 11件を突き合わせ、条件付きで進める",
+              "text": "要望整理表の要望 48件と重複 11件を突き合わせ、条件付きで進める。材料は要望整理表、要望 48件、重複 11件。",
+              "immediateFeedback": "要望整理表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": 1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、要望整理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "要望整理表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は要望 48件の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "重複 11件の不確実性を理由に、判断範囲を絞る",
+              "text": "重複 11件の不確実性を理由に、判断範囲を絞る。材料は要望整理表、要望 48件、重複 11件。",
+              "immediateFeedback": "要望整理表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": -1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": -1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": -1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、要望整理表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "要望整理表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は要望 48件の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "product-planning-assistant-要望整理表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "product-planning-assistant-要望整理表判断",
+            "roleSpecificMaterials": [
+              "要望整理表",
+              "判断対象: 要望整理表"
+            ],
+            "roleSpecificMetrics": [
+              "要望 48件",
+              "重複 11件"
+            ],
+            "roleSpecificFailureRisk": "要望整理表を読まず、要望 48件か重複 11件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "要望 48件と重複 11件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "要望整理表、要望 48件、重複 11件を判断の主役にしている。",
+            "kernelConnection": "要望整理表をproduct-planning-assistant-要望整理表判断へ接続する。"
+          }
+        },
+        {
+          "id": "product-planning-assistant-02",
+          "time": "10:40",
+          "interactable": "monitor_terminal",
+          "title": "利用ログ",
+          "openingHook": "10:40。利用ログに利用率 23%と離脱 37%が並んでいる。",
+          "context": "PdM/プロダクト企画補佐として利用ログを確認する。利用率 23%、離脱 37%が今日の判断材料になる。",
+          "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、利用ログを読んで次の作業判断を残す。",
+          "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+          "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は利用ログである。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "利用率 23%の背景と離脱 37%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "利用率 23%を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "product-planning-assistant-利用ログ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は工数 18日で副作用を確認する。",
+          "npcDialogue": "先輩:「利用ログを読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+          "workMaterial": "利用ログ\n- 利用率 23%\n- 離脱 37%\n- 判断対象: 利用ログ",
+          "decisionPrompt": "product-planning-assistant-利用ログ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "利用率 23%を重く見て、当日中に前へ進める",
+              "text": "利用率 23%を重く見て、当日中に前へ進める。材料は利用ログ、利用率 23%、離脱 37%。",
+              "immediateFeedback": "利用ログに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 2,
+                "product_planning_assistant_risk": -1,
+                "product_planning_assistant_speed": 2,
+                "product_planning_assistant_value": -1,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、利用ログと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "利用ログの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は利用率 23%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "利用ログの利用率 23%と離脱 37%を突き合わせ、条件付きで進める",
+              "text": "利用ログの利用率 23%と離脱 37%を突き合わせ、条件付きで進める。材料は利用ログ、利用率 23%、離脱 37%。",
+              "immediateFeedback": "利用ログに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": 1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、利用ログと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "利用ログの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は利用率 23%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "離脱 37%の不確実性を理由に、判断範囲を絞る",
+              "text": "離脱 37%の不確実性を理由に、判断範囲を絞る。材料は利用ログ、利用率 23%、離脱 37%。",
+              "immediateFeedback": "利用ログに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": -1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": -1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": -1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、利用ログと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "利用ログの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は利用率 23%の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "product-planning-assistant-利用ログ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "product-planning-assistant-利用ログ判断",
+            "roleSpecificMaterials": [
+              "利用ログ",
+              "判断対象: 利用ログ"
+            ],
+            "roleSpecificMetrics": [
+              "利用率 23%",
+              "離脱 37%"
+            ],
+            "roleSpecificFailureRisk": "利用ログを読まず、利用率 23%か離脱 37%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "利用率 23%と離脱 37%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "利用ログ、利用率 23%、離脱 37%を判断の主役にしている。",
+            "kernelConnection": "利用ログをproduct-planning-assistant-利用ログ判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "昼",
+      "time_start": "12:00",
+      "time_end": "13:00",
+      "location": "cafeteria",
+      "intro": "昼フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "product-planning-assistant-03",
+          "time": "12:20",
+          "interactable": "monitor_mail",
+          "title": "開発見積",
+          "openingHook": "12:20。開発見積に工数 18日と空き 9日が並んでいる。",
+          "context": "PdM/プロダクト企画補佐として開発見積を確認する。工数 18日、空き 9日が今日の判断材料になる。",
+          "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、開発見積を読んで次の作業判断を残す。",
+          "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+          "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は開発見積である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "工数 18日の背景と空き 9日の確度が完全にはそろっていない。",
+          "decisionTradeoff": "工数 18日を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "product-planning-assistant-開発見積判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は影響ユーザー 4,800人で副作用を確認する。",
+          "npcDialogue": "先輩:「開発見積を読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+          "workMaterial": "開発見積\n- 工数 18日\n- 空き 9日\n- 判断対象: 開発見積",
+          "decisionPrompt": "product-planning-assistant-開発見積判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "工数 18日を重く見て、当日中に前へ進める",
+              "text": "工数 18日を重く見て、当日中に前へ進める。材料は開発見積、工数 18日、空き 9日。",
+              "immediateFeedback": "開発見積に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 2,
+                "product_planning_assistant_risk": -1,
+                "product_planning_assistant_speed": 2,
+                "product_planning_assistant_value": -1,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、開発見積と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "開発見積の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は工数 18日の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "開発見積の工数 18日と空き 9日を突き合わせ、条件付きで進める",
+              "text": "開発見積の工数 18日と空き 9日を突き合わせ、条件付きで進める。材料は開発見積、工数 18日、空き 9日。",
+              "immediateFeedback": "開発見積に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": 1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、開発見積と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "開発見積の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は工数 18日の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "空き 9日の不確実性を理由に、判断範囲を絞る",
+              "text": "空き 9日の不確実性を理由に、判断範囲を絞る。材料は開発見積、工数 18日、空き 9日。",
+              "immediateFeedback": "開発見積に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": -1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": -1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": -1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、開発見積と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "開発見積の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は工数 18日の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "product-planning-assistant-開発見積判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "product-planning-assistant-開発見積判断",
+            "roleSpecificMaterials": [
+              "開発見積",
+              "判断対象: 開発見積"
+            ],
+            "roleSpecificMetrics": [
+              "工数 18日",
+              "空き 9日"
+            ],
+            "roleSpecificFailureRisk": "開発見積を読まず、工数 18日か空き 9日のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "工数 18日と空き 9日を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "開発見積、工数 18日、空き 9日を判断の主役にしている。",
+            "kernelConnection": "開発見積をproduct-planning-assistant-開発見積判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "label": "午後会議",
+      "time_start": "13:30",
+      "time_end": "15:30",
+      "location": "conference_room",
+      "intro": "午後会議フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "product-planning-assistant-04",
+          "time": "14:15",
+          "interactable": "meeting_speaker",
+          "presenter": "先輩",
+          "title": "優先順位表",
+          "openingHook": "14:15。優先順位表に影響ユーザー 4,800人と売上影響 +6%が並んでいる。",
+          "context": "PdM/プロダクト企画補佐として優先順位表を確認する。影響ユーザー 4,800人、売上影響 +6%が今日の判断材料になる。",
+          "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、優先順位表を読んで次の作業判断を残す。",
+          "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+          "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料は優先順位表である。",
+          "timePressure": "次の予定までに判断が必要。",
+          "missingInformation": "影響ユーザー 4,800人の背景と売上影響 +6%の確度が完全にはそろっていない。",
+          "decisionTradeoff": "影響ユーザー 4,800人を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "product-planning-assistant-優先順位表判断が次の資料判断へ響く。",
+          "nextSceneEcho": "次は対象機能 2件で副作用を確認する。",
+          "npcDialogue": "先輩:「優先順位表を読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+          "workMaterial": "優先順位表\n- 影響ユーザー 4,800人\n- 売上影響 +6%\n- 判断対象: 優先順位表",
+          "decisionPrompt": "product-planning-assistant-優先順位表判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "影響ユーザー 4,800人を重く見て、当日中に前へ進める",
+              "text": "影響ユーザー 4,800人を重く見て、当日中に前へ進める。材料は優先順位表、影響ユーザー 4,800人、売上影響 +6%。",
+              "immediateFeedback": "優先順位表に基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 2,
+                "product_planning_assistant_risk": -1,
+                "product_planning_assistant_speed": 2,
+                "product_planning_assistant_value": -1,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、優先順位表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "優先順位表の具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は影響ユーザー 4,800人の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "優先順位表の影響ユーザー 4,800人と売上影響 +6%を突き合わせ、条件付きで進める",
+              "text": "優先順位表の影響ユーザー 4,800人と売上影響 +6%を突き合わせ、条件付きで進める。材料は優先順位表、影響ユーザー 4,800人、売上影響 +6%。",
+              "immediateFeedback": "優先順位表に基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": 1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、優先順位表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "優先順位表の具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は影響ユーザー 4,800人の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "売上影響 +6%の不確実性を理由に、判断範囲を絞る",
+              "text": "売上影響 +6%の不確実性を理由に、判断範囲を絞る。材料は優先順位表、影響ユーザー 4,800人、売上影響 +6%。",
+              "immediateFeedback": "優先順位表に基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": -1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": -1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": -1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、優先順位表と数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "優先順位表の具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は影響ユーザー 4,800人の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "product-planning-assistant-優先順位表判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "product-planning-assistant-優先順位表判断",
+            "roleSpecificMaterials": [
+              "優先順位表",
+              "判断対象: 優先順位表"
+            ],
+            "roleSpecificMetrics": [
+              "影響ユーザー 4,800人",
+              "売上影響 +6%"
+            ],
+            "roleSpecificFailureRisk": "優先順位表を読まず、影響ユーザー 4,800人か売上影響 +6%のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "影響ユーザー 4,800人と売上影響 +6%を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "優先順位表、影響ユーザー 4,800人、売上影響 +6%を判断の主役にしている。",
+            "kernelConnection": "優先順位表をproduct-planning-assistant-優先順位表判断へ接続する。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon",
+      "label": "夕方",
+      "time_start": "15:45",
+      "time_end": "17:30",
+      "location": "desk",
+      "intro": "夕方フェーズ。仕事材料を読んで判断する。",
+      "scenes": [
+        {
+          "id": "product-planning-assistant-05",
+          "time": "16:35",
+          "interactable": "sticky_notes",
+          "title": "リリースメモ",
+          "openingHook": "16:35。リリースメモに対象機能 2件と未決 3件が並んでいる。",
+          "context": "PdM/プロダクト企画補佐としてリリースメモを確認する。対象機能 2件、未決 3件が今日の判断材料になる。",
+          "content": "要望・利用データ・開発制約を機能優先順位へ変換するため、リリースメモを読んで次の作業判断を残す。",
+          "roleSpecificContext": "PdM/プロダクト企画補佐は要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+          "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約を同時に扱う葛藤。",
+          "hiddenWorkReality": "見えている依頼より、資料に残る数字と条件が判断を決める。",
+          "stakeholderPressure": "関係者は早い回答を求めるが、主材料はリリースメモである。",
+          "timePressure": "終業までに判断が必要。",
+          "missingInformation": "対象機能 2件の背景と未決 3件の確度が完全にはそろっていない。",
+          "decisionTradeoff": "対象機能 2件を重く見るほど、別の制約を犠牲にする。",
+          "consequenceHook": "product-planning-assistant-リリースメモ判断が次の資料判断へ響く。",
+          "nextSceneEcho": "結果で職業理解として返る。",
+          "npcDialogue": "先輩:「リリースメモを読まずに進めると、PdM/プロダクト企画補佐の判断ではなくなる」",
+          "workMaterial": "リリースメモ\n- 対象機能 2件\n- 未決 3件\n- 判断対象: リリースメモ",
+          "decisionPrompt": "product-planning-assistant-リリースメモ判断として、どの判断を残すか。",
+          "choices": [
+            {
+              "id": "a",
+              "label": "対象機能 2件を重く見て、当日中に前へ進める",
+              "text": "対象機能 2件を重く見て、当日中に前へ進める。材料はリリースメモ、対象機能 2件、未決 3件。",
+              "immediateFeedback": "リリースメモに基づく動きが決まる。",
+              "delayedConsequence": "速度は出るが確認範囲が狭い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 2,
+                "product_planning_assistant_risk": -1,
+                "product_planning_assistant_speed": 2,
+                "product_planning_assistant_value": -1,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、リリースメモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リリースメモの具体数字を使っている。",
+                "risk": "速度は出るが確認範囲が狭い",
+                "next": "次は対象機能 2件の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "speed_first"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "premature_action"
+              ]
+            },
+            {
+              "id": "b",
+              "label": "リリースメモの対象機能 2件と未決 3件を突き合わせ、条件付きで進める",
+              "text": "リリースメモの対象機能 2件と未決 3件を突き合わせ、条件付きで進める。材料はリリースメモ、対象機能 2件、未決 3件。",
+              "immediateFeedback": "リリースメモに基づく動きが決まる。",
+              "delayedConsequence": "作業は増えるが説明可能性が高い",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": 1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": 1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": 1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、リリースメモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リリースメモの具体数字を使っている。",
+                "risk": "作業は増えるが説明可能性が高い",
+                "next": "次は対象機能 2件の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 3,
+                "communication": 3,
+                "ownership": 3,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "condition_design"
+              ],
+              "universityInsightTags": [
+                "misconception_correction"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "coordination_load"
+              ]
+            },
+            {
+              "id": "c",
+              "label": "未決 3件の不確実性を理由に、判断範囲を絞る",
+              "text": "未決 3件の不確実性を理由に、判断範囲を絞る。材料はリリースメモ、対象機能 2件、未決 3件。",
+              "immediateFeedback": "リリースメモに基づく動きが決まる。",
+              "delayedConsequence": "安全だが機会を逃す",
+              "nextSceneEffect": "次の資料に判断の副作用が残る。",
+              "resultSummaryEffect": "PdM/プロダクト企画補佐で資料と数値を読んで判断する傾向が出る。",
+              "meterEffects": {
+                "product_planning_assistant_evidence": -1,
+                "product_planning_assistant_risk": 2,
+                "product_planning_assistant_speed": -1,
+                "product_planning_assistant_value": 2,
+                "product_planning_assistant_feasibility": -1
+              },
+              "misconceptionEffect": "PdM/プロダクト企画補佐は印象ではなく、リリースメモと数値を読んで判断する。",
+              "studentFeedback": {
+                "good": "リリースメモの具体数字を使っている。",
+                "risk": "安全だが機会を逃す",
+                "next": "次は対象機能 2件の副作用を確認する。"
+              },
+              "scores": {
+                "technical": 3,
+                "logical": 2,
+                "communication": 3,
+                "ownership": 2,
+                "agility": 3
+              },
+              "behaviorTags": [
+                "risk_control"
+              ],
+              "universityInsightTags": [
+                "work_value_preference"
+              ],
+              "companyInsightTags": [
+                "role_understanding_signal"
+              ],
+              "riskTags": [
+                "opportunity_loss"
+              ]
+            }
+          ],
+          "analytics": {
+            "decisionType": "product-planning-assistant-リリースメモ判断",
+            "frictionType": "role_specific_tradeoff",
+            "workValueTags": [
+              "理系向け",
+              "分析系",
+              "高難易度"
+            ],
+            "careerRealityTags": [
+              "job_reality",
+              "trade_off",
+              "misconception_correction"
+            ],
+            "localCareerTags": []
+          },
+          "roleSpecificity": {
+            "coreDecisionPrimitive": "product-planning-assistant-リリースメモ判断",
+            "roleSpecificMaterials": [
+              "リリースメモ",
+              "判断対象: リリースメモ"
+            ],
+            "roleSpecificMetrics": [
+              "対象機能 2件",
+              "未決 3件"
+            ],
+            "roleSpecificFailureRisk": "リリースメモを読まず、対象機能 2件か未決 3件のどちらかを見落とす。",
+            "roleSpecificEvaluationCriteria": "対象機能 2件と未決 3件を使って説明可能な判断にできるか。",
+            "genericCoordinationRisk": "期限と関係者の会話だけを選ぶ場面に見える。",
+            "antiGenericDesignNote": "リリースメモ、対象機能 2件、未決 3件を判断の主役にしている。",
+            "kernelConnection": "リリースメモをproduct-planning-assistant-リリースメモ判断へ接続する。"
+          }
+        }
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    "technical",
+    "logical",
+    "communication",
+    "ownership",
+    "agility"
+  ],
+  "resultTypes": [
+    {
+      "id": "batch3-1",
+      "title": "PdM/プロダクト企画補佐の材料翻訳型",
+      "strengths": [
+        "PdM/プロダクト企画補佐の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "product_planning_assistant_evidence",
+        "product_planning_assistant_risk"
+      ],
+      "valuedMeters": [
+        "product_planning_assistant_evidence"
+      ],
+      "sacrificedMeters": [
+        "product_planning_assistant_speed"
+      ],
+      "roleRealityReveal": "PdM/プロダクト企画補佐は、要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "PdM/プロダクト企画補佐の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-2",
+      "title": "PdM/プロダクト企画補佐の推進型",
+      "strengths": [
+        "PdM/プロダクト企画補佐の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "product_planning_assistant_risk",
+        "product_planning_assistant_speed"
+      ],
+      "valuedMeters": [
+        "product_planning_assistant_risk"
+      ],
+      "sacrificedMeters": [
+        "product_planning_assistant_value"
+      ],
+      "roleRealityReveal": "PdM/プロダクト企画補佐は、要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "PdM/プロダクト企画補佐の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    },
+    {
+      "id": "batch3-3",
+      "title": "PdM/プロダクト企画補佐の安全設計型",
+      "strengths": [
+        "PdM/プロダクト企画補佐の資料を判断へ変換できる",
+        "数値と制約を説明に使える"
+      ],
+      "cautionPoints": [
+        "重視した指標の裏で別の制約を犠牲にすることがある"
+      ],
+      "meterPriorities": [
+        "product_planning_assistant_speed",
+        "product_planning_assistant_value"
+      ],
+      "valuedMeters": [
+        "product_planning_assistant_speed"
+      ],
+      "sacrificedMeters": [
+        "product_planning_assistant_feasibility"
+      ],
+      "roleRealityReveal": "PdM/プロダクト企画補佐は、要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+      "misconceptionCorrection": "表面的な対応ではなく、資料と数値を読む仕事だと理解が進む。",
+      "decisionPatternSummary": "仕事材料を根拠に判断する傾向がある。",
+      "careerReflectionPrompt": "PdM/プロダクト企画補佐の資料判断に興味が持てるか振り返ってください。",
+      "universityInsightTags": [
+        "misconception_correction",
+        "work_artifact_literacy"
+      ]
+    }
+  ],
+  "resultFeedback": {
+    "roleRealityReveal": "PdM/プロダクト企画補佐は、要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+    "misconceptionCorrection": "表面的な対応ではなく、資料・数字・制約を成果物へ変える職種だと理解する。",
+    "careerReflectionPrompt": "PdM/プロダクト企画補佐として、仕事材料を読み制約込みで判断することに興味が持てるか振り返ってください。",
+    "universityInsightTags": [
+      "misconception_correction",
+      "work_artifact_literacy",
+      "product-planning-assistant_role_understanding"
+    ]
+  },
+  "analytics": {
+    "decisionStyleAxes": [
+      "product_planning_assistant_evidence_vs_product_planning_assistant_risk",
+      "product_planning_assistant_speed_vs_speed",
+      "evidence_vs_opportunity"
+    ],
+    "derivedMetrics": [
+      "work_decision_style_vector",
+      "role_specific_meter_shift",
+      "consequence_echo_summary"
+    ],
+    "privacy": "aggregated_and_anonymized"
+  },
+  "sources": [
+    "to_be_researched: 厚労省 job tag",
+    "to_be_researched: 公開職業情報",
+    "to_be_researched: 一般公開の業務解説"
+  ],
+  "designLog": {
+    "roleSelectionRationale": "Cβ Batch 3 selected for missing decision primitive families.",
+    "mainConflict": "要望・利用データ・開発制約を機能優先順位へ変換する際の速度、根拠、制約の葛藤。",
+    "sceneRationale": "Batch 3は5本ごとのchunkで、各role固有の仕事材料を5 sceneに配置した。",
+    "choiceRationale": "正解不正解ではなく、資料と数字の読み方によるtrade-offにした。",
+    "scoringRationale": "Cα互換dimensionとCβ固有meterを併用した。",
+    "knownLimitations": "架空ケースであり、実在組織の個別手順は再現していない。"
+  },
+  "roleSpecificMeters": [
+    {
+      "key": "product_planning_assistant_evidence",
+      "label": "evidence",
+      "description": "PdM/プロダクト企画補佐のevidence判断"
+    },
+    {
+      "key": "product_planning_assistant_risk",
+      "label": "risk",
+      "description": "PdM/プロダクト企画補佐のrisk判断"
+    },
+    {
+      "key": "product_planning_assistant_speed",
+      "label": "speed",
+      "description": "PdM/プロダクト企画補佐のspeed判断"
+    },
+    {
+      "key": "product_planning_assistant_value",
+      "label": "value",
+      "description": "PdM/プロダクト企画補佐のvalue判断"
+    },
+    {
+      "key": "product_planning_assistant_feasibility",
+      "label": "feasibility",
+      "description": "PdM/プロダクト企画補佐のfeasibility判断"
+    }
+  ],
+  "branchSummary": {
+    "overview": "PdM/プロダクト企画補佐の5つの資料判断が職業理解に連鎖する。",
+    "trackedEffects": [
+      "product_planning_assistant_evidence",
+      "product_planning_assistant_risk",
+      "product_planning_assistant_speed",
+      "product_planning_assistant_value",
+      "product_planning_assistant_feasibility"
+    ]
+  },
+  "roleCoreFriction": "要望・利用データ・開発制約を機能優先順位へ変換する際に、速度・根拠・制約・影響範囲を同時に扱う葛藤。",
+  "roleMisconception": "PdM/プロダクト企画補佐は会話や作業処理が中心で、資料と数値判断は補助的だと思われやすい。",
+  "roleRealityReveal": "PdM/プロダクト企画補佐は、要望・利用データ・開発制約を機能優先順位へ変換する仕事。",
+  "roleWorkKernel": {
+    "input": "要望 48件、利用率 23%、工数 18日、影響ユーザー 4,800人、対象機能 2件、関係者制約、期限",
+    "output": "PdM/プロダクト企画補佐としての判断案、次回確認項目、リスクメモ",
+    "transformation": "要望・利用データ・開発制約を機能優先順位へ変換する",
+    "constraints": [
+      "期限",
+      "説明可能性",
+      "実行可能性",
+      "副作用管理"
+    ],
+    "workArtifacts": [
+      "要望 48件",
+      "利用率 23%",
+      "工数 18日",
+      "影響ユーザー 4,800人",
+      "対象機能 2件"
+    ],
+    "metrics": [
+      "要望 48件",
+      "重複 11件",
+      "利用率 23%",
+      "離脱 37%",
+      "工数 18日",
+      "空き 9日",
+      "影響ユーザー 4,800人",
+      "売上影響 +6%",
+      "対象機能 2件",
+      "未決 3件"
+    ],
+    "failureModes": [
+      "資料を読まずに進める",
+      "重要指標を見落とす",
+      "制約を成果物に反映しない"
+    ],
+    "evaluationCriteria": [
+      "資料と判断が対応している",
+      "数値で副作用を説明できる",
+      "次の行動が明確"
+    ],
+    "nonGenericReason": "要望 48件、利用率 23%、工数 18日と重複 11件、、離脱 37%を読まなければ成立しないため。"
+  }
+}
